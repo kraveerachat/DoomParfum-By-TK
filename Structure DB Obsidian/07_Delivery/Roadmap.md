@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - delivery
@@ -14,6 +14,14 @@ source_of_truth: "../../README.md"
 ---
 
 # Delivery Roadmap — DoomParfum By TK
+
+## Current foundation checkpoint
+
+Gate P completed by owner merge of PR #1 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. IMP-P1-01 implements
+local migrations/constraints/RLS tests only, pending its separate Draft PR review/merge. P1 catalogue
+and ETL are not complete. IMP-P1-02..04 remain NOT STARTED; IMP-P1-05 provisioning still needs separate
+approval. Current task/evidence: [[IMP-P1-01_Local_PostgreSQL_Schema]], [[IMP-P1-01_Implementation_Evidence]].
+
 
 > **Document Type:** Multi-Phase Delivery Plan & Milestones
 > **Source Baseline:** `../README.md` (Section 8)
@@ -144,3 +152,19 @@ The initial ETL pilot is brought forward from broad P5 ingestion to test P1 feas
 and bulk integrations remain deferred. No phases are declared implemented by this plan.
 R22 priority Thai coverage remains an acceptance target pending permissioned real samples.
 Details and test criteria: [[P1_Pilot_Implementation_Plan]].
+
+## Historical S1 schema review readiness — 2026-11-11
+
+IMP-P1-01 source d25083c67ea73384ab13068bf41fb70755c0a0d0 has69 passing tests and independent review,
+ready for owner review as a Draft PR. P1 catalogue/ETL and IMP-P1-02..05 remain incomplete/not started;
+Human Owner merge of01 is required before02. No production/cloud/provider activation.
+
+## Current S2 performance correction
+
+PR #2 remains OPEN/DRAFT; additive008 and79/79 tests are recorded in [[IMP-P1-01_Performance_Correction]].
+Exact-source independent review passed; Owner merge still gates IMP-P1-02. The bounded synthetic
+validation measurement does not complete IMP-P1-04 capacity/restore or authorize cloud resources.
+
+
+## Parallel planning lane — 2026-11-11 / DPT-PLAN-002
+PR #1 is now MERGED on GitHub; PR #2 database foundation is OPEN/DRAFT, unmerged as preflight. Independently begin WP-00 brand/source read-only research and WP-01/02 evidence/permission research; DPT-PLAN-002 docs-only Draft Planning PR follows. After Human Gate P and required PR #2/IMP-P1-02 Scento baseline, schedule separate rights-authorized source adapters -> popularity metric observations -> one-click admin/queue -> approved media pipeline -> measurements/recovery/host decisions. These proposals do not alter PR #2 or authorize larger imports. Details [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].

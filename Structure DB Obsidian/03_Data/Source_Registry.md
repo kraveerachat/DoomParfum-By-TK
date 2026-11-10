@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: source_registry
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - data
@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 ---
 
 # Source Registry — P1 Discovery
+
+## Current local pilot source state
+
+Planning PR #1 is owner-merged at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. The external local preparation
+package was reverified for IMP-P1-01 (three raw hashes and full 42-entry manifest, exact 12/5/58/93).
+No raw dataset is committed or fully imported. Only rollback-only schema shape fixtures are exercised;
+actual source capture/import adapter/idempotency work is IMP-P1-02 after owner merge of 01.
+CC BY 4.0 attribution and OD-01/06 international scope persist. API/official-site/image grants are not
+expanded; Thai/Indonesian imports remain blocked by usable rights AND real samples.
+
 
 Reviewed 2026-11-10 (Asia/Bangkok). Source status records observed permission scope. Owner OD-01 now approves the pinned Scento CC BY 4.0 export for the local international pilot with attribution; execution waits for Human Owner planning merge. Production/broader source adoption is not approved. Other research reads do not authorize imports. See [[P1_Data_Profiling_Findings]] and [[Decision_Log]].
 
@@ -52,3 +62,7 @@ S3 boundary: OD-06 approves an international licensed-data pilot only. Regional 
 until usable rights AND samples are verified; no grant is inferred for official-site texts, images or APIs.
 OD-04 approves image metadata/rights design, not unlicensed image acquisition. No source acquisition or
 runtime ingest is performed during this owner-decision documentation session.
+
+
+## New DPT-PLAN-002 source acquisition research — 2026-11-11 (RESEARCH ONLY)
+See [[Source_Permission_Matrix_DPT_PLAN_002]] and [[Brand_Registry_Research]] for first-party observed samples across 15 brand/publisher presences and permissions-by-use. `official_url` is an identity observation, not `automated_access=true` or store/display/image rights. Terms and rights must be evaluated per source/field/asset. Existing OD-01/OD-06 Scento local-only approval is NOT extended to regional imports. Fragrantica automated acquisition remains prohibited absent written authorization. No new adapter or import created.

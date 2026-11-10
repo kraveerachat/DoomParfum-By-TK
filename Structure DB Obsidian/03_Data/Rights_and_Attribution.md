@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: legal_and_rights
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - data
@@ -15,6 +15,19 @@ source_of_truth: "../../README.md"
 ---
 
 # Rights and Attribution — P1 Proposed Controls
+
+## Local DB implementation evidence — IMP-P1-01
+
+Planning PR #1 is owner-merged. Local SQL now binds exact scope/source/capture/assessment/asset permission,
+checks selected content hash/locator and parent permission/derivative obligations, and gates operations
+on active source AND asset uses. Revocation/parent changes invalidate descendants; elapsed expiry is
+checked at use time. See [[IMP-P1-01_Implementation_Evidence]]. These tests use labeled synthetic grants
+and metadata only; they establish no real third-party permission or actual byte acquisition/decoding.
+Human review of content scope, evidence applicability and license obligations remains mandatory;
+local derivative output-license equality is conservative, not a full legal compatibility engine.
+Scento raw/package remains local outside Git with CC BY 4.0 attribution; no new source/image rights,
+provider, cloud bucket or regional imports are approved. Acquisition/proxy/storage/restore are NOT RUN.
+
 
 This revision corrects baseline assumptions that public facts or personal fair use automatically permit
 copying site content/images. No universal fair-use grant is asserted. Owner restrictions already apply;
@@ -103,3 +116,7 @@ The acquired/validated transition additionally requires the selected permission'
 match image bytes. Finalizing an initially unknown hash uses a new immutable permission version.
 Changing an image capture/bytes uses a new asset ID; changing a parent's selected permission invalidates
 children for re-review, rather than letting an old parent-binding pointer silently authorize new use.
+
+
+## DPT-PLAN-002 rights assessment extension — 2026-11-11 (PROPOSED)
+Track flags per source/field/asset: `discover, automated_access, cache, store, display, redistribute, transform, commercial_use, AI_use, retain, share`, with exact grant/Terms revision, checked date, licence, territory, expiry/revoke/delete obligations. Unknown=>NO-GO for that action. Brand official storefront pages, search previews and reviews do NOT authorize automated copy or image use. Fragrantica ToS effective 2026-01-14 §§5.3/5.7 specifically blocks unauthorized automated extraction and AI/dataset reuse; no adapter. See [[Source_Permission_Matrix_DPT_PLAN_002]]. No changes to existing pinned Scento local licence approval.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - operations
@@ -129,3 +129,96 @@ parity / zero errors; links/fences/source paths and common secret patterns check
 Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
 for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
 readback provide published SHA/state; no implementation or automatic merge.
+
+
+## 2026-11-10 — IMP-P1-01 — local schema implementation / review checkpoint
+
+Planning PR #1 owner-merge bffb2fab1918dc5221a6c5da7920168bcae263ca verified; implementation branch
+impl/p1-01-local-postgres-schema starts there. Seven local migration groups implement all 47 logical
+names, named constraints, scoped claims/private owners, whole-field/conflict/asset gates and RLS.
+Actual current evidence: 63/63 tests via python database/verify.py, exit 0; 47 PK / 141 FK / 91 UNIQUE /
+82 table CHECK / 58 deferred constraint-trigger constraints; 47 FORCE RLS tables, 203 policies.
+Five domain checks/396 NOT NULL columns/244 indexes/195 user triggers measured separately.
+Local foundation contains 53 field definitions and zero other domain rows; no full import or ETL.
+Raw package hashes verified; 40 repeated-note groups/39 profiles preserved for review, exact real 12/5/58
+shape fixtures roll back. Conservative findings, partial/not-run coverage and observed RED/fixes are in
+[[IMP-P1-01_Implementation_Evidence]] and database/schema_findings.md.
+Current planning-merge status reconciled; original research/Task Map/immutable planning receipt retained.
+No new source rights, cloud/provider/storage, final retention/RPO/RTO, regional import or CI approval.
+No main push, production mutation, merge, deployment, raw/private/dump/backup publication.
+Independent exact-checkpoint review and final task receipt/Draft PR publication are next, not claimed done.
+Exact resulting SHA will be recorded after commit, never invented self-referentially.
+
+
+### IMP-P1-01 independent review correction (unpublished 42ae1df checkpoint)
+
+One HIGH/three MEDIUM/one LOW findings confirmed by independent read-only source review and three
+rollback-only SQL probes. Fixed private/shared/curator materialized-fact rights expiry/revocation,
+expired-asset cross-tenant write outage, NaN acceptance, CRLF/LF checksums and endpoint-only-at-start
+validation. Added six regression methods: full suite now 69/69 passed, exit 0. Actual revised inventory:
+47 PK / 141 FK / 91 UNIQUE / 93 table CHECK / 59 deferred constraint triggers, 196 user triggers;
+47 FORCE RLS tables / 203 policies, 5 domain checks / 396 NOT NULL / 244 indexes unchanged.
+Scoped .gitattributes/UTF-8 LF checksum policy applied to database source only; raw dataset untouched.
+Before unpublished foundation reset, all non-definition domain counts were zero and no other connection;
+recreated/migrated foundation has 53 field definitions only and canonical replay no-op. No data loss,
+production/global/provider changes or public migration rewrite. Re-review at new checkpoint is next.
+
+
+### 2026-11-11 — IMP-P1-01 final source review and metadata closeout
+
+Independent re-review of d25083c67ea73384ab13068bf41fb70755c0a0d0 confirms all five findings addressed, no
+remaining code/security blocker in reviewed fixes.69/69 full tests pass; independent bounded probes
+cleanup verified. LOW count correction82->93 made; current inventory CHECK93/deferred59/triggers196.
+Original63-test/checkpoint82 counts above remain historical. Final source/migration hashes unchanged
+in this metadata closeout. Receipt [[2026-11-11_000730_IMP-P1-01_Local_PostgreSQL]] is the single IMP-P1-01
+receipt, distinct from unchanged DPT-PLAN-001 planning receipt. Final metadata commit/push and one
+Draft PR are authorized next; actual published head/URL comes from GitHub readback/final report.
+STOP after publication; no merge, production/cloud, actual import/bytes/restore or deferred decision change.
+
+Final metadata validation:26 Markdown files,20 parsed vault frontmatters,47 ERD/dictionary/manifest/live
+table names,6 unchanged matching OD rows; zero link/fence/frontmatter/common-secret-pattern errors.
+Original receipt/three research blobs and original planning Task Map unchanged; exactly one IMP-P1-01
+receipt. Full changed-path manifest44 files in database/evidence/documentation_checks.json. Mermaid,
+API/storage/ETL/restore remain NOT RUN. Final staged checks and branch/remote head readback follow.
+
+## S2 performance correction — current checkpoint, 2026-11-11
+
+Existing [PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2) remains OPEN/DRAFT on
+impl/p1-01-local-postgres-schema. START/reviewed head3d377e0d78ec3af86e4c6ca03302b633c4ff11a7;
+correction source/evidence checkpoint aa59b3d9e29e88697124d78e2f30e97271360586. Independent exact-source
+review completed with no blocking finding. Published001–007 and original immutable receipt unchanged; no second receipt.
+
+Additive008 coalesces full validators once per dirty epoch through private xid8/generation state and
+post-statement scheduling. All original FK/RLS/permissions/conflict/provenance/materialization/image
+rights and active-row checks remain. Natural-COMMIT synthetic250-record case5.841950s→0.051123s,
+500→1 complete calls per validator; row callbacks remain. One run/case is not a capacity claim.
+Full suite79/79 passed, failed0/errors0/skipped0, exit0;10 new positive/negative transaction tests.
+Foundation8 migrations/53 field definitions/zero other domain rows/zero pending markers. Named
+47-table inventory unchanged except243 domain user triggers (47 added statement triggers); one ops
+queue trigger is excluded from domain counts. Details: [[IMP-P1-01_Performance_Correction]].
+
+Global scans per dirty epoch, O(row) dispatcher/marker MVCC/WAL/queue cost and serialized writers remain.
+IMP-P1-04 capacity/restore, IMP-P1-02 ETL, bytes/API/cloud/production remain NOT RUN. No owner decisions
+changed. PRODUCTION_MUTATION=NO. Human Owner alone reviews/merges; no force push/new PR/merge.
+
+TOOL EXECUTION CHECKPOINT: existing GitHub MCP/Git2.53.0.windows.2/PowerShell/Python3.11.9/
+Docker/PostgreSQL16.15 and independent performance reviewer. No installation/host/account changes.
+Official PG16 constraint/trigger/stats documentation consulted. Bounded synthetic before/after commands
+completed five cases each; full verify79/79 exit0; documentation/model/link/frontmatter/secret-pattern
+check passes at source checkpoint. Source and original receipt guards added to documentation checker.
+No raw/private package/dump/backups committed. Current metadata closeout and PR update still pending.
+
+### S2 review closeout — ready for Human Owner review
+
+Exact correction source HEAD aa59b3d9e29e88697124d78e2f30e97271360586 independently reviewed: no blocking
+finding;8 bounded independent checks passed and cleanup verified0. All16 source hashes match79/79
+suite evidence. No code changed after source review, and reviewer did not claim full-suite/benchmark
+reruns. Same-branch metadata commit/push and existing PR #2 description update follow these checks;
+resulting final publication HEAD is verified in PR/final report, not invented inside its own commit.
+Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
+[[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
+Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## 2026-11-11 / DPT-PLAN-002 / S1 — documentation planning checkpoint
+Scope: branch `plan/p2-focused-brand-discovery-automation` off merged main `bffb2fab1918dc5221a6c5da7920168bcae263ca`; GitHub PR #1 MERGED, implementation PR #2 OPEN/DRAFT/unmerged. New docs-only brand/source/rights/popularity/identity/adapters/admin ADR, task and handoff; existing status/source/rights/ADR/roadmap/backlog/decisions updated via scoped addenda. First-pass 220 curated candidates, 15 first-party publisher presences; public repo excludes raw/private research CSV and third-party material. No runtime test, scraping, import, SQL, deploy, secrets or PR #2 edit. Planning verification/commit SHA and PR URL to be reported in GitHub PR; review/owner Gate P pending.
