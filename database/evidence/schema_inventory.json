@@ -542,6 +542,13 @@
       "definition": "PRIMARY KEY (id)"
     },
     {
+      "name": "comparison_evidence_reported_similarity_finite",
+      "type": "c",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "CHECK (((reported_similarity IS NULL) OR (reported_similarity <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "comparison_evidence_scope_id_key",
       "type": "u",
       "table": "comparison_evidence",
@@ -969,6 +976,13 @@
       "definition": "UNIQUE (access_scope_id, id)"
     },
     {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
       "name": "z_model_contract",
       "type": "t",
       "table": "image_assets",
@@ -1137,6 +1151,13 @@
       "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
     },
     {
+      "name": "matching_results_confidence_finite",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((confidence IS NULL) OR (confidence <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "matching_results_fk103",
       "type": "f",
       "table": "matching_results",
@@ -1191,6 +1212,13 @@
       "table": "matching_results",
       "validated": true,
       "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "matching_results_similarity_finite",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((similarity IS NULL) OR (similarity <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
     },
     {
       "name": "y_active_row",
@@ -1436,6 +1464,13 @@
       "table": "perfume_accords",
       "validated": true,
       "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "perfume_accords_strength_finite",
+      "type": "c",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "CHECK (((strength IS NULL) OR (strength <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
     },
     {
       "name": "z_model_contract",
@@ -1872,6 +1907,13 @@
       "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
     },
     {
+      "name": "price_observations_amount_finite",
+      "type": "c",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "CHECK (((amount IS NULL) OR (amount <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "price_observations_fk112",
       "type": "f",
       "table": "price_observations",
@@ -2012,6 +2054,13 @@
       "definition": "UNIQUE (access_scope_id, id)"
     },
     {
+      "name": "product_variants_volume_ml_finite",
+      "type": "c",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "y_active_row",
       "type": "t",
       "table": "product_variants",
@@ -2124,6 +2173,13 @@
       "definition": "UNIQUE (access_scope_id, user_id, id)"
     },
     {
+      "name": "purchase_records_paid_price_finite",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((paid_price IS NULL) OR (paid_price <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "purchase_records_pkey",
       "type": "p",
       "table": "purchase_records",
@@ -2143,6 +2199,13 @@
       "table": "purchase_records",
       "validated": true,
       "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "purchase_records_volume_ml_finite",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
     },
     {
       "name": "z_model_contract",
@@ -2194,11 +2257,32 @@
       "definition": "PRIMARY KEY (id)"
     },
     {
+      "name": "rating_observations_scale_max_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((scale_max IS NULL) OR (scale_max <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "rating_observations_scale_min_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((scale_min IS NULL) OR (scale_min <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
       "name": "rating_observations_scope_id_key",
       "type": "u",
       "table": "rating_observations",
       "validated": true,
       "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "rating_observations_value_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((value IS NULL) OR (value <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
     },
     {
       "name": "y_active_row",
@@ -2987,47 +3071,47 @@
   ],
   "rls_policies": 203,
   "domain_checks": 5,
-  "user_triggers": 195,
+  "user_triggers": 196,
   "server_version": "16.15 (Debian 16.15-1.pgdg13+2)",
   "server_encoding": "UTF8",
   "not_null_columns": 396,
   "enabled_force_rls": 47,
   "constraint_counts": {
     "f": 141,
-    "c": 82,
+    "c": 93,
     "u": 91,
     "p": 47,
-    "t": 58
+    "t": 59
   },
   "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
   "migrations": [
     {
       "name": "001_identity.sql",
-      "sha256": "344fae43aac31397565e55a4edb2fb3adc654c7fbe42984d77a59b8ef491f99c"
+      "sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a"
     },
     {
       "name": "002_catalogue.sql",
-      "sha256": "c4e38e525d1f8e00eac1b993cbbb371e3c18450150d0886362f52f908fe34b98"
+      "sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d"
     },
     {
       "name": "003_provenance.sql",
-      "sha256": "51c8b51d4d1dde966eb1e06a20e34abd079a8aa9e29ccce51981865ce6d49b1f"
+      "sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266"
     },
     {
       "name": "004_associations_media_personal.sql",
-      "sha256": "b4de72bed8d36f26727d85d2bf44d4bd8955dfd946d9779a37e515cd41c4ffe0"
+      "sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6"
     },
     {
       "name": "005_contract_functions.sql",
-      "sha256": "7c091687766d9dd6697bf0606218ddc149fd198830d33662721b687a70e8688c"
+      "sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64"
     },
     {
       "name": "006_media_and_deferred_contracts.sql",
-      "sha256": "ae47e5808aa290d4732d91ea21bd7922d7f9aa13068ae8ad9b73a6d6da219f94"
+      "sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d"
     },
     {
       "name": "007_security_and_field_contract.sql",
-      "sha256": "77c0ee4afcec55a0eced3019d6fd9cd80aef534a1bc337252be1fbe3de8f222f"
+      "sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
     }
   ]
 }

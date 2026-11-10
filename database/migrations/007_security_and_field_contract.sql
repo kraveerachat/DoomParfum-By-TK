@@ -6,6 +6,10 @@ BEGIN
  SELECT * INTO e FROM dpt.entities WHERE id=entity;
  IF NOT FOUND OR NOT dpt_guard.can_read_scope(e.access_scope_id) THEN RETURN false; END IF;
  SELECT kind INTO scope_kind FROM dpt.access_scopes WHERE id=e.access_scope_id;
+ -- A private/shared ACL or curator role is not permission to display expired/revoked selected facts.
+ IF EXISTS(SELECT FROM dpt.canonical_selections cs JOIN dpt.source_observations ob ON ob.id=cs.observation_id
+   WHERE cs.entity_id=e.id AND cs.access_scope_id=e.access_scope_id AND
+    (NOT dpt_guard.record_allowed(ob.source_record_id,'display') OR NOT dpt_guard.record_allowed(ob.source_record_id,'storage'))) THEN RETURN false; END IF;
  IF scope_kind<>'public' OR dpt_guard.is_curator() THEN RETURN true; END IF;
  IF e.kind='image' THEN RETURN dpt_guard.asset_use_valid(e.id,'display'); END IF;
  IF e.kind='listing' THEN RETURN false; END IF;

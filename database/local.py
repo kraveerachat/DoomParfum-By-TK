@@ -24,6 +24,7 @@ def docker(*args: str, input: str | None = None, check: bool = True):
 
 
 def guard():
+    assert_local_endpoint()
     info = json.loads(docker("inspect", CONTAINER).stdout)[0]
     if info["Config"].get("Labels", {}).get("com.doomparfum.task") != "IMP-P1-01":
         raise RuntimeError("Refusing an unrelated container")
@@ -52,10 +53,14 @@ def sql(text: str, db: str = "dpt_schema_test", user: str = "postgres", check=Tr
     return result
 
 
-def start():
+def assert_local_endpoint():
     endpoint = docker("context", "inspect", "desktop-linux", "--format", "{{.Endpoints.docker.Host}}").stdout.strip()
-    if not endpoint.startswith(("npipe://", "unix://")):
+    if not endpoint.startswith(("npipe:////./pipe/", "unix:///")):
         raise RuntimeError("Refusing a non-local Docker engine")
+
+
+def start():
+    assert_local_endpoint()
     exists = docker("inspect", CONTAINER, check=False)
     if exists.returncode == 0:
         guard()
@@ -94,6 +99,24 @@ def recreate(db: str):
     sql(f'CREATE DATABASE "{db}";', "postgres")
 
 
+def reset_empty_foundation():
+    """Unpublished pilot reset only: refuse if any actual domain data or other connection exists."""
+    names = json.loads((ROOT / "database/schema_contract.json").read_text(encoding="utf-8"))["logical_tables"]
+    for name in names:
+        if name != "field_definitions" and sql(f'SELECT count(*) FROM dpt."{name}";', "dpt_foundation").stdout.strip() != "0":
+            raise RuntimeError("Foundation contains data; reset refused")
+    if sql("SELECT count(*) FROM pg_stat_activity WHERE datname='dpt_foundation';", "postgres").stdout.strip() != "0":
+        raise RuntimeError("Foundation has another connection; reset refused")
+    sql('DROP DATABASE dpt_foundation;', "postgres")
+    sql('CREATE DATABASE dpt_foundation;', "postgres")
+    print("Recreated empty disposable foundation; no user/source/product data was present")
+
+
+def migration_digest(file: Path):
+    # Hash exactly the UTF-8/LF SQL text sent to psql, independent of checkout line endings.
+    return hashlib.sha256(file.read_text(encoding="utf-8").encode("utf-8")).hexdigest()
+
+
 def migrate(db: str = "dpt_foundation", extra: Path | None = None):
     sql("CREATE SCHEMA IF NOT EXISTS dpt_ops; CREATE TABLE IF NOT EXISTS dpt_ops.schema_migrations "
         "(name text PRIMARY KEY, sha256 text NOT NULL, applied_at timestamptz NOT NULL DEFAULT now());", db)
@@ -101,7 +124,7 @@ def migrate(db: str = "dpt_foundation", extra: Path | None = None):
     if extra is not None:
         files.append(extra)
     for file in files:
-        digest = hashlib.sha256(file.read_bytes()).hexdigest()
+        digest = migration_digest(file)
         if not file.name.replace("_", "").replace(".", "").isalnum():
             raise ValueError("Unsafe migration filename")
         existing = sql(f"SELECT sha256 FROM dpt_ops.schema_migrations WHERE name='{file.name}';", db).stdout.strip()

@@ -26,9 +26,9 @@ No global install, host setting/account/provider change, other-container stop/re
 The internal trusted Unix-socket adapter is a local test boundary; real provider authentication is unimplemented.
 
 Actual catalogue inventory: **47 logical tables**; **47 PK, 141 FK, 91 UNIQUE, 82 table CHECK**
-constraints plus **58 deferred constraint-trigger constraints**, **5 domain CHECKs**,
+constraints plus **59 deferred constraint-trigger constraints**, **5 domain CHECKs**,
 **396 NOT NULL columns**, **244 indexes**, **203 RLS policies**,
-**195 user triggers**. ENABLE/FORCE RLS on all 47 tables. The separate dpt_ops migration ledger
+**196 user triggers**. ENABLE/FORCE RLS on all 47 tables. The separate dpt_ops migration ledger
 is infrastructure, not a 48th logical model table. All declared FKs are validated and have a leading index.
 Detailed named definitions: `database/evidence/schema_inventory.json`. Model parity: ERD/dictionary/manifest.
 
@@ -38,8 +38,8 @@ No product/source/user imports. Test DBs are separate: dpt_schema_test and dpt_m
 ## Commands and verified results
 
 `python database/local.py start` — exit 0, existing pinned local Docker image, loopback-only readiness.
-`python database/verify.py` — **63/63 passed, 0 failed, 0 errors, 0 skipped**, exit 0;
-73.157 seconds, checked 2026-11-10T16:33:23.910790+00:00. Exact test IDs and source SHA-256 in
+`python database/verify.py` — **69/69 passed, 0 failed, 0 errors, 0 skipped**, exit 0;
+105.453 seconds, checked 2026-11-10T16:56:02.929458+00:00. Exact test IDs and source SHA-256 in
 `database/evidence/test_results.json`; schema-only inventory contains no row data/secrets.
 `python database/local.py migrate` — exit 0 on empty dpt_foundation; replay/checksum behavior tested.
 Documentation/frontmatter/wiki/local-link/model-parity/secret-pattern/Git checks are separately recorded
@@ -71,7 +71,7 @@ Failed migration DDL/ledger and failed transactions roll back; fresh recreate ma
   verify permission gates without relying on missing metadata failures.
 - A 62-test GREEN run initially failed report inventory because lc_collate was not a recognized setting;
   replaced with pg_database.datcollate query and reran end-to-end successfully. Final current result is
-  the 63-test command above. No failure is hidden as a production/environment success.
+  the current 69-test command above. No failure is hidden as a production/environment success.
 
 ## Approved data and duplicate investigation
 
@@ -123,3 +123,22 @@ review note/identity/rights mappings, implement actual adapter/validator/account
 No full dataset import, image acquisition, HTTP application/CI, benchmark, backup/restore or hosted readiness.
 Regional imports still need rights AND samples. Final retention/RPO/RTO/external backup/cloud storage remain
 DEFERRED. Review exact source checkpoint independently before the one final task receipt/publication.
+
+
+## Independent review checkpoint 42ae1df — required fixes and rerun
+
+Reviewer examined exact source `42ae1df46285b1f42772d92e13181dc16a55ac89` and performed three
+rollback-only synthetic probes in dpt_schema_test; cleanup confirmed, no source/foundation changes.
+The checkpoint was NOT accepted as ready: one HIGH (private/shared selected-rights display bypass),
+three MEDIUM (expired private asset blocking unrelated writes; NaN positive amounts/volumes; CRLF/LF
+checksums) and one LOW (endpoint check only at start) were recorded and corrected before publication.
+
+Current regressions test public/private/shared selected-fact revocation and elapsed expiry, runtime
+curator gating, unrelated Bob writes after Alice image expiry, active validation of changed images,
+finite numeric values, canonical LF/CRLF checksums and refusal of remote contexts on direct SQL/reset/
+migrate calls. Global structural image validation is now independent of dynamic use-time expiry;
+source/per-asset use gates, exact bindings, revocation/parent invalidation and acyclicity are retained.
+The unpublished empty foundation was verified empty (except field definitions) with no other connection,
+recreated, migrated and replayed as no-op under canonical checksums. No dataset bytes were normalized,
+no data-bearing/public/production migration rewritten. Source files are LF under scoped .gitattributes.
+The updated checkpoint requires independent re-review; final review readiness is not claimed yet.

@@ -21,3 +21,21 @@ the test users, invalid grants, toy notes and image metadata are synthetic contr
 have no within-layer repetition. No source fact is silently removed to make SQL pass.
 
 Currency is a versioned local allowlist domain (USD/THB/IDR/EUR/GBP/AED/OMR/SAR/SGD/JPY/AUD/CAD/CHF/CNY/HKD/MYR), not arbitrary three-letter text. Unknown remains NULL; extending the vocabulary requires a reviewed migration. No currency default or commerce integration is introduced.
+
+## Independent review corrections (unpublished checkpoint 42ae1df)
+
+- Source rights are independent of access scope. Selected materialized catalogue facts now require
+  active storage/display grants for public, private and shared readers, including runtime curators.
+  Expired/revoked source data is hidden without exposing an overlay through the public target.
+- Global deferred image checks validate structural binding/lineage/static use applicability. Operation-time
+  expiry/revocation is checked on the image being acquired/changed or requested; an untouched expired
+  private asset cannot deny an unrelated tenant's write. Explicit revocation/parent changes still set
+  affected descendants rights_pending. No bytes are served without the active gate.
+- Every numeric measurement/amount column rejects NaN and infinities explicitly; nullable unknowns remain
+  NULL. A positive/nonnegative SQL comparison alone is not sufficient for PostgreSQL numeric NaN.
+- Database source is canonical UTF-8/LF through scoped .gitattributes. Migration checksums hash exactly the
+  normalized SQL text sent to psql. CRLF/LF equivalence is tested; external dataset bytes are never normalized.
+  The unpublished empty local foundation is recreated with the corrected ledger; no published/applied
+  production migration is rewritten. After owner merge, change SQL only through new migrations.
+- Every direct SQL/migrate/recreate operation rechecks a local named-pipe/Unix Docker endpoint before any
+  engine connection. Context reconfiguration to TCP fails closed; no host context/settings are changed.

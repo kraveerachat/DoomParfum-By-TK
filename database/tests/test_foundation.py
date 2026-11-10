@@ -8,6 +8,8 @@ import csv
 import tempfile
 import concurrent.futures
 import time
+from unittest.mock import patch
+from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import local
@@ -475,6 +477,75 @@ class FoundationTests(unittest.TestCase):
         text+=f"UPDATE dpt.perfume_relations SET review_status='approved' WHERE id={q(uid('unbacked-flanker'))};"
         self.rejects(text)
         self.succeeds(text+insert('comparison_evidence',access_scope_id=uid('public'),relation_id=uid('unbacked-flanker'),source_record_id=uid('recordpublic'),claim_type='synthetic relationship source'))
+
+    def rights_brand(self, scope, suffix, expiry=False):
+        text=source(scope,suffix)
+        if expiry:
+            text=text.replace('checked_at,reviewer)','checked_at,reviewer,review_after)').replace("'2026-01-01T00:00:00Z','Synthetic test');","'2026-01-01T00:00:00Z','Synthetic test',clock_timestamp()+interval '4 seconds');")
+        text+=entity(suffix,'brand','brands',scope=scope,name='SYNTHETIC rights-lifetime name',slug=suffix)
+        text+=observation(suffix+'-name',target=suffix,kind='brand',path='name',value='SYNTHETIC rights-lifetime name',scope=scope,source_suffix=suffix)
+        text+=select(suffix+'-name',target=suffix,kind='brand',path='name',scope=scope)
+        return text+f"UPDATE dpt.brands SET review_status='approved' WHERE id={q(uid(suffix))};"
+
+    def test_rights_revocation_hides_selected_scalars_in_all_scopes(self):
+        for scope,role in [('public','dpt_test_guest'),('alice','dpt_test_alice'),('shared','dpt_test_bob'),('public','dpt_test_curator')]:
+            with self.subTest(scope=scope,role=role):
+                suffix='revocation-'+scope+'-'+role
+                text=self.rights_brand(scope,suffix)+"SET CONSTRAINTS ALL IMMEDIATE;"
+                text+=f"SET SESSION AUTHORIZATION {role}; SELECT count(*) FROM dpt.brands WHERE id={q(uid(suffix))}; RESET SESSION AUTHORIZATION;"
+                text+=f"UPDATE dpt.rights_assessments SET revoked_at=clock_timestamp() WHERE id={q(uid('right'+suffix))};"
+                text+=f"SET SESSION AUTHORIZATION {role}; SELECT count(*) FROM dpt.brands WHERE id={q(uid(suffix))};"
+                self.assertEqual(local.sql('BEGIN;'+text+'ROLLBACK;').stdout.strip(),'1\n0')
+
+    def test_rights_expiry_hides_selected_scalars_without_mutation_all_scopes(self):
+        cases=[('public','dpt_test_guest'),('alice','dpt_test_alice'),('shared','dpt_test_bob')]
+        text=''.join(self.rights_brand(scope,'expiry-brand-'+scope,expiry=True) for scope,_ in cases)
+        local.sql('BEGIN;'+text+'COMMIT;')
+        try:
+            for scope,role in cases:
+                self.assertEqual(self.scalar(f"SELECT count(*) FROM dpt.brands WHERE id={q(uid('expiry-brand-'+scope))};",user=role),'1')
+            time.sleep(4.1)
+            for scope,role in cases:
+                self.assertEqual(self.scalar(f"SELECT count(*) FROM dpt.brands WHERE id={q(uid('expiry-brand-'+scope))};",user=role),'0')
+        finally:
+            for scope,_ in cases:
+                local.sql(f"UPDATE dpt.brands SET review_status='draft' WHERE id={q(uid('expiry-brand-'+scope))};")
+
+    def test_expired_private_asset_does_not_block_unrelated_user_write(self):
+        text=image('unrelated-expiry',scope='alice',source_suffix='alice').replace('reviewer,checked_at)','reviewer,checked_at,review_after)').replace("'Synthetic test','2026-01-01T00:00:00Z');","'Synthetic test','2026-01-01T00:00:00Z',clock_timestamp()+interval '2 seconds');")
+        local.sql('BEGIN;'+text+'COMMIT;')
+        try:
+            time.sleep(2.1)
+            local.sql('GRANT dpt_writer TO dpt_test_bob;')
+            self.assertEqual(self.scalar(f"SELECT dpt_guard.can_use_asset({q(uid('unrelated-expiry'))},'display');",user='dpt_test_alice'),'f')
+            self.succeeds(insert('user_lists',access_scope_id=uid('bob'),user_id=uid('bob'),name='SYNTHETIC unrelated write',list_type='custom'),user='dpt_test_bob')
+            self.rejects(f"UPDATE dpt.image_assets SET alt_text='Attempted re-use' WHERE id={q(uid('unrelated-expiry'))};")
+        finally:
+            local.sql(f"REVOKE dpt_writer FROM dpt_test_bob; UPDATE dpt.image_assets SET state='rights_pending' WHERE id={q(uid('unrelated-expiry'))};")
+
+    def test_nonfinite_numeric_values_are_not_physical_measurements(self):
+        self.rejects(f"UPDATE dpt.product_variants SET volume_ml='NaN' WHERE id={q(uid('variant'))};")
+        for values in [{'paid_price': 'NaN','currency':'USD'},{'volume_ml':'NaN'}]:
+            with self.subTest(values=values):
+                self.rejects(insert('purchase_records',access_scope_id=uid('alice'),user_id=uid('alice'),perfume_id=uid('perfume'),status='ordered',**values))
+        self.rejects(insert('price_observations',access_scope_id=uid('alice'),user_id=uid('alice'),listing_id=uid('listingalice'),source_record_id=uid('recordalice'),amount='NaN',currency='USD',observed_at='2026-01-01'))
+        self.rejects(insert('rating_observations',access_scope_id=uid('public'),perfume_id=uid('perfume'),source_record_id=uid('recordpublic'),value=4,scale_min=0,scale_max='NaN',observed_at='2026-01-01'))
+
+    def test_canonical_migration_checksum_ignores_checkout_line_endings(self):
+        with tempfile.TemporaryDirectory(prefix='dpt-eol-') as directory:
+            lf=Path(directory)/'lf.sql';crlf=Path(directory)/'crlf.sql'
+            lf.write_bytes(b'-- synthetic fixture\nSELECT 1;\n');crlf.write_bytes(b'-- synthetic fixture\r\nSELECT 1;\r\n')
+            self.assertEqual(local.migration_digest(lf),local.migration_digest(crlf))
+        for file in (local.ROOT/'database/migrations').glob('*.sql'):
+            self.assertNotIn(b'\r\n',file.read_bytes())
+            self.assertEqual(local.migration_digest(file),hashlib.sha256(file.read_bytes()).hexdigest())
+
+    def test_direct_operations_reject_reconfigured_remote_context_before_connection(self):
+        for operation in [lambda:local.sql('SELECT 1;'),lambda:local.recreate('dpt_migration_probe'),lambda:local.migrate('dpt_foundation')]:
+            with self.subTest(operation=operation):
+                with patch.object(local,'docker',return_value=SimpleNamespace(stdout='tcp://example.invalid:2376\n')) as call:
+                    with self.assertRaisesRegex(RuntimeError,'non-local'):operation()
+                    call.assert_called_once_with('context','inspect','desktop-linux','--format','{{.Endpoints.docker.Host}}')
 
 
 if __name__ == "__main__":

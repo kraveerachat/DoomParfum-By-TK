@@ -34,20 +34,29 @@ SET search_path=pg_catalog,dpt,pg_temp AS $$
       AND m.user_id=dpt_guard.principal_id() AND m.role='editor' AND m.revoked_at IS NULL))))
 $$;
 
-CREATE FUNCTION dpt_guard.right_allowed(right_id uuid, operation text) RETURNS boolean
+-- Structural grant applicability is separate from operation-time expiry/revocation.
+CREATE FUNCTION dpt_guard.right_permitted(right_id uuid, operation text, require_active boolean) RETURNS boolean
 LANGUAGE sql STABLE SECURITY DEFINER SET search_path=pg_catalog,dpt,pg_temp AS $$
  SELECT EXISTS(SELECT FROM dpt.rights_assessments r WHERE r.id=right_id AND
-  r.revoked_at IS NULL AND r.checked_at<=statement_timestamp() AND
-  (r.review_after IS NULL OR r.review_after>statement_timestamp()) AND
+  (NOT require_active OR (r.revoked_at IS NULL AND r.checked_at<=statement_timestamp() AND
+    (r.review_after IS NULL OR r.review_after>statement_timestamp()))) AND
   r.evidence_url IS NOT NULL AND CASE operation
     WHEN 'storage' THEN r.storage_use='allowed' WHEN 'display' THEN r.display_use='allowed'
     WHEN 'automation' THEN r.automation_use='allowed' WHEN 'redistribution' THEN r.redistribution_use='allowed'
     WHEN 'cache' THEN r.cache_use='allowed' WHEN 'research' THEN r.research_use='allowed'
     WHEN 'ai' THEN r.ai_use='allowed' ELSE false END)
 $$;
+CREATE FUNCTION dpt_guard.right_allowed(right_id uuid, operation text) RETURNS boolean
+LANGUAGE sql STABLE SECURITY DEFINER SET search_path=pg_catalog,dpt,pg_temp AS $$
+ SELECT dpt_guard.right_permitted(right_id,operation,true)
+$$;
+CREATE FUNCTION dpt_guard.record_permitted(record_id uuid, operation text, require_active boolean) RETURNS boolean
+LANGUAGE sql STABLE SECURITY DEFINER SET search_path=pg_catalog,dpt,pg_temp AS $$
+ SELECT EXISTS(SELECT FROM dpt.source_records r WHERE r.id=record_id AND dpt_guard.right_permitted(r.rights_id,operation,require_active))
+$$;
 CREATE FUNCTION dpt_guard.record_allowed(record_id uuid, operation text) RETURNS boolean
 LANGUAGE sql STABLE SECURITY DEFINER SET search_path=pg_catalog,dpt,pg_temp AS $$
- SELECT EXISTS(SELECT FROM dpt.source_records r WHERE r.id=record_id AND dpt_guard.right_allowed(r.rights_id,operation))
+ SELECT dpt_guard.record_permitted(record_id,operation,true)
 $$;
 
 CREATE FUNCTION dpt_guard.identity_guard() RETURNS trigger LANGUAGE plpgsql SECURITY DEFINER

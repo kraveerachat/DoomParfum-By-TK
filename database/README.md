@@ -46,10 +46,13 @@ volume for review. Removing that volume is a separate explicit cleanup operation
 
 There are **47 logical tables in `dpt`**. The separate infrastructure ledger
 `dpt_ops.schema_migrations` is not counted as a domain table. `schema_contract.json` maps logical names
-to dependency groups. Every migration is transactional and checksum-pinned after application; a failed
+to dependency groups. Every migration is transactional and canonical UTF-8/LF checksum-pinned after application; a failed
 migration leaves neither its DDL/data nor its ledger entry. Replays are no-ops. Edited applied files
 are rejected; use a new migration after merge. Recreate tests provide the disposable reset path;
-there is no destructive down-migration interface for a data-bearing database.
+there is no destructive down-migration interface for a data-bearing database. The unpublished empty
+foundation can be recreated only after every non-field-definition domain table is empty and no other
+connection exists; that helper refuses data-bearing foundations. Scoped .gitattributes keeps database
+source LF across checkouts; external dataset hashes remain byte-exact.
 
 ## Trust and enforcement
 
@@ -73,7 +76,8 @@ there is no destructive down-migration interface for a data-bearing database.
   need measurement and a reviewed migration. A concurrent conflict-member deletion test checks write skew.
 - Image tuple FKs, metadata non-null gates, exact hash/locator, active source AND per-asset uses, parent
   selected permission, same capture/scope, lineage and derivative change/credit/license checks all apply.
-  Revocation/parent selection changes invalidate descendants; operation-time checks handle elapsed expiry.
+  Revocation/parent selection changes invalidate descendants; operation-time checks handle elapsed expiry for every scope. Structural validation of untouched rows
+  does not turn an expired private asset into a write outage for another tenant.
 
 ## Source occurrences and conservative schema findings
 
@@ -101,3 +105,5 @@ storage, regional imports and final retention/RPO/RTO remain deferred/blocked as
 Primary implementation references: [PostgreSQL 16 constraints](https://www.postgresql.org/docs/16/ddl-constraints.html),
 [RLS](https://www.postgresql.org/docs/16/ddl-rowsecurity.html),
 [safe function execution](https://www.postgresql.org/docs/16/sql-createfunction.html).
+
+All numeric amount/measurement fields reject NaN/infinities; unknowns stay NULL. Direct operations validate the local Docker endpoint each time, not only at start.

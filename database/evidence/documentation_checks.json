@@ -13,6 +13,7 @@
     "External web URLs not re-fetched by this local link check"
   ],
   "changed_paths": [
+    ".gitattributes",
     ".gitignore",
     "AGENTS.md",
     "DEVELOPMENT_WORKFLOW.md",

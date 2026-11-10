@@ -287,3 +287,17 @@ Independent exact-source review/checkpoint and final receipt/Draft publication r
 TOOL EXECUTION REPORT: tools used above; REQUESTED_BUT_NOT_USED=NONE; tools installed=NONE. Exact changed
 paths in documentation-check/PR manifest; Obsidian updated, no private/raw files. END_SHA and actual Draft
 PR URL are verified after the corresponding Git/API events. STOP after Draft publication; owner merges.
+
+
+### IMP-P1-01 independent review correction (unpublished 42ae1df checkpoint)
+
+One HIGH/three MEDIUM/one LOW findings confirmed by independent read-only source review and three
+rollback-only SQL probes. Fixed private/shared/curator materialized-fact rights expiry/revocation,
+expired-asset cross-tenant write outage, NaN acceptance, CRLF/LF checksums and endpoint-only-at-start
+validation. Added six regression methods: full suite now 69/69 passed, exit 0. Actual revised inventory:
+47 PK / 141 FK / 91 UNIQUE / 93 table CHECK / 59 deferred constraint triggers, 196 user triggers;
+47 FORCE RLS tables / 203 policies, 5 domain checks / 396 NOT NULL / 244 indexes unchanged.
+Scoped .gitattributes/UTF-8 LF checksum policy applied to database source only; raw dataset untouched.
+Before unpublished foundation reset, all non-definition domain counts were zero and no other connection;
+recreated/migrated foundation has 53 field definitions only and canonical replay no-op. No data loss,
+production/global/provider changes or public migration rewrite. Re-review at new checkpoint is next.

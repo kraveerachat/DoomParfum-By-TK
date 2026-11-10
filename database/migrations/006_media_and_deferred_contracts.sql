@@ -1,4 +1,4 @@
-CREATE FUNCTION dpt_guard.asset_use_valid(asset uuid,operation text) RETURNS boolean
+CREATE FUNCTION dpt_guard.asset_use_valid(asset uuid,operation text,require_active boolean DEFAULT true) RETURNS boolean
 LANGUAGE plpgsql STABLE SECURITY DEFINER SET search_path=pg_catalog,dpt,pg_temp AS $$
 DECLARE a dpt.image_assets; p dpt.asset_permissions; parent dpt.image_assets;
   prior dpt.asset_permissions; seen uuid[]:='{}'; first boolean:=true; needed text:=operation;
@@ -9,19 +9,19 @@ BEGIN
     SELECT * INTO a FROM dpt.image_assets WHERE id=asset;
     IF NOT FOUND OR a.state NOT IN ('acquired','validated') THEN RETURN false; END IF;
     SELECT * INTO p FROM dpt.asset_permissions WHERE id=a.asset_permission_id;
-    IF NOT FOUND OR p.revoked_at IS NOT NULL OR p.checked_at>statement_timestamp() OR
-       (p.review_after IS NOT NULL AND p.review_after<=statement_timestamp()) OR
+    IF NOT FOUND OR (require_active AND (p.revoked_at IS NOT NULL OR p.checked_at>statement_timestamp() OR
+       (p.review_after IS NOT NULL AND p.review_after<=statement_timestamp()))) OR
        (p.access_scope_id,p.asset_id,p.source_id,p.source_record_id,p.rights_id) IS DISTINCT FROM
        (a.access_scope_id,a.id,a.source_id,a.source_record_id,a.rights_id) OR
        p.content_sha256 IS NULL OR p.content_sha256 IS DISTINCT FROM a.sha256 OR
        p.asset_locator IS DISTINCT FROM COALESCE(a.original_url,'asset:'||a.id::text) OR
-       p.acquire_use<>'allowed' OR NOT dpt_guard.right_allowed(a.rights_id,'storage') OR
-       NOT dpt_guard.record_allowed(a.source_record_id,'storage') THEN RETURN false; END IF;
-    IF needed='display' AND (p.display_use<>'allowed' OR NOT dpt_guard.right_allowed(a.rights_id,'display') OR
-        NOT dpt_guard.record_allowed(a.source_record_id,'display')) THEN RETURN false;
-    ELSIF needed='transform' AND (p.transform_use<>'allowed' OR NOT dpt_guard.right_allowed(a.rights_id,'storage')) THEN RETURN false;
-    ELSIF needed='redistribution' AND (p.redistribution_use<>'allowed' OR NOT dpt_guard.right_allowed(a.rights_id,'redistribution') OR
-        NOT dpt_guard.record_allowed(a.source_record_id,'redistribution')) THEN RETURN false;
+       p.acquire_use<>'allowed' OR NOT dpt_guard.right_permitted(a.rights_id,'storage',require_active) OR
+       NOT dpt_guard.record_permitted(a.source_record_id,'storage',require_active) THEN RETURN false; END IF;
+    IF needed='display' AND (p.display_use<>'allowed' OR NOT dpt_guard.right_permitted(a.rights_id,'display',require_active) OR
+        NOT dpt_guard.record_permitted(a.source_record_id,'display',require_active)) THEN RETURN false;
+    ELSIF needed='transform' AND (p.transform_use<>'allowed' OR NOT dpt_guard.right_permitted(a.rights_id,'storage',require_active)) THEN RETURN false;
+    ELSIF needed='redistribution' AND (p.redistribution_use<>'allowed' OR NOT dpt_guard.right_permitted(a.rights_id,'redistribution',require_active) OR
+        NOT dpt_guard.record_permitted(a.source_record_id,'redistribution',require_active)) THEN RETURN false;
     ELSIF needed NOT IN ('acquire','display','transform','redistribution') THEN RETURN false; END IF;
     IF a.parent_asset_id IS NULL THEN RETURN p.permission_kind='original'; END IF;
     SELECT * INTO parent FROM dpt.image_assets WHERE id=a.parent_asset_id;
@@ -35,8 +35,8 @@ BEGIN
       a.attribution IS NULL OR btrim(a.attribution)='' OR a.transform_spec IS NULL OR
       NULLIF(btrim(a.transform_spec->>'changes'),'') IS NULL THEN RETURN false; END IF;
     -- Intended child display/redistribution must also be permitted through the ancestor chain.
-    IF operation='display' AND (prior.display_use<>'allowed' OR NOT dpt_guard.right_allowed(parent.rights_id,'display')) THEN RETURN false; END IF;
-    IF operation='redistribution' AND (prior.redistribution_use<>'allowed' OR NOT dpt_guard.right_allowed(parent.rights_id,'redistribution')) THEN RETURN false; END IF;
+    IF operation='display' AND (prior.display_use<>'allowed' OR NOT dpt_guard.right_permitted(parent.rights_id,'display',require_active)) THEN RETURN false; END IF;
+    IF operation='redistribution' AND (prior.redistribution_use<>'allowed' OR NOT dpt_guard.right_permitted(parent.rights_id,'redistribution',require_active)) THEN RETURN false; END IF;
     asset:=a.parent_asset_id; needed:='transform'; first:=false;
   END LOOP;
 END $$;
@@ -62,7 +62,7 @@ BEGIN
     IF a.parent_asset_id IS NOT NULL AND NOT EXISTS(SELECT FROM dpt.image_assets p WHERE p.id=a.parent_asset_id
       AND (p.access_scope_id,p.source_id,p.source_record_id)=(a.access_scope_id,a.source_id,a.source_record_id)) THEN
       RAISE EXCEPTION 'Derivative requires same scope/source/capture as parent' USING ERRCODE='23514'; END IF;
-    IF a.state IN ('acquired','validated') AND NOT dpt_guard.asset_use_valid(a.id,'acquire') THEN
+    IF a.state IN ('acquired','validated') AND NOT dpt_guard.asset_use_valid(a.id,'acquire',false) THEN
       RAISE EXCEPTION 'Invalid selected asset grant/hash/locator/derivative contract' USING ERRCODE='23514'; END IF;
   END LOOP;
 END $$;
@@ -115,6 +115,10 @@ BEGIN
       NOT EXISTS(SELECT FROM dpt.validation_results v WHERE v.staging_record_id=(body->>'id')::uuid) OR
       EXISTS(SELECT FROM dpt.validation_results v WHERE v.staging_record_id=(body->>'id')::uuid AND v.result<>'pass')) THEN
       RAISE EXCEPTION 'Promotion requires linked capture and all recorded validation rules passing' USING ERRCODE='23514'; END IF;
+  ELSIF TG_TABLE_NAME='image_assets' THEN
+    SELECT to_jsonb(t) INTO body FROM dpt.image_assets t WHERE id=NEW.id;
+    IF body->>'state' IN ('acquired','validated') AND NOT dpt_guard.asset_use_valid((body->>'id')::uuid,'acquire') THEN
+      RAISE EXCEPTION 'Changed/acquired image requires current active grants' USING ERRCODE='23514'; END IF;
   ELSIF TG_TABLE_NAME='matching_results' THEN
     SELECT to_jsonb(t) INTO body FROM dpt.matching_results t WHERE id=NEW.id;
     IF body IS NOT NULL AND NOT dpt_guard.matching_inputs_valid((body->>'access_scope_id')::uuid,body->'coverage',true) THEN
@@ -158,7 +162,7 @@ DO $$ DECLARE r record; cols text; names text; BEGIN
     IF r.relname IN ('source_records','source_observations','audit_events','rights_assessments','asset_permissions','field_definitions') THEN
       EXECUTE format('CREATE TRIGGER c_append_only BEFORE UPDATE OR DELETE ON dpt.%I FOR EACH ROW EXECUTE FUNCTION dpt_guard.append_only()',r.relname);
     END IF;
-    IF r.relname IN ('canonical_selections','staging_records','comparison_evidence','rating_observations','matching_results','brands','perfumes','notes','accords','product_variants','perfume_relations') THEN
+    IF r.relname IN ('canonical_selections','staging_records','comparison_evidence','rating_observations','matching_results','image_assets','brands','perfumes','notes','accords','product_variants','perfume_relations') THEN
       EXECUTE format('CREATE CONSTRAINT TRIGGER y_active_row AFTER INSERT OR UPDATE ON dpt.%I DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION dpt_guard.check_active_row()',r.relname);
     END IF;
     SELECT string_agg(quote_literal(a.attname),',') INTO cols FROM pg_attribute a
@@ -205,3 +209,13 @@ CREATE INDEX perfume_notes_lookup ON dpt.perfume_notes(note_id,layer,perfume_id)
 CREATE INDEX perfume_families_lookup ON dpt.perfume_families(family_id,perfume_id);
 CREATE INDEX comparison_evidence_lookup ON dpt.comparison_evidence(relation_id,claim_type);
 CREATE INDEX price_observations_timeline ON dpt.price_observations(listing_id,observed_at DESC);
+
+-- PostgreSQL numeric NaN sorts above finite values; positivity alone is insufficient.
+DO $$ DECLARE col record; BEGIN
+ FOR col IN SELECT c.relname,a.attname FROM pg_attribute a JOIN pg_class c ON c.oid=a.attrelid
+  JOIN pg_namespace n ON n.oid=c.relnamespace JOIN pg_type t ON t.oid=a.atttypid
+  WHERE n.nspname='dpt' AND c.relkind='r' AND a.attnum>0 AND NOT a.attisdropped AND t.typname='numeric' LOOP
+  EXECUTE format('ALTER TABLE dpt.%I ADD CONSTRAINT %I CHECK (%I IS NULL OR %I NOT IN (''NaN''::numeric,''Infinity''::numeric,''-Infinity''::numeric))',
+    col.relname,col.relname||'_'||col.attname||'_finite',col.attname,col.attname);
+ END LOOP;
+END $$;

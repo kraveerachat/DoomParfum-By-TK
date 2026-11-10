@@ -59,8 +59,8 @@ Local package sibling local package `DoomParfum Local Data/P1/20261110-221751/` 
 
 ## Test/evidence ledger and checkpoint
 
-Local implementation verified: 47 tables, 141 FK / 47 PK / 91 UNIQUE / 82 table CHECK, 58 deferred
-constraint triggers, 47 ENABLE/FORCE RLS tables; 63/63 tests passed via python database/verify.py, exit 0.
+Local implementation verified: 47 tables, 141 FK / 47 PK / 91 UNIQUE / 93 table CHECK, 59 deferred
+constraint triggers, 47 ENABLE/FORCE RLS tables; 69/69 tests passed via python database/verify.py, exit 0.
 Actual named inventory/source hashes and full partial/NOT RUN matrix: [[IMP-P1-01_Implementation_Evidence]].
 Independent exact-checkpoint review, document validation and Draft publication remain pending.
 Original [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains immutable and unchanged.
@@ -76,3 +76,12 @@ Observed REDs/setup/report failures and targeted fixes are recorded in the evide
 Documentation reconciliation records PR #1 merge while retaining original research/receipt/Task Map.
 Remaining: exact source checkpoint independent review, final doc/secret/diff checks, one receipt and
 commit/push/Draft PR publication; Human Owner decides merge. IMP-P1-02 remains NOT STARTED.
+
+
+## Independent review / correction checkpoint
+
+Initial exact source review at 42ae1df46285b1f42772d92e13181dc16a55ac89 required five bounded fixes:
+selected-rights reads in every scope, unrelated-write expiry isolation, non-finite numerics, canonical
+LF migration/source checksums and per-operation local endpoint enforcement. All implemented; 69/69
+full tests pass, exit 0. Unpublished empty foundation safely recreated and migration replay is no-op.
+New exact-source checkpoint/re-review pending; no final receipt or Draft publication yet.
