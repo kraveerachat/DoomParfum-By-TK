@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: task
 status: merged
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, planning, data]
 source_of_truth: "../../../README.md"
 ---
@@ -53,7 +53,10 @@ the fallback. No external tools/configuration installed.
 
 ## Next action
 
-Human Owner reviews the updated owner-decision record in PR #1 and merges through GitHub when satisfied. Verify the merge/approved plan SHA before any later implementation; no SQL/DB/code/cloud in this session.
+Planning task owner-merged. Human Owner reviews the separate IMP-P1-01 Draft Implementation PR;
+its source, local test evidence and receipt are tracked in [[IMP-P1-01_Local_PostgreSQL_Schema]].
+Historical S1/S2/S3 planning session/publication statements below are preserved as dated snapshots.
+No production deployment or automatic implementation merge.
 
 
 ## Session S1 findings and planning review readiness

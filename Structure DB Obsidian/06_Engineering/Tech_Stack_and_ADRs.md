@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: tech_stack_adrs
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - engineering

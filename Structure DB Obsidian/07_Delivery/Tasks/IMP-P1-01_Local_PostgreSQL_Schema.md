@@ -2,9 +2,9 @@
 id: IMP-P1-01
 project: DoomParfum By TK
 type: task
-status: in-progress
+status: ready-for-review
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, implementation, postgres]
 source_of_truth: "../../../README.md"
 requirements: [R01, R02, R03, R21]
@@ -15,7 +15,7 @@ planning_pr: 1
 
 ## Current task / session S1
 
-IN PROGRESS. Codex implementation/documentation; independent database review before publication.
+READY FOR HUMAN OWNER REVIEW (Draft). Codex implementation/documentation; independent database review complete at source checkpoint d25083c67ea73384ab13068bf41fb70755c0a0d0.
 Branch `impl/p1-01-local-postgres-schema`, base/START_SHA and approved planning merge
 `bffb2fab1918dc5221a6c5da7920168bcae263ca`. PR #1 verified MERGED by GitHub and Git;
 fresh fetch confirms main contains it. The old planning-branch worktree was clean.
@@ -62,7 +62,7 @@ Local package sibling local package `DoomParfum Local Data/P1/20261110-221751/` 
 Local implementation verified: 47 tables, 141 FK / 47 PK / 91 UNIQUE / 93 table CHECK, 59 deferred
 constraint triggers, 47 ENABLE/FORCE RLS tables; 69/69 tests passed via python database/verify.py, exit 0.
 Actual named inventory/source hashes and full partial/NOT RUN matrix: [[IMP-P1-01_Implementation_Evidence]].
-Independent exact-checkpoint review, document validation and Draft publication remain pending.
+Independent exact-checkpoint review and document checks completed; Draft publication is the final API step after metadata commit/push.
 Original [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains immutable and unchanged.
 No implementation receipt yet; create once after acceptance/review, not at every checkpoint.
 
@@ -74,8 +74,7 @@ Seven migration groups, local-only runner, synthetic positive/negative fixtures,
 implemented. Empty foundation migrated with 53 field definitions and zero other rows. No ETL/full import.
 Observed REDs/setup/report failures and targeted fixes are recorded in the evidence note.
 Documentation reconciliation records PR #1 merge while retaining original research/receipt/Task Map.
-Remaining: exact source checkpoint independent review, final doc/secret/diff checks, one receipt and
-commit/push/Draft PR publication; Human Owner decides merge. IMP-P1-02 remains NOT STARTED.
+Remaining at that checkpoint: review/checks/receipt/publication. Current closeout below supersedes that snapshot; Human Owner alone decides merge. IMP-P1-02 remains NOT STARTED.
 
 
 ## Independent review / correction checkpoint
@@ -84,4 +83,24 @@ Initial exact source review at 42ae1df46285b1f42772d92e13181dc16a55ac89 required
 selected-rights reads in every scope, unrelated-write expiry isolation, non-finite numerics, canonical
 LF migration/source checksums and per-operation local endpoint enforcement. All implemented; 69/69
 full tests pass, exit 0. Unpublished empty foundation safely recreated and migration replay is no-op.
-New exact-source checkpoint/re-review pending; no final receipt or Draft publication yet.
+That correction snapshot preceded independent re-review; final outcome follows below.
+
+
+## Final review / publication handoff
+
+START_SHA and approved planning merge: bffb2fab1918dc5221a6c5da7920168bcae263ca.
+FINAL_REVIEW_SHA / implementation source checkpoint: d25083c67ea73384ab13068bf41fb70755c0a0d0.
+Independent review confirms five fixes, no remaining code/security blocker in reviewed fixes. The last
+LOW document count is corrected to93. No source/migration change in closeout; final HEAD/actual PR URL
+are verified from Git/GitHub after publication, not invented inside their own tracked commit.
+All task acceptance in local scope is evidenced:69/69 tests, named constraints/RLS, source package/shape/
+duplicate investigation, reset/recreate/rollback, docs/secret checks. API/ETL/bytes/storage/restore/cloud
+remain explicitly NOT RUN/deferred. Source hashes match; original planning research/receipt unchanged.
+Receipt: [[2026-11-11_000730_IMP-P1-01_Local_PostgreSQL]]. Implementation evidence: [[IMP-P1-01_Implementation_Evidence]].
+At authoring, implementation PR NOT CREATED; final step is push this task branch and create one OPEN/
+DRAFT PR to main, then STOP. Find it via [head-branch lookup](https://github.com/kraveerachat/DoomParfum-By-TK/pulls?q=is%3Apr+head%3Aimpl%2Fp1-01-local-postgres-schema).
+Owner action: review/merge this PR; only afterward separately authorize/start IMP-P1-02. No auto-merge.
+TOOL EXECUTION REPORT: existing GitHub/Git/PowerShell/Python/Docker, ecc:postgres-patterns, PostgreSQL
+primary docs and independent reviewer used; no installation/host/account/cloud/production changes.
+Exact changed-file manifest: database/evidence/documentation_checks.json. .local raw-derived details,
+credentials and test logs ignored; no private data/dumps/backups committed. PRODUCTION_MUTATION=NO.

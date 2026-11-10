@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_evidence
 status: local-verified-review-pending
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, postgres, tests, security]
 source_of_truth: "../../../README.md"
 ---
@@ -13,7 +13,7 @@ source_of_truth: "../../../README.md"
 
 Approved plan: [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1), owner-merged at
 `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Branch `impl/p1-01-local-postgres-schema`.
-Source/evidence checkpoint will be recorded after commit; no self-referential tracked SHA invented.
+Final reviewed source checkpoint: `d25083c67ea73384ab13068bf41fb70755c0a0d0`; resulting publication head is reported by the live Draft PR. No self-referential tracked SHA invented.
 Human review/merge required. PRODUCTION_MUTATION=NO. [[IMP-P1-01_Local_PostgreSQL_Schema]].
 
 ## Exact local implementation
@@ -25,7 +25,7 @@ Task-labeled container/volume, 127.0.0.1:55431, 768 MiB / 2 CPUs; development pa
 No global install, host setting/account/provider change, other-container stop/reset or production access.
 The internal trusted Unix-socket adapter is a local test boundary; real provider authentication is unimplemented.
 
-Actual catalogue inventory: **47 logical tables**; **47 PK, 141 FK, 91 UNIQUE, 82 table CHECK**
+Actual catalogue inventory: **47 logical tables**; **47 PK, 141 FK, 91 UNIQUE, 93 table CHECK**
 constraints plus **59 deferred constraint-trigger constraints**, **5 domain CHECKs**,
 **396 NOT NULL columns**, **244 indexes**, **203 RLS policies**,
 **196 user triggers**. ENABLE/FORCE RLS on all 47 tables. The separate dpt_ops migration ledger
@@ -141,4 +141,15 @@ source/per-asset use gates, exact bindings, revocation/parent invalidation and a
 The unpublished empty foundation was verified empty (except field definitions) with no other connection,
 recreated, migrated and replayed as no-op under canonical checksums. No dataset bytes were normalized,
 no data-bearing/public/production migration rewritten. Source files are LF under scoped .gitattributes.
-The updated checkpoint requires independent re-review; final review readiness is not claimed yet.
+The updated checkpoint was independently re-reviewed as recorded below; no code/security blocker remains in the reviewed fixes.
+
+
+## Independent re-review and final agent readiness
+
+Exact source checkpoint d25083c67ea73384ab13068bf41fb70755c0a0d0 independently re-reviewed; all five
+findings addressed, no remaining code/security blocker found in the reviewed fixes. Reviewer repeated
+rollback-only revocation/expired-asset isolation/NaN probes and checked checksum/endpoint/evidence fixes;
+cleanup verified. The full 69-test suite is the implementation agent's actual run, not claimed rerun
+by the reviewer. See database/evidence/independent_review.md. LOW document count corrected to93 CHECKs.
+Final closeout changes metadata only; source/migration hashes remain identical to reviewed checkpoint.
+READY FOR HUMAN OWNER REVIEW as a Draft Implementation PR. No merge/production approval is inferred.

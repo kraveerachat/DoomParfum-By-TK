@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_plan
 status: proposed
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, planning, pilot]
 source_of_truth: "../../README.md"
 ---

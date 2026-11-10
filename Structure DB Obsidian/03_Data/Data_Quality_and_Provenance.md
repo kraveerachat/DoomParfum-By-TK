@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: data_governance
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - data

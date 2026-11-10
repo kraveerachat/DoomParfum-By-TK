@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: workflow_specification
 status: accepted
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - engineering
@@ -119,7 +119,7 @@ DoomParfum By TK/
 
 Public repository exists at https://github.com/kraveerachat/DoomParfum-By-TK. AGENTS.md and
 DEVELOPMENT_WORKFLOW.md already exist. Existing PR #1 on plan/p1-data-discovery-schema-foundation is
-OPEN/DRAFT and is being corrected after review; no new governance/planning PR is created for this task.
+was OPEN/DRAFT during S2 review corrections; it is now owner-MERGED as verified above. IMP-P1-01 is a separate implementation branch/Draft PR, not a new governance planning PR.
 Workflow presence is verified; proposed-canonical adoption/technical decisions remain unaccepted until
 Human Owner explicitly decides and merges. This is not a missing-workflow blocker.
 

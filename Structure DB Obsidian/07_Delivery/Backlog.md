@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - delivery
@@ -110,7 +110,7 @@ No implementation PR exists. Owner local approvals OD-01..06 are now recorded; t
 | Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
 |---|---|---|---|---|---|
 | DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7 | MERGED by Human Owner | PR #1 / bffb2fab1918dc5221a6c5da7920168bcae263ca; [[DPT-PLAN-001_P1_Data_Foundation]] | Gate P satisfied for bounded local scope |
-| IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | LOCAL IMPLEMENTED / REVIEW IN PROGRESS | impl/p1-01-local-postgres-schema; [[IMP-P1-01_Local_PostgreSQL_Schema]] | Final evidence, independent review, Draft PR and Human Owner merge |
+| IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | READY FOR OWNER REVIEW / DRAFT | impl/p1-01-local-postgres-schema; [[IMP-P1-01_Local_PostgreSQL_Schema]] | 69/69 tests + independent review; Draft publication then Human Owner merge |
 | IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
 | IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
 | IMP-P1-04 | Benchmark + independent DB/object restore | 01–03 + OD-05 | NOT STARTED | NOT CREATED | Measure, test, independent review |

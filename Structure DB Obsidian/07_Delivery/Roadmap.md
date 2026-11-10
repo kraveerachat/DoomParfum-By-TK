@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - delivery
@@ -152,3 +152,9 @@ The initial ETL pilot is brought forward from broad P5 ingestion to test P1 feas
 and bulk integrations remain deferred. No phases are declared implemented by this plan.
 R22 priority Thai coverage remains an acceptance target pending permissioned real samples.
 Details and test criteria: [[P1_Pilot_Implementation_Plan]].
+
+## Local schema review readiness — 2026-11-11
+
+IMP-P1-01 source d25083c67ea73384ab13068bf41fb70755c0a0d0 has69 passing tests and independent review,
+ready for owner review as a Draft PR. P1 catalogue/ETL and IMP-P1-02..05 remain incomplete/not started;
+Human Owner merge of01 is required before02. No production/cloud/provider activation.

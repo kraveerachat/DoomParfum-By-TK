@@ -2,9 +2,9 @@
 id: DPT-HOM-002
 project: DoomParfum By TK
 type: status
-status: draft
+status: active
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - status
@@ -22,7 +22,7 @@ provides its resulting head/URL. No automatic merge. PRODUCTION_MUTATION=NO.
 | Workstream | Actual state | Next gate |
 |---|---|---|
 | DPT-PLAN-001 | Owner merged; original research and immutable receipt preserved | Historical task/receipt remain evidence |
-| IMP-P1-01 | 47-table local migrations and focused SQL/security tests implemented; final review in progress | [[IMP-P1-01_Local_PostgreSQL_Schema]], [[IMP-P1-01_Implementation_Evidence]]; Human Owner reviews Draft PR |
+| IMP-P1-01 | 47-table local migrations,69/69 tests and independent review completed; ready for Owner Review | [[IMP-P1-01_Local_PostgreSQL_Schema]], [[IMP-P1-01_Implementation_Evidence]]; Human Owner reviews Draft PR |
 | IMP-P1-02 sample ETL | NOT STARTED | Owner merge of IMP-P1-01, reviewed mapping/rights/duplicate handling |
 | IMP-P1-03 images | NOT STARTED; DB permission contracts only in 01 | Actual per-asset rights, byte/SSRF/proxy tests |
 | IMP-P1-04 benchmark/restore | NOT STARTED / NOT RUN | Separate measured DB/object recovery evidence |
@@ -43,3 +43,10 @@ No raw files, private exports, real users, credentials, dumps or backups enter t
 Current SQL/dictionary/security findings and partial/not-run coverage are recorded in implementation
 evidence. Earlier planning claims of no code were accurate for that historical planning round;
 implementation is now tracked separately. No runtime result is inferred from owner approval or merge.
+
+## Final local review readiness — 2026-11-11
+
+Reviewed source d25083c67ea73384ab13068bf41fb70755c0a0d0; no remaining code/security blocker in reviewed fixes.
+69/69 tests pass; actual CHECK93/deferred59/RLS203 inventory. One immutable IMP-P1-01 receipt created;
+metadata commit/push/Draft creation are the remaining publication steps at authoring. Live PR/final report
+verifies resulting HEAD/URL; no implementation merge or IMP-P1-02 start is claimed.
