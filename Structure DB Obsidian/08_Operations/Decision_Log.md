@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,18 @@ source_of_truth: "../../README.md"
 ---
 
 # Decision Log — DoomParfum By TK
+
+## Current execution event — verified planning merge / IMP-P1-01
+
+PR #1 owner merge verified at `bffb2fab1918dc5221a6c5da7920168bcae263ca` on 2026-11-10. Gate P is satisfied;
+local SQL implementation now belongs to [[IMP-P1-01_Local_PostgreSQL_Schema]], pending its own Human
+Owner review/merge. Prior S1/S2/S3 gate/status statements below are historical snapshots. OD-01..06
+approval rows are unchanged; no deferred decision is accepted by this event. PostgreSQL 16.15 image
+is pinned for this disposable pilot only. Conservative machine-contract findings are documented in
+`database/schema_findings.md`; actual SQL/RLS evidence is [[IMP-P1-01_Implementation_Evidence]].
+Shared SQL tests do not activate a shared product mode. No cloud/provider/storage/retention/RPO/RTO,
+external backup, regional import or unlicensed asset approval is inferred.
+
 
 > **Document Type:** Architectural & Product Decision Register
 > **Source Baseline:** `../README.md` (Section 10)
@@ -46,7 +58,7 @@ source_of_truth: "../../README.md"
 | **DEC-007** | นำเข้าข้อมูลเฉพาะจากแหล่งที่ได้รับอนุญาต/ชุดข้อมูลเปิด (Open Datasets/APIs) และการบันทึกของผู้ใช้; ห้าม Mass Scraping | **PROPOSED** | 2026-11-10 | [[Source_Registry]], [[Rights_and_Attribution]] |
 | **DEC-008** | สแต็กทางเทคนิคเริ่มต้นเสนอเป็น Next.js (App Router) + PostgreSQL + Drizzle ORM + Docker Compose | **PROPOSED** | 2026-11-10 | [[Proposed_System_Architecture]], [[Tech_Stack_and_ADRs]] |
 | **DEC-009** | ใช้ Obsidian Markdown Vault สำหรับ Living Documentation และใช้ GitHub สำหรับ Version Control (Workflow exists; proposed governance acceptance pending) | **CONFIRMED** | 2026-11-10 | [[Project_Index]], [[GitHub_and_Workflow_PENDING]] |
-| **DEC-010** | ใช้ Two-Gate Development Workflow (Gate P: Planning PR -> Human Merge -> Gate I: Implementation PR -> Human Merge) | **PROPOSED-CANONICAL** | 2026-11-10 | `../DEVELOPMENT_WORKFLOW.md`, [[GitHub_and_Workflow_PENDING]] |
+| **DEC-010** | ใช้ Two-Gate Development Workflow (Gate P: Planning PR -> Human Merge -> Gate I: Implementation PR -> Human Merge) | **ACCEPTED BY OWNER MERGE PR #1** | 2026-11-10 | `../DEVELOPMENT_WORKFLOW.md`, [[GitHub_and_Workflow_PENDING]] |
 | **DEC-011** | ข้อยกเว้นการ Push Initial Documentation Baseline ขึ้นสู่ `main` โดยตรงเพียงครั้งเดียวสำหรับ Remote ที่ว่างเปล่า | **CONFIRMED** | 2026-11-10 | `../AGENTS.md`, `../DEVELOPMENT_WORKFLOW.md` |
 
 ---
@@ -99,7 +111,7 @@ No historical bootstrap exception is reused and no implementation/production act
 | DEC-018 | Separate TSK-DOC-001 for future documentation CI | Keep current correction Markdown-only; future Actions/tooling/permissions need separate owner-authorized scope | PROPOSED |
 
 Owner recommendations for OD-01..06: [[P1_Data_Foundation_Plan]]. No existing proposed decision is
-accepted. Current facts: repository public, workflow exists, PR #1 OPEN/DRAFT. Historical bootstrap log
+accepted in S2. At that historical snapshot: repository public, workflow existed, PR #1 was OPEN/DRAFT. Historical bootstrap log
 may describe earlier pending states; it does not override these current facts. Immutable receipt
 [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] stays unchanged, no second receipt.
 
@@ -109,7 +121,7 @@ may describe earlier pending states; it does not override these current facts. I
 Authority: Human Owner's current chat message, “Owner Decision Recording for Planning PR #1”.
 Recorded by Codex; approval is explicit owner direction, not agent self-acceptance. This section
 supersedes earlier S1/S2 all-PROPOSED/open wording for the bounded scopes below only. Historical
-proposal text is retained as history. PR #1 is OPEN/DRAFT, not merged; Gate P remains unsatisfied.
+proposal text is retained as history. At S3 recording PR #1 was OPEN/DRAFT and Gate P was pending; the verified owner-merge event above now supersedes that gate status.
 
 | ID | Owner-approved scope | Deferred / blocked boundary | Validation / execution gate |
 |---|---|---|---|

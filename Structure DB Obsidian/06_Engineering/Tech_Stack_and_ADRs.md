@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: tech_stack_adrs
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - engineering
@@ -14,6 +14,17 @@ source_of_truth: "../../README.md"
 ---
 
 # Tech Stack and Architecture Decision Records (ADRs) — DoomParfum By TK
+
+## IMP-P1-01 local execution record
+
+Verified approved planning merge `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Local PostgreSQL 16.15,
+pinned image `postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94`,
+implements/tests the 47-table model in [[IMP-P1-01_Local_PostgreSQL_Schema]]. No extension is required
+beyond built-in PostgreSQL/PLpgSQL; pg_trgm/search/ORM remain unselected/unimplemented here.
+This pin is within the owner-approved disposable pilot, not a permanent hosting choice. ADR-003..006
+bounded statuses and OD-01..06 deferred/blocked boundaries are unchanged. Evidence, local trust adapter,
+field formats and conservative rights/normalization limits: [[IMP-P1-01_Implementation_Evidence]].
+
 
 > **Document Type:** Technical Choices & ADR Registry
 > **Source Baseline:** `../README.md` (Sections 7 & 10)

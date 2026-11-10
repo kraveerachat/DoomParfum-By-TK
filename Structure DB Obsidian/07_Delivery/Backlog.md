@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - delivery
@@ -109,8 +109,8 @@ No implementation PR exists. Owner local approvals OD-01..06 are now recorded; t
 
 | Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
 |---|---|---|---|---|---|
-| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | PR #1 OPEN/DRAFT; S2 post-review corrections in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review of recorded local decisions, then human merge |
-| IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | NOT STARTED | NOT CREATED | Verify merge SHA first |
+| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7 | MERGED by Human Owner | PR #1 / bffb2fab1918dc5221a6c5da7920168bcae263ca; [[DPT-PLAN-001_P1_Data_Foundation]] | Gate P satisfied for bounded local scope |
+| IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | PERFORMANCE CORRECTION / DRAFT | impl/p1-01-local-postgres-schema; [[IMP-P1-01_Local_PostgreSQL_Schema]] | 79/79 tests; S2 independent review passed; existing PR #2, Human Owner merge |
 | IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
 | IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
 | IMP-P1-04 | Benchmark + independent DB/object restore | 01–03 + OD-05 | NOT STARTED | NOT CREATED | Measure, test, independent review |
@@ -134,6 +134,9 @@ work, not assertions that documentation CI proves SQL/RLS behavior. OD recommend
 
 
 S3 owner-decision update: IMP-P1-01..04 bounded local design/testing scope approved under OD-01..06,
-all NOT STARTED until PR #1 owner merge is verified. IMP-P1-05 cloud/provider/resource execution deferred
+01 now separately authorized/implemented locally; 02–04 remain NOT STARTED pending their dependencies. PR #1 owner merge is verified. IMP-P1-05 cloud/provider/resource execution deferred
 and needs separate approval. Regional imports blocked by rights/samples; international licensed pilot
 approved. TSK-DOC-001 CI stays PROPOSED/NOT STARTED. No SQL/code/DB/Actions/provisioning in this round.
+
+S2 evidence: [[IMP-P1-01_Performance_Correction]]. The bounded validation regression benchmark does
+not complete IMP-P1-04 capacity/independent DB-object restore; those acceptance criteria remain NOT RUN.

@@ -1,0 +1,106 @@
+{
+  "task": "IMP-P1-01 performance correction",
+  "phase": "before",
+  "checked_at_utc": "2026-11-10T20:06:41.718477+00:00",
+  "fixture": "SYNTHETIC draft brand+typed entity, no source/product dataset;2 domain rows per record",
+  "database": "dpt_migration_probe",
+  "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+  "limits": {
+    "records_max": 250,
+    "statement_timeout_seconds": 45,
+    "container_cpu": 2,
+    "memory_mib": 768
+  },
+  "measurement": "backend wall time around DML+natural COMMIT; session-local track_functions=pl; committed stats force-flushed and read from second backend",
+  "results": [
+    {
+      "calls": {
+        "validate_model": 50,
+        "serialize_write": 50,
+        "validate_images": 50,
+        "check_active_row": 25,
+        "validate_all_deferred": 50
+      },
+      "backend_seconds": 0.157388,
+      "operation": "insert",
+      "records": 25,
+      "domain_row_events": 50,
+      "status": "COMMITTED",
+      "wall_seconds": 0.420948
+    },
+    {
+      "calls": {
+        "validate_model": 200,
+        "serialize_write": 200,
+        "validate_images": 200,
+        "check_active_row": 100,
+        "validate_all_deferred": 200
+      },
+      "backend_seconds": 1.167561,
+      "operation": "insert",
+      "records": 100,
+      "domain_row_events": 200,
+      "status": "COMMITTED",
+      "wall_seconds": 1.429043
+    },
+    {
+      "calls": {
+        "validate_model": 500,
+        "serialize_write": 500,
+        "validate_images": 500,
+        "check_active_row": 250,
+        "validate_all_deferred": 500
+      },
+      "backend_seconds": 5.84195,
+      "operation": "insert",
+      "records": 250,
+      "domain_row_events": 500,
+      "status": "COMMITTED",
+      "wall_seconds": 6.107189
+    },
+    {
+      "calls": {
+        "validate_model": 100,
+        "serialize_write": 100,
+        "validate_images": 100,
+        "check_active_row": 100,
+        "validate_all_deferred": 100
+      },
+      "backend_seconds": 0.61712,
+      "operation": "update",
+      "records": 100,
+      "domain_row_events": 100,
+      "status": "COMMITTED",
+      "wall_seconds": 0.865859
+    },
+    {
+      "calls": {
+        "validate_model": 200,
+        "serialize_write": 200,
+        "validate_images": 200,
+        "validate_all_deferred": 200
+      },
+      "backend_seconds": 0.383411,
+      "operation": "delete",
+      "records": 100,
+      "domain_row_events": 200,
+      "status": "COMMITTED",
+      "wall_seconds": 0.653927
+    }
+  ],
+  "original_migration_sha256": {
+    "001_identity.sql": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+    "002_catalogue.sql": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+    "003_provenance.sql": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+    "004_associations_media_personal.sql": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+    "005_contract_functions.sql": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+    "006_media_and_deferred_contracts.sql": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+    "007_security_and_field_contract.sql": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
+  },
+  "limitations": [
+    "One local run per size, not production capacity or full-dataset benchmark",
+    "Function tracking and loopback/local client overhead present",
+    "Setup/recreate/baseline excluded from backend_seconds; wall_seconds includes harness/connection overhead",
+    "No concurrent benchmark load; concurrency correctness separately tested"
+  ]
+}

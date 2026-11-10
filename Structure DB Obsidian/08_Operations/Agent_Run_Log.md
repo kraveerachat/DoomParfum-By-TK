@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - operations
@@ -246,3 +246,114 @@ parity / zero errors; links/fences/source paths and common secret patterns check
 Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
 for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
 readback provide published SHA/state; no implementation or automatic merge.
+
+
+## 2026-11-10 — IMP-P1-01 / S1 — implementation, local validation and review preparation
+
+TASK=IMP-P1-01; TYPE=IMPLEMENTATION; START_SHA/approved-plan/main=bffb2fab1918dc5221a6c5da7920168bcae263ca.
+Branch=impl/p1-01-local-postgres-schema. GitHub confirmed PR #1 merged; fresh origin fetch/clean tree;
+branch created from origin/main. Reviewed governance/product/vault/current P1 model/security/decisions,
+prior task/receipt and external package; raw hashes/full 42-entry inventory agree. No missing dataset.
+
+TOOL DECISION: existing GitHub MCP, PowerShell/Git, Python standard library, Docker Desktop/PostgreSQL,
+PostgreSQL 16 primary web docs and existing ecc:postgres-patterns skill. This skill's database-reviewer
+instruction and workflow's independent-review gate are followed with a separate read-only reviewer;
+no concurrent file ownership/commits. Approved UUID model takes precedence over generic skill defaults.
+REQUESTED_TOOL=NONE; TOOL_STATUS=AVAILABLE; EXECUTION_MODE=EXISTING/MCP; GIT_WRITE=YES task branch only;
+OBSIDIAN_WRITE=YES; PRODUCTION_MUTATION=NO. No installer/global hooks/config/account/paid tool change.
+Versions: Git 2.53.0.windows.2, Python 3.11.9; Docker Desktop 4.43.2/Engine 28.3.2, PostgreSQL 16.15.
+
+Initial Docker CLI available but engine stopped; existing Desktop launched without host setting changes.
+Only task-labeled container doomparfum-p1-01 / volume doomparfum-p1-01-data are created/managed, bounded
+memory/CPU and 127.0.0.1:55431. Existing unrelated containers were inventoried, never stopped/reset by task
+commands. Image pinned to sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94.
+Generated local-only admin secret remains ignored under .local/p1-01; no value printed. No remote DB
+connection interface; no Supabase/Vercel/cloud/storage/production resources. Local socket trust under
+Docker-admin control is explicitly not provider authentication. Rollback/stop: python database/local.py
+stop retains disposable volume; recreation is test-DB-only. No blanket prune or existing-container delete.
+
+ACTUAL: python database/verify.py -> 63 passed / 0 failed / 0 errors / 0 skipped, exit 0; machine inventory
+and source hashes in database/evidence/. python database/local.py migrate -> empty foundation upgraded,
+47 tables/53 field definitions/zero other rows. Live non-owner logins, FORCE owner RLS, synthetic rights,
+actual expiry passage, concurrent write skew and failed-migration recovery tested. Initial REDs and
+introduced setup/report failures were fixed and rerun; see the detailed evidence note. All real-data
+shape fixtures rollback; full ETL, API/JWT/cache/export/error masking, real byte/proxy/SSRF, benchmark,
+DB/object restore and cloud readiness NOT RUN. Deferred owner decisions remain unchanged.
+
+Local document checker initially passes 22 Markdown/17 vault frontmatters, 47-name parity, six unchanged
+matching OD rows, no link/fence/secret-pattern errors; final count will increase with logs/receipt.
+Original planning receipt and three source research blobs unchanged. .local credential path is ignored.
+Independent exact-source review/checkpoint and final receipt/Draft publication remain pending here.
+TOOL EXECUTION REPORT: tools used above; REQUESTED_BUT_NOT_USED=NONE; tools installed=NONE. Exact changed
+paths in documentation-check/PR manifest; Obsidian updated, no private/raw files. END_SHA and actual Draft
+PR URL are verified after the corresponding Git/API events. STOP after Draft publication; owner merges.
+
+
+### IMP-P1-01 independent review correction (unpublished 42ae1df checkpoint)
+
+One HIGH/three MEDIUM/one LOW findings confirmed by independent read-only source review and three
+rollback-only SQL probes. Fixed private/shared/curator materialized-fact rights expiry/revocation,
+expired-asset cross-tenant write outage, NaN acceptance, CRLF/LF checksums and endpoint-only-at-start
+validation. Added six regression methods: full suite now 69/69 passed, exit 0. Actual revised inventory:
+47 PK / 141 FK / 91 UNIQUE / 93 table CHECK / 59 deferred constraint triggers, 196 user triggers;
+47 FORCE RLS tables / 203 policies, 5 domain checks / 396 NOT NULL / 244 indexes unchanged.
+Scoped .gitattributes/UTF-8 LF checksum policy applied to database source only; raw dataset untouched.
+Before unpublished foundation reset, all non-definition domain counts were zero and no other connection;
+recreated/migrated foundation has 53 field definitions only and canonical replay no-op. No data loss,
+production/global/provider changes or public migration rewrite. Re-review at new checkpoint is next.
+
+
+### 2026-11-11 — IMP-P1-01 final source review and metadata closeout
+
+Independent re-review of d25083c67ea73384ab13068bf41fb70755c0a0d0 confirms all five findings addressed, no
+remaining code/security blocker in reviewed fixes.69/69 full tests pass; independent bounded probes
+cleanup verified. LOW count correction82->93 made; current inventory CHECK93/deferred59/triggers196.
+Original63-test/checkpoint82 counts above remain historical. Final source/migration hashes unchanged
+in this metadata closeout. Receipt [[2026-11-11_000730_IMP-P1-01_Local_PostgreSQL]] is the single IMP-P1-01
+receipt, distinct from unchanged DPT-PLAN-001 planning receipt. Final metadata commit/push and one
+Draft PR are authorized next; actual published head/URL comes from GitHub readback/final report.
+STOP after publication; no merge, production/cloud, actual import/bytes/restore or deferred decision change.
+
+Final metadata validation:26 Markdown files,20 parsed vault frontmatters,47 ERD/dictionary/manifest/live
+table names,6 unchanged matching OD rows; zero link/fence/frontmatter/common-secret-pattern errors.
+Original receipt/three research blobs and original planning Task Map unchanged; exactly one IMP-P1-01
+receipt. Full changed-path manifest44 files in database/evidence/documentation_checks.json. Mermaid,
+API/storage/ETL/restore remain NOT RUN. Final staged checks and branch/remote head readback follow.
+
+## S2 performance correction — current checkpoint, 2026-11-11
+
+Existing [PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2) remains OPEN/DRAFT on
+impl/p1-01-local-postgres-schema. START/reviewed head3d377e0d78ec3af86e4c6ca03302b633c4ff11a7;
+correction source/evidence checkpoint aa59b3d9e29e88697124d78e2f30e97271360586. Independent exact-source
+review completed with no blocking finding. Published001–007 and original immutable receipt unchanged; no second receipt.
+
+Additive008 coalesces full validators once per dirty epoch through private xid8/generation state and
+post-statement scheduling. All original FK/RLS/permissions/conflict/provenance/materialization/image
+rights and active-row checks remain. Natural-COMMIT synthetic250-record case5.841950s→0.051123s,
+500→1 complete calls per validator; row callbacks remain. One run/case is not a capacity claim.
+Full suite79/79 passed, failed0/errors0/skipped0, exit0;10 new positive/negative transaction tests.
+Foundation8 migrations/53 field definitions/zero other domain rows/zero pending markers. Named
+47-table inventory unchanged except243 domain user triggers (47 added statement triggers); one ops
+queue trigger is excluded from domain counts. Details: [[IMP-P1-01_Performance_Correction]].
+
+Global scans per dirty epoch, O(row) dispatcher/marker MVCC/WAL/queue cost and serialized writers remain.
+IMP-P1-04 capacity/restore, IMP-P1-02 ETL, bytes/API/cloud/production remain NOT RUN. No owner decisions
+changed. PRODUCTION_MUTATION=NO. Human Owner alone reviews/merges; no force push/new PR/merge.
+
+TOOL EXECUTION CHECKPOINT: existing GitHub MCP/Git2.53.0.windows.2/PowerShell/Python3.11.9/
+Docker/PostgreSQL16.15 and independent performance reviewer. No installation/host/account changes.
+Official PG16 constraint/trigger/stats documentation consulted. Bounded synthetic before/after commands
+completed five cases each; full verify79/79 exit0; documentation/model/link/frontmatter/secret-pattern
+check passes at source checkpoint. Source and original receipt guards added to documentation checker.
+No raw/private package/dump/backups committed. Current metadata closeout and PR update still pending.
+
+### S2 review closeout — ready for Human Owner review
+
+Exact correction source HEAD aa59b3d9e29e88697124d78e2f30e97271360586 independently reviewed: no blocking
+finding;8 bounded independent checks passed and cleanup verified0. All16 source hashes match79/79
+suite evidence. No code changed after source review, and reviewer did not claim full-suite/benchmark
+reruns. Same-branch metadata commit/push and existing PR #2 description update follow these checks;
+resulting final publication HEAD is verified in PR/final report, not invented inside its own commit.
+Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
+[[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
+Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.

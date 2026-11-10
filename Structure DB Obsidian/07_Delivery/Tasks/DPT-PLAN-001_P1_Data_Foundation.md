@@ -2,23 +2,22 @@
 id: DPT-PLAN-001
 project: DoomParfum By TK
 type: task
-status: planning-review-ready
+status: merged
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, planning, data]
 source_of_truth: "../../../README.md"
 ---
 
 # DPT-PLAN-001 — P1 Data Discovery & Database Foundation
 
-## Current task
+## Current task — owner-merged planning record
 
-- Agent: Codex, planning/research/documentation only.
-- State: planning_review_ready — S3 owner decisions recorded; Human Owner review/merge pending, 2026-11-10 Asia/Bangkok.
-- Branch: `plan/p1-data-discovery-schema-foundation`, target `main`.
-- START_SHA / origin/main: `03481f7066487c44631cb9065899894ee8db71fb`.
-- Existing PR: https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 — verified OPEN/DRAFT, not merged. Owner local decisions approved (S3); Planning PR not merged, Gate P pending; no implementation in this session.
-- Production mutation: NO. Human review and merge required.
+Planning PR #1 is verified MERGED at `bffb2fab1918dc5221a6c5da7920168bcae263ca` on 2026-11-10 22:12:07 Asia/Bangkok.
+This planning task is complete as an approved bounded local plan. Original session/profiling/receipt
+snapshots below are historical and preserved. Subsequent local implementation belongs to
+[[IMP-P1-01_Local_PostgreSQL_Schema]] on its own branch and Human Merge gate. No production deployment
+or broader deferred decisions are implied. Original receipt remains unchanged.
 
 ## Plan and expected evidence
 
@@ -54,7 +53,10 @@ the fallback. No external tools/configuration installed.
 
 ## Next action
 
-Human Owner reviews the updated owner-decision record in PR #1 and merges through GitHub when satisfied. Verify the merge/approved plan SHA before any later implementation; no SQL/DB/code/cloud in this session.
+Planning task owner-merged. Human Owner reviews the separate IMP-P1-01 Draft Implementation PR;
+its source, local test evidence and receipt are tracked in [[IMP-P1-01_Local_PostgreSQL_Schema]].
+Historical S1/S2/S3 planning session/publication statements below are preserved as dated snapshots.
+No production deployment or automatic implementation merge.
 
 
 ## Session S1 findings and planning review readiness
@@ -299,3 +301,9 @@ document updates/validation and authorized same-branch publication. REQUESTED_BU
 INSTALLED_OR_CHANGED=NONE for tooling/config. OBSIDIAN_UPDATED=YES, exact paths above. No new PR,
 receipt, skill/subagent/account setup, source acquisition, SQL, database, application code or cloud resource.
 Next action after push/PR readback: stop for Human Owner review and merge; no automatic merge.
+
+## Post-merge event — IMP-P1-01 start
+
+Verified GitHub PR #1 merged and main contains the approved head. The new implementation branch starts
+from bffb2fab1918dc5221a6c5da7920168bcae263ca. Current SQL/test/evidence tracking is in [[IMP-P1-01_Local_PostgreSQL_Schema]].
+No second planning receipt or rewrite of the historical receipt/research/Task Map.

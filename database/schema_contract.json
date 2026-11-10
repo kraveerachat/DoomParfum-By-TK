@@ -1,0 +1,335 @@
+{
+  "approved_planning_merge_sha": "bffb2fab1918dc5221a6c5da7920168bcae263ca",
+  "logical_tables": {
+    "users": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "access_scopes": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "scope_members": {
+      "group": 1,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "access_scope_id,user_id"
+    },
+    "countries": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "code"
+    },
+    "brand_tags": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "families": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "field_definitions": {
+      "group": 1,
+      "scoped": false,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "entities": {
+      "group": 1,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "brands": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "brand",
+      "private": false,
+      "pk": "id"
+    },
+    "perfumes": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "perfume",
+      "private": false,
+      "pk": "id"
+    },
+    "product_variants": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "variant",
+      "private": false,
+      "pk": "id"
+    },
+    "notes": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "note",
+      "private": false,
+      "pk": "id"
+    },
+    "accords": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "accord",
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_relations": {
+      "group": 2,
+      "scoped": true,
+      "entity_kind": "relation",
+      "private": false,
+      "pk": "id"
+    },
+    "sources": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "rights_assessments": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "source_records": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "entity_source_links": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "source_observations": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "canonical_selections": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "access_scope_id,entity_id,entity_kind,field_path"
+    },
+    "data_conflicts": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "conflict_members": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "access_scope_id,conflict_id,observation_id"
+    },
+    "ingestion_batches": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "staging_records": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "validation_results": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "audit_events": {
+      "group": 3,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "brand_aliases": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "note_aliases": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "brand_tag_links": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_notes": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_accords": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_families": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_usage_tags": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "image_assets": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": "image",
+      "private": false,
+      "pk": "id"
+    },
+    "asset_permissions": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "perfume_images": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "note_images": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "comparison_evidence": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "rating_observations": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "matching_results": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": false,
+      "pk": "id"
+    },
+    "retail_listings": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": "listing",
+      "private": true,
+      "pk": "id"
+    },
+    "price_observations": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    },
+    "user_lists": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    },
+    "user_list_items": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    },
+    "saved_buying_sources": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    },
+    "purchase_records": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    },
+    "inventory_items": {
+      "group": 4,
+      "scoped": true,
+      "entity_kind": null,
+      "private": true,
+      "pk": "id"
+    }
+  },
+  "foreign_key_count": 141
+}
