@@ -169,3 +169,15 @@ Final post-closeout validation, exact file list, Git checkpoint and publication 
 
 Next: finish documentation checkpoint/receipt, publish one Draft Planning PR, stop for owner review and
 human merge. All source/hosting/schema choices remain PROPOSED. No implementation task started.
+
+
+### P1 publication checkpoint
+
+Payload commit `656d173e2cc03a5f3e6b48fdfb6603ba573e0947` created and pushed successfully to the planning
+branch using existing native Git credentials with terminal/credential interaction disabled. Existing
+invalid gh token was not changed. Main remains the starting SHA. Vault guide missing frontmatter and
+example wiki placeholder were repaired after expanded document validation exposed them; rerun succeeded
+for 26 Markdown files, 25 frontmatters and 44 matching schema names. Added one immutable receipt and
+handoff in final metadata closeout (28 Markdown files total). This event precedes the final commit/push
+and Draft PR creation; actual final SHA/PR state are in the GitHub publication result/final user report.
+No further scope/implementation work is authorized after publication.

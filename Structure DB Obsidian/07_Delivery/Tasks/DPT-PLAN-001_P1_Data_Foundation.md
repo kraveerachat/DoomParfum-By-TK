@@ -2,7 +2,7 @@
 id: DPT-PLAN-001
 project: DoomParfum By TK
 type: task
-status: in-progress
+status: planning-review-ready
 owner: project
 updated: 2026-11-10
 tags: [doomparfum, planning, data]
@@ -14,10 +14,10 @@ source_of_truth: "../../../README.md"
 ## Current task
 
 - Agent: Codex, planning/research/documentation only.
-- State: IN PROGRESS; session S1, 2026-11-10 Asia/Bangkok.
+- State: planning_review_ready / owner acceptance pending; session S1, 2026-11-10 Asia/Bangkok.
 - Branch: `plan/p1-data-discovery-schema-foundation`, target `main`.
 - START_SHA / origin/main: `03481f7066487c44631cb9065899894ee8db71fb`.
-- Planning PR: not created yet. Approved planning PR: none; implementation forbidden.
+- Publication snapshot: branch payload pushed; Draft PR creation is the final action after closeout. Approved planning PR: none; implementation forbidden.
 - Production mutation: NO. Human review and merge required.
 
 ## Plan and expected evidence
@@ -48,7 +48,7 @@ the fallback. No external tools/configuration installed.
 
 | Session | Scope | State | Evidence |
 |---|---|---|---|
-| S1 | P1 documentation and research | IN PROGRESS | Clean cloned baseline; HEAD = origin/main; no existing PRs returned by GitHub search |
+| S1 | P1 documentation and research | planning_review_ready / acceptance pending | Clean cloned baseline; HEAD = origin/main; no existing PRs returned by GitHub search |
 
 ## Next action
 
@@ -118,3 +118,30 @@ outcomes are recorded in [[Agent_Run_Log]]. No tooling/account/configuration ins
 
 Closeout adds exactly one receipt and one handoff note to this manifest; their paths and reviewed
 checkpoint are recorded in the final closeout entry. No runtime/raw-data/config files are included.
+
+
+## Final publication snapshot — 2026-11-10
+
+- Reviewed planning payload/checkpoint SHA: `656d173e2cc03a5f3e6b48fdfb6603ba573e0947`.
+- `git commit` succeeded (26 Markdown files); non-forced planning branch push succeeded; no main change.
+- Native Git used existing credentials noninteractively; no gh reauthentication needed.
+- Documentation checks rerun after the vault-guide repair: 26 Markdown files / 25 parsed frontmatters /
+  44 matching ERD-dictionary table names / zero link, metadata or fence errors. First expanded guide
+  check found missing baseline frontmatter/example placeholder; repaired, then check exited 0.
+- Final metadata checkpoint adds exactly one immutable receipt and one handoff; total PR manifest is
+  the 26 files above plus the following two paths:
+  - `Structure DB Obsidian/08_Operations/Receipts/2026-11-10_201028_DPT-PLAN-001_P1_Planning.md`
+  - `Structure DB Obsidian/08_Operations/Handoffs/2026-11-10_DPT-PLAN-001_P1_Handoff.md`
+- Receipt: [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]].
+- Handoff: [[2026-11-10_DPT-PLAN-001_P1_Handoff]].
+- This tracked snapshot is deliberately written before the PR API call; the final branch SHA and actual
+  PR URL/state are reported by GitHub and in the final user report. Find the one PR via
+  [head-branch lookup](https://github.com/kraveerachat/DoomParfum-By-TK/pulls?q=is%3Apr+head%3Aplan%2Fp1-data-discovery-schema-foundation).
+- Next exact action after final metadata validation/push: create Draft Planning PR to main, then stop
+  for human review. No independent runtime review or merge approval is claimed.
+
+TOOL EXECUTION REPORT: used GitHub MCP, web, PowerShell/Git and ephemeral Python/PyYAML analysis and
+validation; versions/path/failures are in [[Agent_Run_Log]]. INSTALLED_OR_CHANGED=NONE for tools/config.
+OBSIDIAN_UPDATED=YES (exact manifest above). Runtime tests/production mutation=NOT RUN/NO.
+REQUESTED_BUT_NOT_USED: optional Apify (not exposed), PlanetScale skill (not installed; primary PostgreSQL
+reference fallback). No blocker to planning publication; owner decisions/rights block dependent implementation.

@@ -109,7 +109,7 @@ No implementation PR exists. All pilot choices are PROPOSED; the owner must merg
 
 | Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
 |---|---|---|---|---|---|
-| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | IN PROGRESS | Publication pending; [[DPT-PLAN-001_P1_Data_Foundation]] | Draft PR, owner review |
+| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | Payload 656d173 pushed; final publication snapshot in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review after Draft PR publication |
 | IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | NOT STARTED | NOT CREATED | Verify merge SHA first |
 | IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
 | IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
