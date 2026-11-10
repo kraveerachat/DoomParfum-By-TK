@@ -17,7 +17,7 @@ source_of_truth: "../../README.md"
 
 > **Document Type:** Technical Choices & ADR Registry
 > **Source Baseline:** `../README.md` (Sections 7 & 10)
-> **Status:** Draft / Proposed Framework
+> **Status:** Mixed — bounded local pilot/design approvals recorded; cloud/other choices deferred or proposed
 
 ---
 
@@ -39,7 +39,7 @@ source_of_truth: "../../README.md"
 | **Styling** | **Tailwind CSS + shadcn** | Material UI, CSS Modules | `[PROPOSED]` | ปรับแต่ง UI ง่าย สไตล์โมเดิร์น โค้ดเบา ไม่ผูกมัด Library สำเร็จรูป |
 | **Language** | **TypeScript** | JavaScript | `[CONFIRMED]` | ความปลอดภัยเรื่อง Type ของข้อมูลน้ำหอมและโน้ตที่ซับซ้อน |
 | **Backend** | **Next.js Route Handlers** | Express / NestJS แยกส่วน | `[PROPOSED]` | รวมศูนย์ในโปรเจกต์เดียว ลดความซับซ้อนในการ Deploy สำหรับ MVP |
-| **Database** | **PostgreSQL 16+** | MongoDB, MySQL, SQLite | `[PROPOSED]` | ความสัมพันธ์ของโมเดลข้อมูลสูง รองรับ Trigram และ ACID ครบถ้วน |
+| **Database** | **PostgreSQL (exact local version to be pinned/tested)** | MongoDB, MySQL, SQLite | `OWNER-APPROVED LOCAL PILOT ONLY` | ความสัมพันธ์ของโมเดลข้อมูลสูง รองรับ Trigram และ ACID ครบถ้วน |
 | **ORM** | **Drizzle ORM** | Prisma, TypeORM | `[PROPOSED]` | เบากว่า Prisma ไม่มี Binary Engine รันบน Serverless/Edge ได้ดี |
 | **Search** | **Postgres Trigram (pg_trgm)** | Meilisearch, Elasticsearch | `[PROPOSED]` | ไม่ต้องตั้งเซิร์ฟเวอร์ Search Engine แยกในระยะแรก |
 | **Documentation**| **Obsidian (Markdown Vault)**| Notion, Confluence | `[CONFIRMED]` | [[Decision_Log#DEC-009\|DEC-009]]: เก็บใน Git ควบคุมเวอร์ชันได้ โปร่งใส |
@@ -96,14 +96,13 @@ source_of_truth: "../../README.md"
 - `2026-11-10`: รวบรวมสรุปการเลือกเทคโนโลยีและร่าง ADR-001, ADR-002
 
 
-## P1 Proposed ADRs — 2026-11-10
+## P1 ADRs — current bounded Owner Decision status, 2026-11-10
 
-These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Research evidence is
-[[P1_Data_Profiling_Findings]]. Human owner decides; implementation waits for merge and accepted scope.
+These ADRs supplement ADR-001/002 and DEC-008. Owner decisions OD-01..06 approve only the local scopes below; broader stack/provider choices are not accepted. Research evidence is [[P1_Data_Profiling_Findings]]. Implementation still waits for verified owner merge of PR #1; approval is not a test result.
 
 ### ADR-003: Evidence-backed portable relational catalogue
 
-- Status: PROPOSED; DEC-012.
+- Status: OWNER-APPROVED AS LOCAL IMPLEMENTATION DESIGN TARGETS (OD-02; DEC-012/016); actual SQL/RLS validation pending, Gate P owner merge pending.
 - Context: missing country/concentration, flat notes, source taxonomies and conflicting note claims
   contradict a single-source, mandatory-field schema.
 - Alternatives: flatten one publisher into perfumes; JSON-only catalogue; normalized SQL plus claims.
@@ -112,12 +111,12 @@ These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Rese
   a perfume profile; volume/SKU identifies packaging. Unknowns remain nullable.
 - Consequences: more joins/claim storage and trigger/transaction tests, but new sources/mappings can be
   added without replacing canonical IDs or destroying evidence. Core data is provider-independent.
-- Acceptance: owner approves identity/provenance complexity; local migration, wrong-kind/cross-source
+- Acceptance: owner design approval recorded under OD-02; local migration, wrong-kind/cross-source
   negative controls and full claim-to-canonical round-trip verified in IMP-P1-01/02.
 
 ### ADR-004: Local pilot before managed PostgreSQL hosting
 
-- Status: PROPOSED; DEC-013.
+- Status: PARTIALLY OWNER-APPROVED (OD-03; DEC-013) — disposable local PostgreSQL only; permanent cloud/provider selection DEFERRED.
 - Context: no measured database size, runtime or restore evidence exists; free allowance is not capacity proof.
 - Alternatives: Vercel + Supabase; Docker/VPS; other managed PostgreSQL (not evaluated in depth).
 - Proposal: disposable PostgreSQL pilot first; Vercel web + Supabase PostgreSQL candidate afterwards.
@@ -128,7 +127,7 @@ These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Rese
 
 ### ADR-005: Provider-independent image metadata; storage selection deferred
 
-- Status: PROPOSED; DEC-014.
+- Status: PARTIALLY OWNER-APPROVED (OD-04; DEC-014/017) — portable image metadata/rights-validation design; storage provider DEFERRED, unlicensed acquisition NOT AUTHORIZED.
 - Context: dataset has no images; bottle rights and image sizes are unverified.
 - Alternatives: Supabase Storage, Cloudflare R2 Standard, local/private object service.
 - Proposal: SQL metadata + portable object adapter; choose Supabase for simplicity if capacity fits,
@@ -139,20 +138,20 @@ These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Rese
 
 ### ADR-006: Separate DB and object recovery with Docker exit
 
-- Status: PROPOSED; DEC-015.
+- Status: PARTIALLY OWNER-APPROVED (OD-05; DEC-015) — local DB/object backup/restore tests only; final retention/RPO/RTO and external provisioning DEFERRED.
 - Context: a database dump/managed DB backup cannot restore missing image bytes.
 - Alternatives: DB-only backups; provider-managed recovery only; independent DB + object exports.
 - Proposal: PostgreSQL logical archive, migration/role/auth mapping, separate encrypted bytes and
   manifest, rehearsal on fresh PostgreSQL/container + separate object target.
 - Consequences: additional backup cost and consistency boundary, but portable recovery evidence.
-  Proposed RPO 24h/RTO 2h and retention remain owner decisions, not verified service guarantees.
+  Earlier suggested RPO 24h/RTO 2h and retention are explicitly DEFERRED by OD-05, not accepted targets or verified guarantees.
 - Acceptance: full restore, corrupt/missing object and tenant/RLS negative controls; record timings.
 
 Primary technical references and dated costs: [[P1_Storage_Hosting_and_Recovery]]. Source access/reuse
 choices are governed by [[Source_Registry]] and [[Rights_and_Attribution]], not a technology ADR.
 
 
-## Post-review refinements to ADR-003 / ADR-005 — PROPOSED
+## Post-review refinements to ADR-003 / ADR-005 — owner-approved local design targets, tests pending
 
 ADR-003 now requires claim_locator + claim_key identity within one source record, scoped overlay
 selections and exact conflict-member resolution. access_scopes/scope_members make public/shared/private
@@ -161,4 +160,18 @@ ADR-005 now requires asset_permissions binding exact asset/source/capture/assess
 transformation rights and child output-license/use checks, plus authenticated private/shared delivery.
 Proposal grows from 44 to 47 logical tables. This increases migration/trigger/RLS/restore tests; it does
 not finalize the schema or approve shared-mode activation. Existing alternatives and research remain.
-DEC-016/017 record the refinements; owner recommendations OD-01..06 are in [[P1_Data_Foundation_Plan]].
+DEC-016/017 record the refinements; current OD-01..06 approvals/deferred boundaries are in [[P1_Data_Foundation_Plan]].
+
+
+## Owner decision provenance and gate — S3
+
+Approved by Human Owner in the current “Owner Decision Recording for Planning PR #1” chat, 2026-11-10;
+see [[Decision_Log]] for exact scope. OD-01 permits the pinned CC BY 4.0 international dataset locally
+with attribution. OD-06 narrows imports to licensed international data; regional rights/samples still
+block those imports. ADR-003/005 are approved design targets, subject to actual SQL/RLS/rights tests.
+No final schema correctness, image reuse grant, cloud/storage provider, final recovery target, production
+sharing feature, CI or broad ADR-001/002 stack/matching approval is inferred. Shared access primitives
+can be tested locally within OD-02; no product/cloud sharing activation is authorized.
+
+PR #1 is not merged. This session records decisions only; no SQL/DB/code/resources/tests are executed.
+A later implementation task must verify owner merge and approved plan SHA. Human Owner alone merges.

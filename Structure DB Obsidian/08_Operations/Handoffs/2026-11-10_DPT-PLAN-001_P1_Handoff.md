@@ -92,3 +92,16 @@ part of the following documentation closeout commit; use live PR #1 for final pu
 receipt/research hashes and original Task Map. Runtime enforcement/restore/diagram rendering NOT RUN.
 No new receipt; existing PR only, Draft/Open. Next agent verifies latest PR/head and owner decisions;
 do not implement or provision until separately authorized after accepted planning merge.
+
+
+## Current S3 owner decisions — supersedes earlier all-PROPOSED owner-scope wording
+
+S3 start/verified PR head: 88de01f8cdf42680f50696350abdb9fd80f6c4c2; same branch/PR #1, OPEN/DRAFT,
+unmerged. Human Owner explicitly approves OD-01..06 bounded LOCAL international licensed-data pilot
+and model/metadata/rights/recovery test targets. See [[Decision_Log]] / [[P1_Data_Foundation_Plan]].
+SQL/RLS tests not run; Gate P requires owner merge and exact approved plan SHA before implementation.
+Permanent cloud/provider/storage, final retention/RPO/RTO and external provisioning DEFERRED; regional
+imports blocked by usable rights AND samples; unlicensed asset acquisition not authorized. No new
+approval for CI/web app/product sharing/deployment. This session records docs only, no SQL/DB/code/cloud.
+Original immutable receipt remains unchanged; no second receipt. Next: owner reviews updated PR and
+merges through GitHub. Later agent verifies live merged status/scope, never infers it from this approval.

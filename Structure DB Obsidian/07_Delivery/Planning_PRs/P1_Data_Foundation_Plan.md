@@ -73,7 +73,7 @@ Provider alternatives: Vercel/Supabase/Storage, Vercel/Supabase/R2, Docker/serve
 - [ ] Source Registry distinguishes permitted research, API lookup, seed reuse and image rights; unknowns fail closed.
 - [ ] Missing/duplicate/conflicting cases have explicit handling; no product facts fabricated for regional coverage.
 - [ ] ERD/dictionary specify keys/types/nullability/constraints/indexes and match each other.
-- [ ] All hosting choices/ADRs remain PROPOSED with dated primary references and capacity assumptions.
+- [ ] Reviewer confirms bounded owner-approved local targets versus deferred cloud/storage/recovery choices; dated references/assumptions do not imply test or provider approval.
 - [ ] DB and image/object backup/restore are separate, with PostgreSQL/Docker exit and auth/role caveats.
 - [ ] Future pilot has bounded samples, meaningful negative tests, measurements and migration readiness criteria.
 - [ ] Actual docs/link/frontmatter/diff results and exact changed files recorded before publication.
@@ -82,19 +82,24 @@ Provider alternatives: Vercel/Supabase/Storage, Vercel/Supabase/R2, Docker/serve
 Checkboxes are owner review items, not self-approval. Runtime acceptance is exclusively future work in
 [[P1_Pilot_Implementation_Plan]]; tests, DB size, egress and restore have NOT RUN.
 
-## Open decisions — owner approval required before dependent work
+## Owner Decisions — recorded for bounded Local Data Foundation Pilot
 
-| ID | Decision / recommended proposal | Evidence still needed / consequence |
-|---|---|---|
-| OD-01 | Use pinned CC BY 4.0 Scento export for local pilot, show source/license/change attribution | Owner confirms attribution policy; API only bounded lookup, not wholesale catalogue copy |
-| OD-02 | Approve concentration/edition identity, general notes and typed field-claim model | Review extra schema/trigger complexity; unknown concentration never auto-merges |
-| OD-03 | Local pilot first, then decide Vercel + Supabase vs server; region/budget remain open | Actual size, connection/auth compatibility, latency and current quotas |
-| OD-04 | Per-asset grant; Supabase Storage vs R2 based on measured workload | Bottle rights unverified; Commons candidate metadata only; exact bytes/hash unmeasured |
-| OD-05 | Daily independent DB/object exports; proposed 7 daily + 4 weekly, RPO 24h/RTO 2h | Owner sets cost/retention/privacy targets; rehearsal must prove or revise them |
-| OD-06 | Obtain owned/licensed regional samples, including four priority Thai brands | No provided product sample; no verified HMNS reuse grant. Can approve a narrower international pilot while regional imports remain blocked |
+Human Owner explicitly approved the following in the current “Owner Decision Recording” chat message,
+2026-11-10 Asia/Bangkok. This is local scope/design approval, not evidence of SQL/RLS verification or
+Planning PR merge. Authoritative decision event/crosswalk: [[Decision_Log#Current Owner Decisions — S3 / 2026-11-10 / PR #1]].
 
-Merging this plan must record the accepted decisions/narrowed scope in the PR. Open source rights do not
-become permitted through a generic merge. Later provider provisioning needs an explicit bounded scope.
+| ID | Owner-approved scope | Deferred / blocked boundary | Validation / execution gate |
+|---|---|---|---|
+| OD-01 | APPROVED — pinned Scento CC BY 4.0 dataset for local pilot with attribution | No broader API/official-site/image grant; no wholesale API catalogue copy | Pin 086769ecf1add770ea6646bd4d88d39f0e7cddeb, preserve attribution/license/change notices; import tests pending; owner merge before implementation |
+| OD-02 | APPROVED AS LOCAL IMPLEMENTATION DESIGN TARGETS — perfume identity, source claims, conflict handling and access-scope model | No claim of final SQL/RLS correctness, production readiness or product-facing sharing/auth integration | Actual SQL/FK/uniqueness/conflict/RLS/API isolation tests required, including local public/shared/private primitives; no runtime work in this session |
+| OD-03 | APPROVED — disposable local PostgreSQL pilot only | DEFERRED — permanent hosting/provider/region selection and all cloud provisioning | Pin/test local version and disposable environment in a later implementation PR after planning merge; no cloud resources now |
+| OD-04 | APPROVED — portable image metadata and rights-validation design | DEFERRED — storage provider; unlicensed asset acquisition NOT AUTHORIZED, blocked until usable rights verified | Exact asset/capture/grant/hash and derivative controls must be tested; design approval grants no new third-party image rights |
+| OD-05 | APPROVED — local database/object backup and restore testing | DEFERRED — final retention, RPO/RTO and external backup provisioning | Use local permitted/owned test objects or clearly labeled fixtures; measure restore integrity/time later, no accepted production recovery target |
+| OD-06 | APPROVED — international licensed-data pilot | BLOCKED — regional imports until usable rights AND real samples verified | Do not invent Thai/Indonesian facts or use synthetic fixtures as coverage; narrowed pilot need not wait for unavailable regional sources |
+
+Gate P remains: owner reviews and merges PR #1; the later implementation agent verifies merged plan
+SHA and accepted local scope before starting a separate implementation PR. This recording session is
+DOCS ONLY. Cloud/resources/application code/SQL/database creation and production mutation are excluded.
 
 ## Implementation breakdown and stop rule
 
@@ -102,7 +107,7 @@ IMP-P1-01 local SQL environment/migrations → IMP-P1-02 sample ETL → IMP-P1-0
 IMP-P1-04 size/independent restore → IMP-P1-05 optional separately approved hosting readiness/migration.
 See pilot note for roles, tests and dependencies. No implementation task/PR is started in this session.
 
-Next: human owner reviews the Draft Planning PR, decides OD-01..06 and merges when satisfied.
+Next: Human Owner reviews the recorded OD-01..06 bounded approvals and deferred/blocked boundaries, then merges PR #1 when satisfied. No further approval is needed to record these already-explicit decisions.
 This agent stops after planning publication and its documentation closeout; never merges the PR.
 
 
@@ -120,20 +125,15 @@ The logical proposal now has 47 tables: the original 44 plus access_scopes, scop
 | R3 image rights consistency | Exact scoped image/source/capture/assessment/permission tuple; own derivative binding + parent transform/output-license validation | IMG-01..06 and REC-01 |
 | R4 repository/workflow truth | Public repository with existing workflow; private app data/secrets never in Git; separate proposed docs-CI backlog item | Document checks; no Actions/resources created |
 
-## Owner review recommendations OD-01..OD-06 — no acceptance inferred
+## Resolution of S2 owner recommendations — S3
 
-All entries remain PROPOSED. Local pilot is eligible ONLY after owner review/merge and recorded accepted
-scope. This correction request authorizes documentation changes, not the pilot itself.
+The former recommendation matrix is resolved by the Owner Decisions table above. Approvals are limited
+to the international licensed-data LOCAL pilot/design/testing scopes. Permanent cloud/storage providers,
+final retention/RPO/RTO and external backup remain DEFERRED; regional imports need both usable rights
+and samples; unlicensed assets remain unauthorized. OD-02 requires actual SQL/RLS tests. None ran.
 
-| Decision | Eligible scope to approve for later LOCAL pilot | Still to test / prove | Source-rights blocks | Separate CLOUD/resource approval |
-|---|---|---|---|---|
-| OD-01 | Pinned CC BY 4.0 export, 12 selected real profiles and attribution/change metadata | Scoped provenance, idempotency, locator claims, attribution rendering | No wholesale API catalogue copy; official-site content excluded without grant | None needed for local files; paid/API account setup needs own approved scope |
-| OD-02 | Concentration/edition identities + locator-based observations + public/private scopes; reserve shared model without enabling it | Composite FKs, resolution membership, RLS/API isolation, overlay/caches, admin-bypass and two synthetic-user tests | No private→public claim promotion without public-use rights and separate review | Auth/provider/host setup not approved; shared-mode activation needs explicit owner scope/tests |
-| OD-03 | Disposable loopback PostgreSQL/container design and offline/sample worker only | Pin versions/digest, migration/restore, measured sizes and connections | Import only approved sources; no provider choice overrides license | Vercel/Supabase/server, account, region, budget and any provisioning need explicit bounded approval |
-| OD-04 | Metadata-only images and clearly labeled synthetic permission tests; owned/CC asset bytes only if individual grant and intended local use are approved | Exact permission tuple, parent transform/output license, expiry/revocation, authenticated delivery and actual sizes | Bottle/HMNS/unknown assets cannot be acquired/displayed; Commons candidate is not automatic acquisition approval | No bucket/CDN/R2/Supabase Storage/paid image service creation without separate approval |
-| OD-05 | Disposable local DB export and separate permitted object-manifest/restore rehearsal | Integrity + private scopes/claims/permissions after restore; measure proposed RPO/RTO | Rights/retention rules still constrain private backup and redistribution | External backup account/bucket, paid storage, retention/cost and production schedule require approval |
-| OD-06 | Narrower licensed international pilot; accept regional GAP status and target sample requirements | Obtain real owned/licensed samples and validate country/identity coverage | Four Thai priorities and Indonesian product imports remain blocked until grants/samples verified | No scraper/paid actor/account connection/cloud ETL implied; scope/cost approved separately |
-
-Recommend owner explicitly approve/defer each column rather than a blanket approval of all sources and
-hosts. Rights denial cannot be overridden by a generic merge. Tests above are SPECIFIED / NOT RUN.
-See [[Data_Dictionary_Draft]], [[Security_and_Privacy]], [[Rights_and_Attribution]] and backlog TSK-DOC-001.
+The 47-table dictionary and review corrections remain implementation design targets, not proof of an
+executed schema or migration. Local tests may implement/test public/shared/private access primitives;
+product-facing sharing, cloud auth/provisioning, web application and CI remain outside these approvals.
+TSK-DOC-001 is a separate PROPOSED backlog item. Preserve all original source evidence and the original
+Task Map above. No receipt rewrite/new receipt, implementation, provisioning or merge in this session.

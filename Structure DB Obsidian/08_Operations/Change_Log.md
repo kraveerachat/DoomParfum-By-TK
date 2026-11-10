@@ -106,3 +106,26 @@ append-only event is included in the following documentation closeout checkpoint
 in PR #1/final report. No rewrite of the original immutable receipt and no second receipt. Verified
 25 docs, 23 vault frontmatters, 47 ERD/dictionary tables, 18 future cases; links/fences/diff/secret-pattern
 checks succeeded. Runtime tests NOT RUN; R1–R4 resolved as proposals, owner decisions/rights still pending.
+
+
+### Owner Decision Recording S3 — 2026-11-10 / DPT-PLAN-001 / PR #1
+
+START/verified PR HEAD: `88de01f8cdf42680f50696350abdb9fd80f6c4c2`; main remains
+`03481f7066487c44631cb9065899894ee8db71fb`. Authority is the Human Owner's current explicit decision
+message, not an agent-inferred acceptance. OD-01..06 approved only for bounded local international
+licensed-data pilot and model/metadata/rights/recovery targets. ADRs and planning/current status now
+separate local approval, pending SQL/RLS tests, deferred permanent cloud/storage/final retention/RPO/RTO/
+external backups, and regional imports blocked by usable rights plus samples. Existing source dataset
+license evidence is not altered; local adoption approved with attribution, no wider content/image grant.
+Source registry, pilot/backlog and overview/handoff scope summaries synchronized to prevent stale gates.
+
+Gate P remains unsatisfied until Human Owner merges PR #1. This round is docs only; no SQL, database,
+application code, cloud resources, Actions, provisioning/deployment/merge. Original immutable receipt
+and research/Task Map preserved; no second receipt or new PR. Current exact paths and verification
+are in [[DPT-PLAN-001_P1_Data_Foundation]]. Final published head recorded by existing PR/final report.
+
+S3 validation result: 12 Markdown / 11 vault frontmatters / six matching owner-decision rows / 47-table
+parity / zero errors; links/fences/source paths and common secret patterns checked; git diff check exit 0.
+Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
+for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
+readback provide published SHA/state; no implementation or automatic merge.

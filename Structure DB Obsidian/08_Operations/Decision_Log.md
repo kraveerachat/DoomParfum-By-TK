@@ -75,7 +75,7 @@ source_of_truth: "../../README.md"
 - `2026-11-10`: บันทึกการตัดสินใจตั้งต้น DEC-001 ถึง DEC-009 คงสถานะ Confirmed/Proposed ตามความจริงใน README
 
 
-## P1 planning proposals — 2026-11-10 / DPT-PLAN-001
+## Historical P1 planning proposals — 2026-11-10 / DPT-PLAN-001 (current resolution below)
 
 | ID | Proposal | Status | Context / alternatives / consequence |
 |---|---|---|---|
@@ -90,7 +90,7 @@ The owner's current request authorizes only documentation research, planning bra
 No historical bootstrap exception is reused and no implementation/production action is authorized.
 
 
-## Post-review refinements — S2 / 2026-11-10 / PR #1
+## Historical post-review refinements — S2 / 2026-11-10 / PR #1 (current resolution below)
 
 | ID | Recommendation and context | Alternatives / consequence | Status |
 |---|---|---|---|
@@ -102,3 +102,33 @@ Owner recommendations for OD-01..06: [[P1_Data_Foundation_Plan]]. No existing pr
 accepted. Current facts: repository public, workflow exists, PR #1 OPEN/DRAFT. Historical bootstrap log
 may describe earlier pending states; it does not override these current facts. Immutable receipt
 [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] stays unchanged, no second receipt.
+
+
+## Current Owner Decisions — S3 / 2026-11-10 / PR #1
+
+Authority: Human Owner's current chat message, “Owner Decision Recording for Planning PR #1”.
+Recorded by Codex; approval is explicit owner direction, not agent self-acceptance. This section
+supersedes earlier S1/S2 all-PROPOSED/open wording for the bounded scopes below only. Historical
+proposal text is retained as history. PR #1 is OPEN/DRAFT, not merged; Gate P remains unsatisfied.
+
+| ID | Owner-approved scope | Deferred / blocked boundary | Validation / execution gate |
+|---|---|---|---|
+| OD-01 | APPROVED — pinned Scento CC BY 4.0 dataset for local pilot with attribution | No broader API/official-site/image grant; no wholesale API catalogue copy | Pin 086769ecf1add770ea6646bd4d88d39f0e7cddeb, preserve attribution/license/change notices; import tests pending; owner merge before implementation |
+| OD-02 | APPROVED AS LOCAL IMPLEMENTATION DESIGN TARGETS — perfume identity, source claims, conflict handling and access-scope model | No claim of final SQL/RLS correctness, production readiness or product-facing sharing/auth integration | Actual SQL/FK/uniqueness/conflict/RLS/API isolation tests required, including local public/shared/private primitives; no runtime work in this session |
+| OD-03 | APPROVED — disposable local PostgreSQL pilot only | DEFERRED — permanent hosting/provider/region selection and all cloud provisioning | Pin/test local version and disposable environment in a later implementation PR after planning merge; no cloud resources now |
+| OD-04 | APPROVED — portable image metadata and rights-validation design | DEFERRED — storage provider; unlicensed asset acquisition NOT AUTHORIZED, blocked until usable rights verified | Exact asset/capture/grant/hash and derivative controls must be tested; design approval grants no new third-party image rights |
+| OD-05 | APPROVED — local database/object backup and restore testing | DEFERRED — final retention, RPO/RTO and external backup provisioning | Use local permitted/owned test objects or clearly labeled fixtures; measure restore integrity/time later, no accepted production recovery target |
+| OD-06 | APPROVED — international licensed-data pilot | BLOCKED — regional imports until usable rights AND real samples verified | Do not invent Thai/Indonesian facts or use synthetic fixtures as coverage; narrowed pilot need not wait for unavailable regional sources |
+
+Decision crosswalk: DEC-012/016 and ADR-003 accepted as local design targets under OD-02, subject to
+actual SQL/RLS tests; DEC-013/ADR-004 accepted only for disposable local PostgreSQL; DEC-014/017 and
+ADR-005 accepted for portable metadata/rights design, provider/acquisition excluded; DEC-015/ADR-006
+accepted for local recovery testing only. DEC-008's broader web/cloud stack, matching ADR-002 and
+DEC-018/TSK-DOC-001 CI proposal are not approved by this decision. Governance status is not changed
+by inference. No permanent cloud provider, production schema, source/image grant or recovery target
+is accepted beyond the explicit owner scope.
+
+Implementation starts only in a separate task/PR after verified Human Owner merge of the accepted
+planning scope. This recording session creates no SQL, database, app code, cloud resource or deployment.
+PRODUCTION_MUTATION=NO. Human Owner alone merges. Original immutable receipt remains unchanged;
+record this new decision event in task/change/run logs, never create a second receipt.

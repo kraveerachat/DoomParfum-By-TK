@@ -16,12 +16,11 @@ source_of_truth: "../../README.md"
 
 # Source Registry — P1 Discovery
 
-Reviewed 2026-11-10 (Asia/Bangkok). Source status records observed permission scope; adoption and production
-use remain PROPOSED. Research reads do not authorize extraction/import. See [[P1_Data_Profiling_Findings]].
+Reviewed 2026-11-10 (Asia/Bangkok). Source status records observed permission scope. Owner OD-01 now approves the pinned Scento CC BY 4.0 export for the local international pilot with attribution; execution waits for Human Owner planning merge. Production/broader source adoption is not approved. Other research reads do not authorize imports. See [[P1_Data_Profiling_Findings]] and [[Decision_Log]].
 
 | ID / owner | Entry point / evidence | Rights and access | Actual execution / decision |
 |---|---|---|---|
-| SRC-01 Scento dataset | [Repository](https://github.com/Scento-com/perfume-dataset), pinned ref `086769ecf1add770ea6646bd4d88d39f0e7cddeb` | [LICENSE](https://github.com/Scento-com/perfume-dataset/blob/086769ecf1add770ea6646bd4d88d39f0e7cddeb/LICENSE): CC BY 4.0; credit, license link and change indication; no image grant inferred | Read three small data files in temp, aggregate profile and selected examples only; candidate seed source |
+| SRC-01 Scento dataset | [Repository](https://github.com/Scento-com/perfume-dataset), pinned ref `086769ecf1add770ea6646bd4d88d39f0e7cddeb` | [LICENSE](https://github.com/Scento-com/perfume-dataset/blob/086769ecf1add770ea6646bd4d88d39f0e7cddeb/LICENSE): CC BY 4.0; credit, license link and change indication; no image grant inferred | Read three small data files in temp, aggregate profile and selected examples only; OWNER-APPROVED local seed under OD-01 with attribution; no new import in S3 |
 | SRC-02 Scento API | [Docs](https://www.scento.com/developers/perfume-api), [OpenAPI](https://www.scento.com/api/perfume/v1/openapi.json), [terms §22](https://www.scento.com/terms-of-service#perfume-api) | Free anonymous read-only lookup; reasonable cached requests requested; no published numeric quota; no overload/limit bypass/wholesale competing catalogue; code MIT does not license content | Docs/spec/terms read; one portrait fetch failed via web tool. Live API NOT VERIFIED; bounded lookup proposed, bulk import NO-GO through API |
 | SRC-03 Butterfly Thai Perfume | [Home](https://www.butterflythaiperfume.com/) and linked Agarwood & Benzoin detail | Copyright notice observed; public reuse/feed grant NOT VERIFIED; robots/automation permission NOT VERIFIED | Bounded page research only; import, image download and automated collection blocked pending grant |
 | SRC-04 HMNS | [Alpha](https://hmnsperfume.com/products/alpha-100ml), [terms §7](https://hmnsperfume.com/pages/terms-conditions-revamp) | Content reproduction/distribution/derivatives requires prior written consent; no grant obtained; robots not inspected because no crawler proposed | Field-shape research and source reference only; NO product-text/image seed import; owner may later obtain consent |
@@ -47,3 +46,9 @@ request caps, retention/deletion obligations, permission proof locator, reviewer
 Unknown flags fail closed for that use. Robots is an access signal, not a content license.
 
 See [[Rights_and_Attribution]], [[P1_Source_to_Canonical_Mapping]], [[P1_Data_Conflict_Matrix]].
+
+
+S3 boundary: OD-06 approves an international licensed-data pilot only. Regional imports remain blocked
+until usable rights AND samples are verified; no grant is inferred for official-site texts, images or APIs.
+OD-04 approves image metadata/rights design, not unlicensed image acquisition. No source acquisition or
+runtime ingest is performed during this owner-decision documentation session.

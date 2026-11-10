@@ -105,11 +105,11 @@ source_of_truth: "../../README.md"
 ## P1 planning and pilot workstream index — 2026-11-10
 
 This dependency sequence refines TSK-101/102/103; those items are not implementation authorization.
-No implementation PR exists. All pilot choices are PROPOSED; the owner must merge the accepted plan.
+No implementation PR exists. Owner local approvals OD-01..06 are now recorded; tests are pending and Human Owner must still merge PR #1. Cloud/storage/final recovery policy and CI are not approved by inference.
 
 | Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
 |---|---|---|---|---|---|
-| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | PR #1 OPEN/DRAFT; S2 post-review corrections in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review of updated proposal |
+| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | PR #1 OPEN/DRAFT; S2 post-review corrections in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review of recorded local decisions, then human merge |
 | IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | NOT STARTED | NOT CREATED | Verify merge SHA first |
 | IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
 | IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
@@ -131,3 +131,9 @@ No GitHub Action, workflow file, branch rule, app permission or CI setting is cr
 Owner approval of this proposal alone is not execution approval; future CI implementation defines pinned
 tooling, trigger/permission boundaries and test evidence. R1–R3 test cases remain future database/runtime
 work, not assertions that documentation CI proves SQL/RLS behavior. OD recommendations: [[P1_Data_Foundation_Plan]].
+
+
+S3 owner-decision update: IMP-P1-01..04 bounded local design/testing scope approved under OD-01..06,
+all NOT STARTED until PR #1 owner merge is verified. IMP-P1-05 cloud/provider/resource execution deferred
+and needs separate approval. Regional imports blocked by rights/samples; international licensed pilot
+approved. TSK-DOC-001 CI stays PROPOSED/NOT STARTED. No SQL/code/DB/Actions/provisioning in this round.

@@ -14,10 +14,10 @@ source_of_truth: "../../../README.md"
 ## Current task
 
 - Agent: Codex, planning/research/documentation only.
-- State: planning_review_ready / owner acceptance pending — S2 post-review corrections, 2026-11-10 Asia/Bangkok.
+- State: planning_review_ready — S3 owner decisions recorded; Human Owner review/merge pending, 2026-11-10 Asia/Bangkok.
 - Branch: `plan/p1-data-discovery-schema-foundation`, target `main`.
 - START_SHA / origin/main: `03481f7066487c44631cb9065899894ee8db71fb`.
-- Existing PR: https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 — verified OPEN/DRAFT, not merged. Approved planning PR: none; implementation forbidden.
+- Existing PR: https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 — verified OPEN/DRAFT, not merged. Owner local decisions approved (S3); Planning PR not merged, Gate P pending; no implementation in this session.
 - Production mutation: NO. Human review and merge required.
 
 ## Plan and expected evidence
@@ -50,10 +50,11 @@ the fallback. No external tools/configuration installed.
 |---|---|---|---|
 | S1 | P1 documentation and research | planning_review_ready / acceptance pending | Clean cloned baseline; HEAD = origin/main; no existing PRs returned by GitHub search |
 | S2 | PR #1 architecture review corrections | planning_review_ready / owner acceptance pending | Reviewed correction checkpoint 83f13599a1b531229f22e0a68d35f86edd19278a; 25 docs / 47 tables / 18 future cases |
+| S3 | Owner Decision Recording | planning_review_ready / human merge pending | OD-01..06 local approvals recorded; 12 docs / 11 vault YAML / six matching decision rows; no runtime work |
 
 ## Next action
 
-Complete read-only profiling and documentation. This note will record actual outcomes before handoff.
+Human Owner reviews the updated owner-decision record in PR #1 and merges through GitHub when satisfied. Verify the merge/approved plan SHA before any later implementation; no SQL/DB/code/cloud in this session.
 
 
 ## Session S1 findings and planning review readiness
@@ -232,3 +233,69 @@ keep PR #1 OPEN/DRAFT and stop for Human Owner decisions OD-01..06. SQL/RLS/obje
 rendering remain unverified; source-rights blocks and all PROPOSED decisions remain open. Tool report:
 PowerShell/Git + GitHub MCP + Python/PyYAML + primary PostgreSQL web references used; no installation,
 account changes or subagents. Exact changed-file manifest above is the complete S2 scope.
+
+
+## S3 — Owner Decision Recording / session start
+
+START_SHA and verified PR #1 HEAD: `88de01f8cdf42680f50696350abdb9fd80f6c4c2`.
+Main/origin-main: `03481f7066487c44631cb9065899894ee8db71fb`. Same branch; preflight working tree clean;
+PR #1 verified OPEN/DRAFT/unmerged. Owner's current chat explicitly approves bounded OD-01..06 local
+pilot scope/design targets, subject to actual tests and human planning merge. This session is DOCS ONLY.
+Plan: record approvals/deferred/blocked boundaries in decision log, ADRs, planning/task/status and
+related scope summaries; validate Markdown/frontmatter/links/diff/secret patterns and preserved evidence;
+commit/push same branch and update existing PR description. Expected result: owner-review-ready docs,
+not implementation or runtime verification. No SQL/DB/code/cloud/Actions/merge; original receipt retained.
+TOOL DECISION: existing PowerShell/Git, GitHub MCP and Python/PyYAML; no installs/skills/subagents/account
+changes. GIT_WRITE=YES existing branch, OBSIDIAN_WRITE=YES, PRODUCTION_MUTATION=NO.
+
+
+## S3 Owner Decision outcome — current scope
+
+Owner decision provenance: current user message “Owner Decision Recording for Planning PR #1”,
+2026-11-10 Asia/Bangkok. OD-01..06 approved exactly for the bounded local scopes recorded in
+[[Decision_Log]] and [[P1_Data_Foundation_Plan]]. ADR-003 local identity/claims/conflicts/access-scope
+implementation targets accepted subject to SQL/RLS tests; ADR-004 local PostgreSQL only; ADR-005
+portable metadata/rights design only; ADR-006 local DB/object restore tests only. Broader web/ORM/cloud
+stack, storage provider, final recovery policy/targets, external backup and CI not approved by inference.
+Regional imports remain blocked by usable rights plus real samples; no new unlicensed image rights.
+
+Gate P still requires Human Owner merge of PR #1. All implementation/test tasks remain NOT STARTED;
+no SQL/database/app code/resources created. Local schema model approval is not runtime verification.
+Retain original source profiling/mapping/conflict files, schema contracts/ERD, Task Map and immutable
+receipt; no second receipt. Session checks/outcome and exact S3 manifest follow before publication.
+
+
+## S3 verification and publication handoff
+
+Document validation succeeded: 12 Markdown files, 11 parsed vault frontmatters, six identical OD decision
+rows in canonical log/spec, resolved wiki/local/source-of-truth links, balanced fences, 47-table ERD/
+dictionary parity, zero errors; common secret-pattern scan found no candidates (limited scan).
+Git hashes preserve the original receipt, three research files, dictionary and ERD; original Task Map
+unchanged, exactly one receipt. `git diff --check` exit 0. SQL/RLS/runtime/restore and Mermaid rendering
+NOT RUN. No implementation, provisioning, deployment or production mutation.
+
+Review readiness: READY FOR OWNER REVIEW of decision recording; approved local scope/design targets
+are recorded, SQL/RLS evidence pending and Gate P not satisfied. PR #1 stays OPEN/DRAFT; Human Owner
+alone merges. Final published head/description are verified in GitHub and the final report after this
+commit; no self-referential tracked SHA is invented. S3 starting/verified pre-record head is 88de01f.
+
+### Exact S3 documentation files
+
+- `README.md`
+- `Structure DB Obsidian/00_Home/Project_Status.md`
+- `Structure DB Obsidian/03_Data/Source_Registry.md`
+- `Structure DB Obsidian/06_Engineering/Tech_Stack_and_ADRs.md`
+- `Structure DB Obsidian/07_Delivery/Backlog.md`
+- `Structure DB Obsidian/07_Delivery/P1_Pilot_Implementation_Plan.md`
+- `Structure DB Obsidian/07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md`
+- `Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-001_P1_Data_Foundation.md`
+- `Structure DB Obsidian/08_Operations/Agent_Run_Log.md`
+- `Structure DB Obsidian/08_Operations/Change_Log.md`
+- `Structure DB Obsidian/08_Operations/Decision_Log.md`
+- `Structure DB Obsidian/08_Operations/Handoffs/2026-11-10_DPT-PLAN-001_P1_Handoff.md`
+
+TOOL EXECUTION REPORT: existing PowerShell/Git, GitHub MCP and Python/PyYAML used for preflight,
+document updates/validation and authorized same-branch publication. REQUESTED_BUT_NOT_USED=NONE;
+INSTALLED_OR_CHANGED=NONE for tooling/config. OBSIDIAN_UPDATED=YES, exact paths above. No new PR,
+receipt, skill/subagent/account setup, source acquisition, SQL, database, application code or cloud resource.
+Next action after push/PR readback: stop for Human Owner review and merge; no automatic merge.

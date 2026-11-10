@@ -12,22 +12,38 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
-# Project Status — P1 Planning Review
+# Project Status — Owner Decisions Recorded, Gate P Pending
 
-Updated: 2026-11-10, Asia/Bangkok. P0 baseline exists at `03481f7066487c44631cb9065899894ee8db71fb`.
-P1 planning review correction documents (S2) are ready for owner review on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
-Canonical task: [[DPT-PLAN-001_P1_Data_Foundation]]; specification: [[P1_Data_Foundation_Plan]].
+Updated 2026-11-10 Asia/Bangkok. Task DPT-PLAN-001, existing [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1),
+branch plan/p1-data-discovery-schema-foundation. Verified S3 start/PR head:
+`88de01f8cdf42680f50696350abdb9fd80f6c4c2`; main `03481f7066487c44631cb9065899894ee8db71fb`.
+Owner has explicitly approved bounded Local Data Foundation Pilot scope/design targets. PR remains
+OPEN/DRAFT, not merged; Gate P is pending. This round records documents only.
 
 | Workstream | Actual state | Next gate |
 |---|---|---|
-| P0 documentation bootstrap | Baseline committed on main; no historical planning PR/receipt found | Preserve one-time bootstrap exception; do not reuse it |
-| P1 discovery/schema/hosting planning | PR #1 OPEN/DRAFT, correcting architecture review from 46c4a85 | Owner review and merge of this plan |
-| P1 local schema/ETL/image/restore pilot | NOT STARTED | Merged plan + explicit accepted decisions/rights |
-| P1 web catalogue | NOT STARTED | Local foundation evidence and separate implementation PR |
-| P2 matching / P3 cart / P4 dashboard | NOT STARTED | Foundation and their own scoped implementation tasks |
-| P5 AI research / P6 expansion | NOT STARTED | Rights, data coverage and accepted feature scope |
+| Planning research/review corrections | Completed as documents; original evidence/receipt retained | Owner reviews updated decision record and merges PR #1 |
+| Local pilot scope/design | OWNER-APPROVED under OD-01..06 bounded scope | Verify owner merge + approved plan SHA before separate implementation PR |
+| SQL/RLS/schema/ETL/image/recovery runtime validation | NOT STARTED / NOT RUN | Later approved local implementation and actual test evidence |
+| Permanent cloud hosting/storage/external backup | DEFERRED / NOT AUTHORIZED | Separate owner provider/budget/resource approval |
+| Regional imports | BLOCKED | Usable rights AND real samples verified |
+| Web/matching/cart/dashboard/CI | NOT STARTED, no new approval from this recording | Separate accepted feature scope; CI remains PROPOSED |
+
+## Recorded Owner Decisions
+
+- OD-01 approved pinned Scento CC BY 4.0 local dataset with attribution.
+- OD-02 approved perfume identity, source claims, conflicts and access-scope design targets; actual SQL/RLS tests required.
+- OD-03 approved disposable local PostgreSQL only; permanent cloud/provider selection deferred.
+- OD-04 approved portable image metadata/rights design; storage provider and unlicensed asset acquisition not authorized.
+- OD-05 approved local DB/object backup/restore testing; final retention/RPO/RTO and external backup deferred.
+- OD-06 approved international licensed-data pilot; regional imports remain blocked by rights/samples.
+
+Authority: Human Owner's current “Owner Decision Recording for Planning PR #1” message. Full bounds:
+[[Decision_Log]], [[P1_Data_Foundation_Plan]], [[Tech_Stack_and_ADRs]]. Approval is not evidence of a
+working schema, passing tests, source/image rights expansion, cloud selection or PR merge.
 
 ## Verified findings and limitations
+
 
 Licensed pinned Scento export profiled: 1,479 perfumes, 160 houses, 420 materials. 91 flat-only note
 profiles, 251 missing concentrations, two missing house countries, one name collision with distinct
@@ -35,40 +51,11 @@ EDP/EDT profiles. No Thai/Indonesian houses in that export. Official regional pa
 not import grants; four priority Thai product samples remain missing. API docs/spec reviewed, bounded
 live portrait request failed. No image binary, database, ETL runtime, benchmark or restore test created/run.
 
-## Open owner decisions
 
-OD-01 seed source/license/attribution; OD-02 concentration/edition identity and claim model; OD-03 provider,
-region and budget; OD-04 asset licenses and Supabase Storage vs R2; OD-05 backup retention/RPO/RTO;
-OD-06 permissioned regional sample scope. All architecture ADRs remain PROPOSED.
+## Review readiness and next action
 
-## Baseline reconciliation
-
-The baseline roadmap/status/root README contained stale workflow/repository-not-yet-available text even
-though AGENTS/workflow and a real public repository were committed. This PR records actual Git evidence
-and follows the owner's two-gate request; it does not mark proposed governance or technical decisions
-accepted. No previous merged Planning PR, task note or immutable receipt was found at the starting SHA.
-
-## Current review correction state
-
-[PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) is verified OPEN/DRAFT, not merged.
-S2 start/current verified PR head: `46c4a85309c408b3de7612d4853b166b84917359`; remote main remains
-`03481f7066487c44631cb9065899894ee8db71fb`. Same branch/task, no new PR or receipt.
-Revised proposal: 47 tables; same-record section claims, scoped private/shared overlays, exact per-asset
-permission and derivative controls. All PROPOSED. Review tests OBS/ACL/IMG/REC specified, NOT RUN.
-Owner recommendations OD-01..06 distinguish later local pilot, untested behavior, source-rights blocks
-and separately approved cloud operations in [[P1_Data_Foundation_Plan]]. Docs-CI TSK-DOC-001 is separate,
-PROPOSED/NOT STARTED; no Actions/settings created. Public repository and existing workflow are facts,
-not authorization to publish private data. Research evidence/counts above remain unchanged.
-
-## Next action
-
-Validate correction documents, commit/push only existing PR #1 branch, verify head and update description;
-then owner review. No implementation, provisioning, deployment, merge or automatic merge. Current
-checkpoint/evidence: [[DPT-PLAN-001_P1_Data_Foundation]]. Original immutable receipt remains
-[[2026-11-10_201028_DPT-PLAN-001_P1_Planning]]; it records the S1 snapshot and will not be rewritten.
-
-
-Latest verified correction payload HEAD: `83f13599a1b531229f22e0a68d35f86edd19278a` (S2 review checkpoint).
-Final metadata/published head is verified through PR #1 and task closeout; original S1 receipt remains
-unchanged. R1–R4 addressed in the proposal, 25-file document checks pass, 18 runtime specs NOT RUN.
-All OD decisions remain PROPOSED; PR must remain OPEN/DRAFT and Human Owner merges only after review.
+Owner-decision documentation is synchronized and passed S3 checks (12 Markdown files / 11 vault frontmatters / six matching decision rows / zero errors). READY FOR OWNER REVIEW; publish on this same branch and verify head/description, then Human Owner reviews and merges when satisfied. No SQL, database, application
+code, cloud resource, provisioning, deployment, merge or auto-merge in this round. PRODUCTION_MUTATION=NO.
+Current evidence/file manifest: [[DPT-PLAN-001_P1_Data_Foundation]]. Final published head is recorded by
+live PR #1/final report; it cannot be embedded self-referentially in its own commit. Existing immutable
+[[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains the single historical receipt, unchanged.

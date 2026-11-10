@@ -11,7 +11,7 @@ source_of_truth: "../../README.md"
 
 # P1 Pilot Implementation Plan — After Human Planning Merge
 
-NOT AUTHORIZED TO START in this PR. Each future task must verify the owner's merge event and approved
+OWNER-APPROVED BOUNDED LOCAL SCOPE; NOT AUTHORIZED TO START IN THIS DOCUMENTATION ROUND OR BEFORE HUMAN PLANNING MERGE. Each future task must verify the owner's merge event and approved
 plan SHA, branch from current main, open its own Draft Implementation PR and update Obsidian evidence.
 All criteria below are proposed tests, NOT RUN results. No Dockerfile, Compose, SQL, migration or ETL
 script is included in the planning PR.
@@ -24,7 +24,7 @@ script is included in the planning PR.
 | IMP-P1-02 / data implementation + owner review | Sample Python ETL, source adapters/staging/validation; R19–R22, R06 | 01; approved source snapshot/rights | Idempotent sample import, unknowns/conflicts preserved; no network to restricted hosts |
 | IMP-P1-03 / implementation + rights review | Image metadata and bounded acquisition; R13, R21 | 01–02; per-image permissions | MIME/dimension/size/hash/attribution/derivative tests; no rendering when rights unknown |
 | IMP-P1-04 / implementation + independent review | Size benchmark and database/object backup/restore; R21, foundation for R10/R26/R28/R29 | 01–03 | Measured row/heap/index/TOAST/object sizes; independent restore plus negative controls |
-| IMP-P1-05 / owner + implementation | Supabase readiness decision, optional separately authorized staging migration | 04 and decisions OD-01..OD-06 | Rechecked quotas, version/extension/region/auth/RLS/pooling compatibility, budget and successful rehearsal; no implied production approval |
+| IMP-P1-05 / owner + implementation | Supabase readiness decision, optional separately authorized staging migration | 04 plus separately approved cloud/provider/resource scope (currently DEFERRED) | Rechecked quotas, version/extension/region/auth/RLS/pooling compatibility, budget and successful rehearsal; no implied production approval |
 
 Web catalogue screens, matching algorithms, cart UI and ownership actions remain later TSK-104+,
 TSK-201+ and TSK-301+ tasks, not pilot scope. The schema reserves their relationships without building them.
@@ -127,3 +127,20 @@ runtime roles AND API/storage paths; testing only an admin/service role is insuf
 All row CHECK/FK/unique and deferred-trigger contracts are specified in [[Data_Dictionary_Draft]].
 Document-only review cannot prove any of these runtime behaviors. IMP-P1-01..04 must attach exact failing/
 passing evidence and independent review before readiness. No SQL/test code or environment is created here.
+
+
+## S3 recorded Owner approval and remaining gate
+
+OD-01..06 approved for the bounded international licensed-data LOCAL pilot; [[P1_Data_Foundation_Plan]]
+and [[Decision_Log]] contain exact scope/deferred/blocked decisions. Local PostgreSQL, model/claims/
+conflict/access-scope primitives, image metadata/rights design and local DB/object backup/restore tests
+are approved targets for a later implementation PR after verified owner merge. SQL/RLS/18 review test
+specifications still require actual evidence; none ran. This documentation round creates no code/DB/SQL.
+
+Permanent cloud hosting/provider/storage and external backup provisioning remain DEFERRED. Final
+retention/RPO/RTO are not accepted; prior 7-daily/4-weekly/24h/2h suggestions remain proposals only.
+OD-04 does not grant new rights to image bytes; use only permitted/owned local test objects or clearly
+labeled fixtures for recovery/negative tests. Regional imports remain blocked until rights AND samples
+are verified, without blocking the approved narrower international pilot. IMP-P1-05 cannot provision
+anything until a separate cloud scope approval. Product-facing sharing and broad application/CI scope
+are not approved by the local access-model target decision.

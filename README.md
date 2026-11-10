@@ -412,3 +412,15 @@ provenance and overlays, and binds image permissions to exact assets/captures pl
 See the planning specification for OD-01..06 LOCAL/test/rights/CLOUD recommendations. No source grant,
 cloud resource, CI workflow, schema or implementation is approved merely by this documentation change.
 Secrets, private exports, orders, user photos and object manifests must never enter this public repository.
+
+
+### Owner decision update — bounded local pilot, 2026-11-10
+
+Human Owner approved OD-01..06 local scope: pinned Scento CC BY 4.0 data with attribution; identity/
+claims/conflicts/access-scope design targets subject to actual SQL/RLS tests; disposable PostgreSQL;
+portable image metadata/rights design; local DB/object recovery testing; international licensed data.
+Permanent cloud/provider/storage choice, final retention/RPO/RTO and external backup are deferred;
+regional imports require verified usable rights AND samples, and unlicensed image acquisition is not
+authorized. See the planning specification and Decision Log for exact bounds. PR #1 is not merged;
+implementation starts only in a later task after verified Human Owner merge. This recording round is
+documents only: no SQL, database, application code, cloud resources or production mutation.
