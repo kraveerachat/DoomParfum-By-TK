@@ -13,12 +13,12 @@ source_of_truth: "../../../README.md"
 
 Approved plan: [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1), owner-merged at
 `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Branch `impl/p1-01-local-postgres-schema`.
-Final reviewed source checkpoint: `d25083c67ea73384ab13068bf41fb70755c0a0d0`; resulting publication head is reported by the live Draft PR. No self-referential tracked SHA invented.
+Original S1 reviewed source checkpoint: `d25083c67ea73384ab13068bf41fb70755c0a0d0`; resulting publication head is reported by the live Draft PR. No self-referential tracked SHA invented.
 Human review/merge required. PRODUCTION_MUTATION=NO. [[IMP-P1-01_Local_PostgreSQL_Schema]].
 
 ## Exact local implementation
 
-Seven ordered migrations in `database/migrations/`, bounded local harness and integration tests.
+Eight ordered migrations in `database/migrations/`, bounded local harness and integration tests.
 PostgreSQL 16.15 (Debian 16.15-1.pgdg13+2), UTF-8, collation en_US.utf8; Docker Desktop 4.43.2 / Engine 28.3.2,
 Python 3.11.9. Image `postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94`. No extension beyond built-in PostgreSQL/PLpgSQL required.
 Task-labeled container/volume, 127.0.0.1:55431, 768 MiB / 2 CPUs; development password ignored and not logged.
@@ -28,8 +28,8 @@ The internal trusted Unix-socket adapter is a local test boundary; real provider
 Actual catalogue inventory: **47 logical tables**; **47 PK, 141 FK, 91 UNIQUE, 93 table CHECK**
 constraints plus **59 deferred constraint-trigger constraints**, **5 domain CHECKs**,
 **396 NOT NULL columns**, **244 indexes**, **203 RLS policies**,
-**196 user triggers**. ENABLE/FORCE RLS on all 47 tables. The separate dpt_ops migration ledger
-is infrastructure, not a 48th logical model table. All declared FKs are validated and have a leading index.
+**243 domain user triggers**. ENABLE/FORCE RLS on all 47 tables. The separate dpt_ops migration ledger and private validation queue
+are infrastructure, not a 48th logical model table. All declared FKs are validated and have a leading index.
 Detailed named definitions: `database/evidence/schema_inventory.json`. Model parity: ERD/dictionary/manifest.
 
 `dpt_foundation` migrations applied: all 47 tables, 53 fixed field definitions, zero other domain rows.
@@ -38,8 +38,8 @@ No product/source/user imports. Test DBs are separate: dpt_schema_test and dpt_m
 ## Commands and verified results
 
 `python database/local.py start` — exit 0, existing pinned local Docker image, loopback-only readiness.
-`python database/verify.py` — **69/69 passed, 0 failed, 0 errors, 0 skipped**, exit 0;
-105.453 seconds, checked 2026-11-10T16:56:02.929458+00:00. Exact test IDs and source SHA-256 in
+`python database/verify.py` — **79/79 passed, 0 failed, 0 errors, 0 skipped**, exit 0;
+103.266 seconds, checked 2026-11-10T20:09:53.851047+00:00. Exact test IDs and source SHA-256 in
 `database/evidence/test_results.json`; schema-only inventory contains no row data/secrets.
 `python database/local.py migrate` — exit 0 on empty dpt_foundation; replay/checksum behavior tested.
 Documentation/frontmatter/wiki/local-link/model-parity/secret-pattern/Git checks are separately recorded
@@ -71,7 +71,7 @@ Failed migration DDL/ledger and failed transactions roll back; fresh recreate ma
   verify permission gates without relying on missing metadata failures.
 - A 62-test GREEN run initially failed report inventory because lc_collate was not a recognized setting;
   replaced with pg_database.datcollate query and reran end-to-end successfully. Final current result is
-  the current 69-test command above. No failure is hidden as a production/environment success.
+  the original69-test S1 run. No failure is hidden as a production/environment success.
 
 ## Approved data and duplicate investigation
 
@@ -120,9 +120,10 @@ These retain the approved model without weakening security/provenance. No new cl
 
 Schema is ready for a separately authorized IMP-P1-02 sample ETL **after Human Owner merges IMP-P1-01**;
 review note/identity/rights mappings, implement actual adapter/validator/accounting/idempotency there.
-No full dataset import, image acquisition, HTTP application/CI, benchmark, backup/restore or hosted readiness.
+No full dataset import, image acquisition, HTTP application/CI, broad capacity benchmark, backup/restore or hosted readiness.
 Regional imports still need rights AND samples. Final retention/RPO/RTO/external backup/cloud storage remain
-DEFERRED. Review exact source checkpoint independently before the one final task receipt/publication.
+DEFERRED. The original single receipt/publication is historical; S2 exact-source review and
+same-PR correction are tracked below without creating a second receipt.
 
 
 ## Independent review checkpoint 42ae1df — required fixes and rerun
@@ -144,7 +145,7 @@ no data-bearing/public/production migration rewritten. Source files are LF under
 The updated checkpoint was independently re-reviewed as recorded below; no code/security blocker remains in the reviewed fixes.
 
 
-## Independent re-review and final agent readiness
+## Historical S1 independent re-review and agent readiness
 
 Exact source checkpoint d25083c67ea73384ab13068bf41fb70755c0a0d0 independently re-reviewed; all five
 findings addressed, no remaining code/security blocker found in the reviewed fixes. Reviewer repeated
@@ -153,3 +154,23 @@ cleanup verified. The full 69-test suite is the implementation agent's actual ru
 by the reviewer. See database/evidence/independent_review.md. LOW document count corrected to93 CHECKs.
 Final closeout changes metadata only; source/migration hashes remain identical to reviewed checkpoint.
 READY FOR HUMAN OWNER REVIEW as a Draft Implementation PR. No merge/production approval is inferred.
+
+## S2 performance correction — current checkpoint, 2026-11-11
+
+Existing [PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2) remains OPEN/DRAFT on
+impl/p1-01-local-postgres-schema. START/reviewed head3d377e0d78ec3af86e4c6ca03302b633c4ff11a7;
+correction source/evidence checkpoint aa59b3d9e29e88697124d78e2f30e97271360586. Independent exact-source
+review completed with no blocking finding. Published001–007 and original immutable receipt unchanged; no second receipt.
+
+Additive008 coalesces full validators once per dirty epoch through private xid8/generation state and
+post-statement scheduling. All original FK/RLS/permissions/conflict/provenance/materialization/image
+rights and active-row checks remain. Natural-COMMIT synthetic250-record case5.841950s→0.051123s,
+500→1 complete calls per validator; row callbacks remain. One run/case is not a capacity claim.
+Full suite79/79 passed, failed0/errors0/skipped0, exit0;10 new positive/negative transaction tests.
+Foundation8 migrations/53 field definitions/zero other domain rows/zero pending markers. Named
+47-table inventory unchanged except243 domain user triggers (47 added statement triggers); one ops
+queue trigger is excluded from domain counts. Details: [[IMP-P1-01_Performance_Correction]].
+
+Global scans per dirty epoch, O(row) dispatcher/marker MVCC/WAL/queue cost and serialized writers remain.
+IMP-P1-04 capacity/restore, IMP-P1-02 ETL, bytes/API/cloud/production remain NOT RUN. No owner decisions
+changed. PRODUCTION_MUTATION=NO. Human Owner alone reviews/merges; no force push/new PR/merge.

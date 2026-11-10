@@ -16,6 +16,14 @@ source_of_truth: "../../README.md"
 
 # Data Quality and Provenance — P1 Proposed Contract
 
+## S2 final-state validation correction
+
+[[IMP-P1-01_Performance_Correction]] records additive008 and79/79 tests. Repeated complete scans are
+coalesced per transactional dirty epoch; complete model/image validators still enforce every retained
+source occurrence, conflict cardinality/resolution, scalar/whole-field materialization and image binding.
+No source data, source rights or canonical duplicate policy is changed to improve timing. Later writes
+after a flush re-arm checks, and failed validation/rollback cannot mark invalid final state clean.
+
 ## IMP-P1-01 duplicate occurrence and validation policy
 
 Local SQL enforcement is implemented and tested as detailed in [[IMP-P1-01_Implementation_Evidence]];

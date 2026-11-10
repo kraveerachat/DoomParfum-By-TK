@@ -24,3 +24,29 @@ No source code/migration changed after the reviewed checkpoint; final commit add
 Scope limits: no API/JWT/cache/export/error masking, actual image byte/SSRF/proxy/storage, ETL/import,
 benchmark, independent DB/object restore or hosted/production behavior was tested by this review.
 Human Owner must review and merge the Draft Implementation PR; review is not owner acceptance/deployment.
+
+## S2 performance correction independent review — 2026-11-11
+
+Exact reviewed checkpoint: aa59b3d9e29e88697124d78e2f30e97271360586, starting from published
+3d377e0d78ec3af86e4c6ca03302b633c4ff11a7. No blocking correctness, integrity, security or
+performance-correction finding identified. Ready for Human Owner review; owner alone decides merge.
+
+Reviewer inspected008, performance harness, focused tests, old validators/security and recorded evidence.
+Git confirms001–007 unchanged. Live metadata confirms47 tables retain serialization/row deferred triggers
+and gain the statement scheduler. Ops state/helpers are postgres-owned and unavailable to client roles.
+
+Eight bounded independent checks passed in dpt_schema_test: bulk12 brands/entities plus updates gave
+validate_model1/validate_images1/dispatcher61; rollback to a savepoint before flush restored dirty state;
+named queue IMMEDIATE after no-op still rejected an orphan23514; caught flush exceptions could not mark
+invalid rows clean; client state access and helper invocation each failed42501; concurrent valid rollback/
+invalid flush stayed independent23514; cleanup pending0/reviewer users0/reviewer entities0. No reset,
+foundation/other-container/source/Git/Obsidian mutation or persistent grant/data change was performed.
+
+All16 recorded source hashes match79/79 suite evidence (including10 new focused tests). Reviewer did
+not rerun the full suite or benchmark. Five before/after single-run cases, including INSERT250
+5.841950→0.051123s and500→1 calls per global validator, agree with recorded harness/evidence.
+
+Remaining limits: full scans once per dirty epoch; O(row) dispatcher callbacks and marker writes;
+global advisory serialization; no full licensed-data/image workload or capacity claim. API/storage/bytes/
+ETL/cloud/production/independent DB-object restore remain outside review. Parent closeout edits metadata
+only; executable source remains the exact reviewed checkpoint. No second receipt or automatic merge.

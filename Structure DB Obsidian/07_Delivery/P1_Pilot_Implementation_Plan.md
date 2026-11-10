@@ -26,6 +26,10 @@ plan SHA, branch from current main, open its own Draft Implementation PR and upd
 All criteria below are proposed tests, NOT RUN results. No Dockerfile, Compose, SQL, migration or ETL
 script is included in the planning PR.
 
+S2 performance correction evidence is in [[IMP-P1-01_Performance_Correction]]: bounded synthetic
+25/100/250 validation cases and79/79 local regression tests. These actual results do not complete
+IMP-P1-04 size/capacity/independent restore acceptance or advance IMP-P1-02 before Owner merge of PR #2.
+
 ## Task map and dependencies
 
 | Task / responsible role | Scope / requirements | Dependency | Acceptance evidence |

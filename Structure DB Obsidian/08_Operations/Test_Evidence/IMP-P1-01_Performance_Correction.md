@@ -2,7 +2,7 @@
 id: IMP-P1-01-PERFORMANCE-CORRECTION
 project: DoomParfum By TK
 type: implementation_evidence
-status: in-progress
+status: ready-for-review
 owner: project
 updated: 2026-11-11
 tags: [doomparfum, postgres, performance, correction]
@@ -15,7 +15,7 @@ Existing [PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2), same 
 impl/p1-01-local-postgres-schema. Reviewed/START_HEAD3d377e0d78ec3af86e4c6ca03302b633c4ff11a7;
 PR #1 approved merge bffb2fab1918dc5221a6c5da7920168bcae263ca. This is a correction checkpoint,
 not a new task/PR/receipt. Original immutable implementation receipt is untouched and historical.
-PRODUCTION_MUTATION=NO. Full regression passed; final exact-source independent review pending at this checkpoint.
+PRODUCTION_MUTATION=NO. Full regression and exact-source independent review passed; ready for Human Owner review.
 
 ## Confirmed root cause
 
@@ -89,7 +89,7 @@ access/GUC/temp spoofing and concurrent independent transactions. Full regressio
 hashes are in database/evidence/test_results.json. Inventory retains47 tables, FK141/PK47/UNIQUE91/
 CHECK93/deferred59/RLS203/FORCE RLS47;243 domain user triggers (47 new statement triggers), plus one
 private operational deferred trigger excluded from domain counts. Foundation additive migrate passed:8
-migrations,53 field definitions, zero other domain rows, zero pending markers. Exact SHA review pending.
+migrations,53 field definitions, zero other domain rows, zero pending markers. Exact SHA independent review completed as recorded below.
 
 An initial benchmark setup missed dpt_ops creation in the pre-008 harness; corrected before measurements.
 A readback command had PowerShell quoting errors; rerun successfully through a literal Python here-string.
@@ -110,3 +110,48 @@ before/after. Published-migration/receipt immutability checks were added to docu
 References: [PostgreSQL16 deferred constraint timing](https://www.postgresql.org/docs/16/sql-set-constraints.html),
 [row/statement triggers](https://www.postgresql.org/docs/16/sql-createtrigger.html),
 [function statistics](https://www.postgresql.org/docs/16/monitoring-stats.html).
+
+## Independent review / correction checkpoint
+
+REVIEWED_SOURCE_HEAD=aa59b3d9e29e88697124d78e2f30e97271360586. Separate reviewer found no blocking
+correctness/integrity/security/performance-correction issue. Eight bounded independent checks passed:
+bulk12 brand/entity pairs plus updates (model1/images1/dispatcher61), pre-flush savepoint rollback,
+named queue IMMEDIATE after no-op, caught failed flush, client state access, client helper execution,
+concurrent valid rollback/invalid flush, and cleanup pending0/users0/entities0. Invalid final states failed
+23514 and unauthorized access42501. Only dpt_schema_test live probes; no reset/foundation changes.
+Reviewer verified47 trigger memberships, private postgres ownership/ACLs, published SQL immutability,
+all16 source hashes and79/79 evidence, without rerunning full suite/benchmarks. Full detail:
+`database/evidence/independent_review.md`. Source unchanged after review; closeout is metadata only.
+
+Published START_HEAD3d377e0d78ec3af86e4c6ca03302b633c4ff11a7; original receipt
+[[2026-11-11_000730_IMP-P1-01_Local_PostgreSQL]] remains historical and unchanged. No new receipt.
+Existing PR #2 remains OPEN/DRAFT. Final published metadata HEAD is verified in GitHub/final report;
+source checkpoint above remains the exact tested/reviewed implementation, avoiding a self-reference.
+
+## Exact correction files changed
+
+23 files relative to published reviewed head3d377e0 (whole-PR manifest is separate):
+
+- `Structure DB Obsidian/00_Home/Project_Status.md`
+- `Structure DB Obsidian/03_Data/Data_Quality_and_Provenance.md`
+- `Structure DB Obsidian/06_Engineering/Security_and_Privacy.md`
+- `Structure DB Obsidian/07_Delivery/Backlog.md`
+- `Structure DB Obsidian/07_Delivery/P1_Pilot_Implementation_Plan.md`
+- `Structure DB Obsidian/07_Delivery/Roadmap.md`
+- `Structure DB Obsidian/07_Delivery/Tasks/IMP-P1-01_Local_PostgreSQL_Schema.md`
+- `Structure DB Obsidian/08_Operations/Agent_Run_Log.md`
+- `Structure DB Obsidian/08_Operations/Change_Log.md`
+- `Structure DB Obsidian/08_Operations/Test_Evidence/IMP-P1-01_Implementation_Evidence.md`
+- `Structure DB Obsidian/08_Operations/Test_Evidence/IMP-P1-01_Performance_Correction.md`
+- `database/README.md`
+- `database/evidence/documentation_checks.json`
+- `database/evidence/independent_review.md`
+- `database/evidence/performance_after.json`
+- `database/evidence/performance_before.json`
+- `database/evidence/schema_inventory.json`
+- `database/evidence/test_results.json`
+- `database/migrations/008_coalesced_deferred_validation.sql`
+- `database/performance.py`
+- `database/schema_findings.md`
+- `database/tests/test_deferred_performance.py`
+- `database/validate_docs.py`

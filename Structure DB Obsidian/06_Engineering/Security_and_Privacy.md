@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 
 # Security and Privacy — P1 Post-Review Proposal
 
+## S2 deferred-validation security preservation
+
+Additive008 uses protected dpt_ops.validation_pending, actual xid8 identity and transactional dirty
+generations; clients/curators/domain owner cannot read/delete state or execute helpers. Fixed qualified
+SECURITY DEFINER paths, existing READ COMMITTED guard/global advisory lock, y_active_row rights gates
+and all row deferred triggers remain. Full validators succeed before cleanup; subsequent writes re-arm.
+AFTER STATEMENT scheduling covers skipped insert attempts and queue-only IMMEDIATE safely. Savepoint,
+failed flush, rollback, spoofing, no-op and concurrent transaction controls pass in the79/79 suite.
+No public/private scope or image-rights rule is narrowed. [[IMP-P1-01_Performance_Correction]].
+
 ## Current local SQL evidence — IMP-P1-01
 
 PR #1 is MERGED at bffb2fab1918dc5221a6c5da7920168bcae263ca. Local migrations implement scoped

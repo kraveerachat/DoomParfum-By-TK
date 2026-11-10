@@ -319,3 +319,41 @@ table names,6 unchanged matching OD rows; zero link/fence/frontmatter/common-sec
 Original receipt/three research blobs and original planning Task Map unchanged; exactly one IMP-P1-01
 receipt. Full changed-path manifest44 files in database/evidence/documentation_checks.json. Mermaid,
 API/storage/ETL/restore remain NOT RUN. Final staged checks and branch/remote head readback follow.
+
+## S2 performance correction — current checkpoint, 2026-11-11
+
+Existing [PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2) remains OPEN/DRAFT on
+impl/p1-01-local-postgres-schema. START/reviewed head3d377e0d78ec3af86e4c6ca03302b633c4ff11a7;
+correction source/evidence checkpoint aa59b3d9e29e88697124d78e2f30e97271360586. Independent exact-source
+review completed with no blocking finding. Published001–007 and original immutable receipt unchanged; no second receipt.
+
+Additive008 coalesces full validators once per dirty epoch through private xid8/generation state and
+post-statement scheduling. All original FK/RLS/permissions/conflict/provenance/materialization/image
+rights and active-row checks remain. Natural-COMMIT synthetic250-record case5.841950s→0.051123s,
+500→1 complete calls per validator; row callbacks remain. One run/case is not a capacity claim.
+Full suite79/79 passed, failed0/errors0/skipped0, exit0;10 new positive/negative transaction tests.
+Foundation8 migrations/53 field definitions/zero other domain rows/zero pending markers. Named
+47-table inventory unchanged except243 domain user triggers (47 added statement triggers); one ops
+queue trigger is excluded from domain counts. Details: [[IMP-P1-01_Performance_Correction]].
+
+Global scans per dirty epoch, O(row) dispatcher/marker MVCC/WAL/queue cost and serialized writers remain.
+IMP-P1-04 capacity/restore, IMP-P1-02 ETL, bytes/API/cloud/production remain NOT RUN. No owner decisions
+changed. PRODUCTION_MUTATION=NO. Human Owner alone reviews/merges; no force push/new PR/merge.
+
+TOOL EXECUTION CHECKPOINT: existing GitHub MCP/Git2.53.0.windows.2/PowerShell/Python3.11.9/
+Docker/PostgreSQL16.15 and independent performance reviewer. No installation/host/account changes.
+Official PG16 constraint/trigger/stats documentation consulted. Bounded synthetic before/after commands
+completed five cases each; full verify79/79 exit0; documentation/model/link/frontmatter/secret-pattern
+check passes at source checkpoint. Source and original receipt guards added to documentation checker.
+No raw/private package/dump/backups committed. Current metadata closeout and PR update still pending.
+
+### S2 review closeout — ready for Human Owner review
+
+Exact correction source HEAD aa59b3d9e29e88697124d78e2f30e97271360586 independently reviewed: no blocking
+finding;8 bounded independent checks passed and cleanup verified0. All16 source hashes match79/79
+suite evidence. No code changed after source review, and reviewer did not claim full-suite/benchmark
+reruns. Same-branch metadata commit/push and existing PR #2 description update follow these checks;
+resulting final publication HEAD is verified in PR/final report, not invented inside its own commit.
+Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
+[[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
+Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.

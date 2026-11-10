@@ -2,7 +2,7 @@
 id: IMP-P1-01
 project: DoomParfum By TK
 type: task
-status: in-progress
+status: ready-for-review
 owner: project
 updated: 2026-11-11
 tags: [doomparfum, implementation, postgres]
@@ -106,7 +106,7 @@ Exact changed-file manifest: database/evidence/documentation_checks.json. .local
 credentials and test logs ignored; no private data/dumps/backups committed. PRODUCTION_MUTATION=NO.
 
 
-## S2 — Performance Review Correction / IN PROGRESS / 2026-11-11
+## S2 — Performance Review Correction / READY FOR OWNER REVIEW / 2026-11-11
 
 START/REVIEWED_PR_HEAD=3d377e0d78ec3af86e4c6ca03302b633c4ff11a7. Existing PR #2 verified OPEN/DRAFT;
 same branch impl/p1-01-local-postgres-schema; tree clean, origin/main bffb2fa; PR #1 merged verified.
@@ -120,3 +120,25 @@ TOOLS: existing GitHub/Git/PowerShell/Python/Docker/PostgreSQL and primary PG16 
 No install/host/cloud/production mutation, raw/private dataset publication or IMP-P1-02 runtime.
 Performance DB uses disposable dpt_migration_probe only; 768MiB/2CPU task container, loopback only.
 All fixtures synthetic and clearly marked; no capacity/production benchmark claim.
+
+### S2 implementation/test checkpoint
+
+CURRENT_CODE_HEAD=aa59b3d9e29e88697124d78e2f30e97271360586. Additive008 plus synthetic performance
+harness/10 transaction regressions;79/79 full suite passes, exit0. Exact source hashes/evidence:
+[[IMP-P1-01_Performance_Correction]]. Independent review requested at this exact checkpoint; source
+frozen during review. Foundation additive migration verified53 definitions/zero other rows/zero queue.
+S1 publication statements above are historical; PR #2 already exists OPEN/DRAFT. Original receipt
+[[2026-11-11_000730_IMP-P1-01_Local_PostgreSQL]] is retained byte-identical; no new receipt.
+
+### S2 independent review and closeout
+
+REVIEWED_CODE_HEAD / CURRENT_SOURCE_HEAD=aa59b3d9e29e88697124d78e2f30e97271360586. Independent reviewer
+found no blocking correctness/integrity/security/performance-correction issue;8 bounded independent
+checks passed, cleanup queue/users/entities=0. Reviewer verified all16 source hashes and79/79 evidence;
+no claimed rerun of full suite/benchmarks. No code changed after review; remaining closeout is metadata.
+Code/evidence source checkpoint is recorded here; resulting publication HEAD is verified in PR #2/final
+report after commit/push to avoid a self-referential SHA. Original S1 receipt remains unchanged.
+
+Ready for Human Owner review as OPEN/DRAFT PR #2; Human Owner decides merge. No automatic next task.
+Residual full scans per dirty epoch, O(row) callbacks/marker MVCC/WAL/event queues and global writer
+serialization are disclosed, with no production/full-data capacity claim. [[IMP-P1-01_Performance_Correction]].
