@@ -1,0 +1,61 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+.pnpm-store/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Next.js and build outputs
+.next/
+dist/
+build/
+out/
+
+# Python / ETL
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Agent and external tooling sandbox (as mandated by AGENTS.md)
+.agent-tools/
+.agent-tools/external/
+.gemini/
+
+# Obsidian workspace private config
+.obsidian/workspace*.json
+.obsidian/cache/
+
+# OS and temporary files
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.temp
+*.swp
+*.bak
