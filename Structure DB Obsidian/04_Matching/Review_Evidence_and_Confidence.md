@@ -11,7 +11,7 @@ tags:
   - reviews
   - evidence
   - confidence
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Review Evidence and Confidence — DoomParfum By TK
@@ -50,8 +50,8 @@ classDiagram
     class PerfumeRelation {
         +UUID reference_id
         +UUID candidate_id
-        +Decimal similarity_score
-        +Decimal confidence_score
+        +String relation_type
+        +String directionality
     }
     class ComparisonEvidence {
         +UUID source_record_id
@@ -124,3 +124,12 @@ flowchart LR
 ## 8. Change Notes
 
 - `2026-11-10`: ร่างข้อกำหนดการจัดการหลักฐานรีวิว แยกคะแนนความนิยมออกจากความเหมือนชัดเจน
+
+
+## P1 schema alignment — PROPOSED, 2026-11-10
+
+[[Data_Dictionary_Draft]] places computed similarity/confidence on versioned `matching_results`,
+not the relation itself. Source rating aggregates and popularity ranks have separate observations.
+No reusable pairwise evidence dataset was acquired in P1 discovery; existing hypothetical examples
+are not evidence. Human excerpts require content rights; URL-only reference is allowed by design
+when text may not be retained. Source-family coverage is not chemical equivalence or automatic confidence.

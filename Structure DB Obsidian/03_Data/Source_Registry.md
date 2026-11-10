@@ -11,77 +11,44 @@ tags:
   - sources
   - rights
   - registry
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Source Registry — DoomParfum By TK
+# Source Registry — P1 Discovery
 
-> **Document Type:** External Data Sources & Rights Governance Registry
-> **Source Baseline:** `../README.md` (Section 6 & 12)
-> **Status:** Draft / Active Evaluation
+Reviewed 2026-11-10 (Asia/Bangkok). Source status records observed permission scope. Owner OD-01 now approves the pinned Scento CC BY 4.0 export for the local international pilot with attribution; execution waits for Human Owner planning merge. Production/broader source adoption is not approved. Other research reads do not authorize imports. See [[P1_Data_Profiling_Findings]] and [[Decision_Log]].
 
----
+| ID / owner | Entry point / evidence | Rights and access | Actual execution / decision |
+|---|---|---|---|
+| SRC-01 Scento dataset | [Repository](https://github.com/Scento-com/perfume-dataset), pinned ref `086769ecf1add770ea6646bd4d88d39f0e7cddeb` | [LICENSE](https://github.com/Scento-com/perfume-dataset/blob/086769ecf1add770ea6646bd4d88d39f0e7cddeb/LICENSE): CC BY 4.0; credit, license link and change indication; no image grant inferred | Read three small data files in temp, aggregate profile and selected examples only; OWNER-APPROVED local seed under OD-01 with attribution; no new import in S3 |
+| SRC-02 Scento API | [Docs](https://www.scento.com/developers/perfume-api), [OpenAPI](https://www.scento.com/api/perfume/v1/openapi.json), [terms §22](https://www.scento.com/terms-of-service#perfume-api) | Free anonymous read-only lookup; reasonable cached requests requested; no published numeric quota; no overload/limit bypass/wholesale competing catalogue; code MIT does not license content | Docs/spec/terms read; one portrait fetch failed via web tool. Live API NOT VERIFIED; bounded lookup proposed, bulk import NO-GO through API |
+| SRC-03 Butterfly Thai Perfume | [Home](https://www.butterflythaiperfume.com/) and linked Agarwood & Benzoin detail | Copyright notice observed; public reuse/feed grant NOT VERIFIED; robots/automation permission NOT VERIFIED | Bounded page research only; import, image download and automated collection blocked pending grant |
+| SRC-04 HMNS | [Alpha](https://hmnsperfume.com/products/alpha-100ml), [terms §7](https://hmnsperfume.com/pages/terms-conditions-revamp) | Content reproduction/distribution/derivatives requires prior written consent; no grant obtained; robots not inspected because no crawler proposed | Field-shape research and source reference only; NO product-text/image seed import; owner may later obtain consent |
+| SRC-05 Wikimedia Commons contributor | [Local Lemon.jpg](https://commons.wikimedia.org/wiki/File:Local_Lemon.jpg) | File page states CC BY-SA 4.0, author Gaurav Dhwaj Khadka; per-asset verification required | Metadata-only image candidate, no binary downloaded. Adapted image obligations and suitability review remain |
+| SRC-06 Openverse | [API docs](https://docs.openverse.org/api/), [API](https://api.openverse.org/v1/) | Discovery metadata is not an upstream asset grant; rate/auth terms and each result's license must be checked before future acquisition | Docs reviewed, no image API query or asset ingestion run |
+| SRC-07 Fragrantica | [Reference entry](https://www.fragrantica.com/designers/) | REFERENCE ONLY / NO AUTOMATION by owner instruction. ToS, caching, storage, AI-use grants NOT VERIFIED in this run | No page extraction, scraping, internal API or Apify actor executed; do not treat as licensed catalogue |
+| SRC-08 User input | Future user CSV/form/photos | User-owned content only; screenshot/private possession does not transfer third-party rights; private exports excluded from public Git | No product sample file supplied in this request; rights checked per field/asset before later import |
+| SRC-09 Shopee | User-saved public listing links | LINK-ONLY/manual observations within authorized scope; API/automation rights NOT VERIFIED | No account/session access, sync, order placement or scraper |
+| SRC-10 TikTok / YouTube / review creators | Future evidence URLs | Per-content permission/terms required for excerpts/transcripts; no blanket reuse grant | No review dataset acquired; no evidence text harvested |
+| SRC-11 SAFF & Co. | [Home](https://saffnco.com/) | Public storefront observed; identity/feed/image reuse permission NOT VERIFIED | Discovery only; not an approved extraction source |
 
-## 1. Purpose / Scope
+The four priority Thai brands in [[Brand_Taxonomy]] remain targets, not verified feeds. No new samples
+for La Palette, SCENTERY, BE CHERIE PARFUM or SÚNDALO were acquired. A search result for `hmnpure.com`
+was inspected then excluded because publisher identity was not established; never infer an official
+source solely from its title. Sources are independent only if underlying claims are independent;
+Scento dataset/API are one publisher, not corroboration from two sources.
 
-เอกสารนี้รวบรวมรายชื่อแหล่งข้อมูลภายนอกทั้งหมดที่อยู่ในการพิจารณาเพื่อนำมาใช้ในระบบ DoomParfum By TK พร้อมระบุประเภทข้อมูล สถานะการตรวจสอบสิทธิ์ (Rights Verification Status) และข้อจำกัดในการจัดเก็บหรือประมวลผล
+## Rights record required before another source is enabled
 
-> [!WARNING]
-> **นโยบายความถูกต้องของข้อมูลและลิขสิทธิ์ [CONFIRMED]:**
-> ห้ามระบุว่าแหล่งข้อมูลใดได้รับอนุญาตหรือตรวจสอบแล้ว (Verified / Licensed) หากยังไม่ได้ตรวจข้อกำหนดการให้บริการ (Terms of Service) หรือสัญญาอนุญาตจริง การพบโค้ด Scraper บน GitHub **ไม่เท่ากับ** ได้รับอนุญาตให้ดึงข้อมูล
+Owner, source URL, content category, license URL/version, terms URL/version or digest, reviewed date,
+permitted research/automation/cache/store/display/redistribute/AI uses, attribution, commercial limits,
+request caps, retention/deletion obligations, permission proof locator, reviewer and next review date.
+Unknown flags fail closed for that use. Robots is an access signal, not a content license.
 
----
+See [[Rights_and_Attribution]], [[P1_Source_to_Canonical_Mapping]], [[P1_Data_Conflict_Matrix]].
 
-## 2. Source Evaluation Matrix
 
-| Source Name | Source Type | URL / Reference | จุดประสงค์การใช้งาน | สิทธิ์การใช้งาน (Rights Status) | วันที่ตรวจสอบ | ข้อจำกัด / เงื่อนไขสำคัญ |
-|---|---|---|---|---|---|---|
-| **User Direct Input** | User Generated | - | บันทึกส่วนตัว, ลิงก์ Shopee, รูปตะกร้า | `[CONFIRMED / ALLOWED]` | 2026-11-10 | ข้อมูลส่วนบุคคลของผู้ใช้เอง นำเข้าได้ทันที |
-| **Scento Dataset** | Open Dataset | `https://github.com/Scento-com/perfume-dataset` | Seed ข้อมูลแคตตาล็อกและโน้ตสากล | `[RESEARCH / PENDING]` | 2026-11-10 | ต้องตรวจสอบ License (MIT/CC/ODbL) และความครอบคลุม |
-| **Scento API** | Commercial / Freemium API | `https://www.scento.com/developers/perfume-api` | ข้อมูลน้ำหอมและพีระมิดโน้ต | `[RESEARCH / PENDING]` | 2026-11-10 | ตรวจสอบ Rate limits, API Pricing, และข้อห้าม Caching |
-| **Openverse API** | Open Media API | `https://api.openverse.org/v1/` | ภาพประกอบวัตถุดิบโน้ต (Creative Commons) | `[RESEARCH / PENDING]` | 2026-11-10 | มี License ชัดเจน ต้องบันทึก Creator Attribution |
-| **Fragrantica** | Community Web | `https://www.fragrantica.com/` | Discovery & Verification ด้วยมือ | `[RESTRICTED / NO SCRAPE]` | 2026-11-10 | **ห้าม Automated Scraping** / อนุญาตเฉพาะการดูอ้างอิงด้วยมือ |
-| **Thai Brand Official Sites** | Official Web / Social | Facebook/IG/Website ของแต่ละแบรนด์ | ข้อมูลโน้ตและรุ่นทางการของแบรนด์ไทย | `[CONFIRMED / MANUAL]` | 2026-11-10 | บันทึกจากข้อมูลที่แบรนด์เผยแพร่เป็นสาธารณะ |
-| **Shopee Thailand** | Marketplace | `https://shopee.co.th/` | บันทึกลิงก์ร้านค้าและราคาอ้างอิง | `[CONFIRMED / LINK-ONLY]` | 2026-11-10 | เก็บเป็น URL และสแนปช็อตที่ผู้ใช้บันทึก ไม่ดึงข้อมูลอัตโนมัติฝืนเงื่อนไข |
-| **TikTok / YouTube** | Social Media | คลิปรีวิวของครีเอเตอร์ | สรุปคำรีวิวและข้อคิดเห็นเรื่องความคล้าย | `[RESEARCH / PENDING]` | 2026-11-10 | เก็บเป็น Reference Link + ข้อความสรุปสั้น ไม่คัดลอกไฟล์วิดีโอ |
-
----
-
-## 3. Detailed Source Notes
-
-### 3.1 Scento Perfume Dataset & API
-- **โอกาส:** เป็นชุดข้อมูลน้ำหอมที่มีโครงสร้าง Top/Heart/Base และ Accords พร้อมใช้งานสำหรับระบบสากล
-- **สิ่งที่ต้องทำต่อ:** ตรวจสอบไฟล์ `LICENSE` ใน GitHub repository เพื่อดูว่าอนุญาตให้นำมาใช้ในแอปพลิเคชันส่วนตัวหรือเชิงพาณิชย์อย่างไร
-
-### 3.2 Fragrantica & Web Scraping Rules
-- **จุดยืนของโครงการ:** ไม่ทำ Scraper ดึงข้อมูลขนาดใหญ่ (Mass Scraping) จาก Fragrantica
-- **เหตุผล:** นโยบาย Terms of Service ของ Fragrantica ไม่อนุญาตให้ใช้บอทหรือสคริปต์อัตโนมัติ และระบบของพวกเขามีกลไกป้องกัน (Cloudflare/Anti-bot)
-- **แนวทางทดแทน:** ใช้เป็นแหล่งค้นคว้าและตรวจสอบด้วยสายตา (Manual lookup) แล้วบันทึกข้อมูลเฉพาะที่จำเป็น
-
-### 3.3 Note Illustration Images (ภาพประกอบโน้ต)
-- ภาพโน้ตในระบบ (เช่น มะนาว, วานิลลา, ไม้จันทน์) ต้องไม่ใช้วิธี Hotlink จากเว็บภายนอกโดยไม่มีสิทธิ์
-- แหล่งที่อนุญาต:
-  1. Openverse / Wikimedia Commons (ระบุ License และชื่อผู้สร้าง)
-  2. ชุดภาพ Artwork ที่โครงการจัดเตรียมหรือสร้างขึ้นเองภายใต้สิทธิ์ถูกต้อง
-
----
-
-## 4. Requirements Covered
-
-- [[Requirements_Register#R06|R06]], [[Requirements_Register#R09|R09]], [[Requirements_Register#R17|R17]]
-- [[Requirements_Register#R21|R21]] — Source Attribution and Rights Logging
-- [[Requirements_Register#R22|R22]] — Thai Brand Official Registry
-
----
-
-## 5. Dependencies & Links
-
-- นโยบายสิทธิ์และลิขสิทธิ์: [[Rights_and_Attribution]]
-- ไปป์ไลน์การนำเข้า: [[Ingestion_and_ETL]]
-- ความน่าเชื่อถือของข้อมูล: [[Data_Quality_and_Provenance]]
-
----
-
-## 6. Change Notes
-
-- `2026-11-10`: บันทึกทะเบียนแหล่งข้อมูลตั้งต้น แยกสถานะ Allowed / Pending / Restricted ชัดเจน
+S3 boundary: OD-06 approves an international licensed-data pilot only. Regional imports remain blocked
+until usable rights AND samples are verified; no grant is inferred for official-site texts, images or APIs.
+OD-04 approves image metadata/rights design, not unlicensed image acquisition. No source acquisition or
+runtime ingest is performed during this owner-decision documentation session.

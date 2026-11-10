@@ -29,7 +29,7 @@
 
 ### สถานะโปรเจกต์
 
-**Planning / Documentation Bootstrap** — เอกสารและโครงสร้างการทำงานเป็นการเตรียมแผน **ยังไม่ใช่เว็บที่พัฒนาและเปิดใช้งานแล้ว**; เทคโนโลยีเช่น Next.js, TypeScript, PostgreSQL, Drizzle และ Docker เป็นเพียงข้อเสนอที่ปรับเปลี่ยนได้หลังการทบทวนแผน
+**P1 Data Discovery / Planning Review** — เอกสารและโครงสร้างการทำงานเป็นการเตรียมแผน **ยังไม่ใช่เว็บที่พัฒนาและเปิดใช้งานแล้ว**; เทคโนโลยีเช่น Next.js, TypeScript, PostgreSQL, Drizzle และ Docker เป็นเพียงข้อเสนอที่ปรับเปลี่ยนได้หลังการทบทวนแผน
 
 ### วิธีทำงานและเอกสาร
 
@@ -330,12 +330,12 @@ DoomParfum By TK/
 ├── web/                            # [FUTURE] Next.js app
 ├── data-pipeline/                  # [FUTURE] ETL, validation and import scripts
 ├── database/                       # [FUTURE] schema, migrations, seed
-└── .github/                        # [FUTURE] CI/review workflow หลังผู้ใช้ส่ง workflow ตัวอย่าง
+└── .github/                        # [FUTURE] CI/review workflow after separate owner scope approval
 ```
 
 **GitHub policy ขณะนี้:**
 - [CONFIRMED] มีแผนเก็บทั้ง Source Code และ Obsidian Markdown บน GitHub
-- [OPEN] ยังไม่กำหนด Repository (ชื่อ/URL/visibility), branch strategy, PR rules, push permissions, CI, agent workflow
+- [VERIFIED 2026-11-10] Public repository: https://github.com/kraveerachat/DoomParfum-By-TK; initial documentation baseline `03481f7`. This authorized P1 task uses a docs-only `plan/` branch and Draft PR; Human Owner merges. CI/hosting remain unimplemented.
 - [PROPOSED] เก็บเอกสารและโค้ดใน repository เดียวก่อนเพื่อ trace changes; ประเมิน repo แยกภายหลัง
 - [PROPOSED] Commit เฉพาะ docs/source; ไม่ commit `.env`, API keys, session/cookies, order references, private user exports, copyrighted content/raw scrape, หรือข้อมูลที่ไม่มีสิทธิ์เผยแพร่
 - **ห้าม Agent push / create repo / sync vault โดยอัตโนมัติจนกว่าผู้ใช้ระบุ Workflow และอนุญาต**
@@ -364,7 +364,7 @@ DoomParfum By TK/
 4. ราคา/การมีขาย: ต้องเก็บเฉพาะ Shopee หรืออนุญาตแหล่งซื้ออื่น?
 5. Purchase History ต้องมีรายละเอียดขั้นต่ำอะไรบ้าง? (`date`, `price`, `volume`, `seller` เป็น optional ใน V1)
 6. เลือก dataset/API ใดเมื่อทดสอบสิทธิ์ใช้งานและ coverage ของ Thai/Arabic/Indonesian brands แล้ว?
-7. GitHub repo, Obsidian sync, Coding Agent, ChatGPT workflow และ commit/PR rules — **รอไฟล์ workflow ตัวอย่างจากผู้ใช้**
+7. Workflow exists in `AGENTS.md` / `DEVELOPMENT_WORKFLOW.md`; proposed governance acceptance and future CI/tool setup remain owner decisions. This P1 request authorizes its planning branch/push/Draft PR only.
 
 ---
 
@@ -374,7 +374,7 @@ DoomParfum By TK/
 2. วาง `Structure DB Obsidian/README.md` ใน vault ที่ผู้ใช้จัดเตรียม
 3. ส่งไฟล์ README ฝั่ง Obsidian ให้ Agent อ่าน แล้วสั่งสร้าง Vault Structure และ Markdown ตามคำสั่งในเอกสารนั้น
 4. Review เอกสาร `Requirements`, `Domain_Model`, `Data_Dictionary`, `Scent_Matching`, `My_Cart_and_Ownership`, `Data_Sources` ก่อน implement
-5. เมื่อผู้ใช้ส่ง Workflow ตัวอย่างของ ChatGPT/Agent ให้เพิ่มแผน GitHub + Automation โดยใช้ ADR
+5. Review the P1 planning documents and proposed ADRs; merge the accepted Planning PR before any implementation. No automation setup is authorized by this plan.
 6. **ยังไม่สร้างระบบ Checkout และยังไม่เริ่ม Scrape แหล่งข้อมูลที่ไม่มีสิทธิ์**
 
 ### References to evaluate (ไม่ใช่การยืนยันความถูกต้องหรือสิทธิ์ของทุกแหล่ง)
@@ -388,3 +388,39 @@ DoomParfum By TK/
 ---
 
 **Maintenance contract:** เมื่อแก้ Scope / Feature / Data Model / Ranking / Tooling ให้แก้ README ที่เกี่ยวข้อง, Update Obsidian decision/changelog, และเปิดคำถามที่ยังไม่ยืนยันไว้ชัดเจน การแก้เอกสารไม่เท่ากับอนุมัติให้ Deploy/Push/สืบค้นข้อมูลอัตโนมัติ
+
+
+### P1 foundation planning — PROPOSED, 2026-11-10
+
+[Planning specification](Structure%20DB%20Obsidian/07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md)
+and [profiling findings](Structure%20DB%20Obsidian/03_Data/P1_Data_Profiling_Findings.md) refine the bootstrap
+schema: concentration/edition-specific scent profiles, packaging variants, nullable unknown fields,
+flat notes and field-level source/conflict/rights evidence. A pinned CC BY 4.0 Scento export was profiled;
+regional coverage and image rights remain incomplete. No raw dataset is committed.
+
+Vercel, Supabase PostgreSQL/Storage, R2, Python ETL and Docker are evaluated alternatives, all PROPOSED.
+A local schema/ETL/image/size/independent DB-and-object restore pilot must pass before hosted adoption.
+No code, production database, cloud project or deployment is created by this planning PR.
+
+
+### PR #1 post-review proposal
+
+Repository is public; application data remains private-first. Existing AGENTS.md/DEVELOPMENT_WORKFLOW.md
+and [Draft PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) are verified, not pending setup.
+The revised P1 proposal retains source claims by section/occurrence, isolates public/shared/private
+provenance and overlays, and binds image permissions to exact assets/captures plus derivative rights.
+See the planning specification for OD-01..06 LOCAL/test/rights/CLOUD recommendations. No source grant,
+cloud resource, CI workflow, schema or implementation is approved merely by this documentation change.
+Secrets, private exports, orders, user photos and object manifests must never enter this public repository.
+
+
+### Owner decision update — bounded local pilot, 2026-11-10
+
+Human Owner approved OD-01..06 local scope: pinned Scento CC BY 4.0 data with attribution; identity/
+claims/conflicts/access-scope design targets subject to actual SQL/RLS tests; disposable PostgreSQL;
+portable image metadata/rights design; local DB/object recovery testing; international licensed data.
+Permanent cloud/provider/storage choice, final retention/RPO/RTO and external backup are deferred;
+regional imports require verified usable rights AND samples, and unlicensed image acquisition is not
+authorized. See the planning specification and Decision Log for exact bounds. PR #1 is not merged;
+implementation starts only in a later task after verified Human Owner merge. This recording round is
+documents only: no SQL, database, application code, cloud resources or production mutation.

@@ -11,117 +11,103 @@ tags:
   - etl
   - pipeline
   - ingestion
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Ingestion and ETL Pipeline — DoomParfum By TK
+# Ingestion and ETL — P1 Proposed Design
 
-> **Document Type:** Data Extraction, Transformation, and Loading (ETL) Architecture
-> **Source Baseline:** `../README.md` (Section 6)
-> **Status:** Draft / Proposed Pipeline Architecture
-
----
-
-## 1. Purpose / Scope
-
-เอกสารนี้กำหนดสถาปัตยกรรมกระบวนการนำเข้าข้อมูล (Data Ingestion & ETL Pipeline) สำหรับแปลงข้อมูลดิบจากแหล่งที่ได้รับอนุญาตให้กลายเป็นแคตตาล็อกน้ำหอมมาตรฐาน โดยมีขั้นตอนการจัดระเบียบ (Normalization), การกำจัดข้อมูลซ้ำซ้อน (Deduplication), การตรวจสอบคุณภาพ (Validation), และการรีวิวโดยผู้ใช้ (Human Review) ก่อนนำเข้าฐานข้อมูลจริง
-
----
-
-## 2. Ingestion Pipeline Stages
+PLANNING ONLY. This file specifies future behavior; no pipeline, database or migrations were created.
+See [[P1_Data_Foundation_Plan]], [[P1_Pilot_Implementation_Plan]] and [[P1_Source_to_Canonical_Mapping]].
 
 ```mermaid
-flowchart TD
-    subgraph S1["1. Permitted Sources"]
-        A1["Open Dataset (Scento)"]
-        A2["User Manual Import (CSV / Form)"]
-        A3["Official Brand Public Info"]
-    end
-
-    subgraph S2["2. Extraction & Ingestion Staging"]
-        B["Raw Ingestion Staging Area<br/>(staging_perfumes, raw_payload)"]
-    end
-
-    subgraph S3["3. Transformation & Normalization"]
-        C1["Brand & Name Normalization (Slugs, Aliases)"]
-        C2["Note Vocabulary Alignment (Canonical Notes)"]
-        C3["Accord & Concentration Mapping"]
-    end
-
-    subgraph S4["4. Quality Gates & Deduplication"]
-        D1["Deduplication Engine (Fuzzy + Slug Match)"]
-        D2["Provenance & Rights Check Gate"]
-    end
-
-    subgraph S5["5. Human-in-the-Loop Review"]
-        E["Admin Review Queue<br/>(status: 'draft' -> 'reviewed')"]
-    end
-
-    subgraph S6["6. Canonical Production DB"]
-        F[("PostgreSQL Canonical Database<br/>(status: 'approved')")]
-    end
-
-    S1 --> S2
-    S2 --> S3
-    S3 --> S4
-    S4 --> S5
-    S5 -->|User Approved| S6
-    S5 -->|Rejected / Needs Edit| S3
+flowchart LR
+    A[Permissioned snapshot or user input] --> B[Rights and retention gate]
+    B --> C[Bounded staging batch]
+    C --> D[Parse and preserve source claims]
+    D --> E[Normalize and propose identity links]
+    E --> F[Validate and quarantine conflicts]
+    F --> G[Human review]
+    G --> H[Transactional canonical promotion]
+    H --> I[Versioned export and audit]
 ```
 
----
+## Acquisition and staging
 
-## 3. Detailed Stage Breakdown
+1. Verify approved source/use, license/terms evidence, quota, retention and privacy. No rights → no fetch.
+2. Pin source revision or snapshot locator and content digest. Never silently update a source revision.
+3. Create `ingestion_batches` with source, revision, adapter version, rights assessment, timestamps,
+   batch digest and state. Store raw JSONB only when retention rights permit it; otherwise retain a
+   permitted reference/digest and validation result. Raw staging is private and bounded, never in Git.
+4. Preserve source key, row locator and payload digest. Same batch/key/digest is idempotent. Changed
+   payload for the same key creates a new source record version, not an overwrite.
+5. Parse CSV as CSV, not naive comma splitting; list delimiters are source-specific. Validate JSONL
+   types before coercion. Null, blank, absent, explicitly empty and withheld are distinct source states.
 
-### 3.1 Stage 1: Extraction & Ingestion Staging
-- ข้อมูลดิบถูกนำเข้าสู่ระบบผ่านสคริปต์ Python หรือฟอร์มหน้าเว็บ โดยจะถูกจัดเก็บในตารางชั่วคราว (`staging_records`)
-- ทุกระเบียนต้องมีข้อมูลเมทาดาทา: `source_url`, `source_type`, `ingested_at`, `raw_json`
+## Conservative transformations
 
-### 3.2 Stage 2: Transformation & Normalization
-1. **Brand Normalization:**
-   - ตัดคำนำหน้า/ต่อท้ายที่ไม่จำเป็น (เช่น "Parfums", "House of", "Co., Ltd.")
-   - ตรวจสอบผ่านตาราง `brand_aliases` เพื่อระบุ Canonical Brand ID
-2. **Perfume Name & Flanker Normalization:**
-   - แยกชื่อรุ่นหลักออกจากความเข้มข้น (เช่น "Sauvage" vs "Eau de Parfum")
-   - กำจัดคีย์เวิร์ด SEO ที่ติดมากับชื่อร้านค้า Shopee (เช่น "ของแท้ 100% ส่งฟรี")
-3. **Note Normalization:**
-   - แปลงชื่อโน้ตเข้าหาคลังมาตรฐานสากล (เช่น "Calabrian Bergamot" $\rightarrow$ "Bergamot")
-   - จำแนกชั้นโน้ตอย่างชัดเจน (`TOP`, `HEART`, `BASE`) หากต้นทางไม่ระบุชั้น ให้จัดเป็นกลุ่ม `GENERAL` และตั้งสถานะรอตรวจสอบ
+Normalize Unicode and spacing for candidate search while retaining display spelling/diacritics.
+Do not strip brand words such as Parfums or House of by default. Brand and note aliases are reviewed
+mappings; broad/narrow and synthetic/natural terms may be related without being synonyms.
+Do not collapse Ambergris into Ambroxan. Preserve flanker, version, concentration and locale labels.
+`elixir` is not automatically an EDP strength. Fuzzy similarity only queues a candidate, never merges it.
 
-### 3.3 Stage 3: Deduplication & Quality Gates
-1. **Slug & Levenshtein Matching:**
-   - เปรียบเทียบ Slug ของรุ่นใหม่กับรุ่นที่มีอยู่ในระบบ
-   - หากค่าความเหมือนของชื่อมากกว่า 85% ในแบรนด์เดียวกัน ระบบจะส่งเข้าคิวสงสัยว่าซ้ำ (Duplicate Suspicion)
-2. **Quality Gate Checks:**
-   - มีชื่อรุ่นและแบรนด์ที่ถูกต้องหรือไม่
-   - มีโน้ตอย่างน้อย 3 ตัว หรือมี Accords หรือไม่
-   - มีข้อมูลแหล่งที่มา (Provenance) หรือไม่
+A perfume is a concentration/edition-specific scent profile. Packaging size/refill SKU is a product
+variant of that profile. Unknown concentration remains null and blocks automatic identity merge.
+Flat notes map to `general`; if a pyramid exists, verify the flat set against its union without adding
+redundant general rows. Do not synthesize missing layers, years, images, accords or prices.
 
-### 3.4 Stage 4: Human-in-the-Loop Review (การอนุมัติโดยมนุษย์)
-- ข้อมูลที่ผ่านการ Transform จะมีสถานะเป็น `draft`
-- ผู้ใช้ (คุณ TK) สามารถตรวจสอบความถูกต้องผ่านหน้า Admin Review Dashboard:
-  - ยืนยันความถูกต้องของชื่อรุ่น โน้ต และภาพ
-  - ปรับสถานะเป็น `reviewed` $\rightarrow$ `approved`
-- เฉพาะข้อมูลที่สถานะ `approved` เท่านั้นที่จะถูกนำไปใช้ในโมเดลคำนวณการจับคู่กลิ่น (Matching Engine)
+## Validation and promotion gates
 
----
+| Gate | Required result / disposition |
+|---|---|
+| Rights | Explicit permission for the proposed use; unknown/restricted → blocked |
+| Structural | Valid source key/URL, expected fields/types and safe payload bounds; errors → quarantine |
+| Relationships | Resolved brand and reviewed note crosswalk; unresolved names → review queue |
+| Identity | EDT/EDP/flanker/edition distinct; name-only collision → no auto-merge |
+| Claims | Whole-list notes and taxonomy scheme retained; conflicting values → separate observations |
+| Catalogue minimum | Nonempty brand/name, application slug, provenance and review state; optional fields may remain unknown |
+| Images | Metadata-only until reuse grant; acquired bytes require MIME/hash/size/dimension/attribution checks |
+| Human | Reviewer approves identity, rights and canonical field selections; AI cannot approve itself |
 
-## 4. Requirements Covered
+Promotion writes canonical records, selected observations and audit events in one transaction.
+Unresolved conflicts remain visible and can block matching eligibility without discarding the catalogue
+record. No arbitrary three-note minimum is imposed. A source's family/character is not a main-accord vote.
+No user-owned inventory state can change as a side effect of catalogue ingestion.
 
-- [[Requirements_Register#R19|R19]] — AI/ETL Responsible Ingestion Pipeline
-- [[Requirements_Register#R20|R20]] — Non-open DB Ingestion (Thai Brands)
-- [[Requirements_Register#R21|R21]] — Provenance & Rights Verification
+## Rollback, retention and evolution
 
----
+Dry-run reports list inserts, candidate links, conflicts, unknowns and rejected rows with reason codes.
+Re-running an approved batch must not add records or associations. Before promotion, record prior
+canonical selections; rollback restores those selections and marks the batch reverted without deleting
+purchases, inventory or immutable claims. Source withdrawal triggers a rights review and bounded removal
+plan. Proposed pilot staging retention: 30 days, subject to narrower source terms and owner approval.
 
-## 5. Dependencies & Links
+Version adapters and field mappings independently from SQL migrations. New fields first remain
+source observations; explicit migrations add promoted canonical attributes. Use expand/backfill/validate/
+contract, reviewed SQL and local restore evidence; do not use an unreviewed cloud schema push.
+A batch state machine is proposed: discovered → staged → validated → review_required → approved →
+promoted, with blocked/rejected/reverted terminal handling. Runtime tests are NOT RUN in this PR.
 
-- ทะเบียนแหล่งข้อมูล: [[Source_Registry]]
-- ธรรมาภิบาลและคุณภาพข้อมูล: [[Data_Quality_and_Provenance]]
-- สิทธิ์การใช้งาน: [[Rights_and_Attribution]]
 
----
+## Post-review import/selection contract — PROPOSED
 
-## 6. Change Notes
+Before extraction, assign a server-authorized access_scope_id to source/batch; captures and claims inherit
+that scope through composite FKs. A user's private capture of a public URL uses a separate private
+source/record, never a shared global source upsert. Raw staging remains worker/reviewer-only even when
+source catalogue metadata is public. Carry scope through diagnostics, audit, rollback and export.
 
-- `2026-11-10`: ร่างสเปก Ingestion & ETL Pipeline พร้อมกลไก Human Review
+Within one captured source_record, emit separate source_observations for structured/prose/list occurrence
+locators; retain claim_key and transform_version. No record/field-only dedup. Same full identity replay
+is idempotent; changed output for that identity quarantines deterministic-extraction failure. Do not split
+one document into artificial records merely to accommodate uniqueness. Conflicts may contain same-record
+claims. Select by observation UUID; resolution must be a scoped member and update selection/audit together.
+
+Only reviewed public-scope selection promotes to public catalogue columns/joins. Private/shared overlays
+stay scoped even when the entity target is public. Reject cross-scope source joins and attempted private
+promotion before materialization; no personal collection change as an import side effect. Image acquisition
+requires an exact asset/capture/assessment permission binding; derivatives require parent transform grant,
+compatible output license, same-scope/source/capture pilot lineage and separate child permission review.
+Pending/expired/revoked/unknown permission blocks use, not merely a UI warning.
+
+Constraints and new negative tests: [[Data_Dictionary_Draft]], [[Security_and_Privacy]],
+[[P1_Pilot_Implementation_Plan]]. All SQL/policies/pipeline implementation remains NOT STARTED.

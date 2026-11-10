@@ -11,7 +11,7 @@ tags:
   - github
   - workflow
   - two-gate
-source_of_truth: "../DEVELOPMENT_WORKFLOW.md"
+source_of_truth: "../../DEVELOPMENT_WORKFLOW.md"
 ---
 
 # GitHub and Development Workflow Specification — DoomParfum By TK
@@ -107,12 +107,17 @@ DoomParfum By TK/
 
 ---
 
-## 5. Next Steps for Workflow Adoption
+## 5. Current repository/workflow status and next gate
 
-1. ตรวจสอบความถูกต้องของโครงสร้างเอกสารทั้งชุด
-2. จัดทำ **Planning PR ฉบับแรก (First Planning PR)** เพื่อตั้งค่า Vault & Governance
-3. ให้ Human Owner รีวิวและ Merge เข้าสู่ `main`
-4. จึงจะปลดล็อกสถานะจาก `proposed-canonical` เป็น `accepted`
+Public repository exists at https://github.com/kraveerachat/DoomParfum-By-TK. AGENTS.md and
+DEVELOPMENT_WORKFLOW.md already exist. Existing PR #1 on plan/p1-data-discovery-schema-foundation is
+OPEN/DRAFT and is being corrected after review; no new governance/planning PR is created for this task.
+Workflow presence is verified; proposed-canonical adoption/technical decisions remain unaccepted until
+Human Owner explicitly decides and merges. This is not a missing-workflow blocker.
+
+Owner reviews PR #1/OD-01..06; implementation/provisioning remains gated. Documentation CI TSK-DOC-001
+is proposed separately in [[Backlog]], with no Actions/settings changes in this planning correction.
+Secrets/private exports/user data never enter this public repository. No merge/auto-merge by agents.
 
 ---
 

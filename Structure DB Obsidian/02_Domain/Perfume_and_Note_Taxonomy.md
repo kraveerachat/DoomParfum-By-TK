@@ -11,7 +11,7 @@ tags:
   - taxonomy
   - olfactory
   - notes
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Perfume and Note Taxonomy — DoomParfum By TK
@@ -28,45 +28,41 @@ source_of_truth: "../README.md"
 
 ---
 
-## 2. Fundamental Distinction: Perfume vs Variant vs Listing
+## 2. Perfume vs Variant vs Listing — P1 PROPOSED revision
 
-เพื่อป้องกันความสับสนในการออกแบบระบบฐานข้อมูลและหน้าจอ ระบบนิยาม 3 แนวคิดนี้แยกออกจากกันอย่างเด็ดขาด:
+P1 evidence refines the bootstrap proposal; owner approval remains required. A perfume is a
+concentration/edition-specific **scent profile**, not a disclosed chemical formula. EDT/EDP and
+flankers may have different notes and separate profile IDs. Unknown concentration/edition remains
+unknown and blocks automatic identity merging. A product variant is packaging/volume/refill/SKU of
+that profile. A retail listing is a seller/URL observation with optional known packaging.
 
 ```mermaid
 classDiagram
     class Perfume {
         +UUID id
         +String name
-        +Integer release_year
-        +String gender
-        +String description
+        +String concentration_code_nullable
+        +String edition_label_nullable
     }
     class ProductVariant {
         +UUID id
-        +Integer volume_ml
-        +String concentration (EDP/EDT/Extrait)
-        +String sku
+        +Decimal volume_ml_nullable
+        +String packaging_code_nullable
+        +String sku_nullable
     }
     class RetailListing {
         +UUID id
-        +String platform (Shopee)
-        +String shop_name
-        +String url
-        +Decimal observed_price
+        +String platform
+        +String product_url
     }
-
-    Perfume "1" --> "many" ProductVariant : มีรุ่นย่อย/ขนาด
-    ProductVariant "1" --> "many" RetailListing : วางขายในร้านค้า
+    Perfume "1" --> "many" ProductVariant : packaging
+    Perfume "1" --> "many" RetailListing : offered_at
+    ProductVariant "0..1" --> "many" RetailListing : known_size
 ```
 
-1. **Perfume (น้ำหอมรุ่นหลัก):**
-   - คือตัวตนทางสุคนธศาสตร์ (Canonical Scent Formula) เช่น *Dior Sauvage*, *BE CHERIE White Instinct*
-   - เก็บโครงสร้าง Top / Heart / Base Notes และ Accords หลัก
-2. **Product Variant (รุ่นย่อย/ขนาด):**
-   - คือสินค้าตามขนาดบรรจุหรือรูปแบบ เช่น *Dior Sauvage EDP 60ml*, *100ml*, *200ml Refill*
-3. **Retail Listing (รายการขายในร้านค้า):**
-   - คือหน้าสินค้าจริงในร้านค้าออนไลน์ (เช่น ร้าน A บน Shopee ขายขวด 100ml ราคา ฿1,250)
-   - เก็บ URL, ราคาสแนปช็อต, ชื่อร้าน, และความน่าเชื่อถือ
+Evidence: Scento has two Balmain Bleu Infini records with different EDP/EDT concentration, and 251
+profiles with unknown concentration. Name-only uniqueness would merge different source identities.
+See [[P1_Data_Profiling_Findings]], [[ERD_Draft]], [[Data_Dictionary_Draft]].
 
 ---
 
@@ -93,8 +89,8 @@ flowchart TD
 ### 3.2 Note Synonyms & Normalization (ชื่อพ้องและการจัดมาตรฐาน)
 ในแหล่งข้อมูลต่าง ๆ มักใช้คำเรียกโน้ตต่างกัน ระบบจึงมีตาราง `note_aliases` เพื่อแปลงเข้าหา Canonical Note ID:
 - `Heart Note` $\equiv$ `Middle Note` $\equiv$ `กลิ่นกลาง`
-- `Bergamot` $\equiv$ `Calabrian Bergamot` $\equiv$ `มะกรูดฝรั่ง`
-- `Ambroxan` $\equiv$ `Ambergris (synthetic)` $\equiv$ `แอมบรอกซาน`
+- P1 PROPOSED: Bergamot/Calabrian Bergamot/Thai translations are reviewed alias or broader/narrower candidates; retain the original label.
+- P1 PROPOSED: `Ambroxan` and `Ambergris` are not automatic synonyms. Preserve natural/synthetic and broad/narrow distinctions; review each mapping.
 
 ### 3.3 Note Images & Attribution (ภาพประกอบวัตถุดิบ)
 - หน้ารายละเอียดน้ำหอม (R13) แสดงภาพไอคอน/ภาพถ่ายของวัตถุดิบโน้ตแต่ละตัว
@@ -132,3 +128,10 @@ flowchart TD
 ## 7. Change Notes
 
 - `2026-11-10`: บันทึกข้อกำหนด Perfume vs Variant vs Listing และรายละเอียด Olfactory Pyramid
+
+
+## P1 clarification — 2026-11-10
+
+`general` records notes without a source-specified layer. Do not invent a pyramid for flat-only
+profiles. Notes/accord/family terms depend on the source scheme; preserve evidence and uncertainty.
+The timings shown in the baseline pyramid are illustrations, not measured product performance.

@@ -29,7 +29,7 @@ tags:
 # DoomParfum By TK — Unified Development Workflow
 
 > **เอกสาร Workflow กลางเพียงไฟล์เดียว** สำหรับการวางแผน, การทำงานของ ChatGPT/Codex/Claude Code/Gemini, การเขียนโค้ด, การทดสอบ, GitHub Pull Requests, Obsidian documentation, การตรวจรับโดยเจ้าของโปรเจกต์ และการส่งต่อระหว่างแชต/Agent
-> **สถานะ `proposed-canonical`:** เป็น Workflow ที่ปรับตามความต้องการล่าสุดแล้ว แต่ยังไม่ได้ผูกกับ GitHub repository จริงหรือผ่าน Planning PR ของโปรเจกต์; เมื่อเจ้าของโปรเจกต์อนุมัติและ Merge PR ที่รับรอง Workflow นี้แล้วจึงเปลี่ยนเป็น `accepted` ในเอกสารภายใต้การเปลี่ยนแปลงที่ตรวจสอบได้
+> **สถานะ `proposed-canonical`:** เป็น Workflow ที่ปรับตามความต้องการล่าสุดแล้ว โดย Repository ปัจจุบันเป็น Public (`https://github.com/kraveerachat/DoomParfum-By-TK`) และมี AGENTS.md/Workflow แล้ว; PR #1 ยังเป็น Draft/Open รอ Human Review และยังไม่ผ่าน Human Merge; เมื่อเจ้าของโปรเจกต์อนุมัติและ Merge PR ที่รับรอง Workflow นี้แล้วจึงเปลี่ยนเป็น `accepted` ในเอกสารภายใต้การเปลี่ยนแปลงที่ตรวจสอบได้
 > **เอกสารนี้เป็นกฎการทำงาน ไม่ใช่หลักฐานว่าได้สร้าง Repository, Branch, Pull Request, Obsidian Vault หรือเขียนโค้ดแล้ว**
 
 ## 0. TL;DR — กฎหลักที่ต้องทำตาม
@@ -912,7 +912,7 @@ Use `NOT APPLICABLE`, `UNKNOWN`, `NOT RUN`, `NOT COMMITTED` หรือ `NOT CR
 
 ## 12. Adoption Plan — เริ่มใช้ไฟล์นี้กับโปรเจกต์อย่างไร
 
-### 12.1 ขั้นตอนแรก (ยังไม่เขียนเว็บ)
+### 12.1 Bootstrap adoption template (historical sequence; current PR #1 remains Draft/Open)
 
 1. วางไฟล์นี้เป็น `DoomParfum By TK/DEVELOPMENT_WORKFLOW.md` ที่ root โปรเจกต์.
 2. ให้ Agent อ่าน `README.md`, `Structure DB Obsidian/README.md` และไฟล์นี้เพื่อสร้าง **Planning PR #แรก** สำหรับตั้งค่า Vault/Governance; ถ้ายังไม่มี repo ให้เตรียม local changes และ PR-ready checklist ก่อน.
@@ -947,7 +947,7 @@ unauthorized data sources.
 - **Kept:** one task/branch/PR, coherent checkpoints, immutable receipt, Human Merge, independent code review, TDD, production safety, Truthful Evidence, Chat Continuity, multi-agent roles, Git/Obsidian consistency.
 - **Added explicitly for DoomParfum:** mandatory **Planning PR first**; Human Merge is a hard gate before code; multiple Implementation PRs may descend from one merged Plan; permissions-bound Agent autonomy to create PRs; Obsidian update on every meaningful session; perfume data provenance/copyright/scraping gates; domain semantics for App Cart vs Purchase/Owned.
 - **Not copied as-is:** AEGIS-specific network topology (MikroTik/firewall gateway), AEGIS repository paths and IDEA naming; instead use DoomParfum paths, domain risks and task IDs.
-- **Status of remaining choices:** GitHub repository URL/visibility, actual Agent authorizations, deployment strategy, hosting and final Data Source access remain to be decided. A workflow declaration does not grant tool permissions.
+- **Current repository facts (2026-11-10):** Public GitHub repository exists and this workflow is present. Agent authorization is bounded by the current owner request. CI, deployment, hosting, source adoption and proposed governance acceptance remain owner decisions; workflow existence does not grant account, cloud, source or merge permissions.
 
 ---
 

@@ -9,58 +9,53 @@ tags:
   - doomparfum
   - status
   - planning
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Project Status — DoomParfum By TK
+# Project Status — Owner Decisions Recorded, Gate P Pending
 
-> **Current Phase:** `P0 — Documentation & Knowledge Base Bootstrap`
-> **Updated:** `2026-11-10` (Asia/Bangkok)
-> **Source of Truth Baseline:** `../README.md` (v0.2.0-planning)
+Updated 2026-11-10 Asia/Bangkok. Task DPT-PLAN-001, existing [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1),
+branch plan/p1-data-discovery-schema-foundation. Verified S3 start/PR head:
+`88de01f8cdf42680f50696350abdb9fd80f6c4c2`; main `03481f7066487c44631cb9065899894ee8db71fb`.
+Owner has explicitly approved bounded Local Data Foundation Pilot scope/design targets. PR remains
+OPEN/DRAFT, not merged; Gate P is pending. This round records documents only.
 
----
+| Workstream | Actual state | Next gate |
+|---|---|---|
+| Planning research/review corrections | Completed as documents; original evidence/receipt retained | Owner reviews updated decision record and merges PR #1 |
+| Local pilot scope/design | OWNER-APPROVED under OD-01..06 bounded scope | Verify owner merge + approved plan SHA before separate implementation PR |
+| SQL/RLS/schema/ETL/image/recovery runtime validation | NOT STARTED / NOT RUN | Later approved local implementation and actual test evidence |
+| Permanent cloud hosting/storage/external backup | DEFERRED / NOT AUTHORIZED | Separate owner provider/budget/resource approval |
+| Regional imports | BLOCKED | Usable rights AND real samples verified |
+| Web/matching/cart/dashboard/CI | NOT STARTED, no new approval from this recording | Separate accepted feature scope; CI remains PROPOSED |
 
-## 1. Executive Summary
+## Recorded Owner Decisions
 
-โครงการ **DoomParfum By TK** อยู่ในระยะ **P0 (Documentation & Knowledge Base Architecture)** โดยมุ่งเน้นการสร้างฐานข้อมูลเอกสารที่มีโครงสร้างใน Obsidian Vault เพื่อแปลงวิสัยทัศน์และข้อกำหนดเชิงฟังก์ชัน (R01–R31) ให้เป็นแบบจำลองทางโดเมน ข้อมูล การจับคู่กลิ่น UX และข้อกำหนดทางวิศวกรรมที่พร้อมต่อยอดสู่การพัฒนาจริง
+- OD-01 approved pinned Scento CC BY 4.0 local dataset with attribution.
+- OD-02 approved perfume identity, source claims, conflicts and access-scope design targets; actual SQL/RLS tests required.
+- OD-03 approved disposable local PostgreSQL only; permanent cloud/provider selection deferred.
+- OD-04 approved portable image metadata/rights design; storage provider and unlicensed asset acquisition not authorized.
+- OD-05 approved local DB/object backup/restore testing; final retention/RPO/RTO and external backup deferred.
+- OD-06 approved international licensed-data pilot; regional imports remain blocked by rights/samples.
 
-ยังไม่มีการเขียนโค้ดระบบจริง (Implementation) ไม่มีการ Deploy และไม่มีการสร้าง GitHub Actions อัตโนมัติ โดยรอการอนุมัติสถาปัตยกรรมและเวิร์กโฟลว์ของผู้ใช้
+Authority: Human Owner's current “Owner Decision Recording for Planning PR #1” message. Full bounds:
+[[Decision_Log]], [[P1_Data_Foundation_Plan]], [[Tech_Stack_and_ADRs]]. Approval is not evidence of a
+working schema, passing tests, source/image rights expansion, cloud selection or PR merge.
 
----
+## Verified findings and limitations
 
-## 2. Phase Breakdown & Current Status
 
-| Phase | Description | Status | Progress | Blockers / Dependencies |
-|---|---|---|---|---|
-| **P0** | **Documentation & Knowledge Base** | **COMPLETED** | 100% | Initial Baseline Bootstrap สำเร็จ เตรียมสู่ First Planning PR |
-| **P1** | Core Foundation & Catalogue Schema | NOT STARTED | 0% | ขึ้นกับ Planning PR ของ P1 และการตรวจสิทธิ์ Data Sources |
-| **P2** | Scent DNA Matching Engine | NOT STARTED | 0% | ขึ้นกับการสรุปเกณฑ์น้ำหนักการจับคู่กลิ่น |
-| **P3** | My Cart & Ownership Tracking | NOT STARTED | 0% | ขึ้นกับ P1 (Schema) และ P2 |
-| **P4** | Collection Dashboard & Analytics | NOT STARTED | 0% | ขึ้นกับ P3 (Purchase/Inventory Data) |
-| **P5** | AI Research Assistant & Ingestion | NOT STARTED | 0% | ขึ้นกับข้อตกลงเรื่อง Rights และ API limits |
-| **P6** | Expansion (Thai/Middle East/Indo) | NOT STARTED | 0% | ขึ้นกับ P5 และการรวบรวมแคตตาล็อก |
+Licensed pinned Scento export profiled: 1,479 perfumes, 160 houses, 420 materials. 91 flat-only note
+profiles, 251 missing concentrations, two missing house countries, one name collision with distinct
+EDP/EDT profiles. No Thai/Indonesian houses in that export. Official regional pages reveal field shape,
+not import grants; four priority Thai product samples remain missing. API docs/spec reviewed, bounded
+live portrait request failed. No image binary, database, ETL runtime, benchmark or restore test created/run.
 
----
 
-## 3. Current Blockers & Pending Decisions
+## Review readiness and next action
 
-1. **GitHub & Workflow Specification (RESOLVED FOR BOOTSTRAP):**
-   - ได้รับเอกสารเวิร์กโฟลว์ `DEVELOPMENT_WORKFLOW.md` และกำหนด `AGENTS.md` เรียบร้อยแล้ว
-   - การ Push Initial Documentation Baseline ขึ้นสู่ `origin/main` เป็น **ข้อยกเว้นที่ได้รับอนุมัติเพียงครั้งเดียว** (DEC-011) เนื่องจาก Remote ว่างเปล่า
-   - งานหลังจากนี้ต้องเปิดผ่าน Planning PR ตาม Two-Gate Workflow ปกติ
-   - ดูเอกสาร: [[GitHub_and_Workflow_PENDING]]
-2. **Data Source Licensing & Rights (PENDING REVIEW):**
-   - แหล่งข้อมูลเปิด เช่น Scento Dataset, Fragrantica Discovery, Openverse ต้องผ่านการทดสอบและตรวจสอบนโยบายสิทธิ์การใช้งาน
-   - ดูเอกสาร: [[Source_Registry]] และ [[Rights_and_Attribution]]
-3. **Similarity Weight Confirmation (PROPOSED):**
-   - สูตรน้ำหนักคะแนนความคล้าย 40/25/15/20 (Notes / Accords / Family / Evidence) ยังเป็นร่างข้อเสนอ
-   - ดูเอกสาร: [[Scent_Matching_Spec]]
-
----
-
-## 4. Next Steps & Actions
-
-1. ตรวจสอบความครบถ้วนของเอกสารทั้งหมดใน `Structure DB Obsidian/`
-2. ให้ผู้ใช้ตรวจสอบ [[Requirements_Register]], [[Domain_Model]], [[ERD_Draft]], [[My_Cart_and_Ownership]]
-3. รอผู้ใช้ส่งแนวทาง/ตัวอย่างเวิร์กโฟลว์การทำงาน GitHub/ChatGPT เพื่อปลดล็อก [[GitHub_and_Workflow_PENDING]]
-4. เริ่มเตรียมสภาพแวดล้อม P1 (Next.js + PostgreSQL + Drizzle ORM) เมื่อผู้ใช้อนุมัติ
+Owner-decision documentation is synchronized and passed S3 checks (12 Markdown files / 11 vault frontmatters / six matching decision rows / zero errors). READY FOR OWNER REVIEW; publish on this same branch and verify head/description, then Human Owner reviews and merges when satisfied. No SQL, database, application
+code, cloud resource, provisioning, deployment, merge or auto-merge in this round. PRODUCTION_MUTATION=NO.
+Current evidence/file manifest: [[DPT-PLAN-001_P1_Data_Foundation]]. Final published head is recorded by
+live PR #1/final report; it cannot be embedded self-referentially in its own commit. Existing immutable
+[[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains the single historical receipt, unchanged.

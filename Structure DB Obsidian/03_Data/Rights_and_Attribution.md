@@ -11,89 +11,95 @@ tags:
   - rights
   - copyright
   - attribution
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Rights and Attribution Policy — DoomParfum By TK
+# Rights and Attribution — P1 Proposed Controls
 
-> **Document Type:** Intellectual Property, Copyright & Responsible Usage Policy
-> **Source Baseline:** `../README.md` (Sections 1.2, 6.2 & 6.4)
-> **Status:** Draft / Strict Compliance Policy
+This revision corrects baseline assumptions that public facts or personal fair use automatically permit
+copying site content/images. No universal fair-use grant is asserted. Owner restrictions already apply;
+the storage/approval mechanism below is PROPOSED. Source-specific findings: [[Source_Registry]].
 
----
+## Separate access and reuse decisions
 
-## 1. Purpose / Scope
+For each source and asset, assess research lookup, automated access, local caching, durable storage,
+application display, redistribution and AI processing separately. Each is allowed/restricted/unknown,
+with evidence URL, checked time, reviewer, scope and expiry/review date. Unknown is not allowed for
+production import/display. A public URL is neither image ownership nor hotlink permission.
+User-provided screenshots can contain third-party content; confirm scope before public sharing.
+Do not commit private orders, carts, photos with private EXIF or unlicensed raw datasets.
 
-เอกสารนี้กำหนดแนวทางปฏิบัติทางกฎหมายและจริยธรรมเกี่ยวกับการจัดเก็บ การแสดงผล และการอ้างอิงเนื้อหาข้อความ รูปภาพ ฐานข้อมูล และรีวิวจากบุคคลภายนอก เพื่อปกป้องโครงการ DoomParfum By TK จากการละเมิดลิขสิทธิ์หรือข้อกำหนดการให้บริการ (Terms of Service)
+## Verified evidence in this session
 
----
+- Scento's pinned export declares [CC BY 4.0](https://github.com/Scento-com/perfume-dataset/blob/086769ecf1add770ea6646bd4d88d39f0e7cddeb/LICENSE).
+  Credit Scento, link its database and license, identify normalization/changes, retain supplied notices.
+  License text: [CC legal code](https://creativecommons.org/licenses/by/4.0/legalcode).
+  This does not grant rights to unrelated website photos, trademarks or undisclosed upstream content.
+- Scento API [terms §22](https://www.scento.com/terms-of-service#perfume-api) allow reference tools but
+  forbid overload, bypass and wholesale rebuilding of a competing catalogue. [Developer FAQ](https://www.scento.com/developers/perfume-api)
+  requests reasonable rates and caching. Numeric quotas and durable redistribution scope remain unknown;
+  preserve the supplied citation. Prefer the licensed export for a seed pilot.
+- HMNS [IP terms](https://hmnsperfume.com/pages/terms-conditions-revamp) require written consent for
+  reproduction/distribution/derivatives. No such consent was obtained. No product prose or images imported.
+- Butterfly copyright notice was observed; no feed/image grant verified. Lattafa terms fetch returned
+  403; no bypass attempted and no reuse permission inferred from the official product page.
+- [Commons Local Lemon.jpg](https://commons.wikimedia.org/wiki/File:Local_Lemon.jpg) identifies author
+  Gaurav Dhwaj Khadka and CC BY-SA 4.0. Candidate illustration only. Credit author, source and license,
+  record modifications, and comply with compatible licensing for adapted images. No binary acquired.
+- Fragrantica remains reference-only; automated scraping and internal API use are forbidden for this task
+  regardless of scraper availability. No Fragrantica automation occurred.
 
-## 2. Policy by Content Category
+## Proposed enforcement and attribution output
 
-```mermaid
-flowchart TD
-    Content["ประเภทเนื้อหาที่ใช้งานในระบบ"]
+`rights_assessments` is versioned evidence, not a single permanent `rights_verified` boolean.
+Source observations and image assets reference the specific assessment in effect. An expired or changed
+assessment stops new processing and queues affected records/assets for review; no destructive deletion
+is performed without an owner plan. Store only the minimum permission evidence that may be retained.
 
-    subgraph TextPolicy["1. ข้อความและโน้ตกลิ่น (Facts & Notes)"]
-        T1["รายชื่อโน้ต / พีระมิด = ข้อเท็จจริง (Facts)<br/>นำมาจัดระเบียบและแสดงผลได้"]
-        T2["คำอธิบายกลิ่นยาวๆ = สรุปความ / Paraphrase<br/>ไม่คัดลอกบทความทั้งหมด"]
-    end
+A displayed fact can resolve through its selected source observation to source name/URL, retrieved date,
+license/terms, attribution and changes. Images additionally expose creator/source/license and derivative
+history. Record page URL separately from file URL and object key. For user-authored facts, record a
+private owner source record; do not publish private evidence as attribution.
 
-    subgraph ImagePolicy["2. รูปภาพ (Images)"]
-        I1["ภาพวัตถุดิบโน้ต: ใช้ Creative Commons / Openverse<br/>พร้อมระบุชื่อผู้สร้างและ License"]
-        I2["ภาพขวดน้ำหอม: บันทึกเฉพาะ URL / Fair Use ส่วนตัว<br/>ห้าม Hotlink แบนด์วิดท์ผู้อื่นโดยไม่มีสิทธิ์"]
-    end
+External downloads in the future must allow only approved HTTPS hosts, bounded sizes and types;
+reject redirects into private networks and executable/vector content unless sanitized. Network-fetch
+security is a future implementation acceptance criterion, not an implemented control.
 
-    subgraph ReviewPolicy["3. รีวิวและหลักฐาน (Reviews & Claims)"]
-        R1["ข้อความสรุปสั้น: เช่น 'เปิดคล้าย A ท้ายคล้าย B'<br/>อ้างอิง URL แหล่งที่มา + วันที่"]
-        R2["ห้ามกวาดบทวิจารณ์ฉบับเต็มมาเผยแพร่ซ้ำ"]
-    end
+## Open decisions
 
-    Content --> TextPolicy
-    Content --> ImagePolicy
-    Content --> ReviewPolicy
-```
+Owner approves the seed attribution presentation, rights-review cadence and image license policy.
+Unlicensed official-site product feeds require permission or owner-provided licensed alternatives.
+No paid subscriptions, account connection or permission request to third parties was sent.
 
----
 
-## 3. Strict Rules on Web Scraping & APIs
+## Post-review image grant consistency — PROPOSED
 
-1. **เคารพเงื่อนไข Terms of Service (ToS):**
-   - แหล่งข้อมูลใดที่ระบุใน ToS ห้ามการดึงข้อมูลอัตโนมัติ (Automated Scraping) ระบบจะไม่เขียนสคริปต์ดึงข้อมูลจากแหล่งนั้นโดยเด็ดขาด
-2. **ไม่หลบหลีกกลไกป้องกัน (No Bypass of Safeguards):**
-   - ไม่เขียนคำสั่งหลบเลี่ยง CAPTCHA, Cloudflare, ระบบ Login หรือข้อจำกัด Rate Limit ของเว็บไซต์ใดๆ
-3. **การเข้าถึงบัญชี Shopee:**
-   - ระบบ **ไม่เข้าถึงบัญชี Shopee ของผู้ใช้**, ไม่ใช้คุกกี้/เซสชันส่วนบุคคล และไม่มีการจำลองคำสั่งซื้ออัตโนมัติ การทำงานกับ Shopee ทำผ่านการแปะลิงก์ (URL Bookmark) เท่านั้น
-4. **การตรวจสอบสิทธิ์อย่างสม่ำเสมอ:**
-   - ข้อมูลและรูปภาพทุกชุดต้องมีฟิลด์ `rights_verified: boolean` และ `checked_at: timestamp` หากยังไม่ได้รับการตรวจสอบ จะต้องไม่เผยแพร่สู่สาธารณะ
+Source/publisher assessment and asset permission are separate records. image_assets carries source_id,
+source_record_id, rights_id and an optional selected asset_permission_id; acquired/validated states
+require the selected binding plus metadata. Scoped composite FKs bind source_record and assessment to
+the SAME source, and selected permission to the EXACT image/capture/assessment. A same-source grant
+for a different image/capture fails that tuple, rather than being accepted through a loose rights_id.
+Metadata-only states may point to an unknown assessment but cannot fetch/store/render bytes.
 
----
+Each asset_permissions row identifies the asset locator/hash evidence, allowed acquire/display/transform/
+redistribute uses, reviewer/time, review deadline and one-way revocation. Content rights are immutable
+versions; revocation disables use without rewriting evidence. Validate that the external proof genuinely
+covers this asset and each intended use; referential integrity alone cannot determine legal permission.
 
-## 4. Attribution Record Standards
+Derivatives have their own image IDs/hashes and selected permission, reference the exact parent asset
+AND parent permission, and require parent's transform_use=allowed. For the pilot parent/child must share
+scope/source/capture; unknown/denied transformation, mismatched parent, incompatible output license,
+missing attribution or expired/revoked ancestor blocks the relevant operation. Parent permission never
+automatically grants child public display or redistribution. Adaptation/change notices and output-license
+obligations are recorded and revalidated on restore. Cross-scope/source publication requires a separate
+reviewed provenance/copy design and permission; it is not enabled here.
 
-เมื่อบันทึกข้อมูลจากแหล่งภายนอก ต้องเก็บบันทึกในตาราง `source_records` ดังนี้:
-- `source_name`: ชื่อแหล่งข้อมูล (เช่น Openverse, Scento Dataset, Official Press Release)
-- `source_url`: URL ต้นทางที่สามารถตรวจสอบย้อนหลังได้
-- `license_type`: สัญญาอนุญาต (เช่น `CC-BY-4.0`, `CC0`, `Public Domain`, `Fair Use Personal`)
-- `attribution_text`: ข้อความระบุเกียรติคุณเจ้าของผลงานตามเงื่อนไขสัญญา
-- `checked_at`: วันและเวลาที่ทำการตรวจยืนยัน
+A licensed image may still be user-private. Permission evidence/private URLs and EXIF stay scoped;
+public catalogue membership does not expose them. Private/shared delivery rechecks auth and effective
+rights through the authenticated object proxy. See [[Data_Dictionary_Draft]], [[Security_and_Privacy]],
+[[P1_Pilot_Implementation_Plan]] for precise constraints and negative controls. No new grant is claimed.
 
----
-
-## 5. Requirements Covered
-
-- [[Requirements_Register#R17|R17]] — External Review Evidence with Permitted Rights
-- [[Requirements_Register#R21|R21]] — Rights & Attribution Logging
-
----
-
-## 6. Dependencies & Links
-
-- ทะเบียนแหล่งข้อมูล: [[Source_Registry]]
-- การประกันคุณภาพข้อมูล: [[Data_Quality_and_Provenance]]
-
----
-
-## 7. Change Notes
-
-- `2026-11-10`: จัดทำนโยบายสิทธิ์และการอ้างอิงอย่างเคร่งครัดตามข้อกำหนดใน README
+The acquired/validated transition additionally requires the selected permission's bound content hash to
+match image bytes. Finalizing an initially unknown hash uses a new immutable permission version.
+Changing an image capture/bytes uses a new asset ID; changing a parent's selected permission invalidates
+children for re-review, rather than letting an old parent-binding pointer silently authorize new use.

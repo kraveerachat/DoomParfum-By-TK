@@ -11,83 +11,86 @@ tags:
   - quality
   - provenance
   - integrity
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Data Quality and Provenance — DoomParfum By TK
+# Data Quality and Provenance — P1 Proposed Contract
 
-> **Document Type:** Data Quality Principles & Provenance Standard
-> **Source Baseline:** `../README.md` (Section 6.4)
-> **Status:** Draft / Core Governance Principles
+Observed denominators and source hashes: [[P1_Data_Profiling_Findings]]. All enforcement described here
+is PROPOSED and unimplemented. Unknown is a valid state; no AI completion of product facts.
 
----
+## Claim and canonical layers
 
-## 1. Purpose / Scope
+- `sources` identifies a publisher/feed. `source_records` identifies one immutable source-key/payload
+  version with URL, section/row locator, retrieval time and rights assessment.
+- `source_observations` identifies entity, field path, raw/permitted normalized value, value status and
+  source record plus mandatory claim_locator/claim_key and transform_version. Multiple claims from the same record/field survive independently. A record points to Scento if that is all the export supplies; do not claim the upstream
+  house URL or independent verification exists when it does not.
+- `canonical_selections` chooses an observation UUID per access_scope/entity/field. Public canonical columns/joins
+  are transactionally derived from those selections, with audit history and transform version.
+- `data_conflicts` and `conflict_members` retain competing observations. Do not merge conflicting note
+  lists into an artificial superset. A reviewer records a rationale for any selection/resolution.
 
-เอกสารนี้กำหนดมาตรฐานคุณภาพของข้อมูล (Data Quality) และการตรวจสอบย้อนกลับแหล่งที่มา (Data Provenance) เพื่อให้แน่ใจว่าระบบ DoomParfum By TK เป็นฐานข้อมูลที่เชื่อถือได้ อ้างอิงได้จริง และปราศจากการปลอมแปลงข้อมูล
+## Missing-value states
 
----
+| State | Meaning | Canonical treatment |
+|---|---|---|
+| present | Actual recorded value | Use only after rights/identity review |
+| not_recorded | Source explicitly null/blank or empty without verified absence semantics | Nullable; preserve original shape in permitted staging |
+| not_supplied | Field absent from this schema | Nullable; do not count as source asserting absence |
+| explicit_none | Source affirmatively asserts no value and that meaning is verified | Record claim; distinct from unknown |
+| withheld | Privacy/rights prevent retention/display | Null public field with restricted evidence locator |
+| not_applicable | Reviewer establishes field does not apply | Record rationale |
 
-## 2. Core Integrity Principles
+A conflict is a separate state across observations, not a replacement for value status. Never use
+zero price, zero year, empty country string or a guessed note to represent missing. Empty flat-note
+lists and missing pyramids have different meanings. No image rights means no acquired/rendered image.
 
-> [!CAUTION]
-> **หลักการสำคัญที่สุดด้านความถูกต้องของข้อมูล [CONFIRMED]:**
-> 1. **ห้ามสร้างข้อมูลเท็จโดยเด็ดขาด (No Fabricated Data):** ห้ามนำ AI หรือโมเดลใดๆ มาคาดเดาหรือกุรายชื่อ Top/Heart/Base Notes, ราคาขาย, หรือคะแนนรีวิวขึ้นมาเองเพื่อเติมช่องว่าง
-> 2. **ความไม่รู้คือข้อเท็จจริง (Missing is a Valid State):** หากน้ำหอมรุ่นใดไม่มีข้อมูลโน้ตครบ 3 ชั้น ให้คงสถานะ `NULL` หรือ `Unknown` พร้อมระบุสัดส่วนความสมบูรณ์ (Coverage) ไม่สรุปว่าเท่ากับ 0 หรือแต่งโน้ตเติม
-> 3. **ราคาต้องระบุเวลาและร้านเสมอ (Price is an Observation):** ไม่มีคำว่า "ราคาจริงถาวร" มีเพียงราคาที่สังเกตพบ ณ ร้านค้าหนึ่ง ในวันและเวลาที่ระบุชัดเจน
+## Identity, taxonomy and quality metrics
 
----
+Use canonical UUIDs; external slugs are source IDs. Dedup by source crosswalk first; compare name,
+brand, concentration, edition and evidence before linking sources. Similar names produce review
+candidates only. Names/aliases may collide; Unicode/diacritics retained. Country and positioning are
+independent; source type `arabian` must not decide designer/niche/inspired positioning.
 
-## 3. Field-Level Provenance (แหล่งที่มาระดับฟิลด์)
+Replace the baseline arbitrary 30/60/90/100 coverage ladder with measured, versioned metrics:
+field missing counts with denominators by source and research group; pyramid availability; unresolved
+identity/claim counts; provenance/rights completeness; image metadata completeness; duplicate candidates;
+and catalogue-vs-matching eligibility. Coverage is not truth or similarity. No numeric confidence model
+is accepted by this PR. Matching weights remain PROPOSED in [[Scent_Matching_Spec]].
 
-ในระบบบันทึกข้อมูลระดับละเอียด ข้อมูลแต่ละส่วนอาจมาจากต่างแหล่งกัน:
+Review stars, popularity rank, brand performance claims, pairwise human comparisons and algorithm
+scores are separate kinds. Dataset/API from the same publisher are not independent evidence.
+No reusable comparison dataset was obtained in this task; missing evidence must reduce what can be
+claimed rather than create a fake zero or similarity percentage.
 
-| ส่วนข้อมูล (Field Group) | ที่มาหลักที่ยอมรับได้ | ระดับความเชื่อมั่น (Confidence) | กลยุทธ์เมื่อพบข้อมูลขัดแย้ง |
-|---|---|---|---|
-| **Brand & Official Name** | เว็บทางการของแบรนด์ / ผู้จัดจำหน่าย | สูงมาก (High) | ยึดตามชื่อบนขวดและกล่องทางการ |
-| **Top/Heart/Base Notes** | ประกาศของแบรนด์ / Verified Dataset | สูง (High) | หากแบรนด์ไม่แยกชั้น ให้บันทึกเป็น All Notes |
-| **Accords & Families** | Olfactory Analysis / Community Consensus | ปานกลาง (Medium) | บันทึกน้ำหนักความเด่นเฉลี่ย |
-| **Comparison Evidence** | รีวิวที่มีสิทธิ์ / บันทึกผู้ใช้ | ปานกลาง (Medium) | บันทึกทั้งสองมุมมอง หากมีความเห็นขัดแย้ง |
-| **Price & Marketplace Link**| การสังเกตการณ์ของผู้ใช้ (Observation) | แปรผันตามเวลา | บันทึกพร้อม Snapshot Timestamp |
+## Audit and deletion integrity
 
----
+Imported facts require source provenance; user-authored facts have private source/actor records.
+Canonical mutation records actor, timestamp, old/new observation IDs and reason. Source versions are
+append-only except owner-approved rights/privacy removal. Restrict hard deletion of catalogue identities
+referenced by purchases/inventory; archive/tombstone instead. Private records are tenant-scoped, excluded
+from public Git and must retain history after a cart item or bottle is removed.
 
-## 4. Handling Conflicting Information (การจัดการข้อมูลขัดแย้ง)
+Future acceptance: every promoted imported field has a valid selection, no dangling FK, no duplicate
+source version, all unresolved conflicts retained, missing statuses survive export/restore, source rights
+changes block new imports. Tests and enforcement are NOT RUN. See [[P1_Pilot_Implementation_Plan]].
 
-ในวงการน้ำหอม บ่อยครั้งที่ข้อมูลโน้ตจากเว็บไซต์ทางการ, รีวิวบล็อกเกอร์, และชุมชนไม่ตรงกัน:
-1. **ไม่ลบข้อมูลที่เห็นต่าง:** บันทึกมุมมองหลักไว้ใน Canonical Table และบันทึกข้อคิดเห็นที่ต่างไว้ในตารางข้อสังเกต (`perfume_notes_annotations`)
-2. **แสดงสถานะ Uncertain:** หากรุ่นใดมีข้อโต้แย้งเรื่องส่วนผสม ให้ติดธง `[UNCERTAIN]` ในหน้ารายละเอียดเพื่อแจ้งผู้ใช้
-3. **Audit Trail:** ทุกการแก้ไขข้อมูลใน Master Table จะถูกบันทึกประวัติว่าใครเป็นผู้แก้ (User หรือ ETL Job) และแก้เมื่อใด
 
----
+## Post-review identity and privacy correction — PROPOSED
 
-## 5. Data Coverage Metrics
+A captured source document is not one claim. Structured and prose assertions use different locators;
+multiple assertions at one locator use stable claim keys. Observation identity includes access scope,
+record, entity/kind/field, locator/key and transform version. Same identity with different extraction
+output is rejected, not overwritten. Agreeing claims at different locators remain distinct evidence.
+Conflict membership and resolution/selection FKs bind scope/entity/kind/field and exact observation ID;
+a resolution must be a conflict member. Full contract: [[Data_Dictionary_Draft]].
 
-ระบบจะคำนวณดัชนีความสมบูรณ์ของข้อมูล (Data Coverage Score) สำหรับน้ำหอมแต่ละรุ่น:
-- **Level 1 (Basic):** มีชื่อรุ่น, แบรนด์, ประเทศ (Coverage 30%)
-- **Level 2 (Olfactory):** มีโน้ตอย่างน้อย 1 ชั้น หรือมี Accords (Coverage 60%)
-- **Level 3 (Pyramid Complete):** มี Top, Heart, และ Base ครบถ้วน (Coverage 90%)
-- **Level 4 (Fully Documented):** มีพีระมิดครบ + มีภาพขวด/โน้ต + มีแหล่งซื้อ + มีรีวิว (Coverage 100%)
-
-ระดับ Coverage นี้จะถูกส่งต่อไปยัง Matching Engine เพื่อคำนวณ **Confidence Score** ใน [[Scent_Matching_Spec]]
-
----
-
-## 6. Requirements Covered
-
-- [[Requirements_Register#R18|R18]] — Separate Similarity from Confidence
-- [[Requirements_Register#R21|R21]] — Source Attribution and Rights Logging
-
----
-
-## 7. Dependencies & Links
-
-- พจนานุกรมข้อมูล: [[Data_Dictionary_Draft]]
-- ทะเบียนแหล่งข้อมูล: [[Source_Registry]]
-- นโยบายสิทธิ์: [[Rights_and_Attribution]]
-
----
-
-## 8. Change Notes
-
-- `2026-11-10`: บันทึกมาตรฐาน Data Quality และข้อห้าม Fabricated Data อย่างเป็นทางการ
+Access scope belongs to sources, captures, observations, permissions, images, links, conflicts,
+staging/audits and computation outputs, independently of the referenced perfume's visibility.
+Private/shared selections are overlays; only public claims can materialize public catalogue data.
+No private conflict flag/count, locator, photo, rating, matching input or cache result may leak through
+a public entity. Shared access needs active explicit membership; personal purchase/history remains
+private. Publication requires a reviewed new sanitized public copy, never in-place scope widening.
+Rights and application authorization both apply. Enforcement/test specification:
+[[Security_and_Privacy]], [[P1_Pilot_Implementation_Plan]]. No runtime checks have run.

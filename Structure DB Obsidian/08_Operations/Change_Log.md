@@ -10,7 +10,7 @@ tags:
   - operations
   - changelog
   - history
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Change Log — DoomParfum By TK
@@ -64,3 +64,68 @@ source_of_truth: "../README.md"
 1. ทุกการปรับเปลี่ยนข้อกำหนด (Requirements), แบบจำลองข้อมูล (ERD/Schema), หรือการตัดสินใจ (Decisions) จะต้องถูกบันทึกในเอกสารนี้เสมอ
 2. ระบุเลขเวอร์ชัน, วันที่, เหตุผล, และรายการข้อกำหนดที่ได้รับผลกระทบ
 3. หากมีข้อขัดแย้งกับเอกสารเดิม ให้ทำบันทึกชี้แจง (Reconciliation Note) ไม่แก้เอกสารเงียบๆ
+
+
+### P1 discovery and foundation proposal — 2026-11-10 / DPT-PLAN-001
+
+Docs-only planning change, not a product/runtime release. Profiled pinned CC BY 4.0 Scento export;
+added research findings, source-to-canonical mapping and observed conflict matrix. Replaced draft data
+contracts with a 44-table logical proposal covering catalogue, provenance/rights/conflicts/staging,
+media/evidence, personal listings/cart/purchases/inventory. Added hosting/object-vs-DB recovery evaluation,
+ADRs 003–006, pilot task/test/readiness plan and canonical planning/task notes.
+
+Reconciled roadmap/status/root overview with actual public repository/bootstrap and two-gate request.
+Aligned domain concentration/packaging and matching-result semantics; corrected public-info/fair-use
+assumptions and required-country/three-note defaults. Preserved existing confirmed requirements and
+proposed matching weights. No raw dataset, code, SQL, cloud configuration, secret, merge or deployment.
+Research gaps/permission constraints remain explicit, especially priority Thai samples, HMNS reuse,
+image acquisition and live API response verification. Exact files/checkpoints: [[DPT-PLAN-001_P1_Data_Foundation]].
+
+
+### Post-Review Correction S2 — 2026-11-10 / DPT-PLAN-001 / existing PR #1
+
+Review start/current verified HEAD: `46c4a85309c408b3de7612d4853b166b84917359`; main unchanged at
+`03481f7066487c44631cb9065899894ee8db71fb`. Same planning branch, PR OPEN/DRAFT.
+R1: locator/occurrence identity preserves multiple claims per source record; scoped exact selection
+and conflict-member resolution constraints. R2: non-null access_scope_id throughout provenance/assets,
+public/shared/private ownership, RLS/API/storage rules, private overlays never materializing public data.
+R3: scoped per-asset/capture/assessment grant, derivative parent/output rights and expiry/revocation checks.
+Logical proposal grows 44 → 47 tables; original source profiling/mapping/conflict evidence and Task Map
+retained. R4: public repository/existing workflow facts corrected in security/workflow/questions;
+separate documentation CI backlog proposal only. Added 18 future OBS/ACL/IMG/REC negative/positive case
+specifications and four-column OD-01..06 local/test/rights/cloud owner recommendations. No runtime tests.
+
+Original immutable receipt [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains the single receipt;
+no rewrite/second receipt. Exact correction paths and resulting checkpoint/evidence are in
+[[DPT-PLAN-001_P1_Data_Foundation]]. No code, schema/database, Actions, cloud resources, deployment or merge.
+
+
+S2 CURRENT_VERIFIED_HEAD_SHA / reviewed correction checkpoint: `83f13599a1b531229f22e0a68d35f86edd19278a`.
+Observed after `docs(p1): address architecture review findings` committed 25 Markdown files. This
+append-only event is included in the following documentation closeout checkpoint; final published branch/PR SHA is
+in PR #1/final report. No rewrite of the original immutable receipt and no second receipt. Verified
+25 docs, 23 vault frontmatters, 47 ERD/dictionary tables, 18 future cases; links/fences/diff/secret-pattern
+checks succeeded. Runtime tests NOT RUN; R1–R4 resolved as proposals, owner decisions/rights still pending.
+
+
+### Owner Decision Recording S3 — 2026-11-10 / DPT-PLAN-001 / PR #1
+
+START/verified PR HEAD: `88de01f8cdf42680f50696350abdb9fd80f6c4c2`; main remains
+`03481f7066487c44631cb9065899894ee8db71fb`. Authority is the Human Owner's current explicit decision
+message, not an agent-inferred acceptance. OD-01..06 approved only for bounded local international
+licensed-data pilot and model/metadata/rights/recovery targets. ADRs and planning/current status now
+separate local approval, pending SQL/RLS tests, deferred permanent cloud/storage/final retention/RPO/RTO/
+external backups, and regional imports blocked by usable rights plus samples. Existing source dataset
+license evidence is not altered; local adoption approved with attribution, no wider content/image grant.
+Source registry, pilot/backlog and overview/handoff scope summaries synchronized to prevent stale gates.
+
+Gate P remains unsatisfied until Human Owner merges PR #1. This round is docs only; no SQL, database,
+application code, cloud resources, Actions, provisioning/deployment/merge. Original immutable receipt
+and research/Task Map preserved; no second receipt or new PR. Current exact paths and verification
+are in [[DPT-PLAN-001_P1_Data_Foundation]]. Final published head recorded by existing PR/final report.
+
+S3 validation result: 12 Markdown / 11 vault frontmatters / six matching owner-decision rows / 47-table
+parity / zero errors; links/fences/source paths and common secret patterns checked; git diff check exit 0.
+Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
+for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
+readback provide published SHA/state; no implementation or automatic merge.

@@ -10,7 +10,7 @@ tags:
   - delivery
   - roadmap
   - milestones
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Delivery Roadmap — DoomParfum By TK
@@ -27,7 +27,7 @@ source_of_truth: "../README.md"
 
 ```mermaid
 flowchart LR
-    P0["P0: Documentation<br/>(สถานะ: กำลังดำเนินการ)"] --> P1["P1: Core Foundation<br/>& Catalogue"]
+    P0["P0: Documentation<br/>(baseline committed)"] --> P1["P1: Core Foundation<br/>& Catalogue"]
     P1 --> P2["P2: Scent Matching<br/>& Comparison"]
     P2 --> P3["P3: My Cart &<br/>Ownership Tracking"]
     P3 --> P4["P4: Collection<br/>Dashboard"]
@@ -39,8 +39,8 @@ flowchart LR
 
 ## 2. Phase-by-Phase Deliverables
 
-### Phase P0: Documentation & Governance (Current Phase)
-- **สถานะ:** `IN PROGRESS` (เป้าหมายสัปดาห์ปัจจุบัน)
+### Phase P0: Documentation & Governance (Baseline)
+- **สถานะ:** Baseline committed at `03481f7066487c44631cb9065899894ee8db71fb`; subsequent changes require Planning PR.
 - **วัตถุประสงค์:** สร้างฐานข้อมูลความรู้ Obsidian Vault จัดโครงสร้างเชื่อมโยง R01–R31
 - **ผลงานส่งมอบหลัก (Key Deliverables):**
   - ข้อกำหนดความต้องการ ([[Requirements_Register]])
@@ -54,7 +54,7 @@ flowchart LR
 ---
 
 ### Phase P1: Core Foundation & Catalogue MVP
-- **สถานะ:** `PLANNED`
+- **สถานะ:** Planning research active; implementation NOT STARTED. See [[P1_Data_Foundation_Plan]].
 - **วัตถุประสงค์:** สร้างฐานข้อมูล PostgreSQL และแอปพลิเคชัน Next.js สำหรับค้นหาและดูรายละเอียดน้ำหอม
 - **ผลงานส่งมอบหลัก:**
   - Database Migrations & Drizzle Schema จาก Data Dictionary
@@ -133,3 +133,14 @@ flowchart LR
 ## 5. Change Notes
 
 - `2026-11-10`: กำหนด Roadmap P0 ถึง P6 สอดคล้องกับข้อกำหนดใน README
+
+
+## P1 gate sequence — PROPOSED, 2026-11-10
+
+DPT-PLAN-001 discovery/schema/hosting plan → human merge and accepted decisions → IMP-P1-01 local
+schema → IMP-P1-02 bounded ETL → IMP-P1-03 image metadata → IMP-P1-04 benchmark and independent
+DB/object restore → IMP-P1-05 optional separately authorized host migration. Catalogue UI follows.
+The initial ETL pilot is brought forward from broad P5 ingestion to test P1 feasibility; P5 AI research
+and bulk integrations remain deferred. No phases are declared implemented by this plan.
+R22 priority Thai coverage remains an acceptance target pending permissioned real samples.
+Details and test criteria: [[P1_Pilot_Implementation_Plan]].
