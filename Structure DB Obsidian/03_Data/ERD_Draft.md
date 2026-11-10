@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: erd_draft
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - data
@@ -15,11 +15,21 @@ source_of_truth: "../../README.md"
 
 # ERD Draft — P1 Proposed Relationships
 
-PROPOSED, not final/implemented. Post-review revision: 47 logical tables (44 original plus access_scopes, scope_members and asset_permissions). Column types, nullability, composite FKs and uniqueness are defined
+## Local implementation status
+
+All 47 logical names map to local PostgreSQL tables in IMP-P1-01; see [[Data_Dictionary_Draft]] and
+[[IMP-P1-01_Implementation_Evidence]]. The relationship views below retain the approved model;
+SQL uses scoped composite FKs, subtype/whole-field/conflict/permission triggers and FORCE RLS.
+No domain table was dropped to pass migrations. Mermaid rendering is NOT RUN. Final SQL evidence
+and conservative field/rights/normalization contracts are in the implementation task, not inferred
+from these diagrams. Cloud, ETL, application and actual object delivery remain later gates.
+
+
+Owner-merged local design; implemented SQL mapping under review above. Post-review revision: 47 logical tables (44 original plus access_scopes, scope_members and asset_permissions). Column types, nullability, composite FKs and uniqueness are defined
 in [[Data_Dictionary_Draft]]. Research drivers: [[P1_Data_Profiling_Findings]] and [[P1_Data_Conflict_Matrix]].
 This replaces the baseline single-source-perfume association with versioned field-level claims.
 Diagrams show the logical relationships; composite ownership/type guards remain mandatory even where
-the diagram uses a single edge. No database was created.
+the diagram uses a single edge. Planning PR #1 created no database; IMP-P1-01 creates only a disposable local pilot.
 
 ## Catalogue, identity and taxonomy
 

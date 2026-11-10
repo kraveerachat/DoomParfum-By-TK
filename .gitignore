@@ -59,3 +59,8 @@ Thumbs.db
 *.temp
 *.swp
 *.bak
+
+# Disposable local PostgreSQL credentials, logs and data evidence (never public Git)
+.local/
+*.dump
+*.backup

@@ -1,0 +1,56 @@
+# IMP-P1-01 schema findings and bounded resolutions
+
+These choices implement the approved local model conservatively. They do not accept a hosting,
+application, matching algorithm, source grant, semantic note merge or image-license decision.
+
+| ID | Draft ambiguity / implementation limit | Local contract and test / remaining gate |
+|---|---|---|
+| SF-01 | Cross-row CHECKs cannot establish subtypes, whole-field materialization or conflict cardinality | Real FKs plus deferred final-row validators, both parent/child transitions and deletions. All 47 tables participate. Serial READ COMMITTED writes prevent write skew; global scans are coalesced by additive008; narrower impact graphs/locks remain later work. |
+| SF-02 | Dictionary's shared canonical review state was implicit on several subtype rows | Explicit review_status on brands/notes/accords/variants/relations, in addition to perfumes. Draft type fixtures are not published. Populated approved source scalars require retained selections; application UUID/slug/scheme/code are metadata. |
+| SF-03 | Field-path/type and materialization representations were not exhaustive | Fixed field allowlist/mapping local-v1. Scalar paths equal explicit column names; notes.<layer> are whole ordered string arrays. Aliases are string arrays; tags/usage are arrays of scheme/code or scheme/label objects; families.<role> is a scheme/code object; accords are objects containing accord_id/strength in a reviewed array. Whole set cardinality and membership/source checks apply. No arbitrary field-to-SQL execution. |
+| SF-04 | Source occurrence identity differs from canonical note identity | Raw JSON arrays + locator/key/transform remain append-only; exact replay may DO NOTHING only after deterministic-output validation. Changed extraction under the same identity fails. Within-layer repeated lists and alias ambiguity block selection/materialization, remain review/quarantine. Canonical join uniqueness stays unchanged. |
+| SF-05 | Unicode aliases and upstream candidate normalization differ | SQL alias contract is nfkc-lower-v1, preserving original spelling. Preflight uses NFKC/casefold/space matching; it is candidate evidence only. No assertion these algorithms are equivalent; no automatic canonical approval. Whitespace/casefold edge cases need explicit reviewed mappings in IMP-P1-02. |
+| SF-06 | SQL cannot decide legal truth or all compatible derivative licenses | Human evidence remains required. The local derivative contract conservatively requires exact equal nonempty parent/child output_license, own asset/capture/hash binding, credit and changes notice. Unknown/incompatible cases fail closed. Broader compatibility registry and actual acquisition/decoder/SSRF/storage tests await IMP-P1-03. |
+| SF-07 | Provider authentication and API/storage trust are unspecified/deferred | Real local PostgreSQL logins map session_user to auth_subject. No editable identity GUC; non-owner RLS tests. Runtime logins have no direct mutation grants. Provider JWT, scoped API writes, uniform errors, caches and object delivery remain NOT RUN. |
+| SF-08 | Retention/deletion and full ETL validator catalogue are not yet selected | Raw staging identity/payload immutable; no generic retention delete. A promoted row requires linked matching capture and passing shape/identity/rights/notes rules, with no non-pass results. These are schema guards, not an implemented validator/importer. Final retention/RPO/RTO remain deferred. |
+| SF-09 | Matching JSON could otherwise hide private input references or omit scope in cache identity | coverage requires policy_version and unique observation_ids. Every input is public-or-same-scope, with active rights at write/read. input_sha256 hashes scope, algorithm version and full coverage using PostgreSQL canonical JSONB text. Empty inputs require null score. No similarity algorithm or application cache implemented. |
+| SF-10 | Byte/time facts and external permission applicability cannot be proven from SQL labels alone | SQL checks exact selected tuple/hash/locator and operation-time expiry. Tests use labeled synthetic metadata without image bytes. Hashing/decoding downloaded bytes, proxy replay, object permissions and restore are explicitly later tasks. |
+
+The complete source dataset's 40 within-layer repeated-label groups in 39 perfumes are real observations;
+the test users, invalid grants, toy notes and image metadata are synthetic controls. The 12 pilot profiles
+have no within-layer repetition. No source fact is silently removed to make SQL pass.
+
+Currency is a versioned local allowlist domain (USD/THB/IDR/EUR/GBP/AED/OMR/SAR/SGD/JPY/AUD/CAD/CHF/CNY/HKD/MYR), not arbitrary three-letter text. Unknown remains NULL; extending the vocabulary requires a reviewed migration. No currency default or commerce integration is introduced.
+
+## Independent review corrections (unpublished checkpoint 42ae1df)
+
+- Source rights are independent of access scope. Selected materialized catalogue facts now require
+  active storage/display grants for public, private and shared readers, including runtime curators.
+  Expired/revoked source data is hidden without exposing an overlay through the public target.
+- Global deferred image checks validate structural binding/lineage/static use applicability. Operation-time
+  expiry/revocation is checked on the image being acquired/changed or requested; an untouched expired
+  private asset cannot deny an unrelated tenant's write. Explicit revocation/parent changes still set
+  affected descendants rights_pending. No bytes are served without the active gate.
+- Every numeric measurement/amount column rejects NaN and infinities explicitly; nullable unknowns remain
+  NULL. A positive/nonnegative SQL comparison alone is not sufficient for PostgreSQL numeric NaN.
+- Database source is canonical UTF-8/LF through scoped .gitattributes. Migration checksums hash exactly the
+  normalized SQL text sent to psql. CRLF/LF equivalence is tested; external dataset bytes are never normalized.
+  The unpublished empty local foundation is recreated with the corrected ledger; no published/applied
+  production migration is rewritten. After owner merge, change SQL only through new migrations.
+- Every direct SQL/migrate/recreate operation rechecks a local named-pipe/Unix Docker endpoint before any
+  engine connection. Context reconfiguration to TCP fails closed; no host context/settings are changed.
+
+## Published PR #2 performance correction — starting3d377e0
+
+SF-11: Row-level deferred triggers repeated complete model/image scans for every affected row.
+Additive008 retains complete coverage and coalesces scans through protected xid8/generation state.
+After-statement scheduling also cleans no-op insert attempts and prevents pre-write validation if the
+internal queue is forced IMMEDIATE. Every later dirty epoch re-arms checks; both validators must succeed
+before its state is removed. Native transaction/savepoint semantics restore dirty state on rollback.
+No FK/RLS/rights/conflict/materialization condition or y_active_row gate is removed.
+
+Five bounded before/after synthetic cases and ten transaction/security regression tests are recorded in
+Obsidian IMP-P1-01_Performance_Correction and database/evidence/performance_{before,after}.json.
+Full suite79/79 passes. Full scans per dirty epoch, O(row) marker/dispatcher overhead and global writer
+serialization remain. No claim of full-dataset ETL throughput, broad capacity or production readiness.
+Published001–007 and the original immutable implementation receipt remain unchanged.

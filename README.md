@@ -1,5 +1,17 @@
 # DoomParfum By TK
 
+## Current implementation — IMP-P1-01 / 2026-11-10
+
+Planning [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) is MERGED at `bffb2fab1918dc5221a6c5da7920168bcae263ca`.
+The explicitly authorized local-only schema task is in branch `impl/p1-01-local-postgres-schema`;
+[database harness/migrations/tests](database/README.md) implement the approved 47-table model locally.
+Human review/merge of the Implementation Draft PR is still required. No production/cloud resources,
+full import, web application, CI or deployment is created. Current task/evidence:
+[IMP-P1-01](Structure%20DB%20Obsidian/07_Delivery/Tasks/IMP-P1-01_Local_PostgreSQL_Schema.md).
+Historical planning-round text below describes what that earlier round delivered; current scope above
+supersedes its pre-merge status. OD-01..06 bounds, source rights and deferred decisions remain unchanged.
+
+
 > **Project Blueprint / Living README**
 > Version: `0.2.0-planning` · Updated: `2026-11-10` (Asia/Bangkok)
 > Status: **Planning baseline** — ยังไม่เริ่ม Implement โค้ด และเริ่มกระบวนการ Planning PR ตาม Workflow ของ Agent/GitHub
@@ -406,7 +418,7 @@ No code, production database, cloud project or deployment is created by this pla
 ### PR #1 post-review proposal
 
 Repository is public; application data remains private-first. Existing AGENTS.md/DEVELOPMENT_WORKFLOW.md
-and [Draft PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) are verified, not pending setup.
+and [merged Planning PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) are verified, not pending setup.
 The revised P1 proposal retains source claims by section/occurrence, isolates public/shared/private
 provenance and overlays, and binds image permissions to exact assets/captures plus derivative rights.
 See the planning specification for OD-01..06 LOCAL/test/rights/CLOUD recommendations. No source grant,
@@ -421,6 +433,6 @@ claims/conflicts/access-scope design targets subject to actual SQL/RLS tests; di
 portable image metadata/rights design; local DB/object recovery testing; international licensed data.
 Permanent cloud/provider/storage choice, final retention/RPO/RTO and external backup are deferred;
 regional imports require verified usable rights AND samples, and unlicensed image acquisition is not
-authorized. See the planning specification and Decision Log for exact bounds. PR #1 is not merged;
-implementation starts only in a later task after verified Human Owner merge. This recording round is
+authorized. See the planning specification and Decision Log for exact bounds. PR #1 is now owner-merged;
+IMP-P1-01 is the separately authorized local implementation task above. The historical recording round was
 documents only: no SQL, database, application code, cloud resources or production mutation.

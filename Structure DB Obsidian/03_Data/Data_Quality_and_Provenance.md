@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: data_governance
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - data
@@ -16,8 +16,41 @@ source_of_truth: "../../README.md"
 
 # Data Quality and Provenance — P1 Proposed Contract
 
-Observed denominators and source hashes: [[P1_Data_Profiling_Findings]]. All enforcement described here
-is PROPOSED and unimplemented. Unknown is a valid state; no AI completion of product facts.
+## S2 final-state validation correction
+
+[[IMP-P1-01_Performance_Correction]] records additive008 and79/79 tests. Repeated complete scans are
+coalesced per transactional dirty epoch; complete model/image validators still enforce every retained
+source occurrence, conflict cardinality/resolution, scalar/whole-field materialization and image binding.
+No source data, source rights or canonical duplicate policy is changed to improve timing. Later writes
+after a flush re-arm checks, and failed validation/rollback cannot mark invalid final state clean.
+
+## IMP-P1-01 duplicate occurrence and validation policy
+
+Local SQL enforcement is implemented and tested as detailed in [[IMP-P1-01_Implementation_Evidence]];
+the remaining ETL/feature acceptance below is still future work. Full raw package recheck found
+40 within-layer repeated-label groups in 39 perfumes (top 16, heart 12, base 12), each with one extra
+occurrence. None occur in the 12 pilot profiles. All raw lists, labels, JSON pointers and ordinals remain
+intact. Detailed derived rows stay local under ignored `.local/p1-01/duplicate-note-investigation.json`.
+No full import or automatic correction was performed.
+
+Canonical `perfume_notes` stays unique by scope/perfume/note/layer. Occurrence identity is the immutable
+source record + entity/field + locator + occurrence key + transform version. Different occurrences and
+agreeing claims survive separately; changed output under the same complete identity fails. Exact replay
+may be a no-op only after that check. Whole-list claims preserve raw order/multiplicity. Repeated lists,
+ambiguous aliases or many-to-one canonical mapping stay REVIEW/QUARANTINE with reason codes; never
+silently DISTINCT source arrays or infer weights. Explicit future review may create a new versioned
+transformed claim while preserving originals; no such deduplication/promotion is executed in this task.
+
+SQL alias nfkc-lower-v1 is deliberately not claimed equivalent to the preflight candidate algorithm
+(NFKC/casefold/space). Raw source fields retain original spelling; reviewed canonical namespace payloads
+are distinct (`database/schema_findings.md`). Positive/negative alias and duplicate controls use clearly
+synthetic fixtures. The 12/5/58 actual package shape fixtures roll back in the isolated test DB.
+Promoted staging requires linked matching capture and passing shape/identity/rights/notes validations;
+raw payload/key/digest/batch cannot be rewritten, and child failures cannot leave a promoted parent.
+Actual adapter/validator/idempotent ETL is IMP-P1-02, NOT RUN here.
+
+
+Observed denominators and source hashes: [[P1_Data_Profiling_Findings]]. Local enforcement now maps to IMP-P1-01 evidence above; ETL/application acceptance remains unimplemented. Unknown is a valid state; no AI completion of product facts.
 
 ## Claim and canonical layers
 
@@ -74,7 +107,7 @@ from public Git and must retain history after a cart item or bottle is removed.
 
 Future acceptance: every promoted imported field has a valid selection, no dangling FK, no duplicate
 source version, all unresolved conflicts retained, missing statuses survive export/restore, source rights
-changes block new imports. Tests and enforcement are NOT RUN. See [[P1_Pilot_Implementation_Plan]].
+changes block new imports. The planning round ran no enforcement tests; current local DB subset is above, ETL/restore still NOT RUN. See [[P1_Pilot_Implementation_Plan]].
 
 
 ## Post-review identity and privacy correction — PROPOSED
@@ -93,4 +126,4 @@ No private conflict flag/count, locator, photo, rating, matching input or cache 
 a public entity. Shared access needs active explicit membership; personal purchase/history remains
 private. Publication requires a reviewed new sanitized public copy, never in-place scope widening.
 Rights and application authorization both apply. Enforcement/test specification:
-[[Security_and_Privacy]], [[P1_Pilot_Implementation_Plan]]. No runtime checks have run.
+[[Security_and_Privacy]], [[P1_Pilot_Implementation_Plan]]. No runtime checks ran in the planning PR; the current local DB subset is above.

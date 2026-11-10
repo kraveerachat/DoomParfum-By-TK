@@ -16,7 +16,7 @@ tags: [doomparfum, dpt-plan-002, planning]
 - Branch: `plan/p2-focused-brand-discovery-automation`; base: `bffb2fab1918dc5221a6c5da7920168bcae263ca`; target: `main`.
 - PR: pending creation at this checkpoint; never merge by agent.
 - Runtime/source edits: NO. Production mutation: NO. Source automation/import: NO.
-- Existing PR #2: separate unmerged implementation; no changes.
+- Existing PR #2: MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); no changes were made to that PR.
 
 ## Goal and scope
 Prepare reviewable source/data policy and focused brand discovery methodology for R01/R02/R03/R05–R08/R12–R22; candidate registry, rights, status, popularity and future incremental admin pipeline. Scope and tests in [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
@@ -37,9 +37,13 @@ Prepare reviewable source/data policy and focused brand discovery methodology fo
 ## Risks / blockers
 - Existing project status files from PR #1 still carry historical OPEN/DRAFT text; GitHub now proves merged. This planning PR appends corrected current status rather than rewriting historical audit.
 - Fragrantica prohibited automation; official website visibility is not import/media reuse permission.
-- Scento only licensed local pilot; cannot replace pending IMP-P1-02; PR #2 unmerged.
+- Scento only licensed local pilot; cannot replace pending IMP-P1-02; PR #2 merged; IMP-P1-02 licensed Scento ETL has NOT thereby been completed.
 - Brand origin/parent/sub-brand evidence gaps, especially La Palette and SCENTERY / BE CHERIE.
 - Ranking, scheduler, auto-promotion and hosting remain proposed decisions, not approved.
 
 ## Handoff
 Complete docs-only Draft PR, report link/HEAD/diff/validation; human owner selects decisions and merges or requests changes. Do not fabricate immutable receipt until planning acceptance is ready.
+
+
+## Post-preflight Git reconciliation — 2026-11-11
+The old main SHA bffb2fab1918dc5221a6c5da7920168bcae263ca was the **PR #1 merged foundation at session start**. PR #2 subsequently merged at 2026-11-11 03:53 Bangkok, yielding current main `9636ee740cdcd3d60633ac11745366814d1af05c`. PR #2 delivers local database/schema work only; it is not evidence that the licensed 1,479-row Scento ETL, regional acquisition, source adapters or deployment are completed. This docs-only planning proposal is reconciled on top of current main; no changes to PR #2 were made.

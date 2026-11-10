@@ -1,0 +1,2 @@
+# Database source/evidence hashes must survive Windows/Linux checkouts unchanged.
+database/** text eol=lf

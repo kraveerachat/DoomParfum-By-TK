@@ -6,7 +6,7 @@ aliases:
   - DoomParfum Development Governance
 project: DoomParfum By TK
 type: governance
-status: proposed-canonical
+status: accepted
 version: 1.0.0
 updated: 2026-11-10
 timezone: Asia/Bangkok
@@ -29,7 +29,7 @@ tags:
 # DoomParfum By TK — Unified Development Workflow
 
 > **เอกสาร Workflow กลางเพียงไฟล์เดียว** สำหรับการวางแผน, การทำงานของ ChatGPT/Codex/Claude Code/Gemini, การเขียนโค้ด, การทดสอบ, GitHub Pull Requests, Obsidian documentation, การตรวจรับโดยเจ้าของโปรเจกต์ และการส่งต่อระหว่างแชต/Agent
-> **สถานะ `proposed-canonical`:** เป็น Workflow ที่ปรับตามความต้องการล่าสุดแล้ว โดย Repository ปัจจุบันเป็น Public (`https://github.com/kraveerachat/DoomParfum-By-TK`) และมี AGENTS.md/Workflow แล้ว; PR #1 ยังเป็น Draft/Open รอ Human Review และยังไม่ผ่าน Human Merge; เมื่อเจ้าของโปรเจกต์อนุมัติและ Merge PR ที่รับรอง Workflow นี้แล้วจึงเปลี่ยนเป็น `accepted` ในเอกสารภายใต้การเปลี่ยนแปลงที่ตรวจสอบได้
+> **สถานะ `accepted`:** Human Owner merged Planning PR #1 on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is verified for the bounded local pilot; every Implementation PR still requires owner review/merge. Production/cloud/deferred decisions are not approved by inference.
 > **เอกสารนี้เป็นกฎการทำงาน ไม่ใช่หลักฐานว่าได้สร้าง Repository, Branch, Pull Request, Obsidian Vault หรือเขียนโค้ดแล้ว**
 
 ## 0. TL;DR — กฎหลักที่ต้องทำตาม
@@ -912,7 +912,7 @@ Use `NOT APPLICABLE`, `UNKNOWN`, `NOT RUN`, `NOT COMMITTED` หรือ `NOT CR
 
 ## 12. Adoption Plan — เริ่มใช้ไฟล์นี้กับโปรเจกต์อย่างไร
 
-### 12.1 Bootstrap adoption template (historical sequence; current PR #1 remains Draft/Open)
+### 12.1 Bootstrap adoption template (historical sequence; PR #1 was owner-merged)
 
 1. วางไฟล์นี้เป็น `DoomParfum By TK/DEVELOPMENT_WORKFLOW.md` ที่ root โปรเจกต์.
 2. ให้ Agent อ่าน `README.md`, `Structure DB Obsidian/README.md` และไฟล์นี้เพื่อสร้าง **Planning PR #แรก** สำหรับตั้งค่า Vault/Governance; ถ้ายังไม่มี repo ให้เตรียม local changes และ PR-ready checklist ก่อน.

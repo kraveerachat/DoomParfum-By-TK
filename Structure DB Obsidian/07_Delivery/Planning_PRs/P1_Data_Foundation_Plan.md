@@ -4,12 +4,22 @@ project: DoomParfum By TK
 type: planning_specification
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags: [doomparfum, planning, p1]
 source_of_truth: "../../../README.md"
 ---
 
 # P1 Data Discovery & Database Foundation Planning PR
+
+## Verified owner merge and implementation event
+
+Planning PR #1 is MERGED at `bffb2fab1918dc5221a6c5da7920168bcae263ca` (2026-11-10 22:12:07 Asia/Bangkok).
+Gate P is satisfied for the bounded OD-01..06 local approvals. The original Task Map and historical
+planning scope below are retained; they describe that earlier docs-only task. Current implementation
+is [[IMP-P1-01_Local_PostgreSQL_Schema]] with actual evidence in [[IMP-P1-01_Implementation_Evidence]].
+It has its own branch/Draft PR/human merge gate. No source grant, cloud/storage/provider, regional import,
+production recovery policy or web/CI scope is expanded. IMP-P1-02..05 remain NOT STARTED.
+
 
 TASK: DPT-PLAN-001. Mode: PLANNING_PR_ONLY. Branch: `plan/p1-data-discovery-schema-foundation`.
 START_SHA / base: `03481f7066487c44631cb9065899894ee8db71fb`. Target: main. Human merge only.
@@ -97,7 +107,7 @@ Planning PR merge. Authoritative decision event/crosswalk: [[Decision_Log#Curren
 | OD-05 | APPROVED — local database/object backup and restore testing | DEFERRED — final retention, RPO/RTO and external backup provisioning | Use local permitted/owned test objects or clearly labeled fixtures; measure restore integrity/time later, no accepted production recovery target |
 | OD-06 | APPROVED — international licensed-data pilot | BLOCKED — regional imports until usable rights AND real samples verified | Do not invent Thai/Indonesian facts or use synthetic fixtures as coverage; narrowed pilot need not wait for unavailable regional sources |
 
-Gate P remains: owner reviews and merges PR #1; the later implementation agent verifies merged plan
+Gate P verified through owner merge above; each implementation agent rechecks merged plan
 SHA and accepted local scope before starting a separate implementation PR. This recording session is
 DOCS ONLY. Cloud/resources/application code/SQL/database creation and production mutation are excluded.
 
@@ -113,7 +123,7 @@ This agent stops after planning publication and its documentation closeout; neve
 
 ## Architecture review corrections — S2 / PROPOSED
 
-Same task/branch and existing [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1), OPEN/DRAFT.
+Historical planning task/branch and existing [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1), now MERGED.
 S2 starts at `46c4a85309c408b3de7612d4853b166b84917359`; main stays at original base.
 Original profiling/research, Task Map and immutable receipt are retained. No second receipt or new PR.
 The logical proposal now has 47 tables: the original 44 plus access_scopes, scope_members and asset_permissions.

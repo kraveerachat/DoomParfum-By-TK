@@ -14,7 +14,7 @@ tags: [doomparfum, dpt-plan-002, planning]
 
 ## Verified baseline and dependencies (read-only preflight, 2026-11-11)
 - Public repository: https://github.com/kraveerachat/DoomParfum-By-TK; main `bffb2fab1918dc5221a6c5da7920168bcae263ca` from merged Planning PR #1 (merged 2026-11-10). GitHub truth supersedes historical notes that still say PR #1 is open.
-- Implementation PR #2 https://github.com/kraveerachat/DoomParfum-By-TK/pull/2 is OPEN/DRAFT, unmerged at preflight. No edits to PR #2, no reuse of its branch or unmerged tables as an approved production schema.
+- Implementation PR #2 https://github.com/kraveerachat/DoomParfum-By-TK/pull/2 was open/draft at initial preflight and MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c). No edits to PR #2, no reuse of its branch or unmerged tables as an approved production schema.
 - OD-01..06 in [[Decision_Log]] approve the pinned Scento CC BY 4.0 **local licensed pilot** and bounded data design/testing only, not broader third-party acquisition or hosting.
 - Dependency order: PR #1 merged -> PR #2 foundation reviewed/merged -> IMP-P1-02 Scento 12-profile to pinned 1,479-row licensed pilot -> new-source implementation only after this separate Planning PR has human Gate P approval plus source-use rights.
 
@@ -78,3 +78,7 @@ No PR ID or implementation SHA is reserved by this naming proposal.
 - NEW-05: Admin one-click allowlist, human conflict queue, job controls and scheduler boundary.
 - NEW-06: Local Python/Docker/PostgreSQL first, then measured provider/storage decision; no paid provisioning.
 Human Owner reviews/merges the Planning PR before any new code. Do not merge on agent authority.
+
+
+## Post-preflight Git reconciliation — 2026-11-11
+The old main SHA bffb2fab1918dc5221a6c5da7920168bcae263ca was the **PR #1 merged foundation at session start**. PR #2 subsequently merged at 2026-11-11 03:53 Bangkok, yielding current main `9636ee740cdcd3d60633ac11745366814d1af05c`. PR #2 delivers local database/schema work only; it is not evidence that the licensed 1,479-row Scento ETL, regional acquisition, source adapters or deployment are completed. This docs-only planning proposal is reconciled on top of current main; no changes to PR #2 were made.
