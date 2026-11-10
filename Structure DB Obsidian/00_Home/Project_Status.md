@@ -15,7 +15,7 @@ source_of_truth: "../../README.md"
 # Project Status — P1 Planning Review
 
 Updated: 2026-11-10, Asia/Bangkok. P0 baseline exists at `03481f7066487c44631cb9065899894ee8db71fb`.
-P1 planning review corrections (S2) are IN PROGRESS on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
+P1 planning review correction documents (S2) are ready for owner review on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
 Canonical task: [[DPT-PLAN-001_P1_Data_Foundation]]; specification: [[P1_Data_Foundation_Plan]].
 
 | Workstream | Actual state | Next gate |
@@ -66,3 +66,9 @@ Validate correction documents, commit/push only existing PR #1 branch, verify he
 then owner review. No implementation, provisioning, deployment, merge or automatic merge. Current
 checkpoint/evidence: [[DPT-PLAN-001_P1_Data_Foundation]]. Original immutable receipt remains
 [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]]; it records the S1 snapshot and will not be rewritten.
+
+
+Latest verified correction payload HEAD: `83f13599a1b531229f22e0a68d35f86edd19278a` (S2 review checkpoint).
+Final metadata/published head is verified through PR #1 and task closeout; original S1 receipt remains
+unchanged. R1–R4 addressed in the proposal, 25-file document checks pass, 18 runtime specs NOT RUN.
+All OD decisions remain PROPOSED; PR must remain OPEN/DRAFT and Human Owner merges only after review.

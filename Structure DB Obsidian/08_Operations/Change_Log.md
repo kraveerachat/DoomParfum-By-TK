@@ -98,3 +98,11 @@ specifications and four-column OD-01..06 local/test/rights/cloud owner recommend
 Original immutable receipt [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains the single receipt;
 no rewrite/second receipt. Exact correction paths and resulting checkpoint/evidence are in
 [[DPT-PLAN-001_P1_Data_Foundation]]. No code, schema/database, Actions, cloud resources, deployment or merge.
+
+
+S2 CURRENT_VERIFIED_HEAD_SHA / reviewed correction checkpoint: `83f13599a1b531229f22e0a68d35f86edd19278a`.
+Observed after `docs(p1): address architecture review findings` committed 25 Markdown files. This
+append-only event is included in the following documentation closeout checkpoint; final published branch/PR SHA is
+in PR #1/final report. No rewrite of the original immutable receipt and no second receipt. Verified
+25 docs, 23 vault frontmatters, 47 ERD/dictionary tables, 18 future cases; links/fences/diff/secret-pattern
+checks succeeded. Runtime tests NOT RUN; R1–R4 resolved as proposals, owner decisions/rights still pending.

@@ -2,7 +2,7 @@
 id: DPT-PLAN-001
 project: DoomParfum By TK
 type: task
-status: in-progress
+status: planning-review-ready
 owner: project
 updated: 2026-11-10
 tags: [doomparfum, planning, data]
@@ -14,7 +14,7 @@ source_of_truth: "../../../README.md"
 ## Current task
 
 - Agent: Codex, planning/research/documentation only.
-- State: IN PROGRESS — S2 post-review corrections, 2026-11-10 Asia/Bangkok.
+- State: planning_review_ready / owner acceptance pending — S2 post-review corrections, 2026-11-10 Asia/Bangkok.
 - Branch: `plan/p1-data-discovery-schema-foundation`, target `main`.
 - START_SHA / origin/main: `03481f7066487c44631cb9065899894ee8db71fb`.
 - Existing PR: https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 — verified OPEN/DRAFT, not merged. Approved planning PR: none; implementation forbidden.
@@ -49,6 +49,7 @@ the fallback. No external tools/configuration installed.
 | Session | Scope | State | Evidence |
 |---|---|---|---|
 | S1 | P1 documentation and research | planning_review_ready / acceptance pending | Clean cloned baseline; HEAD = origin/main; no existing PRs returned by GitHub search |
+| S2 | PR #1 architecture review corrections | planning_review_ready / owner acceptance pending | Reviewed correction checkpoint 83f13599a1b531229f22e0a68d35f86edd19278a; 25 docs / 47 tables / 18 future cases |
 
 ## Next action
 
@@ -209,3 +210,25 @@ rendering and actual FK/RLS/rights/restore/runtime tests NOT RUN. Final staged/p
 
 Current verified HEAD at authoring: `46c4a85309c408b3de7612d4853b166b84917359`; resulting correction
 checkpoint and PR verification will be appended after commit. Existing receipt remains unchanged.
+
+
+## S2 post-review correction checkpoint and closeout
+
+CURRENT_VERIFIED_HEAD_SHA / reviewed correction checkpoint: `83f13599a1b531229f22e0a68d35f86edd19278a`.
+Verified by `git rev-parse HEAD` after the 25-file correction commit; working tree clean at that point.
+S2 START_SHA: `46c4a85309c408b3de7612d4853b166b84917359`; main unchanged at original 03481f7 baseline.
+This entry is added in a subsequent documentation closeout commit (metadata and final rights-gate clarification), so the final published head is
+reported by live [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) and final user report;
+no self-referential commit SHA is invented. Current PR remains Draft/Open pending final push/verification.
+
+S2 results: R1–R4 addressed in proposal; 18 runtime test cases SPECIFIED, NOT RUN. Final docs check
+passes for 25 Markdown files/23 vault frontmatters, 47 matching ERD/dictionary tables, links/fences,
+source-of-truth paths and common secret patterns. Receipt/research hashes and original Task Map unchanged;
+receipt count exactly one. `git diff --check` and `git diff --cached --check` exit 0. No new tool/config,
+source acquisition, PR, receipt, code, database, Actions, provisioning, deployment or merge.
+
+Next: push correction + this metadata on the same branch, verify GitHub head, update existing PR body,
+keep PR #1 OPEN/DRAFT and stop for Human Owner decisions OD-01..06. SQL/RLS/object behavior and Mermaid
+rendering remain unverified; source-rights blocks and all PROPOSED decisions remain open. Tool report:
+PowerShell/Git + GitHub MCP + Python/PyYAML + primary PostgreSQL web references used; no installation,
+account changes or subagents. Exact changed-file manifest above is the complete S2 scope.

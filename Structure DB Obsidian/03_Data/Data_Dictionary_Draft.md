@@ -163,7 +163,7 @@ to a same-source assessment with unknown uses for metadata-only states; that is 
 For acquired/validated states, asset_permission_id is mandatory: the selected binding must match the
 EXACT scope, image ID, source, source record and rights assessment. A tuple with null permission cannot
 bypass state checks. Asset-specific evidence must identify asset_locator and, once known, the image
-hash; these are verified against source locator/bytes by validation before storage/display. For acquired/validated state, selected permission content_sha256 must be non-null and equal image sha256; a hash unknown before acquisition is finalized through a new permission version before that state transition. Being the
+hash; these are verified against source locator/bytes by validation before storage/display. For acquired/validated state, selected permission content_sha256 must be non-null and equal image sha256; a hash unknown before acquisition is finalized through a new permission version before that state transition. For every operation, relevant source-assessment storage/display/redistribution gates AND asset-permission uses must both be allowed; a per-asset row cannot widen an unknown/restricted source assessment. Being the
 same publisher is insufficient. URLs/object keys/license labels alone are not permission proof.
 
 Derivatives have new image IDs/hashes and their own selected permission binding. This pilot requires
