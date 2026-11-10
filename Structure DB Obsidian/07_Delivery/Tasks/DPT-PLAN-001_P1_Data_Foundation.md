@@ -2,7 +2,7 @@
 id: DPT-PLAN-001
 project: DoomParfum By TK
 type: task
-status: planning-review-ready
+status: in-progress
 owner: project
 updated: 2026-11-10
 tags: [doomparfum, planning, data]
@@ -14,10 +14,10 @@ source_of_truth: "../../../README.md"
 ## Current task
 
 - Agent: Codex, planning/research/documentation only.
-- State: planning_review_ready / owner acceptance pending; session S1, 2026-11-10 Asia/Bangkok.
+- State: IN PROGRESS — S2 post-review corrections, 2026-11-10 Asia/Bangkok.
 - Branch: `plan/p1-data-discovery-schema-foundation`, target `main`.
 - START_SHA / origin/main: `03481f7066487c44631cb9065899894ee8db71fb`.
-- Publication snapshot: branch payload pushed; Draft PR creation is the final action after closeout. Approved planning PR: none; implementation forbidden.
+- Existing PR: https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 — verified OPEN/DRAFT, not merged. Approved planning PR: none; implementation forbidden.
 - Production mutation: NO. Human review and merge required.
 
 ## Plan and expected evidence
@@ -145,3 +145,67 @@ validation; versions/path/failures are in [[Agent_Run_Log]]. INSTALLED_OR_CHANGE
 OBSIDIAN_UPDATED=YES (exact manifest above). Runtime tests/production mutation=NOT RUN/NO.
 REQUESTED_BUT_NOT_USED: optional Apify (not exposed), PlanetScale skill (not installed; primary PostgreSQL
 reference fallback). No blocker to planning publication; owner decisions/rights block dependent implementation.
+
+
+## S2 — Post-review correction start / 2026-11-10
+
+START/CURRENT_VERIFIED_HEAD: `46c4a85309c408b3de7612d4853b166b84917359`.
+origin/main and remote main: `03481f7066487c44631cb9065899894ee8db71fb`.
+PR #1 head matches local HEAD; working tree clean at preflight. Same branch/PR, no conflict.
+Scope: correct observation identity, provenance/asset privacy isolation, per-asset rights consistency,
+repository/workflow facts and OD-01..06 recommendations; preserve research and Task Map.
+Expected evidence: scoped FK/uniqueness/selection contracts and future negative cases, document checks,
+unchanged original receipt hash, docs-only diff, non-forced push and verified PR head/description.
+Do not touch runtime/SQL/migrations/cloud, raw research evidence files or immutable receipt.
+Original receipt Git blob: `ed9ddb8ce6e838702b64fd5d48dd25d6d20c39c4`.
+No new receipt will be created. Original: [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]].
+TOOL DECISION: existing PowerShell/Git, GitHub MCP, Python/PyYAML; primary PostgreSQL documentation via
+web for constraint/RLS verification. No installations/account changes/subagents; production mutation NO.
+
+
+## S2 findings and verification checkpoint
+
+R1–R4 are addressed as PROPOSED document contracts; runtime enforcement remains unimplemented and
+unverified. R1 locator/key identity supports multiple same-record assertions; R2 non-null scopes and
+ownership/FK/RLS/API/storage rules prevent private→public promotion; R3 exact image/capture/assessment
+permission plus derivative/hash/expiry checks; R4 public repository/existing workflow reconciled.
+OD-01..06 now distinguish eligible later local scope, tests, rights blocks and separate cloud approval.
+TSK-DOC-001 proposes future documentation CI only. No new PR/receipt/Actions/database/cloud resource.
+
+Validation performed at S2 document checkpoint: 25 Markdown files; 23 vault YAML documents parsed;
+47 ERD/dictionary table names match; wiki/local/source-of-truth paths and fences checked; zero errors.
+18 unique future OBS/ACL/IMG/REC test specifications found. Original receipt and three research-file
+Git blob hashes match S2 start; original Task Map text unchanged; exactly one receipt. `git diff --check`
+exit 0. Common token/private-key pattern scan found no candidates, not a full security audit. Mermaid
+rendering and actual FK/RLS/rights/restore/runtime tests NOT RUN. Final staged/published checks follow.
+
+### Exact S2 correction files (relative to repository root)
+
+- `DEVELOPMENT_WORKFLOW.md`
+- `README.md`
+- `Structure DB Obsidian/00_Home/Project_Status.md`
+- `Structure DB Obsidian/01_Product/Open_Product_Questions.md`
+- `Structure DB Obsidian/03_Data/Data_Dictionary_Draft.md`
+- `Structure DB Obsidian/03_Data/Data_Quality_and_Provenance.md`
+- `Structure DB Obsidian/03_Data/ERD_Draft.md`
+- `Structure DB Obsidian/03_Data/Ingestion_and_ETL.md`
+- `Structure DB Obsidian/03_Data/Rights_and_Attribution.md`
+- `Structure DB Obsidian/06_Engineering/GitHub_and_Workflow_PENDING.md`
+- `Structure DB Obsidian/06_Engineering/P1_Storage_Hosting_and_Recovery.md`
+- `Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md`
+- `Structure DB Obsidian/06_Engineering/Security_and_Privacy.md`
+- `Structure DB Obsidian/06_Engineering/Tech_Stack_and_ADRs.md`
+- `Structure DB Obsidian/07_Delivery/Acceptance_Criteria.md`
+- `Structure DB Obsidian/07_Delivery/Backlog.md`
+- `Structure DB Obsidian/07_Delivery/P1_Pilot_Implementation_Plan.md`
+- `Structure DB Obsidian/07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md`
+- `Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-001_P1_Data_Foundation.md`
+- `Structure DB Obsidian/08_Operations/Agent_Run_Log.md`
+- `Structure DB Obsidian/08_Operations/Change_Log.md`
+- `Structure DB Obsidian/08_Operations/Decision_Log.md`
+- `Structure DB Obsidian/08_Operations/Handoffs/2026-11-10_DPT-PLAN-001_P1_Handoff.md`
+- `Structure DB Obsidian/08_Operations/Pending_Questions.md`
+- `Structure DB Obsidian/README.md`
+
+Current verified HEAD at authoring: `46c4a85309c408b3de7612d4853b166b84917359`; resulting correction
+checkpoint and PR verification will be appended after commit. Existing receipt remains unchanged.

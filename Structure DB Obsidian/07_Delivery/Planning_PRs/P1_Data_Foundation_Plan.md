@@ -104,3 +104,36 @@ See pilot note for roles, tests and dependencies. No implementation task/PR is s
 
 Next: human owner reviews the Draft Planning PR, decides OD-01..06 and merges when satisfied.
 This agent stops after planning publication and its documentation closeout; never merges the PR.
+
+
+## Architecture review corrections — S2 / PROPOSED
+
+Same task/branch and existing [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1), OPEN/DRAFT.
+S2 starts at `46c4a85309c408b3de7612d4853b166b84917359`; main stays at original base.
+Original profiling/research, Task Map and immutable receipt are retained. No second receipt or new PR.
+The logical proposal now has 47 tables: the original 44 plus access_scopes, scope_members and asset_permissions.
+
+| Finding | Revised proposal / documentation | Future acceptance |
+|---|---|---|
+| R1 observation uniqueness | Same record may contain multiple same-field claims via mandatory section/field locator + occurrence key; select exact observation UUID; scoped conflict/resolution-member FKs | OBS-01..04 in [[P1_Pilot_Implementation_Plan]] |
+| R2 private sources/assets | Non-null access_scope_id and public/shared/private ownership, scoped provenance FKs, private overlays about public entities, RLS + server/storage authorization; personal records remain private | ACL-01..07; public outputs must not reveal private existence |
+| R3 image rights consistency | Exact scoped image/source/capture/assessment/permission tuple; own derivative binding + parent transform/output-license validation | IMG-01..06 and REC-01 |
+| R4 repository/workflow truth | Public repository with existing workflow; private app data/secrets never in Git; separate proposed docs-CI backlog item | Document checks; no Actions/resources created |
+
+## Owner review recommendations OD-01..OD-06 — no acceptance inferred
+
+All entries remain PROPOSED. Local pilot is eligible ONLY after owner review/merge and recorded accepted
+scope. This correction request authorizes documentation changes, not the pilot itself.
+
+| Decision | Eligible scope to approve for later LOCAL pilot | Still to test / prove | Source-rights blocks | Separate CLOUD/resource approval |
+|---|---|---|---|---|
+| OD-01 | Pinned CC BY 4.0 export, 12 selected real profiles and attribution/change metadata | Scoped provenance, idempotency, locator claims, attribution rendering | No wholesale API catalogue copy; official-site content excluded without grant | None needed for local files; paid/API account setup needs own approved scope |
+| OD-02 | Concentration/edition identities + locator-based observations + public/private scopes; reserve shared model without enabling it | Composite FKs, resolution membership, RLS/API isolation, overlay/caches, admin-bypass and two synthetic-user tests | No private→public claim promotion without public-use rights and separate review | Auth/provider/host setup not approved; shared-mode activation needs explicit owner scope/tests |
+| OD-03 | Disposable loopback PostgreSQL/container design and offline/sample worker only | Pin versions/digest, migration/restore, measured sizes and connections | Import only approved sources; no provider choice overrides license | Vercel/Supabase/server, account, region, budget and any provisioning need explicit bounded approval |
+| OD-04 | Metadata-only images and clearly labeled synthetic permission tests; owned/CC asset bytes only if individual grant and intended local use are approved | Exact permission tuple, parent transform/output license, expiry/revocation, authenticated delivery and actual sizes | Bottle/HMNS/unknown assets cannot be acquired/displayed; Commons candidate is not automatic acquisition approval | No bucket/CDN/R2/Supabase Storage/paid image service creation without separate approval |
+| OD-05 | Disposable local DB export and separate permitted object-manifest/restore rehearsal | Integrity + private scopes/claims/permissions after restore; measure proposed RPO/RTO | Rights/retention rules still constrain private backup and redistribution | External backup account/bucket, paid storage, retention/cost and production schedule require approval |
+| OD-06 | Narrower licensed international pilot; accept regional GAP status and target sample requirements | Obtain real owned/licensed samples and validate country/identity coverage | Four Thai priorities and Indonesian product imports remain blocked until grants/samples verified | No scraper/paid actor/account connection/cloud ETL implied; scope/cost approved separately |
+
+Recommend owner explicitly approve/defer each column rather than a blanket approval of all sources and
+hosts. Rights denial cannot be overridden by a generic merge. Tests above are SPECIFIED / NOT RUN.
+See [[Data_Dictionary_Draft]], [[Security_and_Privacy]], [[Rights_and_Attribution]] and backlog TSK-DOC-001.

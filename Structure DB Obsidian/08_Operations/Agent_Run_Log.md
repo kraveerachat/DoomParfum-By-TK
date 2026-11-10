@@ -114,7 +114,7 @@ source_of_truth: "../../README.md"
 
 ---
 
-## 4. Pending Issues & Next Steps
+## 4. Historical bootstrap pending issues (superseded by S1/S2 current events below)
 
 1. **รอ Workflow จากผู้ใช้:** สำหรับปลดล็อกเอกสาร [[GitHub_and_Workflow_PENDING]]
 2. **รอความเห็นชอบจากผู้ใช้:** ในประเด็นสูตรค่าน้ำหนักการจับคู่กลิ่น ([[Scent_Matching_Spec]]) และชุดข้อมูลตั้งต้น
@@ -181,3 +181,29 @@ for 26 Markdown files, 25 frontmatters and 44 matching schema names. Added one i
 handoff in final metadata closeout (28 Markdown files total). This event precedes the final commit/push
 and Draft PR creation; actual final SHA/PR state are in the GitHub publication result/final user report.
 No further scope/implementation work is authorized after publication.
+
+
+## RUN-20261110-P1-S2 — Post-review corrections / existing PR #1
+
+MODE=DOCS_ONLY. TASK=DPT-PLAN-001. Branch=plan/p1-data-discovery-schema-foundation.
+START/CURRENT_VERIFIED_HEAD=`46c4a85309c408b3de7612d4853b166b84917359`;
+origin/main and remote main=`03481f7066487c44631cb9065899894ee8db71fb`.
+Preflight: working tree clean; GitHub PR #1 OPEN/DRAFT/unmerged and same head. No conflicting changes.
+Read policy/workflow/root/vault/planning/task/data/security and related delivery/operations documents.
+
+TOOL DECISION: existing PowerShell/Git for docs/checks/branch commit and push; GitHub MCP for PR metadata
+and description; Python/PyYAML for document checks; web reads of primary PostgreSQL constraint/RLS docs.
+No tool/skill/plugin installed, no account reauthentication, no subagent, no third-party product acquisition.
+GIT_WRITE=YES existing PR branch only; OBSIDIAN_WRITE=YES; PRODUCTION_MUTATION=NO.
+
+Correction design: scoped locator-based observation identity; access_scopes/scope_members plus per-asset
+asset_permissions binding (47 proposed tables); FK/RLS/auth/proxy privacy; derivative grant controls;
+18 future runtime test cases; repository/workflow factual correction; separate proposed CI backlog;
+OD-01..06 local/test/rights/cloud recommendations. The small DEVELOPMENT_WORKFLOW.md edit corrects
+stale repo-existence/visibility language, leaving authority/merge gates/proposed status unchanged.
+Original profiling/mapping/conflict evidence retained; no legal grant/price/coverage fact invented.
+
+Original receipt blob preflight=`ed9ddb8ce6e838702b64fd5d48dd25d6d20c39c4`; preserve exactly, no new
+receipt. S1/historical test counts remain history, not the current 47-table check. Final validation and
+actual correction Git checkpoints/publication evidence are appended to the canonical task/change log;
+SQL/RLS/object/runtime tests and Mermaid rendering NOT RUN. Keep PR #1 OPEN/DRAFT for Human Owner.

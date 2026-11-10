@@ -150,3 +150,15 @@ These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Rese
 
 Primary technical references and dated costs: [[P1_Storage_Hosting_and_Recovery]]. Source access/reuse
 choices are governed by [[Source_Registry]] and [[Rights_and_Attribution]], not a technology ADR.
+
+
+## Post-review refinements to ADR-003 / ADR-005 — PROPOSED
+
+ADR-003 now requires claim_locator + claim_key identity within one source record, scoped overlay
+selections and exact conflict-member resolution. access_scopes/scope_members make public/shared/private
+ownership explicit; FK/RLS/authorization rules preserve private claims even about public catalogue entities.
+ADR-005 now requires asset_permissions binding exact asset/source/capture/assessment, separate parent
+transformation rights and child output-license/use checks, plus authenticated private/shared delivery.
+Proposal grows from 44 to 47 logical tables. This increases migration/trigger/RLS/restore tests; it does
+not finalize the schema or approve shared-mode activation. Existing alternatives and research remain.
+DEC-016/017 record the refinements; owner recommendations OD-01..06 are in [[P1_Data_Foundation_Plan]].

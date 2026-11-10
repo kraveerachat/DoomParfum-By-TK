@@ -15,7 +15,7 @@ source_of_truth: "../../README.md"
 
 # ERD Draft — P1 Proposed Relationships
 
-PROPOSED, not final/implemented. Column types, nullability, composite FKs and uniqueness are defined
+PROPOSED, not final/implemented. Post-review revision: 47 logical tables (44 original plus access_scopes, scope_members and asset_permissions). Column types, nullability, composite FKs and uniqueness are defined
 in [[Data_Dictionary_Draft]]. Research drivers: [[P1_Data_Profiling_Findings]] and [[P1_Data_Conflict_Matrix]].
 This replaces the baseline single-source-perfume association with versioned field-level claims.
 Diagrams show the logical relationships; composite ownership/type guards remain mandatory even where
@@ -62,6 +62,15 @@ separate. Flat notes use general; notes represent declarations/perceptions, not 
 
 ```mermaid
 erDiagram
+    USERS o|--o{ ACCESS_SCOPES : private_or_shared_owner
+    ACCESS_SCOPES ||--o{ SCOPE_MEMBERS : explicit_shared_access
+    USERS ||--o{ SCOPE_MEMBERS : member
+    ACCESS_SCOPES ||--o{ ENTITIES : governs
+    ACCESS_SCOPES ||--o{ SOURCES : governs
+    ACCESS_SCOPES ||--o{ SOURCE_RECORDS : governs
+    ACCESS_SCOPES ||--o{ SOURCE_OBSERVATIONS : governs
+    ACCESS_SCOPES ||--o{ CANONICAL_SELECTIONS : scoped_overlay
+    ACCESS_SCOPES ||--o{ DATA_CONFLICTS : governs
     SOURCES ||--o{ RIGHTS_ASSESSMENTS : reviewed_as
     SOURCES ||--o{ SOURCE_RECORDS : publishes_versions
     RIGHTS_ASSESSMENTS ||--o{ SOURCE_RECORDS : bounds_use
@@ -70,7 +79,7 @@ erDiagram
     ENTITIES ||--o{ SOURCE_OBSERVATIONS : subject
     FIELD_DEFINITIONS ||--o{ SOURCE_OBSERVATIONS : typed_path
     SOURCE_RECORDS ||--o{ SOURCE_OBSERVATIONS : asserts
-    SOURCE_OBSERVATIONS ||--o{ CANONICAL_SELECTIONS : chosen_for_field
+    SOURCE_OBSERVATIONS ||--o| CANONICAL_SELECTIONS : chosen_for_field
     ENTITIES ||--o{ DATA_CONFLICTS : has
     DATA_CONFLICTS ||--o{ CONFLICT_MEMBERS : contains
     SOURCE_OBSERVATIONS ||--o{ CONFLICT_MEMBERS : competing_claim
@@ -84,10 +93,20 @@ erDiagram
     INGESTION_BATCHES o|--o{ AUDIT_EVENTS : import_event
 ```
 
-An entity has at most one current canonical selection per field. Composite FKs enforce the same
-entity kind/path for selections, conflicts and their observations. Sources and observations are not
+An entity has at most one current selection per access scope and field. Public selections materialize
+public catalogue data; private/shared selections are authorized overlays, never public-column updates.
+Composite FKs enforce identical scope/entity/kind/path for selections, conflicts and member observations. Sources and observations are not
 one-to-one with perfumes. Whole-layer lists are claims; the canonical note join derives from the
-approved list selection. Missing status and conflict status remain separate. No facts are auto-filled.
+approved list selection. claim_locator + claim_key preserve structured and prose claims from the SAME
+captured source record; the observation UUID uniquely identifies a chosen claim. Resolution must reference
+a member of its scoped conflict. Missing status and conflict status remain separate. No facts are auto-filled.
+
+Sources/records/observations share exact scope through composite FKs; a private observation can reference
+a public catalogue entity via a visibility-compatibility trigger without publishing its source, flag or value.
+Public-or-same-scope is a one-way allowed reference, never automatic access inheritance. Every scoped row
+and private join follows [[Data_Dictionary_Draft#Access scope and inherited constraints — PROPOSED post-review revision]].
+The scope edges above are representative; mandatory inherited scope FKs also apply to rights, staging,
+audit/evidence/ratings/matching and media/link tables. RLS/access rules: [[Security_and_Privacy]].
 
 ## Media, evidence and personal records
 
@@ -95,7 +114,12 @@ approved list selection. Missing status and conflict status remain separate. No 
 erDiagram
     ENTITIES ||--o| IMAGE_ASSETS : typed_identity
     SOURCE_RECORDS ||--o{ IMAGE_ASSETS : source
-    RIGHTS_ASSESSMENTS ||--o{ IMAGE_ASSETS : asset_rights
+    RIGHTS_ASSESSMENTS ||--o{ IMAGE_ASSETS : same_source_assessment
+    ACCESS_SCOPES ||--o{ IMAGE_ASSETS : governs
+    IMAGE_ASSETS ||--o{ ASSET_PERMISSIONS : exact_asset_capture
+    RIGHTS_ASSESSMENTS ||--o{ ASSET_PERMISSIONS : same_source_grant
+    ASSET_PERMISSIONS o|--o| IMAGE_ASSETS : selected_binding
+    ASSET_PERMISSIONS o|--o{ ASSET_PERMISSIONS : parent_permission
     IMAGE_ASSETS o|--o{ IMAGE_ASSETS : derived_from
     PERFUMES ||--o{ PERFUME_IMAGES : depicted_by
     IMAGE_ASSETS ||--o{ PERFUME_IMAGES : asset
@@ -130,6 +154,15 @@ erDiagram
     PRODUCT_VARIANTS o|--o{ INVENTORY_ITEMS : known_packaging
     PURCHASE_RECORDS o|--o{ INVENTORY_ITEMS : optional_purchase
 ```
+
+The selected asset permission is nullable only for reference-only/rights-pending states; acquired or
+validated state requires it. Composite FKs bind exact scope + image + source + source record + assessment
++ permission UUID. Parent/child derivative rights require separate validation; source/license labels are
+not sufficient. Deferred validation enforces parent source/capture/scope consistency and license obligations.
+
+All personal rows carry a user_private scope plus user_id; composite FKs prove that scope's owner and
+preserve scope/owner/perfume across joins. Scope membership does not share purchases/inventory.
+Private/shared image links about public perfumes remain private/shared; public image joins reject them.
 
 Optional seller/variant/purchase links must not imply a transaction or a forced price/date/size.
 Composite owner/perfume FKs prevent a saved source, purchase or bottle from linking another owner's

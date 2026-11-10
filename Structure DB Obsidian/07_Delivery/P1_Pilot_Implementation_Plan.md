@@ -95,3 +95,35 @@ If not, reduce retention, revisit indexes/storage choice or request an owner-app
 
 Completion of local tests is not permission to deploy. Hosting alternatives and detailed recovery plan:
 [[P1_Storage_Hosting_and_Recovery]]. Stop on missing approval, rights ambiguity, data loss or failed restore.
+
+
+## Post-review constraint and access tests — specifications only, NOT RUN
+
+Use synthetic authorization/invalid-grant fixtures only as clearly labeled isolated test inputs; they do
+not count as product facts, real third-party permission or regional coverage. Exercise actual non-owner
+runtime roles AND API/storage paths; testing only an admin/service role is insufficient.
+
+| ID | Required setup / positive result | Negative control / exact expected behavior |
+|---|---|---|
+| OBS-01 | One captured Khamrah-shaped document, same entity/field, structured and prose locators → two observation IDs | Former record/field uniqueness must not reject/drop the second; both can join one conflict |
+| OBS-02 | Two occurrences within one locator use different claim_key; agreeing claims at different locators also survive | Replaying same full identity adds zero rows; changed value/status under it fails/quarantines without overwrite |
+| OBS-03 | Select the prose observation UUID explicitly and retain structured member | Empty locator/key, wrong field/entity/kind or cross-scope selection/member is rejected by NOT NULL/nonempty/FK checks |
+| OBS-04 | Resolve conflict using one of its members in one transaction | Non-member same-field resolution, removal of resolved member, active conflict with fewer than two claims fail at commit; no silent resolved status on selection change |
+| ACL-01 | Owner A private source/capture/claim/image targets a public perfume; A sees overlay | User B and anonymous see public facts only; no private locator/count/conflict flag/rating/thumbnail via detail, joins, search, compare, export or cache |
+| ACL-02 | Public selection uses public observation; A overlay uses A private observation | Private/shared observation cannot populate public selection/columns/joins or public matching input; different principal/scope cache replay denied |
+| ACL-03 | Scope A source→record→observation→batch/validation lineage consistent | Scope B source/rights/record IDs, spoofed owner/scope header or in-place scope/owner widening rejected; no source URL/key/hash global dedup leak |
+| ACL-04 | Shared owner grants reader/editor explicitly; members see only that scope | Non-member/revoked user denied; reader mutation, self-enrollment, unrelated group reference or shared membership exposing purchases/inventory rejected; shared mode stays disabled until approved |
+| ACL-05 | Private listing/price/cart/purchase/bottle joins agree on scope/user/perfume | Wrong-owner scope, record or listing and other perfume's variant rejected; deletion/finished bottle preserves purchase history |
+| ACL-06 | RLS with non-owner/no-BYPASSRLS role; WITH CHECK blocks new-row spoofing; approved public metadata readable | No-policy/default-deny, public raw staging/evidence secrets, unauthorized invoker/definer view/RPC/worker/export paths tested; admin-only PASS cannot satisfy this criterion |
+| ACL-07 | Trusted writes authorize referenced IDs before SQL; uniform error response | FK/unique failure cannot reveal existence of B private row/object; direct SQL/table writes and service-role endpoint unavailable to untrusted client |
+| IMG-01 | Selected binding matches exact scope/image/source/capture/assessment and verified evidence locator | Unrelated source assessment fails composite FK; different asset or different capture with same source fails binding FK |
+| IMG-02 | Metadata-only image may have unknown assessment without bytes | acquired/validated state with null permission, missing technical metadata or unknown/denied acquire use fails; nullable FK must not bypass state gate |
+| IMG-03 | Original and derivative each have own permission; parent allows transform and output obligations match | Wrong or no-longer-selected parent permission, parent denies/unknown transform, incompatible output license or missing credit/change notice blocks derivative; source/capture/scope mismatch rejected |
+| IMG-04 | Asset/capture locator and known content hash match applicable permission proof | Selected binding missing/mismatched hash in acquired state, or reusing a permission by swapping locator, source record or binary hash is rejected; shared publisher name alone never suffices |
+| IMG-05 | Authorize image use at fetch/transform/display/restore; active selected grant and ancestors | Expired/revoked assessment, child/ancestor grant or membership disables new proxy requests; cycles fail; cache invalidated; old private URL replay/direct bucket read denied |
+| IMG-06 | Public image link references public approved asset; private link stays private about a public perfume | Public join to private/shared image rejected; no private bytes/EXIF/permission evidence in public manifests/backups/Git |
+| REC-01 | Export/restore retains scopes/members, locator identities, selected/member claims, permission tuples and derivative chain | Restored FK/rights/scope mismatch prevents serving/promoting; count parity alone cannot pass; private exports never published |
+
+All row CHECK/FK/unique and deferred-trigger contracts are specified in [[Data_Dictionary_Draft]].
+Document-only review cannot prove any of these runtime behaviors. IMP-P1-01..04 must attach exact failing/
+passing evidence and independent review before readiness. No SQL/test code or environment is created here.

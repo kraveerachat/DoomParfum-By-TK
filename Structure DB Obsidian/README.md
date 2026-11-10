@@ -51,7 +51,7 @@ Structure DB Obsidian/
 │   └── My_Cart_and_Ownership.md             # In-App Cart (No Checkout), Ordered, Owned, History
 ├── 03_Data/                                 # สถาปัตยกรรมข้อมูลและธรรมาภิบาล
 │   ├── ERD_Draft.md                         # ผังความสัมพันธ์เอนทิตี (Mermaid ERD)
-│   ├── Data_Dictionary_Draft.md             # P1 proposed dictionary (44 logical tables, awaiting owner review)
+│   ├── Data_Dictionary_Draft.md             # P1 proposed dictionary (47 logical tables, awaiting owner review)
 │   ├── Source_Registry.md                   # ทะเบียนแหล่งข้อมูลภายนอกและสถานะสิทธิ์
 │   ├── Ingestion_and_ETL.md                 # ไปป์ไลน์นำเข้า ทำความสะอาด และตรวจสอบคุณภาพ
 │   ├── Data_Quality_and_Provenance.md       # ธรรมาภิบาลข้อมูล ที่มาของข้อมูลระดับฟิลด์

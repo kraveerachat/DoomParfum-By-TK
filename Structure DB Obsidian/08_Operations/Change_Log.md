@@ -80,3 +80,21 @@ assumptions and required-country/three-note defaults. Preserved existing confirm
 proposed matching weights. No raw dataset, code, SQL, cloud configuration, secret, merge or deployment.
 Research gaps/permission constraints remain explicit, especially priority Thai samples, HMNS reuse,
 image acquisition and live API response verification. Exact files/checkpoints: [[DPT-PLAN-001_P1_Data_Foundation]].
+
+
+### Post-Review Correction S2 — 2026-11-10 / DPT-PLAN-001 / existing PR #1
+
+Review start/current verified HEAD: `46c4a85309c408b3de7612d4853b166b84917359`; main unchanged at
+`03481f7066487c44631cb9065899894ee8db71fb`. Same planning branch, PR OPEN/DRAFT.
+R1: locator/occurrence identity preserves multiple claims per source record; scoped exact selection
+and conflict-member resolution constraints. R2: non-null access_scope_id throughout provenance/assets,
+public/shared/private ownership, RLS/API/storage rules, private overlays never materializing public data.
+R3: scoped per-asset/capture/assessment grant, derivative parent/output rights and expiry/revocation checks.
+Logical proposal grows 44 → 47 tables; original source profiling/mapping/conflict evidence and Task Map
+retained. R4: public repository/existing workflow facts corrected in security/workflow/questions;
+separate documentation CI backlog proposal only. Added 18 future OBS/ACL/IMG/REC negative/positive case
+specifications and four-column OD-01..06 local/test/rights/cloud owner recommendations. No runtime tests.
+
+Original immutable receipt [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] remains the single receipt;
+no rewrite/second receipt. Exact correction paths and resulting checkpoint/evidence are in
+[[DPT-PLAN-001_P1_Data_Foundation]]. No code, schema/database, Actions, cloud resources, deployment or merge.

@@ -11,7 +11,7 @@ source_of_truth: "../../../README.md"
 
 # DoomParfum P1 Chat Continuity Pack
 
-## A–D. Identity, product, Git and planning gate
+## Original S1 snapshot — A–D. Identity, product, Git and planning gate
 
 Task DPT-PLAN-001 / Codex planning-research-docs / 2026-11-10 Asia/Bangkok. Owner is the human reviewer.
 Private-first catalogue/comparison/shopping tracker; no checkout or Shopee synchronization.
@@ -70,3 +70,17 @@ merged the accepted plan and record its exact approved SHA/decisions. If still D
 owner-requested planning review/corrections. Do not implement, provision, scrape restricted sources,
 deploy, expose private data, merge or enable auto-merge. If merged, select only an authorized pilot task
 from P1_Pilot_Implementation_Plan and verify its source/decision prerequisites before starting.
+
+
+## Current S2 post-review handoff — 2026-11-10
+
+Existing PR https://github.com/kraveerachat/DoomParfum-By-TK/pull/1 is OPEN/DRAFT/unmerged. S2 starts at
+46c4a85309c408b3de7612d4853b166b84917359; main stays 03481f7066487c44631cb9065899894ee8db71fb.
+Same branch/task. Current proposal is 47 tables: original 44 + access_scopes, scope_members,
+asset_permissions. Same-record claims use locator/key identity; selection/conflicts are scoped; private
+claims/assets about public catalogue stay private; image rights bind exact capture/asset/assessment
+and derivative parent grant. No implementation/DB/RLS/Actions/cloud created. Tests specified, not run.
+Owner decisions remain PROPOSED; review local/test/rights/cloud matrix in [[P1_Data_Foundation_Plan]].
+Original S1 receipt unchanged, no second receipt. Current verified checkpoint/validation/exact files:
+[[DPT-PLAN-001_P1_Data_Foundation]]. Follow-up agent must verify the latest live PR head and merge state;
+older S1 metadata/44-table test counts above are historical. Next owner action is review of corrections.

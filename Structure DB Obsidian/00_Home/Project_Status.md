@@ -15,13 +15,13 @@ source_of_truth: "../../README.md"
 # Project Status — P1 Planning Review
 
 Updated: 2026-11-10, Asia/Bangkok. P0 baseline exists at `03481f7066487c44631cb9065899894ee8db71fb`.
-P1 planning documents are ready for owner review on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
+P1 planning review corrections (S2) are IN PROGRESS on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
 Canonical task: [[DPT-PLAN-001_P1_Data_Foundation]]; specification: [[P1_Data_Foundation_Plan]].
 
 | Workstream | Actual state | Next gate |
 |---|---|---|
 | P0 documentation bootstrap | Baseline committed on main; no historical planning PR/receipt found | Preserve one-time bootstrap exception; do not reuse it |
-| P1 discovery/schema/hosting planning | Planning payload 656d173 pushed; closeout and Draft PR publication are final actions | Owner review and merge of this plan |
+| P1 discovery/schema/hosting planning | PR #1 OPEN/DRAFT, correcting architecture review from 46c4a85 | Owner review and merge of this plan |
 | P1 local schema/ETL/image/restore pilot | NOT STARTED | Merged plan + explicit accepted decisions/rights |
 | P1 web catalogue | NOT STARTED | Local foundation evidence and separate implementation PR |
 | P2 matching / P3 cart / P4 dashboard | NOT STARTED | Foundation and their own scoped implementation tasks |
@@ -48,12 +48,21 @@ though AGENTS/workflow and a real public repository were committed. This PR reco
 and follows the owner's two-gate request; it does not mark proposed governance or technical decisions
 accepted. No previous merged Planning PR, task note or immutable receipt was found at the starting SHA.
 
+## Current review correction state
+
+[PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) is verified OPEN/DRAFT, not merged.
+S2 start/current verified PR head: `46c4a85309c408b3de7612d4853b166b84917359`; remote main remains
+`03481f7066487c44631cb9065899894ee8db71fb`. Same branch/task, no new PR or receipt.
+Revised proposal: 47 tables; same-record section claims, scoped private/shared overlays, exact per-asset
+permission and derivative controls. All PROPOSED. Review tests OBS/ACL/IMG/REC specified, NOT RUN.
+Owner recommendations OD-01..06 distinguish later local pilot, untested behavior, source-rights blocks
+and separately approved cloud operations in [[P1_Data_Foundation_Plan]]. Docs-CI TSK-DOC-001 is separate,
+PROPOSED/NOT STARTED; no Actions/settings created. Public repository and existing workflow are facts,
+not authorization to publish private data. Research evidence/counts above remain unchanged.
+
 ## Next action
 
-Complete documentation validation and Draft PR publication, then owner review. Do not implement,
-provision, deploy, merge or enable auto-merge. Final PR/SHA/evidence will be recorded in the task note.
-
-
-Publication snapshot: the documentation commit precedes Draft PR creation. Live head-branch PR state
-and final SHA are available through [[DPT-PLAN-001_P1_Data_Foundation]]; do not infer merge from review
-readiness. Receipt: [[2026-11-10_201028_DPT-PLAN-001_P1_Planning]].
+Validate correction documents, commit/push only existing PR #1 branch, verify head and update description;
+then owner review. No implementation, provisioning, deployment, merge or automatic merge. Current
+checkpoint/evidence: [[DPT-PLAN-001_P1_Data_Foundation]]. Original immutable receipt remains
+[[2026-11-10_201028_DPT-PLAN-001_P1_Planning]]; it records the S1 snapshot and will not be rewritten.

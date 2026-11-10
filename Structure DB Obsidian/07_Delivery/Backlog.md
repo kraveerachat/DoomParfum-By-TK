@@ -109,7 +109,7 @@ No implementation PR exists. All pilot choices are PROPOSED; the owner must merg
 
 | Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
 |---|---|---|---|---|---|
-| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | Payload 656d173 pushed; final publication snapshot in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review after Draft PR publication |
+| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | planning_review_ready / acceptance pending | PR #1 OPEN/DRAFT; S2 post-review corrections in [[DPT-PLAN-001_P1_Data_Foundation]] | Owner review of updated proposal |
 | IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | NOT STARTED | NOT CREATED | Verify merge SHA first |
 | IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
 | IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
@@ -119,3 +119,15 @@ No implementation PR exists. All pilot choices are PROPOSED; the owner must merg
 Pilot task/test breakdown: [[P1_Pilot_Implementation_Plan]]. TSK-103's four Thai brands remain targets,
 not available licensed seed records. Preserve R22 without fabricating product facts or substituting
 Butterfly research for those required brands. P2/P3 schema support does not bring their UI into pilot scope.
+
+
+## Separate documentation CI proposal — NOT STARTED
+
+| Task | State / approval | Scope | Acceptance / boundary |
+|---|---|---|---|
+| TSK-DOC-001 | PROPOSED, separate future implementation task/PR after owner authorizes CI scope | Markdown/frontmatter/local/wiki-link checks, ERD-dictionary entity/contract parity, immutable receipt and evidence preservation, docs-only scope and secret-pattern checks | Reproduce local checks on a known revision; report actual limits; read-only least-privilege job; no secrets/private exports, deployment, source ingestion or auto-merge |
+
+No GitHub Action, workflow file, branch rule, app permission or CI setting is created by PR #1 corrections.
+Owner approval of this proposal alone is not execution approval; future CI implementation defines pinned
+tooling, trigger/permission boundaries and test evidence. R1–R3 test cases remain future database/runtime
+work, not assertions that documentation CI proves SQL/RLS behavior. OD recommendations: [[P1_Data_Foundation_Plan]].

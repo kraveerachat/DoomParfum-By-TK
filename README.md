@@ -330,7 +330,7 @@ DoomParfum By TK/
 ├── web/                            # [FUTURE] Next.js app
 ├── data-pipeline/                  # [FUTURE] ETL, validation and import scripts
 ├── database/                       # [FUTURE] schema, migrations, seed
-└── .github/                        # [FUTURE] CI/review workflow หลังผู้ใช้ส่ง workflow ตัวอย่าง
+└── .github/                        # [FUTURE] CI/review workflow after separate owner scope approval
 ```
 
 **GitHub policy ขณะนี้:**
@@ -401,3 +401,14 @@ regional coverage and image rights remain incomplete. No raw dataset is committe
 Vercel, Supabase PostgreSQL/Storage, R2, Python ETL and Docker are evaluated alternatives, all PROPOSED.
 A local schema/ETL/image/size/independent DB-and-object restore pilot must pass before hosted adoption.
 No code, production database, cloud project or deployment is created by this planning PR.
+
+
+### PR #1 post-review proposal
+
+Repository is public; application data remains private-first. Existing AGENTS.md/DEVELOPMENT_WORKFLOW.md
+and [Draft PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) are verified, not pending setup.
+The revised P1 proposal retains source claims by section/occurrence, isolates public/shared/private
+provenance and overlays, and binds image permissions to exact assets/captures plus derivative rights.
+See the planning specification for OD-01..06 LOCAL/test/rights/CLOUD recommendations. No source grant,
+cloud resource, CI workflow, schema or implementation is approved merely by this documentation change.
+Secrets, private exports, orders, user photos and object manifests must never enter this public repository.

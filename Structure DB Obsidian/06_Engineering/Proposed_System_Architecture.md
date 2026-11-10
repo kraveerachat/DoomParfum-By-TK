@@ -27,7 +27,7 @@ flowchart TD
     A --> P[Private cart purchase inventory service]
     C --> D[(Portable PostgreSQL core)]
     P --> D
-    W --> O[Object access adapter and signed URLs]
+    W --> O[Scoped object adapter and authenticated proxy]
     O --> S[Supabase Storage or R2 or local objects]
     R[Approved source snapshots or user input] --> E[Bounded Python ETL worker]
     E --> T[Private staging and validation]
@@ -83,3 +83,20 @@ being silently replaced. Four priority Thai brands still lack new permissioned p
 
 See [[Tech_Stack_and_ADRs]], [[P1_Pilot_Implementation_Plan]], [[Security_and_Privacy]],
 [[DPT-PLAN-001_P1_Data_Foundation]]. No runtime validation/deployment is claimed by this architecture.
+
+
+## Post-review boundaries — PROPOSED
+
+47-table proposal adds access_scopes/scope_members and asset_permissions. Non-null scope follows all
+provenance/media/private records through composite FKs; public-or-same-scope catalogue references do
+not propagate access. Public canonical materialization consumes public claims only; private/shared
+selections stay overlays and their derived search/evidence/matching/cache/export outputs stay scoped.
+Private/shared image requests pass through an authenticated proxy that checks access and rights;
+upstream signed URLs remain internal. No public bucket or public profile link grants private asset access.
+Exact asset/source/capture/assessment permissions and derivative parent rights are verified separately.
+
+RLS plus least-privilege runtime roles and server authorization are future implementation requirements,
+including raw staging restrictions, membership revocation, generic inaccessible-ID errors and scoped
+exports. Source/image licensing and access ownership are independent. See [[Security_and_Privacy]].
+Repository is public; workflow exists; neither fact makes private app data public. Documentation CI is
+a separate proposed backlog task, not an installed GitHub Action. No provisioning/implementation here.

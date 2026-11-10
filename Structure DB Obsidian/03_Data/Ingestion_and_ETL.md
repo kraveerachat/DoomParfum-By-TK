@@ -87,3 +87,27 @@ source observations; explicit migrations add promoted canonical attributes. Use 
 contract, reviewed SQL and local restore evidence; do not use an unreviewed cloud schema push.
 A batch state machine is proposed: discovered → staged → validated → review_required → approved →
 promoted, with blocked/rejected/reverted terminal handling. Runtime tests are NOT RUN in this PR.
+
+
+## Post-review import/selection contract — PROPOSED
+
+Before extraction, assign a server-authorized access_scope_id to source/batch; captures and claims inherit
+that scope through composite FKs. A user's private capture of a public URL uses a separate private
+source/record, never a shared global source upsert. Raw staging remains worker/reviewer-only even when
+source catalogue metadata is public. Carry scope through diagnostics, audit, rollback and export.
+
+Within one captured source_record, emit separate source_observations for structured/prose/list occurrence
+locators; retain claim_key and transform_version. No record/field-only dedup. Same full identity replay
+is idempotent; changed output for that identity quarantines deterministic-extraction failure. Do not split
+one document into artificial records merely to accommodate uniqueness. Conflicts may contain same-record
+claims. Select by observation UUID; resolution must be a scoped member and update selection/audit together.
+
+Only reviewed public-scope selection promotes to public catalogue columns/joins. Private/shared overlays
+stay scoped even when the entity target is public. Reject cross-scope source joins and attempted private
+promotion before materialization; no personal collection change as an import side effect. Image acquisition
+requires an exact asset/capture/assessment permission binding; derivatives require parent transform grant,
+compatible output license, same-scope/source/capture pilot lineage and separate child permission review.
+Pending/expired/revoked/unknown permission blocks use, not merely a UI warning.
+
+Constraints and new negative tests: [[Data_Dictionary_Draft]], [[Security_and_Privacy]],
+[[P1_Pilot_Implementation_Plan]]. All SQL/policies/pipeline implementation remains NOT STARTED.

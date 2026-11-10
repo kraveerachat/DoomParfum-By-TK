@@ -9,7 +9,7 @@ tags:
   - doomparfum
   - product
   - open_questions
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Open Product Questions — DoomParfum By TK
@@ -59,8 +59,8 @@ source_of_truth: "../README.md"
 - **ผลกระทบ:** ขั้นตอน Data Ingestion ใน [[Ingestion_and_ETL]]
 
 ### Q-PRD-07: รูปแบบเวิร์กโฟลว์ GitHub และ CI/CD
-- **คำถาม:** เวิร์กโฟลว์การซิงก์เอกสาร Obsidian ขึ้น GitHub, การ Commit, และการเชื่อมต่อกับ ChatGPT/Agent ต้องการให้เป็นรูปแบบใด? (รอไฟล์ตัวอย่างจากผู้ใช้)
-- **สถานะปัจจุบัน:** `[BLOCKED / WAITING FOR USER INPUT]`
+- **คำถาม:** Owner ต้องการรับรอง proposed governance และอนุมัติ scope งาน CI documentation validation แบบใด?
+- **สถานะปัจจุบัน:** Public repository และ Workflow มีแล้ว; PR #1 OPEN/DRAFT รอ Owner review ไม่ได้รอไฟล์ Workflow ใหม่. CI เป็น TSK-DOC-001 PROPOSED ใน [[Backlog]] และยังไม่สร้าง Actions.
 - **ผลกระทบ:** เอกสาร [[GitHub_and_Workflow_PENDING]]
 
 ---

@@ -45,7 +45,7 @@ source_of_truth: "../../README.md"
 | **DEC-006** | เริ่มต้นด้วย Rule-Based Scent Matching (Pyramid 40%, Accords 25%, Family 15%, Evidence 20%) แทนการเทรนโมเดล ML ใหม่ | **PROPOSED** | 2026-11-10 | [[Scent_Matching_Spec]], [[Tech_Stack_and_ADRs]] |
 | **DEC-007** | นำเข้าข้อมูลเฉพาะจากแหล่งที่ได้รับอนุญาต/ชุดข้อมูลเปิด (Open Datasets/APIs) และการบันทึกของผู้ใช้; ห้าม Mass Scraping | **PROPOSED** | 2026-11-10 | [[Source_Registry]], [[Rights_and_Attribution]] |
 | **DEC-008** | สแต็กทางเทคนิคเริ่มต้นเสนอเป็น Next.js (App Router) + PostgreSQL + Drizzle ORM + Docker Compose | **PROPOSED** | 2026-11-10 | [[Proposed_System_Architecture]], [[Tech_Stack_and_ADRs]] |
-| **DEC-009** | ใช้ Obsidian Markdown Vault สำหรับ Living Documentation และใช้ GitHub สำหรับ Version Control (รอ Workflow) | **CONFIRMED** | 2026-11-10 | [[Project_Index]], [[GitHub_and_Workflow_PENDING]] |
+| **DEC-009** | ใช้ Obsidian Markdown Vault สำหรับ Living Documentation และใช้ GitHub สำหรับ Version Control (Workflow exists; proposed governance acceptance pending) | **CONFIRMED** | 2026-11-10 | [[Project_Index]], [[GitHub_and_Workflow_PENDING]] |
 | **DEC-010** | ใช้ Two-Gate Development Workflow (Gate P: Planning PR -> Human Merge -> Gate I: Implementation PR -> Human Merge) | **PROPOSED-CANONICAL** | 2026-11-10 | `../DEVELOPMENT_WORKFLOW.md`, [[GitHub_and_Workflow_PENDING]] |
 | **DEC-011** | ข้อยกเว้นการ Push Initial Documentation Baseline ขึ้นสู่ `main` โดยตรงเพียงครั้งเดียวสำหรับ Remote ที่ว่างเปล่า | **CONFIRMED** | 2026-11-10 | `../AGENTS.md`, `../DEVELOPMENT_WORKFLOW.md` |
 
@@ -88,3 +88,17 @@ Detailed ADR context/options/consequences and acceptance: [[Tech_Stack_and_ADRs]
 OD-01..OD-06 remain open in [[P1_Data_Foundation_Plan]]. No proposal is accepted through this log.
 The owner's current request authorizes only documentation research, planning branch/push/Draft PR.
 No historical bootstrap exception is reused and no implementation/production action is authorized.
+
+
+## Post-review refinements — S2 / 2026-11-10 / PR #1
+
+| ID | Recommendation and context | Alternatives / consequence | Status |
+|---|---|---|---|
+| DEC-016 | Preserve multiple same-record claims via section/field locator + occurrence key; introduce public/shared/private access scopes and scoped overlays | Record/field-only uniqueness loses structured/prose claims; public-entity access inheritance leaks private facts. Non-null scope and composite FKs/RLS/API rules add validation work; shared activation deferred | PROPOSED |
+| DEC-017 | Bind image permission to exact scope/asset/source/capture/assessment; own derivative grant and parent transform/output-license review | Source-wide loose rights_id insufficient; new asset_permissions table/expiry/lineage and proxy tests required. No source grant or bucket approval inferred | PROPOSED |
+| DEC-018 | Separate TSK-DOC-001 for future documentation CI | Keep current correction Markdown-only; future Actions/tooling/permissions need separate owner-authorized scope | PROPOSED |
+
+Owner recommendations for OD-01..06: [[P1_Data_Foundation_Plan]]. No existing proposed decision is
+accepted. Current facts: repository public, workflow exists, PR #1 OPEN/DRAFT. Historical bootstrap log
+may describe earlier pending states; it does not override these current facts. Immutable receipt
+[[2026-11-10_201028_DPT-PLAN-001_P1_Planning]] stays unchanged, no second receipt.

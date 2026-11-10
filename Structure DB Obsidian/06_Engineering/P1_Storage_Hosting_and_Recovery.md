@@ -84,10 +84,17 @@ retention/privacy requirements take precedence. Private exports and keys never e
 5. Restore objects to a separate test bucket or local object service. Verify every manifest hash/size,
    asset relation, access restriction and attribution. Missing/corrupt object must fail the rehearsal.
 6. Reconcile counts, FKs, canonical selections, conflict/missing states, purchase history, tenant access
-   and signed image delivery. Measure recovery time; retain evidence and restore manifest privately.
+   and authorized image-proxy delivery. Measure recovery time; retain evidence and restore manifest privately.
 7. Production cutover requires a separate owner-approved bounded plan, final sync, smoke checks and
    rollback to old DB/bucket. No destructive cutover, credential migration or cloud operation is authorized here.
 
 Rollback for local pilot: discard only its disposable DB/test objects after verified export; preserve
 approved records/evidence. Never treat dropping a real hosted schema as a routine rollback.
 See [[P1_Pilot_Implementation_Plan]] for acceptance and [[Tech_Stack_and_ADRs]] for proposed ADRs.
+
+
+Post-review restore boundary: manifests include access_scope_id, exact asset/capture/assessment/permission
+IDs, locator/hash and parent permission lineage. Restore validates source/selection/conflict scopes and
+RLS/membership/rights before serving data or bytes. Public-only exports exclude private/shared claims
+and metadata; DB/object backup copies stay restricted. No cloud resource is approved; OD-01..06 owner
+recommendations distinguish local tests, blocked source rights and separately approved provisioning.

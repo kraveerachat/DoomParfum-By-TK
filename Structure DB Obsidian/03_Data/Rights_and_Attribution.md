@@ -70,3 +70,36 @@ security is a future implementation acceptance criterion, not an implemented con
 Owner approves the seed attribution presentation, rights-review cadence and image license policy.
 Unlicensed official-site product feeds require permission or owner-provided licensed alternatives.
 No paid subscriptions, account connection or permission request to third parties was sent.
+
+
+## Post-review image grant consistency — PROPOSED
+
+Source/publisher assessment and asset permission are separate records. image_assets carries source_id,
+source_record_id, rights_id and an optional selected asset_permission_id; acquired/validated states
+require the selected binding plus metadata. Scoped composite FKs bind source_record and assessment to
+the SAME source, and selected permission to the EXACT image/capture/assessment. A same-source grant
+for a different image/capture fails that tuple, rather than being accepted through a loose rights_id.
+Metadata-only states may point to an unknown assessment but cannot fetch/store/render bytes.
+
+Each asset_permissions row identifies the asset locator/hash evidence, allowed acquire/display/transform/
+redistribute uses, reviewer/time, review deadline and one-way revocation. Content rights are immutable
+versions; revocation disables use without rewriting evidence. Validate that the external proof genuinely
+covers this asset and each intended use; referential integrity alone cannot determine legal permission.
+
+Derivatives have their own image IDs/hashes and selected permission, reference the exact parent asset
+AND parent permission, and require parent's transform_use=allowed. For the pilot parent/child must share
+scope/source/capture; unknown/denied transformation, mismatched parent, incompatible output license,
+missing attribution or expired/revoked ancestor blocks the relevant operation. Parent permission never
+automatically grants child public display or redistribution. Adaptation/change notices and output-license
+obligations are recorded and revalidated on restore. Cross-scope/source publication requires a separate
+reviewed provenance/copy design and permission; it is not enabled here.
+
+A licensed image may still be user-private. Permission evidence/private URLs and EXIF stay scoped;
+public catalogue membership does not expose them. Private/shared delivery rechecks auth and effective
+rights through the authenticated object proxy. See [[Data_Dictionary_Draft]], [[Security_and_Privacy]],
+[[P1_Pilot_Implementation_Plan]] for precise constraints and negative controls. No new grant is claimed.
+
+The acquired/validated transition additionally requires the selected permission's bound content hash to
+match image bytes. Finalizing an initially unknown hash uses a new immutable permission version.
+Changing an image capture/bytes uses a new asset ID; changing a parent's selected permission invalidates
+children for re-review, rather than letting an old parent-binding pointer silently authorize new use.
