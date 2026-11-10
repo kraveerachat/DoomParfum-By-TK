@@ -2,7 +2,7 @@
 id: DPT-ENG-004
 project: DoomParfum By TK
 type: workflow_specification
-status: proposed-canonical
+status: accepted
 owner: project
 updated: 2026-11-10
 tags:
@@ -16,9 +16,17 @@ source_of_truth: "../../DEVELOPMENT_WORKFLOW.md"
 
 # GitHub and Development Workflow Specification — DoomParfum By TK
 
+## Current Git event
+
+PR #1 is MERGED at `bffb2fab1918dc5221a6c5da7920168bcae263ca`; historical draft/open descriptions below
+are superseded by this verified event. IMP-P1-01 uses `impl/p1-01-local-postgres-schema` from merged main,
+with local-only source/tests/docs and a separate Draft PR/human merge gate. No main push, Actions,
+settings change, auto-merge or production deployment is authorized/performed.
+
+
 > **Document Type:** Version Control Strategy, Multi-Agent Collaboration & PR Protocols
 > **Source Baseline:** `../DEVELOPMENT_WORKFLOW.md` (v1.0.0 proposed-canonical)
-> **Current Status:** 🟡 **PROPOSED-CANONICAL — WORKFLOW SPECIFIED (Awaiting First Planning PR Merge)**
+> **Current Status:** **ACCEPTED THROUGH OWNER MERGE OF PR #1 — Implementation Human Merge Gate Still Required**
 
 ---
 

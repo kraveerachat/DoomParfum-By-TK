@@ -15,6 +15,14 @@ source_of_truth: "../../README.md"
 
 # Delivery Roadmap — DoomParfum By TK
 
+## Current foundation checkpoint
+
+Gate P completed by owner merge of PR #1 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. IMP-P1-01 implements
+local migrations/constraints/RLS tests only, pending its separate Draft PR review/merge. P1 catalogue
+and ETL are not complete. IMP-P1-02..04 remain NOT STARTED; IMP-P1-05 provisioning still needs separate
+approval. Current task/evidence: [[IMP-P1-01_Local_PostgreSQL_Schema]], [[IMP-P1-01_Implementation_Evidence]].
+
+
 > **Document Type:** Multi-Phase Delivery Plan & Milestones
 > **Source Baseline:** `../README.md` (Section 8)
 > **Status:** Draft / Active Roadmap

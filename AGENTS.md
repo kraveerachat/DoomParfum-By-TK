@@ -2,7 +2,7 @@
 
 > Canonical repository-level instructions for AI coding/research/documentation agents.
 > Applies to Codex, Claude Code, Gemini CLI, and other agents operating on this repository.
-> Status: proposed update; effective in the project only after the Human Owner saves/merges this file.
+> Status: canonical governance; Human Owner merged Planning PR #1 at `bffb2fab1918dc5221a6c5da7920168bcae263ca` on 2026-11-10. Implementation PRs still require their own Human Merge.
 
 ## 0. Project identity and operating contract
 

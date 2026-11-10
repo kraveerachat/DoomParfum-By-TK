@@ -15,9 +15,30 @@ source_of_truth: "../../README.md"
 
 # Security and Privacy — P1 Post-Review Proposal
 
-PROPOSED controls, not implemented protection or a security-test result. Repository is PUBLIC at
+## Current local SQL evidence — IMP-P1-01
+
+PR #1 is MERGED at bffb2fab1918dc5221a6c5da7920168bcae263ca. Local migrations implement scoped
+provenance/private-owner FKs, immutable scope/identity, ENABLE/FORCE RLS and non-owner runtime groups.
+Local authenticated DB logins map session_user to users.auth_subject; mutable GUCs, SET ROLE and temp
+search-path shadowing cannot choose another principal. Ordinary test user logins have no mutation/DDL/
+TRUNCATE grants; a separate trusted writer capability is used to test WITH CHECK and membership rules.
+
+See [[IMP-P1-01_Implementation_Evidence]] for exact commands, both actual user sessions, owner FORCE RLS,
+shared reader/editor/revocation, private overlay and source/image lineage evidence. Public-source raw
+staging/captures/permission evidence are service/reviewer-only. Public source/catalogue projections use
+invoker behavior and column allowlists. Public matching inputs require public scope; private overlays
+never materialize public fields. Matching input identity includes scope/policy/version/observation IDs.
+
+These are DB contracts and tests, not product authentication/authorization or deployed protection.
+API/JWT/error masking, search/compare/export/cache paths, signed URL/proxy/bucket access, real image
+bytes/EXIF/SSRF and restore tests are NOT RUN. Local shared primitives do not activate product sharing.
+Source/asset rights require human evidence; SQL validates tuples and per-use gates, not legal truth.
+All unimplemented portions below remain requirements for later approved tasks.
+
+
+Controls below are the approved target; local DB coverage and unimplemented boundaries are distinguished above. Repository is PUBLIC at
 https://github.com/kraveerachat/DoomParfum-By-TK; application data remains private-first. Workflow already
-exists in AGENTS.md and DEVELOPMENT_WORKFLOW.md; PR #1 is OPEN/DRAFT, awaiting human approval/merge.
+exists in AGENTS.md and DEVELOPMENT_WORKFLOW.md; PR #1 is owner-merged; IMP-P1-01 still requires Human Merge.
 Public Git never contains secrets, .env files, private exports, orders, screenshots, tokens, cookies,
 private source URLs, object manifests or permission evidence with personal data. Repository visibility
 must not be used as the application's privacy boundary. No GitHub settings/Actions are changed here.
@@ -116,4 +137,4 @@ merely a global shared API key. Secrets stay outside Git/browser bundles, exampl
 External URLs require approved HTTPS host/size/MIME bounds, redirect/SSRF checks, sanitized metadata
 and private EXIF removal for future derivatives. Outbound links use noopener/noreferrer and remove
 known private/tracking tokens without blindly breaking product identifiers. Backup rights/scope and
-restore tests follow [[P1_Storage_Hosting_and_Recovery]]. Controls/negative tests remain NOT RUN.
+restore tests follow [[P1_Storage_Hosting_and_Recovery]]. API/storage/byte/restore controls remain NOT RUN; current local DB evidence is recorded above.

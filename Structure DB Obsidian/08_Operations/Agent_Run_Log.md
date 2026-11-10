@@ -246,3 +246,44 @@ parity / zero errors; links/fences/source paths and common secret patterns check
 Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
 for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
 readback provide published SHA/state; no implementation or automatic merge.
+
+
+## 2026-11-10 — IMP-P1-01 / S1 — implementation, local validation and review preparation
+
+TASK=IMP-P1-01; TYPE=IMPLEMENTATION; START_SHA/approved-plan/main=bffb2fab1918dc5221a6c5da7920168bcae263ca.
+Branch=impl/p1-01-local-postgres-schema. GitHub confirmed PR #1 merged; fresh origin fetch/clean tree;
+branch created from origin/main. Reviewed governance/product/vault/current P1 model/security/decisions,
+prior task/receipt and external package; raw hashes/full 42-entry inventory agree. No missing dataset.
+
+TOOL DECISION: existing GitHub MCP, PowerShell/Git, Python standard library, Docker Desktop/PostgreSQL,
+PostgreSQL 16 primary web docs and existing ecc:postgres-patterns skill. This skill's database-reviewer
+instruction and workflow's independent-review gate are followed with a separate read-only reviewer;
+no concurrent file ownership/commits. Approved UUID model takes precedence over generic skill defaults.
+REQUESTED_TOOL=NONE; TOOL_STATUS=AVAILABLE; EXECUTION_MODE=EXISTING/MCP; GIT_WRITE=YES task branch only;
+OBSIDIAN_WRITE=YES; PRODUCTION_MUTATION=NO. No installer/global hooks/config/account/paid tool change.
+Versions: Git 2.53.0.windows.2, Python 3.11.9; Docker Desktop 4.43.2/Engine 28.3.2, PostgreSQL 16.15.
+
+Initial Docker CLI available but engine stopped; existing Desktop launched without host setting changes.
+Only task-labeled container doomparfum-p1-01 / volume doomparfum-p1-01-data are created/managed, bounded
+memory/CPU and 127.0.0.1:55431. Existing unrelated containers were inventoried, never stopped/reset by task
+commands. Image pinned to sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94.
+Generated local-only admin secret remains ignored under .local/p1-01; no value printed. No remote DB
+connection interface; no Supabase/Vercel/cloud/storage/production resources. Local socket trust under
+Docker-admin control is explicitly not provider authentication. Rollback/stop: python database/local.py
+stop retains disposable volume; recreation is test-DB-only. No blanket prune or existing-container delete.
+
+ACTUAL: python database/verify.py -> 63 passed / 0 failed / 0 errors / 0 skipped, exit 0; machine inventory
+and source hashes in database/evidence/. python database/local.py migrate -> empty foundation upgraded,
+47 tables/53 field definitions/zero other rows. Live non-owner logins, FORCE owner RLS, synthetic rights,
+actual expiry passage, concurrent write skew and failed-migration recovery tested. Initial REDs and
+introduced setup/report failures were fixed and rerun; see the detailed evidence note. All real-data
+shape fixtures rollback; full ETL, API/JWT/cache/export/error masking, real byte/proxy/SSRF, benchmark,
+DB/object restore and cloud readiness NOT RUN. Deferred owner decisions remain unchanged.
+
+Local document checker initially passes 22 Markdown/17 vault frontmatters, 47-name parity, six unchanged
+matching OD rows, no link/fence/secret-pattern errors; final count will increase with logs/receipt.
+Original planning receipt and three source research blobs unchanged. .local credential path is ignored.
+Independent exact-source review/checkpoint and final receipt/Draft publication remain pending here.
+TOOL EXECUTION REPORT: tools used above; REQUESTED_BUT_NOT_USED=NONE; tools installed=NONE. Exact changed
+paths in documentation-check/PR manifest; Obsidian updated, no private/raw files. END_SHA and actual Draft
+PR URL are verified after the corresponding Git/API events. STOP after Draft publication; owner merges.

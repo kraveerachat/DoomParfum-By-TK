@@ -15,7 +15,21 @@ source_of_truth: "../../README.md"
 
 # Data Dictionary Draft — P1 Evidence-Based Proposal
 
-PROPOSED logical PostgreSQL design, not DDL or an implemented/final schema. See [[ERD_Draft]],
+## Local implementation mapping — IMP-P1-01
+
+The 47-table logical target was owner-merged in PR #1 (bffb2fa). It is now implemented in seven local
+SQL migration groups under `database/migrations/`, pending Human Owner review/merge of IMP-P1-01.
+See [[IMP-P1-01_Implementation_Evidence]] for measured named constraint/trigger/RLS counts and tests;
+`database/schema_contract.json` and `database/evidence/schema_inventory.json` are the SQL mapping.
+The separate dpt_ops migration ledger is infrastructure, excluded from the 47 domain tables.
+Canonical review_status is explicit on brands/notes/accords/variants/relations as well as perfumes;
+this implements the shared review rule below. New normalized projection/field formats, scoped matching
+input hash, local currency vocabulary, serialized transaction and fail-closed retention/license rules
+are documented in `database/schema_findings.md`. Raw source-specific observations remain separate.
+This is local enforcement, not a final cloud/ORM/application or source-rights decision.
+
+
+Approved local logical design; SQL mapping is implemented for IMP-P1-01 review as recorded above. See [[ERD_Draft]],
 [[P1_Source_to_Canonical_Mapping]], [[P1_Data_Profiling_Findings]] and [[Tech_Stack_and_ADRs]].
 This revision supersedes the baseline dictionary proposal, especially mandatory country/position,
 concentration on packaging, fixed THB defaults and coarse source booleans.

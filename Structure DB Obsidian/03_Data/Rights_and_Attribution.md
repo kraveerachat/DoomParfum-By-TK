@@ -16,6 +16,19 @@ source_of_truth: "../../README.md"
 
 # Rights and Attribution — P1 Proposed Controls
 
+## Local DB implementation evidence — IMP-P1-01
+
+Planning PR #1 is owner-merged. Local SQL now binds exact scope/source/capture/assessment/asset permission,
+checks selected content hash/locator and parent permission/derivative obligations, and gates operations
+on active source AND asset uses. Revocation/parent changes invalidate descendants; elapsed expiry is
+checked at use time. See [[IMP-P1-01_Implementation_Evidence]]. These tests use labeled synthetic grants
+and metadata only; they establish no real third-party permission or actual byte acquisition/decoding.
+Human review of content scope, evidence applicability and license obligations remains mandatory;
+local derivative output-license equality is conservative, not a full legal compatibility engine.
+Scento raw/package remains local outside Git with CC BY 4.0 attribution; no new source/image rights,
+provider, cloud bucket or regional imports are approved. Acquisition/proxy/storage/restore are NOT RUN.
+
+
 This revision corrects baseline assumptions that public facts or personal fair use automatically permit
 copying site content/images. No universal fair-use grant is asserted. Owner restrictions already apply;
 the storage/approval mechanism below is PROPOSED. Source-specific findings: [[Source_Registry]].

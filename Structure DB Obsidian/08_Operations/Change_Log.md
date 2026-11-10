@@ -129,3 +129,22 @@ parity / zero errors; links/fences/source paths and common secret patterns check
 Receipt/research/schema-document hashes and original Task Map preserved; one receipt. Documents ready
 for Owner Review, not runtime-verified/merged. Final same-branch commit/push and existing PR description
 readback provide published SHA/state; no implementation or automatic merge.
+
+
+## 2026-11-10 — IMP-P1-01 — local schema implementation / review checkpoint
+
+Planning PR #1 owner-merge bffb2fab1918dc5221a6c5da7920168bcae263ca verified; implementation branch
+impl/p1-01-local-postgres-schema starts there. Seven local migration groups implement all 47 logical
+names, named constraints, scoped claims/private owners, whole-field/conflict/asset gates and RLS.
+Actual current evidence: 63/63 tests via python database/verify.py, exit 0; 47 PK / 141 FK / 91 UNIQUE /
+82 table CHECK / 58 deferred constraint-trigger constraints; 47 FORCE RLS tables, 203 policies.
+Five domain checks/396 NOT NULL columns/244 indexes/195 user triggers measured separately.
+Local foundation contains 53 field definitions and zero other domain rows; no full import or ETL.
+Raw package hashes verified; 40 repeated-note groups/39 profiles preserved for review, exact real 12/5/58
+shape fixtures roll back. Conservative findings, partial/not-run coverage and observed RED/fixes are in
+[[IMP-P1-01_Implementation_Evidence]] and database/schema_findings.md.
+Current planning-merge status reconciled; original research/Task Map/immutable planning receipt retained.
+No new source rights, cloud/provider/storage, final retention/RPO/RTO, regional import or CI approval.
+No main push, production mutation, merge, deployment, raw/private/dump/backup publication.
+Independent exact-checkpoint review and final task receipt/Draft PR publication are next, not claimed done.
+Exact resulting SHA will be recorded after commit, never invented self-referentially.

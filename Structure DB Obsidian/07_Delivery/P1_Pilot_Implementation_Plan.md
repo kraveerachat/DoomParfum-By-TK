@@ -11,7 +11,17 @@ source_of_truth: "../../README.md"
 
 # P1 Pilot Implementation Plan — After Human Planning Merge
 
-OWNER-APPROVED BOUNDED LOCAL SCOPE; NOT AUTHORIZED TO START IN THIS DOCUMENTATION ROUND OR BEFORE HUMAN PLANNING MERGE. Each future task must verify the owner's merge event and approved
+## Current execution gate
+
+Human Owner merged PR #1 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. IMP-P1-01 is the separately authorized
+local schema implementation in progress/review, with actual evidence in [[IMP-P1-01_Implementation_Evidence]].
+The matrix below remains the approved specification; its current coverage matrix explicitly separates
+DB checks from NOT RUN API/ETL/storage/restore work. IMP-P1-02 must wait for Human Owner merge of 01.
+The historical statement that the planning PR contained no SQL remains true; 01 is a different task.
+Cloud/storage/final retention/RPO/RTO and external provisioning remain deferred; regional rights/samples blocked.
+
+
+OWNER-APPROVED BOUNDED LOCAL SCOPE; Gate P is verified above. Each implementation task still requires its own authorization and Human Merge. Each future task must verify the owner's merge event and approved
 plan SHA, branch from current main, open its own Draft Implementation PR and update Obsidian evidence.
 All criteria below are proposed tests, NOT RUN results. No Dockerfile, Compose, SQL, migration or ETL
 script is included in the planning PR.
