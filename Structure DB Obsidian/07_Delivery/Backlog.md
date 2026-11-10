@@ -10,7 +10,7 @@ tags:
   - delivery
   - backlog
   - tasks
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Product Backlog — DoomParfum By TK
@@ -46,7 +46,7 @@ source_of_truth: "../README.md"
 ### Epic 1: Database & Catalogue Core (Phase P1)
 | Task ID | งานที่ต้องทำ | Requirement ID | สถานะ | ข้อมูลเชื่อมโยง | ขึ้นต่อกัน |
 |---|---|---|---|---|---|
-| **TSK-101** | สร้าง Next.js + PostgreSQL + Drizzle ORM Setup | - | PLANNED | [[Proposed_System_Architecture]] | TSK-008 |
+| **TSK-101** | สร้าง Next.js + PostgreSQL + Drizzle ORM Setup | - | PLANNED | [[Proposed_System_Architecture]] | DPT-PLAN-001 owner merge + IMP-P1-04 evidence |
 | **TSK-102** | สร้าง Database Schema และ Drizzle Migrations | R01, R03 | PLANNED | [[Data_Dictionary_Draft]] | TSK-101 |
 | **TSK-103** | นำเข้า Master Data แบรนด์ไทย 4 แบรนด์หลัก | R22 | PLANNED | [[Brand_Taxonomy]] | TSK-102 |
 | **TSK-104** | พัฒนาระบบค้นหาและกรอง (Explore Screen) | R01, R04, R08 | PLANNED | [[Site_Map_and_Screens]] | TSK-102 |
@@ -100,3 +100,22 @@ source_of_truth: "../README.md"
 ## 4. Change Notes
 
 - `2026-11-10`: แปลงข้อกำหนด R01–R31 เป็น 25 งานย่อยใน Backlog พร้อมระบุ Dependencies
+
+
+## P1 planning and pilot workstream index — 2026-11-10
+
+This dependency sequence refines TSK-101/102/103; those items are not implementation authorization.
+No implementation PR exists. All pilot choices are PROPOSED; the owner must merge the accepted plan.
+
+| Task | Type / branch | Plan dependency | State | PR / checkpoint | Next action |
+|---|---|---|---|---|---|
+| DPT-PLAN-001 | PLAN / plan/p1-data-discovery-schema-foundation | baseline 03481f7066487c44631cb9065899894ee8db71fb | IN PROGRESS | Publication pending; [[DPT-PLAN-001_P1_Data_Foundation]] | Draft PR, owner review |
+| IMP-P1-01 | Local schema/migrations | Owner-merged DPT-PLAN-001 + OD-02 | NOT STARTED | NOT CREATED | Verify merge SHA first |
+| IMP-P1-02 | Sample Python ETL | 01 + OD-01/OD-06 accepted scope | NOT STARTED | NOT CREATED | Licensed sample only |
+| IMP-P1-03 | Image metadata | 01–02 + OD-04 | NOT STARTED | NOT CREATED | Per-asset grant |
+| IMP-P1-04 | Benchmark + independent DB/object restore | 01–03 + OD-05 | NOT STARTED | NOT CREATED | Measure, test, independent review |
+| IMP-P1-05 | Optional managed-host readiness/migration | 04 + OD-03 and separate operation approval | NOT STARTED | NOT CREATED | No provisioning implied |
+
+Pilot task/test breakdown: [[P1_Pilot_Implementation_Plan]]. TSK-103's four Thai brands remain targets,
+not available licensed seed records. Preserve R22 without fabricating product facts or substituting
+Butterfly research for those required brands. P2/P3 schema support does not bring their UI into pilot scope.

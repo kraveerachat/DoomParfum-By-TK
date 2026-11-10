@@ -10,7 +10,7 @@ tags:
   - engineering
   - adr
   - decisions
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Tech Stack and Architecture Decision Records (ADRs) — DoomParfum By TK
@@ -61,7 +61,7 @@ source_of_truth: "../README.md"
 - **Context:** ในช่วงเริ่มต้น ไม่มีชุดข้อมูล Pairwise Labeled Dataset ที่ถูกต้องตามลิขสิทธิ์มากพอที่จะเทรนโมเดล ML
 - **Decision:** เริ่มต้นด้วยอัลกอริทึมเชิงโครงสร้างแบบ Rule-Based (Pyramid + Accords + Evidence)
 - **Consequences:**
-  - *ข้อดี:* อธิบายเหตุผลได้ชัดเจน (Explainable AI), ปราศจาก Hallucination, ควบคุมผลลัพธ์ได้ 100%
+  - *ข้อดี:* อธิบายเหตุผลได้ชัดเจน (Explainable AI), ตรวจสอบเส้นทางการคำนวณได้ แต่ยังต้องทดสอบความถูกต้องของข้อมูลและตรรกะ
   - *ข้อควรระวัง:* ความแม่นยำขึ้นอยู่กับคุณภาพและความสมบูรณ์ของการจัดระเบียบโน้ต
 
 ---
@@ -94,3 +94,59 @@ source_of_truth: "../README.md"
 ## 7. Change Notes
 
 - `2026-11-10`: รวบรวมสรุปการเลือกเทคโนโลยีและร่าง ADR-001, ADR-002
+
+
+## P1 Proposed ADRs — 2026-11-10
+
+These ADRs supplement ADR-001/002 and DEC-008; none is accepted by this PR. Research evidence is
+[[P1_Data_Profiling_Findings]]. Human owner decides; implementation waits for merge and accepted scope.
+
+### ADR-003: Evidence-backed portable relational catalogue
+
+- Status: PROPOSED; DEC-012.
+- Context: missing country/concentration, flat notes, source taxonomies and conflicting note claims
+  contradict a single-source, mandatory-field schema.
+- Alternatives: flatten one publisher into perfumes; JSON-only catalogue; normalized SQL plus claims.
+- Proposal: normalized PostgreSQL plus typed entity registry, field definitions, immutable source
+  observations, explicit canonical selections and conflict memberships. Concentration/edition identifies
+  a perfume profile; volume/SKU identifies packaging. Unknowns remain nullable.
+- Consequences: more joins/claim storage and trigger/transaction tests, but new sources/mappings can be
+  added without replacing canonical IDs or destroying evidence. Core data is provider-independent.
+- Acceptance: owner approves identity/provenance complexity; local migration, wrong-kind/cross-source
+  negative controls and full claim-to-canonical round-trip verified in IMP-P1-01/02.
+
+### ADR-004: Local pilot before managed PostgreSQL hosting
+
+- Status: PROPOSED; DEC-013.
+- Context: no measured database size, runtime or restore evidence exists; free allowance is not capacity proof.
+- Alternatives: Vercel + Supabase; Docker/VPS; other managed PostgreSQL (not evaluated in depth).
+- Proposal: disposable PostgreSQL pilot first; Vercel web + Supabase PostgreSQL candidate afterwards.
+  Keep Python ETL separate from web request lifetimes.
+- Consequences: fewer initial cloud mutations, but pilot and eventual host versions/extensions/connection
+  behavior must be verified; self-hosting adds server/security/backup operations.
+- Acceptance: [[P1_Pilot_Implementation_Plan]] readiness evidence; owner selects region, budget and providers.
+
+### ADR-005: Provider-independent image metadata; storage selection deferred
+
+- Status: PROPOSED; DEC-014.
+- Context: dataset has no images; bottle rights and image sizes are unverified.
+- Alternatives: Supabase Storage, Cloudflare R2 Standard, local/private object service.
+- Proposal: SQL metadata + portable object adapter; choose Supabase for simplicity if capacity fits,
+  R2 if measured storage/egress justifies another provider. No external hotlink as storage strategy.
+- Consequences: independent asset-rights checks, signing and manifest backups; R2 adds integration work,
+  Supabase free storage/egress is smaller. No image acquisition until per-asset grant.
+- Acceptance: metadata/rights/hash/derivative tests and measured object workload; owner approves choice.
+
+### ADR-006: Separate DB and object recovery with Docker exit
+
+- Status: PROPOSED; DEC-015.
+- Context: a database dump/managed DB backup cannot restore missing image bytes.
+- Alternatives: DB-only backups; provider-managed recovery only; independent DB + object exports.
+- Proposal: PostgreSQL logical archive, migration/role/auth mapping, separate encrypted bytes and
+  manifest, rehearsal on fresh PostgreSQL/container + separate object target.
+- Consequences: additional backup cost and consistency boundary, but portable recovery evidence.
+  Proposed RPO 24h/RTO 2h and retention remain owner decisions, not verified service guarantees.
+- Acceptance: full restore, corrupt/missing object and tenant/RLS negative controls; record timings.
+
+Primary technical references and dated costs: [[P1_Storage_Hosting_and_Recovery]]. Source access/reuse
+choices are governed by [[Source_Registry]] and [[Rights_and_Attribution]], not a technology ADR.

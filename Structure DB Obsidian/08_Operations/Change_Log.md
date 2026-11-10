@@ -10,7 +10,7 @@ tags:
   - operations
   - changelog
   - history
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Change Log — DoomParfum By TK
@@ -64,3 +64,19 @@ source_of_truth: "../README.md"
 1. ทุกการปรับเปลี่ยนข้อกำหนด (Requirements), แบบจำลองข้อมูล (ERD/Schema), หรือการตัดสินใจ (Decisions) จะต้องถูกบันทึกในเอกสารนี้เสมอ
 2. ระบุเลขเวอร์ชัน, วันที่, เหตุผล, และรายการข้อกำหนดที่ได้รับผลกระทบ
 3. หากมีข้อขัดแย้งกับเอกสารเดิม ให้ทำบันทึกชี้แจง (Reconciliation Note) ไม่แก้เอกสารเงียบๆ
+
+
+### P1 discovery and foundation proposal — 2026-11-10 / DPT-PLAN-001
+
+Docs-only planning change, not a product/runtime release. Profiled pinned CC BY 4.0 Scento export;
+added research findings, source-to-canonical mapping and observed conflict matrix. Replaced draft data
+contracts with a 44-table logical proposal covering catalogue, provenance/rights/conflicts/staging,
+media/evidence, personal listings/cart/purchases/inventory. Added hosting/object-vs-DB recovery evaluation,
+ADRs 003–006, pilot task/test/readiness plan and canonical planning/task notes.
+
+Reconciled roadmap/status/root overview with actual public repository/bootstrap and two-gate request.
+Aligned domain concentration/packaging and matching-result semantics; corrected public-info/fair-use
+assumptions and required-country/three-note defaults. Preserved existing confirmed requirements and
+proposed matching weights. No raw dataset, code, SQL, cloud configuration, secret, merge or deployment.
+Research gaps/permission constraints remain explicit, especially priority Thai samples, HMNS reuse,
+image acquisition and live API response verification. Exact files/checkpoints: [[DPT-PLAN-001_P1_Data_Foundation]].

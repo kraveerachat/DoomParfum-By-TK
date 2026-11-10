@@ -10,7 +10,7 @@ tags:
   - delivery
   - qa
   - acceptance_criteria
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Acceptance Criteria — DoomParfum By TK
@@ -79,3 +79,12 @@ source_of_truth: "../README.md"
 ## 5. Change Notes
 
 - `2026-11-10`: ร่างเกณฑ์การตรวจรับงานแบบทดสอบได้ครอบคลุม 4 หมวดฟังก์ชันหลัก
+
+
+## P1 foundation pilot acceptance supplement — PROPOSED
+
+Before hosted migration or catalogue rollout, review [[P1_Pilot_Implementation_Plan]] for explicit
+rights, idempotency, EDT/EDP identity, missing/conflicting claims, image metadata/security, tenant/FK
+integrity, measured size and separate database/object restore tests. None ran in the planning PR.
+AC-CAT-02 must truthfully show flat/unknown layers and image placeholders where rights/data are absent;
+AC-CAT-04 remains pending until the four priority Thai brands have real permissioned records.

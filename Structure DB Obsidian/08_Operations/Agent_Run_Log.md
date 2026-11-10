@@ -10,7 +10,7 @@ tags:
   - operations
   - agent
   - audit
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Agent Run Log — DoomParfum By TK
@@ -125,3 +125,47 @@ source_of_truth: "../README.md"
 ## 5. Security & Privacy Declaration
 
 - ไม่มี API Keys, รหัสผ่าน, Token, ข้อมูลส่วนบุคคล, หรือ Raw Session Cookies ถูกบันทึกลงในเอกสารนี้หรือเอกสารใดๆ ใน Vault
+
+
+## RUN-20261110-P1 — Codex planning/research/documentation
+
+This new event supersedes stale next-action text in the historical bootstrap run above; that historical
+record is preserved. Session S1 / task DPT-PLAN-001, date 2026-11-10 Asia/Bangkok.
+Workspace: `C:/Users/User/Documents/ChatGPT/DoomParfum By TK`.
+Base/start SHA: `03481f7066487c44631cb9065899894ee8db71fb`.
+Branch: `plan/p1-data-discovery-schema-foundation`; target main; no prior PR/approved plan/receipt found.
+
+TOOL DECISION: GitHub MCP for repository/read/PR; PowerShell + Git for checkout/docs/validation;
+built-in web for primary-source research; Python standard library for ephemeral profiling and installed
+PyYAML for document parsing. Existing tools/MCP only; no skill/tool/plugin/config installed.
+GIT_WRITE=YES (planning branch only); OBSIDIAN_WRITE=YES; PRODUCTION_MUTATION=NO.
+Apify MCP not exposed: NOT USED, no actor invoked. PlanetScale skill not installed: NOT USED, optional,
+primary PostgreSQL docs used instead; no installer/global changes. No subagents launched.
+
+Execution: initial sandbox Git network failed; scoped elevated clone succeeded. Git switch required
+scoped escalation because .git is read-only in the sandbox. Existing `gh auth status` reported invalid
+token; no account reauthentication/secrets accessed. GitHub connector verified push permission and
+returned no prior PRs. Tools: Git 2.53.0.windows.2, Python 3.11.9, gh 2.97.0, PyYAML 6.0.3.
+
+Acquisition: after reading license/descriptor, fetched six files from Scento source revision
+`086769ecf1add770ea6646bd4d88d39f0e7cddeb` to
+`C:/Users/User/AppData/Local/Temp/doomparfum-p1-research/` only. No raw dataset committed/imported.
+Read-only profile: 1,479 perfumes / 160 houses / 420 materials; hashes/recipe/limits in
+[[P1_Data_Profiling_Findings]]. Cleanup/rollback: these are temporary research copies, no project config;
+remove only that verified temporary directory if no longer needed. No recursive cleanup performed.
+An initial local analysis read failed because sandbox/elevated TEMP resolve differently; corrected to
+the verified host temp path and profiling succeeded. No product-data write occurred.
+
+Bounded official-page and image-license research only; Lattafa terms returned 403, no bypass; Scento
+live portrait request failed through web tool, API runtime NOT VERIFIED. No Fragrantica/Shopee automation,
+image binary download, paid calls, database or deployment. Verified source/use boundaries in
+[[Source_Registry]] / [[Rights_and_Attribution]]. No messages sent to data owners.
+
+Validation checkpoint: changed Markdown frontmatter parsed with PyYAML 6.0.3; wiki/file links resolved;
+fences balanced; ERD/dictionary entity names matched 44/44; `git diff --check` exit 0. These are document
+checks, not SQL or runtime tests. Mermaid relationships manually reviewed; no diagram renderer run.
+Final post-closeout validation, exact file list, Git checkpoint and publication result are reported in
+[[DPT-PLAN-001_P1_Data_Foundation]] and the PR. DB/ETL/restore/benchmark/build tests NOT RUN.
+
+Next: finish documentation checkpoint/receipt, publish one Draft Planning PR, stop for owner review and
+human merge. All source/hosting/schema choices remain PROPOSED. No implementation task started.

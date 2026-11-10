@@ -1,3 +1,14 @@
+---
+id: DPT-VAULT-001
+project: DoomParfum By TK
+type: vault_guide
+status: active
+owner: project
+updated: 2026-11-10
+tags: [doomparfum, documentation]
+source_of_truth: "../README.md"
+---
+
 # DoomParfum By TK — Obsidian Knowledge Base Guide & Conventions
 
 > **Target vault:** `DoomParfum By TK/Structure DB Obsidian/`
@@ -40,7 +51,7 @@ Structure DB Obsidian/
 │   └── My_Cart_and_Ownership.md             # In-App Cart (No Checkout), Ordered, Owned, History
 ├── 03_Data/                                 # สถาปัตยกรรมข้อมูลและธรรมาภิบาล
 │   ├── ERD_Draft.md                         # ผังความสัมพันธ์เอนทิตี (Mermaid ERD)
-│   ├── Data_Dictionary_Draft.md             # พจนานุกรมข้อมูลร่าง 10 เอนทิตีหลัก
+│   ├── Data_Dictionary_Draft.md             # P1 proposed dictionary (44 logical tables, awaiting owner review)
 │   ├── Source_Registry.md                   # ทะเบียนแหล่งข้อมูลภายนอกและสถานะสิทธิ์
 │   ├── Ingestion_and_ETL.md                 # ไปป์ไลน์นำเข้า ทำความสะอาด และตรวจสอบคุณภาพ
 │   ├── Data_Quality_and_Provenance.md       # ธรรมาภิบาลข้อมูล ที่มาของข้อมูลระดับฟิลด์
@@ -101,7 +112,17 @@ source_of_truth: "../README.md"
 ---
 ```
 
-- **Wiki Links:** ใช้ `[[Target_Name]]` สำหรับเชื่อมโยงระหว่างเอกสารภายใน Vault
+- **Wiki Links:** ใช้ `[[Project_Status]]` สำหรับเชื่อมโยงระหว่างเอกสารภายใน Vault
 - **Visuals:** ใช้ Mermaid Diagrams สำหรับผังลำดับขั้นตอน, ERD, และสถาปัตยกรรม
 - **No Private Data / Secrets:** ห้ามใส่ API keys, Tokens, คุกกี้ Shopee หรือข้อมูลส่วนบุคคลลงใน Vault
 - **No Auto-Generated Plugin Bloat:** ไม่ Commit ไฟล์คอนฟิกส่วนตัวของโปรแกรม Obsidian เช่น `.obsidian/workspace*.json`
+
+
+## P1 discovery navigation — PROPOSED, 2026-11-10
+
+- [[P1_Data_Foundation_Plan]] — task map, requirements, acceptance and owner decisions.
+- [[DPT-PLAN-001_P1_Data_Foundation]] — session/tool/Git evidence and exact changed files.
+- [[P1_Data_Profiling_Findings]], [[P1_Source_to_Canonical_Mapping]], [[P1_Data_Conflict_Matrix]].
+- [[P1_Storage_Hosting_and_Recovery]], [[P1_Pilot_Implementation_Plan]].
+
+These refine the bootstrap draft; no final schema/hosting approval or implementation is implied.

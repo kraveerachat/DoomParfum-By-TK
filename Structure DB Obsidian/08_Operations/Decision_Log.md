@@ -10,7 +10,7 @@ tags:
   - operations
   - decisions
   - governance
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
 # Decision Log — DoomParfum By TK
@@ -73,3 +73,18 @@ source_of_truth: "../README.md"
 ## 4. Change Notes
 
 - `2026-11-10`: บันทึกการตัดสินใจตั้งต้น DEC-001 ถึง DEC-009 คงสถานะ Confirmed/Proposed ตามความจริงใน README
+
+
+## P1 planning proposals — 2026-11-10 / DPT-PLAN-001
+
+| ID | Proposal | Status | Context / alternatives / consequence |
+|---|---|---|---|
+| DEC-012 | Evidence-backed normalized SQL, nullable unknowns, concentration/edition scent identity, packaging variants, typed source claims/conflicts | PROPOSED | Real source gaps/collisions invalidate complete flat schema; JSON-only and single-source alternatives considered; more validation/storage complexity; ADR-003 |
+| DEC-013 | Local PostgreSQL pilot before Vercel/Supabase or Docker hosting choice | PROPOSED | No DB size/runtime/restore proof yet; managed vs self-hosted alternatives; host requires measured readiness; ADR-004 |
+| DEC-014 | Portable image metadata; decide Supabase Storage vs R2 after rights/size/traffic evidence | PROPOSED | Source export lacks photos; choose simplicity vs capacity/egress; per-asset permission remains mandatory; ADR-005 |
+| DEC-015 | Independent database and image/object backups, PostgreSQL/Docker restore rehearsal | PROPOSED | DB backups exclude bytes; separate manifests/storage/roles/auth mapping adds operations but tests portability; ADR-006 |
+
+Detailed ADR context/options/consequences and acceptance: [[Tech_Stack_and_ADRs]]. Owner decisions
+OD-01..OD-06 remain open in [[P1_Data_Foundation_Plan]]. No proposal is accepted through this log.
+The owner's current request authorizes only documentation research, planning branch/push/Draft PR.
+No historical bootstrap exception is reused and no implementation/production action is authorized.

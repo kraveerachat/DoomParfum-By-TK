@@ -9,58 +9,46 @@ tags:
   - doomparfum
   - status
   - planning
-source_of_truth: "../README.md"
+source_of_truth: "../../README.md"
 ---
 
-# Project Status — DoomParfum By TK
+# Project Status — P1 Planning Review
 
-> **Current Phase:** `P0 — Documentation & Knowledge Base Bootstrap`
-> **Updated:** `2026-11-10` (Asia/Bangkok)
-> **Source of Truth Baseline:** `../README.md` (v0.2.0-planning)
+Updated: 2026-11-10, Asia/Bangkok. P0 baseline exists at `03481f7066487c44631cb9065899894ee8db71fb`.
+P1 planning is in progress on `plan/p1-data-discovery-schema-foundation`; no implementation is authorized.
+Canonical task: [[DPT-PLAN-001_P1_Data_Foundation]]; specification: [[P1_Data_Foundation_Plan]].
 
----
+| Workstream | Actual state | Next gate |
+|---|---|---|
+| P0 documentation bootstrap | Baseline committed on main; no historical planning PR/receipt found | Preserve one-time bootstrap exception; do not reuse it |
+| P1 discovery/schema/hosting planning | Research and proposed documents prepared; Draft PR publication pending | Owner review and merge of this plan |
+| P1 local schema/ETL/image/restore pilot | NOT STARTED | Merged plan + explicit accepted decisions/rights |
+| P1 web catalogue | NOT STARTED | Local foundation evidence and separate implementation PR |
+| P2 matching / P3 cart / P4 dashboard | NOT STARTED | Foundation and their own scoped implementation tasks |
+| P5 AI research / P6 expansion | NOT STARTED | Rights, data coverage and accepted feature scope |
 
-## 1. Executive Summary
+## Verified findings and limitations
 
-โครงการ **DoomParfum By TK** อยู่ในระยะ **P0 (Documentation & Knowledge Base Architecture)** โดยมุ่งเน้นการสร้างฐานข้อมูลเอกสารที่มีโครงสร้างใน Obsidian Vault เพื่อแปลงวิสัยทัศน์และข้อกำหนดเชิงฟังก์ชัน (R01–R31) ให้เป็นแบบจำลองทางโดเมน ข้อมูล การจับคู่กลิ่น UX และข้อกำหนดทางวิศวกรรมที่พร้อมต่อยอดสู่การพัฒนาจริง
+Licensed pinned Scento export profiled: 1,479 perfumes, 160 houses, 420 materials. 91 flat-only note
+profiles, 251 missing concentrations, two missing house countries, one name collision with distinct
+EDP/EDT profiles. No Thai/Indonesian houses in that export. Official regional pages reveal field shape,
+not import grants; four priority Thai product samples remain missing. API docs/spec reviewed, bounded
+live portrait request failed. No image binary, database, ETL runtime, benchmark or restore test created/run.
 
-ยังไม่มีการเขียนโค้ดระบบจริง (Implementation) ไม่มีการ Deploy และไม่มีการสร้าง GitHub Actions อัตโนมัติ โดยรอการอนุมัติสถาปัตยกรรมและเวิร์กโฟลว์ของผู้ใช้
+## Open owner decisions
 
----
+OD-01 seed source/license/attribution; OD-02 concentration/edition identity and claim model; OD-03 provider,
+region and budget; OD-04 asset licenses and Supabase Storage vs R2; OD-05 backup retention/RPO/RTO;
+OD-06 permissioned regional sample scope. All architecture ADRs remain PROPOSED.
 
-## 2. Phase Breakdown & Current Status
+## Baseline reconciliation
 
-| Phase | Description | Status | Progress | Blockers / Dependencies |
-|---|---|---|---|---|
-| **P0** | **Documentation & Knowledge Base** | **COMPLETED** | 100% | Initial Baseline Bootstrap สำเร็จ เตรียมสู่ First Planning PR |
-| **P1** | Core Foundation & Catalogue Schema | NOT STARTED | 0% | ขึ้นกับ Planning PR ของ P1 และการตรวจสิทธิ์ Data Sources |
-| **P2** | Scent DNA Matching Engine | NOT STARTED | 0% | ขึ้นกับการสรุปเกณฑ์น้ำหนักการจับคู่กลิ่น |
-| **P3** | My Cart & Ownership Tracking | NOT STARTED | 0% | ขึ้นกับ P1 (Schema) และ P2 |
-| **P4** | Collection Dashboard & Analytics | NOT STARTED | 0% | ขึ้นกับ P3 (Purchase/Inventory Data) |
-| **P5** | AI Research Assistant & Ingestion | NOT STARTED | 0% | ขึ้นกับข้อตกลงเรื่อง Rights และ API limits |
-| **P6** | Expansion (Thai/Middle East/Indo) | NOT STARTED | 0% | ขึ้นกับ P5 และการรวบรวมแคตตาล็อก |
+The baseline roadmap/status/root README contained stale workflow/repository-not-yet-available text even
+though AGENTS/workflow and a real public repository were committed. This PR records actual Git evidence
+and follows the owner's two-gate request; it does not mark proposed governance or technical decisions
+accepted. No previous merged Planning PR, task note or immutable receipt was found at the starting SHA.
 
----
+## Next action
 
-## 3. Current Blockers & Pending Decisions
-
-1. **GitHub & Workflow Specification (RESOLVED FOR BOOTSTRAP):**
-   - ได้รับเอกสารเวิร์กโฟลว์ `DEVELOPMENT_WORKFLOW.md` และกำหนด `AGENTS.md` เรียบร้อยแล้ว
-   - การ Push Initial Documentation Baseline ขึ้นสู่ `origin/main` เป็น **ข้อยกเว้นที่ได้รับอนุมัติเพียงครั้งเดียว** (DEC-011) เนื่องจาก Remote ว่างเปล่า
-   - งานหลังจากนี้ต้องเปิดผ่าน Planning PR ตาม Two-Gate Workflow ปกติ
-   - ดูเอกสาร: [[GitHub_and_Workflow_PENDING]]
-2. **Data Source Licensing & Rights (PENDING REVIEW):**
-   - แหล่งข้อมูลเปิด เช่น Scento Dataset, Fragrantica Discovery, Openverse ต้องผ่านการทดสอบและตรวจสอบนโยบายสิทธิ์การใช้งาน
-   - ดูเอกสาร: [[Source_Registry]] และ [[Rights_and_Attribution]]
-3. **Similarity Weight Confirmation (PROPOSED):**
-   - สูตรน้ำหนักคะแนนความคล้าย 40/25/15/20 (Notes / Accords / Family / Evidence) ยังเป็นร่างข้อเสนอ
-   - ดูเอกสาร: [[Scent_Matching_Spec]]
-
----
-
-## 4. Next Steps & Actions
-
-1. ตรวจสอบความครบถ้วนของเอกสารทั้งหมดใน `Structure DB Obsidian/`
-2. ให้ผู้ใช้ตรวจสอบ [[Requirements_Register]], [[Domain_Model]], [[ERD_Draft]], [[My_Cart_and_Ownership]]
-3. รอผู้ใช้ส่งแนวทาง/ตัวอย่างเวิร์กโฟลว์การทำงาน GitHub/ChatGPT เพื่อปลดล็อก [[GitHub_and_Workflow_PENDING]]
-4. เริ่มเตรียมสภาพแวดล้อม P1 (Next.js + PostgreSQL + Drizzle ORM) เมื่อผู้ใช้อนุมัติ
+Complete documentation validation and Draft PR publication, then owner review. Do not implement,
+provision, deploy, merge or enable auto-merge. Final PR/SHA/evidence will be recorded in the task note.

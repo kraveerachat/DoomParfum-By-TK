@@ -29,7 +29,7 @@
 
 ### สถานะโปรเจกต์
 
-**Planning / Documentation Bootstrap** — เอกสารและโครงสร้างการทำงานเป็นการเตรียมแผน **ยังไม่ใช่เว็บที่พัฒนาและเปิดใช้งานแล้ว**; เทคโนโลยีเช่น Next.js, TypeScript, PostgreSQL, Drizzle และ Docker เป็นเพียงข้อเสนอที่ปรับเปลี่ยนได้หลังการทบทวนแผน
+**P1 Data Discovery / Planning Review** — เอกสารและโครงสร้างการทำงานเป็นการเตรียมแผน **ยังไม่ใช่เว็บที่พัฒนาและเปิดใช้งานแล้ว**; เทคโนโลยีเช่น Next.js, TypeScript, PostgreSQL, Drizzle และ Docker เป็นเพียงข้อเสนอที่ปรับเปลี่ยนได้หลังการทบทวนแผน
 
 ### วิธีทำงานและเอกสาร
 
@@ -335,7 +335,7 @@ DoomParfum By TK/
 
 **GitHub policy ขณะนี้:**
 - [CONFIRMED] มีแผนเก็บทั้ง Source Code และ Obsidian Markdown บน GitHub
-- [OPEN] ยังไม่กำหนด Repository (ชื่อ/URL/visibility), branch strategy, PR rules, push permissions, CI, agent workflow
+- [VERIFIED 2026-11-10] Public repository: https://github.com/kraveerachat/DoomParfum-By-TK; initial documentation baseline `03481f7`. This authorized P1 task uses a docs-only `plan/` branch and Draft PR; Human Owner merges. CI/hosting remain unimplemented.
 - [PROPOSED] เก็บเอกสารและโค้ดใน repository เดียวก่อนเพื่อ trace changes; ประเมิน repo แยกภายหลัง
 - [PROPOSED] Commit เฉพาะ docs/source; ไม่ commit `.env`, API keys, session/cookies, order references, private user exports, copyrighted content/raw scrape, หรือข้อมูลที่ไม่มีสิทธิ์เผยแพร่
 - **ห้าม Agent push / create repo / sync vault โดยอัตโนมัติจนกว่าผู้ใช้ระบุ Workflow และอนุญาต**
@@ -364,7 +364,7 @@ DoomParfum By TK/
 4. ราคา/การมีขาย: ต้องเก็บเฉพาะ Shopee หรืออนุญาตแหล่งซื้ออื่น?
 5. Purchase History ต้องมีรายละเอียดขั้นต่ำอะไรบ้าง? (`date`, `price`, `volume`, `seller` เป็น optional ใน V1)
 6. เลือก dataset/API ใดเมื่อทดสอบสิทธิ์ใช้งานและ coverage ของ Thai/Arabic/Indonesian brands แล้ว?
-7. GitHub repo, Obsidian sync, Coding Agent, ChatGPT workflow และ commit/PR rules — **รอไฟล์ workflow ตัวอย่างจากผู้ใช้**
+7. Workflow exists in `AGENTS.md` / `DEVELOPMENT_WORKFLOW.md`; proposed governance acceptance and future CI/tool setup remain owner decisions. This P1 request authorizes its planning branch/push/Draft PR only.
 
 ---
 
@@ -374,7 +374,7 @@ DoomParfum By TK/
 2. วาง `Structure DB Obsidian/README.md` ใน vault ที่ผู้ใช้จัดเตรียม
 3. ส่งไฟล์ README ฝั่ง Obsidian ให้ Agent อ่าน แล้วสั่งสร้าง Vault Structure และ Markdown ตามคำสั่งในเอกสารนั้น
 4. Review เอกสาร `Requirements`, `Domain_Model`, `Data_Dictionary`, `Scent_Matching`, `My_Cart_and_Ownership`, `Data_Sources` ก่อน implement
-5. เมื่อผู้ใช้ส่ง Workflow ตัวอย่างของ ChatGPT/Agent ให้เพิ่มแผน GitHub + Automation โดยใช้ ADR
+5. Review the P1 planning documents and proposed ADRs; merge the accepted Planning PR before any implementation. No automation setup is authorized by this plan.
 6. **ยังไม่สร้างระบบ Checkout และยังไม่เริ่ม Scrape แหล่งข้อมูลที่ไม่มีสิทธิ์**
 
 ### References to evaluate (ไม่ใช่การยืนยันความถูกต้องหรือสิทธิ์ของทุกแหล่ง)
@@ -388,3 +388,16 @@ DoomParfum By TK/
 ---
 
 **Maintenance contract:** เมื่อแก้ Scope / Feature / Data Model / Ranking / Tooling ให้แก้ README ที่เกี่ยวข้อง, Update Obsidian decision/changelog, และเปิดคำถามที่ยังไม่ยืนยันไว้ชัดเจน การแก้เอกสารไม่เท่ากับอนุมัติให้ Deploy/Push/สืบค้นข้อมูลอัตโนมัติ
+
+
+### P1 foundation planning — PROPOSED, 2026-11-10
+
+[Planning specification](Structure%20DB%20Obsidian/07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md)
+and [profiling findings](Structure%20DB%20Obsidian/03_Data/P1_Data_Profiling_Findings.md) refine the bootstrap
+schema: concentration/edition-specific scent profiles, packaging variants, nullable unknown fields,
+flat notes and field-level source/conflict/rights evidence. A pinned CC BY 4.0 Scento export was profiled;
+regional coverage and image rights remain incomplete. No raw dataset is committed.
+
+Vercel, Supabase PostgreSQL/Storage, R2, Python ETL and Docker are evaluated alternatives, all PROPOSED.
+A local schema/ETL/image/size/independent DB-and-object restore pilot must pass before hosted adoption.
+No code, production database, cloud project or deployment is created by this planning PR.
