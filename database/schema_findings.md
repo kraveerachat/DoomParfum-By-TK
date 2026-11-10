@@ -5,7 +5,7 @@ application, matching algorithm, source grant, semantic note merge or image-lice
 
 | ID | Draft ambiguity / implementation limit | Local contract and test / remaining gate |
 |---|---|---|
-| SF-01 | Cross-row CHECKs cannot establish subtypes, whole-field materialization or conflict cardinality | Real FKs plus deferred final-row validators, both parent/child transitions and deletions. All 47 tables participate. Serial READ COMMITTED writes prevent write skew; narrower locks/performance are later work. |
+| SF-01 | Cross-row CHECKs cannot establish subtypes, whole-field materialization or conflict cardinality | Real FKs plus deferred final-row validators, both parent/child transitions and deletions. All 47 tables participate. Serial READ COMMITTED writes prevent write skew; global scans are coalesced by additive008; narrower impact graphs/locks remain later work. |
 | SF-02 | Dictionary's shared canonical review state was implicit on several subtype rows | Explicit review_status on brands/notes/accords/variants/relations, in addition to perfumes. Draft type fixtures are not published. Populated approved source scalars require retained selections; application UUID/slug/scheme/code are metadata. |
 | SF-03 | Field-path/type and materialization representations were not exhaustive | Fixed field allowlist/mapping local-v1. Scalar paths equal explicit column names; notes.<layer> are whole ordered string arrays. Aliases are string arrays; tags/usage are arrays of scheme/code or scheme/label objects; families.<role> is a scheme/code object; accords are objects containing accord_id/strength in a reviewed array. Whole set cardinality and membership/source checks apply. No arbitrary field-to-SQL execution. |
 | SF-04 | Source occurrence identity differs from canonical note identity | Raw JSON arrays + locator/key/transform remain append-only; exact replay may DO NOTHING only after deterministic-output validation. Changed extraction under the same identity fails. Within-layer repeated lists and alias ambiguity block selection/materialization, remain review/quarantine. Canonical join uniqueness stays unchanged. |
@@ -39,3 +39,18 @@ Currency is a versioned local allowlist domain (USD/THB/IDR/EUR/GBP/AED/OMR/SAR/
   production migration is rewritten. After owner merge, change SQL only through new migrations.
 - Every direct SQL/migrate/recreate operation rechecks a local named-pipe/Unix Docker endpoint before any
   engine connection. Context reconfiguration to TCP fails closed; no host context/settings are changed.
+
+## Published PR #2 performance correction — starting3d377e0
+
+SF-11: Row-level deferred triggers repeated complete model/image scans for every affected row.
+Additive008 retains complete coverage and coalesces scans through protected xid8/generation state.
+After-statement scheduling also cleans no-op insert attempts and prevents pre-write validation if the
+internal queue is forced IMMEDIATE. Every later dirty epoch re-arms checks; both validators must succeed
+before its state is removed. Native transaction/savepoint semantics restore dirty state on rollback.
+No FK/RLS/rights/conflict/materialization condition or y_active_row gate is removed.
+
+Five bounded before/after synthetic cases and ten transaction/security regression tests are recorded in
+Obsidian IMP-P1-01_Performance_Correction and database/evidence/performance_{before,after}.json.
+Full suite79/79 passes. Full scans per dirty epoch, O(row) marker/dispatcher overhead and global writer
+serialization remain. No claim of full-dataset ETL throughput, broad capacity or production readiness.
+Published001–007 and the original immutable implementation receipt remain unchanged.

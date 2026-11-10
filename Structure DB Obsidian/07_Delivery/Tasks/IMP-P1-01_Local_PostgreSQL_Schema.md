@@ -2,7 +2,7 @@
 id: IMP-P1-01
 project: DoomParfum By TK
 type: task
-status: ready-for-review
+status: in-progress
 owner: project
 updated: 2026-11-11
 tags: [doomparfum, implementation, postgres]
@@ -104,3 +104,19 @@ TOOL EXECUTION REPORT: existing GitHub/Git/PowerShell/Python/Docker, ecc:postgre
 primary docs and independent reviewer used; no installation/host/account/cloud/production changes.
 Exact changed-file manifest: database/evidence/documentation_checks.json. .local raw-derived details,
 credentials and test logs ignored; no private data/dumps/backups committed. PRODUCTION_MUTATION=NO.
+
+
+## S2 — Performance Review Correction / IN PROGRESS / 2026-11-11
+
+START/REVIEWED_PR_HEAD=3d377e0d78ec3af86e4c6ca03302b633c4ff11a7. Existing PR #2 verified OPEN/DRAFT;
+same branch impl/p1-01-local-postgres-schema; tree clean, origin/main bffb2fa; PR #1 merged verified.
+Current owner explicitly authorizes bounded synthetic performance testing and same-PR correction.
+Plan: measure25/100/250 draft synthetic records with actual deferred flush/call counts, add008 correction
+migration if confirmed (do not edit published001–007), preserve every invariant/dynamic active-rights check,
+add transaction-mode/no-op/savepoint/rollback/concurrency/privilege regressions, rerun full suite and
+independent exact-source review, update evidence/docs/PR, non-forced branch push. No new PR/receipt.
+Original immutable implementation receipt is historical and will remain byte-identical.
+TOOLS: existing GitHub/Git/PowerShell/Python/Docker/PostgreSQL and primary PG16 docs; independent reviewer.
+No install/host/cloud/production mutation, raw/private dataset publication or IMP-P1-02 runtime.
+Performance DB uses disposable dpt_migration_probe only; 768MiB/2CPU task container, loopback only.
+All fixtures synthetic and clearly marked; no capacity/production benchmark claim.

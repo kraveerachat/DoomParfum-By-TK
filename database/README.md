@@ -43,9 +43,10 @@ volume for review. Removing that volume is a separate explicit cleanup operation
 | 005_contract_functions.sql | Scope/claim/reviewer/materialization and immutable evidence validators |
 | 006_media_and_deferred_contracts.sql | Asset lineage/use/revocation, final-state triggers and FK indexes |
 | 007_security_and_field_contract.sql | RLS/grants/invoker views, fixed field schema; no product seeds |
+| 008_coalesced_deferred_validation.sql | Protected per-transaction dirty generations; coalesced complete deferred checks |
 
 There are **47 logical tables in `dpt`**. The separate infrastructure ledger
-`dpt_ops.schema_migrations` is not counted as a domain table. `schema_contract.json` maps logical names
+`dpt_ops.schema_migrations` and `dpt_ops.validation_pending` are not counted as domain tables. `schema_contract.json` maps logical names
 to dependency groups. Every migration is transactional and canonical UTF-8/LF checksum-pinned after application; a failed
 migration leaves neither its DDL/data nor its ledger entry. Replays are no-ops. Edited applied files
 are rejected; use a new migration after merge. Recreate tests provide the disposable reset path;
@@ -97,7 +98,7 @@ whole-field format, normalization, validation and output-license contracts.
 
 Live tests and coverage are documented in the Obsidian implementation evidence and task note. All
 OBS/ACL/IMG/REC specifications have a DB-vs-API/storage/restore breakdown. No HTTP API, cache/export,
-object proxy, real image bytes, SSRF/MIME decoder, ETL/importer, benchmark or independent DB/object restore
+object proxy, real image bytes, SSRF/MIME decoder, ETL/importer or independent DB/object restore
 is claimed. Shared RLS primitives are tested locally; product-facing shared mode stays disabled.
 IMP-P1-02 starts only after Human Owner reviews and merges this implementation PR. Cloud providers,
 storage, regional imports and final retention/RPO/RTO remain deferred/blocked as recorded in OD-01..06.
@@ -107,3 +108,21 @@ Primary implementation references: [PostgreSQL 16 constraints](https://www.postg
 [safe function execution](https://www.postgresql.org/docs/16/sql-createfunction.html).
 
 All numeric amount/measurement fields reject NaN/infinities; unknowns stay NULL. Direct operations validate the local Docker endpoint each time, not only at start.
+
+## Performance review correction — PR #2
+
+Published migrations001–007 remain unchanged. Additive008 keeps every row constraint trigger and both
+complete global validators, coalescing expensive scans once per dirty epoch. Private xid8-keyed state
+is dirtied before rows and scheduled after statements; successful validation clears only its generation.
+Later writes, failed flushes and savepoint rollback cannot reuse a stale clean flag. No editable GUC or
+client-accessible queue is trusted. All original active-rights checks and writer serialization remain.
+
+`python database/performance.py --phase before` / `--phase after` use only disposable dpt_migration_probe
+and labeled synthetic fixtures, capped at250 records with45s statement timeouts. Run sequentially with
+`python database/verify.py`: both use that probe. Natural-COMMIT evidence in
+[evidence/performance_before.json](evidence/performance_before.json) and
+[evidence/performance_after.json](evidence/performance_after.json) shows250 INSERT records5.841950s→0.051123s,
+500→1 calls each to validate_model/validate_images. Dispatcher callbacks remain O(row events + statements).
+One run per case is not a capacity estimate. Full regression79/79 passed; exact source hashes and timings
+are in evidence/test_results.json. Full-model scans per dirty epoch, marker MVCC/WAL overhead, deferred
+queues and global writer serialization remain limits. Broader IMP-P1-04 capacity/restore work is NOT RUN.

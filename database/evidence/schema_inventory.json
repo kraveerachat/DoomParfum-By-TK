@@ -3071,7 +3071,7 @@
   ],
   "rls_policies": 203,
   "domain_checks": 5,
-  "user_triggers": 196,
+  "user_triggers": 243,
   "server_version": "16.15 (Debian 16.15-1.pgdg13+2)",
   "server_encoding": "UTF8",
   "not_null_columns": 396,
@@ -3112,6 +3112,10 @@
     {
       "name": "007_security_and_field_contract.sql",
       "sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
+    },
+    {
+      "name": "008_coalesced_deferred_validation.sql",
+      "sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
     }
   ]
 }

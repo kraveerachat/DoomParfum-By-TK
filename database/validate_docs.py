@@ -87,6 +87,11 @@ def main():
     retained=[receipt,*['Structure DB Obsidian/03_Data/'+v for v in ['P1_Data_Profiling_Findings.md','P1_Source_to_Canonical_Mapping.md','P1_Data_Conflict_Matrix.md']]]
     for name in retained:
         if git('hash-object',name)!=git('rev-parse','origin/main:'+name):errors.append('Historical evidence changed: '+name)
+    published_head='3d377e0d78ec3af86e4c6ca03302b633c4ff11a7'
+    published=['Structure DB Obsidian/08_Operations/Receipts/2026-11-11_000730_IMP-P1-01_Local_PostgreSQL.md']
+    published += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'database/migrations').glob('00[1-7]_*.sql'))]
+    for name in published:
+        if git('hash-object',name)!=git('rev-parse',published_head+':'+name):errors.append('Published migration/receipt changed: '+name)
     # OD approval rows must remain identical in log and planning spec.
     rows=[]
     for name in ['08_Operations/Decision_Log.md','07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md']:
@@ -97,6 +102,7 @@ def main():
     result={'task':'IMP-P1-01','markdown_files':len(markdown),'parsed_frontmatters':frontmatter,'logical_table_parity':len(expected),
             'owner_decisions_unchanged_matching':len(rows[0]),'secret_pattern_candidates':sum('secret pattern' in e for e in errors),
             'historical_evidence_hashes_unchanged':not any('Historical evidence' in e for e in errors),'errors':errors,
+            'published_migrations_and_implementation_receipt_unchanged':not any('Published migration/receipt' in e for e in errors),
             'limits':['No Mermaid rendering','Common secret patterns/path scan only; not a comprehensive security audit','External web URLs not re-fetched by this local link check'],
             'changed_paths':paths}
     print(json.dumps(result,ensure_ascii=False,indent=2))
