@@ -82,3 +82,8 @@ Human Owner reviews/merges the Planning PR before any new code. Do not merge on 
 
 ## Post-preflight Git reconciliation — 2026-11-11
 The old main SHA bffb2fab1918dc5221a6c5da7920168bcae263ca was the **PR #1 merged foundation at session start**. PR #2 subsequently merged at 2026-11-11 03:53 Bangkok, yielding current main `9636ee740cdcd3d60633ac11745366814d1af05c`. PR #2 delivers local database/schema work only; it is not evidence that the licensed 1,479-row Scento ETL, regional acquisition, source adapters or deployment are completed. This docs-only planning proposal is reconciled on top of current main; no changes to PR #2 were made.
+
+
+## Owner scope extension — 2026-11-11 (PROPOSED, not implemented)
+
+New owner requirement: searchable product-model breadth across all perfume models discoverable from individually approved sources, then progressive full Notes/Accords/media enrichment, evidence-led reference-vs-alternative/Dupe matching and country/brand/notes search. See [[DPT-PLAN-002_Catalogue_Coverage_Images_Matching_Addendum]]. Preserve original focused-ingestion as a decision to reconcile via NEW-07 rather than silently replacing it. NEW-08..11 cover scoring separation, completeness, per-image rights and reviewed pairwise claims. Preliminary local pinned Scento sample: 12 records/84 note occurrences; **no PostgreSQL import or images acquired**. Gate P and source grants remain required.
