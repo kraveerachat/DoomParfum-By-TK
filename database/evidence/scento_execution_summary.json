@@ -1,0 +1,161 @@
+{
+  "task": "IMP-P1-02",
+  "checked_at_utc": "2026-11-11T14:30:29.899688+00:00",
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "source_license": "CC-BY-4.0",
+  "attribution": "Scento — https://www.scento.com/perfume-database",
+  "runs": {
+    "pilot_first": {
+      "external_evidence_path": "08_OUTPUTS_APPROVED/implementation/execution/pilot_first.json",
+      "evidence_sha256": "7affa6eda08fb88ee657cf65f3a23bf94eca9382f912c44d7d1f861118cdb87e",
+      "catalogue_perfumes": 12,
+      "approved_perfumes": 11,
+      "batch_accounting": {
+        "perfumes": 12,
+        "source_rows": 75,
+        "review_perfumes": 1,
+        "promoted_perfumes": 11,
+        "quarantined_perfumes": 0
+      },
+      "raw_note_occurrences": 93,
+      "new_source_records": 75,
+      "new_staging_records": 75,
+      "inventory": {
+        "notes": 58,
+        "brands": 5,
+        "perfumes": 12,
+        "perfume_notes": 80,
+        "source_records": 75,
+        "staging_records": 75,
+        "ingestion_batches": 1,
+        "validation_results": 300,
+        "entity_source_links": 75,
+        "source_observations": 134,
+        "canonical_selections": 120
+      },
+      "matching_eligible_count": 0,
+      "unrecorded_fields": [
+        "source_code_sha256",
+        "executed_at_utc",
+        "local_harness_wall_seconds"
+      ]
+    },
+    "pilot_replay": {
+      "external_evidence_path": "08_OUTPUTS_APPROVED/implementation/execution/pilot_replay.json",
+      "evidence_sha256": "5ffd4b6c65a50635c1e678a81fb9504a187321bb0075dda7bc2e340e6c2ed456",
+      "catalogue_perfumes": 12,
+      "approved_perfumes": 11,
+      "batch_accounting": {
+        "perfumes": 12,
+        "source_rows": 75,
+        "review_perfumes": 1,
+        "promoted_perfumes": 11,
+        "quarantined_perfumes": 0
+      },
+      "raw_note_occurrences": 93,
+      "new_source_records": 0,
+      "new_staging_records": 0,
+      "inventory": {
+        "notes": 58,
+        "brands": 5,
+        "perfumes": 12,
+        "perfume_notes": 80,
+        "source_records": 75,
+        "staging_records": 75,
+        "ingestion_batches": 1,
+        "validation_results": 300,
+        "entity_source_links": 75,
+        "source_observations": 134,
+        "canonical_selections": 120
+      },
+      "matching_eligible_count": 0,
+      "source_code_sha256": "c90da7f04f6454a70fc4b46064f62b2419501778ef74099780204d3bd9ee69b5",
+      "executed_at_utc": "2026-11-11T14:06:27.273586+00:00",
+      "local_harness_wall_seconds": 0.781,
+      "unrecorded_fields": []
+    },
+    "full_first": {
+      "external_evidence_path": "08_OUTPUTS_APPROVED/implementation/execution/full_first.json",
+      "evidence_sha256": "b4d5adadb2c89f2b6bd9686c6dc1088f57fd20e9731e3397df1815a8813774a3",
+      "catalogue_perfumes": 1479,
+      "approved_perfumes": 1435,
+      "batch_accounting": {
+        "perfumes": 1479,
+        "source_rows": 2059,
+        "review_perfumes": 44,
+        "promoted_perfumes": 1435,
+        "quarantined_perfumes": 0
+      },
+      "raw_note_occurrences": 12448,
+      "new_source_records": 1984,
+      "new_staging_records": 2059,
+      "inventory": {
+        "notes": 420,
+        "brands": 160,
+        "perfumes": 1479,
+        "perfume_notes": 11972,
+        "source_records": 2059,
+        "staging_records": 2134,
+        "ingestion_batches": 2,
+        "validation_results": 8536,
+        "entity_source_links": 2059,
+        "source_observations": 10489,
+        "canonical_selections": 8845
+      },
+      "matching_eligible_count": 0,
+      "source_code_sha256": "c90da7f04f6454a70fc4b46064f62b2419501778ef74099780204d3bd9ee69b5",
+      "executed_at_utc": "2026-11-11T14:15:58.744963+00:00",
+      "local_harness_wall_seconds": 452.016,
+      "unrecorded_fields": []
+    },
+    "full_replay": {
+      "external_evidence_path": "08_OUTPUTS_APPROVED/implementation/execution/full_replay.json",
+      "evidence_sha256": "16e5e3bc812a5102e3818431b907a6798b0b252c413034935b8b0a65f405ccc8",
+      "catalogue_perfumes": 1479,
+      "approved_perfumes": 1435,
+      "batch_accounting": {
+        "perfumes": 1479,
+        "source_rows": 2059,
+        "review_perfumes": 44,
+        "promoted_perfumes": 1435,
+        "quarantined_perfumes": 0
+      },
+      "raw_note_occurrences": 12448,
+      "new_source_records": 0,
+      "new_staging_records": 0,
+      "inventory": {
+        "notes": 420,
+        "brands": 160,
+        "perfumes": 1479,
+        "perfume_notes": 11972,
+        "source_records": 2059,
+        "staging_records": 2134,
+        "ingestion_batches": 2,
+        "validation_results": 8536,
+        "entity_source_links": 2059,
+        "source_observations": 10489,
+        "canonical_selections": 8845
+      },
+      "matching_eligible_count": 0,
+      "source_code_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "executed_at_utc": "2026-11-11T14:28:46.510401+00:00",
+      "local_harness_wall_seconds": 291.219,
+      "unrecorded_fields": []
+    }
+  },
+  "full_replay_inventory_identical": true,
+  "holds": {
+    "duplicate_note_profiles": 43,
+    "external_conflict_profiles": 1,
+    "total": 44
+  },
+  "database_readback": "1479 total;1435 approved;0 matching eligible; full inventory independently read back",
+  "limits": [
+    "Single local import rehearsal452.016s; replay291.219s overlapped regression; neither is controlled capacity evidence",
+    "First full/pilot replay used c90da7...; current-source full replay used a9a392...; original pilot first did not record source hash/time",
+    "Full row-level triggers/global final validators/serializer remain; do not infer subsecond performance from prior synthetic250 benchmark",
+    "43 duplicate-list profiles and Khamrah remain draft, raw occurrences preserved",
+    "0 acquired image bytes/verified Dupe pairs; no matching/API/UI/cloud/production"
+  ],
+  "raw_records_in_public_evidence": false
+}

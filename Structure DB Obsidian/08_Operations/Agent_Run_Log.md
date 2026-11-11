@@ -362,3 +362,31 @@ Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge 
 ## RUN-20261111-PLAN002-S1 — ChatGPT research and docs-only planning
 TOOL DECISION: GitHub connector for current repo/PR/branch/docs-only change; web read-only primary-source research; Python local standard CSV/audit, artifact_tool for owner workbook. GitHub remote is work surface; research pack created in ChatGPT sandbox, not on owner Windows workspace. GIT_WRITE=YES scoped planning branch only; OBSIDIAN_WRITE=YES via PR; PRODUCTION_MUTATION=NO. No tool installer, scraper, cloud provisioning or paid API used.
 Git preflight main `bffb2fab1918dc5221a6c5da7920168bcae263ca`, PR #1 MERGED, PR #2 MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); licensed ETL and new-source adapter work remain separate. Parsed 220 seed candidates; observed 15 first-party publisher/brand pages; source content/asset automation permission NOT GRANTED. No runtime/db/ETL tests. Work products: planning spec, registry/rights/metric/identity/source-adapter docs, ADR proposal, task, owner decision ledger and handoff. Documentation PR and final commit references are reported in review surface after creation; Human Owner merges, not agent.
+
+## RUN-20261111-IMP-P1-02 — Master Handoff execution
+
+TOOL DECISION: existing GitHub MCP for live PR facts/Draft publication; PowerShell/Git2.53.0/Python3.11.9
+for source/index/replay/tests/package; existing Docker Desktop/PostgreSQL16.15 for guarded private local
+test/pilot only. Built-in web primary-source research by explicitly requested parallel researchers.
+External input ZIP81 file hashes/CRC/path safety verified; full master prompt read. Fresh maina908711
+and PRs1/2/3 merged; PR4 Draft preserved. GIT_WRITE=YES task branch; OBSIDIAN_WRITE=YES;
+PRODUCTION_MUTATION=NO. No optional skill/install needed; tool registry/usage notes NOT FOUND, so
+meaningful choices recorded here/task rather than invented as existing registry files.
+
+Requested codex mcp list actually ran (codex-cli0.144.6). Firecrawl connector read-only authenticated
+smoke test succeeded; redundant codex mcp add/login NOT USED. No global config/auth/install change,
+paid research job or Firecrawl search credit consumption. Existing Desktop was started hidden and
+task container started; only disposable test DBs recreated, persistent pilot created/migrated, not reset.
+
+Parent owns D2/D4/DB/progress/package; isolated D1 brand and D5/D7 media/evidence researchers and
+independent gate/source auditor. Source/mapping scope,42 original hashes, full CSV/JSONL and deterministic
+outputs checked. Four external utility corrections22/22 tests; focused19/19 and full98/98 pass;
+current-source full replay adds0rows, matching0. Independent reviewer inspects actual hashes/evidence
+and nine pure read-only assertions, no DB/test rerun claimed. No blocking source defect reported.
+Development failures/corrections and approval-quota interruption/resume are retained in the task.
+
+Bounded local full import452.016s/current replay291.219s retain all original final validation; replay
+overlapped regression. Not a capacity/restore test. Private raw handoff/data remain external, one
+LATEST ZIP replaced atomically after each milestone. See [[IMP-P1-02_Licensed_Scento_ETL]] and
+[[IMP-P1-02_Licensed_Scento_Evidence]] for current checkpoint, exact files/results/remaining gates.
+No force push/main change/merge/production; Human Owner implementation merge remains required.

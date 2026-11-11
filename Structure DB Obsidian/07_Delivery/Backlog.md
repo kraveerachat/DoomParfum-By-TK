@@ -152,3 +152,17 @@ not complete IMP-P1-04 capacity/independent DB-object restore; those acceptance 
 | IMP-P2-04 | authenticated one-click admin/queue/review | P2-02/03 + security tests | NOT STARTED | No universal auto-publish |
 | IMP-P2-05 | schedule/media/storage benchmark | owner approval + preceding measured gates | NOT STARTED | Independent media and hosting decisions |
 This workstream is separate from P1 PR #2; historical P1 table above records earlier events and does not override current GitHub status.
+
+## Current implementation checkpoint — 2026-11-11
+
+PRs1/2/3 merged; PR4 Draft. [[IMP-P1-02_Licensed_Scento_ETL]] is implemented/review-pending on its
+own branch/PR:1479 private-local profiles,1435 approved/44 held,98/98 regression, zero-growth replay.
+This supersedes earlier NOT STARTED rows for02 and pending merge rows for01/plan002. No acceptance
+of proposed weights/provider decisions is inferred. See [[IMP-P1-02_Licensed_Scento_Evidence]].
+
+- IMP-P1-03: do not acquire bytes before02 dependency review and per-asset permission/variant checks.
+- IMP-P1-04: profile full materialization/deferred replay (observed452s/291s), bounded complete batches
+  and timeout behavior; independent DB/object backup/restore with approved local scope. NOT RUN here.
+- IMP-P2-01..05: registry/rights/admin source work remains separate; reviewed candidate queues are
+  available externally, source automation remains blocked wherever rights are unknown/restrictive.
+- Matching: PR4 Gate P/DM decisions pending; no scoring/API/UI implementation. Cloud stays deferred.

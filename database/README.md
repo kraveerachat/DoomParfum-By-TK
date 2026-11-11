@@ -126,3 +126,11 @@ and labeled synthetic fixtures, capped at250 records with45s statement timeouts.
 One run per case is not a capacity estimate. Full regression79/79 passed; exact source hashes and timings
 are in evidence/test_results.json. Full-model scans per dirty epoch, marker MVCC/WAL overhead, deferred
 queues and global writer serialization remain limits. Broader IMP-P1-04 capacity/restore work is NOT RUN.
+
+## IMP-P1-02 local licensed intake extension
+
+[SCENTO_ETL.md](SCENTO_ETL.md) documents the separately authorized pinned-source intake, reviewed
+private-local exact mappings and strict replay. dpt_scento_test and dpt_scento_pilot are separate
+allowlisted targets; only the test DB may be recreated automatically. Original foundation/8migrations/
+47-table contract and RLS remain unchanged. Current actual outcomes and not-run boundaries are in
+the IMP-P1-02 task/evidence; no search API, matching, images, cloud or production completion is inferred.

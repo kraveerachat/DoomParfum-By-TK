@@ -15,7 +15,7 @@ CONTAINER = "doomparfum-p1-01"
 VOLUME = "doomparfum-p1-01-data"
 LABEL = "com.doomparfum.task=IMP-P1-01"
 IMAGE = "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94"
-DATABASES = {"dpt_foundation", "dpt_schema_test", "dpt_migration_probe"}
+DATABASES = {"dpt_foundation", "dpt_schema_test", "dpt_migration_probe", "dpt_scento_test", "dpt_scento_pilot"}
 
 
 def docker(*args: str, input: str | None = None, check: bool = True):
@@ -93,7 +93,7 @@ def start():
 
 
 def recreate(db: str):
-    if db not in DATABASES - {"dpt_foundation"}:
+    if db not in {"dpt_schema_test", "dpt_migration_probe", "dpt_scento_test"}:
         raise ValueError("Automatic recreation is restricted to disposable test databases")
     sql(f'DROP DATABASE IF EXISTS "{db}" WITH (FORCE);', "postgres")
     sql(f'CREATE DATABASE "{db}";', "postgres")

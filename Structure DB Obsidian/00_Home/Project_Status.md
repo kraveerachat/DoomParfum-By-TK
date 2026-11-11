@@ -12,7 +12,25 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
-# Project Status — Local Schema Implemented, Owner Review Pending
+# Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current verified checkpoint — 2026-11-11 / IMP-P1-02
+
+Live PRs1/2/3 are MERGED; current base main a908711fb4f37a12fbec3665a461b75c288c7dab. PR4 matching
+is OPEN/DRAFT and untouched. This supersedes the historical planning/implementation states below.
+[[IMP-P1-02_Licensed_Scento_ETL]] now implements private-local licensed intake and reviewed exact-source
+mapping on impl/p1-02-licensed-scento-staging:1479 catalogue/1435 approved/44 held,160 brands/420 notes,
+11972 canonical note links; full replay zero growth.98/98 tests pass,0fail/error/skip. Independent
+source review/publication is tracked in [[IMP-P1-02_Licensed_Scento_Evidence]] and the task.
+
+Source index/normalization covers all1479/12448 raw occurrences. D1 research226 candidate rows and
+D5 seven note-image license candidates remain external review data;0 acquired images/usable Dupe
+pairs/matching-eligible profiles. Full transaction452s/replay291s exposes a capacity limit, not a
+production throughput guarantee. IMP-P1-03 bytes and IMP-P1-04 capacity/restore remain NOT RUN.
+Dependent source/admin/API/UI work waits for implementation dependencies, rights and its own review.
+No decisions, migrations or old receipts rewritten; no merge, cloud or production change.
+
+## Historical checkpoints (superseded by verified current entry above)
 
 Planning PR #1 verified MERGED on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is satisfied for the owner-approved
 bounded local pilot. IMP-P1-01 uses `impl/p1-01-local-postgres-schema`, START_SHA=`bffb2fab1918dc5221a6c5da7920168bcae263ca`.
