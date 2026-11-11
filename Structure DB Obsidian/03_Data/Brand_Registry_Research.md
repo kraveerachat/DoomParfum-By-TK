@@ -44,3 +44,15 @@ None are approved for automated acquisition, imagery or bulk republishing by thi
 ## Decision and sample protocol
 Do not equate `Another 13` (Le Labo perfume) with a house, split EDT/EDP/reformulation/edition by real scent identity, and retain `unknown` rather than inferring `discontinued` from release year.
 Use one source/time/rights/evidence citation per verified field; do not turn a candidate recommendation into a source grant. Continue region-balanced research after Gate P; no fixed brand-count ceiling.
+
+
+## WP-03 incremental research checkpoint — 2026-11-11 (research evidence, no rights grants)
+
+- The 220-candidate WP-01 research registry is preserved (not replaced). Three more first-party perfume brand/storefront presences were observed:
+  - `ALT-ID-003` SAFF & Co.: https://saffnco.com/collections/shop-all
+  - `ALT-SG-002` Scent Journer: https://scentjourner.com/
+  - `ALT-MY-003` Szindore: https://szindore.com/shop/
+- Candidate statuses after this **presence-only** update: 26 `official_presence_observed` + 1 `official_presence_observed_alias_pending` (27 combined), 191 `needs_review`, 2 `third_party_mention_only`; all 220 remain `permission_pending`. Identity/country/parent/alias verification is a separate task. A storefront listing may contain non-perfume products, sizes and kits; do not claim all shop items as distinct perfume scent models.
+- Source product-data universe is a different question: the Scento pinned licensed snapshot contains 160 houses and 1,479 perfumes; overlap with these 220 research brands must be reconciled rather than added. 11 sample houses gave 10 exact normalized research-label crosswalk **candidates**; `Initio Parfums Prives` was not an exact name match to the seed and remains manual review. The 10 text matches do not authorize canonical UUID merge.
+- Detailed full-source audit: [[Pinned_Scento_Full_Snapshot_Audit_2026-11-11]]; WP-03 progress: [[DPT-PLAN-002_Parallel_Research_Progress_2026-11-11]].
+- No brand-country or first-party-source image license implied; no automated new-source adapter or PostgreSQL import occurred.
