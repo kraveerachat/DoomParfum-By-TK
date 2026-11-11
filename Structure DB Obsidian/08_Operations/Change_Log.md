@@ -218,3 +218,7 @@ resulting final publication HEAD is verified in PR/final report, not invented in
 Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
 [[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
 Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## 2026-11-11 / DPT-PLAN-002 / S1 — documentation planning checkpoint
+Scope: branch `plan/p2-focused-brand-discovery-automation` off merged main `bffb2fab1918dc5221a6c5da7920168bcae263ca`; GitHub PR #1 MERGED, implementation PR #2 MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); licensed ETL and new-source adapter work remain separate. New docs-only brand/source/rights/popularity/identity/adapters/admin ADR, task and handoff; existing status/source/rights/ADR/roadmap/backlog/decisions updated via scoped addenda. First-pass 220 curated candidates, 15 first-party publisher presences; public repo excludes raw/private research CSV and third-party material. No runtime test, scraping, import, SQL, deploy, secrets or PR #2 edit. Planning verification/commit SHA and PR URL to be reported in GitHub PR; review/owner Gate P pending.

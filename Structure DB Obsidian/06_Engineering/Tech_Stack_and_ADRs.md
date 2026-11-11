@@ -186,3 +186,7 @@ can be tested locally within OD-02; no product/cloud sharing activation is autho
 
 PR #1 is not merged. This session records decisions only; no SQL/DB/code/resources/tests are executed.
 A later implementation task must verify owner merge and approved plan SHA. Human Owner alone merges.
+
+
+## DPT-PLAN-002 addendum — 2026-11-11 (ALL PROPOSED)
+New proposed ADR-007–009 for source-backed brand ranking, rights-gated Python staged delta adapters and a one-click admin worker queue are in [[Catalogue_Update_Center_ADR_Proposed]]. These are NOT adopted stack/provider/hosting decisions; no new code, worker, API, image download or database migration. Existing OD-03 local PostgreSQL and OD-04 image metadata design approvals retain their exact bounded scope.

@@ -140,3 +140,15 @@ approved. TSK-DOC-001 CI stays PROPOSED/NOT STARTED. No SQL/code/DB/Actions/prov
 
 S2 evidence: [[IMP-P1-01_Performance_Correction]]. The bounded validation regression benchmark does
 not complete IMP-P1-04 capacity/independent DB-object restore; those acceptance criteria remain NOT RUN.
+
+
+## New parallel DPT-PLAN-002 workstream — 2026-11-11 (PROPOSED)
+| Task | Type | Dependency | State | Notes |
+|---|---|---|---|---|
+| DPT-PLAN-002 | docs-only planning + read-only research | merged PR #1/main | IN PROGRESS, Gate P pending | [[DPT-PLAN-002_Focused_Brand_Discovery]] |
+| IMP-P2-01 | candidate/source registry and rights validator | merged plan 002 + PR #2 data model | NOT STARTED | No source automation until rights review |
+| IMP-P2-02 | permitted staged delta adapter | P2-01 + IMP-P1-02 licensed baseline | NOT STARTED | Idempotency/rollback/quarantine |
+| IMP-P2-03 | permitted popularity observations/cohort selection | rights-approved metrics and P2-02 | NOT STARTED | Missing metrics stay NULL |
+| IMP-P2-04 | authenticated one-click admin/queue/review | P2-02/03 + security tests | NOT STARTED | No universal auto-publish |
+| IMP-P2-05 | schedule/media/storage benchmark | owner approval + preceding measured gates | NOT STARTED | Independent media and hosting decisions |
+This workstream is separate from P1 PR #2; historical P1 table above records earlier events and does not override current GitHub status.

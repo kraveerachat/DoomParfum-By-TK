@@ -62,3 +62,19 @@ S3 boundary: OD-06 approves an international licensed-data pilot only. Regional 
 until usable rights AND samples are verified; no grant is inferred for official-site texts, images or APIs.
 OD-04 approves image metadata/rights design, not unlicensed image acquisition. No source acquisition or
 runtime ingest is performed during this owner-decision documentation session.
+
+
+## New DPT-PLAN-002 source acquisition research — 2026-11-11 (RESEARCH ONLY)
+See [[Source_Permission_Matrix_DPT_PLAN_002]] and [[Brand_Registry_Research]] for first-party observed samples across 15 brand/publisher presences and permissions-by-use. `official_url` is an identity observation, not `automated_access=true` or store/display/image rights. Terms and rights must be evaluated per source/field/asset. Existing OD-01/OD-06 Scento local-only approval is NOT extended to regional imports. Fragrantica automated acquisition remains prohibited absent written authorization. No new adapter or import created.
+
+
+## WP-03 source observations and no-auto-reuse boundary (2026-11-11)
+
+Three first-party storefronts were observed as **brand existence/product-type evidence only**:
+- SAFF & Co. official pages https://saffnco.com/ and https://saffnco.com/collections/shop-all ; perfumes are mixed with other kinds of items.
+- Scent Journer https://scentjourner.com/ ; named Eau de Parfum products and region-specific shipping policy.
+- Szindore https://szindore.com/ and https://szindore.com/shop/ ; mixed fragrance, toiletries, promotions, merchandise and air-freshener products. Storefront result counts are not counts of distinct perfume identities.
+
+For each source: `official_presence_observed=YES`; automated page access / caching / storage / display / redistribution / commercial content reuse / AI dataset and all media asset rights = `UNKNOWN_NOT_APPROVED`. No per-source permission escalated. No external adapter or asset download performed.
+
+The **pinned licensed Scento** read-only full snapshot counts are now documented in [[Pinned_Scento_Full_Snapshot_Audit_2026-11-11]] (1,479 perfume rows, 160 houses, 420 materials, 1,388 reported full pyramids); this does NOT assert 1,479 local database imports. This source audit does not change published third-party source permission statuses.

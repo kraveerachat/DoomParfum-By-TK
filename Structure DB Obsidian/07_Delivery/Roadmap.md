@@ -164,3 +164,12 @@ Human Owner merge of01 is required before02. No production/cloud/provider activa
 PR #2 remains OPEN/DRAFT; additive008 and79/79 tests are recorded in [[IMP-P1-01_Performance_Correction]].
 Exact-source independent review passed; Owner merge still gates IMP-P1-02. The bounded synthetic
 validation measurement does not complete IMP-P1-04 capacity/restore or authorize cloud resources.
+
+
+## Parallel planning lane — 2026-11-11 / DPT-PLAN-002
+PR #1 is now MERGED on GitHub; PR #2 database foundation is now MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); licensed ETL and new-source adapter work remain separate. Independently begin WP-00 brand/source read-only research and WP-01/02 evidence/permission research; DPT-PLAN-002 docs-only Draft Planning PR follows. After Human Gate P and required PR #2/IMP-P1-02 Scento baseline, schedule separate rights-authorized source adapters -> popularity metric observations -> one-click admin/queue -> approved media pipeline -> measurements/recovery/host decisions. These proposals do not alter PR #2 or authorize larger imports. Details [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
+
+
+## Proposed catalogue coverage expansion — 2026-11-11
+
+Following the owner's product-model coverage and Dupe matching request, refine early P1/P2 dependencies: Brand Registry -> **approved-source comprehensive Product Index** -> approved Scento profile/notes pilot -> licensed image pipeline -> browse/search MVP -> pairwise reported-Dupe evidence graph -> versioned structural matching/side-by-side -> safe admin batch updates. This does not abandon current P0–P6 categories or imply Implementation complete. Source rights and Human Gate P remain mandatory. See [[DPT-PLAN-002_Catalogue_Coverage_Images_Matching_Addendum]], and NEW-07..11 awaiting owner review.

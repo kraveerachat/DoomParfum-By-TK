@@ -81,3 +81,7 @@ resulting final publication HEAD is verified in PR/final report, not invented in
 Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
 [[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
 Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## DPT-PLAN-002 live Git status reconciliation — 2026-11-11 (PROPOSED)
+GitHub preflight confirms Planning PR #1 **MERGED** (2026-11-10; main `bffb2fab1918dc5221a6c5da7920168bcae263ca`), superseding the historical OPEN/DRAFT status above. Implementation PR #2 was MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c), not a proof of ETL or production readiness. New DPT-PLAN-002 is a separate **docs-only** research/planning branch; owner Gate P review pending. No new source, image, ETL or production authorization is inferred. See [[DPT-PLAN-002_Focused_Brand_Discovery]] and [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
