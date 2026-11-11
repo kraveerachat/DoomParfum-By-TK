@@ -31,6 +31,12 @@ performed at this start entry; actual event follows in task/evidence. Human Owne
 
 ---
 
+Publication event: [PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) verified OPEN/DRAFT/unmerged/mergeable at03df0dd;
+latest PR #3 inspected0cdfba4504594a888eb2f11947ea2d1dd58b6db8, main9636ee7 unchanged. One immutable
+planning receipt [[2026-11-11_160700_DPT-PLAN-003_Dual_Mode_Matching]] created after agent review readiness; no historical receipt edit.
+Final metadata HEAD is verified in live PR/final report. Source checkpoint03df0dda8a976945393beeb512768fb841bdc232;
+DM decisions remain PROPOSED. No runtime/DB/source acquisition or production changes; Owner Gate P pending.
+
 ## 1. Version History
 
 ### [Version 0.2.0-planning] — 2026-11-10

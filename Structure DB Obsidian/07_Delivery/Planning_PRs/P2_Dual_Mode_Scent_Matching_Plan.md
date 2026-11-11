@@ -12,6 +12,8 @@ source_of_truth: "../../../README.md"
 # P2 Dual-Mode Scent Matching — Planning Specification
 
 IMPLEMENTATION_NOT_STARTED=YES. OWNER_GATE_P=PENDING. PRODUCTION_MUTATION=NO.
+Actual [Planning PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) is OPEN/DRAFT; source review checkpoint
+03df0dda8a976945393beeb512768fb841bdc232. Publication metadata does not accept this proposal.
 All numerical policies below are PROPOSED design targets, not sensory measurements or accepted ADRs.
 
 ## Outcome and authority

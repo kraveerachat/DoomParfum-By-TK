@@ -21,6 +21,8 @@ snapshots below. IMP-P1-02 and matching implementation are not established as co
 DPT-PLAN-003 is a separate docs-only proposal on plan/p2-dual-mode-matching from that main SHA;
 [[DPT-PLAN-003_Dual_Mode_Matching]] and [[P2_Dual_Mode_Scent_Matching_Plan]] track its live publication.
 PR #3 Brand Research remains separate OPEN/DRAFT at inspected69255b0; no branch/PR edits there.
+Planning [PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) is OPEN/DRAFT; one planning receipt
+recorded in the task. Current parallel PR #3 refresh0cdfba4 is documented in evidence.
 A/B1/B2 feature implementation NOT STARTED; DM-01..07 PROPOSED, owner Gate P pending, production NO.
 
 Planning PR #1 verified MERGED on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is satisfied for the owner-approved
