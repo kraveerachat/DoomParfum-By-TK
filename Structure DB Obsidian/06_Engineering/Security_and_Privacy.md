@@ -148,3 +148,15 @@ External URLs require approved HTTPS host/size/MIME bounds, redirect/SSRF checks
 and private EXIF removal for future derivatives. Outbound links use noopener/noreferrer and remove
 known private/tracking tokens without blindly breaking product identifiers. Backup rights/scope and
 restore tests follow [[P1_Storage_Hosting_and_Recovery]]. API/storage/byte/restore controls remain NOT RUN; current local DB evidence is recorded above.
+
+## IMP-P1-02 private-local importer boundary — 2026-11-11
+
+The source/captures/observations/catalogue materializations all use one user-private operator scope;
+an international licensed dataset is not automatically a public catalogue publication. Importer accepts
+only guarded dpt_scento_test/dpt_scento_pilot; no remote host/foundation target/reset of data-bearing
+pilot. Actual session_user=postgres is a trusted Docker-admin pilot adapter, not product authentication.
+The source assessment checks pinned license/artifact binding and active storage/automation rights on
+every replay. Revocation/expiry fail, non-owner reads isolate private intake, failed transactions roll
+back, concurrent staging replays count newly inserted rows once. Original FK/RLS/deferred contracts
+remain enabled. Fixed independent mapping-policy hashes are not a hosted reviewer authorization API.
+No API/JWT/cache/export/delivery/cloud security claim follows. See [[IMP-P1-02_Licensed_Scento_Evidence]].

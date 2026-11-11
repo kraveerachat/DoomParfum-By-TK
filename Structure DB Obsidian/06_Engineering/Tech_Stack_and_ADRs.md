@@ -190,3 +190,12 @@ A later implementation task must verify owner merge and approved plan SHA. Human
 
 ## DPT-PLAN-002 addendum — 2026-11-11 (ALL PROPOSED)
 New proposed ADR-007–009 for source-backed brand ranking, rights-gated Python staged delta adapters and a one-click admin worker queue are in [[Catalogue_Update_Center_ADR_Proposed]]. These are NOT adopted stack/provider/hosting decisions; no new code, worker, API, image download or database migration. Existing OD-03 local PostgreSQL and OD-04 image metadata design approvals retain their exact bounded scope.
+
+## IMP-P1-02 observed local implementation — 2026-11-11
+
+Merged PRs1/2/3 and OD local rights support the separate pinned Scento CLI intake implementation;
+Python3.11.9 standard library and existing guarded PostgreSQL16.15 image, no new dependency/install.
+Source-specific exact policy is independently reviewed and hash-bound; no semantic identity/alias
+merge, country/family/accord inference, hosted service or ADR status promotion. Full-cohort validation
+remains costly (452s first/291s replay), so no stack/capacity/provider conclusion follows. Further
+capacity/restore and source/admin work remain separate. [[IMP-P1-02_Licensed_Scento_Evidence]].

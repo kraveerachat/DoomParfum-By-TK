@@ -78,3 +78,13 @@ Three first-party storefronts were observed as **brand existence/product-type ev
 For each source: `official_presence_observed=YES`; automated page access / caching / storage / display / redistribution / commercial content reuse / AI dataset and all media asset rights = `UNKNOWN_NOT_APPROVED`. No per-source permission escalated. No external adapter or asset download performed.
 
 The **pinned licensed Scento** read-only full snapshot counts are now documented in [[Pinned_Scento_Full_Snapshot_Audit_2026-11-11]] (1,479 perfume rows, 160 houses, 420 materials, 1,388 reported full pyramids); this does NOT assert 1,479 local database imports. This source audit does not change published third-party source permission statuses.
+
+## IMP-P1-02 later execution evidence — 2026-11-11
+
+The historical read-only audit above is preserved. Subsequent approved pinned CC BY4.0 private-local
+intake now verified1479 catalogue identities/1435 exact-source approved/44 held and zero-growth replay.
+Six artifacts include LICENSE/descriptor; claims/captures bind file hashes/logical CSV record ordinals.
+Attribution: Scento — https://www.scento.com/perfume-database ; https://creativecommons.org/licenses/by/4.0/ .
+Data transformations are local exact transcription/normalization, not new publisher claims. Full raw
+files and research queues stay external; source image URLs grant no image rights. No regional/official
+site/source automation permission is expanded. [[IMP-P1-02_Licensed_Scento_Evidence]] records tests/limits.
