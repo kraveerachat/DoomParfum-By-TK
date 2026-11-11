@@ -2,7 +2,7 @@
 id: DPT-PLAN-003
 project: DoomParfum By TK
 type: planning_task
-status: in-progress
+status: ready-for-owner-review
 owner: human-owner
 updated: 2026-11-12
 tags: [doomparfum, planning, matching]
@@ -10,6 +10,21 @@ source_of_truth: "../../../README.md"
 ---
 
 # DPT-PLAN-003 — Dual-Mode Scent Matching & Custom Note/Accord Search
+
+## S2 exact checkpoint verified / metadata closeout — 2026-11-12
+
+Parent independent readback verified source checkpoint968cd230ec19894c57defa920d1cb5650c37be28,
+parent6b5715793b722bfd4a9f25e99475aa50e4162c93. All16 substantive document bytes match the parent
+review; only Task/Evidence review-record metadata varied. Verification fingerprint:
+a33efc527bf8b3826482ecb01da6c88b3488d1ce63246fceed1393b4f971690e. No owner decision was approved.
+
+Planning documentation is ready for Human Owner review. DM-01..07 remain PROPOSED and matching
+implementation NOT STARTED;44 holds/matching0/accord/completeness/privacy gates persist. Original
+receipt remains immutable; no second receipt. Final metadata edits are limited to task/evidence/
+status/run/change/handoff records and are checked before normal push of the existing PR #4 branch.
+No force push, merge, rebase, runtime/DB or shared handoff/ZIP mutation. Publication head/state are
+reported after actual push/PR readback in the live PR/external summary/final report; this entry does
+not claim publication has already occurred. Human Owner alone decides acceptance and merge.
 
 ## S2 post-PR5 reconciliation — IN PROGRESS, 2026-11-11
 
