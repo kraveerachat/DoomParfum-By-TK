@@ -108,3 +108,12 @@ Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge 
 
 ## DPT-PLAN-002 live Git status reconciliation — 2026-11-11 (PROPOSED)
 GitHub preflight confirms Planning PR #1 **MERGED** (2026-11-10; main `bffb2fab1918dc5221a6c5da7920168bcae263ca`), superseding the historical OPEN/DRAFT status above. Implementation PR #2 was MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c), not a proof of ETL or production readiness. New DPT-PLAN-002 is a separate **docs-only** research/planning branch; owner Gate P review pending. No new source, image, ETL or production authorization is inferred. See [[DPT-PLAN-002_Focused_Brand_Discovery]] and [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
+
+## Post-PR5 data research — 2026-11-12
+
+Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] accountsfor all44holds
+(43duplicateprofiles/44groups/45extras plusKhamrah);0resolved/canonicalchanges.226brandcandidates/
+21conflicts retained,3new sourcefactlocators,12of46RESEARCHnote-imagecandidates (notP1/420coverage),
+0imagebytes/displaygrants/usablepairs. Independent110source+11docchecks pass. Source/raw/research
+queues remainexternal; [[Post_PR5_Held_and_Permission_Review]] summarizesrightsandowneralternatives.
+This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normalization or deployment.

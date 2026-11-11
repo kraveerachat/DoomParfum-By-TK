@@ -401,3 +401,13 @@ receipt final checks follow; no code changes after reviewed source checkpoint.
 Final receipt created once; final validation14Markdown/11frontmatters/47tables/6OD rows,0errors and
 0common-secret candidates. Exact22-file changed manifest retained. Final metadata commit/push and
 PR/head readback complete publication, while reviewed code/test/schema evidence stays unchanged.
+
+## RUN-20261112-DATA001 — held/source/rights research
+
+ExistingPython/PowerShell/Git/GitHub and primary-source web research; no install/globalconfig/paidjob.
+Parentforensics readpinned6files and existingconflictevidence; separate researcherreviewed6existing
+brandrows/5newnoteillustrations/3pair-opportunities externally; independent reviewerreconstructed110
+source/data+11docs assertions withnoDB/Docker/network/Gitwrites.28persistedQA accepted;58chat-only
+assertions explicitlyexcluded. No canonicalidentity/rights/holdapproval. Separatebranch+DraftPR,
+Obsidianactualstatus, sourcehashes/locators and parent-ownedD1-D9/singleLATESTZIP updated.
+PRODUCTION_MUTATION=NO. No source/bytes acquisitionfromrestrictedhosts, no merge or mainwrite.

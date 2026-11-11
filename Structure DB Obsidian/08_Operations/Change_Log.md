@@ -244,3 +244,13 @@ source hashes and4reviewed source files match committed bytes. [PR #5](https://g
 created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps reviewed code/evidence
 unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
 external progress, not a self-referential SHA claim. Human Owner reviews and merges.
+
+## 2026-11-12 / DPT-DATA-001 — post-PR5 source and permission investigation
+
+Separate codex/p1-data-review fromOwnermerged55d39cd; docs-only. All44held sourceprofiles accounted
+43duplicates/44groups/45extras+Khamrah; noresolution orcanonicalmutation.226candidatebrands/21conflicts
+unchanged,6existingrowsreviewed/3newlocators,12of46researchnoteillustrationcandidates,0bytes/pairs.
+28persistedresearchQA plus independent110source/11docchecks.58chat-only assertions notcounted.
+Canonicaltask/evidence/report/status/source/log addenda updated; raw/private outputs remainexternal.
+Finaldocchecks/DraftPR/headandoneimmutable receipt follow checkpoint. No migration/oldreceipt/rights/
+matching/runtime/production/main/merge changes. Human Ownerreviews/merges.

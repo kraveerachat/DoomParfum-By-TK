@@ -88,3 +88,12 @@ Attribution: Scento — https://www.scento.com/perfume-database ; https://creati
 Data transformations are local exact transcription/normalization, not new publisher claims. Full raw
 files and research queues stay external; source image URLs grant no image rights. No regional/official
 site/source automation permission is expanded. [[IMP-P1-02_Licensed_Scento_Evidence]] records tests/limits.
+
+## Post-PR5 permission research — 2026-11-12
+
+[[Post_PR5_Held_and_Permission_Review]] records3new factual locators for6existingbrandcandidates and
+5additional Commonsnote-illustrationcandidates, exactcreator/license/subjectqueueexternal. Total12/46
+RESEARCHlabelcandidates;0bytes/displayapprovals/bottlegrants. Officialpresence/websiteoperator doesnot
+approve canonicalparentidentity or automatedreuse. The third-party-derived description-preference
+dataset opportunity wasrejected;0new usablepairwiseevidence. All44Scentoholds persist. No permission
+flag, originalsourceclaim, rawdataset or ownerdecision ischangedbythis researchPR.
