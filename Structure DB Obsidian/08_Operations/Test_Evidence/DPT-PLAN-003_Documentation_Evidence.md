@@ -124,3 +124,21 @@ navigation and five updated dates alter existing docs. No matching implementatio
 - `Structure DB Obsidian/08_Operations/Decision_Log.md`
 - `Structure DB Obsidian/08_Operations/Handoffs/DPT-PLAN-003_Dual_Mode_Matching_Handoff.md`
 - `Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-003_Documentation_Evidence.md`
+
+## Live parallel-work refresh after first docs checkpoint
+
+Checkpoint257bb611b3630975a541aebfbe711a82fd932104 was pushed to the new branch. Fetch detected PR #3
+advanced to0cdfba4504594a888eb2f11947ea2d1dd58b6db8 (22 changed paths;5 new/updated research docs
+relative to initial69255b0). Main stayed9636ee7. The earlier overlap result remains pinned history;
+a newer simulation follows. Added full-snapshot audit and matching addendum inspected: no new numeric
+accords, import, Dupe or image readiness established. Aggregate measures/cohorts remain separately
+attributed in the matching data contract.
+
+Observed operational correction: pre-push assertion noticed PR #3 changed, but PowerShell continued to
+push the already authorized new task branch. No PR #3/main/production change occurred. Dependent Git
+steps now execute within one checked Python process; current ref/overlap review precedes PR creation.
+This was an operational guard sequencing issue, not a document/math test failure; it is not hidden.
+
+Refresh result at0cdfba4504594a888eb2f11947ea2d1dd58b6db8: same7 shared paths,14/14 textual merge
+simulations clean in both orders with identical merged contents. New Draft creation can proceed;
+semantic decisions remain Owner review, and recheck heads before any later merge.

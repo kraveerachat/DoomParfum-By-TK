@@ -34,7 +34,7 @@ No screenshot, third-party UI assets, reviews or rankings are copied into this p
 Fresh origin/main and merged PR #2: **9636ee740cdcd3d60633ac11745366814d1af05c**.
 PR #2 head: 2e0c0611b17bf2b13840c305fa03a90c4066cf31; 47 domain tables and eight migrations are
 implemented. Its recorded 79-test result is historical implementation evidence, not tests rerun here.
-PR #3 is OPEN/DRAFT at inspected head **69255b0ec2d4bff61c0cc3f5707ba0bc00a16f16** on
+PR #3 is OPEN/DRAFT at inspected head **0cdfba4504594a888eb2f11947ea2d1dd58b6db8** on
 plan/p2-focused-brand-discovery-automation. It owns catalogue acquisition, source permissions,
 popularity and progressive enrichment. This plan branches independently from main on
 plan/p2-dual-mode-matching. No implementation approval follows from either Draft PR.

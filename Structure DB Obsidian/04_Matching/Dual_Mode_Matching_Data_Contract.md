@@ -133,3 +133,12 @@ freshness TTL must be reviewed; without a configured usable TTL, stock is unknow
 A perfume's data-freshness730-day draft cap is not the stock TTL. No automatic exchange conversion,
 global stock inference, or undocumented geo preference enters score. Reconcile richer status/role
 contracts with PR #3 rather than inventing a new approved database enum here.
+
+## Parallel-source refresh during publication
+
+PR #3 advanced to0cdfba4504594a888eb2f11947ea2d1dd58b6db8 during this task. Its new full-snapshot
+CSV audit reports1,388 layered/91 general profiles and149 profiles with repeated labels in a flattened
+list. Those are that PR's reported audit metrics, not this task's raw-data remeasurement. The149
+flattened-list metric is not the P1 finding of40 within-layer groups in39 profiles. Keep source format,
+revision, counting unit and cohort explicit; do not declare a contradiction or silently change P1
+fixtures. The new audit still states no PostgreSQL import or verified Dupe/image acquisition.

@@ -28,7 +28,7 @@ No runtime/SQL/API/UI/ETL/scraper/AI dependency/cloud/production changes. All fe
 
 ## Parallel work and remaining decisions
 
-PR #3 Brand Research at inspected69255b0ec2d4bff61c0cc3f5707ba0bc00a16f16 is separate OPEN/DRAFT;
+PR #3 Brand Research at inspected0cdfba4504594a888eb2f11947ea2d1dd58b6db8 is separate OPEN/DRAFT;
 do not edit it. Re-fetch before owner merge: its NEW-08/09/11 can affect score naming, sparse profile
 eligibility and pair evidence. Dedicated matching files avoid its acquisition artifacts; shared-file
 navigation addenda have explicit overlap evidence in [[DPT-PLAN-003_Documentation_Evidence]].

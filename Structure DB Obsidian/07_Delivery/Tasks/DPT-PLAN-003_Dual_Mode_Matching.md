@@ -62,3 +62,13 @@ acquisition, original screenshot inspection, Fragrantica access or Production mu
 
 First docs checkpoint, new Draft PR publication and one final receipt follow verified doc checks.
 Exact command/results/manifest/overlap: [[DPT-PLAN-003_Documentation_Evidence]].
+
+## Publication refresh / observed guard event
+
+Documentation checkpoint257bb611b3630975a541aebfbe711a82fd932104 committed and pushed to the new branch.
+A fresh fetch found PR #3 advanced to0cdfba4504594a888eb2f11947ea2d1dd58b6db8; origin/main stayed
+9636ee740cdcd3d60633ac11745366814d1af05c. The pre-push Python assertion detected changed PR #3, but
+PowerShell continued to the following authorized task-branch push. No main/PR #3 mutation or force push
+occurred. Subsequent dependent Git operations use one Python process/check=True to stop on failure.
+Before creating the new PR, inspect the added5 research documents/updates, refresh overlap simulation
+and record the newer pinned head. New audit counts stay attributed, not substituted for approved P1.
