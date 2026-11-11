@@ -125,3 +125,9 @@ no changed original migrations/harness/importer/receipts and0common-secret-patte
 candidates. Rechecked after final metadata/receipt below. Scope is ready for Human
 Owner review, not merge/deployment. Final receipt is created once after these checks;
 publication commit/head is read back after push rather than invented here.
+
+Single final receipt:
+[[2026-11-12_022117_IMP-P1-03_Local_Image_Rights]]. Evidence/documentation checkpoint
+`a2d5b5276ec0dfc757eeeec15c9525954cc68a53`; final metadata push/readback follows.
+Ready for Human Owner review of bounded local functionality; PR6 remains Draft.
+No further DB work is running in this lane. Coordinator owns shared ledger/package.
