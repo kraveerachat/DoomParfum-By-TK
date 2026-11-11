@@ -238,3 +238,9 @@ decision/log addenda reflect actual execution. External D1/D4/D5/D7 research, ha
 D1-D9 ledger and single LATEST ZIP updated per milestone. Raw/private files remain outside public Git.
 No new schema migration, old receipt edit, source-right expansion, cloud/UI/ETLsource adapter beyond
 licensed snapshot, production mutation or merge. Exact manifest/current SHA/PR in task and final report.
+
+Closeout: source checkpoint66e1271f859ce9af3d23ae36c3f584885da7afa2 independently verified; all17 tested
+source hashes and4reviewed source files match committed bytes. [PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5)
+created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps reviewed code/evidence
+unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
+external progress, not a self-referential SHA claim. Human Owner reviews and merges.

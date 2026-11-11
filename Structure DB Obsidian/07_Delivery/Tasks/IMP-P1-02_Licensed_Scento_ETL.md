@@ -2,7 +2,7 @@
 id: IMP-P1-02
 project: DoomParfum By TK
 type: implementation_task
-status: in-progress
+status: review-ready
 owner: human-owner
 updated: 2026-11-11
 tags: [doomparfum, etl, scento, master-handoff]
@@ -106,3 +106,34 @@ relaxation, duplicate deduplication or source hold bypass. All44 held profiles r
 Remaining tasks before Human Review: final docs/link/frontmatter/model/diff/secret-pattern checks,
 source checkpoint/independent exact-SHA review, Draft PR publication and one final receipt. PR URL and
 resulting publication HEAD are recorded after actual creation, not guessed in this entry.
+
+## Publication closeout — ready for Human Owner review
+
+Source/evidence checkpoint66e1271f859ce9af3d23ae36c3f584885da7afa2 independently verified against all4
+reviewed source files/all17 tested source hashes;8 migrations and2original receipt blobs unchanged.
+Initial review SHA2563566577ee19f334959e31997a0a7cbfeaef776f2f2b48b82b44cd494727ab897;
+checkpoint verification SHA256abea7449541382dc3e11b7703f20ebc54b547788b6aebc837633eaf3bdc864c9.
+Reviewer made0DB calls/Git writes and did not claim suite rerun. No blocking source finding.
+
+[PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5) created OPEN/DRAFT on the task branch.
+Docs checks passed13Markdown/10frontmatters/47logical tables/6unchanged OD rows/0secret candidates;
+links/fences/source hash freshness/diff checks clean. Final metadata/receipt adds one Markdown note,
+then repeats checks. Exactly one new task receipt; existing receipts preserved. Metadata commits do
+not alter reviewed source. Resulting final publication HEAD is verified in PR/external handoff/final
+report rather than invented inside its own commit. External D1-D9/ZIP records checkpoint provenance.
+
+TOOL EXECUTION REPORT: existing GitHub MCP/Git/Python/PowerShell/Docker and primary-source web reads;
+Codex CLI list and Firecrawl authenticated read-only smoke test actually ran. Redundant add/login NOT
+USED; no install/global configuration or paid job. Exact changed-path manifest in scento_documentation_checks.json
+and the new receipt. Obsidian task/evidence/status/backlog/source/security/ADR/decisions/change/run logs
+updated; raw/research/mapping handoff remains outside Git. Live source index and private pilot ready
+for owner review, not product search/production. No merge/force/main mutation.
+
+Next: Human Owner review/merge PR5; retain44 holds and commission separate capacity/restore profiling,
+per-asset permission and dependent registry/admin work. PR4 matching Gate P still pending. No automatic
+transition to new data-source acquisition, image bytes, cloud/provider resources or application features.
+
+Final receipt created: [[2026-11-11_213752_IMP-P1-02_Licensed_Scento]]. Final documentation checks
+passed14Markdown/11frontmatters/47tables/6OD rows/0errors/0secret-pattern candidates; exact22-file
+manifest in receipt and scento_documentation_checks.json. These metadata updates retain reviewed
+source/test/schema blobs unchanged. PR5 remains the sole implementation PR; owner merge pending.

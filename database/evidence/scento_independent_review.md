@@ -22,3 +22,13 @@ not a capacity comparison.43 repeated-list profiles plus Khamrah remain held, ma
 
 Actual Git checkpoint verification is recorded after commit in the task/PR. Human Owner reviews the
 Draft implementation PR; no agent merge, new source rights, hosted/production readiness claim.
+
+## Exact checkpoint verification
+
+Commit `66e1271f859ce9af3d23ae36c3f584885da7afa2`, direct parent/main
+`a908711fb4f37a12fbec3665a461b75c288c7dab`, independently verified. All four reviewed source files and
+all17 suite-source hashes match committed bytes (zero line-ending differences); committed tests/schema
+evidence matches; eight migrations and two original receipts unchanged. Guide command correction
+verified. Original review preserved; separate checkpoint report SHA-256
+`abea7449541382dc3e11b7703f20ebc54b547788b6aebc837633eaf3bdc864c9`. Reviewer made zero DB calls/Git writes.
+Later metadata commits retain this review only while those source/evidence blobs remain unchanged.

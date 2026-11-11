@@ -30,6 +30,11 @@ production throughput guarantee. IMP-P1-03 bytes and IMP-P1-04 capacity/restore 
 Dependent source/admin/API/UI work waits for implementation dependencies, rights and its own review.
 No decisions, migrations or old receipts rewritten; no merge, cloud or production change.
 
+Publication: [PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5) OPEN/DRAFT; reviewed source
+checkpoint66e1271f859ce9af3d23ae36c3f584885da7afa2 exact-commit verified, no blocking source finding.
+One final IMP-P1-02 receipt created; final metadata publication head/ZIP readback in task/PR.
+Review readiness applies to bounded private-local intake, not capacity/restore/API/UI/production.
+
 ## Historical checkpoints (superseded by verified current entry above)
 
 Planning PR #1 verified MERGED on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is satisfied for the owner-approved
