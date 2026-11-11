@@ -2,9 +2,9 @@
 id: IMP-P1-03
 project: DoomParfum By TK
 type: implementation_task
-status: IN PROGRESS
+status: ready-for-human-review
 owner: human-owner
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [doomparfum, images, rights, local]
 source_of_truth: ../../../README.md
 ---
@@ -70,3 +70,58 @@ hashes/results: `database/evidence/image_offline_results.json`. Actual executabl
 this implementation session yet. DB integration, full regression, independent
 review and publication remain NOT RUN/pending. Parent's controlled timing window
 is active; next action is exact-source static review, then granted DB window.
+
+## Resumed verified checkpoint — 2026-11-12 Bangkok
+
+Source checkpoint `ad27cc5c6f54c85703bd2d324a3a54b2401bed21` pushed normally;
+[PR #6](https://github.com/kraveerachat/DoomParfum-By-TK/pull/6) created/read back
+OPEN/DRAFT, merged=false. No duplicate PR or receipt. Historical pending lines
+above describe pre-DB state, superseded by this entry.
+
+The existing verifier session4613 completed at2026-11-11T16:21:44.751506Z:
+`py -3 database/verify_images.py --include-db`,44/44 passed,0failure/error/skip,
+67.922s, exit0. This comprises20offline +11new live +13original SQL contracts.
+Actual output `database/evidence/image_test_results.json` hashes14source files;
+fresh readback matches all14. No unnecessary rerun after quota interruption.
+The initial sandbox attempt failed at Docker inspect before SQL; scoped local
+escalation then ran the existing container guards successfully. Test log remains
+ignored at `.local/image-rights/db_test_output.log`; no credentials printed.
+
+Live tests used only disposable `dpt_schema_test`; migrations001–008 replayed
+unchanged, Scento pilot/foundation/capacity probe untouched. The coordinator's
+exclusive DB window is now returned; no further SQL calls while controlled
+benchmarks run. This67.922s is test-run wall time, not a capacity measurement.
+Additional unchanged-source offline portability check under actual
+`C:\Program Files\Python311\python.exe`, Python3.11.9:20/20 passed0.012s.
+
+Exact behavior and limits: [[IMP-P1-03_Local_Image_Evidence]]. Full regression is
+coordinator-owned/pending, independent review pending, final receipt NOT CREATED.
+Third-party byte acquisition/HTTP/storage/provider/cloud/deployment remain blocked
+or out of scope. No real image permissions/assets established. Next action:
+independent review of exact source checkpoint and focused evidence; coordinate
+remaining regression before one final receipt/publication closeout.
+
+## Verified review and full regression — 2026-11-12 Bangkok
+
+Parent independently reviewed exact `ad27cc5c6f54c85703bd2d324a3a54b2401bed21`
+source and reran20offline tests under Python3.11.9: no blocking finding in the
+declared static PNG/trusted local-reader scope. Reviewer inspected actual44-test
+evidence without claiming a DB rerun. External review report SHA256
+`7553e49a6da7234a8040c7b587c3d3e197250b11a02db7bec8dac5565b60d91d`;
+four reviewed source/document hashes still match. No source change after review.
+
+Coordinator then granted the sequential full-suite window. Existing98tests plus
+31new tests =129/129 passed,0fail/error/skip,164.922s, exit0 under actualPython3.11.9.
+`database/evidence/image_full_regression_results.json` records all test IDs and
+exact worktree source hashes. The ignored runner redirected only the two original
+sibling-package test methods' `local.ROOT` during those calls, and the Scento test
+module's SOURCE to the existing verified external folder. All other source/harness/
+migration paths stayed worktree-local. No assertion/source edits, fake fixtures,
+filesystem links or data copies. Full suite used existing disposable DB targets
+under its normal guards; persistent pilot untouched. DB window returned immediately.
+
+Documentation checker passed3Markdown/2frontmatters, links/fences/source freshness,
+no changed original migrations/harness/importer/receipts and0common-secret-pattern
+candidates. Rechecked after final metadata/receipt below. Scope is ready for Human
+Owner review, not merge/deployment. Final receipt is created once after these checks;
+publication commit/head is read back after push rather than invented here.
