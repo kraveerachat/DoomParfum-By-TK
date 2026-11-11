@@ -29,9 +29,11 @@ Confidence thresholds,730-day freshness cap, query caps and benchmark targets in
 [[Dual_Mode_Matching_Architecture]] belong to DM-03/05/07 and are unmeasured proposed policies. No count
 of reviews proves perceptual accuracy. Privacy/data rights cannot be traded for confidence or latency.
 
-PR #3's NEW-08/09/11 intersects score naming, partial profile eligibility and evidence. Read both
-proposals at merge time; explicit semantic reconciliation is needed if its owner decisions differ.
-This task does not edit/accept PR #3 or its source approvals. OD-01..06 retain exactly their local bounds.
+PR #3 is owner-merged at a908711 and PR #5 at55d39cd; neither accepts these DM decisions. The
+current compatibility/recommendation table is [[P2_Post_PR5_Matching_Reconciliation]]: structural fit,
+confidence and direct evidence stay separate; partial indexing is not scoring eligibility. Its44 draft
+holds and matching eligibility0 persist. Both real B2 methods lack accord inputs, not only intensity.
+No source/publication permission or original decision row changes. OD-01..06 retain their local bounds.
 
 Impacted R03/R05/R07/R14/R15/R16/R17/R18/R21; new catalogue research is not in this plan. See
 [[P2_Dual_Mode_Scent_Matching_Plan]] for implementation units, [[Dual_Mode_Matching_Architecture]]

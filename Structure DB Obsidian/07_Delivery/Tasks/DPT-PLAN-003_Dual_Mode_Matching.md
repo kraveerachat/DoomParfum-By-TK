@@ -2,14 +2,55 @@
 id: DPT-PLAN-003
 project: DoomParfum By TK
 type: planning_task
-status: ready-for-owner-review
+status: in-progress
 owner: human-owner
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [doomparfum, planning, matching]
 source_of_truth: "../../../README.md"
 ---
 
 # DPT-PLAN-003 — Dual-Mode Scent Matching & Custom Note/Accord Search
+
+## S2 post-PR5 reconciliation — IN PROGRESS, 2026-11-11
+
+Existing branch/PR only: plan/p2-dual-mode-matching / PR #4 OPEN/DRAFT. START_SHA:
+6b5715793b722bfd4a9f25e99475aa50e4162c93. Isolated worktree: .local/worktrees/pr4.
+Comparator main55d39cd619fa6c1ae70521720aa734d632a2083d; GitHub independently verifies PR #3 merged
+a908711fb4f37a12fbec3665a461b75c288c7dab and PR #5 merged55d39cd at2026-11-11T15:11:16Z.
+PR #5 published headce3510ddd43df0de469a89a013537ca04e227859; prior matching receipt stays immutable.
+
+Plan: compare every A/B1/B2 architecture/data/UX/acceptance dependency with merged acquisition/ETL
+contracts, correct stale readiness statements with minimal docs-only changes, retain DM-01..07 as
+PROPOSED, simulate three-way merges against pinned current main without merging/rebasing, run scoped
+document/history/diff checks, then obtain independent review before committing/pushing this same PR.
+Expected evidence: data-availability/44-hold/rights/private-scope capability matrix; exact overlap and
+merge-file results; changed-path checks and immutable receipt/source fingerprints. External summary
+only in approved post_PR5/pr4_reconciliation; parent owns shared handoff/ZIP.
+Do not touch runtime/DB/schema/tests, original receipts, other worktrees, shared ledger/ZIP, owner
+approvals, production, branch history or PR #3/#5. No second receipt, new PR, merge or matching code.
+S1 snapshots below remain historical and are superseded only where explicitly reconciled in S2.
+
+### S2 continuation / source checkpoint — 2026-11-12
+
+Independent targeted read-only review was performed by the parent agent /root, separate from this
+correction's author /root/master_gate_audit. The parent inspected the central reconciliation plus
+plan/data/architecture/UX/acceptance/DM changes and found no blocking semantic finding. Its minor
+IMP-MATCH-04 editorial recommendation was applied: real presence requires reviewed labels/closure
+and this Gate P; the current real cohort supports neither B2 route; synthetic scorer tests stay distinct.
+Parent accepted that clarification on2026-11-12. This is agent review, not Human Owner DM approval.
+
+Formal parent review report fingerprint: d5895561d018fc6bb7f6291bff2a68a8b7adc0239a6039da46089bd63760db73.
+Its stated reviewer is the primary coordinator independent of the delegated PR4 author; it independently
+reran23-doc/22-frontmatter/273-wiki/9-local/50-spec/11-math checks with0errors and no DB calls.
+Final metadata records this event without changing the proposed semantics or existing receipt.
+
+
+Documentation authoring and initial simulations occurred2026-11-11; quota continuation/review
+closeout occurs2026-11-12 Asia/Bangkok. Original dates/receipt/history are retained. Final docs/
+merge-file checks precede staging exactly18 correction Markdown paths. Source checkpoint commit
+will be independently checked by the parent before any push or PR-body update. The resulting SHA
+is recorded after the event, not invented here. Existing PR #4 stays Draft; no new receipt/PR/merge.
+Status remains IN PROGRESS until checkpoint verification and same-PR publication/readback finish.
 
 ## Current task / S1 start
 

@@ -20,7 +20,9 @@ source_of_truth: "../README.md"
 [[P2_Dual_Mode_Scent_Matching_Plan]] and [[Dual_Mode_Matching_Architecture]] propose independent A/B1/B2
 modes. The40/25/15/20 composite below remains a legacy draft, not an accepted structural-only formula.
 New proposal separates structural fit, Data Confidence and pairwise evidence; no sensory accuracy or
-Dupe relation follows from score. Reconcile PR #3 NEW-08 at owner review; neither draft accepts the other.
+Dupe relation follows from score. Merged PR #3 separates evidence/structure; current DM decisions
+still await this plan Owner review. [[P2_Post_PR5_Matching_Reconciliation]] records merged PR #5
+intake without accepting matching weights, eligibility, completeness or new public/source rights.
 [[Dual_Mode_Matching_Acceptance_Tests]] specifies new-version expected values; no feature implemented.
 
 > **Document Type:** Scent DNA Matching Algorithm & Logic

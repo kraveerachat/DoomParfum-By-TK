@@ -16,6 +16,27 @@ Arithmetic document checks are reported separately in [[DPT-PLAN-003_Documentati
 Use explicitly synthetic S-* IDs/labels and authorized local fixtures; never real brand/dupe claims.
 Expected values refer to [[Dual_Mode_Matching_Architecture]] draft methods, with display rounding only.
 
+## S2 readiness extensions to the existing cases — NOT RUN
+
+The50 numbered cases below remain future matching acceptance, not the98 upstream ETL tests. Apply
+these additional concrete conditions when implementing the existing cases:
+
+- DM-DATA-01/02:43 repeated-list holds plus Khamrah stay draft; raw/general ordinals survive and no
+  canonical note score is created by DISTINCT, guessed resolution or blanket1435/1479 eligibility.
+- DM-DATA-04: verify merged PR #5 source/selection/rights snapshots and separate12/5/58/93 pilot from
+  research12/11/46/84; exact transcription review does not imply closed-list negative semantics.
+- DM-UX-01/03: current flags allfalse yield no real ranked A/B1 result; absence of accord labels
+  disables both B2 modes. Synthetic scorer oracles are not assertions that these real routes work.
+- DM-SEC-01/05: private imported note/profile IDs cannot affect public counts/pickers/cache/share,
+  including a copied private-seeded query with later-public vocabulary; local admin is not API auth.
+- DM-OPS-04: benchmark only actually authorized/eligible candidates and report excluded44 holds,
+  missing components/completeness and zero initial eligibility; never flip flags to satisfy a target.
+- DM-UX-02: no selected lifecycle/market/region fact means unknown; strict filters fail closed and no
+  source-house country, family/character or launch-year inference establishes stock or scent fit.
+
+[[P2_Post_PR5_Matching_Reconciliation]] supplies the pinned source/capability matrix. None of these
+conditions creates matching code, a new source grant or approval of DM-01..07.
+
 ## Formula and identity oracles
 
 | ID | Fixture / action | Exact expected result / negative control |

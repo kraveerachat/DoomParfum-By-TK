@@ -27,7 +27,7 @@ canonical selections, source occurrences, current rights enforcement and histori
 | Pair evidence | perfume_relations, comparison_evidence | relation binds exact pair; claim_type/reported_similarity/independence_group are evidence, not model feature weights |
 | Computed pair result | matching_results | relation_id NOT NULL; algorithm_version/input_sha256/coverage/explanation supported, but request-time reads must not manufacture relations |
 | Custom query | no approved persisted query entity | B queries/results ephemeral and scope-bound; no fake perfume/relation/claim used to fit existing matching_results |
-| Availability/price | perfumes status facts, retail_listings, price_observations and source claims | fresh market/channel/variant/currency evidence; index presence/launch year is not production or stock proof; richer lifecycle contract is a PR #3 dependency |
+| Availability/price | retail_listings, price_observations and reviewed source claims; no current canonical lifecycle input established | selected fresh market/channel/variant/currency evidence and allowlist/schema gap review; index presence/launch year is not production or stock proof; use merged PR #3 lifecycle contract |
 | Assets | image_assets/asset_permissions/perfume_images/note_images | independently authorize each exact capture/asset/derivative for display; placeholder otherwise |
 | Provenance and access | sources/source_records/source_observations/canonical_selections/conflict model and access scopes | use approved effective fields with valid source uses and public-or-authorized scope; overlays never widen through public targets |
 
@@ -74,25 +74,31 @@ coverage and method qualification; if below minimum, return insufficient_data, n
 | Missing image or unusable asset right | authorized text/score may remain; use placeholder, no external hotlink |
 | Current/stock unknown | labeled unknown group; strict in-market filter excludes; historical data preserved |
 
-## Data readiness and PR #3 integration
+## Current data readiness after merged PR #5
 
-Merged P1 evidence records Scento revision086769ecf1add770ea6646bd4d88d39f0e7cddeb, CC BY 4.0,
-1,479/160/420 raw rows and approved pilot12 perfumes/5 houses/58 material candidates/93 occurrences.
-This planning task does not reread/import raw files. IMP-P1-02 ETL completion is not established by PR #2.
-No reusable pairwise evidence set or universally numeric accord vectors is established by P1.
+[[P2_Post_PR5_Matching_Reconciliation]] supersedes S1's uncompleted-ETL assumptions. PR #3 merged
+a908711 and PR #5 merged55d39cd. The source revision remains086769ecf1add770ea6646bd4d88d39f0e7cddeb,
+CC BY4.0. Full private local intake has1479 profiles/1435 approved/44 held draft,160 brands/420 notes,
+11972 canonical links and12448 retained raw occurrences. All matching eligibility flags remain false.
 
-PR #3 addendum at inspected69255b0 reports a different research sample:12 profiles/11 houses/46 note
-labels/84 links, seven layered/five general. Those are that workstream's reported cohort, not a verified
-replacement of the approved pilot. Before implementation reconcile source IDs, manifest/hash, selection
-rule, mapping and rights with the P1 pilot. Do not combine the counts or silently replace fixtures.
-Keep the two findings separately attributed; this is an integration check, not proof either is invalid.
+Exact transcription approval is not a matching completeness/absence or eligibility decision. Forty-three
+repeated-list profiles and Khamrah stay held; use no raw-staging shortcut or automatic deduplication.
+The merged adapter supplies no canonical accord labels/strengths or selected family/lifecycle/market/
+region inputs. Numeric-strength capability is0; absence of accord labels also blocks the presence
+fallback. User sliders, family/material labels and source character fields cannot fill either gap.
+Alias-free exact primary names used by ETL do not establish an approved alias registry for query input.
 
-Upstream request to the Brand Research workstream (recorded here; no message/PR #3 edit): provide
-authorized canonical note IDs/layer/source-label/ordinal/alias review; accord scheme/ID/input-kind/
-value/scale/rank/presence/completeness/provenance; family scheme; exact pair claims/independent publisher
-groups/opposition; market/edition/status/time; per-field and per-asset uses. Do not import missing data
-from Fragrantica to fill these gaps. New regional imports, direct pair claims and images need individual
-rights and verified samples. Scento local approval is not an API or image acquisition grant.
+The accepted P1 pilot remains12/5/58/93 with80 canonical links and Khamrah held. Historical PR #3
+research12/11/46/84 remains separately attributed; no fixture substitution. The published98/98 ETL
+suite is historical upstream evidence here; all50 feature acceptance cases remain NOT RUN.
+
+Before a future real-data matching route, audit caller-visible selected fields/rights, matching flags,
+list enumeration boundaries/closure, conflicts and transformation lineage under this plan's Gate P.
+Country/region, family, aliases, currentness/market facts, observed accord input-kind/scale/completeness,
+exact pair evidence and per-asset uses need individually reviewed data contracts/sources. Current
+private operator data cannot seed public sharing or anonymous scores, counts or vocabulary suggestions.
+The local postgres-admin ingestion adapter is not an acceptable application authorization shortcut.
+No Fragrantica source, API/image grant, new semantic merge or regional sample is inferred.
 
 Attribution must retain publisher Scento, pinned revision, source URL, CC BY 4.0 license link and
 change/normalization notice where required, following [[Rights_and_Attribution]] and approved OD-01.
@@ -134,7 +140,7 @@ A perfume's data-freshness730-day draft cap is not the stock TTL. No automatic e
 global stock inference, or undocumented geo preference enters score. Reconcile richer status/role
 contracts with PR #3 rather than inventing a new approved database enum here.
 
-## Parallel-source refresh during publication
+## Historical S1 parallel-source refresh during publication
 
 PR #3 advanced to0cdfba4504594a888eb2f11947ea2d1dd58b6db8 during this task. Its new full-snapshot
 CSV audit reports1,388 layered/91 general profiles and149 profiles with repeated labels in a flattened
@@ -142,3 +148,7 @@ list. Those are that PR's reported audit metrics, not this task's raw-data remea
 flattened-list metric is not the P1 finding of40 within-layer groups in39 profiles. Keep source format,
 revision, counting unit and cohort explicit; do not declare a contradiction or silently change P1
 fixtures. The new audit still states no PostgreSQL import or verified Dupe/image acquisition.
+
+S2 supersedes the historical no-import statement above: merged PR #5 establishes the bounded private
+local import and44 holds. It does not establish matching eligibility, accords, usable independent
+pair evidence, imagery, regional rights or public publication. See the current reconciliation note.

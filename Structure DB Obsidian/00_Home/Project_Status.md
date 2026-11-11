@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-11
+updated: 2026-11-12
 tags:
   - doomparfum
   - status
@@ -13,6 +13,20 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Schema Implemented, Owner Review Pending
+
+## S2 matching reconciliation after merged PR #5 — current, 2026-11-11
+
+PR #3 verified MERGEDa908711 and PR #5 MERGED55d39cd619fa6c1ae70521720aa734d632a2083d;
+these events supersede their older pending snapshots below. Existing PR #4 remains OPEN/DRAFT;
+[[P2_Post_PR5_Matching_Reconciliation]] and [[DPT-PLAN-003_Dual_Mode_Matching]] track docs-only S2.
+IMP-P1-02 upstream intake now verified1479 local profiles/1435approved/44held,160brands/420notes/
+11972canonical links/12448raw;98/98 recorded ETL regression, no matching tests here. Matching flags0,
+no usable accord inputs or selected family/status/publication contract. Real A/B1 still need eligible
+complete-as-reported inputs; real B2 numeric AND presence remain data-blocked. DM-01..07 PROPOSED;
+matching implementation NOT STARTED. Existing receipt preserved, no second receipt or agent merge.
+2026-11-12: parent independent targeted review found no blocking semantic finding after the presence
+prerequisite clarification; source checkpoint/parent exact verification/publication remain in progress.
+
 
 ## DPT-PLAN-003 current Git and matching workstream — 2026-11-11
 

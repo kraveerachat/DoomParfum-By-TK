@@ -14,6 +14,16 @@ source_of_truth: "../../README.md"
 All defaults are PROPOSED for Owner review, not calibrated scent accuracy. No algorithm is implemented
 in this Planning PR. Synthetic examples are arithmetic oracles, not real perfume comparisons.
 
+## S2 upstream capability boundary — still proposed
+
+Merged PR #5 supplies local private intake, not matching readiness. All1479 matching flags are false;
+44 held drafts do not enter candidate scoring. [[P2_Post_PR5_Matching_Reconciliation]] defines the
+current data/gate matrix. Real A/B1 require explicit eligible selected inputs and reviewed enumeration/
+absence semantics; both real B2 modes are unavailable because no accord labels or strengths are
+materialized. Source family/character text cannot manufacture either input. Notes-only/flat formulas
+below remain proposals with their original reduced coverage, not evidence of enabled routes.
+No raw-staging or admin-read shortcut may bypass scope, rights, review, conflict or eligibility gates.
+
 ## Independent pipelines and deterministic contract
 
 ```mermaid

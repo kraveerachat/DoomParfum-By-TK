@@ -17,6 +17,17 @@ AVAILABLE in this task. Its second percentage, bar units, ranking and endpoint b
 Those observations are functional reference only; this design defines its own formulas and labels.
 No Fragrantica access, scraping, JavaScript/internal-endpoint inspection or ranking replay is authorized.
 
+## S2 current-data capability states
+
+PR #5's private local catalogue is not a launched search surface. The future authorized operator view
+must distinguish1479 indexed identities,1435 exact-source approved profiles,44 held drafts and0
+matching-eligible inputs. A/B1 show eligibility/completeness unavailable until their adapter gate is
+met; B2 presence and numeric routes show accord data unavailable until actual reviewed inputs exist.
+Do not draw candidate bars from user preferences, raw family/character labels or missing strengths.
+No public safe link, anonymous vocabulary suggestion or shared-cache result is enabled by this cohort:
+its notes/profiles are private. Completeness, lifecycle/stock/region and licensed assets remain separate
+states; unknown filters cannot be advertised as current/available. See [[P2_Post_PR5_Matching_Reconciliation]].
+
 ## Navigation and independent flows
 
 Catalogue/Perfume Detail gains Find similar and Use reviewed notes/accords as starting point.

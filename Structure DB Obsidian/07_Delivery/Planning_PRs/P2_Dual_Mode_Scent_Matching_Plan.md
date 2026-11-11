@@ -12,7 +12,7 @@ source_of_truth: "../../../README.md"
 # P2 Dual-Mode Scent Matching — Planning Specification
 
 IMPLEMENTATION_NOT_STARTED=YES. OWNER_GATE_P=PENDING. PRODUCTION_MUTATION=NO.
-Actual [Planning PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) is OPEN/DRAFT; source review checkpoint
+Actual [Planning PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) is OPEN/DRAFT; historical S1 source review checkpoint
 03df0dda8a976945393beeb512768fb841bdc232. Publication metadata does not accept this proposal.
 All numerical policies below are PROPOSED design targets, not sensory measurements or accepted ADRs.
 
@@ -31,21 +31,26 @@ states are superseded by GitHub preflight. The original screenshot is unavailabl
 functional observations in the handoff are reported observations, not independently inspected pixels.
 No screenshot, third-party UI assets, reviews or rankings are copied into this public repository.
 
-## Verified baseline and parallel work
+## Verified baseline and post-PR5 reconciliation
 
-Fresh origin/main and merged PR #2: **9636ee740cdcd3d60633ac11745366814d1af05c**.
-PR #2 head: 2e0c0611b17bf2b13840c305fa03a90c4066cf31; 47 domain tables and eight migrations are
-implemented. Its recorded 79-test result is historical implementation evidence, not tests rerun here.
-PR #3 is OPEN/DRAFT at inspected head **0cdfba4504594a888eb2f11947ea2d1dd58b6db8** on
-plan/p2-focused-brand-discovery-automation. It owns catalogue acquisition, source permissions,
-popularity and progressive enrichment. This plan branches independently from main on
-plan/p2-dual-mode-matching. No implementation approval follows from either Draft PR.
+Current comparator main55d39cd619fa6c1ae70521720aa734d632a2083d includes owner-merged PR #3
+(a908711fb4f37a12fbec3665a461b75c288c7dab) and PR #5 (55d39cd; published headce3510d).
+PR #4 remains OPEN/DRAFT on its original plan/p2-dual-mode-matching branch from9636ee7; no rebase or
+merge was performed. The earlier S1 checkpoint/receipt is historical, not the current data baseline.
 
-Baseline README/matching examples mix evidence into a 40/25/15/20 composite called structural
-similarity; some UX examples imply unverified real product facts. This proposal preserves that text
-as legacy draft context and proposes a separate versioned structural model, data confidence and
-pairwise evidence. PR #3 NEW-08 raises the same semantic issue; neither proposal accepts the other.
-Its NEW-07..11 acquisition/evidence decisions remain for that workstream's Owner review.
+PR #5 supplies the bounded private local ETL:1479 catalogue profiles,1435 exact-source approved/44
+held draft,160 brands/420 notes/11972 ordered links, all12448 raw occurrences retained. Matching
+eligibility remains0. Its98/98 tests establish ETL/schema evidence, not matching/API/UI acceptance.
+No observed accord labels/strengths, selected family/lifecycle/market facts or accepted matching
+completeness/absence policy is supplied by that adapter. Real A/B1 eligibility still requires review;
+both real B2 methods lack inputs. Source permission and private scope do not widen with catalogue count.
+
+[[P2_Post_PR5_Matching_Reconciliation]] is the current capability/gate and DM compatibility crosswalk.
+PR #3 acquisition/evidence/partial-profile design is merged upstream context; its historical pending
+status is superseded by the merge, while DM-01..07 weights/thresholds and application decisions remain
+PROPOSED. Keep PR #3's evidence-graph/structural-search decomposition distinct from this plan's
+perfume-reference/custom-query modes. Both separate structural fit from confidence/direct evidence.
+Legacy40/25/15/20 blended examples remain historical drafts, not this proposal's accepted formula.
 
 ## Scope, traceability and task map
 
@@ -88,17 +93,18 @@ Planning PR owner-merged SHA and a separate implementation branch/PR with indepe
 
 | Unit | Reviewable behavior / exit evidence | Dependencies |
 |---|---|---|
-| IMP-MATCH-01 | Read-only authorized profile adapter; alias/identity/coverage audit and canonical input contract | Gate P; merged PR #2; completed IMP-P1-02 baseline ETL and rights-approved mappings |
+| IMP-MATCH-01 | Read-only authorized profile adapter; alias/identity/coverage audit and canonical input contract | This plan Gate P; PR #5 ETL merged; audit private scope,44 holds, eligibility/completeness and use-specific rights |
 | IMP-MATCH-02 | Pure deterministic A scorer + golden/property tests + explanations | 01; accepted DM-01..04; no production service |
 | IMP-MATCH-03 | B1 note query normalization/hard rules + oracle/unknown tests | 01; DM-05; reusable math utilities from 02 where appropriate |
-| IMP-MATCH-04 | B2 numeric and presence fallback scorers; reject incompatible strengths | 01; DM-04/05; numeric mode blocked until compatible observed scales exist; presence pilot can proceed independently of numeric enrichment |
+| IMP-MATCH-04 | B2 numeric and presence fallback scorers; reject incompatible strengths | This Gate P; 01; DM-04/05; real numeric mode needs compatible observed scales, real presence mode needs reviewed labels and closure; current real cohort supports neither; synthetic scorer tests remain distinct |
 | IMP-MATCH-05 | Scoped read-only search API/candidate retrieval/pagination/cache revocation | 02/03/04 for enabled routes; DB/API isolation and bounds tests; disable unavailable routes |
 | IMP-MATCH-06 | A/B1/B2 screens and compare explanations, keyboard/mobile/placeholder tests | 05 and explicit app-stack decision; rights-approved imagery optional |
 | IMP-MATCH-07 | Authorized 12 then 1,479 plus synthetic 10k performance/relevance audit | Enabled 05/06 paths; measured data coverage; no N-squared precompute |
 
-PR #3 does not have to merge before this Planning PR. Its merge is required only for implementing
-behavior relying on its acquisition/status/role contracts; source-specific rights and actual data are
-independent gates. Baseline licensed matching need not wait for broad regional ingestion or images.
+PR #3 and PR #5 are now merged; the ETL prerequisite is satisfied within its bounded private local
+scope. This plan's Gate P, eligible-input/completeness review and source-specific use checks remain.
+Broad regional ingestion and images need not block a later authorized notes-only milestone. All
+matching_eligible flags stay false until an explicitly scoped implementation establishes that contract.
 Indices/schema changes require gap review within approved implementation scope; persisted custom
 queries require a separate amendment if they expand the agreed design. No existing migration rewrite.
 
@@ -129,6 +135,7 @@ Existing context: [[Scent_Matching_Spec]], [[Review_Evidence_and_Confidence]],
 [[Matching_Test_Cases]], [[P1_Pilot_Implementation_Plan]], [[Data_Dictionary_Draft]].
 
 Primary project evidence: [merged PR #2](https://github.com/kraveerachat/DoomParfum-By-TK/pull/2),
-[Draft PR #3](https://github.com/kraveerachat/DoomParfum-By-TK/pull/3).
+[merged PR #3](https://github.com/kraveerachat/DoomParfum-By-TK/pull/3),
+[merged PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5).
 No external site/Fragrantica endpoint was accessed for this planning task. Handoff references to third-party
 terms, pricing or feature internals are not treated as independently reverified facts or grants.

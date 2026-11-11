@@ -4,12 +4,29 @@ project: DoomParfum By TK
 type: continuity_handoff
 status: proposed
 owner: human-owner
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [doomparfum, handoff, matching]
 source_of_truth: "../../../README.md"
 ---
 
 # DPT-PLAN-003 — Matching Planning Continuity
+
+## S2 current handoff after PR #5 merge
+
+Comparator main55d39cd619fa6c1ae70521720aa734d632a2083d includes merged PR #3/#5. Existing PR #4
+remains OPEN/DRAFT on plan/p2-dual-mode-matching; S2 START6b57157 in isolated.local/worktrees/pr4.
+[[P2_Post_PR5_Matching_Reconciliation]] supersedes historical upstream/ETL-pending statements below.
+Local1479/1435approved/44draft/11972links/12448raw is intake evidence; matching eligibility0, usable
+accord inputs0, selected family/currentness/alias/completeness/publication contracts not established.
+All DM-01..07 remain PROPOSED; no matching implementation. Review the current capability/DM matrix,
+checks/merge-file evidence and independent S2 review before Human Owner decides this same PR.
+2026-11-12 parent /root targeted independent semantic review found no blocker after explicit B2
+presence-label/closure/Gate-P clarification. Source-checkpoint/parent exact verification precedes push
+and update of existing Draft #4; do not infer publication or owner approval from this review.
+Keep the original S1 receipt immutable; no second receipt. No merge/rebase or other worktree/ledger/
+ZIP change in this reconciliation. After this plan's owner merge, scope IMP-MATCH-01 eligibility/
+rights/completeness audit first; do not equate ETL completion with enabled scoring or public sharing.
+
 
 Read AGENTS.md, DEVELOPMENT_WORKFLOW.md, root/vault README, this task and the live Planning PR first.
 Branch plan/p2-dual-mode-matching; base9636ee740cdcd3d60633ac11745366814d1af05c after owner-merged PR #2.

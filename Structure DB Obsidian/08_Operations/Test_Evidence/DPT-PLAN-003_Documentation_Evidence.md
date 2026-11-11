@@ -2,14 +2,71 @@
 id: DPT-PLAN-003-DOC-EVIDENCE
 project: DoomParfum By TK
 type: documentation_evidence
-status: planning-review-ready
+status: source-review-ready
 owner: human-owner
-updated: 2026-11-11
+updated: 2026-11-12
 tags: [doomparfum, evidence, planning]
 source_of_truth: "../../../README.md"
 ---
 
 # DPT-PLAN-003 — Planning Verification and Parallel-PR Evidence
+
+## S2 correction evidence — authored2026-11-11, parent review2026-11-12
+
+START6b5715793b722bfd4a9f25e99475aa50e4162c93; same plan/p2-dual-mode-matching branch / Draft #4.
+Pinned current main55d39cd619fa6c1ae70521720aa734d632a2083d includes merged PR #3 a908711 and
+PR #5 55d39cd (headce3510ddd43df0de469a89a013537ca04e227859). GitHub MCP readback verifies both
+merge events and #4 OPEN/DRAFT. This S2 block supersedes historical S1 pending upstream states below.
+
+[[P2_Post_PR5_Matching_Reconciliation]] is the semantic/data capability audit: private1479 profiles,
+1435 exact-source approved/44 draft holds,11972 canonical links/12448 raw occurrences; matching0,
+no observed accord inputs, no selected family/status/alias/completeness or public publication readiness.
+Upstream98/98 ETL tests and first452.016s/replay291.219s stay attributed to their source/checkpoints;
+none is a matching test, benchmark/SLA or runtime result of this planning session. DM rows remain
+byte-equivalent as text to S1 and all DM-01..07 PROPOSED; no weights/approvals are silently changed.
+
+Executed initial S2 docs command: python -B .local/pr4-reconciliation/validate.py, exit0. Whole PR
+23 Markdown-only paths /22 vault frontmatters /272 wiki links /9 local links /0 new anchors,
+50 existing future test IDs and11 exact-fraction arithmetic oracles;0 errors/common-secret candidates.
+Checks include frontmatter/source_of_truth/fences/links/unique IDs, original requirement/decision and
+DM table rows, protected database/governance/research/receipts, and published PR #5 count/test evidence
+read through pinned git show. This local ignored scaffold installs nothing and executes no DB/API/UI.
+Final evidence-inclusive counts are refreshed at closeout; not assumed from this initial checkpoint.
+
+Current-working-document merge-file simulations use true merge base9636ee7, pinned main55d39cd and
+canonical-LF working files in both orders. Seven shared paths /14 simulations all exit0 and produce
+identical contents;0 conflicting paths. Exact paths remain the S1 seven-path list below. Temporary
+inputs/results are under this isolated worktree's ignored.local/pr4-reconciliation. No actual merge,
+rebase, main-file checkout or branch-history rewrite occurred. A clean textual simulation is not
+semantic approval or a guarantee after heads change; repeat immediately before final publication.
+
+Original PR #4 receipt is preserved at Git blobbf4d74b3a7ba04c8dc7b31c4ae658b82ddfc3203. All prior
+receipts, SQL/database/tests, research, AGENTS/workflow and original decision/requirement table rows
+are unchanged from START. No second receipt. S2 changed-path manifest/fingerprints and independent
+review will be recorded under the approved external post_PR5/pr4_reconciliation output, with canonical
+summary here. Parent alone refreshes shared handoff/ZIP; this worktree does not mutate those surfaces.
+
+Independent targeted review: parent agent /root (not author /root/master_gate_audit) inspected the
+substantive plan/data/architecture/UX/acceptance/DM reconciliation, found no blocking semantic finding,
+and accepted its IMP-MATCH-04 presence-label/closure/Gate-P clarification. All proposals remain
+PROPOSED; agent review is not owner acceptance. Exact committed-checkpoint verification is next.
+
+Formal parent review report fingerprint: d5895561d018fc6bb7f6291bff2a68a8b7adc0239a6039da46089bd63760db73.
+Its stated reviewer is the primary coordinator independent of the delegated PR4 author; it independently
+reran23-doc/22-frontmatter/273-wiki/9-local/50-spec/11-math checks with0errors and no DB calls.
+Final metadata records this event without changing the proposed semantics or existing receipt.
+
+
+Final evidence-inclusive docs checks are rerun at source checkpoint:23 Markdown paths/22frontmatters/
+273wiki links/9local links/0new anchors,50future cases and11arithmetic oracles,0errors/secret candidates.
+Source checkpoint includes exactly18 correction Markdown paths; no runtime/protected-path/receipt edit.
+
+Remaining gate: parent exact checkpoint verification, same-branch
+commit/push and existing PR #4 body/readback. Until those events occur, status remains IN PROGRESS.
+Runtime/scorer/API/DB/browser/asset/restore/performance tests and Mermaid rendering NOT RUN; no source
+acquisition, installer, paid service, new source rights, matching code, public output or production.
+
+## Historical S1 verification snapshots — retained unchanged below
 
 Base origin/main9636ee740cdcd3d60633ac11745366814d1af05c. PR #2 independently read as MERGED,
 head2e0c0611b17bf2b13840c305fa03a90c4066cf31, merge SHA equals base. Current stale main README/status

@@ -20,7 +20,9 @@ source_of_truth: "../../README.md"
 [[Dual_Mode_Matching_Decisions]] records DM-01..07 for independent modes, labels/weights/coverage,
 accord scale/fallback, custom-query rules, current-first grouping and read-only architecture. Confirmed
 owner intent is distinct from numerical proposals. No DEC/OD/ADR status or approved source grant changes.
-PR #3 NEW-08/09/11 semantic overlap requires owner reconciliation before implementation. Gate P pending.
+PR #3 NEW-08/09/11 semantic overlap is reconciled against merged upstream context in
+[[P2_Post_PR5_Matching_Reconciliation]] after PR #5. DM-01..07 remain PROPOSED; this feature Gate P
+is pending. Intake merge does not approve weights, completeness/absence, matching flags or publication.
 
 ## Current execution event — verified planning merge / IMP-P1-01
 

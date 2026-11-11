@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-12
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,26 @@ source_of_truth: "../../README.md"
 ---
 
 # Change Log — DoomParfum By TK
+
+## 2026-11-12 — DPT-PLAN-003 S2 source-checkpoint review closeout
+
+Authored2026-11-11; continued after quota2026-11-12. Parent /root independently reviewed the author's
+matching reconciliation, found no blocking semantic issue, and accepted explicit IMP-MATCH-04 real
+presence-label/closure/Gate-P prerequisites. DM-01..07 remain PROPOSED. Final local docs/arithmetic/
+merge-file/preservation checks precede exact18-Markdown-path staging/commit; parent must verify the
+resulting checkpoint before push/update of existing Draft PR #4. No second receipt, matching code,
+source/DB/production change, merge/rebase or shared handoff/ZIP mutation. Current SHA/publication
+are recorded only after verified events; older IN PROGRESS snapshots below remain historical.
+
+## 2026-11-11 — DPT-PLAN-003 S2 post-PR5 correction in progress
+
+Reconcile existing Draft PR #4 with merged acquisition PR #3 and local-intake PR #5 at55d39cd.
+New [[P2_Post_PR5_Matching_Reconciliation]] centralizes actual private catalogue/44holds/matching0,
+absent accord/family/status/completeness capabilities, DM recommendations and existing task gates.
+Dedicated plan/data/architecture/UX/acceptance/ADR/handoff/task and current status are corrected;
+old snapshots remain historical. No weight/DM approval, runtime, merge/rebase, receipt replacement
+or second receipt. Checks/independent review and same-PR publication are next, not inferred.
+
 
 ## 2026-11-11 — DPT-PLAN-003 / S1 docs-only dual-mode proposal
 

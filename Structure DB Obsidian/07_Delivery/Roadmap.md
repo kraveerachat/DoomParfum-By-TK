@@ -20,7 +20,10 @@ source_of_truth: "../../README.md"
 [[P2_Dual_Mode_Scent_Matching_Plan]] proposes A perfume-to-perfume plus B1 note/B2 accord search,
 independent from PR #3 acquisition. PR #2 merge verified9636ee740cdcd3d60633ac11745366814d1af05c;
 pre-merge checkpoint language below is historical. Matching waits for its own Gate P and licensed
-IMP-P1-02 readiness. Broader sources/images/hosting remain separately gated; no feature starts here.
+IMP-P1-02 readiness. S2: PR #3/#5 now merged at comparator55d39cd; bounded ETL is complete while
+matching eligibility0/44holds/accord/completeness gates persist. The current
+[[P2_Post_PR5_Matching_Reconciliation]] supersedes older pending ETL/foundation checkpoints below.
+Broader sources/images/hosting remain separately gated; no matching feature starts here.
 
 ## Current foundation checkpoint
 
