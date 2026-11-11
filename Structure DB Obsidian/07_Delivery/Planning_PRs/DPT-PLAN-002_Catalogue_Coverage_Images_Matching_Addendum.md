@@ -75,3 +75,12 @@ Related Obsidian docs: [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automati
 IMPLEMENTATION_NOT_STARTED=YES
 OWNER_GATE_P=AWAITING_REVIEW
 PRODUCTION_MUTATION=NO
+
+
+## Parallel research WP-03 checkpoint — 2026-11-11
+
+Read-only source audit has progressed **beyond the previous 12-profile research subset**: the whole pinned licensed Scento snapshot (1,479 rows / 160 houses / 420 materials) was parsed and quality counted, including 1,388 source-reported complete three-layer pyramids, 91 general-note-only profiles and 149 profiles with duplicate raw note labels within a flattened list. See [[Pinned_Scento_Full_Snapshot_Audit_2026-11-11]].
+
+In parallel, three first-party regional brand presences were observed (SAFF & Co., Scent Journer, Szindore), increasing the source-presence candidate tally to 27/220 (identity verification and source rights remain pending). The external local WP-03 fixture includes an offline 12-row searchable index and 11-house label crosswalk for QA, **not** a full 1,479-row PostgreSQL import or a web application search engine. See [[DPT-PLAN-002_Parallel_Research_Progress_2026-11-11]]. No bottle/note images acquired and no independent Dupe pairs verified.
+
+The implementation workstream remains blocked by **Human Owner Gate P**, pending owner acceptance of NEW-07..11 and merge of Draft Planning PR #3. Research progress does not override this gate.
