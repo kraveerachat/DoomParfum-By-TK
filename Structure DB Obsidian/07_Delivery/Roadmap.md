@@ -15,6 +15,13 @@ source_of_truth: "../../README.md"
 
 # Delivery Roadmap — DoomParfum By TK
 
+## DPT-PLAN-003 independent P2 planning lane — 2026-11-11
+
+[[P2_Dual_Mode_Scent_Matching_Plan]] proposes A perfume-to-perfume plus B1 note/B2 accord search,
+independent from PR #3 acquisition. PR #2 merge verified9636ee740cdcd3d60633ac11745366814d1af05c;
+pre-merge checkpoint language below is historical. Matching waits for its own Gate P and licensed
+IMP-P1-02 readiness. Broader sources/images/hosting remain separately gated; no feature starts here.
+
 ## Current foundation checkpoint
 
 Gate P completed by owner merge of PR #1 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. IMP-P1-01 implements

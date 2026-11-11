@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: ux_sitemap
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - ux
@@ -14,6 +14,13 @@ source_of_truth: "../README.md"
 ---
 
 # Site Map and Screens Overview — DoomParfum By TK
+
+## Proposed dual-mode discovery routes — DPT-PLAN-003
+
+[[Dual_Mode_Scent_Search_UX]] adds independent Similar to a perfume and Build a scent profile entries
+with B1 Notes/B2 Accords tabs, safe sharing, coverage groups and separate evidence. Existing Compare
+remains side-by-side real profiles; older mockups do not authorize chemical/intensity/dupe assertions.
+These are planning requirements, no screens/routes implemented; cart/ownership semantics unchanged.
 
 > **Document Type:** UX Architecture, Navigation Hierarchy & Screen Inventory
 > **Source Baseline:** `../README.md` (Section 5.4 & Section 2)

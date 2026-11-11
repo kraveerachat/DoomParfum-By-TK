@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 
 # Change Log — DoomParfum By TK
 
+## 2026-11-11 — DPT-PLAN-003 / S1 docs-only dual-mode proposal
+
+Fresh base9636ee740cdcd3d60633ac11745366814d1af05c after verified owner PR #2 merge; new branch
+plan/p2-dual-mode-matching, separate from Draft PR #3 inspected69255b0. [[DPT-PLAN-003_Dual_Mode_Matching]]
+records checkpoints; [[P2_Dual_Mode_Scent_Matching_Plan]] links dedicated architecture/data/UX/tests/ADR.
+Only additive documentation navigation/status reconciliation in shared files, original bodies retained.
+[[DPT-PLAN-003_Documentation_Evidence]] records exact manifest/checks/overlap. No code/migration/DB,
+source acquisition, AI service, production or original decision/receipt edits. Publication not yet
+performed at this start entry; actual event follows in task/evidence. Human Owner alone reviews/merges.
+
 > **Document Type:** Project Evolution & Specification Change History
 > **Source Baseline:** `../README.md`
 > **Status:** Active Change Log

@@ -15,6 +15,17 @@ source_of_truth: "../../README.md"
 
 # Agent Run Log — DoomParfum By TK
 
+## 2026-11-11 — DPT-PLAN-003 / S1 planning agent run
+
+Codex planner/architect/docs; branch plan/p2-dual-mode-matching from freshly fetched main9636ee7.
+Read both handoffs as reference, current governance/requirements/matching/UX/delivery/SQL and PR #2/#3;
+new A/B1/B2 proposals plus50 NOT RUN implementation specifications. [[DPT-PLAN-003_Dual_Mode_Matching]]
+and [[DPT-PLAN-003_Documentation_Evidence]] record exact SHAs, scope, validation and publication.
+TOOLS: existing GitHub MCP/Git/PowerShell/Python + existing PyYAML; no skills/installs/external web/data
+acquisition. Docs-only math/link/format/scope/overlap checks planned; no matching runtime/API/DB tests.
+PR #3 remains untouched. One new planning receipt at readiness only; all original receipts preserved.
+PRODUCTION_MUTATION=NO. Implementation waits for Human Owner Planning Gate and upstream rights/data.
+
 > **Document Type:** Automated Agent Execution Audit Log
 > **Source Baseline:** `../README.md` & `./README.md`
 > **Status:** Active Audit Trail

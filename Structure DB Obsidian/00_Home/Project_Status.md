@@ -14,6 +14,15 @@ source_of_truth: "../../README.md"
 
 # Project Status — Local Schema Implemented, Owner Review Pending
 
+## DPT-PLAN-003 current Git and matching workstream — 2026-11-11
+
+PR #2 verified MERGED at9636ee740cdcd3d60633ac11745366814d1af05c, superseding historical OPEN/DRAFT
+snapshots below. IMP-P1-02 and matching implementation are not established as complete by that event.
+DPT-PLAN-003 is a separate docs-only proposal on plan/p2-dual-mode-matching from that main SHA;
+[[DPT-PLAN-003_Dual_Mode_Matching]] and [[P2_Dual_Mode_Scent_Matching_Plan]] track its live publication.
+PR #3 Brand Research remains separate OPEN/DRAFT at inspected69255b0; no branch/PR edits there.
+A/B1/B2 feature implementation NOT STARTED; DM-01..07 PROPOSED, owner Gate P pending, production NO.
+
 Planning PR #1 verified MERGED on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is satisfied for the owner-approved
 bounded local pilot. IMP-P1-01 uses `impl/p1-01-local-postgres-schema`, START_SHA=`bffb2fab1918dc5221a6c5da7920168bcae263ca`.
 Existing Implementation PR #2 is OPEN/DRAFT; S2 performance correction checkpoint below supersedes

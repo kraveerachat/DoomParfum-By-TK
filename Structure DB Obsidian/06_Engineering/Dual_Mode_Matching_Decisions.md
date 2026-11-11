@@ -1,0 +1,39 @@
+---
+id: DPT-ADR-DUAL-MATCHING
+project: DoomParfum By TK
+type: decision_record
+status: proposed
+owner: human-owner
+updated: 2026-11-11
+tags: [doomparfum, adr, matching]
+source_of_truth: "../../README.md"
+---
+
+# Dual-Mode Matching — Owner Decision Requests
+
+Owner intent is confirmed for independent A/B modes, deterministic explainable scoring and separation
+of similarity/confidence/evidence. This does not accept formulas or authorize implementation. All DM
+decisions below remain PROPOSED; no original DEC/OD/ADR is changed. Owner acceptance/date: NOT RECORDED.
+
+| ID | Proposed decision and alternative | Consequence / owner review |
+|---|---|---|
+| DM-01 | A plus B1 notes/B2 accord builder independently; B3 combined deferred | any eligible catalogue reference; region/role optional; approve milestone boundaries |
+| DM-02 | Structural/Requested-note/Accord fit labels plus method tooltip; independent data confidence and pair evidence | replace legacy evidence-blended structural label for this new version; no sensory accuracy claim |
+| DM-03 | A weights50/30/20, layer25/37.5/37.5; minimum two layers or explicit flat/accord fallback; score/method/coverage grouped | alternatives are legacy40/25/15/20 composite or no percentage until calibration; approve thresholds and grouping |
+| DM-04 | Compatible observed accord weighted Jaccard; rank/presence separate fallback; no inferred numeric strengths | alternative cosine/derived accord model deferred; numeric capability blocked without scale evidence |
+| DM-05 | B1 coverage80/focus20; hard rules with unknown fail-closed; exact/any layer only; B2 weighted presence fallback | extra-note penalty is a model choice, not a chemical assertion; all unknown-domain/main-score policies need review |
+| DM-06 | Current-first groups verified current then unknown; historical candidates opt-in; strict market filter explicit | lifecycle/stock/market contract reconciles PR #3 NEW-04/07/09; do not conflate launch year with currentness |
+| DM-07 | Framework-neutral read-only ephemeral search; local-first bounded scan; public-only share; source-specific rights and Gate P/ETL readiness | TypeScript/SQL implementation choice, app stack, persistence, provider/cloud and wider capacity require later decisions |
+
+Confidence thresholds,730-day freshness cap, query caps and benchmark targets in
+[[Dual_Mode_Matching_Architecture]] belong to DM-03/05/07 and are unmeasured proposed policies. No count
+of reviews proves perceptual accuracy. Privacy/data rights cannot be traded for confidence or latency.
+
+PR #3's NEW-08/09/11 intersects score naming, partial profile eligibility and evidence. Read both
+proposals at merge time; explicit semantic reconciliation is needed if its owner decisions differ.
+This task does not edit/accept PR #3 or its source approvals. OD-01..06 retain exactly their local bounds.
+
+Impacted R03/R05/R07/R14/R15/R16/R17/R18/R21; new catalogue research is not in this plan. See
+[[P2_Dual_Mode_Scent_Matching_Plan]] for implementation units, [[Dual_Mode_Matching_Architecture]]
+for formulas/trade-offs and [[Dual_Mode_Matching_Acceptance_Tests]] for acceptance. Human Owner reviews
+and merges the Planning PR before any implementation; provider/resources require separate approval.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: matching_specification
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - matching
@@ -14,6 +14,14 @@ source_of_truth: "../README.md"
 ---
 
 # Scent Matching Specification — DoomParfum By TK
+
+## DPT-PLAN-003 version boundary — PROPOSED, 2026-11-11
+
+[[P2_Dual_Mode_Scent_Matching_Plan]] and [[Dual_Mode_Matching_Architecture]] propose independent A/B1/B2
+modes. The40/25/15/20 composite below remains a legacy draft, not an accepted structural-only formula.
+New proposal separates structural fit, Data Confidence and pairwise evidence; no sensory accuracy or
+Dupe relation follows from score. Reconcile PR #3 NEW-08 at owner review; neither draft accepts the other.
+[[Dual_Mode_Matching_Acceptance_Tests]] specifies new-version expected values; no feature implemented.
 
 > **Document Type:** Scent DNA Matching Algorithm & Logic
 > **Source Baseline:** `../README.md` (Section 5)

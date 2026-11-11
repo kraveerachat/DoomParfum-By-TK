@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: matching_evidence
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - matching
@@ -15,6 +15,14 @@ source_of_truth: "../../README.md"
 ---
 
 # Review Evidence and Confidence — DoomParfum By TK
+
+## DPT-PLAN-003 separation proposal — 2026-11-11
+
+[[Dual_Mode_Matching_Architecture]] proposes Data Confidence from support/coverage/freshness of used
+catalogue inputs, with pairwise evidence strength/disagreement in a separate panel. Legacy combined
+review-count/confidence thresholds below remain draft context, not this new version's default.
+Ratings and source-reported similarity percentages do not enter structural fit. Exact direct pair
+claims retain scope/rights/editions/direction/opposition; no evidence badge for an invented B query.
 
 > **Document Type:** Community Claims, Evidence Modeling & Confidence Scoring
 > **Source Baseline:** `../README.md` (Sections 4.2 & 5.2)
