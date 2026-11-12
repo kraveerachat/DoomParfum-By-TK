@@ -15,6 +15,15 @@ source_of_truth: "../../README.md"
 
 # Decision Log — DoomParfum By TK
 
+## DPT-PLAN-003 decision review — 2026-11-11 / PROPOSED
+
+[[Dual_Mode_Matching_Decisions]] records DM-01..07 for independent modes, labels/weights/coverage,
+accord scale/fallback, custom-query rules, current-first grouping and read-only architecture. Confirmed
+owner intent is distinct from numerical proposals. No DEC/OD/ADR status or approved source grant changes.
+PR #3 NEW-08/09/11 semantic overlap is reconciled against merged upstream context in
+[[P2_Post_PR5_Matching_Reconciliation]] after PR #5. DM-01..07 remain PROPOSED; this feature Gate P
+is pending. Intake merge does not approve weights, completeness/absence, matching flags or publication.
+
 ## Current execution event — verified planning merge / IMP-P1-01
 
 PR #1 owner merge verified at `bffb2fab1918dc5221a6c5da7920168bcae263ca` on 2026-11-10. Gate P is satisfied;

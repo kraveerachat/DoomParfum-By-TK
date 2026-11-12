@@ -1,0 +1,109 @@
+---
+id: DPT-EVD-DATA-001
+project: DoomParfum By TK
+type: test_evidence
+status: review-pending
+owner: human-owner
+updated: 2026-11-12
+tags: [doomparfum, research, evidence]
+source_of_truth: "../../../README.md"
+---
+
+# DPT-DATA-001 evidence and boundaries
+
+Task [[DPT-DATA-001_Post_PR5_Data_Review]]; report [[Post_PR5_Held_and_Permission_Review]].
+Branch codex/p1-data-review from main55d39cd619fa6c1ae70521720aa734d632a2083d. Source hashes/counts
+and exact private locators retained in external post_PR5/held_profiles and research_increment folders.
+
+Forensic8/8 file assertions:44held/43duplicate profiles/45extras/39pyramid+4general/1Khamrah conflict/
+0ambiguous material candidates/full-flat149 distinct metric/0canonical writes.44repeated groups,
+not45; repeated groups and extra occurrence counts differ in the general-list cohort.
+Research28 persisted checks passed; seven baseline inputs unchanged. The delegated researcher reported
+58 additional post-write assertions in chat, but no standalone persisted result was supplied, so
+these are not counted as independently reproducible passing checks here.
+Coordinator independently checks manifest hashes, counts, rights classifications and metadata-only
+scope before publication. Full raw arrays/licensed source/research CSV remain outside public Git.
+
+No ETL mutation, SQL/PNG/API/UI benchmark or source permission acquisition is performed by this docs
+task. Existing DB test evidence in other tasks is not counted as this task's tests. No runtime PASS
+label follows from a CSV/JSON audit. Current merge/review facts belong to the task/log checkpoint;
+independent source/document review and link/frontmatter/diff/secret-pattern results are recorded there.
+
+Owner decisions still required: whether to commission an explicit new reviewed normalization version
+for repeated notes; rights-backed Khamrah reconciliation; exact per-image release/use; ambiguous brand
+identities and proposed matching DM choices. No decision is accepted by this research PR.
+
+Independent review:110 source/data assertions plus11 document/protected-path checks passed, no
+blocking finding. Report SHA2565c86f4f10d8b5870c868b248c15656b07a0cda6681479ccfe36b2010ba00b6c3.
+Six pinned artifacts, all44forensicrecords/arrays/ordinals,14incrementfiles (13entries+self), seven
+baseline hashes and scope/count/rights distinctions independently checked. No reviewscript replay,
+liveDBorlegaltruthverification is implied. Final changed-file and doc validation results follow below.
+
+## Publication closeout
+
+PR7 OPEN/DRAFT; exactsourcefe10fa669085bc08f9eaf8dd47cc1f787a1c1bab independentlyverified.
+Checkpointreport3dbca57f94460940378ce84604ce34ece157727700aa2bca82341a5ab2eb0150.
+One finalreceipt [[2026-11-12_024301_DPT-DATA-001_Post_PR5_Review]] created; all8migrations/3priorreceipts unchanged.
+Finalmetadata commit/pushandheadreadback follow; ownerreview/merge pending. No source/canonical/
+rights/holdmutation ordecisionapproval. Exact8changedpaths inreceipt; finaldocchecks recordedexternally.
+
+## Owner-review readiness revalidation — 2026-11-12 Bangkok
+
+Current main remains `55d39cd619fa6c1ae70521720aa734d632a2083d`; PR7 starting/publication
+head `2673d7dd538373e54d7ece084e1e33561dddf0f1` is based directly on that main. Live GitHub
+readback: OPEN/DRAFT, merged=false, mergeable=true. No base change or mergeability regression.
+Exact substantive checkpoint `fe10fa669085bc08f9eaf8dd47cc1f787a1c1bab` remains unchanged.
+Independent110+11 review SHA256 `5c86f4f10d8b5870c868b248c15656b07a0cda6681479ccfe36b2010ba00b6c3`
+and exact-checkpoint report SHA256 `3dbca57f94460940378ce84604ce34ece157727700aa2bca82341a5ab2eb0150`
+still match. Central report raw reviewed hash and committed LF hash are both verified; their only
+byte difference remains CRLF-to-LF Git normalization, with no semantic edit.
+
+Fresh read-only readiness audit:183 file/hash/document assertions,0errors; six pinned Scento
+artifacts,13 research-manifest entries and seven baseline-input hashes match. Persisted forensic8
+and research28 results remain actual artifacts;58 chat-only assertions stay excluded.39 existing
+base source/governance/decision/receipt blobs unchanged. Eight Markdown/eight frontmatters,
+56 wiki links, local Markdown targets/fences, whole-PR common-secret patterns and diff checks passed.
+Original final receipt `2026-11-12_024301_DPT-DATA-001_Post_PR5_Review.md` unchanged; no second receipt.
+Audit output: external `review_readiness/PR7_READINESS_AUDIT.json` within the coordinator's
+`pr8_timestamp_correction` evidence folder.
+
+READY FOR HUMAN OWNER REVIEW as docs-only investigation. All44 holds remain; no canonical or
+source-observation mutation.43 duplicate-list profiles/44 groups/45 extras remain distinct from149
+flattened-repeat profiles.226 candidates/21 conflicts remain;12/46 illustration candidates describe
+historical research vocabulary, with0 acquired/display-approved assets and0 usable pairwise relations.
+No rights or identity approval, current legal truth, live DB, runtime test, or full-catalogue image
+coverage is inferred. Owner still decides hold-resolution alternatives, permissioned Khamrah claims,
+source/asset queues and separate matching decisions.
+
+This continuation changes only task/evidence metadata. No DB/Docker/runtime/network re-fetch, source
+acquisition, receipt rewrite or decision approval. Metadata-only commit/push and resulting head are
+read back in PR/external publication metadata. Other Draft PRs remain separate; Human Owner alone
+reviews/merges. Parent owns shared D1–D9/ZIP. PRODUCTION_MUTATION=NO.
+
+
+## Bounded D5 metadata increment — 2026-11-12
+
+Dedicated [[Bounded_Note_Media_Candidate_Increment]] adds a sanitized summary of3metadata candidates
+(Nutmeg/Blackcurrant/Juniper). Proposed candidatequeue15/46historicalRESEARCH only; no58/420claim.
+Researcher35/35offline QA and independent51/51artifact assertions pass; sixoutputmanifest entries
+and fivebaseline inputhashes verified, old12rows retained. Allper-use flagsunknown/blocked,
+0assetbytes/grants/usablepairs/holdresolutions; all44holds and originalobservations untouched.
+All3JPEG unsupportedPR6,2reportedpixelproducts over4000000; threepinnedoldidfetchfailures explicitly
+NOT_VERIFIED. No binary/visual/ownership/liveorigin/immutablecontent/DB/runtime tests claimed.
+NewresearchmanifestSHA256 and independentreview stored externally; prior forensic/research/review
+results and immutable receipt remain attributed and unmodified. Finaldocs/hash/receipt checks and
+samebranchpublication readback follow; parent owns D1–D9/singleZIP.
+
+
+## Bounded media increment review-ready checkpoint — 2026-11-12
+
+Researcher35QA plus independent51offlineartifactchecks passed; sixmanifest/fivebaseline hashes
+match, old12rows unchanged. Proposedqueue15/46historicalRESEARCH only, all3JPEG unsupportedPR6,
+2reportedpixelbounds exceeded;3immutablepinsNOT_VERIFIED.0assetbytes/grants/usablepairs/hold
+resolutions;44holds and centralheldreport/oldreceipt/sourceevidence unchanged.
+Current wholePR9Markdown/9frontmatters/62wiki checks pass,195file/hash/docassertions0errors.
+No DB/runtime/sourceownership/binary/visual/immutablecontent validation implied.
+Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; existing preconfigured
+authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
+install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
+parent owns D1–D9/singleZIP. No newreceipt or Production mutation.

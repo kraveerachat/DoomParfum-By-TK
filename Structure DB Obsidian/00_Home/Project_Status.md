@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - status
@@ -13,6 +13,16 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current post-PR4 reconciliation — 2026-11-13
+
+OwnermergedPR4 ataa55f8b59acb0872b3b40273a8cdd25198f3ba27 afterPR6/7. MatchingPlanningGateP
+is verified for independentlyauthorized work; allDM01–07 numeric/policy rows remainPROPOSED,
+not automaticallyaccepted. PR8isbeingnonrewriting-mergedwiththismain; retaineddatedDraft/merge
+statements below describehistorical snapshots, not currentPR4/6/7states. Currentfull1479import/
+replay/inventory acceptance andboundedcapture remainverified; historicaltimestampcause unresolved.
+PR8mustremainOPEN/DRAFT/blocked; no speculativefix, clockchange or equivalentexperiment.
+
 
 
 ## Current post-PR5 checkpoint — 2026-11-12
@@ -52,6 +62,41 @@ One final IMP-P1-02 receipt created; final metadata publication head/ZIP readbac
 Review readiness applies to bounded private-local intake, not capacity/restore/API/UI/production.
 
 ## Historical checkpoints (superseded by verified current entry above)
+
+## S3 current Owner-review readiness — 2026-11-12
+
+Existing PR #4 rechecked OPEN/DRAFT/unmerged/mergeable at576889923d9f2d616cda88e53193f7f4d738be84;
+main55d39cd unchanged. Existing DM-01..07 matrix/PROPOSED semantics and receipt preserved. Docs checks:
+23 Markdown/22 frontmatter/273 wiki/9 local/11 arithmetic/0 errors;14/14 merge-file simulations clean.
+Planning-review-ready; real matching remains ineligible,44 holds and both B2 data gates remain blocked.
+S3 task/evidence record exact checks and local diagnostic-path correction. Metadata-only checkpoint;
+publication readback follows in live PR/external evidence. No runtime, rights, owner approval or merge.
+
+## S2 matching reconciliation after merged PR #5 — current, 2026-11-11
+
+PR #3 verified MERGEDa908711 and PR #5 MERGED55d39cd619fa6c1ae70521720aa734d632a2083d;
+these events supersede their older pending snapshots below. Existing PR #4 remains OPEN/DRAFT;
+[[P2_Post_PR5_Matching_Reconciliation]] and [[DPT-PLAN-003_Dual_Mode_Matching]] track docs-only S2.
+IMP-P1-02 upstream intake now verified1479 local profiles/1435approved/44held,160brands/420notes/
+11972canonical links/12448raw;98/98 recorded ETL regression, no matching tests here. Matching flags0,
+no usable accord inputs or selected family/status/publication contract. Real A/B1 still need eligible
+complete-as-reported inputs; real B2 numeric AND presence remain data-blocked. DM-01..07 PROPOSED;
+matching implementation NOT STARTED. Existing receipt preserved, no second receipt or agent merge.
+2026-11-12: parent independent targeted review found no blocking semantic finding and verified source
+checkpoint968cd230ec19894c57defa920d1cb5650c37be28. Documentation is Owner-review-ready; final metadata
+push/readback evidence follows in the existing PR/external summary. No owner acceptance is inferred.
+
+
+## DPT-PLAN-003 current Git and matching workstream — 2026-11-11
+
+PR #2 verified MERGED at9636ee740cdcd3d60633ac11745366814d1af05c, superseding historical OPEN/DRAFT
+snapshots below. IMP-P1-02 and matching implementation are not established as complete by that event.
+DPT-PLAN-003 is a separate docs-only proposal on plan/p2-dual-mode-matching from that main SHA;
+[[DPT-PLAN-003_Dual_Mode_Matching]] and [[P2_Dual_Mode_Scent_Matching_Plan]] track its live publication.
+PR #3 Brand Research remains separate OPEN/DRAFT at inspected69255b0; no branch/PR edits there.
+Planning [PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) is OPEN/DRAFT; one planning receipt
+recorded in the task. Current parallel PR #3 refresh0cdfba4 is documented in evidence.
+A/B1/B2 feature implementation NOT STARTED; DM-01..07 PROPOSED, owner Gate P pending, production NO.
 
 Planning PR #1 verified MERGED on 2026-11-10 at `bffb2fab1918dc5221a6c5da7920168bcae263ca`. Gate P is satisfied for the owner-approved
 bounded local pilot. IMP-P1-01 uses `impl/p1-01-local-postgres-schema`, START_SHA=`bffb2fab1918dc5221a6c5da7920168bcae263ca`.
@@ -155,3 +200,13 @@ PR8 adds bounded isolatedSYNTHETIC operandcapture:12offline methods and62indepen
 Historical23514rootcause remainsBLOCKED; current1479replay/integrity staysVERIFIED. No speculative
 fix, repeatedcohort, main/Production/newrights/receipt mutation or merge.
 [[IMP-P1-04_Bounded_Temporal_Capture]]; allPRsOPEN/DRAFT at freshGitHubCLIreadback.
+
+
+## Post-PR5 data research — 2026-11-12
+
+Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] accountsfor all44holds
+(43duplicateprofiles/44groups/45extras plusKhamrah);0resolved/canonicalchanges.226brandcandidates/
+21conflicts retained,3new sourcefactlocators,12of46RESEARCHnote-imagecandidates (notP1/420coverage),
+0imagebytes/displaygrants/usablepairs. Independent110source+11docchecks pass. Source/raw/research
+queues remainexternal; [[Post_PR5_Held_and_Permission_Review]] summarizesrightsandowneralternatives.
+This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normalization or deployment.

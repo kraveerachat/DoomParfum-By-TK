@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 
 # Product Backlog — DoomParfum By TK
 
+## Parallel dual-mode matching planning — DPT-PLAN-003 / PROPOSED
+
+[[P2_Dual_Mode_Scent_Matching_Plan]] owns the IMP-MATCH-01..07 dependency/task map, distinct from PR #3's
+IMP-P2-* acquisition IDs and existing TSK-201..204. [[DPT-PLAN-003_Dual_Mode_Matching]] tracks this new
+Planning PR. All matching implementation NOT STARTED: owner-merged Gate P plus IMP-P1-02 licensed
+ETL/rights readiness are required; additional sources depend on their own plan/permission gates.
+S2: merged PR #5 completes bounded private ETL only; matching flags0,44 holds, missing accord inputs
+and completeness remain. [[P2_Post_PR5_Matching_Reconciliation]] is the current dependency crosswalk;
+older P1 status rows below are historical, not a claim the merged importer is still unstarted.
+
 > **Document Type:** Work Breakdown Structure & Task Backlog
 > **Source Baseline:** `../README.md` (Sections 2 & 8)
 > **Status:** Draft / Active Backlog
