@@ -341,3 +341,14 @@ matching/runtime/production/main/merge changes. Human Ownerreviews/merges.
 
 DPT-DATA-001closeout: PR7OPEN/DRAFT; sourcefe10fa6exactreviewverified, one newimmutable receipt;
 finalmetadata docs/diffchecks and normalpush follow, no code ordecision changes.
+
+## 2026-11-13 / DPT-PLAN-003 — reconciliation of GitHub merge conflicts
+
+Human Owner merged PR6/PR7 before PR4. GitHub PR4 showed conflicting concurrent
+append-only edits to Agent_Run_Log and Change_Log. Non-force Git Data API two-parent
+merge commit 9bc92f0170325def43da67e92a9855d4e190d475 included current main
+cbc8720c547b76fe5e0bd9b93c3cbf54678b4c2a and PR4 original db7e50022dcacfba755b2ff405b96b95a7d94359.
+Seven shared Markdown documents reconciled, all unrelated main files intact, current
+branch comparison ahead9/behind0/23 changed docs and GitHub clean. Planning review only;
+DM01..07 are still PROPOSED; no actual matching tests/CI rerun, Owner Gate P,
+source/media permission, production or PR-to-main merge inferred.

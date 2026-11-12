@@ -524,3 +524,14 @@ Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; exis
 authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
 install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
 parent owns D1–D9/singleZIP. No newreceipt or Production mutation.
+
+## RUN-20261113-PLAN003-MERGE-RECONCILIATION
+
+User-reported GitHub PR4 dirty merge after owner-merges PR6/PR7. GitHub MCP exact refs
+verified main cbc8720c547b76fe5e0bd9b93c3cbf54678b4c2a; PR4 db7e50022dcacfba755b2ff405b96b95a7d94359.
+Pure three-way line reconciliation in remote Git-tree construction; two append-only history
+insertions each merged without loss, seven shared Markdown files reconciled,16 original
+PR-only blob hashes and109 unrelated main file hashes preserved. Created two-parent commit
+9bc92f0170325def43da67e92a9855d4e190d475 and updated existing branch by non-force,
+expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, behind0,
+23 files; original DM01..07 all PROPOSED. No runtime tests rerun; no Production/main/PR merge.

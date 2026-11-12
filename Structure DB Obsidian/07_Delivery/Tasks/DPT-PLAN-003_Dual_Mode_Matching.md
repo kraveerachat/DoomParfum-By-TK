@@ -245,3 +245,31 @@ Exact UTF8bodybytes readback verified, OPEN/DRAFT/MERGEABLE. Initial localstr/AP
 failed only because localread_text normalized CRLF; directUTF8byte comparison confirms exactbody.
 No newlogin/tokenextraction/install/config/hook/ownerdecision/merge. This metadata-only note
 changes no matrix semantics; final metadataHEAD/body readback recorded externally afterpublication.
+
+## S5 owner-merged PR #6/#7 conflict resolution — 2026-11-13
+
+Branch before resolution: `db7e50022dcacfba755b2ff405b96b95a7d94359`; main after
+Owner-merged PR #6 and #7: `cbc8720c547b76fe5e0bd9b93c3cbf54678b4c2a`.
+A real non-forced two-parent merge commit `9bc92f0170325def43da67e92a9855d4e190d475`
+reconciles the branch while preserving the full current main tree. Exact merged tree SHA:
+`ab3c39b7203d41882635a9212d15069f324923d0`.
+
+Git-tree audit: all 109 unrelated regular-file blobs identical to current main; 16 branch-only
+files byte-identical to the PR4 source head; 7 shared Markdown paths line-reconciled.
+The GitHub conflict was two simultaneous append-only insertions at the same history location
+in `08_Operations/Agent_Run_Log.md` and `08_Operations/Change_Log.md`; both sides' event sections
+were retained, not overwritten. Verified merged blobs have frontmatter, contain no conflict
+markers and preserve the PR #7 bounded-note-media history. GitHub comparison after the
+merge: branch ahead=9, behind=0, 23 changed Markdown paths, PR #4 OPEN, draft=false,
+mergeable=true, mergeable_state=clean. No historical receipts, source/data/model/rights or
+runtime files changed by this resolution. No runtime/test suite or Markdown link checker
+was rerun in this remote conflict-resolution session; previous 11 formula/documentation
+oracles are historical evidence, not newly executed results.
+
+**Owner Gate P still pending:** DM-01..07 remain PROPOSED. The planning contents are coherent
+with upstream source/rights/privacy constraints, but Owner must accept/adjust decisions
+before treating the Planning PR as authorized matching implementation. In particular,
+real matching eligibility remains0; B2 numeric and presence remain unavailable; 44 source
+holds remain unresolved. This is a branch conflict fix, not a PR-to-main merge, code
+implementation, permission grant or Production change. Human Owner alone decides final
+PR approval/merge. This note is a dated checkpoint, not an additional immutable receipt.
