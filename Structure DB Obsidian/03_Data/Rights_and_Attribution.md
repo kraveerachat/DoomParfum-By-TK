@@ -116,3 +116,7 @@ The acquired/validated transition additionally requires the selected permission'
 match image bytes. Finalizing an initially unknown hash uses a new immutable permission version.
 Changing an image capture/bytes uses a new asset ID; changing a parent's selected permission invalidates
 children for re-review, rather than letting an old parent-binding pointer silently authorize new use.
+
+
+## DPT-PLAN-002 rights assessment extension — 2026-11-11 (PROPOSED)
+Track flags per source/field/asset: `discover, automated_access, cache, store, display, redistribute, transform, commercial_use, AI_use, retain, share`, with exact grant/Terms revision, checked date, licence, territory, expiry/revoke/delete obligations. Unknown=>NO-GO for that action. Brand official storefront pages, search previews and reviews do NOT authorize automated copy or image use. Fragrantica ToS effective 2026-01-14 §§5.3/5.7 specifically blocks unauthorized automated extraction and AI/dataset reuse; no adapter. See [[Source_Permission_Matrix_DPT_PLAN_002]]. No changes to existing pinned Scento local licence approval.

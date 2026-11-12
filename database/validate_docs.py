@@ -1,5 +1,6 @@
 """Check task Markdown, model parity, evidence freshness and forbidden publication paths."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import re
@@ -37,6 +38,10 @@ def without_fences(text):
 
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--task',choices=['IMP-P1-01','IMP-P1-02'],default='IMP-P1-01')
+    task=parser.parse_args().task
+    prefix='scento_' if task=='IMP-P1-02' else ''
     errors=[];paths=changed_paths();markdown=[p for p in paths if p.endswith('.md')]
     by_name={}
     for file in VAULT.rglob('*.md'):by_name.setdefault(file.stem,[]).append(file)
@@ -68,10 +73,10 @@ def main():
     erd=(VAULT/'03_Data/ERD_Draft.md').read_text(encoding='utf-8')
     erd_names={v.lower() for line in erd.splitlines() if '--' in line and ':' in line for v in re.findall(r'\b[A-Z][A-Z_]+\b',line)}
     contract=json.loads((ROOT/'database/schema_contract.json').read_text(encoding='utf-8'))
-    inventory=json.loads((ROOT/'database/evidence/schema_inventory.json').read_text(encoding='utf-8'))
+    inventory=json.loads((ROOT/('database/evidence/'+prefix+'schema_inventory.json')).read_text(encoding='utf-8'))
     if expected!=erd_names or expected!=set(contract['logical_tables']) or expected!=set(inventory['tables']) or len(expected)!=47:
         errors.append('ERD/dictionary/SQL manifest/live inventory parity')
-    results=json.loads((ROOT/'database/evidence/test_results.json').read_text(encoding='utf-8'))
+    results=json.loads((ROOT/('database/evidence/'+prefix+'test_results.json')).read_text(encoding='utf-8'))
     for name,digest in results['source_file_sha256'].items():
         if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=digest:errors.append('Stale test source evidence: '+name)
     for item in inventory['migrations']:
@@ -92,6 +97,13 @@ def main():
     published += [p.relative_to(ROOT).as_posix() for p in sorted((ROOT/'database/migrations').glob('00[1-7]_*.sql'))]
     for name in published:
         if git('hash-object',name)!=git('rev-parse',published_head+':'+name):errors.append('Published migration/receipt changed: '+name)
+    if task=='IMP-P1-02':
+        # All merged migrations/receipts are immutable for this new task, including 008.
+        preserved=[p for p in git('ls-tree','-r','--name-only','origin/main').splitlines()
+                   if p.startswith(('database/migrations/','Structure DB Obsidian/08_Operations/Receipts/'))]
+        for name in preserved:
+            if git('hash-object',name)!=git('rev-parse','origin/main:'+name):
+                errors.append('Merged migration/receipt changed: '+name)
     # OD approval rows must remain identical in log and planning spec.
     rows=[]
     for name in ['08_Operations/Decision_Log.md','07_Delivery/Planning_PRs/P1_Data_Foundation_Plan.md']:
@@ -99,15 +111,15 @@ def main():
         rows.append([line for line in text.splitlines() if re.match(r'^\| OD-0[1-6] \|',line) and 'APPROVED' in line])
     if rows[0]!=rows[1] or len(rows[0])!=6:errors.append('Owner decision row parity')
     subprocess.run(['git','diff','--check'],cwd=ROOT,check=True)
-    result={'task':'IMP-P1-01','markdown_files':len(markdown),'parsed_frontmatters':frontmatter,'logical_table_parity':len(expected),
+    result={'task':task,'markdown_files':len(markdown),'parsed_frontmatters':frontmatter,'logical_table_parity':len(expected),
             'owner_decisions_unchanged_matching':len(rows[0]),'secret_pattern_candidates':sum('secret pattern' in e for e in errors),
             'historical_evidence_hashes_unchanged':not any('Historical evidence' in e for e in errors),'errors':errors,
-            'published_migrations_and_implementation_receipt_unchanged':not any('Published migration/receipt' in e for e in errors),
+            'published_migrations_and_implementation_receipt_unchanged':not any('migration/receipt changed' in e for e in errors),
             'limits':['No Mermaid rendering','Common secret patterns/path scan only; not a comprehensive security audit','External web URLs not re-fetched by this local link check'],
             'changed_paths':paths}
     print(json.dumps(result,ensure_ascii=False,indent=2))
     if not errors:
-        (ROOT/'database/evidence/documentation_checks.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+        (ROOT/('database/evidence/'+prefix+'documentation_checks.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
     return bool(errors)
 
 

@@ -153,3 +153,8 @@ $$J(A, B) = \frac{|A \cap B|}{|A \cup B|}$$
 ## 9. Change Notes
 
 - `2026-11-10`: ร่างสเปกการจับคู่กลิ่น กำหนดสูตรน้ำหนัก 40/25/15/20 และแบ่ง 3 Tiers ผลลัพธ์
+
+
+## Research addendum — distinguish 80% structural features and 20% evidence (2026-11-11, PROPOSED)
+
+The v0 composite formula combines note pyramid 40%, accords 25%, family 15% and community evidence 20%, but labels the whole as *Structural Similarity*. Review NEW-08 before coding: present structural note/accord/family scoring separately from source-backed Dupe reports and evidence confidence; an optional combined recommendation rank should have a distinct name/version. A high structural overlap is an exploratory candidate, not confirmed same scent. Missing layers/accords limit confidence; never insert fake zero/100% values. Exact perfume-to-perfume relationship claims need publisher evidence, dates, independent sources, rights and contradictions. See [[DPT-PLAN-002_Catalogue_Coverage_Images_Matching_Addendum]]; no implementation is authorized by this addendum.

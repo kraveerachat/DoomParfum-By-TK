@@ -93,6 +93,18 @@ acquisition. Docs-only math/link/format/scope/overlap checks planned; no matchin
 PR #3 remains untouched. One new planning receipt at readiness only; all original receipts preserved.
 PRODUCTION_MUTATION=NO. Implementation waits for Human Owner Planning Gate and upstream rights/data.
 
+## 2026-11-12 bounded note-media metadata increment
+
+ExistingPR7 adds3metadata-only note-illustration candidates; proposed queue15/46historicalRESEARCH
+labels only, not58/420coverage or permissions. Researcher35QA plus independent51artifactchecks
+pass; sixmanifest/fivebaseline hashes preserved. All3JPEG unsupportedPR6,2over4000000reportedpixels;
+threeimmutableoldidfetchfailuresNOT_VERIFIED.0bytes/grants/usablepairs/holdresolutions,44holds
+unchanged. Central held report/oldreceipt/source evidence preserved. Dedicated newdata note and
+essentialtask/evidence/registry links only; no runtime/DB/image acquisition/Production/merge.
+PublicREST fallback verifies GitHub; MCPmetadata publication pendingactualsuccessfulupdate/readback.
+Parent owns D1–D9/singleZIP. [[Bounded_Note_Media_Candidate_Increment]].
+
+
 > **Document Type:** Automated Agent Execution Audit Log
 > **Source Baseline:** `../README.md` & `./README.md`
 > **Status:** Active Audit Trail
@@ -441,3 +453,74 @@ resulting final publication HEAD is verified in PR/final report, not invented in
 Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
 [[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
 Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## RUN-20261111-PLAN002-S1 — ChatGPT research and docs-only planning
+TOOL DECISION: GitHub connector for current repo/PR/branch/docs-only change; web read-only primary-source research; Python local standard CSV/audit, artifact_tool for owner workbook. GitHub remote is work surface; research pack created in ChatGPT sandbox, not on owner Windows workspace. GIT_WRITE=YES scoped planning branch only; OBSIDIAN_WRITE=YES via PR; PRODUCTION_MUTATION=NO. No tool installer, scraper, cloud provisioning or paid API used.
+Git preflight main `bffb2fab1918dc5221a6c5da7920168bcae263ca`, PR #1 MERGED, PR #2 MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); licensed ETL and new-source adapter work remain separate. Parsed 220 seed candidates; observed 15 first-party publisher/brand pages; source content/asset automation permission NOT GRANTED. No runtime/db/ETL tests. Work products: planning spec, registry/rights/metric/identity/source-adapter docs, ADR proposal, task, owner decision ledger and handoff. Documentation PR and final commit references are reported in review surface after creation; Human Owner merges, not agent.
+
+## RUN-20261111-IMP-P1-02 — Master Handoff execution
+
+TOOL DECISION: existing GitHub MCP for live PR facts/Draft publication; PowerShell/Git2.53.0/Python3.11.9
+for source/index/replay/tests/package; existing Docker Desktop/PostgreSQL16.15 for guarded private local
+test/pilot only. Built-in web primary-source research by explicitly requested parallel researchers.
+External input ZIP81 file hashes/CRC/path safety verified; full master prompt read. Fresh maina908711
+and PRs1/2/3 merged; PR4 Draft preserved. GIT_WRITE=YES task branch; OBSIDIAN_WRITE=YES;
+PRODUCTION_MUTATION=NO. No optional skill/install needed; tool registry/usage notes NOT FOUND, so
+meaningful choices recorded here/task rather than invented as existing registry files.
+
+Requested codex mcp list actually ran (codex-cli0.144.6). Firecrawl connector read-only authenticated
+smoke test succeeded; redundant codex mcp add/login NOT USED. No global config/auth/install change,
+paid research job or Firecrawl search credit consumption. Existing Desktop was started hidden and
+task container started; only disposable test DBs recreated, persistent pilot created/migrated, not reset.
+
+Parent owns D2/D4/DB/progress/package; isolated D1 brand and D5/D7 media/evidence researchers and
+independent gate/source auditor. Source/mapping scope,42 original hashes, full CSV/JSONL and deterministic
+outputs checked. Four external utility corrections22/22 tests; focused19/19 and full98/98 pass;
+current-source full replay adds0rows, matching0. Independent reviewer inspects actual hashes/evidence
+and nine pure read-only assertions, no DB/test rerun claimed. No blocking source defect reported.
+Development failures/corrections and approval-quota interruption/resume are retained in the task.
+
+Bounded local full import452.016s/current replay291.219s retain all original final validation; replay
+overlapped regression. Not a capacity/restore test. Private raw handoff/data remain external, one
+LATEST ZIP replaced atomically after each milestone. See [[IMP-P1-02_Licensed_Scento_ETL]] and
+[[IMP-P1-02_Licensed_Scento_Evidence]] for current checkpoint, exact files/results/remaining gates.
+No force push/main change/merge/production; Human Owner implementation merge remains required.
+
+Publication closeout: independent exact66e1271f859ce9af3d23ae36c3f584885da7afa2 verification passed;
+review report3566577.../checkpoint reportabea744... kept external. Task source branch pushed normally;
+GitHub create PR first rejected a parameter name before mutation, corrected structured call created
+[PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5) OPEN/DRAFT. Documentation validator
+passed13Markdown/10frontmatters/47table parity/6OD rows/0secret-pattern candidates. Metadata/one new
+receipt final checks follow; no code changes after reviewed source checkpoint.
+
+Final receipt created once; final validation14Markdown/11frontmatters/47tables/6OD rows,0errors and
+0common-secret candidates. Exact22-file changed manifest retained. Final metadata commit/push and
+PR/head readback complete publication, while reviewed code/test/schema evidence stays unchanged.
+
+## RUN-20261112-DATA001 — held/source/rights research
+
+ExistingPython/PowerShell/Git/GitHub and primary-source web research; no install/globalconfig/paidjob.
+Parentforensics readpinned6files and existingconflictevidence; separate researcherreviewed6existing
+brandrows/5newnoteillustrations/3pair-opportunities externally; independent reviewerreconstructed110
+source/data+11docs assertions withnoDB/Docker/network/Gitwrites.28persistedQA accepted;58chat-only
+assertions explicitlyexcluded. No canonicalidentity/rights/holdapproval. Separatebranch+DraftPR,
+Obsidianactualstatus, sourcehashes/locators and parent-ownedD1-D9/singleLATESTZIP updated.
+PRODUCTION_MUTATION=NO. No source/bytes acquisitionfromrestrictedhosts, no merge or mainwrite.
+
+DPT-DATA-001closeout: PR7OPEN/DRAFT; sourcefe10fa6exactreviewverified, one newimmutable receipt;
+finalmetadata docs/diffchecks and normalpush follow, no code ordecision changes.
+
+
+## Bounded media increment review-ready checkpoint — 2026-11-12
+
+Researcher35QA plus independent51offlineartifactchecks passed; sixmanifest/fivebaseline hashes
+match, old12rows unchanged. Proposedqueue15/46historicalRESEARCH only, all3JPEG unsupportedPR6,
+2reportedpixelbounds exceeded;3immutablepinsNOT_VERIFIED.0assetbytes/grants/usablepairs/hold
+resolutions;44holds and centralheldreport/oldreceipt/sourceevidence unchanged.
+Current wholePR9Markdown/9frontmatters/62wiki checks pass,195file/hash/docassertions0errors.
+No DB/runtime/sourceownership/binary/visual/immutablecontent validation implied.
+Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; existing preconfigured
+authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
+install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
+parent owns D1–D9/singleZIP. No newreceipt or Production mutation.

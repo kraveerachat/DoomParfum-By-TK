@@ -62,3 +62,47 @@ S3 boundary: OD-06 approves an international licensed-data pilot only. Regional 
 until usable rights AND samples are verified; no grant is inferred for official-site texts, images or APIs.
 OD-04 approves image metadata/rights design, not unlicensed image acquisition. No source acquisition or
 runtime ingest is performed during this owner-decision documentation session.
+
+
+## New DPT-PLAN-002 source acquisition research — 2026-11-11 (RESEARCH ONLY)
+See [[Source_Permission_Matrix_DPT_PLAN_002]] and [[Brand_Registry_Research]] for first-party observed samples across 15 brand/publisher presences and permissions-by-use. `official_url` is an identity observation, not `automated_access=true` or store/display/image rights. Terms and rights must be evaluated per source/field/asset. Existing OD-01/OD-06 Scento local-only approval is NOT extended to regional imports. Fragrantica automated acquisition remains prohibited absent written authorization. No new adapter or import created.
+
+
+## WP-03 source observations and no-auto-reuse boundary (2026-11-11)
+
+Three first-party storefronts were observed as **brand existence/product-type evidence only**:
+- SAFF & Co. official pages https://saffnco.com/ and https://saffnco.com/collections/shop-all ; perfumes are mixed with other kinds of items.
+- Scent Journer https://scentjourner.com/ ; named Eau de Parfum products and region-specific shipping policy.
+- Szindore https://szindore.com/ and https://szindore.com/shop/ ; mixed fragrance, toiletries, promotions, merchandise and air-freshener products. Storefront result counts are not counts of distinct perfume identities.
+
+For each source: `official_presence_observed=YES`; automated page access / caching / storage / display / redistribution / commercial content reuse / AI dataset and all media asset rights = `UNKNOWN_NOT_APPROVED`. No per-source permission escalated. No external adapter or asset download performed.
+
+The **pinned licensed Scento** read-only full snapshot counts are now documented in [[Pinned_Scento_Full_Snapshot_Audit_2026-11-11]] (1,479 perfume rows, 160 houses, 420 materials, 1,388 reported full pyramids); this does NOT assert 1,479 local database imports. This source audit does not change published third-party source permission statuses.
+
+## IMP-P1-02 later execution evidence — 2026-11-11
+
+The historical read-only audit above is preserved. Subsequent approved pinned CC BY4.0 private-local
+intake now verified1479 catalogue identities/1435 exact-source approved/44 held and zero-growth replay.
+Six artifacts include LICENSE/descriptor; claims/captures bind file hashes/logical CSV record ordinals.
+Attribution: Scento — https://www.scento.com/perfume-database ; https://creativecommons.org/licenses/by/4.0/ .
+Data transformations are local exact transcription/normalization, not new publisher claims. Full raw
+files and research queues stay external; source image URLs grant no image rights. No regional/official
+site/source automation permission is expanded. [[IMP-P1-02_Licensed_Scento_Evidence]] records tests/limits.
+
+## Post-PR5 permission research — 2026-11-12
+
+[[Post_PR5_Held_and_Permission_Review]] records3new factual locators for6existingbrandcandidates and
+5additional Commonsnote-illustrationcandidates, exactcreator/license/subjectqueueexternal. Total12/46
+RESEARCHlabelcandidates;0bytes/displayapprovals/bottlegrants. Officialpresence/websiteoperator doesnot
+approve canonicalparentidentity or automatedreuse. The third-party-derived description-preference
+dataset opportunity wasrejected;0new usablepairwiseevidence. All44Scentoholds persist. No permission
+flag, originalsourceclaim, rawdataset or ownerdecision ischangedbythis researchPR.
+
+
+## Bounded illustration queue increment — 2026-11-12
+
+[[Bounded_Note_Media_Candidate_Increment]] records3additional public file-page metadata candidates.
+Proposed queue15/46historicalRESEARCHlabels only; allper-use statesUNKNOWN_NOT_APPROVED_BLOCKED.
+All3JPEG are unsupported by currentPR6;2reportedpixelcounts exceed itsbound;3immutablepins
+NOT_VERIFIED. No sourcegrant/assetbytes/displayapproval or acquisition authorization. Old12queue
+records remain unchanged; all44holds and pairwise/source evidence boundaries preserved.

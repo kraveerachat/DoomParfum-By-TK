@@ -12,7 +12,30 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
-# Project Status — Local Schema Implemented, Owner Review Pending
+# Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current verified checkpoint — 2026-11-11 / IMP-P1-02
+
+Live PRs1/2/3 are MERGED; current base main a908711fb4f37a12fbec3665a461b75c288c7dab. PR4 matching
+is OPEN/DRAFT and untouched. This supersedes the historical planning/implementation states below.
+[[IMP-P1-02_Licensed_Scento_ETL]] now implements private-local licensed intake and reviewed exact-source
+mapping on impl/p1-02-licensed-scento-staging:1479 catalogue/1435 approved/44 held,160 brands/420 notes,
+11972 canonical note links; full replay zero growth.98/98 tests pass,0fail/error/skip. Independent
+source review/publication is tracked in [[IMP-P1-02_Licensed_Scento_Evidence]] and the task.
+
+Source index/normalization covers all1479/12448 raw occurrences. D1 research226 candidate rows and
+D5 seven note-image license candidates remain external review data;0 acquired images/usable Dupe
+pairs/matching-eligible profiles. Full transaction452s/replay291s exposes a capacity limit, not a
+production throughput guarantee. IMP-P1-03 bytes and IMP-P1-04 capacity/restore remain NOT RUN.
+Dependent source/admin/API/UI work waits for implementation dependencies, rights and its own review.
+No decisions, migrations or old receipts rewritten; no merge, cloud or production change.
+
+Publication: [PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5) OPEN/DRAFT; reviewed source
+checkpoint66e1271f859ce9af3d23ae36c3f584885da7afa2 exact-commit verified, no blocking source finding.
+One final IMP-P1-02 receipt created; final metadata publication head/ZIP readback in task/PR.
+Review readiness applies to bounded private-local intake, not capacity/restore/API/UI/production.
+
+## Historical checkpoints (superseded by verified current entry above)
 
 ## S3 current Owner-review readiness — 2026-11-12
 
@@ -116,3 +139,16 @@ resulting final publication HEAD is verified in PR/final report, not invented in
 Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
 [[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
 Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## DPT-PLAN-002 live Git status reconciliation — 2026-11-11 (PROPOSED)
+GitHub preflight confirms Planning PR #1 **MERGED** (2026-11-10; main `bffb2fab1918dc5221a6c5da7920168bcae263ca`), superseding the historical OPEN/DRAFT status above. Implementation PR #2 was MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c), not a proof of ETL or production readiness. New DPT-PLAN-002 is a separate **docs-only** research/planning branch; owner Gate P review pending. No new source, image, ETL or production authorization is inferred. See [[DPT-PLAN-002_Focused_Brand_Discovery]] and [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
+
+## Post-PR5 data research — 2026-11-12
+
+Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] accountsfor all44holds
+(43duplicateprofiles/44groups/45extras plusKhamrah);0resolved/canonicalchanges.226brandcandidates/
+21conflicts retained,3new sourcefactlocators,12of46RESEARCHnote-imagecandidates (notP1/420coverage),
+0imagebytes/displaygrants/usablepairs. Independent110source+11docchecks pass. Source/raw/research
+queues remainexternal; [[Post_PR5_Held_and_Permission_Review]] summarizesrightsandowneralternatives.
+This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normalization or deployment.

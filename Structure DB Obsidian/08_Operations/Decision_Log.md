@@ -153,3 +153,24 @@ Implementation starts only in a separate task/PR after verified Human Owner merg
 planning scope. This recording session creates no SQL, database, app code, cloud resource or deployment.
 PRODUCTION_MUTATION=NO. Human Owner alone merges. Original immutable receipt remains unchanged;
 record this new decision event in task/change/run logs, never create a second receipt.
+
+
+## DPT-PLAN-002 open decisions — 2026-11-11 (NOT OWNER-APPROVED)
+| Decision | Proposed choice | Status |
+|---|---|---|
+| NEW-01 | Broad regional brand registry, role/taxonomy separated from verified identity, lane priorities/no hard caps | PROPOSED |
+| NEW-02 | Source-by-field/use/asset rights gate; unknown=no automation/republish | PROPOSED |
+| NEW-03 | Reference/alternative candidate ranking weights + per-region cohorts/min evidence | PROPOSED |
+| NEW-04 | Production lifecycle vs per-market availability and historical access | PROPOSED |
+| NEW-05 | Owner/admin update job, safe allowlisted promotion, conflict review, bounded scheduling | PROPOSED |
+| NEW-06 | Python/Docker/local DB first, measure before choosing hosting/storage | PROPOSED |
+Existing OD-01..06 limited approvals retain their current scope. No decision above is accepted by PR creation. See [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
+
+## 2026-11-11 — verified gates and licensed implementation, no new owner decisions
+
+PR3 is now owner-merged at a908711fb4f37a12fbec3665a461b75c288c7dab after merged PRs1/2. This records
+Gate P, not blanket source rights, cloud approval or automatic acceptance of every proposed parameter.
+OD-01..06 bounded licensed/local approvals support [[IMP-P1-02_Licensed_Scento_ETL]].1435 source-exact
+profiles approved by independently reviewed mapping;44 held. No NEW/DM status is changed here.
+PR4 remains Draft; capacity/restore, source-specific regional rights and per-image approval remain
+separate. Human Owner reviews/merges implementation. PRODUCTION_MUTATION=NO.

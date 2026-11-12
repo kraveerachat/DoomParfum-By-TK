@@ -81,6 +81,18 @@ Only additive documentation navigation/status reconciliation in shared files, or
 source acquisition, AI service, production or original decision/receipt edits. Publication not yet
 performed at this start entry; actual event follows in task/evidence. Human Owner alone reviews/merges.
 
+## 2026-11-12 bounded note-media metadata increment
+
+ExistingPR7 adds3metadata-only note-illustration candidates; proposed queue15/46historicalRESEARCH
+labels only, not58/420coverage or permissions. Researcher35QA plus independent51artifactchecks
+pass; sixmanifest/fivebaseline hashes preserved. All3JPEG unsupportedPR6,2over4000000reportedpixels;
+threeimmutableoldidfetchfailuresNOT_VERIFIED.0bytes/grants/usablepairs/holdresolutions,44holds
+unchanged. Central held report/oldreceipt/source evidence preserved. Dedicated newdata note and
+essentialtask/evidence/registry links only; no runtime/DB/image acquisition/Production/merge.
+PublicREST fallback verifies GitHub; MCPmetadata publication pendingactualsuccessfulupdate/readback.
+Parent owns D1–D9/singleZIP. [[Bounded_Note_Media_Candidate_Increment]].
+
+
 > **Document Type:** Project Evolution & Specification Change History
 > **Source Baseline:** `../README.md`
 > **Status:** Active Change Log
@@ -290,3 +302,42 @@ resulting final publication HEAD is verified in PR/final report, not invented in
 Current source/checkpoint, exact correction file manifest, measurements, tests and limits:
 [[IMP-P1-01_Performance_Correction]]. Original immutable receipt preserved; no second receipt.
 Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge changes.
+
+
+## 2026-11-11 / DPT-PLAN-002 / S1 — documentation planning checkpoint
+Scope: branch `plan/p2-focused-brand-discovery-automation` off merged main `bffb2fab1918dc5221a6c5da7920168bcae263ca`; GitHub PR #1 MERGED, implementation PR #2 MERGED at 2026-11-11 03:53 Bangkok (SHA 9636ee740cdcd3d60633ac11745366814d1af05c); licensed ETL and new-source adapter work remain separate. New docs-only brand/source/rights/popularity/identity/adapters/admin ADR, task and handoff; existing status/source/rights/ADR/roadmap/backlog/decisions updated via scoped addenda. First-pass 220 curated candidates, 15 first-party publisher presences; public repo excludes raw/private research CSV and third-party material. No runtime test, scraping, import, SQL, deploy, secrets or PR #2 edit. Planning verification/commit SHA and PR URL to be reported in GitHub PR; review/owner Gate P pending.
+
+## 2026-11-11 / IMP-P1-02 / Master Handoff milestones M1–M4
+
+Fresh main/merged PR3 a908711fb4f37a12fbec3665a461b75c288c7dab; separate implementation branch
+impl/p1-02-licensed-scento-staging. Pinned6 Scento artifacts and original42-file package verified;
+full1479 index/12448 occurrences; independently reviewed private-local mapping1479/1435approved/44held,
+160brands/420notes/11972 canonical links. Full replay zero growth.98/98 tests pass0fail/error/skip;
+independent source reviewer reports no blocking defect, exact checkpoint publication follows.
+First452.016s/current replay291.219s retain separate source hashes and performance limitations.
+
+Added importer/tests/sanitized evidence/guide; local allowlist/reset protection; task-selectable docs
+validator preserves historical evidence. Obsidian task/evidence/status/backlog/source/security/ADR/
+decision/log addenda reflect actual execution. External D1/D4/D5/D7 research, hardened4utilities22tests,
+D1-D9 ledger and single LATEST ZIP updated per milestone. Raw/private files remain outside public Git.
+No new schema migration, old receipt edit, source-right expansion, cloud/UI/ETLsource adapter beyond
+licensed snapshot, production mutation or merge. Exact manifest/current SHA/PR in task and final report.
+
+Closeout: source checkpoint66e1271f859ce9af3d23ae36c3f584885da7afa2 independently verified; all17 tested
+source hashes and4reviewed source files match committed bytes. [PR #5](https://github.com/kraveerachat/DoomParfum-By-TK/pull/5)
+created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps reviewed code/evidence
+unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
+external progress, not a self-referential SHA claim. Human Owner reviews and merges.
+
+## 2026-11-12 / DPT-DATA-001 — post-PR5 source and permission investigation
+
+Separate codex/p1-data-review fromOwnermerged55d39cd; docs-only. All44held sourceprofiles accounted
+43duplicates/44groups/45extras+Khamrah; noresolution orcanonicalmutation.226candidatebrands/21conflicts
+unchanged,6existingrowsreviewed/3newlocators,12of46researchnoteillustrationcandidates,0bytes/pairs.
+28persistedresearchQA plus independent110source/11docchecks.58chat-only assertions notcounted.
+Canonicaltask/evidence/report/status/source/log addenda updated; raw/private outputs remainexternal.
+Finaldocchecks/DraftPR/headandoneimmutable receipt follow checkpoint. No migration/oldreceipt/rights/
+matching/runtime/production/main/merge changes. Human Ownerreviews/merges.
+
+DPT-DATA-001closeout: PR7OPEN/DRAFT; sourcefe10fa6exactreviewverified, one newimmutable receipt;
+finalmetadata docs/diffchecks and normalpush follow, no code ordecision changes.
