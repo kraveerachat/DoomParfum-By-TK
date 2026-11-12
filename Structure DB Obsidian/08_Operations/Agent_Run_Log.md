@@ -17,6 +17,14 @@ source_of_truth: "../../README.md"
 
 ## 2026-11-13 — Post-PR4 coordinator implementation checkpoint
 
+Owner workflow preference received during closeout: apply installed Caveman for concise chat,
+preserving complete durable documents and exact technical/security facts. Read existing
+C:/Users/User/.codex/skills/caveman/SKILL.md; no installation/config change. Current ContextMode
+inventory exposes only ctx_doctor, no execution/search tools. Actual ctx_doctor({}) health call
+failed with Transport closed and returned no diagnostic table. Continue bounded native short-output
+checks; do not claim ContextMode execution/search succeeded. Tool health remains unavailable in this
+session, no setup/authentication/global changes attempted. This metadata event changes no tested code.
+
 Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
 PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
 are dated snapshots. No source/asset/publication right, numeric default or application stack is

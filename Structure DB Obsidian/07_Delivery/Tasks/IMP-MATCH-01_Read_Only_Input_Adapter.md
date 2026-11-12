@@ -63,3 +63,8 @@ hashes remain bound to this checkpoint. Exact17-file manifest and13Markdown/12fr
 PR9/10 have no changed-path overlap with this task; PR8 shares only3common Markdown histories.
 Possible three-way documentation conflicts must be reconciled after whichever Owner merge occurs,
 preserving both histories; no cross-PR source conflict or automatic merge is authorized.
+
+Closeout tool preference event: installed Caveman skill read/applied for concise chat, without
+installation/config changes. ContextMode exposes only ctx_doctor; actual health call failed
+Transport closed, no diagnostic table or execution/search tool available. Bounded native fallback
+continues; Agent_Run_Log records exact outcome. No code/test/schema/rights changes or rerun required.
