@@ -401,3 +401,19 @@ receipt final checks follow; no code changes after reviewed source checkpoint.
 Final receipt created once; final validation14Markdown/11frontmatters/47tables/6OD rows,0errors and
 0common-secret candidates. Exact22-file changed manifest retained. Final metadata commit/push and
 PR/head readback complete publication, while reviewed code/test/schema evidence stays unchanged.
+
+## RUN-20261112-IMP-P1-04 — controlled tests, strict failures and independent recovery
+
+ExistingGitHubMCP/Git/PowerShell/Python3.11.9/DockerPostgreSQL16.15 and officialPGdocs; no installs/
+globalconfig/paidAPI/accountauthorization. ParentownsP104 andsharedledger/ZIP; separatePR4/image/
+researchworktrees and independentreviewers. Newrecoverycontainer fixedtasklabel/image/volume, networknone/
+noports/512MiB1CPU; sourcecontainer remains768MiB2CPU/loopback. OnlytasktestDB/isolatedrolesreset,
+persistentpilotread-only/sourceunchanged. Privatearchive/password/rawstderr stayignored.local andnotZIP.
+
+Preserved23514benchmarkfailures plusACL/deparser/comparator-review developmentalissues; added exact
+knownCHECKpins and independentcounterexample rejection. No silentacceptance or validation bypass.
+Independentbenchmark44filechecks; finalrecovery14checks+37offline reviewmethods, reviewer0DB/Dockercalls.
+Parentactualrestore00415controls and sourcefreshfullregression evidence separate. Dockerunavailable
+preflight failedbeforeDB; restartedexistingDesktop/container, noreinstall/resetpilot. CanonicalLF
+tests verifiedforportablehashes. No finalP104receipt while fullreplayblocked. SeeTask/Evidenceforactual
+commands/results/HEAD/PR. No automaticmerge/source-rights expansion/cloud/productionmutation.

@@ -14,6 +14,22 @@ source_of_truth: "../../README.md"
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
 
+
+## Current post-PR5 checkpoint — 2026-11-12
+
+Owner mergedPR5 at55d39cd619fa6c1ae70521720aa734d632a2083d. PR4 remainsDraft5768899, reconciled
+and ready for OwnerDM01..07review; no matchingimplementation. PR6 Draft e9957e5 has localPNGmetadata
+129/129regression, no realimages/grants. PR7 Draft2673d7d accounts44holds; none lifted, researchqueues
+remain external. These currentevents supersede historical pendingmerge statements below.
+
+[[IMP-P1-04_Local_Benchmark_and_Restore]] is PARTIAL/BLOCKED: controlledfullfresh1479committed
+246.226887s/model1/image1, but fullreplay twice failed23514Future review timestamp; no backdate or
+guardchange. Independentreadonlypilot→isolatedcontainer DBrestore/syntheticobjectsubset passes15
+controls; sourceunchanged, realimages0. [[IMP-P1-04_Capacity_and_Recovery_Evidence]] records failures,
+counts/ACL/proofdetails and explicit actual-image/offsite/RPO/provider limits. No finalP104receipt;
+Draftpublication in progress, task notreadymerge. Production/cloud/mainmutation/agentmerge=NO.
+
+
 ## Current verified checkpoint — 2026-11-11 / IMP-P1-02
 
 Live PRs1/2/3 are MERGED; current base main a908711fb4f37a12fbec3665a461b75c288c7dab. PR4 matching

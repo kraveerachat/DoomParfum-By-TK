@@ -1,0 +1,3911 @@
+{
+  "task": "IMP-P1-04",
+  "overall_benchmark_status": "PARTIAL_MEASUREMENTS_FULL_REPLAY_BLOCKED_23514",
+  "attempts": [
+    {
+      "local_evidence_name": "controlled_benchmark_001.json",
+      "original_sha256": "604c9d29d3f796877a3981c0936b4f9c85153380f4d3326716815140a77ca50f",
+      "report": {
+        "task": "IMP-P1-04",
+        "started_at_utc": "2026-11-11T16:14:47.149190+00:00",
+        "database": "dpt_scento_test",
+        "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "source_artifacts": {
+          "perfumes.csv": {
+            "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+            "bytes": 780683,
+            "git_blob_sha": "4dc99cc840566f98c57be5aa02437960371ca7de"
+          },
+          "houses.csv": {
+            "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18",
+            "bytes": 29765,
+            "git_blob_sha": "797d58078969e63fad109bc84f400d5614255d3c"
+          },
+          "materials.csv": {
+            "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+            "bytes": 87027,
+            "git_blob_sha": "60fa5f70a22bbe46de57f18ee59b2e61d134ab6a"
+          },
+          "LICENSE": {
+            "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84",
+            "bytes": 188,
+            "git_blob_sha": "83674148f20fcfc8933a45783e5355188574c5b8"
+          },
+          "README.md": {
+            "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688",
+            "bytes": 2799,
+            "git_blob_sha": "e8a12b6437ab023a01e33177d9ff28eb61fedadf"
+          },
+          "datapackage.json": {
+            "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2",
+            "bytes": 4845,
+            "git_blob_sha": "fc901b154579e7cbe1d9a44e5948ed209db181c3"
+          }
+        },
+        "importer_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+        "mapping_sha256": {
+          "pilot": "7fef1ec5bbd11ed0bcfe0fc3fe56cbb975999ce83294325a63cda5dec32ed7eb",
+          "full": "8d3842d452b23c429c0ca46eb6273027571d3270b55c3b3d0528fa59d525c3e9"
+        },
+        "runs": [
+          {
+            "label": "warmup",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 1.031698,
+            "guarded_client_seconds": 1.210949,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 6.282,
+                "total_ms": 6.282
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 64.325,
+                "total_ms": 64.325
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 19.857,
+                "total_ms": 36.969
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 45.206,
+                "total_ms": 45.206
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 78.901,
+                "total_ms": 78.901
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.461,
+                "total_ms": 0.461
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 268.407,
+                "total_ms": 268.407
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 37.057,
+                "total_ms": 37.057
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 26.66,
+                "total_ms": 26.66
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 25.577,
+                "total_ms": 40.386
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 39.248,
+                "total_ms": 39.248
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 2.784,
+                "total_ms": 2.784
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 84.362,
+                "total_ms": 149.149
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_1",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.959612,
+            "guarded_client_seconds": 1.171046,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 6.009,
+                "total_ms": 6.009
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 55.45,
+                "total_ms": 55.45
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 16.198,
+                "total_ms": 31.469
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 42.785,
+                "total_ms": 42.785
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 70.773,
+                "total_ms": 70.773
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.483,
+                "total_ms": 0.483
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 273.739,
+                "total_ms": 273.739
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 35.519,
+                "total_ms": 35.519
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 24.342,
+                "total_ms": 24.342
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 25.5,
+                "total_ms": 39.331
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 36.641,
+                "total_ms": 36.641
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 2.764,
+                "total_ms": 2.764
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 88.188,
+                "total_ms": 144.121
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_1",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.413387,
+            "guarded_client_seconds": 0.613025,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.232,
+                "total_ms": 0.232
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 48.774,
+                "total_ms": 48.774
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 39.77,
+                "total_ms": 39.77
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 46.372,
+                "total_ms": 46.372
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.44,
+                "total_ms": 0.44
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 1.358,
+                "total_ms": 1.358
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 32.997,
+                "total_ms": 32.997
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 17.776,
+                "total_ms": 17.776
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 26.029,
+                "total_ms": 26.029
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.242,
+                "total_ms": 0.242
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 17.724,
+                "total_ms": 66.939
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_2",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.950582,
+            "guarded_client_seconds": 1.16254,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 5.916,
+                "total_ms": 5.916
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 54.069,
+                "total_ms": 54.069
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 16.904,
+                "total_ms": 32.526
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 42.919,
+                "total_ms": 42.919
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 72.403,
+                "total_ms": 72.403
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.637,
+                "total_ms": 0.637
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 259.595,
+                "total_ms": 259.595
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 36.886,
+                "total_ms": 36.886
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 24.909,
+                "total_ms": 24.909
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 26.128,
+                "total_ms": 41.013
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 37.361,
+                "total_ms": 37.361
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 2.295,
+                "total_ms": 2.295
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 87.312,
+                "total_ms": 142.019
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_2",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.46553,
+            "guarded_client_seconds": 0.675081,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.473,
+                "total_ms": 0.473
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 54.067,
+                "total_ms": 54.067
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 45.194,
+                "total_ms": 45.194
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 53.307,
+                "total_ms": 53.307
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.481,
+                "total_ms": 0.481
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 1.199,
+                "total_ms": 1.199
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 36.585,
+                "total_ms": 36.585
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 20.419,
+                "total_ms": 20.419
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 28.944,
+                "total_ms": 28.944
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.466,
+                "total_ms": 0.466
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 18.726,
+                "total_ms": 73.275
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_3",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.906924,
+            "guarded_client_seconds": 1.113091,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 5.528,
+                "total_ms": 5.528
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 50.613,
+                "total_ms": 50.613
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 15.969,
+                "total_ms": 31.125
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 39.964,
+                "total_ms": 39.964
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 72.735,
+                "total_ms": 72.735
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.562,
+                "total_ms": 0.562
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 244.308,
+                "total_ms": 244.308
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 35.061,
+                "total_ms": 35.061
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 23.877,
+                "total_ms": 23.877
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 23.457,
+                "total_ms": 36.961
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 35.19,
+                "total_ms": 35.19
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 2.645,
+                "total_ms": 2.645
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 81.346,
+                "total_ms": 132.522
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_3",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.495452,
+            "guarded_client_seconds": 0.695472,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.264,
+                "total_ms": 0.264
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 55.852,
+                "total_ms": 55.852
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 46.168,
+                "total_ms": 46.168
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 56.598,
+                "total_ms": 56.598
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.44,
+                "total_ms": 0.44
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 1.235,
+                "total_ms": 1.235
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 38.527,
+                "total_ms": 38.527
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 20.967,
+                "total_ms": 20.967
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 30.571,
+                "total_ms": 30.571
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.259,
+                "total_ms": 0.259
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 18.277,
+                "total_ms": 74.57
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          }
+        ],
+        "limits": {
+          "whole_client_deadline_seconds": 900,
+          "per_statement_seconds": 45,
+          "memory_mib": 768,
+          "cpus": 2,
+          "pilot_repetitions": 3,
+          "full_repetitions": 1
+        },
+        "method": "No other active DB client; one unreported-in-summary pilot warmup, three fresh pilot/import+replay pairs, one full pair; original SQL and security intact. Warm OS caches; no cache flushing.",
+        "limitations": [
+          "One full pair is descriptive, not statistical capacity or an optimization comparison",
+          "Function tracking and Docker/local client overhead present; setup/statistics read excluded from backend timer",
+          "READ COMMITTED and original global writer serialization retained; no parallel throughput claim",
+          "No image/provider/API/UI/production benchmark"
+        ],
+        "empty_sizes": {
+          "database_bytes": 12418071,
+          "relations": [
+            {
+              "table": "access_scopes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "asset_permissions",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "audit_events",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_tag_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "brand_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brands",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "canonical_selections",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "comparison_evidence",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "conflict_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "countries",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 16384,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "data_conflicts",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entities",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entity_source_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "field_definitions",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "image_assets",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "ingestion_batches",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "inventory_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "matching_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "notes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "perfume_families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_notes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_relations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_usage_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfumes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "price_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "product_variants",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "purchase_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rating_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "retail_listings",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 90112,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rights_assessments",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "saved_buying_sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "scope_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "staging_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_list_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_lists",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "users",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "validation_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "schema_migrations",
+              "schema": "dpt_ops",
+              "heap_bytes": 8192,
+              "index_bytes": 16384,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "validation_pending",
+              "schema": "dpt_ops",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 8192,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            }
+          ],
+          "row_counts": {
+            "dpt.notes": 0,
+            "dpt.users": 0,
+            "dpt.brands": 0,
+            "dpt.accords": 0,
+            "dpt.sources": 0,
+            "dpt.entities": 0,
+            "dpt.families": 0,
+            "dpt.perfumes": 0,
+            "dpt.countries": 0,
+            "dpt.brand_tags": 0,
+            "dpt.user_lists": 0,
+            "dpt.note_images": 0,
+            "dpt.audit_events": 0,
+            "dpt.image_assets": 0,
+            "dpt.note_aliases": 0,
+            "dpt.access_scopes": 0,
+            "dpt.brand_aliases": 0,
+            "dpt.perfume_notes": 0,
+            "dpt.scope_members": 0,
+            "dpt.data_conflicts": 0,
+            "dpt.perfume_images": 0,
+            "dpt.source_records": 0,
+            "dpt.brand_tag_links": 0,
+            "dpt.inventory_items": 0,
+            "dpt.perfume_accords": 0,
+            "dpt.retail_listings": 0,
+            "dpt.staging_records": 0,
+            "dpt.user_list_items": 0,
+            "dpt.conflict_members": 0,
+            "dpt.matching_results": 0,
+            "dpt.perfume_families": 0,
+            "dpt.product_variants": 0,
+            "dpt.purchase_records": 0,
+            "dpt.asset_permissions": 0,
+            "dpt.field_definitions": 53,
+            "dpt.ingestion_batches": 0,
+            "dpt.perfume_relations": 0,
+            "dpt.perfume_usage_tags": 0,
+            "dpt.price_observations": 0,
+            "dpt.rights_assessments": 0,
+            "dpt.validation_results": 0,
+            "dpt.comparison_evidence": 0,
+            "dpt.entity_source_links": 0,
+            "dpt.rating_observations": 0,
+            "dpt.source_observations": 0,
+            "dpt.canonical_selections": 0,
+            "dpt.saved_buying_sources": 0,
+            "dpt_ops.schema_migrations": 8,
+            "dpt_ops.validation_pending": 0
+          },
+          "accounting": "table_bytes includes TOAST/FSM/VM; total=table+indexes. Do not add TOAST twice. Database includes system catalogues."
+        },
+        "status": "FAILED_STOPPED",
+        "failure": "Benchmark failed with original validation enabled: ERROR:  23514: Future review timestamp\nCONTEXT:  PL/pgSQL function dpt_guard.selection_guard() line 11 at RAISE\nLOCATION:  exec_stmt_raise, pl_exec.c:3897"
+      }
+    },
+    {
+      "local_evidence_name": "controlled_benchmark_002.json",
+      "original_sha256": "9a23b153928fc11e9bcad908be08b9eac75a1f44468f6b5d1e76c7e46a3aca88",
+      "report": {
+        "task": "IMP-P1-04",
+        "started_at_utc": "2026-11-11T19:21:55.532155+00:00",
+        "database": "dpt_scento_test",
+        "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "source_artifacts": {
+          "perfumes.csv": {
+            "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+            "bytes": 780683,
+            "git_blob_sha": "4dc99cc840566f98c57be5aa02437960371ca7de"
+          },
+          "houses.csv": {
+            "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18",
+            "bytes": 29765,
+            "git_blob_sha": "797d58078969e63fad109bc84f400d5614255d3c"
+          },
+          "materials.csv": {
+            "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+            "bytes": 87027,
+            "git_blob_sha": "60fa5f70a22bbe46de57f18ee59b2e61d134ab6a"
+          },
+          "LICENSE": {
+            "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84",
+            "bytes": 188,
+            "git_blob_sha": "83674148f20fcfc8933a45783e5355188574c5b8"
+          },
+          "README.md": {
+            "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688",
+            "bytes": 2799,
+            "git_blob_sha": "e8a12b6437ab023a01e33177d9ff28eb61fedadf"
+          },
+          "datapackage.json": {
+            "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2",
+            "bytes": 4845,
+            "git_blob_sha": "fc901b154579e7cbe1d9a44e5948ed209db181c3"
+          }
+        },
+        "benchmark_sha256_at_entry": "bfcf0418eef26f4c26bf06cdbe74f67730a93d45b27f5457ddc1bdc6b55e254c",
+        "importer_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+        "mapping_sha256": {
+          "pilot": "7fef1ec5bbd11ed0bcfe0fc3fe56cbb975999ce83294325a63cda5dec32ed7eb",
+          "full": "8d3842d452b23c429c0ca46eb6273027571d3270b55c3b3d0528fa59d525c3e9"
+        },
+        "runs": [
+          {
+            "label": "warmup",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.592356,
+            "guarded_client_seconds": 0.725602,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 3.748,
+                "total_ms": 3.748
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 36.214,
+                "total_ms": 36.214
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 9.796,
+                "total_ms": 19.532
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 28.368,
+                "total_ms": 28.368
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 43.955,
+                "total_ms": 43.955
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.39,
+                "total_ms": 0.39
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 158.949,
+                "total_ms": 158.949
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 22.622,
+                "total_ms": 22.622
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 15.539,
+                "total_ms": 15.539
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 15.718,
+                "total_ms": 24.53
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 23.847,
+                "total_ms": 23.847
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 1.592,
+                "total_ms": 1.592
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 59.147,
+                "total_ms": 95.753
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_1",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.545734,
+            "guarded_client_seconds": 0.692608,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 3.346,
+                "total_ms": 3.346
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 32.154,
+                "total_ms": 32.154
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 8.055,
+                "total_ms": 16.975
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 26.949,
+                "total_ms": 26.949
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 41.767,
+                "total_ms": 41.767
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.29,
+                "total_ms": 0.29
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 150.69,
+                "total_ms": 150.69
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 20.916,
+                "total_ms": 20.916
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 14.173,
+                "total_ms": 14.173
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 13.853,
+                "total_ms": 22.068
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 22.681,
+                "total_ms": 22.681
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 1.59,
+                "total_ms": 1.59
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 57.056,
+                "total_ms": 89.501
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_1",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.271988,
+            "guarded_client_seconds": 0.395924,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.206,
+                "total_ms": 0.206
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 35.399,
+                "total_ms": 35.399
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 26.588,
+                "total_ms": 26.588
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 32.292,
+                "total_ms": 32.292
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.331,
+                "total_ms": 0.331
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 0.921,
+                "total_ms": 0.921
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 22.296,
+                "total_ms": 22.296
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 11.643,
+                "total_ms": 11.643
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 17.252,
+                "total_ms": 17.252
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.161,
+                "total_ms": 0.161
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 12.864,
+                "total_ms": 48.595
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_2",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.550553,
+            "guarded_client_seconds": 0.692111,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 3.451,
+                "total_ms": 3.451
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 32.233,
+                "total_ms": 32.233
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 7.814,
+                "total_ms": 16.596
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 27.27,
+                "total_ms": 27.27
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 40.954,
+                "total_ms": 40.954
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.329,
+                "total_ms": 0.329
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 155.658,
+                "total_ms": 155.658
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 20.693,
+                "total_ms": 20.693
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 14.7,
+                "total_ms": 14.7
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 14.089,
+                "total_ms": 22.387
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 22.371,
+                "total_ms": 22.371
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 1.593,
+                "total_ms": 1.593
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 57.409,
+                "total_ms": 89.972
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_2",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.251596,
+            "guarded_client_seconds": 0.391947,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.196,
+                "total_ms": 0.196
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 32.584,
+                "total_ms": 32.584
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 25.344,
+                "total_ms": 25.344
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 28.242,
+                "total_ms": 28.242
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.335,
+                "total_ms": 0.335
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 0.819,
+                "total_ms": 0.819
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 20.44,
+                "total_ms": 20.44
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 10.608,
+                "total_ms": 10.608
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 16.499,
+                "total_ms": 16.499
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.159,
+                "total_ms": 0.159
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 12.248,
+                "total_ms": 45.168
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_fresh_3",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.545944,
+            "guarded_client_seconds": 0.68189,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 171,
+                "self_ms": 3.375,
+                "total_ms": 3.375
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 31.028,
+                "total_ms": 31.028
+              },
+              "selection_audit": {
+                "calls": 120,
+                "self_ms": 8.51,
+                "total_ms": 17.938
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 27.2,
+                "total_ms": 27.2
+              },
+              "serialize_write": {
+                "calls": 1305,
+                "self_ms": 42.496,
+                "total_ms": 42.496
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.588,
+                "total_ms": 0.588
+              },
+              "check_active_row": {
+                "calls": 440,
+                "self_ms": 148.365,
+                "total_ms": 148.365
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 21.411,
+                "total_ms": 21.411
+              },
+              "compatible_targets": {
+                "calls": 573,
+                "self_ms": 14.859,
+                "total_ms": 14.859
+              },
+              "materialize_scalar": {
+                "calls": 120,
+                "self_ms": 14.149,
+                "total_ms": 22.273
+              },
+              "schedule_validation": {
+                "calls": 858,
+                "self_ms": 22.479,
+                "total_ms": 22.479
+              },
+              "staging_capture_guard": {
+                "calls": 75,
+                "self_ms": 1.579,
+                "total_ms": 1.579
+              },
+              "validate_all_deferred": {
+                "calls": 2043,
+                "self_ms": 55.637,
+                "total_ms": 87.254
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 75,
+              "new_staging_records": 75
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "pilot_replay_3",
+            "cohort": "pilot",
+            "perfumes": 12,
+            "raw_note_occurrences": 93,
+            "backend_seconds": 0.244606,
+            "guarded_client_seconds": 0.375698,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 1,
+                "self_ms": 0.181,
+                "total_ms": 0.181
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 30.676,
+                "total_ms": 30.676
+              },
+              "selection_audit": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "selection_guard": {
+                "calls": 120,
+                "self_ms": 25.807,
+                "total_ms": 25.807
+              },
+              "serialize_write": {
+                "calls": 1015,
+                "self_ms": 27.982,
+                "total_ms": 27.982
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.31,
+                "total_ms": 0.31
+              },
+              "check_active_row": {
+                "calls": 1,
+                "self_ms": 0.641,
+                "total_ms": 0.641
+              },
+              "observation_guard": {
+                "calls": 134,
+                "self_ms": 20.194,
+                "total_ms": 20.194
+              },
+              "compatible_targets": {
+                "calls": 421,
+                "self_ms": 10.596,
+                "total_ms": 10.596
+              },
+              "materialize_scalar": {
+                "calls": 0,
+                "self_ms": 0,
+                "total_ms": 0
+              },
+              "schedule_validation": {
+                "calls": 643,
+                "self_ms": 16.029,
+                "total_ms": 16.029
+              },
+              "staging_capture_guard": {
+                "calls": 1,
+                "self_ms": 0.154,
+                "total_ms": 0.154
+              },
+              "validate_all_deferred": {
+                "calls": 569,
+                "self_ms": 11.836,
+                "total_ms": 42.823
+              }
+            },
+            "observed": {
+              "approved": 11,
+              "matching": 0,
+              "inventory": {
+                "notes": 58,
+                "brands": 5,
+                "perfumes": 12,
+                "perfume_notes": 80,
+                "source_records": 75,
+                "staging_records": 75,
+                "ingestion_batches": 1,
+                "validation_results": 300,
+                "entity_source_links": 75,
+                "source_observations": 134,
+                "canonical_selections": 120
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 12,
+                "source_rows": 75,
+                "review_perfumes": 1,
+                "promoted_perfumes": 11,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 0,
+              "new_staging_records": 0
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          },
+          {
+            "label": "full_fresh",
+            "cohort": "full",
+            "perfumes": 1479,
+            "raw_note_occurrences": 12448,
+            "backend_seconds": 246.226887,
+            "guarded_client_seconds": 246.359952,
+            "function_stats": {
+              "identity_guard": {
+                "calls": 6774,
+                "self_ms": 152.752,
+                "total_ms": 152.752
+              },
+              "validate_model": {
+                "calls": 1,
+                "self_ms": 8506.461,
+                "total_ms": 8506.461
+              },
+              "selection_audit": {
+                "calls": 8845,
+                "self_ms": 847.864,
+                "total_ms": 10893.235
+              },
+              "selection_guard": {
+                "calls": 8845,
+                "self_ms": 2226.682,
+                "total_ms": 2226.682
+              },
+              "serialize_write": {
+                "calls": 65461,
+                "self_ms": 36974.653,
+                "total_ms": 36974.653
+              },
+              "validate_images": {
+                "calls": 1,
+                "self_ms": 0.311,
+                "total_ms": 0.311
+              },
+              "check_active_row": {
+                "calls": 19736,
+                "self_ms": 15163.568,
+                "total_ms": 15163.568
+              },
+              "observation_guard": {
+                "calls": 10489,
+                "self_ms": 3395.925,
+                "total_ms": 3395.925
+              },
+              "compatible_targets": {
+                "calls": 47823,
+                "self_ms": 1296.807,
+                "total_ms": 1296.807
+              },
+              "materialize_scalar": {
+                "calls": 8845,
+                "self_ms": 886.292,
+                "total_ms": 6086.293
+              },
+              "schedule_validation": {
+                "calls": 53110,
+                "self_ms": 31782.643,
+                "total_ms": 31782.643
+              },
+              "staging_capture_guard": {
+                "calls": 2059,
+                "self_ms": 51.932,
+                "total_ms": 51.932
+              },
+              "validate_all_deferred": {
+                "calls": 109726,
+                "self_ms": 132856.747,
+                "total_ms": 141363.52
+              }
+            },
+            "observed": {
+              "approved": 1435,
+              "matching": 0,
+              "inventory": {
+                "notes": 420,
+                "brands": 160,
+                "perfumes": 1479,
+                "perfume_notes": 11972,
+                "source_records": 2059,
+                "staging_records": 2059,
+                "ingestion_batches": 1,
+                "validation_results": 8236,
+                "entity_source_links": 2059,
+                "source_observations": 10489,
+                "canonical_selections": 8845
+              },
+              "dpt_etl_metrics": true,
+              "batch_accounting": {
+                "perfumes": 1479,
+                "source_rows": 2059,
+                "review_perfumes": 44,
+                "promoted_perfumes": 1435,
+                "quarantined_perfumes": 0
+              },
+              "new_source_records": 2059,
+              "new_staging_records": 2059
+            },
+            "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+            "pending_markers": 0
+          }
+        ],
+        "limits": {
+          "whole_client_deadline_seconds": 900,
+          "per_statement_seconds": 45,
+          "memory_mib": 768,
+          "cpus": 2,
+          "pilot_repetitions": 3,
+          "full_repetitions": 1
+        },
+        "method": "Common-checkout exclusive lease for cooperating jobs; reject all other DB client sessions including idle. Normal DROP never forces eviction. One pilot warmup excluded from medians, three fresh pilot/import+replay pairs, optional one full pair; original SQL/security intact.",
+        "setup_and_cache_method": {
+          "fresh": "Recreate only dpt_scento_test and apply all original migrations outside timing; no FORCE drop",
+          "replay": "Same intact reviewed cohort immediately after its fresh import; no reset between pair",
+          "cache": "Warm OS/Docker/PostgreSQL environment; no cache flushing or cold-cache claim",
+          "timing": "Backend wall timer brackets streamed original SQL including natural COMMIT; client timer includes Docker/psql, excludes preparation and statistics readback"
+        },
+        "limitations": [
+          "One full pair is descriptive, not statistical capacity or an optimization comparison",
+          "Function tracking and Docker/local client overhead present; setup/statistics read excluded from backend timer",
+          "READ COMMITTED and original global writer serialization retained; no parallel throughput claim",
+          "Noncooperating external clients can ignore the lease; quiet snapshots are not a server-wide exclusion lock",
+          "No image/provider/API/UI/production benchmark"
+        ],
+        "observed_resources": {
+          "Memory": 805306368,
+          "MemorySwap": 1610612736,
+          "NanoCpus": 2000000000,
+          "CpuQuota": 0,
+          "CpuPeriod": 0,
+          "CpusetCpus": ""
+        },
+        "empty_sizes": {
+          "database_bytes": 12409879,
+          "relations": [
+            {
+              "table": "access_scopes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "asset_permissions",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "audit_events",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_tag_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "brand_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brands",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "canonical_selections",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "comparison_evidence",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "conflict_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "countries",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 16384,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "data_conflicts",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entities",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entity_source_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "field_definitions",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "image_assets",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "ingestion_batches",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "inventory_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "matching_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "notes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "perfume_families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_notes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_relations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_usage_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfumes",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "price_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "product_variants",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "purchase_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rating_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "retail_listings",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 90112,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rights_assessments",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "saved_buying_sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "scope_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "staging_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_list_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_lists",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "users",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "validation_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "schema_migrations",
+              "schema": "dpt_ops",
+              "heap_bytes": 8192,
+              "index_bytes": 16384,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "validation_pending",
+              "schema": "dpt_ops",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 8192,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            }
+          ],
+          "row_counts": {
+            "dpt.notes": 0,
+            "dpt.users": 0,
+            "dpt.brands": 0,
+            "dpt.accords": 0,
+            "dpt.sources": 0,
+            "dpt.entities": 0,
+            "dpt.families": 0,
+            "dpt.perfumes": 0,
+            "dpt.countries": 0,
+            "dpt.brand_tags": 0,
+            "dpt.user_lists": 0,
+            "dpt.note_images": 0,
+            "dpt.audit_events": 0,
+            "dpt.image_assets": 0,
+            "dpt.note_aliases": 0,
+            "dpt.access_scopes": 0,
+            "dpt.brand_aliases": 0,
+            "dpt.perfume_notes": 0,
+            "dpt.scope_members": 0,
+            "dpt.data_conflicts": 0,
+            "dpt.perfume_images": 0,
+            "dpt.source_records": 0,
+            "dpt.brand_tag_links": 0,
+            "dpt.inventory_items": 0,
+            "dpt.perfume_accords": 0,
+            "dpt.retail_listings": 0,
+            "dpt.staging_records": 0,
+            "dpt.user_list_items": 0,
+            "dpt.conflict_members": 0,
+            "dpt.matching_results": 0,
+            "dpt.perfume_families": 0,
+            "dpt.product_variants": 0,
+            "dpt.purchase_records": 0,
+            "dpt.asset_permissions": 0,
+            "dpt.field_definitions": 53,
+            "dpt.ingestion_batches": 0,
+            "dpt.perfume_relations": 0,
+            "dpt.perfume_usage_tags": 0,
+            "dpt.price_observations": 0,
+            "dpt.rights_assessments": 0,
+            "dpt.validation_results": 0,
+            "dpt.comparison_evidence": 0,
+            "dpt.entity_source_links": 0,
+            "dpt.rating_observations": 0,
+            "dpt.source_observations": 0,
+            "dpt.canonical_selections": 0,
+            "dpt.saved_buying_sources": 0,
+            "dpt_ops.schema_migrations": 8,
+            "dpt_ops.validation_pending": 0
+          },
+          "accounting": "table_bytes includes TOAST/FSM/VM; total=table+indexes. Do not add TOAST twice. Database includes system catalogues."
+        },
+        "status": "FAILED_STOPPED",
+        "failure": "Benchmark failed with original validation enabled: ERROR:  23514: Future review timestamp\nCONTEXT:  PL/pgSQL function dpt_guard.selection_guard() line 11 at RAISE\nLOCATION:  exec_stmt_raise, pl_exec.c:3897"
+      }
+    },
+    {
+      "local_evidence_name": "after_failed_replay_inspection.json",
+      "original_sha256": "04f5993eea5673c97ab2401d53fde8b99de50090878070bb01dbb548cadd6dbe",
+      "report": {
+        "checked_at_utc": "2026-11-11T19:34:39.638006+00:00",
+        "scope": "Readback after failed full replay; not a successful replay measurement",
+        "run_status": "FAILED_STOPPED",
+        "failure": "Benchmark failed with original validation enabled: ERROR:  23514: Future review timestamp\nCONTEXT:  PL/pgSQL function dpt_guard.selection_guard() line 11 at RAISE\nLOCATION:  exec_stmt_raise, pl_exec.c:3897",
+        "core_inventory_equals_committed_full_fresh": true,
+        "inventory": {
+          "notes": 420,
+          "brands": 160,
+          "perfumes": 1479,
+          "perfume_notes": 11972,
+          "source_records": 2059,
+          "staging_records": 2059,
+          "ingestion_batches": 1,
+          "validation_results": 8236,
+          "entity_source_links": 2059,
+          "source_observations": 10489,
+          "canonical_selections": 8845
+        },
+        "pending_markers": 0,
+        "size_after_failed_replay_before_vacuum": {
+          "database_bytes": 56982551,
+          "relations": [
+            {
+              "table": "access_scopes",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 73728,
+              "total_bytes": 90112,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "asset_permissions",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "audit_events",
+              "schema": "dpt",
+              "heap_bytes": 9060352,
+              "index_bytes": 1687552,
+              "total_bytes": 10780672,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 9093120
+            },
+            {
+              "table": "brand_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_tag_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "brand_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brands",
+              "schema": "dpt",
+              "heap_bytes": 49152,
+              "index_bytes": 114688,
+              "total_bytes": 196608,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 81920
+            },
+            {
+              "table": "canonical_selections",
+              "schema": "dpt",
+              "heap_bytes": 2891776,
+              "index_bytes": 2064384,
+              "total_bytes": 4988928,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2924544
+            },
+            {
+              "table": "comparison_evidence",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "conflict_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "countries",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 16384,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "data_conflicts",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entities",
+              "schema": "dpt",
+              "heap_bytes": 180224,
+              "index_bytes": 573440,
+              "total_bytes": 786432,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 212992
+            },
+            {
+              "table": "entity_source_links",
+              "schema": "dpt",
+              "heap_bytes": 262144,
+              "index_bytes": 540672,
+              "total_bytes": 835584,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 294912
+            },
+            {
+              "table": "families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "field_definitions",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "image_assets",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "ingestion_batches",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 81920,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "inventory_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "matching_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "notes",
+              "schema": "dpt",
+              "heap_bytes": 114688,
+              "index_bytes": 188416,
+              "total_bytes": 335872,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 147456
+            },
+            {
+              "table": "perfume_accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "perfume_families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_notes",
+              "schema": "dpt",
+              "heap_bytes": 1613824,
+              "index_bytes": 4112384,
+              "total_bytes": 5758976,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 1646592
+            },
+            {
+              "table": "perfume_relations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_usage_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfumes",
+              "schema": "dpt",
+              "heap_bytes": 1032192,
+              "index_bytes": 663552,
+              "total_bytes": 1728512,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 1064960
+            },
+            {
+              "table": "price_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "product_variants",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "purchase_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rating_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "retail_listings",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 90112,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rights_assessments",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 49152,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "saved_buying_sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "scope_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_observations",
+              "schema": "dpt",
+              "heap_bytes": 2564096,
+              "index_bytes": 4972544,
+              "total_bytes": 7569408,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2596864
+            },
+            {
+              "table": "source_records",
+              "schema": "dpt",
+              "heap_bytes": 819200,
+              "index_bytes": 1204224,
+              "total_bytes": 2056192,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 851968
+            },
+            {
+              "table": "sources",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "staging_records",
+              "schema": "dpt",
+              "heap_bytes": 4784128,
+              "index_bytes": 1196032,
+              "total_bytes": 6012928,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 4816896
+            },
+            {
+              "table": "user_list_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_lists",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "users",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "validation_results",
+              "schema": "dpt",
+              "heap_bytes": 2179072,
+              "index_bytes": 1622016,
+              "total_bytes": 3833856,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2211840
+            },
+            {
+              "table": "schema_migrations",
+              "schema": "dpt_ops",
+              "heap_bytes": 8192,
+              "index_bytes": 16384,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 16384
+            },
+            {
+              "table": "validation_pending",
+              "schema": "dpt_ops",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 16384
+            }
+          ],
+          "row_counts": {
+            "dpt.notes": 420,
+            "dpt.users": 1,
+            "dpt.brands": 160,
+            "dpt.accords": 0,
+            "dpt.sources": 1,
+            "dpt.entities": 2059,
+            "dpt.families": 0,
+            "dpt.perfumes": 1479,
+            "dpt.countries": 0,
+            "dpt.brand_tags": 0,
+            "dpt.user_lists": 0,
+            "dpt.note_images": 0,
+            "dpt.audit_events": 8845,
+            "dpt.image_assets": 0,
+            "dpt.note_aliases": 0,
+            "dpt.access_scopes": 1,
+            "dpt.brand_aliases": 0,
+            "dpt.perfume_notes": 11972,
+            "dpt.scope_members": 0,
+            "dpt.data_conflicts": 0,
+            "dpt.perfume_images": 0,
+            "dpt.source_records": 2059,
+            "dpt.brand_tag_links": 0,
+            "dpt.inventory_items": 0,
+            "dpt.perfume_accords": 0,
+            "dpt.retail_listings": 0,
+            "dpt.staging_records": 2059,
+            "dpt.user_list_items": 0,
+            "dpt.conflict_members": 0,
+            "dpt.matching_results": 0,
+            "dpt.perfume_families": 0,
+            "dpt.product_variants": 0,
+            "dpt.purchase_records": 0,
+            "dpt.asset_permissions": 0,
+            "dpt.field_definitions": 53,
+            "dpt.ingestion_batches": 1,
+            "dpt.perfume_relations": 0,
+            "dpt.perfume_usage_tags": 0,
+            "dpt.price_observations": 0,
+            "dpt.rights_assessments": 1,
+            "dpt.validation_results": 8236,
+            "dpt.comparison_evidence": 0,
+            "dpt.entity_source_links": 2059,
+            "dpt.rating_observations": 0,
+            "dpt.source_observations": 10489,
+            "dpt.canonical_selections": 8845,
+            "dpt.saved_buying_sources": 0,
+            "dpt_ops.schema_migrations": 8,
+            "dpt_ops.validation_pending": 0
+          },
+          "accounting": "table_bytes includes TOAST/FSM/VM; total=table+indexes. Do not add TOAST twice. Database includes system catalogues."
+        },
+        "failed_replay_partial_function_stats": {
+          "identity_guard": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "validate_model": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "selection_audit": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "selection_guard": {
+            "calls": 4697,
+            "self_ms": 1117.241,
+            "total_ms": 1117.241
+          },
+          "serialize_write": {
+            "calls": 24401,
+            "self_ms": 5455.635,
+            "total_ms": 5455.635
+          },
+          "validate_images": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "check_active_row": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "observation_guard": {
+            "calls": 5518,
+            "self_ms": 1316.732,
+            "total_ms": 1316.732
+          },
+          "compatible_targets": {
+            "calls": 18374,
+            "self_ms": 490.005,
+            "total_ms": 490.005
+          },
+          "materialize_scalar": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "schedule_validation": {
+            "calls": 20284,
+            "self_ms": 5841.217,
+            "total_ms": 5841.217
+          },
+          "staging_capture_guard": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "validate_all_deferred": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          }
+        },
+        "clock_probe": "Earlier200000clock_timestamp consecutive comparisons observed0backwards; root cause of23514not established; no guard/time mutation",
+        "size_after_vacuum_analyze": {
+          "database_bytes": 57662487,
+          "relations": [
+            {
+              "table": "access_scopes",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 73728,
+              "total_bytes": 122880,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "asset_permissions",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "audit_events",
+              "schema": "dpt",
+              "heap_bytes": 9060352,
+              "index_bytes": 1687552,
+              "total_bytes": 10788864,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 9101312
+            },
+            {
+              "table": "brand_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brand_tag_links",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "brand_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "brands",
+              "schema": "dpt",
+              "heap_bytes": 49152,
+              "index_bytes": 114688,
+              "total_bytes": 204800,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 90112
+            },
+            {
+              "table": "canonical_selections",
+              "schema": "dpt",
+              "heap_bytes": 2891776,
+              "index_bytes": 2064384,
+              "total_bytes": 4997120,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2932736
+            },
+            {
+              "table": "comparison_evidence",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "conflict_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 24576,
+              "total_bytes": 32768,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "countries",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 8192,
+              "total_bytes": 16384,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "data_conflicts",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "entities",
+              "schema": "dpt",
+              "heap_bytes": 180224,
+              "index_bytes": 573440,
+              "total_bytes": 794624,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 221184
+            },
+            {
+              "table": "entity_source_links",
+              "schema": "dpt",
+              "heap_bytes": 262144,
+              "index_bytes": 540672,
+              "total_bytes": 843776,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 303104
+            },
+            {
+              "table": "families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "field_definitions",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "image_assets",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "ingestion_batches",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 81920,
+              "total_bytes": 131072,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "inventory_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "matching_results",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 40960,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_aliases",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "note_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "notes",
+              "schema": "dpt",
+              "heap_bytes": 114688,
+              "index_bytes": 188416,
+              "total_bytes": 344064,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 155648
+            },
+            {
+              "table": "perfume_accords",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 49152,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "perfume_families",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 57344,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_images",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_notes",
+              "schema": "dpt",
+              "heap_bytes": 1613824,
+              "index_bytes": 4112384,
+              "total_bytes": 5767168,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 1654784
+            },
+            {
+              "table": "perfume_relations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfume_usage_tags",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "perfumes",
+              "schema": "dpt",
+              "heap_bytes": 1032192,
+              "index_bytes": 663552,
+              "total_bytes": 1736704,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 1073152
+            },
+            {
+              "table": "price_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "product_variants",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 40960,
+              "total_bytes": 49152,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "purchase_records",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rating_observations",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 32768,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 0
+            },
+            {
+              "table": "retail_listings",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 90112,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "rights_assessments",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 49152,
+              "total_bytes": 98304,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "saved_buying_sources",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 65536,
+              "total_bytes": 73728,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "scope_members",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 24576,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "source_observations",
+              "schema": "dpt",
+              "heap_bytes": 2564096,
+              "index_bytes": 4972544,
+              "total_bytes": 7577600,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2605056
+            },
+            {
+              "table": "source_records",
+              "schema": "dpt",
+              "heap_bytes": 819200,
+              "index_bytes": 1204224,
+              "total_bytes": 2064384,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 860160
+            },
+            {
+              "table": "sources",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "staging_records",
+              "schema": "dpt",
+              "heap_bytes": 4784128,
+              "index_bytes": 1196032,
+              "total_bytes": 6021120,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 4825088
+            },
+            {
+              "table": "user_list_items",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 73728,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "user_lists",
+              "schema": "dpt",
+              "heap_bytes": 0,
+              "index_bytes": 49152,
+              "total_bytes": 57344,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 8192
+            },
+            {
+              "table": "users",
+              "schema": "dpt",
+              "heap_bytes": 8192,
+              "index_bytes": 32768,
+              "total_bytes": 81920,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "validation_results",
+              "schema": "dpt",
+              "heap_bytes": 2179072,
+              "index_bytes": 1622016,
+              "total_bytes": 3842048,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 2220032
+            },
+            {
+              "table": "schema_migrations",
+              "schema": "dpt_ops",
+              "heap_bytes": 8192,
+              "index_bytes": 16384,
+              "total_bytes": 65536,
+              "toast_total_bytes": 8192,
+              "table_bytes_including_toast_aux": 49152
+            },
+            {
+              "table": "validation_pending",
+              "schema": "dpt_ops",
+              "heap_bytes": 0,
+              "index_bytes": 16384,
+              "total_bytes": 32768,
+              "toast_total_bytes": 0,
+              "table_bytes_including_toast_aux": 16384
+            }
+          ],
+          "row_counts": {
+            "dpt.notes": 420,
+            "dpt.users": 1,
+            "dpt.brands": 160,
+            "dpt.accords": 0,
+            "dpt.sources": 1,
+            "dpt.entities": 2059,
+            "dpt.families": 0,
+            "dpt.perfumes": 1479,
+            "dpt.countries": 0,
+            "dpt.brand_tags": 0,
+            "dpt.user_lists": 0,
+            "dpt.note_images": 0,
+            "dpt.audit_events": 8845,
+            "dpt.image_assets": 0,
+            "dpt.note_aliases": 0,
+            "dpt.access_scopes": 1,
+            "dpt.brand_aliases": 0,
+            "dpt.perfume_notes": 11972,
+            "dpt.scope_members": 0,
+            "dpt.data_conflicts": 0,
+            "dpt.perfume_images": 0,
+            "dpt.source_records": 2059,
+            "dpt.brand_tag_links": 0,
+            "dpt.inventory_items": 0,
+            "dpt.perfume_accords": 0,
+            "dpt.retail_listings": 0,
+            "dpt.staging_records": 2059,
+            "dpt.user_list_items": 0,
+            "dpt.conflict_members": 0,
+            "dpt.matching_results": 0,
+            "dpt.perfume_families": 0,
+            "dpt.product_variants": 0,
+            "dpt.purchase_records": 0,
+            "dpt.asset_permissions": 0,
+            "dpt.field_definitions": 53,
+            "dpt.ingestion_batches": 1,
+            "dpt.perfume_relations": 0,
+            "dpt.perfume_usage_tags": 0,
+            "dpt.price_observations": 0,
+            "dpt.rights_assessments": 1,
+            "dpt.validation_results": 8236,
+            "dpt.comparison_evidence": 0,
+            "dpt.entity_source_links": 2059,
+            "dpt.rating_observations": 0,
+            "dpt.source_observations": 10489,
+            "dpt.canonical_selections": 8845,
+            "dpt.saved_buying_sources": 0,
+            "dpt_ops.schema_migrations": 8,
+            "dpt_ops.validation_pending": 0
+          },
+          "accounting": "table_bytes includes TOAST/FSM/VM; total=table+indexes. Do not add TOAST twice. Database includes system catalogues."
+        },
+        "explain_admin_read_only": [
+          {
+            "Plan": {
+              "Node Type": "Limit",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Startup Cost": 182.67,
+              "Total Cost": 182.72,
+              "Plan Rows": 20,
+              "Plan Width": 31,
+              "Actual Startup Time": 0.826,
+              "Actual Total Time": 0.828,
+              "Actual Rows": 20,
+              "Actual Loops": 1,
+              "Shared Hit Blocks": 132,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0,
+              "Plans": [
+                {
+                  "Node Type": "Sort",
+                  "Parent Relationship": "Outer",
+                  "Parallel Aware": false,
+                  "Async Capable": false,
+                  "Startup Cost": 182.67,
+                  "Total Cost": 186.26,
+                  "Plan Rows": 1435,
+                  "Plan Width": 31,
+                  "Actual Startup Time": 0.824,
+                  "Actual Total Time": 0.825,
+                  "Actual Rows": 20,
+                  "Actual Loops": 1,
+                  "Sort Key": [
+                    "name",
+                    "id"
+                  ],
+                  "Sort Method": "top-N heapsort",
+                  "Sort Space Used": 27,
+                  "Sort Space Type": "Memory",
+                  "Shared Hit Blocks": 132,
+                  "Shared Read Blocks": 0,
+                  "Shared Dirtied Blocks": 0,
+                  "Shared Written Blocks": 0,
+                  "Local Hit Blocks": 0,
+                  "Local Read Blocks": 0,
+                  "Local Dirtied Blocks": 0,
+                  "Local Written Blocks": 0,
+                  "Temp Read Blocks": 0,
+                  "Temp Written Blocks": 0,
+                  "Plans": [
+                    {
+                      "Node Type": "Seq Scan",
+                      "Parent Relationship": "Outer",
+                      "Parallel Aware": false,
+                      "Async Capable": false,
+                      "Relation Name": "perfumes",
+                      "Alias": "perfumes",
+                      "Startup Cost": 0.0,
+                      "Total Cost": 144.49,
+                      "Plan Rows": 1435,
+                      "Plan Width": 31,
+                      "Actual Startup Time": 0.008,
+                      "Actual Total Time": 0.581,
+                      "Actual Rows": 1435,
+                      "Actual Loops": 1,
+                      "Filter": "((review_status)::text = 'approved'::text)",
+                      "Rows Removed by Filter": 44,
+                      "Shared Hit Blocks": 126,
+                      "Shared Read Blocks": 0,
+                      "Shared Dirtied Blocks": 0,
+                      "Shared Written Blocks": 0,
+                      "Local Hit Blocks": 0,
+                      "Local Read Blocks": 0,
+                      "Local Dirtied Blocks": 0,
+                      "Local Written Blocks": 0,
+                      "Temp Read Blocks": 0,
+                      "Temp Written Blocks": 0
+                    }
+                  ]
+                }
+              ]
+            },
+            "Planning": {
+              "Shared Hit Blocks": 201,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            "Planning Time": 0.474,
+            "Triggers": [],
+            "Execution Time": 0.855
+          }
+        ]
+      }
+    }
+  ],
+  "limits": [
+    "Do not infer that a passing regression suite resolves the separately failed full replay",
+    "Different earlier452s/291s conditions are not before/after optimization",
+    "Post-failure size inspection is not a successful replay time"
+  ]
+}

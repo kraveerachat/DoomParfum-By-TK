@@ -134,3 +134,11 @@ private-local exact mappings and strict replay. dpt_scento_test and dpt_scento_p
 allowlisted targets; only the test DB may be recreated automatically. Original foundation/8migrations/
 47-table contract and RLS remain unchanged. Current actual outcomes and not-run boundaries are in
 the IMP-P1-02 task/evidence; no search API, matching, images, cloud or production completion is inferred.
+
+## IMP-P1-04 controlled local measurements and recovery
+
+[LOCAL_CAPACITY_RECOVERY.md](LOCAL_CAPACITY_RECOVERY.md) documents the separately authorized local
+benchmark/independent recovery drivers. Fullfresh1479 committed246.226887s; fullreplay repeatedly
+failed23514 and remains a blocker. Independent DB plus owned synthetic-object restore passes under
+the declared local boundary; actual image/offsite/provider recovery is not established. Separate
+capacity_* evidence retains failed attempts. No original migration/importer/security contract changes.

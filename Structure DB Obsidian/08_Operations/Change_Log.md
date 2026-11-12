@@ -244,3 +244,14 @@ source hashes and4reviewed source files match committed bytes. [PR #5](https://g
 created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps reviewed code/evidence
 unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
 external progress, not a self-referential SHA claim. Human Owner reviews and merges.
+
+## 2026-11-12 / IMP-P1-04 — controlled local capacity and recovery subset
+
+Branchcodex/imp-p1-04-local-benchmark-restore fromownermergedmain55d39cd. Originalimporter/migrations/
+rights/receipts unchanged; newboundedbenchmark/recovery/verifier+tests and sanitizedevidence. Fullfresh
+1479=246.226887s/1completevalidatorcall; fullreplaytwice23514FAILED, notwaived. Callback/markertrace
+dominates. DBbytes56982551→57662487aftervacuum; no shrink/capacitycurve claim. Independentcluster
+restore00429.656s passes15controls; source49tablecount/hashes/roles/ACL/RLSpreserved, syntheticobjects2/9896bytes,
+realimages0. Recoverydevelopmentfailures retained; knownCHECKdeparseforms pinned before extra8748proof.
+No guard/permission relaxation. Finaltests/docs/exactsource review and Draft publication follow.
+Taskpartial/blocked; no finalreceipt until unmetacceptance resolved. No cloud/prod/main/merge changes.
