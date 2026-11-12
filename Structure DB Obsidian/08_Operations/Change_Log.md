@@ -35,6 +35,12 @@ See [[IMP-MATCH-01_Read_Only_Input_Adapter]], [[IMP-MATCH-01_Adapter_Evidence]] 
 [[Post_PR4_Application_Readiness]]. Current source checkpoint/PR head is recorded additively in task
 closeout and PR description; do not overwrite old immutable receipts or make a second task receipt.
 
+Adapter source checkpoint715c398e9aa3b2eb25bfc629d4f15da79ab9cda3 published in
+[Draft PR11](https://github.com/kraveerachat/DoomParfum-By-TK/pull/11). Full148/148PASS187.078s,
+focused19/19PASS; final independent review not complete, no final receipt. Closeout metadata does
+not alter executed source. Exact final head/changed-file manifests and ZIP hash are in the current
+external post_PR4 registry; Git/PR is canonical for the latest head.
+
 ## 2026-11-12 S4 DM approval/proposal crosswalk
 
 Existing PR4 / start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged.
