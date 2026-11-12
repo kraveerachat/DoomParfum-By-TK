@@ -456,3 +456,22 @@ operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda1
 parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
 schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
 PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## 2026-11-13 — Readiness, permission research and isolated capture closeout
+
+TOOL DECISION/EXECUTION: Git/GitHubMCPinitialmetadatafailedinternalerror; publicRESTread-only
+fallback verifiesheads, existingGitHubCLI2.97.0smoketest succeeds. CLI--body-file usedforauthorized
+existingPRmetadata only; no login/tokenextraction/install/configchange. ExistingPowerShell/Python
+3.11.9/Docker/PostgreSQL16.15 and independentparallelreview/research; no paidAPI/unlicensedassets.
+ReadinessagentquotaendedafterPR4/7normalpush/publication; parentchecksactualcleanheads/bodyreadback,
+no unverifiedagentresultclaimed. Read-onlyPR6hashrefresh145assertions; PR7newmetadataqueue allblocked.
+
+Parentcreates one freshnonce-owned networknone/noports512MiB1CPU temporaltesttarget, executesall8
+originalmigrations/minimalSYNTHETICfixture. Capturesactualclockoperand once atoriginalpredicate,
+preservesreviewer/rights/23514/deferredchecks. Original/instrumented5verdictsmatch;8normalpairs
+no rejection; deliberatefuture capture positive isSYNTHETIC. Originalfunction/data/security/five
+application-group-role fingerprintrestored; ownedtargetstopped/volume retained; separateDocker
+inspectreadonlypostattestation.12offline methods/62independentevidenceassertions pass. Historical
+rootcauseUNRESOLVED, no runtimefix/hostclock/backdate/validationrelaxation/fullcohortrepeat.
+No finalreceipt, merge or Production mutation. [[IMP-P1-04_Bounded_Temporal_Capture]].

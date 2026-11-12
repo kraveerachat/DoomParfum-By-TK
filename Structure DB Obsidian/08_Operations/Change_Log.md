@@ -284,3 +284,14 @@ operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda1
 parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
 schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
 PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## 2026-11-13 — Bounded temporal capture diagnostic package
+
+Start81305bf1f9933cf870f5aa1edecf4eec887b6ddf, main55d39cd unchanged. Added standalone diagnostic
+runner/test/operatorguide and additive evidence; originalmigrations/importer/runtime/receipts and
+previous175tests/15restore/fullreplay evidence unchanged. One tinySYNTHETICisolatedrun validates
+capture/controlparity/restore/stop;12offline methods/62independentassertions.0naturalrejections,
+historicalrootcause stillblocked, no speculativefix. No equivalent1479rerun; full187suiteNOTRUN.
+Canonicaldetail [[IMP-P1-04_Bounded_Temporal_Capture]]. Otherworkpackages PR4OD/DMcrosswalk andPR7
+3metadata-onlycandidates publish in their ownbranches. D1–D9/singleZIP updated afterpublication.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_task
 status: partial-blocked
 owner: human-owner
-updated: 2026-11-12
+updated: 2026-11-13
 tags: [doomparfum, benchmark, recovery, local]
 source_of_truth: "../../../README.md"
 ---
@@ -181,3 +181,41 @@ operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda1
 parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
 schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
 PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## Bounded capture mechanism session — 2026-11-12
+
+Start81305bf1f9933cf870f5aa1edecf4eec887b6ddf, fetchedmain55d39cd unchanged. Preserve verified1479
+full import/replay/integrity and allprior175tests/15recovery/receipts; no equivalentcohortreruns.
+Plan: implement a diagnostic-only bounded runner in a separate pinned no-network/noports512MiB1CPU
+cluster with exclusively SYNTHETIC minimal fixtures. Pin original selection_guard definition,
+owner/ACL/security and exact8migration hashes; capture a single comparisonclock at originalsite,
+retain identical strictpredicate/error/reviewer/rights checks; enrich safeIDs/timeoperands only.
+Verify original-versus-instrumented current/future/rights/auth/deferred outcomes, rollback content
+integrity and exactfunction/securityrestore; captrials<=128 and walltime; stopownedtarget afterrun.
+No hostclock change, timestampbackdate, runtimefix, trigger/validation relaxation, licensedcohort
+replay, pilot/foundation mutation, merge/mainwrite/newrights or receipt. Independent source review
+and safe capture selftests must precede any claim of readiness. Synthetic future proof is not a
+reproduction of historical23514. Parent owns sharedD1–D9/singleZIP; separate agents review PR4/6/7
+and new permissioned research withoutDBwork. GitHubMCPinternalerror observed; publicRESTread-only
+fallback verifiesall4OPEN/DRAFT/mergeableheads; PRdescriptionupdate mayremainblocked ifconnectorfails.
+
+
+## Bounded capture package closeout — 2026-11-13
+
+New capture mechanism verified in one isolated all-SYNTHETIC run on2026-11-12. Code/tests canonical
+UTF8-LF hashes e452a2e2…c9259 / afde88c2…46bbd.12offline methods independently pass;62independent
+report checks pass. Original/instrumented5verdicts identical, including realguest42501/revokedrights/
+deferredcontrary23514. Deliberatefuture control captures actualreview/comparison operands and
+86399996416microsecond delta; not historicaldefect.8unforcedpairs capture-4264..-3448microseconds,
+0naturalrejections. Checked originalfunction/data/security/fiveapplication-group-role restoration;
+owned isolatedtarget stopped/volume retained; separate readonlyresourceattestation confirms bounds.
+No Scento import/fullcohort rerun or speculativefix. Previous175tests/15restore/fullreplay evidence
+and23sourcehashes remain unchanged; full187method discovery NOT RUN. See [[IMP-P1-04_Bounded_Temporal_Capture]].
+
+Capture mechanism ready for review; historical23514rootcause/correction remainsBLOCKED. Do notrepeat
+equivalentprobes withoutnewdiagnosticvalue. Need actual rejectedunforcedpair under reproducible
+conditions before runtimefix. All44holds/rights/receipts/persistentpilot preserved. PR4matrixnow
+explicitODapprovedbasis vsDMproposals; PR6ready/hashreverified; PR7new3metadata candidates remain
+permissionblocked/JPEGunsupported, no acquisition. ExistingGitHubCLI2.97.0 fallback works afterMCP
+internalerrors; no login/install/credential extraction/configchange. Samebranches/Draft/no merge.

@@ -148,3 +148,8 @@ Latest IMP-P1-04 follow-up: [temporal diagnosis](../Structure%20DB%20Obsidian/08
 Current original-guard fullreplay/zero-new inventory and175-method regression verified; historical
 intermittent timestamp cause remains unresolved. PR8 stays Draft/blocked, with no runtimefix or
 validation relaxation. Earlier capacity reports are retained historical evidence.
+
+
+Bounded diagnostic-only capture is documented in [TEMPORAL_CAPTURE.md](TEMPORAL_CAPTURE.md).
+One isolatedSYNTHETIC run verifies actualoperandcapture, strictdecisionparity andexactrestore;
+historicalrootcause remainsunresolved. This adds no ETLruntimefix or equivalentfullcohort rerun.

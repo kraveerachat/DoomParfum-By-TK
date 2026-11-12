@@ -1,0 +1,296 @@
+{
+  "task": "IMP-P1-04",
+  "kind": "ISOLATED_SYNTHETIC_BOUNDED_CAPTURE",
+  "source_sha256": "e452a2e2157c809877265cae22d8f68050661b01c68a84eaf084620e529c9259",
+  "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+  "trials_limit": 8,
+  "whole_run_seconds": 240,
+  "observer_effect": "Decision semantics equivalent; instrumentation may alter timing/scheduling.",
+  "historical_rootcause": "UNRESOLVED",
+  "natural_probe_rejections": [],
+  "probe_operands": [
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:55.219612+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:55.219612+00:00",
+      "comparison_clock": "2026-11-12T15:23:55.223181+00:00",
+      "transaction_clock": "2026-11-12T15:23:55.219507+00:00",
+      "delta_microseconds": -3569.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:55.761839+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:55.761839+00:00",
+      "comparison_clock": "2026-11-12T15:23:55.765527+00:00",
+      "transaction_clock": "2026-11-12T15:23:55.7617+00:00",
+      "delta_microseconds": -3688.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:56.295897+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:56.295897+00:00",
+      "comparison_clock": "2026-11-12T15:23:56.299347+00:00",
+      "transaction_clock": "2026-11-12T15:23:56.295834+00:00",
+      "delta_microseconds": -3450.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:56.814852+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:56.814852+00:00",
+      "comparison_clock": "2026-11-12T15:23:56.8183+00:00",
+      "transaction_clock": "2026-11-12T15:23:56.814779+00:00",
+      "delta_microseconds": -3448.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:57.385902+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:57.385902+00:00",
+      "comparison_clock": "2026-11-12T15:23:57.389925+00:00",
+      "transaction_clock": "2026-11-12T15:23:57.385816+00:00",
+      "delta_microseconds": -4023.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:57.961333+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:57.961333+00:00",
+      "comparison_clock": "2026-11-12T15:23:57.965597+00:00",
+      "transaction_clock": "2026-11-12T15:23:57.961234+00:00",
+      "delta_microseconds": -4264.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:58.508461+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:58.508461+00:00",
+      "comparison_clock": "2026-11-12T15:23:58.512706+00:00",
+      "transaction_clock": "2026-11-12T15:23:58.508384+00:00",
+      "delta_microseconds": -4245.0,
+      "review_equals_statement": true
+    },
+    {
+      "marker": "DPT_TEMPORAL_OPERANDS_V1",
+      "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+      "operation": "INSERT",
+      "field_path": "name",
+      "reviewed_at": "2026-11-12T15:23:59.046247+00:00",
+      "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+      "statement_clock": "2026-11-12T15:23:59.046247+00:00",
+      "comparison_clock": "2026-11-12T15:23:59.049832+00:00",
+      "transaction_clock": "2026-11-12T15:23:59.046159+00:00",
+      "delta_microseconds": -3585.0,
+      "review_equals_statement": true
+    }
+  ],
+  "target": "doomparfum-p104-temporal-1fae391f4b5ff06408316d54",
+  "volume": "doomparfum-p104-temporal-1fae391f4b5ff06408316d54-data",
+  "all_data": "SYNTHETIC; no licensed/private source import",
+  "migrations": [
+    {
+      "name": "001_identity.sql",
+      "sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a"
+    },
+    {
+      "name": "002_catalogue.sql",
+      "sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d"
+    },
+    {
+      "name": "003_provenance.sql",
+      "sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266"
+    },
+    {
+      "name": "004_associations_media_personal.sql",
+      "sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6"
+    },
+    {
+      "name": "005_contract_functions.sql",
+      "sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64"
+    },
+    {
+      "name": "006_media_and_deferred_contracts.sql",
+      "sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d"
+    },
+    {
+      "name": "007_security_and_field_contract.sql",
+      "sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
+    },
+    {
+      "name": "008_coalesced_deferred_validation.sql",
+      "sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
+    }
+  ],
+  "original_controls": [
+    {
+      "name": "current_conflict",
+      "exit_code": 0,
+      "expected_sqlstate": null,
+      "message": null,
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "future_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Future review timestamp",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "revoked_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Selection requires active storage/display rights",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "unauthorized_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "42501",
+      "message": "ERROR:  42501: Authorized reviewer required",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "deferred_contrary_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Scalar materialization differs from selected claim",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    }
+  ],
+  "instrumented_controls": [
+    {
+      "name": "current_conflict",
+      "exit_code": 0,
+      "expected_sqlstate": null,
+      "message": null,
+      "operands": [
+        {
+          "marker": "DPT_TEMPORAL_OPERANDS_V1",
+          "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+          "operation": "INSERT",
+          "field_path": "name",
+          "reviewed_at": "2026-11-12T15:23:39.062229+00:00",
+          "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+          "statement_clock": "2026-11-12T15:23:39.062229+00:00",
+          "comparison_clock": "2026-11-12T15:23:39.065892+00:00",
+          "transaction_clock": "2026-11-12T15:23:39.062086+00:00",
+          "delta_microseconds": -3663.0,
+          "review_equals_statement": true
+        }
+      ],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "future_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Future review timestamp",
+      "operands": [
+        {
+          "marker": "DPT_TEMPORAL_OPERANDS_V1",
+          "entity_id": "1d9564a7-7ae4-5e70-b2bb-03338cf032f9",
+          "operation": "INSERT",
+          "field_path": "name",
+          "reviewed_at": "2026-11-13T15:23:41.698598+00:00",
+          "observation_id": "23f18f83-6c79-505a-8009-569f993ef360",
+          "statement_clock": "2026-11-12T15:23:41.698598+00:00",
+          "comparison_clock": "2026-11-12T15:23:41.702182+00:00",
+          "transaction_clock": "2026-11-12T15:23:41.69853+00:00",
+          "delta_microseconds": 86399996416.0,
+          "review_equals_statement": false
+        }
+      ],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "revoked_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Selection requires active storage/display rights",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "unauthorized_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "42501",
+      "message": "ERROR:  42501: Authorized reviewer required",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    },
+    {
+      "name": "deferred_contrary_SYNTHETIC",
+      "exit_code": 3,
+      "expected_sqlstate": "23514",
+      "message": "ERROR:  23514: Scalar materialization differs from selected claim",
+      "operands": [],
+      "data_security_roles_unchanged": true
+    }
+  ],
+  "status": "CAPTURE_SELFTEST_VERIFIED",
+  "natural_failure_observed": false,
+  "original_function_data_security_roles_restored": true,
+  "owned_target_stopped_volume_retained": true,
+  "original_report_sha256": "65f8c97153799564ccbb6b9b954f7c9fa38012a4a391e23b8b3386d408839798",
+  "source_hash_kind": "SHA256 canonical UTF-8/LF source text, not unspecified checkout bytes",
+  "post_run_resource_readback": {
+    "checked_at_utc": "2026-11-12T15:26:44.231468+00:00",
+    "target": "doomparfum-p104-temporal-1fae391f4b5ff06408316d54",
+    "volume": "doomparfum-p104-temporal-1fae391f4b5ff06408316d54-data",
+    "status": "exited",
+    "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+    "network": "none",
+    "port_bindings": {},
+    "memory_bytes": 536870912,
+    "nano_cpus": 1000000000,
+    "password_mount_readonly": true,
+    "ownership_attested": true,
+    "run_report_sha256": "65f8c97153799564ccbb6b9b954f7c9fa38012a4a391e23b8b3386d408839798",
+    "no_db_query": true
+  },
+  "configured_budgets_not_elapsed_measurement": {
+    "run_seconds": 240,
+    "cleanup_seconds": 45,
+    "statement_seconds": 5,
+    "lock_seconds": 1,
+    "command_seconds": 20
+  },
+  "restoration_evidence": "Parent utility checked full data/security/applicationroles fingerprint equality and exactfunction text; independent reviewer has no liveDB query",
+  "historical_failure_reproduced": false
+}

@@ -140,3 +140,18 @@ substantive rows preserved, only44expectedheldupdated_at touches. Full175/175PAS
 no speculative runtimefix. PR8remains partial-blocked/Open/Draft/no finalreceipt.
 [[IMP-P1-04_Temporal_Diagnosis]] records full evidence and strict003comparisonfailure. Owner alone
 reviews/merges; no Production/cloud/main mutation, new source rights or accepted recovery targets.
+
+
+## 2026-11-13 — Capture mechanism and owner-review checkpoint
+
+Main55d39cd unchanged. PR4db7e500 explicitlycrosswalks boundedapprovedODs versus allPROPOSEDDM01–07;
+fourconjunctive selected-field/rights/completeness/eligibility gates keepall1479matchingflagsfalse.
+PR6unchanged983b73a:145freshreadinessassertions pass; boundedPNGscope/noimages/grants. PR7
+793007b:195doc/hashassertions and51independentresearchchecks;3newmetadata candidates propose15/46
+RESEARCHqueue only, allJPEGblocked/3immutablepinfetchesunverified/0newrights. All44holds retained.
+
+PR8 adds bounded isolatedSYNTHETIC operandcapture:12offline methods and62independentreport checks;
+5original/instrumentedverdicts match,8unforcedpairs/naturalrejections0, exactrestore/stop verified.
+Historical23514rootcause remainsBLOCKED; current1479replay/integrity staysVERIFIED. No speculative
+fix, repeatedcohort, main/Production/newrights/receipt mutation or merge.
+[[IMP-P1-04_Bounded_Temporal_Capture]]; allPRsOPEN/DRAFT at freshGitHubCLIreadback.

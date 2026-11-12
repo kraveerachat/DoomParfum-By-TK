@@ -148,3 +148,12 @@ operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda1
 parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
 schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
 PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## 2026-11-13 — Bounded capture mechanism available
+
+[[IMP-P1-04_Bounded_Temporal_Capture]] records one newobservability selftest, not another1479replay:
+12offline methods,10original/instrumenteddecisioncontrols,8actualunforcedoperandpairs,62independent
+reportassertions; originalguard/data/security/applicationgroups restored and ownedtarget stopped.
+FutureSYNTHETICpair proves captureability only; naturalrejections0. Historicalrootcause unresolved,
+no runtimefix/validationchange. Prior currentfullreplay/inventory acceptance remainsVERIFIED.
