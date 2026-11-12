@@ -15,6 +15,18 @@ source_of_truth: "../../README.md"
 
 # Change Log — DoomParfum By TK
 
+## 2026-11-12 bounded note-media metadata increment
+
+ExistingPR7 adds3metadata-only note-illustration candidates; proposed queue15/46historicalRESEARCH
+labels only, not58/420coverage or permissions. Researcher35QA plus independent51artifactchecks
+pass; sixmanifest/fivebaseline hashes preserved. All3JPEG unsupportedPR6,2over4000000reportedpixels;
+threeimmutableoldidfetchfailuresNOT_VERIFIED.0bytes/grants/usablepairs/holdresolutions,44holds
+unchanged. Central held report/oldreceipt/source evidence preserved. Dedicated newdata note and
+essentialtask/evidence/registry links only; no runtime/DB/image acquisition/Production/merge.
+PublicREST fallback verifies GitHub; MCPmetadata publication pendingactualsuccessfulupdate/readback.
+Parent owns D1–D9/singleZIP. [[Bounded_Note_Media_Candidate_Increment]].
+
+
 > **Document Type:** Project Evolution & Specification Change History
 > **Source Baseline:** `../README.md`
 > **Status:** Active Change Log
@@ -244,3 +256,16 @@ source hashes and4reviewed source files match committed bytes. [PR #5](https://g
 created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps reviewed code/evidence
 unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
 external progress, not a self-referential SHA claim. Human Owner reviews and merges.
+
+## 2026-11-12 / DPT-DATA-001 — post-PR5 source and permission investigation
+
+Separate codex/p1-data-review fromOwnermerged55d39cd; docs-only. All44held sourceprofiles accounted
+43duplicates/44groups/45extras+Khamrah; noresolution orcanonicalmutation.226candidatebrands/21conflicts
+unchanged,6existingrowsreviewed/3newlocators,12of46researchnoteillustrationcandidates,0bytes/pairs.
+28persistedresearchQA plus independent110source/11docchecks.58chat-only assertions notcounted.
+Canonicaltask/evidence/report/status/source/log addenda updated; raw/private outputs remainexternal.
+Finaldocchecks/DraftPR/headandoneimmutable receipt follow checkpoint. No migration/oldreceipt/rights/
+matching/runtime/production/main/merge changes. Human Ownerreviews/merges.
+
+DPT-DATA-001closeout: PR7OPEN/DRAFT; sourcefe10fa6exactreviewverified, one newimmutable receipt;
+finalmetadata docs/diffchecks and normalpush follow, no code ordecision changes.
