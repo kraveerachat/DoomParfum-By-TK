@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,23 @@ source_of_truth: "../../README.md"
 ---
 
 # Decision Log — DoomParfum By TK
+
+## 2026-11-13 — Owner merge event versus individual DM decisions
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Record the Planning Gate merge event only. The explicit post-PR4 request authorizes scoped local
+adapter implementation, conservative audits, generic synthetic mathematical primitives and
+application-readiness specifications. It does not accept proposed50/30/20,25/37.5/37.5,80/20,
+completeness/currentness/freshness thresholds, accord presence/strength fallback, stack/auth,
+public sharing, providers or new rights. All DM01–07 remain PROPOSED; no OD/DEC row changes.
+
+[[Post_PR4_Application_Readiness]] records the concise seven-row recommendation/gate matrix.
+Selected-field/rights/closure/eligibility/auth gates keep real matching disabled.43duplicate-hold
+normalization sidecars are unapproved; Khamrah and21identity conflicts remain unresolved.
 
 ## DPT-PLAN-003 decision review — 2026-11-11 / PROPOSED
 

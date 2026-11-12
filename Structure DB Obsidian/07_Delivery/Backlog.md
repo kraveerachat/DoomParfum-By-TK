@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - delivery
@@ -14,6 +14,26 @@ source_of_truth: "../../README.md"
 ---
 
 # Product Backlog — DoomParfum By TK
+
+## Current post-PR4 implementation backlog — 2026-11-13
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+| Work | Current state | Next gate |
+|---|---|---|
+| IMP-MATCH-01 | local adapter implemented;19focused tests; final review pending | exact-source independent review and nonadmin pilot owner/session contract |
+| DPT-DATA-002 / PR10 | independently reviewed offline audit; all44holds preserved | Owner reviews proposed sidecars/identities; no automatic promotion |
+| IMP-MATCH-02 / PR9 | generic synthetic primitives only;24tests | accept required DM policies before full ModeA |
+| IMP-MATCH-03 | feature behavior blocked; prior acceptance specification retained | accepted DM05 and preceding input/absence/auth contracts |
+| IMP-MATCH-04 | real accords unavailable | reviewed compatible accord data plus DM04/05/07 |
+| IMP-MATCH-05/06/07 | framework-neutral API/UI/readiness proposal only | accepted stack/auth, prior scorers, rights/eligible inputs, then measured tests |
+| IMP-P1-04 / PR8 | reconciled218tests; prior replay/recovery retained | historical exact temporal operands/rootcause still unresolved |
+
+CI documentation validation remains a separate proposed backlog task; no GitHub Actions added.
+[[Post_PR4_Application_Readiness]] records Owner recommendations and dependency boundaries.
 
 ## Parallel dual-mode matching planning — DPT-PLAN-003 / PROPOSED
 

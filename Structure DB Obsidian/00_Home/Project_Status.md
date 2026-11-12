@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - status
@@ -13,6 +13,32 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current post-PR4 workstreams — 2026-11-13
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+- IMP-MATCH-01: local read-only typed adapter, genuine nonadmin RLS sessions, selected provenance,
+  rights/conflict/hold/unknown controls;19/19focused tests pass. Full regression evidence and final
+  review limits are [[IMP-MATCH-01_Adapter_Evidence]]. Draft acceptance pending; no final receipt.
+- PR8 head3b01c8395d8ce28f426643f104da16090f11844d: nonrewriting reconciliation with main complete,
+  218/218regression and50parent assertions. Historical23514operands/rootcause unresolved; keep
+  OPEN/DRAFT/blocked. Prior full1479import/replay/inventory/recovery evidence preserved; no clockfix.
+- PR9 head1ab317635bba0c53d87445cff8711ee2fc7c3305: generic exact synthetic math only,24/24PASS and
+  independent source review. Full A/B1/B2 scoring remains gated, no real matches or accepted weights.
+- PR10 headb75e1f0a48e62bae6921cf061584facc36a9fa75:9-file offline research closeout,17/17tests,
+  203independent assertions,8deterministic output artifacts and one new receipt. Ready for bounded
+  Human review;43membership sidecars remain proposals and all44holds remain unresolved.
+
+Local cohort1479/1435approved/44held/160brands/420notes/11972links; matching0, usablepairs0,
+approved/acquired realimages0. No private-public publication or source acquisition. Ordinary-runtime
+public provenance and the operator-private pilot's nonadmin owner/session binding remain gaps;
+adapter returns unknown/unavailable rather than expanding privileges. See
+[[Post_PR4_Application_Readiness]] for DM matrix, API/UI dependency graph and disabled B2 capability.
+Coordinator updates external D1–D9/PR registry and singleLATEST ZIP; no agent merge or Production.
 
 ## Current verified checkpoint — 2026-11-11 / IMP-P1-02
 

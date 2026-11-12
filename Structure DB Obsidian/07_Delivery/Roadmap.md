@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - delivery
@@ -14,6 +14,25 @@ source_of_truth: "../../README.md"
 ---
 
 # Delivery Roadmap — DoomParfum By TK
+
+## Current dependency graph — 2026-11-13
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Stage1: local IMP-MATCH-01 implementation/testing and DPT-DATA-002offline research; PR8reconciled
+but reliabilityblocked; PR9generic mathematical primitives reviewed. Stage2: final adapter review
+and accepted DM/data policies precede full IMP-MATCH-02ModeA and03B1. IMP-MATCH-04realB2 needs actual
+reviewed compatible accord values/presence, currently unavailable; synthetic math is not realdata.
+Stage3: IMP-MATCH-05scoped API needs accepted session/architecture and scorer gates;06UI needs
+explicit stack/auth and API approval;07performance/relevance needs accepted implementation and
+permissioned eligible fixtures. No bypass through a database eligibility boolean or admin read.
+
+See [[Post_PR4_Application_Readiness]] and [[IMP-MATCH-01_Read_Only_Input_Adapter]]. Human Owner
+reviews Draft PRs separately. PR10offline audit ready; PR9fullfeature acceptance pending; PR8rootcause
+blocked; adapter final independent review pending. No automatic merge or Production work.
 
 ## DPT-PLAN-003 independent P2 planning lane — 2026-11-11
 

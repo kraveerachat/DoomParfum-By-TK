@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,26 @@ source_of_truth: "../../README.md"
 ---
 
 # Change Log — DoomParfum By TK
+
+## 2026-11-13 — Post-PR4 correction and implementation checkpoint
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Added IMP-MATCH-01 local exact-identity read-only adapter/tests/guide/evidence; no schema migration,
+runtime privilege expansion, scoring endpoint or framework installation. Added framework-neutral
+application readiness/DM register. Reconciled planning task/plan/ADR and shared status/roadmap/backlog
+with the verified Owner merge event; original decision rows/history/receipts preserved.
+
+Separate packages: PR8nonrewriting reconciliation3b01c839 (218tests, rootcause stillblocked),
+PR9synthetic math1ab3176(24tests, full scorers gated), PR10offline researchb75e1f0(17tests,
+203review assertions,9paths).43proposed hold sidecars and15blocked media metadata candidates do not
+change44holds/0matching/0usablepairs/0acquiredassets. Adapter final independent review pending.
+See [[IMP-MATCH-01_Read_Only_Input_Adapter]], [[IMP-MATCH-01_Adapter_Evidence]] and
+[[Post_PR4_Application_Readiness]]. Current source checkpoint/PR head is recorded additively in task
+closeout and PR description; do not overwrite old immutable receipts or make a second task receipt.
 
 ## 2026-11-12 S4 DM approval/proposal crosswalk
 

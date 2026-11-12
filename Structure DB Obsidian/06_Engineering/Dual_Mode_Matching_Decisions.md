@@ -4,12 +4,21 @@ project: DoomParfum By TK
 type: decision_record
 status: proposed
 owner: human-owner
-updated: 2026-11-11
+updated: 2026-11-13
 tags: [doomparfum, adr, matching]
 source_of_truth: "../../README.md"
 ---
 
 # Dual-Mode Matching — Owner Decision Requests
+
+## 2026-11-13 — Verified Owner merge and bounded follow-on work
+
+Human Owner merged PR4 at aa55f8b59acb0872b3b40273a8cdd25198f3ba27. This current event supersedes
+dated OPEN/DRAFT/GateP-pending statements below. DM01–07 remain PROPOSED; numeric/policy acceptance
+is not inferred. Explicit follow-on request authorizes [[IMP-MATCH-01_Read_Only_Input_Adapter]] and
+generic synthetic math/audits. No real matching activation, new source/image right or stack/provider
+decision. [[Post_PR4_Application_Readiness]] records the seven-row Owner matrix and application gates.
+The original planning receipt remains immutable; no replacement or second planning receipt.
 
 Owner intent is confirmed for independent A/B modes, deterministic explainable scoring and separation
 of similarity/confidence/evidence. This does not accept formulas or authorize implementation. All DM
