@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: test_specification
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - matching
@@ -14,6 +14,13 @@ source_of_truth: "../README.md"
 ---
 
 # Matching Test Cases — DoomParfum By TK
+
+## Dual-mode test specification extension — PROPOSED, 2026-11-11
+
+[[Dual_Mode_Matching_Acceptance_Tests]] defines50 future deterministic A/B1/B2, missing-data, rights,
+privacy and operational cases with explicit expected outcomes. Legacy examples below are synthetic
+v0 illustrations, not new-version numerical oracles, product facts, measured sensory accuracy or PASS
+results. New formulas keep structural fit, data confidence and pair evidence independent.
 
 > **Document Type:** Algorithm Verification & Simulated Test Scenarios
 > **Source Baseline:** `../README.md` (Section 5)

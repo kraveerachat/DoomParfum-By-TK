@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: requirements_register
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-11
 tags:
   - doomparfum
   - requirements
@@ -13,6 +13,14 @@ source_of_truth: "../README.md"
 ---
 
 # Requirements Register — DoomParfum By TK
+
+## DPT-PLAN-003 traceability extension — 2026-11-11
+
+Current owner intent extends R05 to any eligible catalogue reference and R14 to custom layered-note/
+accord-preference search; R03/R07/R15/R16/R17/R18/R21 supply taxonomy, comparison and evidence/privacy
+constraints. [[P2_Dual_Mode_Scent_Matching_Plan]] maps the proposed mechanics/tests and DM-01..07.
+Existing requirement row statuses below are preserved; no weight/threshold/implementation approval
+is inferred. Non-AI matching does not implement or remove R12's separate research-assistant scope.
 
 > **Document Type:** Traceability Matrix (R01 – R31)
 > **Source Baseline:** `../README.md` (Section 2)

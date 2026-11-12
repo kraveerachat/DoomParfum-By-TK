@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-11
+updated: 2026-11-12
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,84 @@ source_of_truth: "../../README.md"
 ---
 
 # Agent Run Log — DoomParfum By TK
+
+## Existing CLI fallback publication checkpoint — 2026-11-12
+
+GitHubMCPmetadata returned internalerror. Existing C:/Program Files/GitHub CLI/gh.exe version2.97.0
+was verified with read-only prview. Using preconfigured authorization, ghpr edit4 --body-file
+published the prepared description at crosswalkcheckpoint3acc4fd4960121dc254e39ed56c93d52ffee9f84.
+Exact UTF8bodybytes readback verified, OPEN/DRAFT/MERGEABLE. Initial localstr/API comparison
+failed only because localread_text normalized CRLF; directUTF8byte comparison confirms exactbody.
+No newlogin/tokenextraction/install/config/hook/ownerdecision/merge. This metadata-only note
+changes no matrix semantics; final metadataHEAD/body readback recorded externally afterpublication.
+
+
+## 2026-11-12 S4 DM approval/proposal crosswalk
+
+Existing PR4 / start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged.
+Clarify existingsevenrowmatrix: boundedapproved OD/upstream basis is distinct from everyPROPOSED
+DM choice; selected-field/rights/completeness/eligibility gates remain conjunctive. Realmatching0,
+44holds and bothB2blocks preserved. Docs23/22/275/9/11math/0errors;14textualsimulations clean.
+OriginalADR rows/receipt unchanged, no runtime/DB/newrights/source/Production/merge. ExistingGit/
+Python/PyYAML/publicREST fallback only; MCPinternalerror. Description prepared pending actual
+publication; parent owns ledger/ZIP. [[P2_Post_PR5_Matching_Reconciliation]].
+
+
+
+## S3 current Owner-review readiness — 2026-11-12
+
+Existing PR #4 rechecked OPEN/DRAFT/unmerged/mergeable at576889923d9f2d616cda88e53193f7f4d738be84;
+main55d39cd unchanged. Existing DM-01..07 matrix/PROPOSED semantics and receipt preserved. Docs checks:
+23 Markdown/22 frontmatter/273 wiki/9 local/11 arithmetic/0 errors;14/14 merge-file simulations clean.
+Planning-review-ready; real matching remains ineligible,44 holds and both B2 data gates remain blocked.
+S3 task/evidence record exact checks and local diagnostic-path correction. Metadata-only checkpoint;
+publication readback follows in live PR/external evidence. No runtime, rights, owner approval or merge.
+
+## S2 exact checkpoint verified / metadata closeout — 2026-11-12
+
+Parent independent readback verified source checkpoint968cd230ec19894c57defa920d1cb5650c37be28,
+parent6b5715793b722bfd4a9f25e99475aa50e4162c93. All16 substantive document bytes match the parent
+review; only Task/Evidence review-record metadata varied. Verification fingerprint:
+a33efc527bf8b3826482ecb01da6c88b3488d1ce63246fceed1393b4f971690e. No owner decision was approved.
+
+Planning documentation is ready for Human Owner review. DM-01..07 remain PROPOSED and matching
+implementation NOT STARTED;44 holds/matching0/accord/completeness/privacy gates persist. Original
+receipt remains immutable; no second receipt. Final metadata edits are limited to task/evidence/
+status/run/change/handoff records and are checked before normal push of the existing PR #4 branch.
+No force push, merge, rebase, runtime/DB or shared handoff/ZIP mutation. Publication head/state are
+reported after actual push/PR readback in the live PR/external summary/final report; this entry does
+not claim publication has already occurred. Human Owner alone decides acceptance and merge.
+
+## 2026-11-12 — DPT-PLAN-003 S2 source-checkpoint review closeout
+
+Authored2026-11-11; continued after quota2026-11-12. Parent /root independently reviewed the author's
+matching reconciliation, found no blocking semantic issue, and accepted explicit IMP-MATCH-04 real
+presence-label/closure/Gate-P prerequisites. DM-01..07 remain PROPOSED. Final local docs/arithmetic/
+merge-file/preservation checks precede exact18-Markdown-path staging/commit; parent must verify the
+resulting checkpoint before push/update of existing Draft PR #4. No second receipt, matching code,
+source/DB/production change, merge/rebase or shared handoff/ZIP mutation. Current SHA/publication
+are recorded only after verified events; older IN PROGRESS snapshots below remain historical.
+
+## DPT-PLAN-003 S2 — post-PR5 reconciliation IN PROGRESS
+
+Same branch/Planning PR #4, START6b5715793b722bfd4a9f25e99475aa50e4162c93, comparator main55d39cd.
+GitHub MCP independently verifies PR #3/#5 merges and #4 OPEN/DRAFT. Existing Git/PowerShell/Python
+read docs/source and simulate7shared paths inbothorders: initial14/14clean; no actual merge/rebase.
+Docs-only capability/DM reconciliation proceeds; DM-01..07 PROPOSED, source/private/44hold/accord/
+completeness limits retained. No new receipt/runtime/DB/source acquisition/paid tool/production work.
+Scoped docs checks and independent planning review pending; no publication success claimed yet.
+
+
+## 2026-11-11 — DPT-PLAN-003 / S1 planning agent run
+
+Codex planner/architect/docs; branch plan/p2-dual-mode-matching from freshly fetched main9636ee7.
+Read both handoffs as reference, current governance/requirements/matching/UX/delivery/SQL and PR #2/#3;
+new A/B1/B2 proposals plus50 NOT RUN implementation specifications. [[DPT-PLAN-003_Dual_Mode_Matching]]
+and [[DPT-PLAN-003_Documentation_Evidence]] record exact SHAs, scope, validation and publication.
+TOOLS: existing GitHub MCP/Git/PowerShell/Python + existing PyYAML; no skills/installs/external web/data
+acquisition. Docs-only math/link/format/scope/overlap checks planned; no matching runtime/API/DB tests.
+PR #3 remains untouched. One new planning receipt at readiness only; all original receipts preserved.
+PRODUCTION_MUTATION=NO. Implementation waits for Human Owner Planning Gate and upstream rights/data.
 
 ## 2026-11-12 bounded note-media metadata increment
 
@@ -32,6 +110,12 @@ Parent owns D1–D9/singleZIP. [[Bounded_Note_Media_Candidate_Increment]].
 > **Status:** Active Audit Trail
 
 ---
+
+Publication event: [PR #4](https://github.com/kraveerachat/DoomParfum-By-TK/pull/4) verified OPEN/DRAFT/unmerged/mergeable at03df0dd;
+latest PR #3 inspected0cdfba4504594a888eb2f11947ea2d1dd58b6db8, main9636ee7 unchanged. One immutable
+planning receipt [[2026-11-11_160700_DPT-PLAN-003_Dual_Mode_Matching]] created after agent review readiness; no historical receipt edit.
+Final metadata HEAD is verified in live PR/final report. Source checkpoint03df0dda8a976945393beeb512768fb841bdc232;
+DM decisions remain PROPOSED. No runtime/DB/source acquisition or production changes; Owner Gate P pending.
 
 ## 1. Run Summary: Phase P0 Bootstrap
 
@@ -440,3 +524,14 @@ Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; exis
 authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
 install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
 parent owns D1–D9/singleZIP. No newreceipt or Production mutation.
+
+## RUN-20261113-PLAN003-MERGE-RECONCILIATION
+
+User-reported GitHub PR4 dirty merge after owner-merges PR6/PR7. GitHub MCP exact refs
+verified main cbc8720c547b76fe5e0bd9b93c3cbf54678b4c2a; PR4 db7e50022dcacfba755b2ff405b96b95a7d94359.
+Pure three-way line reconciliation in remote Git-tree construction; two append-only history
+insertions each merged without loss, seven shared Markdown files reconciled,16 original
+PR-only blob hashes and109 unrelated main file hashes preserved. Created two-parent commit
+9bc92f0170325def43da67e92a9855d4e190d475 and updated existing branch by non-force,
+expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, behind0,
+23 files; original DM01..07 all PROPOSED. No runtime tests rerun; no Production/main/PR merge.

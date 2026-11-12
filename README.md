@@ -1,5 +1,24 @@
 # DoomParfum By TK
 
+## Dual-mode matching planning — 2026-11-11
+
+Owner requests independent perfume-to-perfume matching from any eligible catalogue perfume, and custom
+Top/Heart/Base note or accord-preference search. Deterministic/explainable methods require no AI/LLM
+service. [Dedicated planning specification](Structure%20DB%20Obsidian/07_Delivery/Planning_PRs/P2_Dual_Mode_Scent_Matching_Plan.md)
+proposes formulas, separate fit/data-confidence/pairwise evidence, UX and tests; all new mechanics remain
+PROPOSED pending its own Human Owner Planning Gate. R12 research assistance remains separate.
+PR #2 was owner-merged at9636ee740cdcd3d60633ac11745366814d1af05c; earlier pre-merge implementation
+status below is historical. No ETL/application/production completion follows from that merge.
+
+## S2 matching readiness after merged PR #5 — 2026-11-11
+
+PR #3 and PR #5 are verified owner-merged at current comparator55d39cd619fa6c1ae70521720aa734d632a2083d.
+[Post-PR5 matching reconciliation](Structure%20DB%20Obsidian/07_Delivery/Planning_PRs/P2_Post_PR5_Matching_Reconciliation.md)
+records1479 private local catalogue profiles/1435approved/44held and matching eligibility0. Numeric
+and presence accord routes have no usable accord input; notes still require matching eligibility and
+completeness review. DM-01..07 remain PROPOSED in existing Draft PR #4; no matching runtime or public
+publication follows from intake. Older pre-merge implementation/ETL snapshots below are historical.
+
 ## Current implementation — IMP-P1-01 / 2026-11-10
 
 Planning [PR #1](https://github.com/kraveerachat/DoomParfum-By-TK/pull/1) is MERGED at `bffb2fab1918dc5221a6c5da7920168bcae263ca`.
