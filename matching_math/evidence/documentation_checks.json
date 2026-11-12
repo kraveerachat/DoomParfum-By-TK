@@ -1,0 +1,32 @@
+{
+  "task": "IMP-MATCH-02",
+  "markdown_files": 3,
+  "frontmatters": 2,
+  "wiki_links": 2,
+  "local_links": 3,
+  "source_bindings": 3,
+  "focused_methods": 24,
+  "stdlib_source_imports": [
+    "collections.abc",
+    "dataclasses",
+    "fractions",
+    "uuid"
+  ],
+  "changed_paths": [
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-02_Synthetic_Primitives.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-MATCH-02_Synthetic_Primitives_Evidence.md",
+    "matching_math/README.md",
+    "matching_math/__init__.py",
+    "matching_math/evidence/documentation_checks.json",
+    "matching_math/evidence/unit_results.json",
+    "matching_math/primitives.py",
+    "matching_math/tests/test_primitives.py"
+  ],
+  "protected_tracked_files_unchanged": true,
+  "errors": [],
+  "limits": [
+    "Commonsecretpatterns only",
+    "No externalURL/render/browser/DB/scorerfeaturetest",
+    "DM01-07notaccepted; realmatchingnotenabled"
+  ]
+}
