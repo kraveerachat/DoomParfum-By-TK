@@ -475,3 +475,20 @@ application-group-role fingerprintrestored; ownedtargetstopped/volume retained; 
 inspectreadonlypostattestation.12offline methods/62independentevidenceassertions pass. Historical
 rootcauseUNRESOLVED, no runtimefix/hostclock/backdate/validationrelaxation/fullcohortrepeat.
 No finalreceipt, merge or Production mutation. [[IMP-P1-04_Bounded_Temporal_Capture]].
+
+
+## Exact bounded-capture checkpoint — 2026-11-13
+
+Source/evidence80ce62d04662285ae1a6d0b7c0afea411ad54162 independentlyverified124/124offlineassertions,
+0fail. ExecutednewGitblob hashes match e452a2e2…c9259/afde88c2…46bbd;23old+2newbindings=25distinct,
+29mainprotected and45priorDBsource/evidence/receiptblobs unchanged. Publicreportprojection matches
+raw65f8…839798 plus documentedannotations; readonlyresourceattestation matches stoppedownedtarget.
+Reviewreport checkpoint_80ce62d_review.json SHAdb3508c0149de9972eca5c07a919c5c9788e58762b602588fb15deed6e0793a4.
+Reviewer noDB/Docker/Gitmutation. Finalmetadata touches no executedsource or executionreport.
+Captureability ready forreview; historicalrootcause/runtimecorrection stillblocked;187suiteNOTRUN.
+FinalpublicationHEAD is recorded inPR/externalhandoff afteractualpush, no self-referentialSHA.
+
+Existing CLI executable C:/Program Files/GitHub CLI/gh.exe version2.97.0 verified; MCP internalerror
+fallback uses existing authorization, no login/credentials/config/install changes. Prior-evidence
+precommit rawbyte check first flagged existing CRLFvsGitLF checkout representation; canonical
+git hash-object verification passes, no prior evidence altered.

@@ -219,3 +219,15 @@ conditions before runtimefix. All44holds/rights/receipts/persistentpilot preserv
 explicitODapprovedbasis vsDMproposals; PR6ready/hashreverified; PR7new3metadata candidates remain
 permissionblocked/JPEGunsupported, no acquisition. ExistingGitHubCLI2.97.0 fallback works afterMCP
 internalerrors; no login/install/credential extraction/configchange. Samebranches/Draft/no merge.
+
+
+## Exact bounded-capture checkpoint — 2026-11-13
+
+Source/evidence80ce62d04662285ae1a6d0b7c0afea411ad54162 independentlyverified124/124offlineassertions,
+0fail. ExecutednewGitblob hashes match e452a2e2…c9259/afde88c2…46bbd;23old+2newbindings=25distinct,
+29mainprotected and45priorDBsource/evidence/receiptblobs unchanged. Publicreportprojection matches
+raw65f8…839798 plus documentedannotations; readonlyresourceattestation matches stoppedownedtarget.
+Reviewreport checkpoint_80ce62d_review.json SHAdb3508c0149de9972eca5c07a919c5c9788e58762b602588fb15deed6e0793a4.
+Reviewer noDB/Docker/Gitmutation. Finalmetadata touches no executedsource or executionreport.
+Captureability ready forreview; historicalrootcause/runtimecorrection stillblocked;187suiteNOTRUN.
+FinalpublicationHEAD is recorded inPR/externalhandoff afteractualpush, no self-referentialSHA.
