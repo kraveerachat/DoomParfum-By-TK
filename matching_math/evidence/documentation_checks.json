@@ -18,6 +18,7 @@
     "matching_math/README.md",
     "matching_math/__init__.py",
     "matching_math/evidence/documentation_checks.json",
+    "matching_math/evidence/independent_review.json",
     "matching_math/evidence/unit_results.json",
     "matching_math/primitives.py",
     "matching_math/tests/test_primitives.py"
@@ -28,5 +29,7 @@
     "Commonsecretpatterns only",
     "No externalURL/render/browser/DB/scorerfeaturetest",
     "DM01-07notaccepted; realmatchingnotenabled"
-  ]
+  ],
+  "independent_parent_methods": 24,
+  "independent_source_checkpoint": "a5c82df4800b1e46dec147d1b274c001dd2936cd"
 }

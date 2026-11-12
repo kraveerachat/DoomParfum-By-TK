@@ -2,7 +2,7 @@
 id: IMP-MATCH-02
 project: DoomParfum By TK
 type: implementation_task
-status: local-verified-review-pending
+status: partial-primitives-verified-scorer-gated
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, matching, math, synthetic]
@@ -55,3 +55,14 @@ source has stdlib-only imports, no IO/database/network. Existing runtime/SQL/cat
 Full ModeA acceptance stillblocked by IMP-MATCH-01 and acceptedDM01–04; no feature-release readiness
 or finalreceipt claimed. [[IMP-MATCH-02_Synthetic_Primitives_Evidence]] holds exact hashes/tests.
 Independent source review, documentation checks and dedicated Draft publication follow.
+
+
+## Independent source review and publication checkpoint
+
+Parent independently inspected sourcecheckpointa5c82df4800b1e46dec147d1b274c001dd2936cd and reran24/24
+focused methods PASS0.036s,0fail/errors. No blocking finding in exactpureSYNTHETICprimitives scope.
+No DB/API/UI or real ranking test claimed. matching_math/evidence/independent_review.json records
+sourcebindings/outcomes/limits. Metadata closeout leaves all3executedsource/test hashes unchanged.
+Dedicated DraftPR is partialimplementation progress, not complete ModeA/DMacceptance. No finalreceipt
+while fullscorer behavior remains gated; HumanOwner alone reviews/merges. Resulting publicationHEAD
+and PR URL are verified after actualpush/readback in externalhandoff/PR description.

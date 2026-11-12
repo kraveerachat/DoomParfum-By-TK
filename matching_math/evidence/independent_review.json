@@ -1,0 +1,36 @@
+{
+  "task": "IMP-MATCH-02",
+  "kind": "INDEPENDENT_PARENT_SOURCE_AND_FOCUSED_TEST_REVIEW",
+  "reviewed_source_checkpoint": "a5c82df4800b1e46dec147d1b274c001dd2936cd",
+  "reviewer": "root coordinator, independent of primitives implementer",
+  "source_sha256_canonical_utf8_lf": {
+    "matching_math/__init__.py": "52787f3b39a18013db9db0d042b53c2fa0ad559f85c73f2bcc677e5a9f25c61f",
+    "matching_math/primitives.py": "c1b69bdc74a4a060f6559a182306618f02c595b16e27f3ebb5e4bcca4ff7b735",
+    "matching_math/tests/test_primitives.py": "777b2e2b04d0f67ab32a279940faa2488ba59cc70050cacc4b487fcecacbde30"
+  },
+  "independent_execution": {
+    "command": "python -m unittest discover -s matching_math/tests -v",
+    "methods": 24,
+    "passed": 24,
+    "failed": 0,
+    "errors": 0,
+    "seconds": 0.036,
+    "attribution": "Actual independent rerun reported by parent reviewer in coordination message"
+  },
+  "outcome": "NO_BLOCKING_FINDING_IN_PURE_SYNTHETIC_PRIMITIVES_SCOPE",
+  "review_findings": [
+    "Exact rational operations and explicit caller weights, no DM defaults",
+    "Unknown/incomplete/incompatible/empty-union states stay null",
+    "Observed vectors require same complete key domain without implicit zero padding",
+    "No Mode A/B1/B2 scorer, confidence, pairwise evidence or real-data ranking route",
+    "No source/DB/network/rights/canonical mutation"
+  ],
+  "limits": [
+    "Full ModeA remains gated byIMP-MATCH-01 andDM01-04",
+    "No independent DB/API/UI/relevance/performance test",
+    "Input closure/domain metadata are caller mathematical assertions, not approval/rights proof"
+  ],
+  "protected_base": "Existing tracked files unchanged; all newpaths are package/test/guide/task/evidence",
+  "production_mutation": false,
+  "merge_approval": false
+}

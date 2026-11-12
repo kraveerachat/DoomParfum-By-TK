@@ -2,7 +2,7 @@
 id: DPT-EVD-IMP-MATCH-02-PRIMITIVES
 project: DoomParfum By TK
 type: test_evidence
-status: local-verified-review-pending
+status: partial-primitives-verified-scorer-gated
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, matching, math, synthetic]
@@ -50,3 +50,14 @@ component defaults, missing-component distribution, percent labels/confidence ba
 implemented. All44held profiles,1479matching flags, source provenance and old receipts remain unchanged.
 Parent coordinator owns shared status/logs/decision register/D1–D9/ZIP; no final receipt while complete
 Mode A behavior remains gated. Independent exact-source review and dedicated Draft publication pending.
+
+
+## Independent source review and publication checkpoint
+
+Parent independently inspected sourcecheckpointa5c82df4800b1e46dec147d1b274c001dd2936cd and reran24/24
+focused methods PASS0.036s,0fail/errors. No blocking finding in exactpureSYNTHETICprimitives scope.
+No DB/API/UI or real ranking test claimed. matching_math/evidence/independent_review.json records
+sourcebindings/outcomes/limits. Metadata closeout leaves all3executedsource/test hashes unchanged.
+Dedicated DraftPR is partialimplementation progress, not complete ModeA/DMacceptance. No finalreceipt
+while fullscorer behavior remains gated; HumanOwner alone reviews/merges. Resulting publicationHEAD
+and PR URL are verified after actualpush/readback in externalhandoff/PR description.
