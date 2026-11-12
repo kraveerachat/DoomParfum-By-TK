@@ -2,7 +2,7 @@
 id: IMP-P1-04
 project: DoomParfum By TK
 type: implementation_task
-status: in-progress
+status: partial-blocked
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, benchmark, recovery, local]
@@ -248,3 +248,25 @@ ParentassignedexclusiveoriginalDockerwindow; notifyparentbeforeAintegration begi
 Externalnewartifacts only08_OUTPUTS_APPROVED/post_PR4/reliability; parentsharesledger/singleZIP.
 TOOLS existingGit/ghCLI/PowerShell/Python/Docker, noinstall/auth/config/paidcall.
 PRODUCTION_MUTATION=NO; historicalrootcause/correction remainsblocked.
+
+
+## Post-PR4 merge reconciliation results — 2026-11-13
+
+Nonrewriting branchmerge fd9360650a43d8251c97c706a4811a295dad977b incorporatesownermerged
+aa55f8b59acb0872b3b40273a8cdd25198f3ba27; parents65606483af453c4ef98f410f25e5ef876db7d588 +aa55f8b.
+Exactly3documentationconflicts (Project_Status/Agent_Run_Log/Change_Log) preservebothdatedblocks;
+every nonblankhistorical line frombothparents retained, excludingcurrentfrontmatterupdateddate.
+No runtimeconflicts/edits.86prior-source/evidence/receiptchecks and20mergedimagebindings pass.
+
+Combinednewmainimage+PR8regression218/218PASS188.093s,0failure/error/skip;28testedsourcehashes
+matchGitblobs. This newlycombined-contract regression isnot a timestamp reproduction/benchmark.
+Oldpublic/private report/log bytes restoredexact; additive report post_pr4_merge_regression_results
+recordscommand/sourcehashes. Readonlypersistentpilot49table/data/security/fiveapplication-group-role
+fingerprint unchanged before/after. ExclusiveDBwindowreleased toparent; no furtherDBcalls here.
+
+Priorfull1479import/replay/inventory,15controlrecovery, historical23514failures andboundedSYNTHETIC
+operandcapture preserved. No newdiagnosticcondition demonstratingcause wasfound; originalguard/ETL/
+clockconditions unchanged bymain's image/docs merges. No equivalentcohort/capture/recoveryexperiment.
+Historical rootcause/correction UNRESOLVED, PR8OPEN/DRAFT/BLOCKED/no finalreceipt. DM01–07 remain
+PROPOSED despiteverifiedPlanningGateP; all44holds/rights unchanged. Detail
+[[IMP-P1-04_Post_PR4_Reconciliation]]. Parentindependentreview andsamebranchpush/readback follow.

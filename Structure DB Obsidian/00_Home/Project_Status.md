@@ -210,3 +210,15 @@ Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] acco
 0imagebytes/displaygrants/usablepairs. Independent110source+11docchecks pass. Source/raw/research
 queues remainexternal; [[Post_PR5_Held_and_Permission_Review]] summarizesrightsandowneralternatives.
 This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normalization or deployment.
+
+
+## IMP-P1-04 post-PR4 reconciliation checkpoint — 2026-11-13
+
+Ownermergedmainaa55f8b nowincluded bynonrewritingPR8branchmergefd9360650a43d8251c97c706a4811a295dad977b.
+Three sharedMarkdownconflicts preservebothhistories; no runtime/guard/receipt change. Combined
+source218/218regressionPASS188.093s,28hashbindings,0fail/error/skip; persistentpilot49table/security/
+fiveapplication-group-role fingerprint unchanged and oldreports/logs restoredbyte-exact. No new
+clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause remainsunknown,
+verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
+AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
+[[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.

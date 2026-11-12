@@ -1,0 +1,530 @@
+{
+  "task": "IMP-P1-04",
+  "checked_at_utc": "2026-11-12T21:10:48.598153+00:00",
+  "command": "python database/verify_capacity.py",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "environment": "Guarded disposable local Docker Desktop PostgreSQL16.15; no pilot reset",
+  "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+  "tests_run": 218,
+  "passed": 218,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "seconds": 188.093,
+  "exit_code": 0,
+  "test_ids": [
+    "test_deferred_performance.DeferredPerformanceTests.test_actual_commit_and_rollback_cleanup_transaction_state",
+    "test_deferred_performance.DeferredPerformanceTests.test_bulk_insert_update_delete_coalesces_both_global_scans",
+    "test_deferred_performance.DeferredPerformanceTests.test_caught_failed_flush_cannot_mark_invalid_transaction_clean",
+    "test_deferred_performance.DeferredPerformanceTests.test_later_writes_after_explicit_flush_rearm_validation",
+    "test_deferred_performance.DeferredPerformanceTests.test_named_domain_immediate_mode_keeps_old_invariant",
+    "test_deferred_performance.DeferredPerformanceTests.test_named_queue_immediate_cannot_flush_before_domain_mutation",
+    "test_deferred_performance.DeferredPerformanceTests.test_noop_replay_and_zero_row_statements_leave_no_queue_rows",
+    "test_deferred_performance.DeferredPerformanceTests.test_queue_and_helpers_are_not_client_mutation_capabilities",
+    "test_deferred_performance.DeferredPerformanceTests.test_savepoint_rollback_restores_dirty_epoch_and_pending_events",
+    "test_deferred_performance.DeferredPerformanceTests.test_two_transactions_do_not_share_dirty_state",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_actual_resource_limits_are_returned",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_cancellation_control_failure_or_remaining_session_is_not_success",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_cancellation_matches_exact_run_and_checks_session_exit",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_cancellation_requires_unique_application",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_changed_benchmark_source_fails_before_resource_or_sql_access",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_checkpoint_rechecks_ownership_and_cleans_temporary_on_tamper",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_common_root_rejects_non_git_common_directory",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_common_root_rejects_worktree_identity_mismatch",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_common_root_uses_git_common_directory_for_linked_worktree",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_competing_report_reservations_have_one_owner",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_exact_quota_form_is_an_attested_two_cpu_bound",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_existing_report_prevents_even_resource_preflight",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_failed_atomic_replace_preserves_reservation_and_cleans_temp",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_foreign_lease_is_never_deleted",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_idle_client_also_blocks_quiet_precondition",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_invalid_mapping_precedes_reservation_or_any_resource_mutation",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_lease_is_released_after_exception",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_linked_report_path_refused_before_write",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_original_sql_failure_is_not_relaxed_or_retried",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_pilot_method_records_hash_limits_and_excludes_warmup_from_medians",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_prepare_drop_race_does_not_force_evict_or_continue",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_prepare_uses_only_normal_drop_and_rechecks_before_migrations",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_report_outside_ignored_root_is_refused",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_report_reservation_is_exclusive_and_preserves_existing_bytes",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_resource_failure_is_reported_after_reservation_before_prepare",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_same_stem_reports_use_independent_atomic_temporary_files",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_shared_lease_blocks_other_worktree_until_release",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_timed_sql_wraps_original_importer_body_unchanged",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_timeout_cleanup_failure_preserves_unknown_commit_state",
+    "test_etl_benchmark.BenchmarkOfflineTests.test_wrong_missing_or_conflicting_resource_limits_fail_closed",
+    "test_foundation.FoundationTests.test_acl01_real_nonowner_sessions_private_overlay",
+    "test_foundation.FoundationTests.test_acl02_private_overlay_does_not_mutate_public",
+    "test_foundation.FoundationTests.test_acl03_scope_owner_and_editable_identity_spoof",
+    "test_foundation.FoundationTests.test_acl04_shared_membership_revocation_and_no_private_inheritance",
+    "test_foundation.FoundationTests.test_acl05_private_owner_perfume_variant_and_history",
+    "test_foundation.FoundationTests.test_acl06_grants_raw_staging_and_actual_force_owner",
+    "test_foundation.FoundationTests.test_acl07_untrusted_dml_and_hidden_reference_boolean",
+    "test_foundation.FoundationTests.test_active_rights_and_cross_source_fk",
+    "test_foundation.FoundationTests.test_alias_collision_is_retained_ambiguous_mapping_blocked",
+    "test_foundation.FoundationTests.test_alias_selection_cannot_survive_deleted_materialization",
+    "test_foundation.FoundationTests.test_all_declared_fks_are_validated_and_indexed",
+    "test_foundation.FoundationTests.test_approved_47_table_model",
+    "test_foundation.FoundationTests.test_approved_flanker_requires_reviewed_source_evidence",
+    "test_foundation.FoundationTests.test_approved_scalar_selection_cannot_be_deleted",
+    "test_foundation.FoundationTests.test_audit_events_are_append_only",
+    "test_foundation.FoundationTests.test_canonical_migration_checksum_ignores_checkout_line_endings",
+    "test_foundation.FoundationTests.test_canonical_note_unique_and_cross_layer_identity",
+    "test_foundation.FoundationTests.test_check_values_and_nullable_unknowns",
+    "test_foundation.FoundationTests.test_child_validation_failure_cannot_leave_promoted_parent",
+    "test_foundation.FoundationTests.test_conflicted_profile_cannot_be_matching_eligible",
+    "test_foundation.FoundationTests.test_direct_operations_reject_reconfigured_remote_context_before_connection",
+    "test_foundation.FoundationTests.test_entity_kind_and_incomplete_subtype",
+    "test_foundation.FoundationTests.test_every_table_has_pk_rls_and_force_rls",
+    "test_foundation.FoundationTests.test_exact_12_real_profiles_fit_draft_schema_without_persisting",
+    "test_foundation.FoundationTests.test_expired_private_asset_does_not_block_unrelated_user_write",
+    "test_foundation.FoundationTests.test_expiry_is_rechecked_after_clock_passes",
+    "test_foundation.FoundationTests.test_failed_transaction_leaves_no_partial_rows",
+    "test_foundation.FoundationTests.test_image_cycle_rejected",
+    "test_foundation.FoundationTests.test_img01_exact_capture_asset_assessment_binding",
+    "test_foundation.FoundationTests.test_img02_metadata_allowed_acquisition_missing_permission_rejected",
+    "test_foundation.FoundationTests.test_img03_derivative_exact_parent_and_output_obligations",
+    "test_foundation.FoundationTests.test_img04_hash_locator_and_immutable_capture",
+    "test_foundation.FoundationTests.test_img05_revocation_descendants_and_expiry_operation_gate",
+    "test_foundation.FoundationTests.test_img06_public_link_cannot_reference_private_asset",
+    "test_foundation.FoundationTests.test_immutable_claims_rights_and_capture",
+    "test_foundation.FoundationTests.test_local_data_package_hashes_and_duplicate_investigation",
+    "test_foundation.FoundationTests.test_matching_rating_separation_and_null_score",
+    "test_foundation.FoundationTests.test_materialization_and_audit_are_atomic",
+    "test_foundation.FoundationTests.test_migration_replay_is_noop_and_failed_migration_recovers",
+    "test_foundation.FoundationTests.test_model_names_match_approved_dictionary",
+    "test_foundation.FoundationTests.test_nonfinite_numeric_values_are_not_physical_measurements",
+    "test_foundation.FoundationTests.test_null_image_mime_cannot_bypass_acquired_state",
+    "test_foundation.FoundationTests.test_obs01_structured_and_prose_same_capture_survive",
+    "test_foundation.FoundationTests.test_obs02_occurrences_exact_replay_and_changed_extraction",
+    "test_foundation.FoundationTests.test_obs03_nonempty_locator_key_type_and_scoped_selection",
+    "test_foundation.FoundationTests.test_obs04_resolution_member_and_minimum_count",
+    "test_foundation.FoundationTests.test_parent_selected_permission_change_invalidates_derivative",
+    "test_foundation.FoundationTests.test_primary_key_and_dangling_fk",
+    "test_foundation.FoundationTests.test_promoted_staging_needs_complete_validation_contract",
+    "test_foundation.FoundationTests.test_public_matching_cannot_use_private_observation",
+    "test_foundation.FoundationTests.test_purchase_numeric_and_currency_checks",
+    "test_foundation.FoundationTests.test_raw_staging_payload_and_capture_identity_cannot_change",
+    "test_foundation.FoundationTests.test_repeated_raw_occurrences_preserved_and_promotion_blocked",
+    "test_foundation.FoundationTests.test_reset_recreate_matches_current_schema",
+    "test_foundation.FoundationTests.test_review_guard_private_variant_of_public_perfume_is_not_shared",
+    "test_foundation.FoundationTests.test_review_guard_resolved_conflict_requires_matching_selection",
+    "test_foundation.FoundationTests.test_rights_expiry_hides_selected_scalars_without_mutation_all_scopes",
+    "test_foundation.FoundationTests.test_rights_revocation_hides_selected_scalars_in_all_scopes",
+    "test_foundation.FoundationTests.test_same_source_different_capture_permission_rejected",
+    "test_foundation.FoundationTests.test_selection_does_not_silently_resolve_conflict",
+    "test_foundation.FoundationTests.test_shadowed_temp_schema_cannot_spoof_principal",
+    "test_foundation.FoundationTests.test_shared_owner_can_grant_editor_without_public_write_access",
+    "test_foundation.FoundationTests.test_shared_reader_cannot_write_or_self_enroll_even_with_table_grant",
+    "test_foundation.FoundationTests.test_taxonomy_namespace_and_usage_materialization",
+    "test_foundation.FoundationTests.test_two_row_image_cycle_fails_deferred_lineage_validation",
+    "test_foundation.FoundationTests.test_unknown_rights_cannot_store_raw_staging",
+    "test_foundation.FoundationTests.test_with_check_prevents_new_scope_spoof_under_trusted_writer_grant",
+    "test_foundation.FoundationTests.test_write_isolation_contract_rejects_stale_snapshot_mode",
+    "test_foundation.FoundationTests.test_z_concurrent_member_deletions_cannot_write_skew",
+    "test_image_validation.ImageDatabaseTests.test_changed_registered_binding_during_read_prevents_success",
+    "test_image_validation.ImageDatabaseTests.test_declared_dimensions_and_size_must_match_actual_bytes",
+    "test_image_validation.ImageDatabaseTests.test_descendant_rechecks_revoked_ancestor",
+    "test_image_validation.ImageDatabaseTests.test_expired_grant_blocks_after_loader_and_is_not_cached",
+    "test_image_validation.ImageDatabaseTests.test_metadata_only_state_with_unknown_source_never_reads_bytes",
+    "test_image_validation.ImageDatabaseTests.test_private_asset_hidden_to_bob_guest_and_nonexistent_uniformly",
+    "test_image_validation.ImageDatabaseTests.test_registered_owned_bytes_match_all_authorized_operations_without_state_change",
+    "test_image_validation.ImageDatabaseTests.test_revocation_during_read_prevents_success",
+    "test_image_validation.ImageDatabaseTests.test_revoked_asset_permission_blocks_before_read",
+    "test_image_validation.ImageDatabaseTests.test_supported_schema_mime_is_not_decoder_support",
+    "test_image_validation.ImageDatabaseTests.test_wrong_content_hash_rejected",
+    "test_image_validation.ImageOfflineTests.test_ancillary_metadata_animation_unknown_chunks_rejected",
+    "test_image_validation.ImageOfflineTests.test_bad_filter_or_zlib_checksum_or_trailing_stream_rejected",
+    "test_image_validation.ImageOfflineTests.test_chunk_count_limit",
+    "test_image_validation.ImageOfflineTests.test_crc_corruption_rejected",
+    "test_image_validation.ImageOfflineTests.test_decoded_bomb_and_long_or_short_rows_rejected",
+    "test_image_validation.ImageOfflineTests.test_denied_unknown_operation_or_malformed_id_never_calls_loader",
+    "test_image_validation.ImageOfflineTests.test_dimension_pixel_and_decoded_limits_precede_decompression",
+    "test_image_validation.ImageOfflineTests.test_disallowed_database_never_calls_sql_or_loader",
+    "test_image_validation.ImageOfflineTests.test_duplicate_or_absent_header_rejected",
+    "test_image_validation.ImageOfflineTests.test_jpeg_webp_avif_svg_gif_and_spoofed_suffix_bytes_rejected",
+    "test_image_validation.ImageOfflineTests.test_large_chunk_length_cannot_overrun_input",
+    "test_image_validation.ImageOfflineTests.test_limits_reject_zero_negative_bool_or_noninteger",
+    "test_image_validation.ImageOfflineTests.test_loader_failure_hides_private_locator",
+    "test_image_validation.ImageOfflineTests.test_multiple_idat_chunks_are_supported",
+    "test_image_validation.ImageOfflineTests.test_nonbytes_empty_and_byte_limit",
+    "test_image_validation.ImageOfflineTests.test_owned_rgb_and_rgba_exact_metadata",
+    "test_image_validation.ImageOfflineTests.test_trailing_bytes_and_nonempty_end_rejected",
+    "test_image_validation.ImageOfflineTests.test_truncated_headers_chunks_and_missing_end_rejected",
+    "test_image_validation.ImageOfflineTests.test_unsupported_depth_palette_and_interlace_rejected",
+    "test_image_validation.ImageOfflineTests.test_valid_scanline_filter_codes",
+    "test_recovery.RecoveryAclDatabaseTests.test_empty_explicit_relation_acl_stays_empty",
+    "test_recovery.RecoveryAclDatabaseTests.test_known_check_associativity_is_proven_against_independent_rule",
+    "test_recovery.RecoveryAclDatabaseTests.test_null_or_empty_column_acl_has_no_explicit_grants",
+    "test_recovery.RecoveryAclDatabaseTests.test_null_relation_acl_keeps_postgresql_owner_defaults",
+    "test_recovery.RecoveryAclDatabaseTests.test_wrong_rights_check_cannot_pass_equivalence_exception",
+    "test_recovery.RecoveryOfflineTests.test_archive_exclusive_persistence_and_verified_disk_readback",
+    "test_recovery.RecoveryOfflineTests.test_bad_manifest_type_count_size_and_digest_rejected",
+    "test_recovery.RecoveryOfflineTests.test_corrupt_same_size_bytes_and_wrong_size_fail",
+    "test_recovery.RecoveryOfflineTests.test_corrupt_saved_archive_blocks_positive_restore_and_reports_failure",
+    "test_recovery.RecoveryOfflineTests.test_duplicate_casefolded_paths_rejected",
+    "test_recovery.RecoveryOfflineTests.test_exact_isolated_target_resource_identity_accepted",
+    "test_recovery.RecoveryOfflineTests.test_existing_role_subset_must_be_safe_and_compatible",
+    "test_recovery.RecoveryOfflineTests.test_fingerprint_includes_schema_relation_column_and_function_acls_and_roles",
+    "test_recovery.RecoveryOfflineTests.test_invalid_archive_metadata_refused_without_live_access",
+    "test_recovery.RecoveryOfflineTests.test_linked_file_rejected_before_content_read",
+    "test_recovery.RecoveryOfflineTests.test_membership_options_are_exact_safe_and_recreated_explicitly",
+    "test_recovery.RecoveryOfflineTests.test_missing_object_fails",
+    "test_recovery.RecoveryOfflineTests.test_missing_role_control_rejects_unrelated_error_or_unexpected_success",
+    "test_recovery.RecoveryOfflineTests.test_missing_role_pg_restore_control_repeats_with_existing_or_empty_roles",
+    "test_recovery.RecoveryOfflineTests.test_nonowner_probe_requires_42501_and_rolls_back_even_if_allowed",
+    "test_recovery.RecoveryOfflineTests.test_not_run_control_can_never_be_reported_verified",
+    "test_recovery.RecoveryOfflineTests.test_object_rehearsal_checks_independent_copy_and_negatives",
+    "test_recovery.RecoveryOfflineTests.test_orchestration_restores_verified_disk_bytes_and_records_exact_code_hash",
+    "test_recovery.RecoveryOfflineTests.test_output_and_password_links_rejected_before_docker",
+    "test_recovery.RecoveryOfflineTests.test_owned_object_exact_roundtrip_and_empty_actual_image_set",
+    "test_recovery.RecoveryOfflineTests.test_public_output_or_existing_directory_refused_before_source_access",
+    "test_recovery.RecoveryOfflineTests.test_recreated_roles_must_match_source_exactly",
+    "test_recovery.RecoveryOfflineTests.test_relative_absolute_drive_escape_and_ambiguous_paths_rejected",
+    "test_recovery.RecoveryOfflineTests.test_reparse_ancestor_is_refused",
+    "test_recovery.RecoveryOfflineTests.test_report_is_reserved_before_resource_access_and_failure_is_atomic",
+    "test_recovery.RecoveryOfflineTests.test_role_drop_dependency_failure_does_not_cascade_or_restore",
+    "test_recovery.RecoveryOfflineTests.test_role_manifest_excludes_passwords_and_non_application_logins",
+    "test_recovery.RecoveryOfflineTests.test_shared_benchmark_lease_blocks_recovery_before_output_or_docker",
+    "test_recovery.RecoveryOfflineTests.test_source_or_arbitrary_database_and_user_rejected_before_docker",
+    "test_recovery.RecoveryOfflineTests.test_target_psql_emits_verbose_permission_sqlstate",
+    "test_recovery.RecoveryOfflineTests.test_unsafe_retained_role_refused_before_database_reset",
+    "test_recovery.RecoveryOfflineTests.test_unsafe_role_flags_configuration_and_extra_roles_fail_closed",
+    "test_recovery.RecoveryOfflineTests.test_unsafe_synthetic_outsider_blocks_probe",
+    "test_recovery.RecoveryOfflineTests.test_wrong_image_label_network_port_volume_or_resources_refused",
+    "test_recovery.SecurityComparisonOfflineTests.test_incomplete_truth_table_or_failed_predicate_is_rejected",
+    "test_recovery.SecurityComparisonOfflineTests.test_unrelated_security_or_constraint_differences_fail_before_sql",
+    "test_recovery.SecurityComparisonOfflineTests.test_unsampled_whitespace_bypass_is_rejected_before_truth_table",
+    "test_review_timestamps.ReviewTimestampTests.test_current_statement_conflict_preserves_original_review_and_audit",
+    "test_review_timestamps.ReviewTimestampTests.test_current_update_is_validated_then_explicitly_rolled_back",
+    "test_review_timestamps.ReviewTimestampTests.test_future_insert_is_rejected_before_conflict_suppression",
+    "test_review_timestamps.ReviewTimestampTests.test_future_update_is_rejected_and_fully_rolled_back",
+    "test_review_timestamps.ReviewTimestampTests.test_revoked_source_rights_still_reject_conflict_replay",
+    "test_scento_etl.ScentoDatabaseTests.test_01_real_pilot_staging_replay_preserves_raw_and_creates_no_catalogue",
+    "test_scento_etl.ScentoDatabaseTests.test_02_unreviewed_mapping_refuses_promotion_without_writes",
+    "test_scento_etl.ScentoDatabaseTests.test_03_rights_revocation_and_expiry_cannot_be_bypassed_by_replay",
+    "test_scento_etl.ScentoDatabaseTests.test_04_transaction_failure_rolls_back_capture_and_batch",
+    "test_scento_etl.ScentoDatabaseTests.test_05_non_owner_cannot_read_staging_or_private_capture",
+    "test_scento_etl.ScentoDatabaseTests.test_06_reviewed_private_pilot_promotes_eleven_and_retains_khamrah_hold",
+    "test_scento_etl.ScentoDatabaseTests.test_07_promoted_pilot_replay_has_zero_new_rows_or_joins",
+    "test_scento_etl.ScentoDatabaseTests.test_08_contrary_existing_canonical_row_is_rejected_not_silently_retained",
+    "test_scento_etl.ScentoDatabaseTests.test_09_contrary_existing_selection_is_rejected_without_overwrite",
+    "test_scento_etl.ScentoDatabaseTests.test_10_contrary_validation_evidence_cannot_silently_win_replay",
+    "test_scento_etl.ScentoDatabaseTests.test_11_data_bearing_pilot_cannot_be_recreated_by_test_helper",
+    "test_scento_etl.ScentoDatabaseTests.test_12_concurrent_full_intake_reports_actual_new_rows_once",
+    "test_scento_etl.ScentoOfflineTests.test_existing_output_is_refused_before_database_access",
+    "test_scento_etl.ScentoOfflineTests.test_forged_review_marker_and_unapproved_database_are_refused",
+    "test_scento_etl.ScentoOfflineTests.test_mapping_manifest_requires_review_and_exact_source_binding",
+    "test_scento_etl.ScentoOfflineTests.test_pinned_artifacts_and_approved_pilot_are_exact",
+    "test_scento_etl.ScentoOfflineTests.test_source_and_plan_replay_are_deterministic",
+    "test_scento_etl.ScentoOfflineTests.test_synthetic_malformed_unknown_and_duplicate_notes_are_not_promoted",
+    "test_scento_etl.ScentoOfflineTests.test_tampered_license_or_csv_fails_before_staging",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_actual_compared_operands_and_microsecond_delta_are_parseable",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_attestation_rejects_resource_mount_and_ownership_drift",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_expired_deadline_refuses_before_docker",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_invalid_nonce_is_refused",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_limits_refuse_before_any_process_or_lease",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_mismatched_delta_or_naive_clocks_are_refused",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_remote_endpoint_is_refused_before_target_command",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_single_sample_rewrite_keeps_preceding_checks_and_return",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_tampered_equality_operation_or_extra_clocks_are_refused",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_unknown_payload_fields_are_refused",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_unpinned_or_repeated_predicate_is_refused",
+    "test_temporal_capture.TemporalCaptureOfflineTests.test_unsafe_timestamp_expression_is_refused"
+  ],
+  "error_ids": [],
+  "counting": "tests_run counts methods; errors may include class setup/teardown outcomes; passed counts addSuccess callbacks",
+  "source_file_sha256": {
+    "database/etl_benchmark.py": "bfcf0418eef26f4c26bf06cdbe74f67730a93d45b27f5457ddc1bdc6b55e254c",
+    "database/image_validation.py": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+    "database/local.py": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+    "database/migrations/001_identity.sql": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+    "database/migrations/002_catalogue.sql": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+    "database/migrations/003_provenance.sql": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+    "database/migrations/004_associations_media_personal.sql": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+    "database/migrations/005_contract_functions.sql": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+    "database/migrations/006_media_and_deferred_contracts.sql": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+    "database/migrations/007_security_and_field_contract.sql": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+    "database/migrations/008_coalesced_deferred_validation.sql": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+    "database/performance.py": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+    "database/recovery.py": "bb2cc0a9d282d09c3a717cab66fdb3b2f6ba1683c09d43f378af105078494107",
+    "database/scento_etl.py": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+    "database/temporal_capture.py": "e452a2e2157c809877265cae22d8f68050661b01c68a84eaf084620e529c9259",
+    "database/tests/fixtures.py": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+    "database/tests/test_deferred_performance.py": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+    "database/tests/test_etl_benchmark.py": "394e33ab73c0e0a7719ea70275a347d1651364394ba4d0a6192c60400dfc0f03",
+    "database/tests/test_foundation.py": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+    "database/tests/test_image_validation.py": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+    "database/tests/test_recovery.py": "017fd67eeb8f7683c6657f8fdad52804c1a6dbf0f914cc940d03ad62304b9f1d",
+    "database/tests/test_review_timestamps.py": "77a2d0f89768c79ea8c8474d72505a45644fda3b7c01a766a6d5b45686e50930",
+    "database/tests/test_scento_etl.py": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+    "database/tests/test_temporal_capture.py": "afde88c25e370b13303ff422814c8e81fa041174c81da42c9faed8a40f646bbd",
+    "database/validate_docs.py": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+    "database/verify.py": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+    "database/verify_capacity.py": "a0ddf6b85c0c78e5e724e6b1332a94208737522ef4e5f7daf73e9b8c989b36c7",
+    "database/verify_images.py": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1"
+  },
+  "separate_execution_evidence": [
+    "Controlled benchmark attempts, including failures, are reported separately",
+    "Independent DB restore and synthetic object rehearsal have separate actual execution reports"
+  ],
+  "not_run": [
+    "Actual image/asset lineage/provider recovery",
+    "Cloud/offsite/encrypted recovery/RPO/retention",
+    "Application/API/UI/matching"
+  ],
+  "actual_command": "python .local/post-pr4-reliability/run_combined_regression.py -> verify_capacity.run_suite() undercommonlease",
+  "wrapper_sha256": "9ff0701d1d51dcead9f74f9879290448ff67778efccbb423f12db2493508a1e6",
+  "reason_for_regression": "Newmergedimage/runtimefiles plusPR8toolingcombined afterownerPR4/6/7merges; notequivalenttimestamp/cohortexperiment",
+  "historical_timestamp_rootcause": "UNRESOLVED; no guard/expression/clock/retry change",
+  "separate_prior_acceptance": "Full1479import/replay/inventory and15controlrecovery alreadyverified; no newbenchmark/recovery/capture run",
+  "persistent_pilot_all49_data_security_roles_unchanged": true,
+  "persistent_pilot_tables": [
+    {
+      "rows": 1,
+      "sha256": "2d0153fb2940acead0b5b3ca09ed7a6c3185c30a294c90025b411bce07328f8d",
+      "relation": "dpt.access_scopes"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.accords"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.asset_permissions"
+    },
+    {
+      "rows": 8845,
+      "sha256": "c83d0cc97259fda0a64d5ae8d6029f690cd4eff02d6919d88449cc74e86f3a17",
+      "relation": "dpt.audit_events"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.brand_aliases"
+    },
+    {
+      "rows": 160,
+      "sha256": "93f9d4b5cce4d37146b97f32227fdb54fc8c3dd94b5e0305d5b98a82e7f3ed5e",
+      "relation": "dpt.brands"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.brand_tag_links"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.brand_tags"
+    },
+    {
+      "rows": 8845,
+      "sha256": "d1cdee65ea56d312b73a299948b3fa301c7eb299844c97e7627634a97cf80ee8",
+      "relation": "dpt.canonical_selections"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.comparison_evidence"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.conflict_members"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.countries"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.data_conflicts"
+    },
+    {
+      "rows": 2059,
+      "sha256": "cc0e70536d9a3138312cf52c39a9ee439ca083d76bdc978c9f689304757c00d2",
+      "relation": "dpt.entities"
+    },
+    {
+      "rows": 2059,
+      "sha256": "cac066a85f9093718410b9e470f73b78e0077dc74b7da3271de290e4a1670ec0",
+      "relation": "dpt.entity_source_links"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.families"
+    },
+    {
+      "rows": 53,
+      "sha256": "f2992f2256fa4f7a58a45fdbfebfd2b08100f14c3eb8a9582757b27e1938e608",
+      "relation": "dpt.field_definitions"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.image_assets"
+    },
+    {
+      "rows": 2,
+      "sha256": "7a35710d0d534f18f2d628d9b26ffffe02fc5f34e5da6ca1b1c43eb811521425",
+      "relation": "dpt.ingestion_batches"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.inventory_items"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.matching_results"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.note_aliases"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.note_images"
+    },
+    {
+      "rows": 420,
+      "sha256": "fbb616c21fcfc76f0fd5a80a8917db1797b786d39d3d705d5f9111801a8e9e35",
+      "relation": "dpt.notes"
+    },
+    {
+      "rows": 8,
+      "sha256": "e16c19a2974da4be7fc7e99d77a66ec30227060c0cee6e4b6f0dfec54a2acb82",
+      "relation": "dpt_ops.schema_migrations"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt_ops.validation_pending"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.perfume_accords"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.perfume_families"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.perfume_images"
+    },
+    {
+      "rows": 11972,
+      "sha256": "e2eab1c06f12a054d8e61ef84ca789332539ecceceb35911cf24a5cda509a01b",
+      "relation": "dpt.perfume_notes"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.perfume_relations"
+    },
+    {
+      "rows": 1479,
+      "sha256": "c7e40fe3741c0e28ff23360a436770fb2c99dc018cbe3d9c201d14ac89b12080",
+      "relation": "dpt.perfumes"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.perfume_usage_tags"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.price_observations"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.product_variants"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.purchase_records"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.rating_observations"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.retail_listings"
+    },
+    {
+      "rows": 1,
+      "sha256": "42523df3a2645efa894ed906df8f6a4c6c624e8c78d8512550988702b47563e9",
+      "relation": "dpt.rights_assessments"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.saved_buying_sources"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.scope_members"
+    },
+    {
+      "rows": 10489,
+      "sha256": "3fadaba5830644bce5c2fde928e05eaa1986e0c8763d6e59dec996744b77a7ca",
+      "relation": "dpt.source_observations"
+    },
+    {
+      "rows": 2059,
+      "sha256": "bea4c1a07009a44011b1eb5474bc68e5e3da7fba5899568e73c63dfa8fb77ef5",
+      "relation": "dpt.source_records"
+    },
+    {
+      "rows": 1,
+      "sha256": "018a5cad8d16d51f4674e29bd2a17c73dbf57c05ad669e2ed73c59ae38ce7810",
+      "relation": "dpt.sources"
+    },
+    {
+      "rows": 2134,
+      "sha256": "947684613927060a453cb056dede193215aa7d3116ae7ef3d529a47b2fe9cb07",
+      "relation": "dpt.staging_records"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.user_list_items"
+    },
+    {
+      "rows": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "relation": "dpt.user_lists"
+    },
+    {
+      "rows": 1,
+      "sha256": "62c0fcd5814479ef681b2b4dc1b501d8934a546c4a8d2a22d5522ee382122278",
+      "relation": "dpt.users"
+    },
+    {
+      "rows": 8536,
+      "sha256": "70ab64d5443be097f6703f0c2f7edb46a5f157e9895c268a7d4b34dc1ce40bf5",
+      "relation": "dpt.validation_results"
+    }
+  ],
+  "original_private_report_sha256": "271e6342647212428389779d3992d1202924012ea7fbe186c92910b1ca2759c5"
+}

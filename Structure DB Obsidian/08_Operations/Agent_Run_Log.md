@@ -627,3 +627,15 @@ PR-only blob hashes and109 unrelated main file hashes preserved. Created two-par
 9bc92f0170325def43da67e92a9855d4e190d475 and updated existing branch by non-force,
 expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, behind0,
 23 files; original DM01..07 all PROPOSED. No runtime tests rerun; no Production/main/PR merge.
+
+
+## IMP-P1-04 post-PR4 reconciliation checkpoint — 2026-11-13
+
+Ownermergedmainaa55f8b nowincluded bynonrewritingPR8branchmergefd9360650a43d8251c97c706a4811a295dad977b.
+Three sharedMarkdownconflicts preservebothhistories; no runtime/guard/receipt change. Combined
+source218/218regressionPASS188.093s,28hashbindings,0fail/error/skip; persistentpilot49table/security/
+fiveapplication-group-role fingerprint unchanged and oldreports/logs restoredbyte-exact. No new
+clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause remainsunknown,
+verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
+AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
+[[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.
