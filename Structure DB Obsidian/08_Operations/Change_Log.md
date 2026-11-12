@@ -15,6 +15,18 @@ source_of_truth: "../../README.md"
 
 # Change Log — DoomParfum By TK
 
+## 2026-11-12 S4 DM approval/proposal crosswalk
+
+Existing PR4 / start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged.
+Clarify existingsevenrowmatrix: boundedapproved OD/upstream basis is distinct from everyPROPOSED
+DM choice; selected-field/rights/completeness/eligibility gates remain conjunctive. Realmatching0,
+44holds and bothB2blocks preserved. Docs23/22/275/9/11math/0errors;14textualsimulations clean.
+OriginalADR rows/receipt unchanged, no runtime/DB/newrights/source/Production/merge. ExistingGit/
+Python/PyYAML/publicREST fallback only; MCPinternalerror. Description prepared pending actual
+publication; parent owns ledger/ZIP. [[P2_Post_PR5_Matching_Reconciliation]].
+
+
+
 ## S3 current Owner-review readiness — 2026-11-12
 
 Existing PR #4 rechecked OPEN/DRAFT/unmerged/mergeable at576889923d9f2d616cda88e53193f7f4d738be84;

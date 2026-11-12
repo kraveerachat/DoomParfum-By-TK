@@ -269,3 +269,21 @@ All feature/runtime/API/DB/browser/security/performance tests NOT RUN; arithmeti
 establish feature correctness, sensory accuracy, throughput or source-data readiness. No external site
 or Fragrantica endpoint access, new source rights, image/data acquisition, AI service, cloud/production,
 PR #3 edit, force push or merge performed. DM-01..07 PROPOSED; Human Owner Gate P remains pending.
+
+
+## S4 approved-basis / proposal crosswalk — 2026-11-12
+
+The existing DM01–07 matrix now distinguishes already approved bounded OD/upstream contracts from
+still-PROPOSED Owner choices and the current real-data gates. All original ADR proposal rows and
+existing immutable receipt remain unchanged. No weights, formula, confidence/pair-evidence policy
+or approval status changed; all1479matching flags stayfalse and all44holds remain. Both realB2
+routes remain unavailable. Selected-field provenance/conflicts, caller/currentrights, accepted
+completeness/absence and expliciteligibility must pass together before real matching is enabled.
+
+Source start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged. Current docs/math
+checks23Markdown/22frontmatters/275wiki/9local/11arithmetic/0errors/common-secret candidates;50future
+acceptance specifications NOT RUN.14/14 both-order textual simulations clean/identical. Existing
+receipt bf4d74b3a7ba04c8dc7b31c4ae658b82ddfc3203 preserved, no secondreceipt. No runtime/DB tests,
+new rights, implementation, Production or merge. GitHubMCP currently internalerror; publicREST
+readback OPEN/DRAFT/unmerged/mergeable=true. PR description update is prepared externally pending
+connector availability, never claimed published before readback. Parent owns D1–D9/singleZIP.

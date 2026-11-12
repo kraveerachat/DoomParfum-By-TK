@@ -89,20 +89,31 @@ These are implementation acceptance prerequisites, not additional owner approval
 ETL. They refine existing DM-03/04/05/06/07 choices and IMP-MATCH dependencies; no source grant or
 original DEC/OD/NEW table row is altered.
 
-## DM-01..07 review recommendations — still PROPOSED
+## DM-01..07 owner decision matrix — all still PROPOSED
 
-| Decision | Compatibility/recommendation for Owner review | Remaining choice |
-|---|---|---|
-| DM-01 | Keep independent A, B1 and B2 milestones; separate synthetic capability from available real data | Enable each only after its data/gate checks; B3 remains deferred |
-| DM-02 | Keep structural/query fit, Data Confidence and direct pair evidence separate; compatible with PR #3 NEW-08/11 | Approve labels/tooltips; no sensory-equivalence or automatic Dupe claim |
-| DM-03 | Retain50/30/20 and layer25/37.5/37.5 only as the existing proposal; explicitly show notes-only coverage | Owner decides/calibrates weights, comparable-layer/completeness and grouping thresholds |
-| DM-04 | Keep compatible observed vectors and separate presence fallback; current real cohort supports neither | Approve scale/absence contract only with actual permissioned data; no invented strength |
-| DM-05 | Retain80/20 B1 coverage/focus and strict unknown negatives as proposals; no assumed complete lists | Owner decides requested-domain closure, hard rules, specificity and unknown preview behavior |
-| DM-06 | Keep production distinct from market stock, unknown visible, historical opt-in; consistent with merged PR #3 | Define selected status facts/TTL and any needed field/schema gap before real filters |
-| DM-07 | Keep framework-neutral read-only ephemeral search, scoped cache/revocation and public-only safe sharing | Stack/API/auth/capacity remain later choices; local postgres-admin intake is not the app auth design |
+The approved basis column records existing bounded Owner decisions/merged upstream contracts. It
+does not approve any DM row. OD-01..06 remain approved only within their recorded local scope; PR4
+is unmerged and cannot approve its own scoring, completeness, availability or application policies.
 
-No matching weights, scale, availability TTL, completeness/absence assumption, runtime stack, hosted
-provider or performance target becomes accepted through this reconciliation or PR #5 merge.
+| Decision / status | Already approved bounded basis — not DM approval | Still proposed / Owner choice | Current real-data gate |
+|---|---|---|---|
+| DM-01 — PROPOSED | OD-01/06 allow licensed international local intake; merged PR3/5 retain separate evidence/data responsibilities | Independent A perfume-reference, B1 layered-note and B2 accord milestones; B3 deferred | Owner Gate P plus selected usable fields, current rights, completeness and eligibility for each route |
+| DM-02 — PROPOSED | Merged PR3 evidence separation and OD-02 source-claim/conflict design targets | Approve labels/tooltips separating structural/query fit, Data Confidence and direct pair evidence; no measured-smell or automatic Dupe claim | No usable pair evidence; structural scores cannot manufacture a relation or raise confidence |
+| DM-03 — PROPOSED | OD-02 approves identity/provenance/access design targets subject to tests, not scoring weights | Existing A50/30/20 and layer25/37.5/37.5 remain draft; decide/calibrate comparable layers, coverage and grouping thresholds | Exact-source review is not closed-list completeness; notes-only coverage must be visible; no unknown component becomes zero |
+| DM-04 — PROPOSED | OD-01/06 license the pinned local dataset; no approval of missing accord scales or strengths | Compatible observed accord vectors, or a distinct reviewed-label presence method; Owner decides scale/absence contract with real permissioned inputs | Current adapter has neither selected accord labels nor observed strengths; both real B2 routes disabled, sliders are preference only |
+| DM-05 — PROPOSED | OD-02 retains source claims/conflicts and private scopes; no accepted matching absence policy | Existing B1 coverage80/focus20, hard rules, domain closure, specificity and unknown preview behavior require Owner choice | Selected-field domain/completeness audit must pass; unknown cannot satisfy a hard negative or incomplete-list absence test |
+| DM-06 — PROPOSED | Merged PR3 separates lifecycle facts from market stock; no new selected status contract supplied by PR5 | Define selected currentness facts, freshness/TTL, historical opt-in and any field/schema gap | Currentness remains unknown without usable selected lifecycle/market facts; no raw-field or brand-name inference |
+| DM-07 — PROPOSED | OD-02 bounded access-scope design targets; OD-03/04/05 local DB/image metadata/backup scope only, cloud/provider targets deferred | Framework-neutral authorized ephemeral reads, scoped cache/revocation and public-only safe sharing; stack/API/auth/capacity remain choices | Operator-private data cannot seed public output/counts/cache; application authorization and publication path need their own tests/gates |
+
+**Real-data matching stays disabled** until all four requirements pass together: (1) selected-field
+provenance and conflict checks, (2) caller scope and current operation-specific rights, (3) accepted
+completeness/absence policy for the requested domain, and (4) explicit eligibility. Current real
+matching eligibility is0: all1479flags remain false, including1435exact-source approved profiles;
+all44held profiles remain held. Review readiness is not Owner acceptance or implementation approval.
+
+OD-04 image-metadata design approval grants no third-party photo permissions. OD-03/05 do not
+approve cloud hosting, final retention/RPO/RTO or external provisioning. No DM weights, scale, TTL,
+completeness/absence policy, stack, provider or performance target is accepted by this crosswalk.
 
 ## Review, merge simulations and continuity
 

@@ -11,6 +11,17 @@ source_of_truth: "../../../README.md"
 
 # DPT-PLAN-003 — Dual-Mode Scent Matching & Custom Note/Accord Search
 
+## S4 decision crosswalk refresh — start checkpoint, 2026-11-12
+
+IN PROGRESS. Start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; comparator main
+55d39cd619fa6c1ae70521720aa734d632a2083d, unchanged at fresh parent fetch. Public REST readback
+OPEN/DRAFT/unmerged/mergeable=true after GitHub MCP internalerror; no credentials extracted.
+Plan: make the existing DM01–07 matrix explicitly separate previously approved bounded OD/upstream
+basis from still-PROPOSED matching choices and current real-data gates. Do not change formulas,
+weights, decisions, original receipt, migrations, data, source permissions or other branches.
+No DB/runtime rerun. Verify frontmatter/links/math/protected rows and both-order merge simulations.
+Only essential additive crosswalk/task/evidence/change/run updates; parent owns D1–D9/ZIP.
+
 ## S3 current Owner-review readiness — 2026-11-12
 
 Verified START/publication head576889923d9f2d616cda88e53193f7f4d738be84 and unchanged comparator
@@ -205,3 +216,21 @@ plan/p2-dual-mode-matching / #4 OPEN,DRAFT; document checkpoint03df0dd; resultin
 verified in GitHub/final report after push. No production mutation. Blockers to planning publication:
 NONE; implementation remains gated by Owner review/merge, DM decisions, IMP-P1-02 and usable rights.
 Next action: Human Owner reviews #4; no agent merge or automatic implementation.
+
+
+## S4 approved-basis / proposal crosswalk — 2026-11-12
+
+The existing DM01–07 matrix now distinguishes already approved bounded OD/upstream contracts from
+still-PROPOSED Owner choices and the current real-data gates. All original ADR proposal rows and
+existing immutable receipt remain unchanged. No weights, formula, confidence/pair-evidence policy
+or approval status changed; all1479matching flags stayfalse and all44holds remain. Both realB2
+routes remain unavailable. Selected-field provenance/conflicts, caller/currentrights, accepted
+completeness/absence and expliciteligibility must pass together before real matching is enabled.
+
+Source start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged. Current docs/math
+checks23Markdown/22frontmatters/275wiki/9local/11arithmetic/0errors/common-secret candidates;50future
+acceptance specifications NOT RUN.14/14 both-order textual simulations clean/identical. Existing
+receipt bf4d74b3a7ba04c8dc7b31c4ae658b82ddfc3203 preserved, no secondreceipt. No runtime/DB tests,
+new rights, implementation, Production or merge. GitHubMCP currently internalerror; publicREST
+readback OPEN/DRAFT/unmerged/mergeable=true. PR description update is prepared externally pending
+connector availability, never claimed published before readback. Parent owns D1–D9/singleZIP.
