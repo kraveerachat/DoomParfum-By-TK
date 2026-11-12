@@ -2,7 +2,7 @@
 id: DPT-DATA-002
 project: DoomParfum By TK
 type: research_task
-status: in-progress
+status: review-ready
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, research, normalization, rights]
@@ -47,3 +47,11 @@ External PARENT_INDEPENDENT_REVIEW.json SHA256
 2975518fc56716d348c3db4fb1fd60324e36da693ac51ba122f6b05b027e445f.
 No new legal/origin verification or database eligibility claim is inferred from these checks.
 Draft publication and receipt-inclusive documentation checks follow this source checkpoint.
+
+Source checkpoint276a081d2cfba5251135a35d6fda1019ce9f37ca is published in
+[Draft PR10](https://github.com/kraveerachat/DoomParfum-By-TK/pull/10), verified OPEN/DRAFT.
+Closeout changes only task/evidence/receipt/check metadata; executed source and tests stay exact.
+The first PR-create attempt used an incorrect relative body-file path and created no PR; retry with
+the existing absolute body path succeeded. No duplicate PR or source change. See the single
+[[2026-11-13_045200_DPT-DATA-002_Offline_Research_Audit]] receipt; subsequent events belong here/logs.
+Owner reviews the research deliverable, not implicit approval of normalization/identity/rights.
