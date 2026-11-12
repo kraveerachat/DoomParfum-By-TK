@@ -2,7 +2,7 @@
 id: IMP-P1-04
 project: DoomParfum By TK
 type: implementation_task
-status: partial-blocked
+status: in-progress
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, benchmark, recovery, local]
@@ -231,3 +231,20 @@ Reviewreport checkpoint_80ce62d_review.json SHAdb3508c0149de9972eca5c07a919c5c97
 Reviewer noDB/Docker/Gitmutation. Finalmetadata touches no executedsource or executionreport.
 Captureability ready forreview; historicalrootcause/runtimecorrection stillblocked;187suiteNOTRUN.
 FinalpublicationHEAD is recorded inPR/externalhandoff afteractualpush, no self-referentialSHA.
+
+
+## Post-PR4 merge reconciliation — 2026-11-13 START
+
+START_SHA6f6b856f1f85395df4d8ae8d48b71080e1181a2e; freshly verifiedmain
+aa55f8b59acb0872b3b40273a8cdd25198f3ba27. OwnermergedPR6bc90db423349e13f243524154d64f0b264865050,
+PR7cbc8720c547b76fe5e0bd9b93c3cbf54678b4c2a, PR4aa55f8b. PR8OPEN/DRAFT/CONFLICTING.
+Plan: nonrewriting merge oforigin/main into existingPR8branch; preserve bothdateddocumentation
+histories, everyimmutable receipt and previousexecutionreport. No scoringpolicyacceptance inferred
+fromPR4merge. No guard/importer/clock/rights change or newtimestamp/cohortexperiment.
+Expectednewvalue: actualcombined-source reconciliation afterimagecode/research/matchingplan merges,
+source/evidencefingerprints and relevantcombinedregression in exclusivelyleased disposable
+schema_test/scento_test databases. Persistentpilot/foundation remainprotected/read-only.
+ParentassignedexclusiveoriginalDockerwindow; notifyparentbeforeAintegration begins.
+Externalnewartifacts only08_OUTPUTS_APPROVED/post_PR4/reliability; parentsharesledger/singleZIP.
+TOOLS existingGit/ghCLI/PowerShell/Python/Docker, noinstall/auth/config/paidcall.
+PRODUCTION_MUTATION=NO; historicalrootcause/correction remainsblocked.
