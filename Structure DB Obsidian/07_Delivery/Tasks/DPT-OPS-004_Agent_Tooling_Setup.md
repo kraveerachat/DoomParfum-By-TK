@@ -10,7 +10,7 @@ source_of_truth: "../../../README.md"
 
 # DPT-OPS-004 — Caveman and Context Mode setup
 
-## Session S1 — IN PROGRESS
+## Session S1 — LOCAL VERIFIED / ACCEPTANCE PENDING
 
 - Owner request: inspect/install JuliusBrussee/caveman and mksglu/context-mode; explain scope across chats and automatic activation.
 - Agent: Codex; one agent, no delegation.
@@ -87,3 +87,9 @@ Restore only this task's four hook trust entries and the prior empty AGENTS cont
 Repository documentation changes: this task, [[Agent_Tool_Registry]], [[Tool_Usage_Log]], and append-only operational entries in [[Project_Status]], [[Agent_Run_Log]], [[Change_Log]]. Documentation-only Draft PR publication follows validation. Human Owner alone merges.
 
 Session result: local configuration and fresh-process verification complete; host-reload acceptance remains pending. Restart Codex, run `ctx_doctor`, verify the host sees Caveman defaults and Context Mode tools, and inspect any Git Bash/PATH discrepancy before marking CLOSED. No final immutable receipt yet because host-reload acceptance is pending. No savings claim or production change.
+
+### Publication checkpoint — 2026-11-13
+
+Documentation payload checkpoint `ce4fa34c95f5d76fa6b467979df0c8d9f37f0067` was pushed normally. [Draft PR #12](https://github.com/kraveerachat/DoomParfum-By-TK/pull/12) read back OPEN/DRAFT, base main, exactly six Markdown files. Both worktrees clean at readback; root branch still at `3b01c8395d8ce28f426643f104da16090f11844d`. Publication metadata is added in the next checkpoint on this same branch/PR; resulting HEAD is verified externally rather than self-referenced here.
+
+Local `verify-record.py` confirms the three new notes' required frontmatter/source/wiki links, byte-identical Caveman skill, exact four-entry user config delta, ten PASS/two WARN MCP report and CLI doctor exit 0. Staged and working `git diff --check` succeed. No independent agent review was launched; closeout is documented for Human Owner review. Host restart verification remains the next exact action; PR stays Draft and no final receipt is created.
