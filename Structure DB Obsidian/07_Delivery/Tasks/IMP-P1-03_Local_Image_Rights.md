@@ -131,3 +131,37 @@ Single final receipt:
 `a2d5b5276ec0dfc757eeeec15c9525954cc68a53`; final metadata push/readback follows.
 Ready for Human Owner review of bounded local functionality; PR6 remains Draft.
 No further DB work is running in this lane. Coordinator owns shared ledger/package.
+
+## Owner-review readiness audit started — 2026-11-12 Bangkok
+
+IN PROGRESS: recheck existing PR head against current main, exact source/evidence and independent
+review hashes, immutable receipts, rights boundaries, and documentation. Metadata-only checkpoint;
+no DB/Docker/runtime rerun, new acquisition or permission grant. Preserve original final receipt.
+Current starting head: e9957e579d6639440ee222c5893122c494120c37.
+Expected evidence: reproducible local hash/protected-path/doc audit, live GitHub OPEN/DRAFT/mergeability
+readback, same-branch metadata commit/push. Parent owns D1–D9 and consolidated ZIP.
+
+## Verified owner-review readiness checkpoint — 2026-11-12 Bangkok
+
+Current main remains `55d39cd619fa6c1ae70521720aa734d632a2083d`; PR6 starting/publication
+head `e9957e579d6639440ee222c5893122c494120c37` is based directly on that main. Live GitHub
+readback: OPEN/DRAFT, merged=false, mergeable=true. No base change or mergeability regression.
+Source checkpoint `ad27cc5c6f54c85703bd2d324a3a54b2401bed21` remains exact: all14 offline,
+14 focused and20 full-regression source hashes match current bytes. Independent review report
+SHA256 `7553e49a6da7234a8040c7b587c3d3e197250b11a02db7bec8dac5565b60d91d` and its four
+reviewed files still match. Recorded20/44/129 passing results are inspected evidence, not reruns.
+
+Fresh read-only readiness audit:140 file/hash/document assertions,0errors;39 existing base
+source/governance/decision/receipt blobs unchanged. Four Markdown files/three frontmatters,
+local Markdown/wiki targets, balanced fences, whole-PR common-secret patterns and diff checks
+passed. Existing final receipt `2026-11-12_022117_IMP-P1-03_Local_Image_Rights.md` unchanged;
+no second receipt. Audit output: external `review_readiness/PR6_READINESS_AUDIT.json` within
+the coordinator's `pr8_timestamp_correction` evidence folder.
+
+READY FOR HUMAN OWNER REVIEW of the bounded static PNG/trusted-local-reader scope. Real assets,
+new source/per-asset grants and acquisitions remain0. No network/HTTP/SSRF/provider/object restore,
+hosted authentication/API/UI or general image-format coverage is claimed. SQL authorization remains
+authoritative and subsequent operations must reauthorize. Existing receipt's broader limitations remain.
+No code/test/migration/evidence JSON/rights changes in this readiness continuation. Metadata-only
+commit/push and resulting head are read back in PR/external audit publication metadata; Human Owner
+alone reviews/merges. No DB/Docker execution in this audit; no production mutation.

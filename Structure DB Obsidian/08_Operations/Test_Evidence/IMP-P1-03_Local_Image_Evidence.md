@@ -118,3 +118,28 @@ Rollback is removal/revert of this additive module/runner/tests/docs after norma
 review, with no migration/down-migration, real-data deletion or storage cleanup.
 Disposable synthetic test DB may be recreated only inside its existing bounded
 harness and coordination window. Human Owner alone reviews/merges PR6.
+
+## Owner-review readiness revalidation — 2026-11-12 Bangkok
+
+Current main remains `55d39cd619fa6c1ae70521720aa734d632a2083d`; PR6 starting/publication
+head `e9957e579d6639440ee222c5893122c494120c37` is based directly on that main. Live GitHub
+readback: OPEN/DRAFT, merged=false, mergeable=true. No base change or mergeability regression.
+Source checkpoint `ad27cc5c6f54c85703bd2d324a3a54b2401bed21` remains exact: all14 offline,
+14 focused and20 full-regression source hashes match current bytes. Independent review report
+SHA256 `7553e49a6da7234a8040c7b587c3d3e197250b11a02db7bec8dac5565b60d91d` and its four
+reviewed files still match. Recorded20/44/129 passing results are inspected evidence, not reruns.
+
+Fresh read-only readiness audit:140 file/hash/document assertions,0errors;39 existing base
+source/governance/decision/receipt blobs unchanged. Four Markdown files/three frontmatters,
+local Markdown/wiki targets, balanced fences, whole-PR common-secret patterns and diff checks
+passed. Existing final receipt `2026-11-12_022117_IMP-P1-03_Local_Image_Rights.md` unchanged;
+no second receipt. Audit output: external `review_readiness/PR6_READINESS_AUDIT.json` within
+the coordinator's `pr8_timestamp_correction` evidence folder.
+
+READY FOR HUMAN OWNER REVIEW of the bounded static PNG/trusted-local-reader scope. Real assets,
+new source/per-asset grants and acquisitions remain0. No network/HTTP/SSRF/provider/object restore,
+hosted authentication/API/UI or general image-format coverage is claimed. SQL authorization remains
+authoritative and subsequent operations must reauthorize. Existing receipt's broader limitations remain.
+No code/test/migration/evidence JSON/rights changes in this readiness continuation. Metadata-only
+commit/push and resulting head are read back in PR/external audit publication metadata; Human Owner
+alone reviews/merges. No DB/Docker execution in this audit; no production mutation.
