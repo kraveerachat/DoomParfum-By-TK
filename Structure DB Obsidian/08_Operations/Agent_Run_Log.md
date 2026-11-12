@@ -15,6 +15,17 @@ source_of_truth: "../../README.md"
 
 # Agent Run Log — DoomParfum By TK
 
+## Existing CLI fallback publication checkpoint — 2026-11-12
+
+GitHubMCPmetadata returned internalerror. Existing C:/Program Files/GitHub CLI/gh.exe version2.97.0
+was verified with read-only prview. Using preconfigured authorization, ghpr edit4 --body-file
+published the prepared description at crosswalkcheckpoint3acc4fd4960121dc254e39ed56c93d52ffee9f84.
+Exact UTF8bodybytes readback verified, OPEN/DRAFT/MERGEABLE. Initial localstr/API comparison
+failed only because localread_text normalized CRLF; directUTF8byte comparison confirms exactbody.
+No newlogin/tokenextraction/install/config/hook/ownerdecision/merge. This metadata-only note
+changes no matrix semantics; final metadataHEAD/body readback recorded externally afterpublication.
+
+
 ## 2026-11-12 S4 DM approval/proposal crosswalk
 
 Existing PR4 / start e0d770d308e76e25550dd656d4e0e23e5bebeb3c; main55d39cd unchanged.

@@ -287,3 +287,14 @@ receipt bf4d74b3a7ba04c8dc7b31c4ae658b82ddfc3203 preserved, no secondreceipt. No
 new rights, implementation, Production or merge. GitHubMCP currently internalerror; publicREST
 readback OPEN/DRAFT/unmerged/mergeable=true. PR description update is prepared externally pending
 connector availability, never claimed published before readback. Parent owns D1–D9/singleZIP.
+
+
+## Existing CLI fallback publication checkpoint — 2026-11-12
+
+GitHubMCPmetadata returned internalerror. Existing C:/Program Files/GitHub CLI/gh.exe version2.97.0
+was verified with read-only prview. Using preconfigured authorization, ghpr edit4 --body-file
+published the prepared description at crosswalkcheckpoint3acc4fd4960121dc254e39ed56c93d52ffee9f84.
+Exact UTF8bodybytes readback verified, OPEN/DRAFT/MERGEABLE. Initial localstr/API comparison
+failed only because localread_text normalized CRLF; directUTF8byte comparison confirms exactbody.
+No newlogin/tokenextraction/install/config/hook/ownerdecision/merge. This metadata-only note
+changes no matrix semantics; final metadataHEAD/body readback recorded externally afterpublication.
