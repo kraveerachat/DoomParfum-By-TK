@@ -36,3 +36,15 @@ verification follows the source commit; no new runtimefix is claimed. No earlier
 
 Current full replay is VERIFIED for the reported run, while intermittent defect/root-cause/correction
 remain UNRESOLVED. PR8 stays OPEN/DRAFT and blocked for those requested items; no final receipt.
+
+
+## Exact committed checkpoint
+
+Source/evidence571d46fb16fab4a0ae2f8a1395344b61f8f68501 independently verified126/126offline assertions,
+0failures: all23tested sourceGitblob hashes match,27mainprotected and28priorPR8blobs unchanged;
+14session/25wholePRpaths and onlyone new executable (five-controltest). Publicreports match raw
+sanitized results semantically (LF normalization accounted for); current175/15/004PASS and003strict
+comparisonfailure plus missing historical operands accurately retained. Report
+`final_checkpoint_571d46f.json` SHA256017d98bb406c1a4f19846815d5bda160bd7f1dc37973094ff64e90800ba110b6.
+No independent DB/Docker calls or Gitmutation. Metadata-only closeout follows; no runtimefix/merge
+readiness or ownerapproval inferred. All earlier review reports retained.

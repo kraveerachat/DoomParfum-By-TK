@@ -168,3 +168,16 @@ UNRESOLVED. Task/PR8 remain partial-blocked OPEN/DRAFT; no finalreceipt. No runt
 missing operands. Next bounded diagnosis needs reproducible exact trace before correction; no
 backdating/trigger suppression/tolerance/hosttime change. PR4/6/7 ownerreview remains independent.
 Publication checkpoint and resultingHEAD recorded after actual commit/push/readback, not invented.
+
+
+## Exact source/evidence checkpoint closeout — 2026-11-12
+
+Committed source/evidence checkpoint 571d46fb16fab4a0ae2f8a1395344b61f8f68501 independently verified126/126offline assertions,
+0failures. All23testedsource hashes equal Git blobs;27main protected and28priorPR8source/evidence
+blobs unchanged. Only new executable is the five-control regression test, reviewed77a2d0f8…86e50930.
+Publicreports match raw sanitized results semantically (GitLF normalization only).175/175tests,
+005recovery15/15 and004currentfullreplay verified;003strictcomparisonfailure/historical missing
+operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda160bd7f1dc37973094ff64e90800ba110b6. Reviewer noDB/Docker/Gitmutation;
+parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
+schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
+PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
