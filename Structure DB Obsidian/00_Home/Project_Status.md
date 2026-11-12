@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - status
@@ -13,6 +13,32 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current post-PR4 reconciliation — 2026-11-13
+
+OwnermergedPR4 ataa55f8b59acb0872b3b40273a8cdd25198f3ba27 afterPR6/7. MatchingPlanningGateP
+is verified for independentlyauthorized work; allDM01–07 numeric/policy rows remainPROPOSED,
+not automaticallyaccepted. PR8isbeingnonrewriting-mergedwiththismain; retaineddatedDraft/merge
+statements below describehistorical snapshots, not currentPR4/6/7states. Currentfull1479import/
+replay/inventory acceptance andboundedcapture remainverified; historicaltimestampcause unresolved.
+PR8mustremainOPEN/DRAFT/blocked; no speculativefix, clockchange or equivalentexperiment.
+
+
+
+## Current post-PR5 checkpoint — 2026-11-12
+
+Owner mergedPR5 at55d39cd619fa6c1ae70521720aa734d632a2083d. PR4 remainsDraft5768899, reconciled
+and ready for OwnerDM01..07review; no matchingimplementation. PR6 Draft e9957e5 has localPNGmetadata
+129/129regression, no realimages/grants. PR7 Draft2673d7d accounts44holds; none lifted, researchqueues
+remain external. These currentevents supersede historical pendingmerge statements below.
+
+[[IMP-P1-04_Local_Benchmark_and_Restore]] is PARTIAL/BLOCKED: controlledfullfresh1479committed
+246.226887s/model1/image1, but fullreplay twice failed23514Future review timestamp; no backdate or
+guardchange. Independentreadonlypilot→isolatedcontainer DBrestore/syntheticobjectsubset passes15
+controls; sourceunchanged, realimages0. [[IMP-P1-04_Capacity_and_Recovery_Evidence]] records failures,
+counts/ACL/proofdetails and explicit actual-image/offsite/RPO/provider limits. No finalP104receipt;
+[PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) OPEN/DRAFT; source53fec48 exactreviewed, task notreadymerge. Production/cloud/mainmutation/agentmerge=NO.
+
 
 ## Current verified checkpoint — 2026-11-11 / IMP-P1-02
 
@@ -144,6 +170,38 @@ Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge 
 ## DPT-PLAN-002 live Git status reconciliation — 2026-11-11 (PROPOSED)
 GitHub preflight confirms Planning PR #1 **MERGED** (2026-11-10; main `bffb2fab1918dc5221a6c5da7920168bcae263ca`), superseding the historical OPEN/DRAFT status above. Implementation PR #2 was MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c), not a proof of ETL or production readiness. New DPT-PLAN-002 is a separate **docs-only** research/planning branch; owner Gate P review pending. No new source, image, ETL or production authorization is inferred. See [[DPT-PLAN-002_Focused_Brand_Discovery]] and [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
 
+
+## 2026-11-12 owner-review readiness and temporal diagnosis checkpoint
+
+Main remains55d39cd619fa6c1ae70521720aa734d632a2083d. PR4 e0d770d / PR6
+983b73a / PR7 888afbb remain OPEN/DRAFT/mergeable at readback, ready for bounded Human Owner review.
+DM01–07 allPROPOSED, both real accord routes unavailable; all1479matching flags remainfalse.
+PR6historical20/44/129test hashes reverified (140metadata assertions); PR7all44holds retained,
+183metadata assertions/rights unchanged. No new imagebytes, permissions or usablepair relations.
+
+PR8current fullreplay VERIFIED107.147241s with0all49rowcountdeltas; exact48tablehashes and2059staging
+substantive rows preserved, only44expectedheldupdated_at touches. Full175/175PASS150.422s; recovery
+00515/15PASS30.093s. Historical23514rows recovered but actual clock operands/rootcause unavailable;
+no speculative runtimefix. PR8remains partial-blocked/Open/Draft/no finalreceipt.
+[[IMP-P1-04_Temporal_Diagnosis]] records full evidence and strict003comparisonfailure. Owner alone
+reviews/merges; no Production/cloud/main mutation, new source rights or accepted recovery targets.
+
+
+## 2026-11-13 — Capture mechanism and owner-review checkpoint
+
+Main55d39cd unchanged. PR4db7e500 explicitlycrosswalks boundedapprovedODs versus allPROPOSEDDM01–07;
+fourconjunctive selected-field/rights/completeness/eligibility gates keepall1479matchingflagsfalse.
+PR6unchanged983b73a:145freshreadinessassertions pass; boundedPNGscope/noimages/grants. PR7
+793007b:195doc/hashassertions and51independentresearchchecks;3newmetadata candidates propose15/46
+RESEARCHqueue only, allJPEGblocked/3immutablepinfetchesunverified/0newrights. All44holds retained.
+
+PR8 adds bounded isolatedSYNTHETIC operandcapture:12offline methods and62independentreport checks;
+5original/instrumentedverdicts match,8unforcedpairs/naturalrejections0, exactrestore/stop verified.
+Historical23514rootcause remainsBLOCKED; current1479replay/integrity staysVERIFIED. No speculative
+fix, repeatedcohort, main/Production/newrights/receipt mutation or merge.
+[[IMP-P1-04_Bounded_Temporal_Capture]]; allPRsOPEN/DRAFT at freshGitHubCLIreadback.
+
+
 ## Post-PR5 data research — 2026-11-12
 
 Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] accountsfor all44holds
@@ -152,3 +210,15 @@ Main55d39cd confirms Owner mergedPR5. [[DPT-DATA-001_Post_PR5_Data_Review]] acco
 0imagebytes/displaygrants/usablepairs. Independent110source+11docchecks pass. Source/raw/research
 queues remainexternal; [[Post_PR5_Held_and_Permission_Review]] summarizesrightsandowneralternatives.
 This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normalization or deployment.
+
+
+## IMP-P1-04 post-PR4 reconciliation checkpoint — 2026-11-13
+
+Ownermergedmainaa55f8b nowincluded bynonrewritingPR8branchmergefd9360650a43d8251c97c706a4811a295dad977b.
+Three sharedMarkdownconflicts preservebothhistories; no runtime/guard/receipt change. Combined
+source218/218regressionPASS188.093s,28hashbindings,0fail/error/skip; persistentpilot49table/security/
+fiveapplication-group-role fingerprint unchanged and oldreports/logs restoredbyte-exact. No new
+clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause remainsunknown,
+verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
+AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
+[[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.

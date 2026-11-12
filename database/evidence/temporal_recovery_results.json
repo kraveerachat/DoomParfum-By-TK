@@ -1,0 +1,406 @@
+{
+  "source_report_sha256": "cf5ba935ec1ed5ea064a1af2bc5e5ae46362355f6dc553b5fd7ad0a72628839c",
+  "report": {
+    "task": "IMP-P1-04",
+    "started_at_utc": "2026-11-12T14:00:38.773991+00:00",
+    "source_database": "dpt_scento_pilot",
+    "target_container": "doomparfum-p1-04-restore",
+    "target_database": "dpt_restore_test",
+    "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+    "source_code_sha256": "bb2cc0a9d282d09c3a717cab66fdb3b2f6ba1683c09d43f378af105078494107",
+    "benchmark_helper_sha256": "bfcf0418eef26f4c26bf06cdbe74f67730a93d45b27f5457ddc1bdc6b55e254c",
+    "checks": {
+      "stored_archive_readback_verified": true,
+      "missing_roles_restore_fails": true,
+      "truncated_dump_fails": true,
+      "all_table_counts_and_sha256_equal": true,
+      "security_contracts_preserved": true,
+      "application_role_manifest_equal": true,
+      "original_full_validators_succeeded": true,
+      "nonowner_private_perfumes_hidden": true,
+      "nonowner_mutation_denied": true,
+      "nonowner_probe_preserved_rows": true,
+      "missing_rls_control_detected": true,
+      "negative_rls_change_rolled_back": true,
+      "negative_controls_preserved_data": true,
+      "negative_controls_preserved_application_roles": true,
+      "source_unchanged_after_export_restore": true
+    },
+    "limits": [
+      "Local same-host logical restore, not offsite disaster recovery",
+      "Actual image bytes/permission-lineage/provider delivery restore blocked by IMP-P1-03 gate",
+      "No accepted retention/RPO/RTO/cloud/production target"
+    ],
+    "application_role_manifest": {
+      "roles": [
+        {
+          "name": "dpt_anonymous",
+          "rolsuper": false,
+          "rolconfig": [],
+          "rolinherit": true,
+          "rolcanlogin": false,
+          "rolcreatedb": false,
+          "rolbypassrls": false,
+          "rolconnlimit": -1,
+          "rolcreaterole": false,
+          "rolvaliduntil": null,
+          "rolreplication": false
+        },
+        {
+          "name": "dpt_curator",
+          "rolsuper": false,
+          "rolconfig": [],
+          "rolinherit": true,
+          "rolcanlogin": false,
+          "rolcreatedb": false,
+          "rolbypassrls": false,
+          "rolconnlimit": -1,
+          "rolcreaterole": false,
+          "rolvaliduntil": null,
+          "rolreplication": false
+        },
+        {
+          "name": "dpt_owner",
+          "rolsuper": false,
+          "rolconfig": [],
+          "rolinherit": true,
+          "rolcanlogin": false,
+          "rolcreatedb": false,
+          "rolbypassrls": false,
+          "rolconnlimit": -1,
+          "rolcreaterole": false,
+          "rolvaliduntil": null,
+          "rolreplication": false
+        },
+        {
+          "name": "dpt_runtime",
+          "rolsuper": false,
+          "rolconfig": [],
+          "rolinherit": true,
+          "rolcanlogin": false,
+          "rolcreatedb": false,
+          "rolbypassrls": false,
+          "rolconnlimit": -1,
+          "rolcreaterole": false,
+          "rolvaliduntil": null,
+          "rolreplication": false
+        },
+        {
+          "name": "dpt_writer",
+          "rolsuper": false,
+          "rolconfig": [],
+          "rolinherit": true,
+          "rolcanlogin": false,
+          "rolcreatedb": false,
+          "rolbypassrls": false,
+          "rolconnlimit": -1,
+          "rolcreaterole": false,
+          "rolvaliduntil": null,
+          "rolreplication": false
+        }
+      ],
+      "memberships": []
+    },
+    "dump": {
+      "bytes": 4295993,
+      "sha256": "2600c1bfe6f5cd86c540b5e0c08ad43547781c6a4244b5ac92ffcc816925cea9",
+      "format": "custom",
+      "contains_private_data": "LOCAL ONLY; excluded from public Git and handoff ZIP"
+    },
+    "security_equivalence": {
+      "source_server": {
+        "equal": true,
+        "method": "Only known rights CHECK;8748 exhaustive domain/evidence cases versus independent rule",
+        "proof": {
+          "cases": 8748,
+          "source_equivalent": true,
+          "restored_equivalent": true
+        },
+        "other_security_fields_exact": true
+      },
+      "target_server": {
+        "equal": true,
+        "method": "Only known rights CHECK;8748 exhaustive domain/evidence cases versus independent rule",
+        "proof": {
+          "cases": 8748,
+          "source_equivalent": true,
+          "restored_equivalent": true
+        },
+        "other_security_fields_exact": true
+      }
+    },
+    "tables": [
+      {
+        "rows": 1,
+        "sha256": "2d0153fb2940acead0b5b3ca09ed7a6c3185c30a294c90025b411bce07328f8d",
+        "relation": "dpt.access_scopes"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.accords"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.asset_permissions"
+      },
+      {
+        "rows": 8845,
+        "sha256": "c83d0cc97259fda0a64d5ae8d6029f690cd4eff02d6919d88449cc74e86f3a17",
+        "relation": "dpt.audit_events"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.brand_aliases"
+      },
+      {
+        "rows": 160,
+        "sha256": "93f9d4b5cce4d37146b97f32227fdb54fc8c3dd94b5e0305d5b98a82e7f3ed5e",
+        "relation": "dpt.brands"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.brand_tag_links"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.brand_tags"
+      },
+      {
+        "rows": 8845,
+        "sha256": "d1cdee65ea56d312b73a299948b3fa301c7eb299844c97e7627634a97cf80ee8",
+        "relation": "dpt.canonical_selections"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.comparison_evidence"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.conflict_members"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.countries"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.data_conflicts"
+      },
+      {
+        "rows": 2059,
+        "sha256": "cc0e70536d9a3138312cf52c39a9ee439ca083d76bdc978c9f689304757c00d2",
+        "relation": "dpt.entities"
+      },
+      {
+        "rows": 2059,
+        "sha256": "cac066a85f9093718410b9e470f73b78e0077dc74b7da3271de290e4a1670ec0",
+        "relation": "dpt.entity_source_links"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.families"
+      },
+      {
+        "rows": 53,
+        "sha256": "f2992f2256fa4f7a58a45fdbfebfd2b08100f14c3eb8a9582757b27e1938e608",
+        "relation": "dpt.field_definitions"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.image_assets"
+      },
+      {
+        "rows": 2,
+        "sha256": "7a35710d0d534f18f2d628d9b26ffffe02fc5f34e5da6ca1b1c43eb811521425",
+        "relation": "dpt.ingestion_batches"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.inventory_items"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.matching_results"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.note_aliases"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.note_images"
+      },
+      {
+        "rows": 420,
+        "sha256": "fbb616c21fcfc76f0fd5a80a8917db1797b786d39d3d705d5f9111801a8e9e35",
+        "relation": "dpt.notes"
+      },
+      {
+        "rows": 8,
+        "sha256": "e16c19a2974da4be7fc7e99d77a66ec30227060c0cee6e4b6f0dfec54a2acb82",
+        "relation": "dpt_ops.schema_migrations"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt_ops.validation_pending"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.perfume_accords"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.perfume_families"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.perfume_images"
+      },
+      {
+        "rows": 11972,
+        "sha256": "e2eab1c06f12a054d8e61ef84ca789332539ecceceb35911cf24a5cda509a01b",
+        "relation": "dpt.perfume_notes"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.perfume_relations"
+      },
+      {
+        "rows": 1479,
+        "sha256": "c7e40fe3741c0e28ff23360a436770fb2c99dc018cbe3d9c201d14ac89b12080",
+        "relation": "dpt.perfumes"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.perfume_usage_tags"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.price_observations"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.product_variants"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.purchase_records"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.rating_observations"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.retail_listings"
+      },
+      {
+        "rows": 1,
+        "sha256": "42523df3a2645efa894ed906df8f6a4c6c624e8c78d8512550988702b47563e9",
+        "relation": "dpt.rights_assessments"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.saved_buying_sources"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.scope_members"
+      },
+      {
+        "rows": 10489,
+        "sha256": "3fadaba5830644bce5c2fde928e05eaa1986e0c8763d6e59dec996744b77a7ca",
+        "relation": "dpt.source_observations"
+      },
+      {
+        "rows": 2059,
+        "sha256": "bea4c1a07009a44011b1eb5474bc68e5e3da7fba5899568e73c63dfa8fb77ef5",
+        "relation": "dpt.source_records"
+      },
+      {
+        "rows": 1,
+        "sha256": "018a5cad8d16d51f4674e29bd2a17c73dbf57c05ad669e2ed73c59ae38ce7810",
+        "relation": "dpt.sources"
+      },
+      {
+        "rows": 2134,
+        "sha256": "947684613927060a453cb056dede193215aa7d3116ae7ef3d529a47b2fe9cb07",
+        "relation": "dpt.staging_records"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.user_list_items"
+      },
+      {
+        "rows": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "relation": "dpt.user_lists"
+      },
+      {
+        "rows": 1,
+        "sha256": "62c0fcd5814479ef681b2b4dc1b501d8934a546c4a8d2a22d5522ee382122278",
+        "relation": "dpt.users"
+      },
+      {
+        "rows": 8536,
+        "sha256": "70ab64d5443be097f6703f0c2f7edb46a5f157e9895c268a7d4b34dc1ce40bf5",
+        "relation": "dpt.validation_results"
+      }
+    ],
+    "security_inventory": {
+      "rls_tables": 47,
+      "policies": 203,
+      "constraints": 431,
+      "triggers": 244,
+      "functions": 35
+    },
+    "synthetic_objects": {
+      "fixture": "Owned SYNTHETIC objects only, independent local folders on same host",
+      "positive": {
+        "objects": 2,
+        "bytes": 9896,
+        "hashes_verified": true
+      },
+      "negative": {
+        "missing_object_detected": true,
+        "same_size_corruption_detected": true
+      },
+      "real_image_assets": 0,
+      "limits": [
+        "No actual image/DB permission-lineage recovery",
+        "No offsite failure domain/encryption/retention/RPO guarantee"
+      ]
+    },
+    "status": "VERIFIED_LOCAL_DB_AND_SYNTHETIC_OBJECT_SUBSET",
+    "seconds": 30.093
+  }
+}

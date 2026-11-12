@@ -1,0 +1,3121 @@
+{
+  "tables": [
+    "access_scopes",
+    "accords",
+    "asset_permissions",
+    "audit_events",
+    "brand_aliases",
+    "brand_tag_links",
+    "brand_tags",
+    "brands",
+    "canonical_selections",
+    "comparison_evidence",
+    "conflict_members",
+    "countries",
+    "data_conflicts",
+    "entities",
+    "entity_source_links",
+    "families",
+    "field_definitions",
+    "image_assets",
+    "ingestion_batches",
+    "inventory_items",
+    "matching_results",
+    "note_aliases",
+    "note_images",
+    "notes",
+    "perfume_accords",
+    "perfume_families",
+    "perfume_images",
+    "perfume_notes",
+    "perfume_relations",
+    "perfume_usage_tags",
+    "perfumes",
+    "price_observations",
+    "product_variants",
+    "purchase_records",
+    "rating_observations",
+    "retail_listings",
+    "rights_assessments",
+    "saved_buying_sources",
+    "scope_members",
+    "source_observations",
+    "source_records",
+    "sources",
+    "staging_records",
+    "user_list_items",
+    "user_lists",
+    "users",
+    "validation_results"
+  ],
+  "indexes": 244,
+  "collation": "en_US.utf8",
+  "constraints": [
+    {
+      "name": "access_scopes_fk1",
+      "type": "f",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "FOREIGN KEY (owner_user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "access_scopes_k1",
+      "type": "c",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "CHECK ((kind = ANY (ARRAY['public'::text, 'shared'::text, 'user_private'::text])))"
+    },
+    {
+      "name": "access_scopes_k2",
+      "type": "c",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "CHECK ((((kind = 'public'::text) AND (owner_user_id IS NULL)) OR ((kind = ANY (ARRAY['shared'::text, 'user_private'::text])) AND (owner_user_id IS NOT NULL))))"
+    },
+    {
+      "name": "access_scopes_k3",
+      "type": "u",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "UNIQUE (id, kind, owner_user_id)"
+    },
+    {
+      "name": "access_scopes_pkey",
+      "type": "p",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "access_scopes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "accords_fk16",
+      "type": "f",
+      "table": "accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "accords_fk17",
+      "type": "f",
+      "table": "accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "accords_k1",
+      "type": "u",
+      "table": "accords",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, scheme, code)"
+    },
+    {
+      "name": "accords_kind",
+      "type": "c",
+      "table": "accords",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'accord'::text))"
+    },
+    {
+      "name": "accords_pkey",
+      "type": "p",
+      "table": "accords",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "accords_scope_id_key",
+      "type": "u",
+      "table": "accords",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "accords",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "accords",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "asset_permissions_fk86",
+      "type": "f",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "asset_permissions_fk87",
+      "type": "f",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, asset_id, source_id, source_record_id) REFERENCES dpt.image_assets(access_scope_id, id, source_id, source_record_id)"
+    },
+    {
+      "name": "asset_permissions_fk88",
+      "type": "f",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id, rights_id) REFERENCES dpt.rights_assessments(access_scope_id, source_id, id)"
+    },
+    {
+      "name": "asset_permissions_fk89",
+      "type": "f",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, parent_asset_id, parent_permission_id) REFERENCES dpt.asset_permissions(access_scope_id, asset_id, id)"
+    },
+    {
+      "name": "asset_permissions_k1",
+      "type": "u",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, asset_id, source_id, source_record_id, rights_id, id)"
+    },
+    {
+      "name": "asset_permissions_k2",
+      "type": "u",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, asset_id, id)"
+    },
+    {
+      "name": "asset_permissions_k3",
+      "type": "c",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "CHECK ((((permission_kind = 'original'::text) AND (parent_asset_id IS NULL) AND (parent_permission_id IS NULL)) OR ((permission_kind = 'derivative'::text) AND (parent_asset_id IS NOT NULL) AND (parent_permission_id IS NOT NULL))))"
+    },
+    {
+      "name": "asset_permissions_k4",
+      "type": "c",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "CHECK (((review_after IS NULL) OR (review_after > checked_at)))"
+    },
+    {
+      "name": "asset_permissions_k5",
+      "type": "c",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "CHECK (((revoked_at IS NULL) OR (revoked_at >= checked_at)))"
+    },
+    {
+      "name": "asset_permissions_pkey",
+      "type": "p",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "asset_permissions_scope_id_key",
+      "type": "u",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "asset_permissions",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "audit_events_fk53",
+      "type": "f",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "audit_events_fk54",
+      "type": "f",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_id) REFERENCES dpt.entities(id)"
+    },
+    {
+      "name": "audit_events_fk55",
+      "type": "f",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, batch_id) REFERENCES dpt.ingestion_batches(access_scope_id, id)"
+    },
+    {
+      "name": "audit_events_k1",
+      "type": "c",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "CHECK (((entity_id IS NOT NULL) OR (batch_id IS NOT NULL)))"
+    },
+    {
+      "name": "audit_events_pkey",
+      "type": "p",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "audit_events_scope_id_key",
+      "type": "u",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "audit_events",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "brand_aliases_fk56",
+      "type": "f",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "brand_aliases_fk57",
+      "type": "f",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (brand_id) REFERENCES dpt.brands(id)"
+    },
+    {
+      "name": "brand_aliases_fk58",
+      "type": "f",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "brand_aliases_k1",
+      "type": "u",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, brand_id, normalized_alias, language)"
+    },
+    {
+      "name": "brand_aliases_pkey",
+      "type": "p",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "brand_aliases_scope_id_key",
+      "type": "u",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "brand_aliases",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "brand_tag_links_fk62",
+      "type": "f",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "brand_tag_links_fk63",
+      "type": "f",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (brand_id) REFERENCES dpt.brands(id)"
+    },
+    {
+      "name": "brand_tag_links_fk64",
+      "type": "f",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (tag_id) REFERENCES dpt.brand_tags(id)"
+    },
+    {
+      "name": "brand_tag_links_fk65",
+      "type": "f",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "brand_tag_links_k1",
+      "type": "u",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, brand_id, tag_id)"
+    },
+    {
+      "name": "brand_tag_links_pkey",
+      "type": "p",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "brand_tag_links_scope_id_key",
+      "type": "u",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "brand_tag_links",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "brand_tags_k1",
+      "type": "u",
+      "table": "brand_tags",
+      "validated": true,
+      "definition": "UNIQUE (scheme, code)"
+    },
+    {
+      "name": "brand_tags_pkey",
+      "type": "p",
+      "table": "brand_tags",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "brand_tags",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "brands_fk5",
+      "type": "f",
+      "table": "brands",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "brands_fk6",
+      "type": "f",
+      "table": "brands",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "brands_fk7",
+      "type": "f",
+      "table": "brands",
+      "validated": true,
+      "definition": "FOREIGN KEY (country_code) REFERENCES dpt.countries(code)"
+    },
+    {
+      "name": "brands_k1",
+      "type": "u",
+      "table": "brands",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, slug)"
+    },
+    {
+      "name": "brands_kind",
+      "type": "c",
+      "table": "brands",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'brand'::text))"
+    },
+    {
+      "name": "brands_pkey",
+      "type": "p",
+      "table": "brands",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "brands_scope_id_key",
+      "type": "u",
+      "table": "brands",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "brands",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "brands",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "canonical_selections_fk35",
+      "type": "f",
+      "table": "canonical_selections",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "canonical_selections_fk36",
+      "type": "f",
+      "table": "canonical_selections",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, entity_id, entity_kind, field_path, observation_id) REFERENCES dpt.source_observations(access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "canonical_selections_pkey",
+      "type": "p",
+      "table": "canonical_selections",
+      "validated": true,
+      "definition": "PRIMARY KEY (access_scope_id, entity_id, entity_kind, field_path)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "canonical_selections",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "canonical_selections",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "comparison_evidence_fk97",
+      "type": "f",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "comparison_evidence_fk98",
+      "type": "f",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "FOREIGN KEY (relation_id) REFERENCES dpt.perfume_relations(id)"
+    },
+    {
+      "name": "comparison_evidence_fk99",
+      "type": "f",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "comparison_evidence_k1",
+      "type": "c",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "CHECK (((reported_similarity IS NULL) OR ((reported_similarity >= (0)::numeric) AND (reported_similarity <= (100)::numeric))))"
+    },
+    {
+      "name": "comparison_evidence_pkey",
+      "type": "p",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "comparison_evidence_reported_similarity_finite",
+      "type": "c",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "CHECK (((reported_similarity IS NULL) OR (reported_similarity <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "comparison_evidence_scope_id_key",
+      "type": "u",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "comparison_evidence",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "conflict_members_fk41",
+      "type": "f",
+      "table": "conflict_members",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "conflict_members_fk42",
+      "type": "f",
+      "table": "conflict_members",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, entity_id, entity_kind, field_path, conflict_id) REFERENCES dpt.data_conflicts(access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "conflict_members_fk43",
+      "type": "f",
+      "table": "conflict_members",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, entity_id, entity_kind, field_path, observation_id) REFERENCES dpt.source_observations(access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "conflict_members_pkey",
+      "type": "p",
+      "table": "conflict_members",
+      "validated": true,
+      "definition": "PRIMARY KEY (access_scope_id, conflict_id, observation_id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "conflict_members",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "countries_k1",
+      "type": "c",
+      "table": "countries",
+      "validated": true,
+      "definition": "CHECK ((code ~ '^[A-Z]{2}$'::text))"
+    },
+    {
+      "name": "countries_pkey",
+      "type": "p",
+      "table": "countries",
+      "validated": true,
+      "definition": "PRIMARY KEY (code)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "countries",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "data_conflicts_fk37",
+      "type": "f",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "data_conflicts_fk38",
+      "type": "f",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_id, entity_kind) REFERENCES dpt.entities(id, kind)"
+    },
+    {
+      "name": "data_conflicts_fk39",
+      "type": "f",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_kind, field_path) REFERENCES dpt.field_definitions(entity_kind, path)"
+    },
+    {
+      "name": "data_conflicts_fk40",
+      "type": "f",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, entity_id, entity_kind, field_path, resolution_observation_id) REFERENCES dpt.source_observations(access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "data_conflicts_fk44",
+      "type": "f",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, resolution_observation_id) REFERENCES dpt.conflict_members(access_scope_id, conflict_id, observation_id) DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "data_conflicts_k1",
+      "type": "u",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "data_conflicts_k2",
+      "type": "c",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "CHECK ((status = ANY (ARRAY['open'::text, 'resolved'::text, 'dismissed'::text])))"
+    },
+    {
+      "name": "data_conflicts_k3",
+      "type": "c",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "CHECK (((status = 'resolved'::text) = (resolution_observation_id IS NOT NULL)))"
+    },
+    {
+      "name": "data_conflicts_k4",
+      "type": "c",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "CHECK ((((status = 'open'::text) AND (resolved_by IS NULL) AND (resolved_at IS NULL)) OR ((status = ANY (ARRAY['resolved'::text, 'dismissed'::text])) AND (resolved_by IS NOT NULL) AND (btrim(resolved_by) <> ''::text) AND (resolved_at IS NOT NULL) AND (rationale IS NOT NULL) AND (btrim(rationale) <> ''::text))))"
+    },
+    {
+      "name": "data_conflicts_pkey",
+      "type": "p",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "data_conflicts_scope_id_key",
+      "type": "u",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "data_conflicts",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "entities_fk4",
+      "type": "f",
+      "table": "entities",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "entities_k1",
+      "type": "c",
+      "table": "entities",
+      "validated": true,
+      "definition": "CHECK ((kind = ANY (ARRAY['brand'::text, 'perfume'::text, 'variant'::text, 'note'::text, 'accord'::text, 'image'::text, 'relation'::text, 'listing'::text])))"
+    },
+    {
+      "name": "entities_k2",
+      "type": "u",
+      "table": "entities",
+      "validated": true,
+      "definition": "UNIQUE (id, kind)"
+    },
+    {
+      "name": "entities_k3",
+      "type": "u",
+      "table": "entities",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id, kind)"
+    },
+    {
+      "name": "entities_pkey",
+      "type": "p",
+      "table": "entities",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "entities_scope_id_key",
+      "type": "u",
+      "table": "entities",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "entities",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "entity_source_links_fk28",
+      "type": "f",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "entity_source_links_fk29",
+      "type": "f",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_id) REFERENCES dpt.entities(id)"
+    },
+    {
+      "name": "entity_source_links_fk30",
+      "type": "f",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "entity_source_links_k1",
+      "type": "u",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_record_id, entity_id)"
+    },
+    {
+      "name": "entity_source_links_pkey",
+      "type": "p",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "entity_source_links_scope_id_key",
+      "type": "u",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "entity_source_links",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "families_k1",
+      "type": "u",
+      "table": "families",
+      "validated": true,
+      "definition": "UNIQUE (scheme, code)"
+    },
+    {
+      "name": "families_pkey",
+      "type": "p",
+      "table": "families",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "families",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "field_definitions_k1",
+      "type": "u",
+      "table": "field_definitions",
+      "validated": true,
+      "definition": "UNIQUE (entity_kind, path)"
+    },
+    {
+      "name": "field_definitions_k2",
+      "type": "c",
+      "table": "field_definitions",
+      "validated": true,
+      "definition": "CHECK (((entity_kind)::text = ANY (ARRAY['brand'::text, 'perfume'::text, 'variant'::text, 'note'::text, 'accord'::text, 'image'::text, 'relation'::text, 'listing'::text])))"
+    },
+    {
+      "name": "field_definitions_k3",
+      "type": "c",
+      "table": "field_definitions",
+      "validated": true,
+      "definition": "CHECK ((value_type = ANY (ARRAY['string'::text, 'integer'::text, 'number'::text, 'boolean'::text, 'array'::text, 'object'::text])))"
+    },
+    {
+      "name": "field_definitions_pkey",
+      "type": "p",
+      "table": "field_definitions",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "field_definitions",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "image_assets_fk81",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "image_assets_fk82",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "image_assets_fk83",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, source_id, id)"
+    },
+    {
+      "name": "image_assets_fk84",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id, rights_id) REFERENCES dpt.rights_assessments(access_scope_id, source_id, id)"
+    },
+    {
+      "name": "image_assets_fk85",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, parent_asset_id) REFERENCES dpt.image_assets(access_scope_id, id)"
+    },
+    {
+      "name": "image_assets_fk90",
+      "type": "f",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, source_id, source_record_id, rights_id, asset_permission_id) REFERENCES dpt.asset_permissions(access_scope_id, asset_id, source_id, source_record_id, rights_id, id) DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "image_assets_k1",
+      "type": "u",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id, source_id, source_record_id)"
+    },
+    {
+      "name": "image_assets_k2",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK ((state = ANY (ARRAY['reference_only'::text, 'rights_pending'::text, 'acquired'::text, 'validated'::text, 'rejected'::text, 'archived'::text])))"
+    },
+    {
+      "name": "image_assets_k3",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK (((parent_asset_id IS NULL) OR (parent_asset_id <> id)))"
+    },
+    {
+      "name": "image_assets_k4",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK (((state <> ALL (ARRAY['acquired'::text, 'validated'::text])) OR ((asset_permission_id IS NOT NULL) AND (provider IS NOT NULL) AND (btrim(provider) <> ''::text) AND (bucket IS NOT NULL) AND (btrim(bucket) <> ''::text) AND (object_key IS NOT NULL) AND (btrim(object_key) <> ''::text) AND (mime_type IS NOT NULL) AND (mime_type = ANY (ARRAY['image/jpeg'::text, 'image/png'::text, 'image/webp'::text, 'image/avif'::text])) AND (byte_size > 0) AND (byte_size IS NOT NULL) AND (width > 0) AND (width IS NOT NULL) AND (height > 0) AND (height IS NOT NULL) AND (sha256 IS NOT NULL) AND (acquired_at IS NOT NULL) AND (attribution IS NOT NULL) AND (btrim(attribution) <> ''::text))))"
+    },
+    {
+      "name": "image_assets_k5",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK (((byte_size IS NULL) OR (byte_size > 0)))"
+    },
+    {
+      "name": "image_assets_k6",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK (((width IS NULL) OR (width > 0)))"
+    },
+    {
+      "name": "image_assets_k7",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK (((height IS NULL) OR (height > 0)))"
+    },
+    {
+      "name": "image_assets_kind",
+      "type": "c",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'image'::text))"
+    },
+    {
+      "name": "image_assets_pkey",
+      "type": "p",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "image_assets_scope_id_key",
+      "type": "u",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "image_assets",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "ingestion_batches_fk45",
+      "type": "f",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "ingestion_batches_fk46",
+      "type": "f",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id) REFERENCES dpt.sources(access_scope_id, id)"
+    },
+    {
+      "name": "ingestion_batches_fk47",
+      "type": "f",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id, rights_id) REFERENCES dpt.rights_assessments(access_scope_id, source_id, id)"
+    },
+    {
+      "name": "ingestion_batches_k1",
+      "type": "u",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_id, source_revision, batch_sha256, adapter_version)"
+    },
+    {
+      "name": "ingestion_batches_k2",
+      "type": "c",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "CHECK ((state = ANY (ARRAY['pending'::text, 'validating'::text, 'review'::text, 'quarantined'::text, 'completed'::text, 'failed'::text])))"
+    },
+    {
+      "name": "ingestion_batches_k3",
+      "type": "c",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "CHECK (((finished_at IS NULL) OR (finished_at >= started_at)))"
+    },
+    {
+      "name": "ingestion_batches_pkey",
+      "type": "p",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "ingestion_batches_scope_id_key",
+      "type": "u",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "ingestion_batches",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "inventory_items_fk136",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "inventory_items_fk137",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "inventory_items_fk138",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "inventory_items_fk139",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "inventory_items_fk140",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id, variant_id) REFERENCES dpt.product_variants(perfume_id, id)"
+    },
+    {
+      "name": "inventory_items_fk141",
+      "type": "f",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, perfume_id, purchase_record_id) REFERENCES dpt.purchase_records(access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "inventory_items_k1",
+      "type": "c",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "CHECK ((status = ANY (ARRAY['owned'::text, 'finished'::text, 'sold'::text, 'gifted'::text, 'lost'::text, 'archived'::text])))"
+    },
+    {
+      "name": "inventory_items_k2",
+      "type": "c",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "CHECK (((remaining_percentage IS NULL) OR ((remaining_percentage >= 0) AND (remaining_percentage <= 100))))"
+    },
+    {
+      "name": "inventory_items_k3",
+      "type": "c",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "CHECK (((finished_at IS NULL) OR (acquired_at IS NULL) OR (finished_at >= acquired_at)))"
+    },
+    {
+      "name": "inventory_items_owner_id_key",
+      "type": "u",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "inventory_items_pkey",
+      "type": "p",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "inventory_items_private",
+      "type": "c",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "inventory_items_scope_id_key",
+      "type": "u",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "inventory_items",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "matching_results_confidence_finite",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((confidence IS NULL) OR (confidence <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "matching_results_fk103",
+      "type": "f",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "matching_results_fk104",
+      "type": "f",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "FOREIGN KEY (relation_id) REFERENCES dpt.perfume_relations(id)"
+    },
+    {
+      "name": "matching_results_k1",
+      "type": "u",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, relation_id, algorithm_version, input_sha256)"
+    },
+    {
+      "name": "matching_results_k2",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((similarity IS NULL) OR ((similarity >= (0)::numeric) AND (similarity <= (100)::numeric))))"
+    },
+    {
+      "name": "matching_results_k3",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((confidence IS NULL) OR ((confidence >= (0)::numeric) AND (confidence <= (1)::numeric))))"
+    },
+    {
+      "name": "matching_results_k4",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((jsonb_typeof(coverage) = 'object'::text) AND (jsonb_typeof(explanation) = 'object'::text)))"
+    },
+    {
+      "name": "matching_results_pkey",
+      "type": "p",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "matching_results_scope_id_key",
+      "type": "u",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "matching_results_similarity_finite",
+      "type": "c",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "CHECK (((similarity IS NULL) OR (similarity <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "matching_results",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "note_aliases_fk59",
+      "type": "f",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "note_aliases_fk60",
+      "type": "f",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (note_id) REFERENCES dpt.notes(id)"
+    },
+    {
+      "name": "note_aliases_fk61",
+      "type": "f",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "note_aliases_k1",
+      "type": "u",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, note_id, normalized_alias, language)"
+    },
+    {
+      "name": "note_aliases_pkey",
+      "type": "p",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "note_aliases_scope_id_key",
+      "type": "u",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "note_aliases",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "note_images_fk94",
+      "type": "f",
+      "table": "note_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "note_images_fk95",
+      "type": "f",
+      "table": "note_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (note_id) REFERENCES dpt.notes(id)"
+    },
+    {
+      "name": "note_images_fk96",
+      "type": "f",
+      "table": "note_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (asset_id) REFERENCES dpt.image_assets(id)"
+    },
+    {
+      "name": "note_images_k1",
+      "type": "u",
+      "table": "note_images",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, note_id, asset_id, role)"
+    },
+    {
+      "name": "note_images_k2",
+      "type": "c",
+      "table": "note_images",
+      "validated": true,
+      "definition": "CHECK ((role = 'illustration'::text))"
+    },
+    {
+      "name": "note_images_k3",
+      "type": "c",
+      "table": "note_images",
+      "validated": true,
+      "definition": "CHECK ((sort_order >= 0))"
+    },
+    {
+      "name": "note_images_pkey",
+      "type": "p",
+      "table": "note_images",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "note_images_scope_id_key",
+      "type": "u",
+      "table": "note_images",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "note_images",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "notes_fk14",
+      "type": "f",
+      "table": "notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "notes_fk15",
+      "type": "f",
+      "table": "notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "notes_k1",
+      "type": "u",
+      "table": "notes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, slug)"
+    },
+    {
+      "name": "notes_k2",
+      "type": "c",
+      "table": "notes",
+      "validated": true,
+      "definition": "CHECK (((material_origin IS NULL) OR (material_origin = ANY (ARRAY['natural'::text, 'synthetic'::text, 'both'::text, 'accord'::text]))))"
+    },
+    {
+      "name": "notes_kind",
+      "type": "c",
+      "table": "notes",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'note'::text))"
+    },
+    {
+      "name": "notes_pkey",
+      "type": "p",
+      "table": "notes",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "notes_scope_id_key",
+      "type": "u",
+      "table": "notes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "notes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "notes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_accords_fk70",
+      "type": "f",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_accords_fk71",
+      "type": "f",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_accords_fk72",
+      "type": "f",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (accord_id) REFERENCES dpt.accords(id)"
+    },
+    {
+      "name": "perfume_accords_fk73",
+      "type": "f",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "perfume_accords_k1",
+      "type": "u",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, perfume_id, accord_id)"
+    },
+    {
+      "name": "perfume_accords_k2",
+      "type": "c",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "CHECK (((strength IS NULL) OR ((strength >= (0)::numeric) AND (strength <= (1)::numeric))))"
+    },
+    {
+      "name": "perfume_accords_pkey",
+      "type": "p",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_accords_scope_id_key",
+      "type": "u",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "perfume_accords_strength_finite",
+      "type": "c",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "CHECK (((strength IS NULL) OR (strength <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_accords",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_families_fk74",
+      "type": "f",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_families_fk75",
+      "type": "f",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_families_fk76",
+      "type": "f",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "FOREIGN KEY (family_id) REFERENCES dpt.families(id)"
+    },
+    {
+      "name": "perfume_families_fk77",
+      "type": "f",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "perfume_families_k1",
+      "type": "u",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, perfume_id, family_id, role)"
+    },
+    {
+      "name": "perfume_families_k2",
+      "type": "c",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "CHECK ((role = ANY (ARRAY['primary'::text, 'secondary'::text])))"
+    },
+    {
+      "name": "perfume_families_pkey",
+      "type": "p",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_families_scope_id_key",
+      "type": "u",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_families",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_images_fk91",
+      "type": "f",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_images_fk92",
+      "type": "f",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_images_fk93",
+      "type": "f",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "FOREIGN KEY (asset_id) REFERENCES dpt.image_assets(id)"
+    },
+    {
+      "name": "perfume_images_k1",
+      "type": "u",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, perfume_id, asset_id, role)"
+    },
+    {
+      "name": "perfume_images_k2",
+      "type": "c",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "CHECK ((role = ANY (ARRAY['bottle'::text, 'packaging'::text, 'other'::text])))"
+    },
+    {
+      "name": "perfume_images_k3",
+      "type": "c",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "CHECK ((sort_order >= 0))"
+    },
+    {
+      "name": "perfume_images_pkey",
+      "type": "p",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_images_scope_id_key",
+      "type": "u",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_images",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_notes_fk66",
+      "type": "f",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_notes_fk67",
+      "type": "f",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_notes_fk68",
+      "type": "f",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (note_id) REFERENCES dpt.notes(id)"
+    },
+    {
+      "name": "perfume_notes_fk69",
+      "type": "f",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "perfume_notes_k1",
+      "type": "u",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, perfume_id, note_id, layer)"
+    },
+    {
+      "name": "perfume_notes_k2",
+      "type": "c",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "CHECK ((layer = ANY (ARRAY['top'::text, 'heart'::text, 'base'::text, 'general'::text])))"
+    },
+    {
+      "name": "perfume_notes_k3",
+      "type": "c",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "CHECK (((sort_order IS NULL) OR (sort_order >= 0)))"
+    },
+    {
+      "name": "perfume_notes_pkey",
+      "type": "p",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_notes_scope_id_key",
+      "type": "u",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_notes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_relations_fk18",
+      "type": "f",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_relations_fk19",
+      "type": "f",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "perfume_relations_fk20",
+      "type": "f",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "FOREIGN KEY (reference_perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_relations_fk21",
+      "type": "f",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "FOREIGN KEY (candidate_perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_relations_k1",
+      "type": "c",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "CHECK ((reference_perfume_id <> candidate_perfume_id))"
+    },
+    {
+      "name": "perfume_relations_k2",
+      "type": "c",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "CHECK ((directionality = ANY (ARRAY['directed'::text, 'symmetric'::text])))"
+    },
+    {
+      "name": "perfume_relations_k3",
+      "type": "c",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "CHECK (((directionality <> 'symmetric'::text) OR (reference_perfume_id < candidate_perfume_id)))"
+    },
+    {
+      "name": "perfume_relations_k4",
+      "type": "u",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, reference_perfume_id, candidate_perfume_id, relation_type)"
+    },
+    {
+      "name": "perfume_relations_k5",
+      "type": "c",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "CHECK ((((relation_type)::text <> ALL (ARRAY['inspired_by'::text, 'flanker_of'::text])) OR (directionality = 'directed'::text)))"
+    },
+    {
+      "name": "perfume_relations_kind",
+      "type": "c",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'relation'::text))"
+    },
+    {
+      "name": "perfume_relations_pkey",
+      "type": "p",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_relations_scope_id_key",
+      "type": "u",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_relations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfume_usage_tags_fk78",
+      "type": "f",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfume_usage_tags_fk79",
+      "type": "f",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "perfume_usage_tags_fk80",
+      "type": "f",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "perfume_usage_tags_k1",
+      "type": "u",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, perfume_id, category, scheme, label)"
+    },
+    {
+      "name": "perfume_usage_tags_k2",
+      "type": "c",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "CHECK ((category = ANY (ARRAY['season'::text, 'time'::text, 'occasion'::text])))"
+    },
+    {
+      "name": "perfume_usage_tags_pkey",
+      "type": "p",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfume_usage_tags_scope_id_key",
+      "type": "u",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfume_usage_tags",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "perfumes_fk10",
+      "type": "f",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "FOREIGN KEY (brand_id) REFERENCES dpt.brands(id)"
+    },
+    {
+      "name": "perfumes_fk8",
+      "type": "f",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "perfumes_fk9",
+      "type": "f",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "perfumes_k1",
+      "type": "u",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, slug)"
+    },
+    {
+      "name": "perfumes_k2",
+      "type": "c",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "CHECK (((release_year IS NULL) OR ((release_year >= 1000) AND (release_year <= 9999))))"
+    },
+    {
+      "name": "perfumes_k3",
+      "type": "c",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "CHECK (((concentration_code IS NULL) OR (btrim(concentration_code) <> ''::text)))"
+    },
+    {
+      "name": "perfumes_kind",
+      "type": "c",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'perfume'::text))"
+    },
+    {
+      "name": "perfumes_pkey",
+      "type": "p",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "perfumes_scope_id_key",
+      "type": "u",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "perfumes",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "price_observations_amount_finite",
+      "type": "c",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "CHECK (((amount IS NULL) OR (amount <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "price_observations_fk112",
+      "type": "f",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "price_observations_fk113",
+      "type": "f",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "price_observations_fk114",
+      "type": "f",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "price_observations_fk115",
+      "type": "f",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, listing_id) REFERENCES dpt.retail_listings(access_scope_id, user_id, id)"
+    },
+    {
+      "name": "price_observations_fk116",
+      "type": "f",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "price_observations_k1",
+      "type": "c",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "CHECK ((amount >= (0)::numeric))"
+    },
+    {
+      "name": "price_observations_k2",
+      "type": "c",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "CHECK (((currency)::bpchar ~ '^[A-Z]{3}$'::text))"
+    },
+    {
+      "name": "price_observations_owner_id_key",
+      "type": "u",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "price_observations_pkey",
+      "type": "p",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "price_observations_private",
+      "type": "c",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "price_observations_scope_id_key",
+      "type": "u",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "price_observations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "product_variants_fk11",
+      "type": "f",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "product_variants_fk12",
+      "type": "f",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "product_variants_fk13",
+      "type": "f",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "product_variants_k1",
+      "type": "c",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml > (0)::numeric)))"
+    },
+    {
+      "name": "product_variants_k2",
+      "type": "u",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "UNIQUE (perfume_id, id)"
+    },
+    {
+      "name": "product_variants_kind",
+      "type": "c",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'variant'::text))"
+    },
+    {
+      "name": "product_variants_pkey",
+      "type": "p",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "product_variants_scope_id_key",
+      "type": "u",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "product_variants_volume_ml_finite",
+      "type": "c",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "product_variants",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "purchase_records_fk130",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "purchase_records_fk131",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "purchase_records_fk132",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "purchase_records_fk133",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "purchase_records_fk134",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id, variant_id) REFERENCES dpt.product_variants(perfume_id, id)"
+    },
+    {
+      "name": "purchase_records_fk135",
+      "type": "f",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, perfume_id, listing_id) REFERENCES dpt.retail_listings(access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "purchase_records_k1",
+      "type": "u",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "UNIQUE (user_id, perfume_id, id)"
+    },
+    {
+      "name": "purchase_records_k2",
+      "type": "u",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "purchase_records_k3",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((paid_price IS NULL) OR ((paid_price >= (0)::numeric) AND (currency IS NOT NULL))))"
+    },
+    {
+      "name": "purchase_records_k4",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((currency IS NULL) OR ((currency)::bpchar ~ '^[A-Z]{3}$'::text)))"
+    },
+    {
+      "name": "purchase_records_k5",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml > (0)::numeric)))"
+    },
+    {
+      "name": "purchase_records_k6",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((received_at IS NULL) OR (ordered_at IS NULL) OR (received_at >= ordered_at)))"
+    },
+    {
+      "name": "purchase_records_k7",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK ((status = ANY (ARRAY['ordered'::text, 'received'::text, 'cancelled'::text, 'returned'::text])))"
+    },
+    {
+      "name": "purchase_records_owner_id_key",
+      "type": "u",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "purchase_records_paid_price_finite",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((paid_price IS NULL) OR (paid_price <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "purchase_records_pkey",
+      "type": "p",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "purchase_records_private",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "purchase_records_scope_id_key",
+      "type": "u",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "purchase_records_volume_ml_finite",
+      "type": "c",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "CHECK (((volume_ml IS NULL) OR (volume_ml <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "purchase_records",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "rating_observations_fk100",
+      "type": "f",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "rating_observations_fk101",
+      "type": "f",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "rating_observations_fk102",
+      "type": "f",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "rating_observations_k1",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((rating_count IS NULL) OR (rating_count >= 0)))"
+    },
+    {
+      "name": "rating_observations_k2",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK ((((scale_min IS NULL) AND (scale_max IS NULL) AND (value IS NULL)) OR ((scale_min IS NOT NULL) AND (scale_max IS NOT NULL) AND (scale_max > scale_min) AND ((value IS NULL) OR ((value >= scale_min) AND (value <= scale_max))))))"
+    },
+    {
+      "name": "rating_observations_pkey",
+      "type": "p",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "rating_observations_scale_max_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((scale_max IS NULL) OR (scale_max <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "rating_observations_scale_min_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((scale_min IS NULL) OR (scale_min <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "rating_observations_scope_id_key",
+      "type": "u",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "rating_observations_value_finite",
+      "type": "c",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "CHECK (((value IS NULL) OR (value <> ALL (ARRAY['NaN'::numeric, 'Infinity'::numeric, '-Infinity'::numeric]))))"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "rating_observations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "retail_listings_fk105",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "retail_listings_fk106",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, id, entity_kind) REFERENCES dpt.entities(access_scope_id, id, kind)"
+    },
+    {
+      "name": "retail_listings_fk107",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "retail_listings_fk108",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "retail_listings_fk109",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "retail_listings_fk110",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id, variant_id) REFERENCES dpt.product_variants(perfume_id, id)"
+    },
+    {
+      "name": "retail_listings_fk111",
+      "type": "f",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "retail_listings_k1",
+      "type": "u",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, product_url)"
+    },
+    {
+      "name": "retail_listings_k2",
+      "type": "u",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "UNIQUE (user_id, perfume_id, id)"
+    },
+    {
+      "name": "retail_listings_k3",
+      "type": "u",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "retail_listings_kind",
+      "type": "c",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "CHECK ((entity_kind = 'listing'::text))"
+    },
+    {
+      "name": "retail_listings_owner_id_key",
+      "type": "u",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "retail_listings_pkey",
+      "type": "p",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "retail_listings_private",
+      "type": "c",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "retail_listings_scope_id_key",
+      "type": "u",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "retail_listings",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "rights_assessments_fk23",
+      "type": "f",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "rights_assessments_fk24",
+      "type": "f",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id) REFERENCES dpt.sources(access_scope_id, id)"
+    },
+    {
+      "name": "rights_assessments_k1",
+      "type": "u",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_id, id)"
+    },
+    {
+      "name": "rights_assessments_k2",
+      "type": "c",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "CHECK (((review_after IS NULL) OR (review_after > checked_at)))"
+    },
+    {
+      "name": "rights_assessments_k3",
+      "type": "c",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "CHECK (((revoked_at IS NULL) OR (revoked_at >= checked_at)))"
+    },
+    {
+      "name": "rights_assessments_k4",
+      "type": "c",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "CHECK (((NOT ((((((('allowed'::text = (research_use)::text) OR ('allowed'::text = (automation_use)::text)) OR ('allowed'::text = (cache_use)::text)) OR ('allowed'::text = (storage_use)::text)) OR ('allowed'::text = (display_use)::text)) OR ('allowed'::text = (redistribution_use)::text)) OR ('allowed'::text = (ai_use)::text))) OR ((evidence_url IS NOT NULL) AND (btrim(evidence_url) <> ''::text))))"
+    },
+    {
+      "name": "rights_assessments_pkey",
+      "type": "p",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "rights_assessments_scope_id_key",
+      "type": "u",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "rights_assessments",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "saved_buying_sources_fk125",
+      "type": "f",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "saved_buying_sources_fk126",
+      "type": "f",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "saved_buying_sources_fk127",
+      "type": "f",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "saved_buying_sources_fk128",
+      "type": "f",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, perfume_id, list_item_id) REFERENCES dpt.user_list_items(access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "saved_buying_sources_fk129",
+      "type": "f",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, perfume_id, listing_id) REFERENCES dpt.retail_listings(access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "saved_buying_sources_k1",
+      "type": "u",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, list_item_id, listing_id)"
+    },
+    {
+      "name": "saved_buying_sources_owner_id_key",
+      "type": "u",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "saved_buying_sources_pkey",
+      "type": "p",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "saved_buying_sources_private",
+      "type": "c",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "saved_buying_sources_scope_id_key",
+      "type": "u",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "saved_buying_sources",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "scope_members_fk2",
+      "type": "f",
+      "table": "scope_members",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "scope_members_fk3",
+      "type": "f",
+      "table": "scope_members",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "scope_members_k1",
+      "type": "c",
+      "table": "scope_members",
+      "validated": true,
+      "definition": "CHECK ((role = ANY (ARRAY['reader'::text, 'editor'::text])))"
+    },
+    {
+      "name": "scope_members_pkey",
+      "type": "p",
+      "table": "scope_members",
+      "validated": true,
+      "definition": "PRIMARY KEY (access_scope_id, user_id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "scope_members",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "source_observations_fk31",
+      "type": "f",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "source_observations_fk32",
+      "type": "f",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "source_observations_fk33",
+      "type": "f",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_id, entity_kind) REFERENCES dpt.entities(id, kind)"
+    },
+    {
+      "name": "source_observations_fk34",
+      "type": "f",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "FOREIGN KEY (entity_kind, field_path) REFERENCES dpt.field_definitions(entity_kind, path)"
+    },
+    {
+      "name": "source_observations_k1",
+      "type": "u",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_record_id, entity_id, entity_kind, field_path, claim_locator, claim_key, transform_version)"
+    },
+    {
+      "name": "source_observations_k2",
+      "type": "u",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, entity_id, entity_kind, field_path, id)"
+    },
+    {
+      "name": "source_observations_k3",
+      "type": "c",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "CHECK ((value_status = ANY (ARRAY['present'::text, 'not_recorded'::text, 'not_supplied'::text, 'explicit_none'::text, 'withheld'::text, 'not_applicable'::text])))"
+    },
+    {
+      "name": "source_observations_k4",
+      "type": "c",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "CHECK ((((value_status = 'present'::text) AND (value IS NOT NULL) AND (value <> 'null'::jsonb)) OR ((value_status = 'explicit_none'::text) AND ((value IS NULL) OR (value = 'null'::jsonb))) OR ((value_status <> ALL (ARRAY['present'::text, 'explicit_none'::text])) AND (value IS NULL))))"
+    },
+    {
+      "name": "source_observations_pkey",
+      "type": "p",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "source_observations_scope_id_key",
+      "type": "u",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "source_observations",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "source_records_fk25",
+      "type": "f",
+      "table": "source_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "source_records_fk26",
+      "type": "f",
+      "table": "source_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id) REFERENCES dpt.sources(access_scope_id, id)"
+    },
+    {
+      "name": "source_records_fk27",
+      "type": "f",
+      "table": "source_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_id, rights_id) REFERENCES dpt.rights_assessments(access_scope_id, source_id, id)"
+    },
+    {
+      "name": "source_records_k1",
+      "type": "u",
+      "table": "source_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_id, external_key, payload_sha256)"
+    },
+    {
+      "name": "source_records_k2",
+      "type": "u",
+      "table": "source_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, source_id, id)"
+    },
+    {
+      "name": "source_records_pkey",
+      "type": "p",
+      "table": "source_records",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "source_records_scope_id_key",
+      "type": "u",
+      "table": "source_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "source_records",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "sources_fk22",
+      "type": "f",
+      "table": "sources",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "sources_k1",
+      "type": "c",
+      "table": "sources",
+      "validated": true,
+      "definition": "CHECK ((kind = ANY (ARRAY['dataset'::text, 'api'::text, 'official'::text, 'user'::text, 'media'::text, 'review'::text])))"
+    },
+    {
+      "name": "sources_pkey",
+      "type": "p",
+      "table": "sources",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "sources_scope_id_key",
+      "type": "u",
+      "table": "sources",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "sources",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "staging_records_fk48",
+      "type": "f",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "staging_records_fk49",
+      "type": "f",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, batch_id) REFERENCES dpt.ingestion_batches(access_scope_id, id)"
+    },
+    {
+      "name": "staging_records_fk50",
+      "type": "f",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, source_record_id) REFERENCES dpt.source_records(access_scope_id, id)"
+    },
+    {
+      "name": "staging_records_k1",
+      "type": "u",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "UNIQUE (batch_id, external_key, payload_sha256)"
+    },
+    {
+      "name": "staging_records_k2",
+      "type": "c",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "CHECK ((state = ANY (ARRAY['pending'::text, 'validating'::text, 'review'::text, 'quarantined'::text, 'promoted'::text, 'rejected'::text])))"
+    },
+    {
+      "name": "staging_records_k3",
+      "type": "c",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "CHECK (((state <> ALL (ARRAY['review'::text, 'quarantined'::text, 'rejected'::text])) OR ((error_codes IS NOT NULL) AND (jsonb_typeof(error_codes) = 'array'::text) AND (jsonb_array_length(error_codes) > 0))))"
+    },
+    {
+      "name": "staging_records_pkey",
+      "type": "p",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "staging_records_scope_id_key",
+      "type": "u",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "y_active_row",
+      "type": "t",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "staging_records",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "user_list_items_fk120",
+      "type": "f",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "user_list_items_fk121",
+      "type": "f",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "user_list_items_fk122",
+      "type": "f",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "user_list_items_fk123",
+      "type": "f",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, user_id, list_id) REFERENCES dpt.user_lists(access_scope_id, user_id, id)"
+    },
+    {
+      "name": "user_list_items_fk124",
+      "type": "f",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "FOREIGN KEY (perfume_id) REFERENCES dpt.perfumes(id)"
+    },
+    {
+      "name": "user_list_items_k1",
+      "type": "u",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, list_id, perfume_id)"
+    },
+    {
+      "name": "user_list_items_k2",
+      "type": "u",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "UNIQUE (user_id, perfume_id, id)"
+    },
+    {
+      "name": "user_list_items_k3",
+      "type": "u",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, perfume_id, id)"
+    },
+    {
+      "name": "user_list_items_k4",
+      "type": "c",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "CHECK ((status = ANY (ARRAY['saved'::text, 'ordered'::text, 'received'::text, 'archived'::text])))"
+    },
+    {
+      "name": "user_list_items_owner_id_key",
+      "type": "u",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "user_list_items_pkey",
+      "type": "p",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "user_list_items_private",
+      "type": "c",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "user_list_items_scope_id_key",
+      "type": "u",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "user_list_items",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "user_lists_fk117",
+      "type": "f",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "user_lists_fk118",
+      "type": "f",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "FOREIGN KEY (user_id) REFERENCES dpt.users(id)"
+    },
+    {
+      "name": "user_lists_fk119",
+      "type": "f",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, access_kind, user_id) REFERENCES dpt.access_scopes(id, kind, owner_user_id)"
+    },
+    {
+      "name": "user_lists_k1",
+      "type": "u",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "UNIQUE (user_id, id)"
+    },
+    {
+      "name": "user_lists_k2",
+      "type": "c",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "CHECK ((list_type = ANY (ARRAY['cart'::text, 'wishlist'::text, 'custom'::text])))"
+    },
+    {
+      "name": "user_lists_owner_id_key",
+      "type": "u",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, user_id, id)"
+    },
+    {
+      "name": "user_lists_pkey",
+      "type": "p",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "user_lists_private",
+      "type": "c",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "CHECK ((access_kind = 'user_private'::text))"
+    },
+    {
+      "name": "user_lists_scope_id_key",
+      "type": "u",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "user_lists",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "users_k1",
+      "type": "u",
+      "table": "users",
+      "validated": true,
+      "definition": "UNIQUE (auth_subject)"
+    },
+    {
+      "name": "users_pkey",
+      "type": "p",
+      "table": "users",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "users",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    },
+    {
+      "name": "validation_results_fk51",
+      "type": "f",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id) REFERENCES dpt.access_scopes(id)"
+    },
+    {
+      "name": "validation_results_fk52",
+      "type": "f",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "FOREIGN KEY (access_scope_id, staging_record_id) REFERENCES dpt.staging_records(access_scope_id, id)"
+    },
+    {
+      "name": "validation_results_k1",
+      "type": "u",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, staging_record_id, rule_code)"
+    },
+    {
+      "name": "validation_results_k2",
+      "type": "c",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "CHECK ((severity = ANY (ARRAY['info'::text, 'warning'::text, 'error'::text])))"
+    },
+    {
+      "name": "validation_results_k3",
+      "type": "c",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "CHECK ((result = ANY (ARRAY['pass'::text, 'fail'::text, 'review'::text, 'not_run'::text])))"
+    },
+    {
+      "name": "validation_results_pkey",
+      "type": "p",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "PRIMARY KEY (id)"
+    },
+    {
+      "name": "validation_results_scope_id_key",
+      "type": "u",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "UNIQUE (access_scope_id, id)"
+    },
+    {
+      "name": "z_model_contract",
+      "type": "t",
+      "table": "validation_results",
+      "validated": true,
+      "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+    }
+  ],
+  "rls_policies": 203,
+  "domain_checks": 5,
+  "user_triggers": 243,
+  "server_version": "16.15 (Debian 16.15-1.pgdg13+2)",
+  "server_encoding": "UTF8",
+  "not_null_columns": 396,
+  "enabled_force_rls": 47,
+  "constraint_counts": {
+    "f": 141,
+    "c": 93,
+    "u": 91,
+    "p": 47,
+    "t": 59
+  },
+  "image": "postgres@sha256:f1c3376c26f2609ab9f29f71f824103fe2fcd8ee0346485cb6122a4f93df6f94",
+  "migrations": [
+    {
+      "name": "001_identity.sql",
+      "sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a"
+    },
+    {
+      "name": "002_catalogue.sql",
+      "sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d"
+    },
+    {
+      "name": "003_provenance.sql",
+      "sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266"
+    },
+    {
+      "name": "004_associations_media_personal.sql",
+      "sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6"
+    },
+    {
+      "name": "005_contract_functions.sql",
+      "sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64"
+    },
+    {
+      "name": "006_media_and_deferred_contracts.sql",
+      "sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d"
+    },
+    {
+      "name": "007_security_and_field_contract.sql",
+      "sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
+    },
+    {
+      "name": "008_coalesced_deferred_validation.sql",
+      "sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
+    }
+  ]
+}

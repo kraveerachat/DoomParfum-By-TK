@@ -1,0 +1,40 @@
+{
+  "task": "IMP-P1-04",
+  "markdown_files": 8,
+  "frontmatters": 5,
+  "wiki_links": 35,
+  "local_links": 9,
+  "logical_tables": 47,
+  "protected_files_checked": 35,
+  "fresh_test_source_hashes": 22,
+  "tests_run": 170,
+  "errors": [],
+  "secret_pattern_candidates": 0,
+  "changed_paths": [
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-P1-04_Local_Benchmark_and_Restore.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-P1-04_Capacity_and_Recovery_Evidence.md",
+    "database/LOCAL_CAPACITY_RECOVERY.md",
+    "database/README.md",
+    "database/etl_benchmark.py",
+    "database/evidence/capacity_benchmark_results.json",
+    "database/evidence/capacity_documentation_checks.json",
+    "database/evidence/capacity_independent_review.md",
+    "database/evidence/capacity_recovery_results.json",
+    "database/evidence/capacity_schema_inventory.json",
+    "database/evidence/capacity_test_results.json",
+    "database/recovery.py",
+    "database/tests/test_etl_benchmark.py",
+    "database/tests/test_recovery.py",
+    "database/verify_capacity.py"
+  ],
+  "final_receipt_created": false,
+  "full_replay_status": "BLOCKED23514",
+  "limits": [
+    "No Mermaid/browser/runtime matching tests",
+    "Common secret patterns/path scan only",
+    "ExternalURLs notrefetchedbylocalcheck"
+  ]
+}

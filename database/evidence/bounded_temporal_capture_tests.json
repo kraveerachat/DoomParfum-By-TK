@@ -1,0 +1,28 @@
+{
+  "command": "python -m unittest discover -s database/tests -p test_temporal_capture.py",
+  "parent_result": {
+    "passed": 12,
+    "failed": 0,
+    "seconds": 0.035
+  },
+  "independent_execution": {
+    "command": "python -B -m unittest discover -s database/tests -p test_temporal_capture.py -v",
+    "methods": 12,
+    "passed": 12,
+    "failed": 0,
+    "seconds": 0.036,
+    "docker_process_calls": "Denied/mocked by unit suite; no Docker or DB execution"
+  },
+  "source_file_sha256_canonical_utf8_lf": {
+    "database/temporal_capture.py": "e452a2e2157c809877265cae22d8f68050661b01c68a84eaf084620e529c9259",
+    "database/tests/test_temporal_capture.py": "afde88c25e370b13303ff422814c8e81fa041174c81da42c9faed8a40f646bbd"
+  },
+  "live_controls": {
+    "original": 5,
+    "instrumented": 5,
+    "decision_parity": true,
+    "unforced_operand_pairs": 8,
+    "natural_rejections": 0
+  },
+  "prior_regression": "175/175 prior report retained; all23listed source hashes unchanged. Full187-method discovery NOT RUN; no equivalent licensedcohort repeat."
+}

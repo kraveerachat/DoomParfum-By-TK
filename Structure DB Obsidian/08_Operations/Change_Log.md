@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -329,6 +329,70 @@ created OPEN/DRAFT. Final metadata adds one immutable IMP-P1-02 receipt, keeps r
 unchanged and repeats documentation/diff checks. Final publication HEAD recorded after push in PR/
 external progress, not a self-referential SHA claim. Human Owner reviews and merges.
 
+## 2026-11-12 / IMP-P1-04 — controlled local capacity and recovery subset
+
+Branchcodex/imp-p1-04-local-benchmark-restore fromownermergedmain55d39cd. Originalimporter/migrations/
+rights/receipts unchanged; newboundedbenchmark/recovery/verifier+tests and sanitizedevidence. Fullfresh
+1479=246.226887s/1completevalidatorcall; fullreplaytwice23514FAILED, notwaived. Callback/markertrace
+dominates. DBbytes56982551→57662487aftervacuum; no shrink/capacitycurve claim. Independentcluster
+restore00429.656s passes15controls; source49tablecount/hashes/roles/ACL/RLSpreserved, syntheticobjects2/9896bytes,
+realimages0. Recoverydevelopmentfailures retained; knownCHECKdeparseforms pinned before extra8748proof.
+No guard/permission relaxation. Finaltests/docs/exactsource review and Draft publication follow.
+Taskpartial/blocked; no finalreceipt until unmetacceptance resolved. No cloud/prod/main/merge changes.
+
+P104publication: PR8OPEN/DRAFT, source53fec48exactreview74checks/22hashes verified; metadataonly
+closeout, no newreceipt ormergereadinessclaim.170regressionand recovery15controls pass; fullreplay
+23514blockedremains. Finalhead/readback and singleLATESTZIP recordedexternally afterpush.
+
+
+## 2026-11-12 — IMP-P1-04 temporal diagnosis and review preparation
+
+Start6dc15a2e00ef979b0cbc39a72d461ebcd8533d47; comparator main55d39cd. Actual historical failing
+rows recovered, temporal operands unavailable. Added5guard/rights regression controls only; importer/
+all original migrations/runtime/decisions/receipts unchanged. Full175/175pass150.422s; recovery005
+15/15pass30.093s. Current fullreplay004107.147241s passes zero-new/substantive integrity with exact44
+heldstagingupdated_at touches; strict003comparisonfailure and old23514reports retained.
+Rootcause/correction unresolved, PR8Draftblocked/no receipt. [[IMP-P1-04_Temporal_Diagnosis]].
+PR4/6/7 refreshed in their own branches, no agentmerge; externalD1–D9/singleLATESTZIP follows actual
+publication. Current checkpointSHA recorded after commit/readback; production mutationNO.
+
+
+## Exact source/evidence checkpoint closeout — 2026-11-12
+
+Committed source/evidence checkpoint 571d46fb16fab4a0ae2f8a1395344b61f8f68501 independently verified126/126offline assertions,
+0failures. All23testedsource hashes equal Git blobs;27main protected and28priorPR8source/evidence
+blobs unchanged. Only new executable is the five-control regression test, reviewed77a2d0f8…86e50930.
+Publicreports match raw sanitized results semantically (GitLF normalization only).175/175tests,
+005recovery15/15 and004currentfullreplay verified;003strictcomparisonfailure/historical missing
+operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda160bd7f1dc37973094ff64e90800ba110b6. Reviewer noDB/Docker/Gitmutation;
+parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
+schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
+PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## 2026-11-13 — Bounded temporal capture diagnostic package
+
+Start81305bf1f9933cf870f5aa1edecf4eec887b6ddf, main55d39cd unchanged. Added standalone diagnostic
+runner/test/operatorguide and additive evidence; originalmigrations/importer/runtime/receipts and
+previous175tests/15restore/fullreplay evidence unchanged. One tinySYNTHETICisolatedrun validates
+capture/controlparity/restore/stop;12offline methods/62independentassertions.0naturalrejections,
+historicalrootcause stillblocked, no speculativefix. No equivalent1479rerun; full187suiteNOTRUN.
+Canonicaldetail [[IMP-P1-04_Bounded_Temporal_Capture]]. Otherworkpackages PR4OD/DMcrosswalk andPR7
+3metadata-onlycandidates publish in their ownbranches. D1–D9/singleZIP updated afterpublication.
+
+
+## Exact bounded-capture checkpoint — 2026-11-13
+
+Source/evidence80ce62d04662285ae1a6d0b7c0afea411ad54162 independentlyverified124/124offlineassertions,
+0fail. ExecutednewGitblob hashes match e452a2e2…c9259/afde88c2…46bbd;23old+2newbindings=25distinct,
+29mainprotected and45priorDBsource/evidence/receiptblobs unchanged. Publicreportprojection matches
+raw65f8…839798 plus documentedannotations; readonlyresourceattestation matches stoppedownedtarget.
+Reviewreport checkpoint_80ce62d_review.json SHAdb3508c0149de9972eca5c07a919c5c9788e58762b602588fb15deed6e0793a4.
+Reviewer noDB/Docker/Gitmutation. Finalmetadata touches no executedsource or executionreport.
+Captureability ready forreview; historicalrootcause/runtimecorrection stillblocked;187suiteNOTRUN.
+FinalpublicationHEAD is recorded inPR/externalhandoff afteractualpush, no self-referentialSHA.
+
+
 ## 2026-11-12 / DPT-DATA-001 — post-PR5 source and permission investigation
 
 Separate codex/p1-data-review fromOwnermerged55d39cd; docs-only. All44held sourceprofiles accounted
@@ -352,3 +416,27 @@ Seven shared Markdown documents reconciled, all unrelated main files intact, cur
 branch comparison ahead9/behind0/23 changed docs and GitHub clean. Planning review only;
 DM01..07 are still PROPOSED; no actual matching tests/CI rerun, Owner Gate P,
 source/media permission, production or PR-to-main merge inferred.
+
+
+## IMP-P1-04 post-PR4 reconciliation checkpoint — 2026-11-13
+
+Ownermergedmainaa55f8b nowincluded bynonrewritingPR8branchmergefd9360650a43d8251c97c706a4811a295dad977b.
+Three sharedMarkdownconflicts preservebothhistories; no runtime/guard/receipt change. Combined
+source218/218regressionPASS188.093s,28hashbindings,0fail/error/skip; persistentpilot49table/security/
+fiveapplication-group-role fingerprint unchanged and oldreports/logs restoredbyte-exact. No new
+clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause remainsunknown,
+verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
+AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
+[[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.
+
+
+## Parent independent checkpoint review — 2026-11-13
+
+Exactmergefd9360650a43d8251c97c706a4811a295dad977b andsource/evidencecheckpoint
+a94fb2c8e97ddf994d071f5dcd466d3319204da1 verified50/50parentofflineassertions,0failures:
+all28testedGitblobhashes,6both-parenthistorychecks,8mainmigrations/6immutable receipts exact.
+PARENT_INDEPENDENT_MERGE_REVIEW.json SHA698cb758e88fab854469da643b691a27fb90469cbdec542de44c374d9b4eba98
+in externalpost_PR4/reliability. InitialreviewHEAD-racecheck detectedlocalcheckpoint advancing;
+reviewthenpinned explicitcommits andpassed, no source/data defect. Parentmade noDBcalls forreview.
+Metadata-onlycloseout follows, no runtime/test/executionreport changes. Samebranchnormalpush and
+PR8Draft/readback follow; historicalcause/correction remainsblocked/no finalreceipt.

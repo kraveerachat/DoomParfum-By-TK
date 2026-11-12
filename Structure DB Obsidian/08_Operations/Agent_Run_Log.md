@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -498,6 +498,98 @@ Final receipt created once; final validation14Markdown/11frontmatters/47tables/6
 0common-secret candidates. Exact22-file changed manifest retained. Final metadata commit/push and
 PR/head readback complete publication, while reviewed code/test/schema evidence stays unchanged.
 
+## RUN-20261112-IMP-P1-04 — controlled tests, strict failures and independent recovery
+
+ExistingGitHubMCP/Git/PowerShell/Python3.11.9/DockerPostgreSQL16.15 and officialPGdocs; no installs/
+globalconfig/paidAPI/accountauthorization. ParentownsP104 andsharedledger/ZIP; separatePR4/image/
+researchworktrees and independentreviewers. Newrecoverycontainer fixedtasklabel/image/volume, networknone/
+noports/512MiB1CPU; sourcecontainer remains768MiB2CPU/loopback. OnlytasktestDB/isolatedrolesreset,
+persistentpilotread-only/sourceunchanged. Privatearchive/password/rawstderr stayignored.local andnotZIP.
+
+Preserved23514benchmarkfailures plusACL/deparser/comparator-review developmentalissues; added exact
+knownCHECKpins and independentcounterexample rejection. No silentacceptance or validation bypass.
+Independentbenchmark44filechecks; finalrecovery14checks+37offline reviewmethods, reviewer0DB/Dockercalls.
+Parentactualrestore00415controls and sourcefreshfullregression evidence separate. Dockerunavailable
+preflight failedbeforeDB; restartedexistingDesktop/container, noreinstall/resetpilot. CanonicalLF
+tests verifiedforportablehashes. No finalP104receipt while fullreplayblocked. SeeTask/Evidenceforactual
+commands/results/HEAD/PR. No automaticmerge/source-rights expansion/cloud/productionmutation.
+
+P104publication: PR8OPEN/DRAFT, source53fec48exactreview74checks/22hashes verified; metadataonly
+closeout, no newreceipt ormergereadinessclaim.170regressionand recovery15controls pass; fullreplay
+23514blockedremains. Finalhead/readback and singleLATESTZIP recordedexternally afterpush.
+
+
+## 2026-11-12 — Owner-review preparation and bounded PR8 diagnosis
+
+TOOL EXECUTION: existing Git/GitHubMCP, PowerShell, Python3.11.9/PyYAML, guarded Docker PostgreSQL
+16.15 and official PG16docs; independent parallel read-only reviewers. No installs/config/auth/paid
+API/newsource integration. PR4/6/7 reviewers updated same Draftbranches and verified source/review/
+rights/hash/doc evidence. Parent measured disposable dpt_scento_test only; persistentpilot read-only
+backup to separate no-network tasktarget. No original migration/importer/runtime/receipt modification.
+
+Historicalactual2failed INSERT IDs recovered privately; actual comparison operands absent. Bounded
+001/002replays do not reproduce failure; originalfunction restored exact. Original003SQL pair both
+COMMIT, strict staginghash oracle fails and remains recorded. Narrow exact44heldtimestamp comparator
+independently reviewed;004fullreplay0newrecords/integrity verified107.147241s. Full175/175PASS150.422s
+(170old+5newrealDBguard/rights controls; all23sourcehashes fresh). Recovery00515/15PASS30.093s, source
+unchanged/49tables andsecurity exact; stopped guardedrestoretarget/volume preserved. No realimages.
+Historical reports/rawlogs restored/preserved; private logs/dumps/passwords excluded publicGit/ZIP.
+
+PR8stillblocked for exacttemporaldiagnosis/justifiedfix, not falsely reported as failing current
+replay. No timestampoffset/retry/guard relaxation/hostclockmutation. No finalreceipt. Publication
+checks/sourcecheckpoint/PRhead readback and consolidatedhandoff recorded after actual events.
+PRODUCTION_MUTATION=NO; HUMAN_MERGE_REQUIRED=YES. [[IMP-P1-04_Temporal_Diagnosis]].
+
+
+## Exact source/evidence checkpoint closeout — 2026-11-12
+
+Committed source/evidence checkpoint 571d46fb16fab4a0ae2f8a1395344b61f8f68501 independently verified126/126offline assertions,
+0failures. All23testedsource hashes equal Git blobs;27main protected and28priorPR8source/evidence
+blobs unchanged. Only new executable is the five-control regression test, reviewed77a2d0f8…86e50930.
+Publicreports match raw sanitized results semantically (GitLF normalization only).175/175tests,
+005recovery15/15 and004currentfullreplay verified;003strictcomparisonfailure/historical missing
+operands remain visible. Independent report SHA256017d98bb406c1a4f19846815d5bda160bd7f1dc37973094ff64e90800ba110b6. Reviewer noDB/Docker/Gitmutation;
+parent observed stopped recoverytarget/retainedvolume. Metadata closeout changes no tested code,
+schema or execution evidence. Final publicationHEAD belongs in livePR/externalhandoff afterpush.
+PR8 remains OPEN/DRAFT/BLOCKED for unresolved historical diagnosis/justifiedfix; no finalreceipt.
+
+
+## 2026-11-13 — Readiness, permission research and isolated capture closeout
+
+TOOL DECISION/EXECUTION: Git/GitHubMCPinitialmetadatafailedinternalerror; publicRESTread-only
+fallback verifiesheads, existingGitHubCLI2.97.0smoketest succeeds. CLI--body-file usedforauthorized
+existingPRmetadata only; no login/tokenextraction/install/configchange. ExistingPowerShell/Python
+3.11.9/Docker/PostgreSQL16.15 and independentparallelreview/research; no paidAPI/unlicensedassets.
+ReadinessagentquotaendedafterPR4/7normalpush/publication; parentchecksactualcleanheads/bodyreadback,
+no unverifiedagentresultclaimed. Read-onlyPR6hashrefresh145assertions; PR7newmetadataqueue allblocked.
+
+Parentcreates one freshnonce-owned networknone/noports512MiB1CPU temporaltesttarget, executesall8
+originalmigrations/minimalSYNTHETICfixture. Capturesactualclockoperand once atoriginalpredicate,
+preservesreviewer/rights/23514/deferredchecks. Original/instrumented5verdictsmatch;8normalpairs
+no rejection; deliberatefuture capture positive isSYNTHETIC. Originalfunction/data/security/five
+application-group-role fingerprintrestored; ownedtargetstopped/volume retained; separateDocker
+inspectreadonlypostattestation.12offline methods/62independentevidenceassertions pass. Historical
+rootcauseUNRESOLVED, no runtimefix/hostclock/backdate/validationrelaxation/fullcohortrepeat.
+No finalreceipt, merge or Production mutation. [[IMP-P1-04_Bounded_Temporal_Capture]].
+
+
+## Exact bounded-capture checkpoint — 2026-11-13
+
+Source/evidence80ce62d04662285ae1a6d0b7c0afea411ad54162 independentlyverified124/124offlineassertions,
+0fail. ExecutednewGitblob hashes match e452a2e2…c9259/afde88c2…46bbd;23old+2newbindings=25distinct,
+29mainprotected and45priorDBsource/evidence/receiptblobs unchanged. Publicreportprojection matches
+raw65f8…839798 plus documentedannotations; readonlyresourceattestation matches stoppedownedtarget.
+Reviewreport checkpoint_80ce62d_review.json SHAdb3508c0149de9972eca5c07a919c5c9788e58762b602588fb15deed6e0793a4.
+Reviewer noDB/Docker/Gitmutation. Finalmetadata touches no executedsource or executionreport.
+Captureability ready forreview; historicalrootcause/runtimecorrection stillblocked;187suiteNOTRUN.
+FinalpublicationHEAD is recorded inPR/externalhandoff afteractualpush, no self-referentialSHA.
+
+Existing CLI executable C:/Program Files/GitHub CLI/gh.exe version2.97.0 verified; MCP internalerror
+fallback uses existing authorization, no login/credentials/config/install changes. Prior-evidence
+precommit rawbyte check first flagged existing CRLFvsGitLF checkout representation; canonical
+git hash-object verification passes, no prior evidence altered.
+
+
 ## RUN-20261112-DATA001 — held/source/rights research
 
 ExistingPython/PowerShell/Git/GitHub and primary-source web research; no install/globalconfig/paidjob.
@@ -535,3 +627,27 @@ PR-only blob hashes and109 unrelated main file hashes preserved. Created two-par
 9bc92f0170325def43da67e92a9855d4e190d475 and updated existing branch by non-force,
 expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, behind0,
 23 files; original DM01..07 all PROPOSED. No runtime tests rerun; no Production/main/PR merge.
+
+
+## IMP-P1-04 post-PR4 reconciliation checkpoint — 2026-11-13
+
+Ownermergedmainaa55f8b nowincluded bynonrewritingPR8branchmergefd9360650a43d8251c97c706a4811a295dad977b.
+Three sharedMarkdownconflicts preservebothhistories; no runtime/guard/receipt change. Combined
+source218/218regressionPASS188.093s,28hashbindings,0fail/error/skip; persistentpilot49table/security/
+fiveapplication-group-role fingerprint unchanged and oldreports/logs restoredbyte-exact. No new
+clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause remainsunknown,
+verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
+AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
+[[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.
+
+
+## Parent independent checkpoint review — 2026-11-13
+
+Exactmergefd9360650a43d8251c97c706a4811a295dad977b andsource/evidencecheckpoint
+a94fb2c8e97ddf994d071f5dcd466d3319204da1 verified50/50parentofflineassertions,0failures:
+all28testedGitblobhashes,6both-parenthistorychecks,8mainmigrations/6immutable receipts exact.
+PARENT_INDEPENDENT_MERGE_REVIEW.json SHA698cb758e88fab854469da643b691a27fb90469cbdec542de44c374d9b4eba98
+in externalpost_PR4/reliability. InitialreviewHEAD-racecheck detectedlocalcheckpoint advancing;
+reviewthenpinned explicitcommits andpassed, no source/data defect. Parentmade noDBcalls forreview.
+Metadata-onlycloseout follows, no runtime/test/executionreport changes. Samebranchnormalpush and
+PR8Draft/readback follow; historicalcause/correction remainsblocked/no finalreceipt.

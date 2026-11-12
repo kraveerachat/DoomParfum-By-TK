@@ -1,0 +1,509 @@
+{
+  "task": "IMP-P1-04 post-PR4reconciliation",
+  "start": "6f6b856f1f85395df4d8ae8d48b71080e1181a2e",
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "merge_commit": "fd9360650a43d8251c97c706a4811a295dad977b",
+  "parents": [
+    "65606483af453c4ef98f410f25e5ef876db7d588",
+    "aa55f8b59acb0872b3b40273a8cdd25198f3ba27"
+  ],
+  "conflict_resolution": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "blocks": [
+        {
+          "ours_sha256": "281d1c11982851b7d02b28f08f26cc6e19401e747b28cad5c9141fddea7f46f6",
+          "theirs_sha256": "87615b7df694ec4e598dfc12ee1e1a976993f53a12dd9c1b0e83daa6663382d1",
+          "ours_lines": 30,
+          "theirs_lines": 8,
+          "preserved_both_exact_text": true
+        }
+      ]
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "blocks": [
+        {
+          "ours_sha256": "7b4ea59e0dc24751064873dc79816b69a69d54e7545b65b917ef2955c1467a9f",
+          "theirs_sha256": "f0731dcbdc6e068d5b46c418d0bf06b020ab2a1d174f668239545017cde79bb7",
+          "ours_lines": 90,
+          "theirs_lines": 37,
+          "preserved_both_exact_text": true
+        }
+      ]
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "blocks": [
+        {
+          "ours_sha256": "50a21e17c7d8b76c69156f5e519bbd44f700ceec0139b75d10bc914cba57c6cd",
+          "theirs_sha256": "bb6bd4d2c647e6970438dcc72c1bb886c4e0f401684cf09ef797a705b798b985",
+          "ours_lines": 62,
+          "theirs_lines": 23,
+          "preserved_both_exact_text": true
+        }
+      ]
+    }
+  ],
+  "history_preservation": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "every_nonblank_historical_line_from_both_parents_present": true,
+      "frontmatter_updated": "2026-11-13",
+      "frontmatter_date_change_excluded_from_historycheck": true
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "every_nonblank_historical_line_from_both_parents_present": true,
+      "frontmatter_updated": "2026-11-13",
+      "frontmatter_date_change_excluded_from_historycheck": true
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "every_nonblank_historical_line_from_both_parents_present": true,
+      "frontmatter_updated": "2026-11-13",
+      "frontmatter_date_change_excluded_from_historycheck": true
+    }
+  ],
+  "source_preservation": {
+    "checks": [
+      {
+        "name": "old23:database/etl_benchmark.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/local.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/001_identity.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/002_catalogue.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/003_provenance.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/004_associations_media_personal.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/005_contract_functions.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/006_media_and_deferred_contracts.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/007_security_and_field_contract.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/migrations/008_coalesced_deferred_validation.sql",
+        "passed": true
+      },
+      {
+        "name": "old23:database/performance.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/recovery.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/scento_etl.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/fixtures.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_deferred_performance.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_etl_benchmark.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_foundation.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_recovery.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_review_timestamps.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/tests/test_scento_etl.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/validate_docs.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/verify.py",
+        "passed": true
+      },
+      {
+        "name": "old23:database/verify_capacity.py",
+        "passed": true
+      },
+      {
+        "name": "new2:database/temporal_capture.py",
+        "passed": true
+      },
+      {
+        "name": "new2:database/tests/test_temporal_capture.py",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-10_201028_DPT-PLAN-001_P1_Planning.md",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_000730_IMP-P1-01_Local_PostgreSQL.md",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_160700_DPT-PLAN-003_Dual_Mode_Matching.md",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_213752_IMP-P1-02_Licensed_Scento.md",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_022117_IMP-P1-03_Local_Image_Rights.md",
+        "passed": true
+      },
+      {
+        "name": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_024301_DPT-DATA-001_Post_PR5_Review.md",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/001_identity.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/002_catalogue.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/003_provenance.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/004_associations_media_personal.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/005_contract_functions.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/006_media_and_deferred_contracts.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/007_security_and_field_contract.sql",
+        "passed": true
+      },
+      {
+        "name": "protected:database/migrations/008_coalesced_deferred_validation.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/etl_benchmark.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/bounded_temporal_capture_documentation_checks.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/bounded_temporal_capture_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/bounded_temporal_capture_tests.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/capacity_benchmark_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/capacity_documentation_checks.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/capacity_recovery_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/capacity_schema_inventory.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/capacity_test_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/documentation_checks.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/performance_after.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/performance_before.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/scento_documentation_checks.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/scento_execution_summary.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/scento_schema_inventory.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/scento_test_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/schema_inventory.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/temporal_documentation_checks.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/temporal_followup_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/temporal_recovery_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/temporal_regression_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/evidence/test_results.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/local.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/001_identity.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/002_catalogue.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/003_provenance.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/004_associations_media_personal.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/005_contract_functions.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/006_media_and_deferred_contracts.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/007_security_and_field_contract.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/migrations/008_coalesced_deferred_validation.sql",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/performance.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/recovery.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/scento_etl.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/schema_contract.json",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/temporal_capture.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/fixtures.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_deferred_performance.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_etl_benchmark.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_foundation.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_recovery.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_review_timestamps.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_scento_etl.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/tests/test_temporal_capture.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/validate_docs.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/verify.py",
+        "passed": true
+      },
+      {
+        "name": "prior_PR8_blob:database/verify_capacity.py",
+        "passed": true
+      }
+    ],
+    "passed": 86,
+    "failed": 0
+  },
+  "image_bindings": {
+    "checks": [
+      {
+        "path": "database/image_validation.py",
+        "passed": true
+      },
+      {
+        "path": "database/local.py",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/001_identity.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/002_catalogue.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/003_provenance.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/004_associations_media_personal.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/005_contract_functions.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/006_media_and_deferred_contracts.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/007_security_and_field_contract.sql",
+        "passed": true
+      },
+      {
+        "path": "database/migrations/008_coalesced_deferred_validation.sql",
+        "passed": true
+      },
+      {
+        "path": "database/performance.py",
+        "passed": true
+      },
+      {
+        "path": "database/scento_etl.py",
+        "passed": true
+      },
+      {
+        "path": "database/tests/fixtures.py",
+        "passed": true
+      },
+      {
+        "path": "database/tests/test_deferred_performance.py",
+        "passed": true
+      },
+      {
+        "path": "database/tests/test_foundation.py",
+        "passed": true
+      },
+      {
+        "path": "database/tests/test_image_validation.py",
+        "passed": true
+      },
+      {
+        "path": "database/tests/test_scento_etl.py",
+        "passed": true
+      },
+      {
+        "path": "database/validate_docs.py",
+        "passed": true
+      },
+      {
+        "path": "database/verify.py",
+        "passed": true
+      },
+      {
+        "path": "database/verify_images.py",
+        "passed": true
+      }
+    ],
+    "passed": 20,
+    "failed": 0
+  },
+  "no_runtime_edit": true,
+  "no_timestamp_experiment": true,
+  "historical_rootcause": "UNRESOLVED",
+  "full_replay_acceptance": "Previouslyverified; notrerun",
+  "final_receipt_created": false
+}
