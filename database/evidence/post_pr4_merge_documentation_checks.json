@@ -2,6 +2,7 @@
   "task": "IMP-P1-04 post-PR4reconciliation",
   "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
   "source_merge_checkpoint": "fd9360650a43d8251c97c706a4811a295dad977b",
+  "checked_source_checkpoint": "a94fb2c8e97ddf994d071f5dcd466d3319204da1",
   "markdown_files": 14,
   "frontmatters": 8,
   "wiki_links": 70,

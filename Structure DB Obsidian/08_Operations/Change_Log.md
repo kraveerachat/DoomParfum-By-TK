@@ -428,3 +428,15 @@ clock/capture/fullcohortbenchmark or recoveryexperiment. Historical23514cause re
 verified priorreplay/capture evidence retained. PR8muststayDraft/blocked/no finalreceipt.
 AllDM01–07stillPROPOSED; planningmerge authorizesboundedindependentwork, notnumericpolicy acceptance.
 [[IMP-P1-04_Post_PR4_Reconciliation]] recordsmerge/test/evidence and parentreview/publication gate.
+
+
+## Parent independent checkpoint review — 2026-11-13
+
+Exactmergefd9360650a43d8251c97c706a4811a295dad977b andsource/evidencecheckpoint
+a94fb2c8e97ddf994d071f5dcd466d3319204da1 verified50/50parentofflineassertions,0failures:
+all28testedGitblobhashes,6both-parenthistorychecks,8mainmigrations/6immutable receipts exact.
+PARENT_INDEPENDENT_MERGE_REVIEW.json SHA698cb758e88fab854469da643b691a27fb90469cbdec542de44c374d9b4eba98
+in externalpost_PR4/reliability. InitialreviewHEAD-racecheck detectedlocalcheckpoint advancing;
+reviewthenpinned explicitcommits andpassed, no source/data defect. Parentmade noDBcalls forreview.
+Metadata-onlycloseout follows, no runtime/test/executionreport changes. Samebranchnormalpush and
+PR8Draft/readback follow; historicalcause/correction remainsblocked/no finalreceipt.

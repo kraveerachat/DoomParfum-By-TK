@@ -62,3 +62,15 @@ PR8 remainsOPEN/DRAFT/BLOCKED forhistoricalrootcause/justifiedcorrection, despit
 andcombinedregression. No newfinalreceipt. Nextnewdiagnosticquestion must yieldactualrejected
 unforcedoperands underreproducibleisolatedconditions before runtimefix. No sourcegrant, heldprofile
 change, Production/cloud mutation or realmatchingactivation. Parent exactreview/readback follows.
+
+
+## Parent independent checkpoint review — 2026-11-13
+
+Exactmergefd9360650a43d8251c97c706a4811a295dad977b andsource/evidencecheckpoint
+a94fb2c8e97ddf994d071f5dcd466d3319204da1 verified50/50parentofflineassertions,0failures:
+all28testedGitblobhashes,6both-parenthistorychecks,8mainmigrations/6immutable receipts exact.
+PARENT_INDEPENDENT_MERGE_REVIEW.json SHA698cb758e88fab854469da643b691a27fb90469cbdec542de44c374d9b4eba98
+in externalpost_PR4/reliability. InitialreviewHEAD-racecheck detectedlocalcheckpoint advancing;
+reviewthenpinned explicitcommits andpassed, no source/data defect. Parentmade noDBcalls forreview.
+Metadata-onlycloseout follows, no runtime/test/executionreport changes. Samebranchnormalpush and
+PR8Draft/readback follow; historicalcause/correction remainsblocked/no finalreceipt.
