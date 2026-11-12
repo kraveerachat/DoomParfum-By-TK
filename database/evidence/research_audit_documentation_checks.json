@@ -1,0 +1,26 @@
+{
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "checkpoint": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "changed_paths": [
+    "Structure DB Obsidian/03_Data/Post_PR4_Data_Quality_and_Rights_Audit.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-DATA-002_Post_PR4_Data_Quality.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DATA-002_Research_Evidence.md",
+    "database/RESEARCH_AUDIT.md",
+    "database/evidence/research_audit_documentation_checks.json",
+    "database/evidence/research_audit_results.json",
+    "database/research_audit.py",
+    "database/tests/test_research_audit.py"
+  ],
+  "markdown": 4,
+  "frontmatters": 3,
+  "wiki_links": 6,
+  "local_links": 4,
+  "protected_blobs": 30,
+  "logical_tables": 47,
+  "errors": [],
+  "secret_pattern_candidates": 0,
+  "limits": [
+    "Common secret patterns only",
+    "No browser/Mermaid rendering or external URL re-fetch"
+  ]
+}

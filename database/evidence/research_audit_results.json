@@ -1,0 +1,143 @@
+{
+  "attribution": "Scento — https://www.scento.com/perfume-database",
+  "base_main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "change_notice": "Offline literal crosswalk and unapproved membership/enrichment projections; original arrays/labels preserved; no canonical writes.",
+  "execution_evidence": {
+    "deterministic_files": 8,
+    "full_DB_regression": "NOT_RUN; standalone offline audit only; shared source unchanged",
+    "network": "NONE; no new origin/license authentication",
+    "source_sha256": "fbbf4bf3cb253547feb8e8b0a71a5ea0d41347793a858edf2130396001a9cf93",
+    "tests_sha256": "bf1999b0c6dacb788eb872d9e3d8f32c2d111fcd4ba149cd548d62cf9bdcb5ab",
+    "unit_failed": 0,
+    "unit_methods_passed": 17,
+    "unit_seconds": 0.014
+  },
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "limits": [
+    "Deterministic canonical-ID targets from merged importer, no live DB lookup",
+    "NFKC+lower literal crosswalk differs from historical accent/punctuation-stripping research normalization; neither proves identity",
+    "All original candidate claims/arrays/ordinals preserved in external row-level artifacts; not public Git",
+    "Media metadata only; no binary/MIME/dimension/ownership/current license/pinned-page authentication",
+    "Existing observed revision-fetch failures remain unverified; this offline audit adds no live verification",
+    "All matching flags/holds/rights unchanged; no global catalogue coverage claim"
+  ],
+  "metrics": {
+    "DB_calls": 0,
+    "alias_literal_suggestion_candidates": 0,
+    "brand_candidates": 226,
+    "bytes_acquired": 0,
+    "canonical_writes": 0,
+    "duplicate_hold_profiles": 43,
+    "extra_occurrences": 45,
+    "general_duplicate_profiles": 4,
+    "held_total": 44,
+    "holds_resolved": 0,
+    "indexed_source_profiles": 1479,
+    "matching_eligibility_approvals": 0,
+    "media_candidates": 15,
+    "media_extension_hints": {
+      ".jpg": 14,
+      ".png": 1
+    },
+    "media_reported_dimensions_available": 3,
+    "media_reported_over_pixel_bound": 2,
+    "network_requests": 0,
+    "new_source_or_asset_grants": 0,
+    "no_literal_suggestion_candidates": 134,
+    "normalization_approved": false,
+    "pairwise_leads": 5,
+    "preserved_identity_conflict_rows": 21,
+    "previous_publisher_crosswalk_claims_preserved": 97,
+    "primary_literal_suggestion_candidates": 92,
+    "publisher_houses": 160,
+    "publisher_independence_groups": 2,
+    "raw_selected_note_occurrences": 12448,
+    "repeated_groups": 44,
+    "usable_assets": 0,
+    "usable_pairs": 0
+  },
+  "mode": "OFFLINE_RESEARCH_AUDIT_NO_PROMOTION",
+  "policy_status": "PROPOSED_NOT_APPROVED",
+  "policy_version": "DPT-NOTE-MEMBERSHIP-PROPOSAL-1",
+  "research_input_artifacts": {
+    "asset_extra": {
+      "bytes": 15201,
+      "path": "08_OUTPUTS_APPROVED/bounded_temporal_capture/research/D5_NEW_CANDIDATES_3.json",
+      "sha256": "84f46bdff5c506e90952b1cf74dec9a7d350268f3daae3e8f0338598dc9b27dd"
+    },
+    "asset_manifest": {
+      "bytes": 1051,
+      "path": "08_OUTPUTS_APPROVED/bounded_temporal_capture/research/OUTPUT_MANIFEST.json",
+      "sha256": "3a2edd8f4d882f26bd28b2ae95e2c13694b1e54ef766d81c92eeee2c29168d08"
+    },
+    "assets": {
+      "bytes": 31551,
+      "path": "08_OUTPUTS_APPROVED/bounded_temporal_capture/research/D5_COMBINED_REVIEW_CANDIDATES_15_PROPOSED.csv",
+      "sha256": "2691c69f9018bc3c9f280e3170e77b027cf80dd09dc361057f3152ad3ca9e13a"
+    },
+    "brand_qa": {
+      "bytes": 2881,
+      "path": "08_OUTPUTS_APPROVED/research/brands/D1_DELIVERY_QA.json",
+      "sha256": "be2a11450a3611fbb30aced17091a3312b649a98cd6d791b563db4676764c9f7"
+    },
+    "brands": {
+      "bytes": 175733,
+      "path": "08_OUTPUTS_APPROVED/research/brands/D1_brand_registry_reviewed_220.csv",
+      "sha256": "92c2930ca4d31782bcbbcda6684593ec68cdd663b18659162d0e1e67dd64287b"
+    },
+    "conflicts": {
+      "bytes": 7060,
+      "path": "08_OUTPUTS_APPROVED/research/brands/D1_identity_conflicts.csv",
+      "sha256": "a1809c3c1101f082ef203dd7cb37252048c9600e92b06498910893c68fc7a041"
+    },
+    "held": {
+      "bytes": 61688,
+      "path": "08_OUTPUTS_APPROVED/post_PR5/held_profiles/HELD_44_FORENSIC_REPORT.json",
+      "sha256": "97bc81faeb564705fa08d12d052879f8272d3930bf34ed37f82b72fcb9f44791"
+    },
+    "new_brands": {
+      "bytes": 2686,
+      "path": "08_OUTPUTS_APPROVED/research/brands/D1_new_brand_candidates_6.csv",
+      "sha256": "5e2ac52b9584a541074b8d223362609e897cbca2190f50288cc5f66b93710722"
+    },
+    "pairs": {
+      "bytes": 4610,
+      "path": "08_OUTPUTS_APPROVED/research/relations/D7_pairwise_candidate_queue.csv",
+      "sha256": "9d8672201f2c08eede9f6affcb4d7e2deb3381537140f8f913b89f11e10332ec"
+    }
+  },
+  "source_artifacts": {
+    "LICENSE": {
+      "bytes": 188,
+      "git_blob_sha": "83674148f20fcfc8933a45783e5355188574c5b8",
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    "README.md": {
+      "bytes": 2799,
+      "git_blob_sha": "e8a12b6437ab023a01e33177d9ff28eb61fedadf",
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    "datapackage.json": {
+      "bytes": 4845,
+      "git_blob_sha": "fc901b154579e7cbe1d9a44e5948ed209db181c3",
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    },
+    "houses.csv": {
+      "bytes": 29765,
+      "git_blob_sha": "797d58078969e63fad109bc84f400d5614255d3c",
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    "materials.csv": {
+      "bytes": 87027,
+      "git_blob_sha": "60fa5f70a22bbe46de57f18ee59b2e61d134ab6a",
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    "perfumes.csv": {
+      "bytes": 780683,
+      "git_blob_sha": "4dc99cc840566f98c57be5aa02437960371ca7de",
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    }
+  },
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "task": "DPT-DATA-002"
+}
