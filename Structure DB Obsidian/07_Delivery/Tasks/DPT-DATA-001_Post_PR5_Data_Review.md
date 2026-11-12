@@ -104,3 +104,28 @@ This continuation changes only task/evidence metadata. No DB/Docker/runtime/netw
 acquisition, receipt rewrite or decision approval. Metadata-only commit/push and resulting head are
 read back in PR/external publication metadata. Other Draft PRs remain separate; Human Owner alone
 reviews/merges. Parent owns shared D1–D9/ZIP. PRODUCTION_MUTATION=NO.
+
+
+## Bounded note-media metadata increment — start, 2026-11-12
+
+IN PROGRESS; existingPR7/codex/p1-data-review starts888afbbfb9651cbfcd479e21cbb5d48df9135ccf
+on main55d39cd. Owner-authorized independent research produced3metadata-only illustration candidates.
+Plan: independently verify manifests/baseline hashes and fail-closed rights states, publish a new
+sanitary data note plus essential task/evidence/source/change/run links on this same branch.
+Preserve central held report, all44holds, old source/test evidence and existing immutable receipt.
+No binary/thumbnail acquisition, runtime/DB, grant/promotion, canonical mapping, merge or Production.
+Parent owns ledger/singleZIP; connector publication remains pending actual MCP readback.
+
+
+## Bounded media increment review-ready checkpoint — 2026-11-12
+
+Researcher35QA plus independent51offlineartifactchecks passed; sixmanifest/fivebaseline hashes
+match, old12rows unchanged. Proposedqueue15/46historicalRESEARCH only, all3JPEG unsupportedPR6,
+2reportedpixelbounds exceeded;3immutablepinsNOT_VERIFIED.0assetbytes/grants/usablepairs/hold
+resolutions;44holds and centralheldreport/oldreceipt/sourceevidence unchanged.
+Current wholePR9Markdown/9frontmatters/62wiki checks pass,195file/hash/docassertions0errors.
+No DB/runtime/sourceownership/binary/visual/immutablecontent validation implied.
+Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; existing preconfigured
+authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
+install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
+parent owns D1–D9/singleZIP. No newreceipt or Production mutation.

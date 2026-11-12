@@ -79,3 +79,31 @@ This continuation changes only task/evidence metadata. No DB/Docker/runtime/netw
 acquisition, receipt rewrite or decision approval. Metadata-only commit/push and resulting head are
 read back in PR/external publication metadata. Other Draft PRs remain separate; Human Owner alone
 reviews/merges. Parent owns shared D1–D9/ZIP. PRODUCTION_MUTATION=NO.
+
+
+## Bounded D5 metadata increment — 2026-11-12
+
+Dedicated [[Bounded_Note_Media_Candidate_Increment]] adds a sanitized summary of3metadata candidates
+(Nutmeg/Blackcurrant/Juniper). Proposed candidatequeue15/46historicalRESEARCH only; no58/420claim.
+Researcher35/35offline QA and independent51/51artifact assertions pass; sixoutputmanifest entries
+and fivebaseline inputhashes verified, old12rows retained. Allper-use flagsunknown/blocked,
+0assetbytes/grants/usablepairs/holdresolutions; all44holds and originalobservations untouched.
+All3JPEG unsupportedPR6,2reportedpixelproducts over4000000; threepinnedoldidfetchfailures explicitly
+NOT_VERIFIED. No binary/visual/ownership/liveorigin/immutablecontent/DB/runtime tests claimed.
+NewresearchmanifestSHA256 and independentreview stored externally; prior forensic/research/review
+results and immutable receipt remain attributed and unmodified. Finaldocs/hash/receipt checks and
+samebranchpublication readback follow; parent owns D1–D9/singleZIP.
+
+
+## Bounded media increment review-ready checkpoint — 2026-11-12
+
+Researcher35QA plus independent51offlineartifactchecks passed; sixmanifest/fivebaseline hashes
+match, old12rows unchanged. Proposedqueue15/46historicalRESEARCH only, all3JPEG unsupportedPR6,
+2reportedpixelbounds exceeded;3immutablepinsNOT_VERIFIED.0assetbytes/grants/usablepairs/hold
+resolutions;44holds and centralheldreport/oldreceipt/sourceevidence unchanged.
+Current wholePR9Markdown/9frontmatters/62wiki checks pass,195file/hash/docassertions0errors.
+No DB/runtime/sourceownership/binary/visual/immutablecontent validation implied.
+Existing GitHubCLI2.97.0 atC:/Program Files/GitHub CLI/gh.exe was verified; existing preconfigured
+authorization provides --body-file fallback afterMCPinternalerror, no login/credentialextraction/
+install/config change. Normal samebranchcommit/push and exactPRbody/head/state readback follow;
+parent owns D1–D9/singleZIP. No newreceipt or Production mutation.

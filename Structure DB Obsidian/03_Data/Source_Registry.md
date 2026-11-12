@@ -97,3 +97,12 @@ RESEARCHlabelcandidates;0bytes/displayapprovals/bottlegrants. Officialpresence/w
 approve canonicalparentidentity or automatedreuse. The third-party-derived description-preference
 dataset opportunity wasrejected;0new usablepairwiseevidence. All44Scentoholds persist. No permission
 flag, originalsourceclaim, rawdataset or ownerdecision ischangedbythis researchPR.
+
+
+## Bounded illustration queue increment — 2026-11-12
+
+[[Bounded_Note_Media_Candidate_Increment]] records3additional public file-page metadata candidates.
+Proposed queue15/46historicalRESEARCHlabels only; allper-use statesUNKNOWN_NOT_APPROVED_BLOCKED.
+All3JPEG are unsupported by currentPR6;2reportedpixelcounts exceed itsbound;3immutablepins
+NOT_VERIFIED. No sourcegrant/assetbytes/displayapproval or acquisition authorization. Old12queue
+records remain unchanged; all44holds and pairwise/source evidence boundaries preserved.

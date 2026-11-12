@@ -15,6 +15,18 @@ source_of_truth: "../../README.md"
 
 # Change Log — DoomParfum By TK
 
+## 2026-11-12 bounded note-media metadata increment
+
+ExistingPR7 adds3metadata-only note-illustration candidates; proposed queue15/46historicalRESEARCH
+labels only, not58/420coverage or permissions. Researcher35QA plus independent51artifactchecks
+pass; sixmanifest/fivebaseline hashes preserved. All3JPEG unsupportedPR6,2over4000000reportedpixels;
+threeimmutableoldidfetchfailuresNOT_VERIFIED.0bytes/grants/usablepairs/holdresolutions,44holds
+unchanged. Central held report/oldreceipt/source evidence preserved. Dedicated newdata note and
+essentialtask/evidence/registry links only; no runtime/DB/image acquisition/Production/merge.
+PublicREST fallback verifies GitHub; MCPmetadata publication pendingactualsuccessfulupdate/readback.
+Parent owns D1–D9/singleZIP. [[Bounded_Note_Media_Candidate_Increment]].
+
+
 > **Document Type:** Project Evolution & Specification Change History
 > **Source Baseline:** `../README.md`
 > **Status:** Active Change Log
