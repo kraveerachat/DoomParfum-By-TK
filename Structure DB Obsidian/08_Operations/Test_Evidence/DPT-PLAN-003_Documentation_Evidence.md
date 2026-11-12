@@ -11,6 +11,36 @@ source_of_truth: "../../../README.md"
 
 # DPT-PLAN-003 — Planning Verification and Parallel-PR Evidence
 
+## S3 current Owner-review readiness — 2026-11-12
+
+Verified START/publication head576889923d9f2d616cda88e53193f7f4d738be84 and unchanged comparator
+origin/main55d39cd619fa6c1ae70521720aa734d632a2083d. GitHub readback: PR #4 OPEN/DRAFT/unmerged/
+mergeable=true; PR #3 and PR #5 MERGED at a908711fb4f37a12fbec3665a461b75c288c7dab and55d39cd.
+The existing post-PR5 reconciliation already provides the concise DM-01..07 matrix; its semantics,
+all seven PROPOSED statuses, original ADR rows and existing immutable receipt are preserved.
+
+Current checks:23 Markdown paths,22 frontmatters,273 wiki links,9 local links,50 future acceptance
+specifications (runtime NOT RUN),11 exact-fraction arithmetic oracles,0 errors/secret-pattern candidates.
+Seven main-shared paths pass14/14 both-order three-way merge-file simulations with identical merged
+content against true base9636ee740cdcd3d60633ac11745366814d1af05c. Simulation is not a merge or a
+promise about later heads. Pinned merged governance/plan/adapter/evidence inputs11 SHA-256 fingerprints
+recorded. Git diff --check passes; no source/migration/data-right/receipt/owner-decision change.
+
+Review-ready means planning documentation only:1479 real profiles still have matching_eligible=false;
+44 draft holds remain;1435 exact-source approvals do not establish closed-list absence or eligibility.
+Both real B2 strength and presence routes lack compatible reviewed inputs. Structural fit, Data
+Confidence and direct pair evidence stay separate; private inputs cannot seed public outputs/caches.
+Human Owner must decide DM-01..07 and merge this plan before separately scoped matching implementation.
+No new source/image rights, DB execution, external acquisition, production change or second receipt.
+
+S3 changes are checkpoint metadata only. Existing S2 independent source review remains attributed to
+968cd230ec19894c57defa920d1cb5650c37be28; no new code review or matching-runtime result is claimed.
+Final metadata commit/push/readback and concise PR-description matrix follow; actual resulting HEAD
+is recorded in live PR and external readiness evidence after the event. Parent owns D1-D9/ZIP updates.
+An initial fingerprint helper used nonexistent P2_* plan filenames and exited128; canonical names
+were found by git tree inspection and the corrected helper passed. This was a local diagnostic-path
+error, no skipped validation or modified source. Mermaid/rendering/external-link checks NOT RUN.
+
 ## S2 exact checkpoint verified / metadata closeout — 2026-11-12
 
 Parent independent readback verified source checkpoint968cd230ec19894c57defa920d1cb5650c37be28,
