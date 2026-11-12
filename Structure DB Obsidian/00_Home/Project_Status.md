@@ -27,7 +27,7 @@ remain external. These currentevents supersede historical pendingmerge statement
 guardchange. Independentreadonlypilot→isolatedcontainer DBrestore/syntheticobjectsubset passes15
 controls; sourceunchanged, realimages0. [[IMP-P1-04_Capacity_and_Recovery_Evidence]] records failures,
 counts/ACL/proofdetails and explicit actual-image/offsite/RPO/provider limits. No finalP104receipt;
-Draftpublication in progress, task notreadymerge. Production/cloud/mainmutation/agentmerge=NO.
+[PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) OPEN/DRAFT; source53fec48 exactreviewed, task notreadymerge. Production/cloud/mainmutation/agentmerge=NO.
 
 
 ## Current verified checkpoint — 2026-11-11 / IMP-P1-02

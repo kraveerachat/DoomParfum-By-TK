@@ -84,3 +84,14 @@ publication verification follows in the task. Original migrations/importer/harne
 No final immutable receipt: IMP-P1-04 remains partial/blocked pending focused timestamp diagnosis and
 full-replay acceptance, plus the separately gated actual-image integration. No owner decision, source
 grant, cloud/provider, retention/RPO/RTO, production mutation or merge is approved here.
+
+## Partial Draft publication — not ready to merge
+
+[PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) created OPEN/DRAFT on this taskbranch.
+Source/evidencecheckpoint53fec48fd73ed4f1574c55e2b5535c56475d85f7 independentlyverified74/74checks;
+all22tested sourcehashes match committedbytes. Report5fd8abd4186128dab276aa146abf9fff99c083b631c5e921b37601645c5846dc.
+Protectedoriginals preserved; testCRLF→LF normalization independentlyverified text/AST-equivalent.
+Finalmetadata source/evidenceblobs unchanged.8Markdown/5frontmatters/35wiki/9local/47table checks
+passed0errors/0secretcandidates; exact18changedpaths in capacity_documentation_checks.json.
+Fullreplay23514 remainsBLOCKED, no prematurefinalreceipt; recovery004subset/170regression evidence
+isnot a waiver. Human Ownerreviews; resultingpublicationHEAD verified afterpush inPR/externalhandoff.

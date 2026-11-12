@@ -31,3 +31,11 @@ Earlier development failures and superseded comparator execution remain separate
 No overall merge readiness: full replay23514 and actual-image/offsite/provider gates remain blocked.
 No final task receipt is created prematurely. Exact checkpoint verification follows source commit;
 Human Owner alone decides next scope and merges. No production/cloud/force/main operation.
+
+Exact checkpoint53fec48fd73ed4f1574c55e2b5535c56475d85f7 independently verified74/74checks;
+22tested source hashes match committed bytes; savedCRLF tests normalize exactly to reviewed LF/AST.
+Sanitized public3benchmark/4recovery reports match originals after removing only lease identifiers.
+Counter driver checked with method failure/skip/setup-error controls. Review SHA-256
+5fd8abd4186128dab276aa146abf9fff99c083b631c5e921b37601645c5846dc.
+Suitable for PARTIAL Draft PR8 publication, never overall merge readiness. Later metadata retains
+review only while code/test/schema/execution evidence stays unchanged. No finalreceipt yet.

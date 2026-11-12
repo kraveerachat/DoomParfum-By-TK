@@ -116,3 +116,14 @@ FinalpublishablecanonicalLF regression170/170PASS126.110s,0fail/error/skip. Full
 capacity_test_results.json; no originalsource/harness/migration changes. Recoverytestlineendingsonly
 normalized forGitportablehashes; reviewedlogicalcontent unchanged. Finaldocs/diff/secret-pattern/model
 checks and same-taskDraftpublication follow; fullreplay23514BLOCKED remains, no finalreceipt.
+
+## Partial Draft publication — not ready to merge
+
+[PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) created OPEN/DRAFT on this taskbranch.
+Source/evidencecheckpoint53fec48fd73ed4f1574c55e2b5535c56475d85f7 independentlyverified74/74checks;
+all22tested sourcehashes match committedbytes. Report5fd8abd4186128dab276aa146abf9fff99c083b631c5e921b37601645c5846dc.
+Protectedoriginals preserved; testCRLF→LF normalization independentlyverified text/AST-equivalent.
+Finalmetadata source/evidenceblobs unchanged.8Markdown/5frontmatters/35wiki/9local/47table checks
+passed0errors/0secretcandidates; exact18changedpaths in capacity_documentation_checks.json.
+Fullreplay23514 remainsBLOCKED, no prematurefinalreceipt; recovery004subset/170regression evidence
+isnot a waiver. Human Ownerreviews; resultingpublicationHEAD verified afterpush inPR/externalhandoff.

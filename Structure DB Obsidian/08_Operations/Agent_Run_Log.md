@@ -417,3 +417,7 @@ Parentactualrestore00415controls and sourcefreshfullregression evidence separate
 preflight failedbeforeDB; restartedexistingDesktop/container, noreinstall/resetpilot. CanonicalLF
 tests verifiedforportablehashes. No finalP104receipt while fullreplayblocked. SeeTask/Evidenceforactual
 commands/results/HEAD/PR. No automaticmerge/source-rights expansion/cloud/productionmutation.
+
+P104publication: PR8OPEN/DRAFT, source53fec48exactreview74checks/22hashes verified; metadataonly
+closeout, no newreceipt ormergereadinessclaim.170regressionand recovery15controls pass; fullreplay
+23514blockedremains. Finalhead/readback and singleLATESTZIP recordedexternally afterpush.
