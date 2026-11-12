@@ -142,3 +142,9 @@ benchmark/independent recovery drivers. Fullfresh1479 committed246.226887s; full
 failed23514 and remains a blocker. Independent DB plus owned synthetic-object restore passes under
 the declared local boundary; actual image/offsite/provider recovery is not established. Separate
 capacity_* evidence retains failed attempts. No original migration/importer/security contract changes.
+
+
+Latest IMP-P1-04 follow-up: [temporal diagnosis](../Structure%20DB%20Obsidian/08_Operations/Test_Evidence/IMP-P1-04_Temporal_Diagnosis.md).
+Current original-guard fullreplay/zero-new inventory and175-method regression verified; historical
+intermittent timestamp cause remains unresolved. PR8 stays Draft/blocked, with no runtimefix or
+validation relaxation. Earlier capacity reports are retained historical evidence.

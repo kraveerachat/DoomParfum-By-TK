@@ -421,3 +421,25 @@ commands/results/HEAD/PR. No automaticmerge/source-rights expansion/cloud/produc
 P104publication: PR8OPEN/DRAFT, source53fec48exactreview74checks/22hashes verified; metadataonly
 closeout, no newreceipt ormergereadinessclaim.170regressionand recovery15controls pass; fullreplay
 23514blockedremains. Finalhead/readback and singleLATESTZIP recordedexternally afterpush.
+
+
+## 2026-11-12 — Owner-review preparation and bounded PR8 diagnosis
+
+TOOL EXECUTION: existing Git/GitHubMCP, PowerShell, Python3.11.9/PyYAML, guarded Docker PostgreSQL
+16.15 and official PG16docs; independent parallel read-only reviewers. No installs/config/auth/paid
+API/newsource integration. PR4/6/7 reviewers updated same Draftbranches and verified source/review/
+rights/hash/doc evidence. Parent measured disposable dpt_scento_test only; persistentpilot read-only
+backup to separate no-network tasktarget. No original migration/importer/runtime/receipt modification.
+
+Historicalactual2failed INSERT IDs recovered privately; actual comparison operands absent. Bounded
+001/002replays do not reproduce failure; originalfunction restored exact. Original003SQL pair both
+COMMIT, strict staginghash oracle fails and remains recorded. Narrow exact44heldtimestamp comparator
+independently reviewed;004fullreplay0newrecords/integrity verified107.147241s. Full175/175PASS150.422s
+(170old+5newrealDBguard/rights controls; all23sourcehashes fresh). Recovery00515/15PASS30.093s, source
+unchanged/49tables andsecurity exact; stopped guardedrestoretarget/volume preserved. No realimages.
+Historical reports/rawlogs restored/preserved; private logs/dumps/passwords excluded publicGit/ZIP.
+
+PR8stillblocked for exacttemporaldiagnosis/justifiedfix, not falsely reported as failing current
+replay. No timestampoffset/retry/guard relaxation/hostclockmutation. No finalreceipt. Publication
+checks/sourcecheckpoint/PRhead readback and consolidatedhandoff recorded after actual events.
+PRODUCTION_MUTATION=NO; HUMAN_MERGE_REQUIRED=YES. [[IMP-P1-04_Temporal_Diagnosis]].

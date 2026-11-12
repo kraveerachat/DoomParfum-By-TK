@@ -124,3 +124,19 @@ Human Owner alone merges. No production/cloud/ETL/UI/main/force-push/auto-merge 
 
 ## DPT-PLAN-002 live Git status reconciliation — 2026-11-11 (PROPOSED)
 GitHub preflight confirms Planning PR #1 **MERGED** (2026-11-10; main `bffb2fab1918dc5221a6c5da7920168bcae263ca`), superseding the historical OPEN/DRAFT status above. Implementation PR #2 was MERGED at 2026-11-11 03:53 Bangkok (merge SHA 9636ee740cdcd3d60633ac11745366814d1af05c), not a proof of ETL or production readiness. New DPT-PLAN-002 is a separate **docs-only** research/planning branch; owner Gate P review pending. No new source, image, ETL or production authorization is inferred. See [[DPT-PLAN-002_Focused_Brand_Discovery]] and [[DPT-PLAN-002_Focused_Catalogue_Acquisition_and_Automation]].
+
+
+## 2026-11-12 owner-review readiness and temporal diagnosis checkpoint
+
+Main remains55d39cd619fa6c1ae70521720aa734d632a2083d. PR4 e0d770d / PR6
+983b73a / PR7 888afbb remain OPEN/DRAFT/mergeable at readback, ready for bounded Human Owner review.
+DM01–07 allPROPOSED, both real accord routes unavailable; all1479matching flags remainfalse.
+PR6historical20/44/129test hashes reverified (140metadata assertions); PR7all44holds retained,
+183metadata assertions/rights unchanged. No new imagebytes, permissions or usablepair relations.
+
+PR8current fullreplay VERIFIED107.147241s with0all49rowcountdeltas; exact48tablehashes and2059staging
+substantive rows preserved, only44expectedheldupdated_at touches. Full175/175PASS150.422s; recovery
+00515/15PASS30.093s. Historical23514rows recovered but actual clock operands/rootcause unavailable;
+no speculative runtimefix. PR8remains partial-blocked/Open/Draft/no finalreceipt.
+[[IMP-P1-04_Temporal_Diagnosis]] records full evidence and strict003comparisonfailure. Owner alone
+reviews/merges; no Production/cloud/main mutation, new source rights or accepted recovery targets.

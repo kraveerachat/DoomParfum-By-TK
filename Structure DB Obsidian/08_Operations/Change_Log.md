@@ -259,3 +259,15 @@ Taskpartial/blocked; no finalreceipt until unmetacceptance resolved. No cloud/pr
 P104publication: PR8OPEN/DRAFT, source53fec48exactreview74checks/22hashes verified; metadataonly
 closeout, no newreceipt ormergereadinessclaim.170regressionand recovery15controls pass; fullreplay
 23514blockedremains. Finalhead/readback and singleLATESTZIP recordedexternally afterpush.
+
+
+## 2026-11-12 — IMP-P1-04 temporal diagnosis and review preparation
+
+Start6dc15a2e00ef979b0cbc39a72d461ebcd8533d47; comparator main55d39cd. Actual historical failing
+rows recovered, temporal operands unavailable. Added5guard/rights regression controls only; importer/
+all original migrations/runtime/decisions/receipts unchanged. Full175/175pass150.422s; recovery005
+15/15pass30.093s. Current fullreplay004107.147241s passes zero-new/substantive integrity with exact44
+heldstagingupdated_at touches; strict003comparisonfailure and old23514reports retained.
+Rootcause/correction unresolved, PR8Draftblocked/no receipt. [[IMP-P1-04_Temporal_Diagnosis]].
+PR4/6/7 refreshed in their own branches, no agentmerge; externalD1–D9/singleLATESTZIP follows actual
+publication. Current checkpointSHA recorded after commit/readback; production mutationNO.

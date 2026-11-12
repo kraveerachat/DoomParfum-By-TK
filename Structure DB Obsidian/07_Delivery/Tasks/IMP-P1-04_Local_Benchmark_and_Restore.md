@@ -127,3 +127,44 @@ Finalmetadata source/evidenceblobs unchanged.8Markdown/5frontmatters/35wiki/9loc
 passed0errors/0secretcandidates; exact18changedpaths in capacity_documentation_checks.json.
 Fullreplay23514 remainsBLOCKED, no prematurefinalreceipt; recovery004subset/170regression evidence
 isnot a waiver. Human Ownerreviews; resultingpublicationHEAD verified afterpush inPR/externalhandoff.
+
+
+## Owner-requested temporal diagnosis checkpoint — 2026-11-12
+
+Session starts at 6dc15a2e00ef979b0cbc39a72d461ebcd8533d47; freshly fetched origin/main
+55d39cd619fa6c1ae70521720aa734d632a2083d. PR8 OPEN/DRAFT; full replay remains blocked.
+Plan: capture exact failing row identifiers, reviewed/statement/transaction timestamps and the
+single comparison clock in an equivalent diagnostic guard ONLY in disposable dpt_scento_test.
+Preserve every original migration, future-review rejection, source/mapping rights and prior reports.
+Only after demonstrated cause: smallest approved-scope ETL correction, independent review, future
+review negative/regression controls, full import/replay and recovery. No backdating, disabled
+triggers, production/persistent-pilot mutation, new rights, merge or main write. Other reviewers
+inspect PR4/6/7 independently without DB workloads during controlled timing. Expected evidence:
+raw private diagnostic trace, sanitized cause and tests, exact hashes, full replay zero new
+canonical/source records and inventory integrity; D1–D9 and one consolidated ZIP at closeout.
+
+
+## Temporal diagnosis results — current replay verified, defect unresolved
+
+Recovered actual historical failing INSERTs: armaf-match-point/notes.base at2026-11-11 16:18:32.241UTC
+and armaf-club-de-nuit-maleka/name at19:29:32.535UTC. Exact NEW.reviewed_at/comparisonclock values
+were not logged and remain unavailable. Capped diagnostics001/002 reproduce0failures; both original
+guards restored exact. No speculative importer, clock, migration, rights or validation change.
+
+Original-guard003fresh250.550492s/replay106.022935s bothCOMMIT; strict raw49tablehash oracle fails
+only staging_records (report retained, not an SQL failure). Independently reviewed004 comparison
+verifies complete fullreplay107.147241s: zero all49rowcountdeltas, all48othercontenthashes exact,
+all2059staging substantive rows exact, only exact44heldupdated_at timestamps strictlyadvance,
+security/roles/guard/input hashes exact/markers0. Matching0/held44 persist; no silent normalization.
+
+New test_review_timestamps.py supplies5actual guard/rights/noop/rollback controls; full175/175PASS
+150.422s,0fail/error/skip,23freshsourcehashes. Independent static source review and15offline
+measurement checks pass; reviewer noDBcalls. Recovery00515/15PASS30.093s/all49tables/security/source
+unchanged/2SYNTHETICobjects9896bytes/0realimages; independent target stopped, private volume retained.
+Previous execution reports/logs/receipts preserved. Details [[IMP-P1-04_Temporal_Diagnosis]].
+
+Current-run fullreplay acceptance VERIFIED; historical intermittent defect/rootcause/correction
+UNRESOLVED. Task/PR8 remain partial-blocked OPEN/DRAFT; no finalreceipt. No runtime fix justified by
+missing operands. Next bounded diagnosis needs reproducible exact trace before correction; no
+backdating/trigger suppression/tolerance/hosttime change. PR4/6/7 ownerreview remains independent.
+Publication checkpoint and resultingHEAD recorded after actual commit/push/readback, not invented.

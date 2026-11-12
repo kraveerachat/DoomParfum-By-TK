@@ -1,0 +1,793 @@
+{
+  "task": "IMP-P1-04",
+  "at_utc": "2026-11-12T14:01:47.011898+00:00",
+  "review_readiness": "BLOCKED_UNRESOLVED_INTERMITTENT_TIMESTAMP_DEFECT",
+  "runtime_fix": "NONE; rootcause/temporaloperands notdemonstrated; no speculative timestamp substitution/retry/guard change",
+  "preserved_originals": "All main migrations, importer, runtime harness, decisions and receipts unchanged; original failure reports retained",
+  "historical_failing_rows": [
+    {
+      "server_error_time_utc": "2026-11-11 16:18:32.241",
+      "source_key": "armaf-match-point",
+      "field": "notes.base",
+      "entity_id": "eddf28d2-37bc-56c0-8c3b-9fb38565e2fd",
+      "observation_id": "9474d650-19fd-5496-9a28-479a19f808f8",
+      "review_expression": "statement_timestamp()",
+      "actual_reviewed_at": null,
+      "actual_comparison_clock": null,
+      "delta_microseconds": null,
+      "operand_status": "NOT_RECORDED; errorlog time is neither operand"
+    },
+    {
+      "server_error_time_utc": "2026-11-11 19:29:32.535",
+      "source_key": "armaf-club-de-nuit-maleka",
+      "field": "name",
+      "entity_id": "d54fff25-fba7-5edd-888b-2f9d77a8f1bc",
+      "observation_id": "42470420-2092-5fe2-a807-423a99e4bc8b",
+      "review_expression": "statement_timestamp()",
+      "actual_reviewed_at": null,
+      "actual_comparison_clock": null,
+      "delta_microseconds": null,
+      "operand_status": "NOT_RECORDED; errorlog time is neither operand"
+    }
+  ],
+  "private_logs_sha256": "dc9794b425a0453f91b7c93a754e73bf98f34b389f5ea4ba9c9413c01acb2b87",
+  "private_extracted_errors_sha256": "493b0fef515564abed17f40072dc837cb4f790ade73e6d634a9bcfa4bd6aafe7",
+  "diagnostic001": {
+    "source_report_sha256": "c7829867a584b8e45ccdebb8fdac98f9286f2d922afd5c2d84eed72ab50549eb",
+    "guard_restored_exact": true,
+    "runs": [
+      {
+        "attempt": 1,
+        "label": "fresh",
+        "client_seconds": 311.5150000001304,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 2059,
+            "new_staging_records": 2059
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "label": "replay",
+        "client_seconds": 153.56199999991804,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      },
+      {
+        "attempt": 3,
+        "label": "replay",
+        "client_seconds": 151.375,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      },
+      {
+        "attempt": 4,
+        "label": "replay",
+        "client_seconds": 151.3279999999795,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      }
+    ]
+  },
+  "diagnostic001_comparison_limit": "whole49table flag is EMPTYbeforefresh vs FULLafter, not replayintegrity; noerrorbranchtrace",
+  "diagnostic002": {
+    "source_report_sha256": "4217a2ee14340bd8e17c92231bfeb1754c8da8baac1a4751c0d398c006dde590",
+    "guard_restored_exact": true,
+    "runs": [
+      {
+        "attempt": 1,
+        "label": "replay",
+        "client_seconds": 155.81199999991804,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      },
+      {
+        "attempt": 2,
+        "label": "replay",
+        "client_seconds": 157.78099999995902,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      },
+      {
+        "attempt": 3,
+        "label": "replay",
+        "client_seconds": 155.10999999986961,
+        "returncode": 0,
+        "metrics": [
+          {
+            "approved": 1435,
+            "matching": 0,
+            "inventory": {
+              "notes": 420,
+              "brands": 160,
+              "perfumes": 1479,
+              "perfume_notes": 11972,
+              "source_records": 2059,
+              "staging_records": 2059,
+              "ingestion_batches": 1,
+              "validation_results": 8236,
+              "entity_source_links": 2059,
+              "source_observations": 10489,
+              "canonical_selections": 8845
+            },
+            "dpt_etl_metrics": true,
+            "batch_accounting": {
+              "perfumes": 1479,
+              "source_rows": 2059,
+              "review_perfumes": 44,
+              "promoted_perfumes": 1435,
+              "quarantined_perfumes": 0
+            },
+            "new_source_records": 0,
+            "new_staging_records": 0
+          }
+        ]
+      }
+    ]
+  },
+  "diagnostic002_raw_different_tables": [
+    "dpt.staging_records"
+  ],
+  "original_guard_pair003": {
+    "source_report_sha256": "8e463b297e006fdc0edcb0246cb6dce1226c152819162e3e89fc11a7a6ff2887",
+    "runs": [
+      {
+        "label": "full_fresh",
+        "cohort": "full",
+        "perfumes": 1479,
+        "raw_note_occurrences": 12448,
+        "backend_seconds": 250.550492,
+        "guarded_client_seconds": 250.665055,
+        "function_stats": {
+          "identity_guard": {
+            "calls": 6774,
+            "self_ms": 150.511,
+            "total_ms": 150.511
+          },
+          "validate_model": {
+            "calls": 1,
+            "self_ms": 8592.62,
+            "total_ms": 8592.62
+          },
+          "selection_audit": {
+            "calls": 8845,
+            "self_ms": 822.154,
+            "total_ms": 11055.91
+          },
+          "selection_guard": {
+            "calls": 8845,
+            "self_ms": 2275.236,
+            "total_ms": 2275.236
+          },
+          "serialize_write": {
+            "calls": 65461,
+            "self_ms": 38084.399,
+            "total_ms": 38084.399
+          },
+          "validate_images": {
+            "calls": 1,
+            "self_ms": 0.332,
+            "total_ms": 0.332
+          },
+          "check_active_row": {
+            "calls": 19736,
+            "self_ms": 15484.333,
+            "total_ms": 15484.333
+          },
+          "observation_guard": {
+            "calls": 10489,
+            "self_ms": 3482.509,
+            "total_ms": 3482.509
+          },
+          "compatible_targets": {
+            "calls": 47823,
+            "self_ms": 1337.673,
+            "total_ms": 1337.673
+          },
+          "materialize_scalar": {
+            "calls": 8845,
+            "self_ms": 895.101,
+            "total_ms": 6207.526
+          },
+          "schedule_validation": {
+            "calls": 53110,
+            "self_ms": 32162.224,
+            "total_ms": 32162.224
+          },
+          "staging_capture_guard": {
+            "calls": 2059,
+            "self_ms": 49.886,
+            "total_ms": 49.886
+          },
+          "validate_all_deferred": {
+            "calls": 109726,
+            "self_ms": 135034.403,
+            "total_ms": 143627.356
+          }
+        },
+        "observed": {
+          "approved": 1435,
+          "matching": 0,
+          "inventory": {
+            "notes": 420,
+            "brands": 160,
+            "perfumes": 1479,
+            "perfume_notes": 11972,
+            "source_records": 2059,
+            "staging_records": 2059,
+            "ingestion_batches": 1,
+            "validation_results": 8236,
+            "entity_source_links": 2059,
+            "source_observations": 10489,
+            "canonical_selections": 8845
+          },
+          "dpt_etl_metrics": true,
+          "batch_accounting": {
+            "perfumes": 1479,
+            "source_rows": 2059,
+            "review_perfumes": 44,
+            "promoted_perfumes": 1435,
+            "quarantined_perfumes": 0
+          },
+          "new_source_records": 2059,
+          "new_staging_records": 2059
+        },
+        "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+        "pending_markers": 0
+      },
+      {
+        "label": "full_replay",
+        "cohort": "full",
+        "perfumes": 1479,
+        "raw_note_occurrences": 12448,
+        "backend_seconds": 106.022935,
+        "guarded_client_seconds": 106.158384,
+        "function_stats": {
+          "identity_guard": {
+            "calls": 44,
+            "self_ms": 1.437,
+            "total_ms": 1.437
+          },
+          "validate_model": {
+            "calls": 1,
+            "self_ms": 8694.583,
+            "total_ms": 8694.583
+          },
+          "selection_audit": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "selection_guard": {
+            "calls": 8845,
+            "self_ms": 2176.602,
+            "total_ms": 2176.602
+          },
+          "serialize_write": {
+            "calls": 49886,
+            "self_ms": 23241.646,
+            "total_ms": 23241.646
+          },
+          "validate_images": {
+            "calls": 1,
+            "self_ms": 0.278,
+            "total_ms": 0.278
+          },
+          "check_active_row": {
+            "calls": 44,
+            "self_ms": 11.322,
+            "total_ms": 11.322
+          },
+          "observation_guard": {
+            "calls": 10489,
+            "self_ms": 3457.147,
+            "total_ms": 3457.147
+          },
+          "compatible_targets": {
+            "calls": 34844,
+            "self_ms": 969.375,
+            "total_ms": 969.375
+          },
+          "materialize_scalar": {
+            "calls": 0,
+            "self_ms": 0,
+            "total_ms": 0
+          },
+          "schedule_validation": {
+            "calls": 39551,
+            "self_ms": 19736.78,
+            "total_ms": 19736.78
+          },
+          "staging_capture_guard": {
+            "calls": 44,
+            "self_ms": 1.474,
+            "total_ms": 1.474
+          },
+          "validate_all_deferred": {
+            "calls": 37579,
+            "self_ms": 35486.376,
+            "total_ms": 44181.238
+          }
+        },
+        "observed": {
+          "approved": 1435,
+          "matching": 0,
+          "inventory": {
+            "notes": 420,
+            "brands": 160,
+            "perfumes": 1479,
+            "perfume_notes": 11972,
+            "source_records": 2059,
+            "staging_records": 2059,
+            "ingestion_batches": 1,
+            "validation_results": 8236,
+            "entity_source_links": 2059,
+            "source_observations": 10489,
+            "canonical_selections": 8845
+          },
+          "dpt_etl_metrics": true,
+          "batch_accounting": {
+            "perfumes": 1479,
+            "source_rows": 2059,
+            "review_perfumes": 44,
+            "promoted_perfumes": 1435,
+            "quarantined_perfumes": 0
+          },
+          "new_source_records": 0,
+          "new_staging_records": 0
+        },
+        "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+        "pending_markers": 0
+      }
+    ],
+    "sql_status": "BOTH_COMPLETE_COMMITTED",
+    "strict_comparison_status": "FAILED_ONLY_STAGING_CONTENT_HASH; retained overstrict oracle failure, not SQL failure",
+    "source_report_status": "FAILED_STOPPED",
+    "inventory_equal": true,
+    "all49_counts_zero_delta": true,
+    "raw_different_tables": [
+      "dpt.staging_records"
+    ],
+    "security_and_roles_equal": true
+  },
+  "original_guard_integrity004": {
+    "source_report_sha256": "d3e42c6a07ec51e66ae473fa906db314c5c1a5f6fe5e3010e451d36aeeca16d2",
+    "script_sha256": "6f4d4d99734b952337e0583177d135a7f9c63079951d06dcbd004a6b87c8b1d5",
+    "source_artifacts": {
+      "perfumes.csv": {
+        "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+        "bytes": 780683,
+        "git_blob_sha": "4dc99cc840566f98c57be5aa02437960371ca7de"
+      },
+      "houses.csv": {
+        "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18",
+        "bytes": 29765,
+        "git_blob_sha": "797d58078969e63fad109bc84f400d5614255d3c"
+      },
+      "materials.csv": {
+        "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+        "bytes": 87027,
+        "git_blob_sha": "60fa5f70a22bbe46de57f18ee59b2e61d134ab6a"
+      },
+      "LICENSE": {
+        "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84",
+        "bytes": 188,
+        "git_blob_sha": "83674148f20fcfc8933a45783e5355188574c5b8"
+      },
+      "README.md": {
+        "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688",
+        "bytes": 2799,
+        "git_blob_sha": "e8a12b6437ab023a01e33177d9ff28eb61fedadf"
+      },
+      "datapackage.json": {
+        "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2",
+        "bytes": 4845,
+        "git_blob_sha": "fc901b154579e7cbe1d9a44e5948ed209db181c3"
+      }
+    },
+    "mapping_sha256": "8d3842d452b23c429c0ca46eb6273027571d3270b55c3b3d0528fa59d525c3e9",
+    "mapping_file_sha256": "c695e4703d85ba9245121a865bf065afff6ab319953b4ed428351928be5f1d9d",
+    "importer_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+    "run": {
+      "label": "full_replay_inventory",
+      "cohort": "full",
+      "perfumes": 1479,
+      "raw_note_occurrences": 12448,
+      "backend_seconds": 107.147241,
+      "guarded_client_seconds": 107.292426,
+      "function_stats": {
+        "identity_guard": {
+          "calls": 44,
+          "self_ms": 1.486,
+          "total_ms": 1.486
+        },
+        "validate_model": {
+          "calls": 1,
+          "self_ms": 8644.281,
+          "total_ms": 8644.281
+        },
+        "selection_audit": {
+          "calls": 0,
+          "self_ms": 0,
+          "total_ms": 0
+        },
+        "selection_guard": {
+          "calls": 8845,
+          "self_ms": 2133.032,
+          "total_ms": 2133.032
+        },
+        "serialize_write": {
+          "calls": 49886,
+          "self_ms": 23418.779,
+          "total_ms": 23418.779
+        },
+        "validate_images": {
+          "calls": 1,
+          "self_ms": 0.269,
+          "total_ms": 0.269
+        },
+        "check_active_row": {
+          "calls": 44,
+          "self_ms": 9.755,
+          "total_ms": 9.755
+        },
+        "observation_guard": {
+          "calls": 10489,
+          "self_ms": 3310.286,
+          "total_ms": 3310.286
+        },
+        "compatible_targets": {
+          "calls": 34844,
+          "self_ms": 951.184,
+          "total_ms": 951.184
+        },
+        "materialize_scalar": {
+          "calls": 0,
+          "self_ms": 0,
+          "total_ms": 0
+        },
+        "schedule_validation": {
+          "calls": 39551,
+          "self_ms": 19763.807,
+          "total_ms": 19763.807
+        },
+        "staging_capture_guard": {
+          "calls": 44,
+          "self_ms": 1.375,
+          "total_ms": 1.375
+        },
+        "validate_all_deferred": {
+          "calls": 37579,
+          "self_ms": 36808.011,
+          "total_ms": 45452.561
+        }
+      },
+      "observed": {
+        "approved": 1435,
+        "matching": 0,
+        "inventory": {
+          "notes": 420,
+          "brands": 160,
+          "perfumes": 1479,
+          "perfume_notes": 11972,
+          "source_records": 2059,
+          "staging_records": 2059,
+          "ingestion_batches": 1,
+          "validation_results": 8236,
+          "entity_source_links": 2059,
+          "source_observations": 10489,
+          "canonical_selections": 8845
+        },
+        "dpt_etl_metrics": true,
+        "batch_accounting": {
+          "perfumes": 1479,
+          "source_rows": 2059,
+          "review_perfumes": 44,
+          "promoted_perfumes": 1435,
+          "quarantined_perfumes": 0
+        },
+        "new_source_records": 0,
+        "new_staging_records": 0
+      },
+      "outcome": "COMMITTED_FINAL_VALIDATORS_VERIFIED",
+      "pending_markers": 0
+    },
+    "verified": {
+      "input_and_importer_hashes_unchanged": true,
+      "zero_all49_row_count_deltas": true,
+      "unchanged_nonstaging_table_hashes": 48,
+      "unchanged_staging_substantive_rows": 2059,
+      "exact_held_updated_at_only_changes": 44,
+      "security_roles_guard_exact": true,
+      "pending_markers": 0
+    },
+    "status": "COMPLETE_FULL_REPLAY_ZERO_NEW_RECORDS_INTEGRITY_VERIFIED_WITH_EXACT_EXPECTED_STAGING_TOUCHES",
+    "table_count_deltas": {
+      "dpt.access_scopes": 0,
+      "dpt.accords": 0,
+      "dpt.asset_permissions": 0,
+      "dpt.audit_events": 0,
+      "dpt.brand_aliases": 0,
+      "dpt.brands": 0,
+      "dpt.brand_tag_links": 0,
+      "dpt.brand_tags": 0,
+      "dpt.canonical_selections": 0,
+      "dpt.comparison_evidence": 0,
+      "dpt.conflict_members": 0,
+      "dpt.countries": 0,
+      "dpt.data_conflicts": 0,
+      "dpt.entities": 0,
+      "dpt.entity_source_links": 0,
+      "dpt.families": 0,
+      "dpt.field_definitions": 0,
+      "dpt.image_assets": 0,
+      "dpt.ingestion_batches": 0,
+      "dpt.inventory_items": 0,
+      "dpt.matching_results": 0,
+      "dpt.note_aliases": 0,
+      "dpt.note_images": 0,
+      "dpt.notes": 0,
+      "dpt_ops.schema_migrations": 0,
+      "dpt_ops.validation_pending": 0,
+      "dpt.perfume_accords": 0,
+      "dpt.perfume_families": 0,
+      "dpt.perfume_images": 0,
+      "dpt.perfume_notes": 0,
+      "dpt.perfume_relations": 0,
+      "dpt.perfumes": 0,
+      "dpt.perfume_usage_tags": 0,
+      "dpt.price_observations": 0,
+      "dpt.product_variants": 0,
+      "dpt.purchase_records": 0,
+      "dpt.rating_observations": 0,
+      "dpt.retail_listings": 0,
+      "dpt.rights_assessments": 0,
+      "dpt.saved_buying_sources": 0,
+      "dpt.scope_members": 0,
+      "dpt.source_observations": 0,
+      "dpt.source_records": 0,
+      "dpt.sources": 0,
+      "dpt.staging_records": 0,
+      "dpt.user_list_items": 0,
+      "dpt.user_lists": 0,
+      "dpt.users": 0,
+      "dpt.validation_results": 0
+    },
+    "changed_raw_table_hashes": [
+      "dpt.staging_records"
+    ],
+    "exact_expected_held_ids": [
+      "044dbb60-0bda-5eef-b556-3ab326db27a2",
+      "06fda6f1-34f3-5389-911b-f832d8f37dfc",
+      "0f03046f-b2a0-5ae7-81ca-c2c5b28efa61",
+      "0f75cbb7-e70a-5315-9698-6bdf48c1a632",
+      "14a987c1-89d9-5b82-a6d8-8c907af4f58d",
+      "19a828e4-3242-5e66-bca6-1e4611c20328",
+      "1b5eedd1-3f5d-51f3-aa77-e1ead155ffa5",
+      "1bcce5dd-dfe5-5029-85ff-353921319f34",
+      "268dbb78-959f-5f07-af6a-a3b0ece8871a",
+      "2803a8a6-646e-5e20-99e4-a78166cc3851",
+      "2dc97b8f-eb42-515f-8b91-bd1324fa8151",
+      "314cddc6-bf34-5c11-ae7d-5d6a701781a4",
+      "403e1ce9-2e15-56b1-973d-771f23b0cf3f",
+      "4b147de1-e4e0-5fbf-850b-6e98893cdfd3",
+      "5c3f6dab-44af-510e-98f1-6ded0f54f6b9",
+      "5e8a728b-2587-59af-a336-82f5cd03a3d5",
+      "65ca636e-d0e1-5638-a89e-b6f9289b3216",
+      "6cf2481c-6577-54a9-9de0-93ab2d3d6cb0",
+      "6cfbd1f0-cb74-5c63-ac52-2298daacce57",
+      "776f9391-aae5-51c3-8e33-a57ec8fd9433",
+      "777e9ec4-07d3-5037-b028-dfa5d5d4ca81",
+      "827ee187-53ab-55d5-82ec-ac838ceda111",
+      "89312ac9-c3e2-52f0-9cfd-309372df3b37",
+      "8bd7df68-8f3d-58dd-83a4-0d7079f414e8",
+      "93c2fde8-555d-5362-84b8-43d8be394f6b",
+      "a201417d-1de4-5beb-80a7-93a55dec02e7",
+      "a4544f68-ebcf-5ea3-a8b9-b84c087a553d",
+      "b1786f1e-6c96-54a6-a44a-b88c0e1dbd90",
+      "b3cc5b90-e357-59da-a973-27030e01624d",
+      "b4d31d42-c730-5330-9696-d51d3cce6d9b",
+      "b9dd645e-4325-50c0-b5e7-e17de52bba80",
+      "bddd9a0d-48f8-5e0b-a4f8-3aa126a023e0",
+      "d2ae0912-47aa-514d-b6ae-5a8b116c0431",
+      "d437cf97-750c-553a-9b23-df7f88d4adf4",
+      "d699c84c-2d7b-5184-9014-284800d11ba6",
+      "dbf33f00-400e-5e30-a500-ed56579b3bd2",
+      "dd90f86b-7a1a-5f00-9cdc-238f0dd1f892",
+      "df496b7a-18f3-529d-9d29-a0d2de35a785",
+      "e3c6cfbe-f24d-5a20-a974-95fb9cb4ed8a",
+      "e5614094-73a9-5480-be93-de39f6d04256",
+      "ebbe606a-c71a-5bd5-aa16-67b2464c3132",
+      "f7e110f5-4d09-5f79-a0bf-a0e70d5440bc",
+      "fa452ff9-42c4-591e-a23a-585e003b720e",
+      "fd89018d-186d-539e-b6e7-8460aacb816a"
+    ],
+    "staging_touch_comparison": "Every2059row fullcontenthash except updated_at identical; only exact44review-held IDs timestamps strictlyadvance; allother48tablecontenthashes/security/roles/originalguard exact"
+  },
+  "regression": {
+    "report": "temporal_regression_results.json",
+    "tests": 175,
+    "passed": 175,
+    "seconds": 150.422,
+    "new_guard_methods": 5,
+    "old_methods": 170
+  },
+  "recovery": {
+    "report": "temporal_recovery_results.json",
+    "checks": 15,
+    "status": "VERIFIED_LOCAL_DB_AND_SYNTHETIC_OBJECT_SUBSET",
+    "seconds": 30.093
+  },
+  "limits": [
+    "Exact historical failing review/clock operands and temporal root cause unavailable",
+    "No failure reproduced in capped diagnostic001/002 or current originalguard fullcohort; passing runs do not repair historical defect",
+    "Comparison permits exact existing44stagingupdated_at touches only; zero new records does not mean zero writes",
+    "No production capacity/hostclockrepair/realimages/provider/offsite/encryption/retention/RPO/RTO/merge claim"
+  ],
+  "next_action": "KeepPR8OPEN/DRAFT. Obtain exactoperandtrace under reproducible conditions before smallest justified runtimefix; retainoriginalguard and all failures. Owner mayreviewPR4/6/7separately."
+}

@@ -95,3 +95,15 @@ Finalmetadata source/evidenceblobs unchanged.8Markdown/5frontmatters/35wiki/9loc
 passed0errors/0secretcandidates; exact18changedpaths in capacity_documentation_checks.json.
 Fullreplay23514 remainsBLOCKED, no prematurefinalreceipt; recovery004subset/170regression evidence
 isnot a waiver. Human Ownerreviews; resultingpublicationHEAD verified afterpush inPR/externalhandoff.
+
+
+## Current temporal follow-up supersedes earlier replay-blocked snapshot
+
+See [[IMP-P1-04_Temporal_Diagnosis]] for actual historical failed-row IDs, unavailable temporal
+operands and retained diagnostic limits. Current original-guard fullfresh250.550492s and replay
+106.022935s COMMIT; strict003raw-staginghash comparison fails and is preserved. Verified004full
+replay107.147241s has0newrecords/all49countdeltas0,48otherhashes exact and all2059staging substantive
+rows exact, only44expectedheld timestamps advance. Security/roles/guard exact, markers0.
+New full175/175PASS150.422s (5newguard controls), recovery00515/15PASS30.093s. Original reports remain
+historical unchanged; new temporal_* evidence is additive. Historical rootcause/correction still
+UNRESOLVED, PR8blocked/Open/Draft/no finalreceipt despite passing current-run replay acceptance.

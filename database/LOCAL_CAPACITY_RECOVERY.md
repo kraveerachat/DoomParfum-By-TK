@@ -91,3 +91,19 @@ requires exact approved source/restored definition hashes before its additional8
 both servers; unknown predicates fail before SQL. An independent three-space-URL bypass counterexample
 is rejected. No constraint/permission was changed to make comparison pass; all other security fields
 remain exact. Intermediate successful execution with the earlier comparator is superseded by004.
+
+
+## Current temporal follow-up (2026-11-12)
+
+Current fullreplay succeeds with the original guard; historical intermittent23514rootcause remains
+unresolved. See [diagnosis](../Structure%20DB%20Obsidian/08_Operations/Test_Evidence/IMP-P1-04_Temporal_Diagnosis.md)
+and [exact execution evidence](evidence/temporal_followup_results.json). Original003fresh/replay
+250.550492/106.022935s bothCOMMIT; post-run strictstaginghash comparison fails. Independently reviewed
+004replay107.147241s verifies all49zero countdeltas/48exactcontenthashes/2059exactsubstantive staging
+rows and exactly44strictlyadvancing held updated_at values. This is0newrecords, not0writes.
+Full175/175pass150.422s; recovery00515/15pass30.093s,2SYNTHETICobjects9896bytes/0actualimages.
+Prior capacity_* reports remain historical; temporal_* files are additive. The exact preservation
+wrapper/diagnostic scripts and hashes are in the external consolidatedhandoff; fullsuite uses the
+existing verify_capacity.main exclusivelease. No importer/migration/runtime/guardfix or hostclock
+change. KeepPR8OPEN/DRAFT/BLOCKED/no finalreceipt until the requested exact diagnosis and justified
+correction are complete. Current passing replay does not prove historical clock health.
