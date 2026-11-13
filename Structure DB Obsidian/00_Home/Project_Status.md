@@ -271,3 +271,18 @@ This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normal
 Owner-approved local Codex defaults now use the existing Caveman skill (bytes match v4.1.0) and Context Mode 2.1.8. Four Context Mode hooks were trusted after backup; explicit separate owner approval covered the system Node 24.22.3/npm 11.19.1 MSI update. Fresh-process MCP execution/doctor and hook checks pass; safe update/legacy warnings remain. Existing chat MCP transport closed after MSI, so restarting Codex and verifying its new host connection remain acceptance steps. No final task receipt yet.
 
 [[DPT-OPS-004_Agent_Tooling_Setup]] records exact paths/refs/checks, approval rejection and later authorization, failed non-admin MSI, successful UAC install, sandbox/PATH diagnostic limits, backups and rollback. Initial [[Agent_Tool_Registry]] and [[Tool_Usage_Log]] are proposed documentation additions on separate `codex/caveman-context-mode-setup` review branch from main aa55f8b. PR publication is pending at authoring; no merge is claimed. No application/database/production/data-rights/other-PR changes. User-level defaults affect local Codex chats; Node update affects programs sharing system Node.
+
+## Current post-PR18–21 catalogue wave — 2026-11-14
+
+This section supersedes dated current-state claims above. Verified main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282;
+Owner merged18–21. New Master confirms conservative strategic direction,not unspecified DM/OP,
+source/auth/formula/closure/normalization/stack choices. See [[Post_PR18_21_Implementation_Gate_Audit]]
+and the single [[Next_Wave_Owner_Decision_Form]]. No duplicate planning PR is needed for merged plans.
+
+Fresh55offline methods PASS; READ ONLY49before/after/prior fingerprints equal.1479identities/
+1435approved/44held/matching0;160brands/420notes/417used/11972links.0canonical assets,accords,
+families,pairs,listings/prices; raw country/family/aliases remain separate unpromoted inputs.
+World/live/regional/SKU universes UNKNOWN; no completeness percentage inferred. Three isolated
+actual audit/test tasks plus coordination are IN PROGRESS; exact final evidence follows closeout.
+No source/asset acquisition,SQL/API/UI,owner/rights/hold/eligibility change or Production mutation.
+PR8unchanged84dccb117971ab65e0bf39fa3d1d84a12d344f8d OPEN/DRAFT/CONFLICTING/BLOCKED,no new operands.

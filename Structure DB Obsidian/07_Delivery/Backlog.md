@@ -245,3 +245,12 @@ of proposed weights/provider decisions is inferred. See [[IMP-P1-02_Licensed_Sce
 - IMP-P2-01..05: registry/rights/admin source work remains separate; reviewed candidate queues are
   available externally, source automation remains blocked wherever rights are unknown/restrictive.
 - Matching: PR4 Gate P/DM decisions pending; no scoring/API/UI implementation. Cloud stays deferred.
+
+## Post-PR18–21 actual gap priority — 2026-11-14
+
+Do not duplicate merged DPT-PLAN-004–008. Audit existing raw country/family/aliases against actual
+canonical/selection gaps before new acquisition. Preserve44holds,43sidecars and independent Khamrah.
+Next safe work: exact-source audit review and existing-primitive invariant QA; versioned Owner batch
+then gated synthetic A/B1 implementation. New source intake needs bounded source/field/use rights;
+image metadata candidates need exact per-asset grants and formats. Current0usable media/pairs and
+app-accessible catalogue are blockers,not absent raw-source fields. Keep PR8causal evidence separate.

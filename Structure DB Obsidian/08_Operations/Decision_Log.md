@@ -240,3 +240,26 @@ normalization/closure/source right,session/stack/publication policy or implement
 The integrated form remains unanswered for policy choices. Continue authorized independent research,
 golden arithmetic,contracts,documentation,review and handoff; stop only dependent implementation.
 This records the reply truthfully rather than treating it as acceptance of every recommendation.
+
+## Current explicit Owner direction — post-PR18–21 / 2026-11-14
+
+Authority: full Owner Master Prompt, POST-PR18–21 DEVELOPMENT & CATALOGUE COMPLETENESS WAVE,
+1,376 lines/28,635 bytes; SHA256 b459c07e94ff6c68682165c3a166c7965a31b36e39e6a231118c304c1e402b23.
+This later instruction supersedes the earlier preparation-only reply **at strategic direction level**.
+The earlier reply remains historical evidence. It does not accept unspecified individual options.
+
+**CONFIRMED direction:** prioritize Mode A/B1 before real B2; deterministic/synthetic first; keep
+Structural/Query Fit, Data Confidence and Pair Evidence separate; preserve source claims and44holds;
+do not infer absence from incomplete lists; initial local-private/no public API/shared cache;
+permissioned catalogue enrichment including names,brands,notes andimages; no autonomous Production.
+
+**UNRESOLVED exact choices:** DM03/05 formulas/constants/method/domain/fallback versions;
+DM04 taxonomy/scale; DM06 lifecycle/freshness thresholds; OP01 full-task milestone scope;
+OP02 closure assertions; OP03 repeated-note/Khamrah normalization; OP04 field/use/audience rights;
+OP05 genuine nonadmin binding; OP06 stack/auth/transport/budgets. Individual DM/OP policy rows remain
+PROPOSED unless their exact text/version/scope is explicitly answered. No third-party permission,
+application principal,source acquisition,cloud or public publication is created by this direction.
+
+Merged PR18/19/20/21 establish plan/research integration at main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282,
+not hidden policy defaults. Actual Wave0:55offline methods PASS; fresh leased READ ONLY audit;
+all49data/security/application-role fingerprints unchanged. Matching0/holds44 remain unchanged.

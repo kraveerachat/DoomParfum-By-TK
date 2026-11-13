@@ -240,3 +240,13 @@ PR #1 is now MERGED on GitHub; PR #2 database foundation is now MERGED at 2026-1
 ## Proposed catalogue coverage expansion — 2026-11-11
 
 Following the owner's product-model coverage and Dupe matching request, refine early P1/P2 dependencies: Brand Registry -> **approved-source comprehensive Product Index** -> approved Scento profile/notes pilot -> licensed image pipeline -> browse/search MVP -> pairwise reported-Dupe evidence graph -> versioned structural matching/side-by-side -> safe admin batch updates. This does not abandon current P0–P6 categories or imply Implementation complete. Source rights and Human Gate P remain mandatory. See [[DPT-PLAN-002_Catalogue_Coverage_Images_Matching_Addendum]], and NEW-07..11 awaiting owner review.
+
+## Post-PR18–21 observed next wave — 2026-11-14
+
+Merged plans/research18–21 are integrated at8c6a8376680c7a10cc3eb4b5cf80afe4376a9282; do not reopen
+duplicate plans. Current scoped tasks: DPT-DATA-005 actual catalogue/brand/note audit,
+DPT-DATA-006 actual11-operation source/media audit,DPT-QA-001 policy-free primitive invariants,
+DPT-DOC-003 coordination/Owner direction/gates/handoff. Exact independent evidence precedes closeout.
+Full synthetic A/B1 depends on accepted method versions; real data additionally needs rights,
+selected completeness/normalization/eligibility,genuine nonadmin and relevance/security gates.
+Initial local-private direction is confirmed; exact stack/auth remains unselected. PR8stays blocked.
