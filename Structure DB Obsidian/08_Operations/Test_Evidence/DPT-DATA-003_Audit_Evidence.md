@@ -2,7 +2,7 @@
 id: DPT-DATA-003-EVIDENCE
 project: DoomParfum By TK
 type: test_evidence
-status: review-pending
+status: independent-review-complete-owner-review-pending
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, evidence, coverage, rights]
@@ -65,3 +65,10 @@ not imply64perfumes, and0conflict rows do not resolve external source conflict. 
 for this docs-only evidence scope. G's independent reviewer separately checks query/count definitions.
 Runtime,appRLS,source acquisition,media and policy acceptance NOT RUN/NOT GRANTED. Final document
 validation and source checkpoint follow; receipt records planning/evidence readiness only.
+
+## Post-receipt metadata correction — 2026-11-13
+
+The evidence frontmatter now records the already completed independent review and pending Human
+Owner review. Earlier pending statements are authoring history, superseded by the independent
+review section. This header correction changes no proposal,reviewed specification,source right,
+test result or immutable receipt. Exact new HEAD is in the coordinator publication registry.
