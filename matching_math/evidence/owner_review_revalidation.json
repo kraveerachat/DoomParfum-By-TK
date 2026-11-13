@@ -1,0 +1,30 @@
+{
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "reviewer": "/root/pr9_pr10_revalidate, independent read-only revalidator",
+  "at_utc": "2026-11-13T03:02:19.074979+00:00",
+  "checks_passed": 192,
+  "independent_report_sha256": "181dcab03a798ac0a6ca5520eb74bca1d28d5d2e1301b452a9b70cf64fe8632b",
+  "blocking_findings": [],
+  "real_matching_activated": false,
+  "production_mutation": false,
+  "PR": 9,
+  "reviewed_head": "1ab317635bba0c53d87445cff8711ee2fc7c3305",
+  "actual_unit_run": {
+    "command": "python -m unittest discover -s matching_math/tests -v",
+    "methods": 24,
+    "passed": 24,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.035
+  },
+  "source_sha256": {
+    "matching_math/__init__.py": "52787f3b39a18013db9db0d042b53c2fa0ad559f85c73f2bcc677e5a9f25c61f",
+    "matching_math/primitives.py": "c1b69bdc74a4a060f6559a182306618f02c595b16e27f3ebb5e4bcca4ff7b735",
+    "matching_math/tests/test_primitives.py": "777b2e2b04d0f67ab32a279940faa2488ba59cc70050cacc4b487fcecacbde30"
+  },
+  "verdict": "NO_BLOCKING_CODE_FINDING_IN_PURE_PRIMITIVES_SCOPE; full ModeA acceptance remains blocked and canonical task explicitly defers its receipt",
+  "source_changed": false,
+  "remaining_gate": "Owner must explicitly accept primitives-only milestone/task boundary, or full ModeA scope remains incomplete. No final receipt/full scorer acceptance.",
+  "semantics": "Exact generic arithmetic/nulls/explicit weights/stableUUID sorting only; no accepted scoring defaults or real-data ranking"
+}

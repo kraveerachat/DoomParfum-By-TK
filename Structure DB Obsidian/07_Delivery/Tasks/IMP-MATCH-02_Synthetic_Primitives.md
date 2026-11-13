@@ -11,6 +11,23 @@ source_of_truth: "../../../README.md"
 
 # IMP-MATCH-02 — Decision-independent synthetic mathematics
 
+## Owner-readiness revalidation — 2026-11-13
+
+Session started from1ab317635bba0c53d87445cff8711ee2fc7c3305 against unchanged mainaa55f8b.
+Allowed scope: read actual primitives/tests/review bindings, rerun exact24methods, publish truthful
+revalidation metadata. Protected all runtime/defaults/realdata/receipts/DM decisions; no DB or new
+feature behavior. Independent reviewer /root/pr9_pr10_revalidate reran24/24PASS0.035s,0fail/error/skip
+and completed192cross-PR artifact/source/protection checks. All3math source/test hashes unchanged;
+no blocking code finding in this bounded primitive scope. No installed dependency or network call.
+
+Existing full IMP-MATCH-02 scope remains ModeA. Owner must explicitly accept a primitives-only
+milestone/task boundary before calling this a completed merge unit, or retain the existing full
+scorer gate until accepted DM01–04 and IMP-MATCH-01 prerequisites pass. Do not silently shrink scope.
+No final receipt or full ModeA acceptance. matching_math/evidence/owner_review_revalidation.json
+records exact source/test bindings and independent reportSHA
+181dcab03a798ac0a6ca5520eb74bca1d28d5d2e1301b452a9b70cf64fe8632b.
+Only task/evidence metadata changes after this review;24original methods remain exact.
+
 Branch codex/imp-match-02-synthetic-primitives; starting/main SHA
 aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Parent verified Owner merge of Planning PR4 at this SHA.
 The latest explicit post-PR4 request authorizes generic primitives and SYNTHETIC tests while

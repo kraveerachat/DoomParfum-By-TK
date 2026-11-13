@@ -11,6 +11,16 @@ source_of_truth: "../../../README.md"
 
 # IMP-MATCH-02 — Exact primitive evidence
 
+## Fresh independent revalidation — 2026-11-13
+
+Pinned source head1ab317635bba0c53d87445cff8711ee2fc7c3305 revalidated independently of implementer:
+24/24methods PASS0.035s,0failure/error/skip. Full199line primitive module and173line tests, guide,
+task and prior review read;192cross-PR hash/artifact/protection checks pass. Generic exact rational
+arithmetic, nulls, explicit weights and stable ordering only; no scoring defaults or real ranking.
+New metadata report matching_math/evidence/owner_review_revalidation.json binds all3source hashes.
+No original report/receipt rewritten. Full ModeA/DM/API/UI/performance/relevance tests NOT RUN and
+not implemented here. A scoped milestone decision is still required before full-task closeout.
+
 Base/approved-plan merge aa55f8b59acb0872b3b40273a8cdd25198f3ba27; branch
 codex/imp-match-02-synthetic-primitives. This is partial decision-independent work, not a completed
 Mode A scorer or implicit acceptance of DM01–07. [[IMP-MATCH-02_Synthetic_Primitives]] records scope.
