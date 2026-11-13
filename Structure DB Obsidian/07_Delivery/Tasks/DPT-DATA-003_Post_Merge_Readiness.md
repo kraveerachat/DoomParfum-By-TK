@@ -50,3 +50,7 @@ Independent exact-document review is now complete within this task's docs-only s
 finding. Earlier pending statements are dated authoring checkpoints. Owner decisions, future runtime
 tests and implementation gates remain open. Final validation/source checkpoint and a single scoped
 receipt follow before Draft publication; no full feature or policy acceptance is claimed.
+
+Final scoped documentation receipt: [[2026-11-13_152650_DPT-DATA-003_Planning_Review_Ready]]. Reviewed payloadSHA`533dfacebaacc5247b80e22224ece20be851436d`;
+independent review complete. Receipt adds no policy acceptance or runtime feature. Subsequent
+publication head/PR status is recorded without amending this immutable file.
