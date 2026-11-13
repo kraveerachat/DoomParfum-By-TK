@@ -1,0 +1,52 @@
+{
+  "task": "DPT-QA-001",
+  "reviewer": "coordinator /root independent of author postmerge_b_diagnostics",
+  "at_utc": "2026-11-13T20:18:18.717666+00:00",
+  "reviewed_commit": "c2ebea74b15b6409aeb9a2300a06f0d0da158aab",
+  "base": "8c6a8376680c7a10cc3eb4b5cf80afe4376a9282",
+  "source_sha256": {
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-QA-001_Primitive_Invariants.md": "4f52b12b8a8c99b32e02cd09b2aaafbb692925c976bec6a2b1f70a43862563ae",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-QA-001_Invariant_Evidence.md": "7a4209056f164ee5d37e5f192bd15198b50227322c1316f9e819c3c1b2fa1da6",
+    "matching_math/evidence/invariant_results.json": "8dc4e9ce4b9f4cac0295f423dd47dc123e855791e8f097f6bebfe9e377ef877f",
+    "matching_math/tests/test_invariants.py": "9b285c675c84f98d8328c2dd46ac9d4d33205eacdc3bc709188d9c240c742343"
+  },
+  "all_base_blobs_compared": 212,
+  "checks": {
+    "exact_committed_payload_clean": true,
+    "all_existing_base_blobs_unchanged": true,
+    "independent_complete_offline_suite": true,
+    "new_test_AST_valid": true,
+    "internal_cases_qualified_571_not_methods": true,
+    "nonempty_Jaccard_metric_contract": true,
+    "L1_oracle_algebra_distinct_from_minmax": true,
+    "common_scaling_stays_finite_unit_interval": true,
+    "joint_zero_coordinate_explicit_identical_domain_not_missing_padding": true,
+    "known_component_affine_and_split_weight_only": true,
+    "coverage_complement_uses_original_identical_weights": true,
+    "four_wrong_operand_category_TypeError_controls": true,
+    "synthetic_constants_not_scoring_defaults": true,
+    "no_runtime_or_approved_policy_change": true,
+    "no_raw_data_network_or_database": true,
+    "initial_GREEN_truthful_test_only_existing_features": true,
+    "no_full_A_B1_B2_or_real_ranking_acceptance": true
+  },
+  "review_assertions": 17,
+  "findings": [],
+  "newly_executed_offline": {
+    "components": {
+      "math": 31,
+      "research": 17,
+      "adapter_offline": 14
+    },
+    "methods": 62,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 0.07103490000008605,
+    "database_calls": 0,
+    "network_calls": 0
+  },
+  "full_live_suites": "HISTORICAL_ONLY_NOT_RERUN",
+  "future_scorer_tests": "NOT_RUN",
+  "production_mutation": false
+}

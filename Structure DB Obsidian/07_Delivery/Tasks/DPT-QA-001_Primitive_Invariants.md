@@ -70,3 +70,27 @@ Author static closeout:41/41payload assertions PASS,0failures; exactly4new files
 PASS. Ignored exact manifest `.local/post1821-QA/PAYLOAD_CHECKS.json` binds the review payload.
 The four files are frozen after final validation for coordinator independent review; this is not
 a final receipt or Human Owner acceptance.
+
+## Independent exact-source review — current closeout
+
+Coordinator /root independently reviewed author postmerge_b_diagnostics payload
+c2ebea74b15b6409aeb9a2300a06f0d0da158aab; source changes: one new test file, runtime unchanged.17/17scoped
+source/evidence assertions PASS,0blocking findings. All212previous base blobs unchanged.
+Independent actual offline regression62/62PASS(31math/17research/14adapter),0fail/error/skip,
+0.07103490000008605s,0DB/network calls. Author's7focused methods
+are included in31math methods, not additional methods. The571inner cases are not571features.
+
+Review checked nonempty Jaccard distance triples, distinct L1algebraic vector oracle, bounded
+common scaling, explicitly supplied identical joint-zero domains, known-only affine/split-weight
+means, original-weight coverage complement and wrong-DTO negative controls. No missing-data
+padding,source scale conversion,normalization choice or scoring default is introduced. The initial
+GREEN run truthfully tests existing accepted primitives. Existing and new source hashes bind
+matching_math/evidence/independent_invariant_review.json. Author result's PENDING field remains
+the historical pre-review state; this later exact-source report records actual review completion.
+
+Scoped QA acceptance: ready for Human Owner review,not full A/B1/B2 or real-data acceptance.
+Live/full PostgreSQL/security/replay/recovery NOT RUN. Matching0,44holds,source rights and all
+17old receipts/eight migrations unchanged. Final receipt and publication metadata follow separately.
+
+Single scoped receipt: [[2026-11-14_031943_DPT-QA-001_Scoped_Review_Ready]]. Payload/checkpointc2ebea74b15b6409aeb9a2300a06f0d0da158aab.
+Exact publication metadata follows; no policy or full-feature acceptance is inferred.
