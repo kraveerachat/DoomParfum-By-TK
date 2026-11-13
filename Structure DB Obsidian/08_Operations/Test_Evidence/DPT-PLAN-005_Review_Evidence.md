@@ -2,7 +2,7 @@
 id: DPT-PLAN-005-EVIDENCE
 project: DoomParfum By TK
 type: review_evidence
-status: independent-review-pending
+status: independent-review-complete-owner-review-pending
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, planning, application, evidence]
@@ -144,3 +144,10 @@ Result: **ready for coordinator Draft Planning PR preparation and Human Owner ar
 review**, subject to the exact reviewed files and final coordinator branch/PR/handoff checks.
 Owner must still choose stack/session/private-public/cache/budget policies and approve the relevant
 Planning Gate. Real-data matching, public API/UI/cache/cloud and Production remain blocked.
+
+## Post-receipt metadata correction — 2026-11-13
+
+The evidence frontmatter now records the already completed independent review and pending Human
+Owner review. Earlier pending statements are authoring history, superseded by the independent
+review section. This header correction changes no proposal,reviewed specification,source right,
+test result or immutable receipt. Exact new HEAD is in the coordinator publication registry.
