@@ -119,3 +119,6 @@ coordinator receipt/publication metadata and receive a separate immutable-byte v
 No Owner decision/right/identity/implementation is accepted. Keep every DM/OP proposal,44holds,
 eligibility0,source/media/auth gates and PR8blocked. Host restart remains PARTIAL. Previous failures
 and prior verified archive preserved; final artifact digest lives outside itself to avoid recursion.
+
+Single scoped receipt: [[2026-11-14_021503_DPT-DOC-002_Preparation_Review_Ready]]. Reviewed payload`2c96b362fc340bb660251e33a62876abd7046bf2`.
+Publication metadata follows without amending this immutable receipt or accepting any policy.
