@@ -27,3 +27,14 @@ Rollback: restore only this task's AGENTS preference and four hook trust entries
 Session result: local setup verified; host-reload acceptance pending. Documentation-only review branch `codex/caveman-context-mode-setup`, base `aa55f8b59acb0872b3b40273a8cdd25198f3ba27`; PR publication pending at authoring. Root PR #8 branch/source and all other workstreams preserved. Human Owner alone merges; no final task receipt while host-reload acceptance remains pending.
 
 Publication readback: payload `ce4fa34c95f5d76fa6b467979df0c8d9f37f0067` pushed; [PR #12](https://github.com/kraveerachat/DoomParfum-By-TK/pull/12) OPEN/DRAFT with exactly six Markdown files. Same-branch publication-metadata checkpoint follows. Both worktrees were clean and root HEAD unchanged at readback. No merge or host-restart completion claimed.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Fresh functional observation: ContextMode2.1.10(877eebc),Nodev24.22.1,codex0.167.0-alpha.4.1;
+doctor11PASS/1WARN/0FAIL and bounded pure synthetic ctx_execute PASS. Warning is safe legacy/temp
+state; no cleanup or upgrade performed. All3observed relevant Codex/code-mode processes started
+before PR12merge05:59:01Z. Post-merge restart NOT VERIFIED; host-reload gate remains PARTIAL.
+Do not stop this active app or manufacture a PR12receipt. Owner may restart after safe handoff,
+then obtain fresh host observation. Actual machine paths/process details remain private.
+[[DPT-DOC-001_Post_Merge_Tool_Observation]] records the sanitized evidence. No installation,
+global config, hook, model, cloud gateway, credential or paid-service change in these waves.

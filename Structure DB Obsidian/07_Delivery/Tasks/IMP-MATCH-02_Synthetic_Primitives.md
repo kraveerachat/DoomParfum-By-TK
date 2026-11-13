@@ -92,3 +92,7 @@ branch from mainaa55f8b. Sourcecheckpointa5c82df remains the independently revie
 publicationcheckpoint4bbd8c9ba744e246ad178ca27ded97b2666490e8 contains only subsequent review metadata.
 Finalmetadatahead is verified in livePR/externalhandoff after normalpush. No full ModeA acceptance,
 DMdecision, real-data ranking, finalreceipt or agentmerge is implied by this Draft.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Owner mergedPR9 at58ceafe72129b70f0333c7c4f2c6f38dba855272. This is the primitives-only reviewed source milestone. Full Mode A scorer acceptance and exact remaining milestone/task boundaries remain open; no retrospective receipt or policy/default acceptance. Fresh24math methods passed in Wave0; no new scorer/runtime created.

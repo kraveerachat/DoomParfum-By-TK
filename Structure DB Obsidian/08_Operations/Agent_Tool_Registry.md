@@ -10,6 +10,18 @@ source_of_truth: "../../README.md"
 
 # Agent Tool Registry
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+Fresh functional observation: ContextMode2.1.10(877eebc),Nodev24.22.1,codex0.167.0-alpha.4.1;
+doctor11PASS/1WARN/0FAIL and bounded pure synthetic ctx_execute PASS. Warning is safe legacy/temp
+state; no cleanup or upgrade performed. All3observed relevant Codex/code-mode processes started
+before PR12merge05:59:01Z. Post-merge restart NOT VERIFIED; host-reload gate remains PARTIAL.
+Do not stop this active app or manufacture a PR12receipt. Owner may restart after safe handoff,
+then obtain fresh host observation. Actual machine paths/process details remain private.
+[[DPT-DOC-001_Post_Merge_Tool_Observation]] records the sanitized evidence. No installation,
+global config, hook, model, cloud gateway, credential or paid-service change in these waves.
+
+
 Initial registry addition for Human Owner documentation review. Availability below is observed on this Windows host, not a requirement that other contributors install tools. The approved catalogue remains `AGENTS.md`; unlisted inventory entries are NOT VERIFIED.
 
 | Tool | Actual integration and location | Version/ref | Verified state and scope |

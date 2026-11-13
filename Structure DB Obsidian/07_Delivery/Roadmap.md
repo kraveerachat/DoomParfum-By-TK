@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 
 # Delivery Roadmap — DoomParfum By TK
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+Order: review separate Owner answer packet; establish exact remaining scorer milestones; decide
+closure/normalization/selected-rights/nonadmin session; review separate private architecture and
+source/media Planning PRs; only then open approved bounded implementation tasks. Merged primitives
+and local adapter do not complete full matching or the application. B2 real strengths remain unavailable.
+PR8diagnosis has no new condition: preserve blocked status, no equivalent replay or main integration.
+Current source/merge/test boundaries: [[Project_Status]] and [[Post_Merge_Owner_Review_Matrix]].
+
+
 ## Verified review boundary and dependency order — 2026-11-13
 
 PR11reference adapter now independently reviewed after actual fixes,28/157tests pass; real-data

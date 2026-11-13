@@ -15,6 +15,16 @@ source_of_truth: "../../README.md"
 
 # Decision Log — DoomParfum By TK
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+Owner merge events9–12 are verified artifact-scope acceptance events, not individual answers to
+DM01–07, normalization/closure, app identity, stack/cache/publication or new source/media rights.
+Every unanswered choice remains PROPOSED. No accepted OD/DEC/ADR record is changed. A separate
+DPT-PLAN-004 answer packet presents recommended options, alternatives, operational impacts and
+unchecked answers. Only an actual Owner reply identifying choice/version/scope may update a decision.
+DPT-PLAN-005 and006 remain separate Planning Gates. Current facts: [[Post_Merge_Owner_Review_Matrix]].
+
+
 ## 2026-11-13 — Explicit DM and operational proposals, no new acceptance
 
 No individual DM01–07approval text/date/version is recorded. Owner-merged PR4 and the current

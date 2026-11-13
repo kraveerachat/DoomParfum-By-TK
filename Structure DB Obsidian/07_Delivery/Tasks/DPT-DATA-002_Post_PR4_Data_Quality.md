@@ -73,3 +73,7 @@ The first PR-create attempt used an incorrect relative body-file path and create
 the existing absolute body path succeeded. No duplicate PR or source change. See the single
 [[2026-11-13_045200_DPT-DATA-002_Offline_Research_Audit]] receipt; subsequent events belong here/logs.
 Owner reviews the research deliverable, not implicit approval of normalization/identity/rights.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Owner mergedPR10 ateaa5f6e78c8ed5cd7485cf90579330c3b165307f; reviewedhead89930aa8b9843ca783a78c45b356547a9a240420. Prior scoped receipt unchanged. Fresh17research methods passed in Wave0. DPT-DATA-003 separately audits candidate readiness; no43sidecar/44hold/rights/pair/media promotion.

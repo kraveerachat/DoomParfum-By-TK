@@ -93,3 +93,14 @@ Session result: local configuration and fresh-process verification complete; hos
 Documentation payload checkpoint `ce4fa34c95f5d76fa6b467979df0c8d9f37f0067` was pushed normally. [Draft PR #12](https://github.com/kraveerachat/DoomParfum-By-TK/pull/12) read back OPEN/DRAFT, base main, exactly six Markdown files. Both worktrees clean at readback; root branch still at `3b01c8395d8ce28f426643f104da16090f11844d`. Publication metadata is added in the next checkpoint on this same branch/PR; resulting HEAD is verified externally rather than self-referenced here.
 
 Local `verify-record.py` confirms the three new notes' required frontmatter/source/wiki links, byte-identical Caveman skill, exact four-entry user config delta, ten PASS/two WARN MCP report and CLI doctor exit 0. Staged and working `git diff --check` succeed. No independent agent review was launched; closeout is documented for Human Owner review. Host restart verification remains the next exact action; PR stays Draft and no final receipt is created.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Fresh functional observation: ContextMode2.1.10(877eebc),Nodev24.22.1,codex0.167.0-alpha.4.1;
+doctor11PASS/1WARN/0FAIL and bounded pure synthetic ctx_execute PASS. Warning is safe legacy/temp
+state; no cleanup or upgrade performed. All3observed relevant Codex/code-mode processes started
+before PR12merge05:59:01Z. Post-merge restart NOT VERIFIED; host-reload gate remains PARTIAL.
+Do not stop this active app or manufacture a PR12receipt. Owner may restart after safe handoff,
+then obtain fresh host observation. Actual machine paths/process details remain private.
+[[DPT-DOC-001_Post_Merge_Tool_Observation]] records the sanitized evidence. No installation,
+global config, hook, model, cloud gateway, credential or paid-service change in these waves.
