@@ -15,6 +15,21 @@ source_of_truth: "../../README.md"
 
 # Product Backlog — DoomParfum By TK
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+| Task | Authorized now | Requires another gate / remains blocked |
+|---|---|---|
+| DPT-DOC-001 | merged-state,Obsidian,D1–D9 and exact-head handoff reconciliation | no policy acceptance,PR8integration or retrospective9/12receipt |
+| DPT-PLAN-004 | answer-ready DM01–07 + operational choices, allPROPOSED | exact Owner answers before affected full scorers/data/session behavior |
+| DPT-DATA-003 | offline44/43/Khamrah/pair/media matrices and leased aggregate catalogue audit | no hold release,canonical projection,rights grant or matching flags |
+| DPT-PLAN-005 | compare stack and specify local-private authorization/API/UI boundaries | no API/frontend/accounts/deps before Planning Gate and authorization decision |
+| DPT-PLAN-006 | G1coverage,G2primary-source permissions,G3media workflow,G4dedicated plan | no adapters,scraping,image acquisition or promotion before plan+source/task approval |
+| IMP-P1-04 / PR8 | evidence-only hypothesis/no-go matrix | actual unforced operands+causal review before correction; no equivalent experiment |
+
+Documentation validation automation remains a separate proposed backlog item. No GitHub Action
+or self-approval workflow is created. See [[Post_Merge_Owner_Review_Matrix]].
+
+
 ## Current review and next authorized tasks — 2026-11-13
 
 | Task | Current verified state | Next authorized boundary |

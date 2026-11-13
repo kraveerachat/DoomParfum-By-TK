@@ -14,6 +14,34 @@ source_of_truth: "../../README.md"
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+Verified origin/main is `58ceafe72129b70f0333c7c4f2c6f38dba855272`. Owner merged PR10,11,12,9
+in that order at05:57:37Z,05:58:01Z,05:59:01Z,05:59:13Z on2026-11-13. No agent merge occurred.
+The dated review/pending statements below are historical snapshots; this section supplies current
+merge facts without erasing earlier failures or changing any immutable receipt.
+
+| Workstream | Current fact / remaining gate |
+|---|---|
+| PR9 / IMP-MATCH-02 | merged generic mathematical primitives;24-method suite; full Mode A scorer/milestone still incomplete; no retrospective receipt or accepted numeric policy |
+| PR10 / DPT-DATA-002 | merged bounded offline research;44holds,43normalization sidecars,Khamrah,5pair and15media candidates remain unpromoted; no new source or image right |
+| PR11 / IMP-MATCH-01 | merged independently reviewed local read-only reference adapter; historical28focused/157full PASS and scoped receipt preserved; real catalogue application binding/closure/eligibility absent |
+| PR12 / DPT-OPS-004 | tooling docs merged; fresh Context Mode function works,11PASS/1WARN/0FAIL doctor; post-merge host restart NOT VERIFIED, so acceptance remains PARTIAL and no retrospective receipt |
+| PR8 / IMP-P1-04 | OPEN/DRAFT/BLOCKED/CONFLICTING; both historical23514R/Coperands missing, no causal correction or integration authorized; earlier successful full replay and failed strict staging oracle both retained |
+
+Fresh Wave0 is55offline methods PASS(24math+17research+14adapter),0DBcalls. Prior full/live results
+are HISTORICAL / NOT RERUN in this wave. Original8migrations and all prior receipts remain exact.
+Fresh sole-leased aggregate audit confirms1479private profiles,1435approved,44held,matching0;
+160brands,420notes,11972note links;0variants/accords/families/images/pairs/listings/prices. All49
+data/security/role fingerprints unchanged. See final WorkstreamD/G evidence for exact denominators,
+query corrections and timestamps; canonical population is not complete-as-reported or app eligibility.
+
+Coordinator owns shared status/roadmap/log reconciliation; separate task branches own C owner choices,
+D data matrices,E private architecture and G source/media plan. All newly recommended choices remain
+PROPOSED. No real-data matching, public endpoint/UI/cache, SQL/runtime, account, cloud or Production
+activation. [[Post_Merge_Owner_Review_Matrix]] records exact review and branch evidence.
+
+
 ## Current PR9–11 review closeout — 2026-11-13
 
 Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.

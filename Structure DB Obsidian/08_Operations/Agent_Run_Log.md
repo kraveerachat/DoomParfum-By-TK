@@ -607,3 +607,37 @@ expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, be
 Owner-approved local Codex defaults now use the existing Caveman skill (bytes match v4.1.0) and Context Mode 2.1.8. Four Context Mode hooks were trusted after backup; explicit separate owner approval covered the system Node 24.22.3/npm 11.19.1 MSI update. Fresh-process MCP execution/doctor and hook checks pass; safe update/legacy warnings remain. Existing chat MCP transport closed after MSI, so restarting Codex and verifying its new host connection remain acceptance steps. No final task receipt yet.
 
 [[DPT-OPS-004_Agent_Tooling_Setup]] records exact paths/refs/checks, approval rejection and later authorization, failed non-admin MSI, successful UAC install, sandbox/PATH diagnostic limits, backups and rollback. Initial [[Agent_Tool_Registry]] and [[Tool_Usage_Log]] are proposed documentation additions on separate `codex/caveman-context-mode-setup` review branch from main aa55f8b. PR publication is pending at authoring; no merge is claimed. No application/database/production/data-rights/other-PR changes. User-level defaults affect local Codex chats; Node update affects programs sharing system Node.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Verified origin/main is `58ceafe72129b70f0333c7c4f2c6f38dba855272`. Owner merged PR10,11,12,9
+in that order at05:57:37Z,05:58:01Z,05:59:01Z,05:59:13Z on2026-11-13. No agent merge occurred.
+The dated review/pending statements below are historical snapshots; this section supplies current
+merge facts without erasing earlier failures or changing any immutable receipt.
+
+| Workstream | Current fact / remaining gate |
+|---|---|
+| PR9 / IMP-MATCH-02 | merged generic mathematical primitives;24-method suite; full Mode A scorer/milestone still incomplete; no retrospective receipt or accepted numeric policy |
+| PR10 / DPT-DATA-002 | merged bounded offline research;44holds,43normalization sidecars,Khamrah,5pair and15media candidates remain unpromoted; no new source or image right |
+| PR11 / IMP-MATCH-01 | merged independently reviewed local read-only reference adapter; historical28focused/157full PASS and scoped receipt preserved; real catalogue application binding/closure/eligibility absent |
+| PR12 / DPT-OPS-004 | tooling docs merged; fresh Context Mode function works,11PASS/1WARN/0FAIL doctor; post-merge host restart NOT VERIFIED, so acceptance remains PARTIAL and no retrospective receipt |
+| PR8 / IMP-P1-04 | OPEN/DRAFT/BLOCKED/CONFLICTING; both historical23514R/Coperands missing, no causal correction or integration authorized; earlier successful full replay and failed strict staging oracle both retained |
+
+Fresh Wave0 is55offline methods PASS(24math+17research+14adapter),0DBcalls. Prior full/live results
+are HISTORICAL / NOT RERUN in this wave. Original8migrations and all prior receipts remain exact.
+Fresh sole-leased aggregate audit confirms1479private profiles,1435approved,44held,matching0;
+160brands,420notes,11972note links;0variants/accords/families/images/pairs/listings/prices. All49
+data/security/role fingerprints unchanged. See final WorkstreamD/G evidence for exact denominators,
+query corrections and timestamps; canonical population is not complete-as-reported or app eligibility.
+
+Coordinator owns shared status/roadmap/log reconciliation; separate task branches own C owner choices,
+D data matrices,E private architecture and G source/media plan. All newly recommended choices remain
+PROPOSED. No real-data matching, public endpoint/UI/cache, SQL/runtime, account, cloud or Production
+activation. [[Post_Merge_Owner_Review_Matrix]] records exact review and branch evidence.
+
+TOOL DECISION: existing Caveman/ContextMode, Git/Python/PyYAML, GitHub connector, native web primary
+research and existing guarded localDocker/PostgreSQL aggregate audit. No newinstall/config/account/paid
+API or toolsource checkout. Separate worktrees and exclusiveDBlease prevent shared mutations.
+Raw machine process records, private dataset rows and logs remain ignored/outside Git.
+Coordinator independent exact-artifact review/validation/publication and verified ZIP follow;
+all actual failures/corrections are retained in task evidence. PRODUCTION_MUTATION=NO.

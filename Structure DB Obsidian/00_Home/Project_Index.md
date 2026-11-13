@@ -14,6 +14,14 @@ source_of_truth: "../README.md"
 
 # Project Index — DoomParfum By TK
 
+## Post-merge Waves 0–2 — 2026-11-13
+
+Current merged-state and review entry point: [[Project_Status]], [[Post_Merge_Owner_Review_Matrix]],
+[[DPT-DOC-001_Post_Merge_Waves]], [[Post_Merge_Verification_Evidence]],
+[[DPT-DOC-001_Post_Merge_Tool_Observation]]. Separate-lane PR links and exact source heads belong in
+the review matrix so this branch does not introduce broken cross-branch Wikilinks.
+
+
 > **Map of Content (MOC) & Documentation Hub**
 > ยินดีต้อนรับสู่ Obsidian Vault ของระบบ **DoomParfum By TK** เอกสารชุดนี้รวบรวมพิมพ์เขียว (Blueprint), ข้อกำหนดระบบ (Requirements), แบบจำลองข้อมูล (Domain & Data), กลไกการจับคู่กลิ่น (Scent Matching), การออกแบบประสบการณ์ผู้ใช้ (UX), สถาปัตยกรรมวิศวกรรม (Engineering), แผนงาน (Delivery), และบันทึกการตัดสินใจ (Operations)
 

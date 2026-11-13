@@ -132,3 +132,7 @@ One new [[2026-11-13_103504_IMP-MATCH-01_Read_Only_Input_Adapter]] receipt creat
 No previous receipt amended. Scope is local reference adapter/aggregate audit only; all real-data
 session/closure/DM/publication gates remain separate. Receipt-inclusive checks and final Git head
 are recorded in current evidence/PR/external registry after publication.
+
+## Post-merge Waves 0–2 — 2026-11-13
+
+Owner mergedPR11 ata2d17b6c336b69e312d7e1e4e559a123bd3f8332; reviewedheadd267118b1afc27dec22fa8dcd52853a1994b356a. Prior scoped receipt unchanged. Fresh14offline methods passed in Wave0; prior28focused/157full and independentlive tests are HISTORICAL / NOT RERUN. Nonadmin real-catalogue binding,closure,selected rights and eligibility remain gated; no API or ranking activation.
