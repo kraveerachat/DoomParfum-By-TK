@@ -4,12 +4,42 @@ project: DoomParfum By TK
 type: owner_review_matrix
 status: independent-review-complete-owner-review-pending
 owner: human-owner
-updated: 2026-11-13
+updated: 2026-11-14
 tags: [doomparfum, owner-review, gates, post-merge]
 source_of_truth: "../../README.md"
 ---
 
 # Post-merge Owner Review Matrix
+
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current origin/main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c includes Owner-merged13–17, including
+PR15. The prior dated pending statements remain historical. Merge does not answer DM/OP or grant
+new source/auth/publication rights. [[Next_Wave_Owner_Decision_Form]] is the current answer form;
+actual Git/test/data/tool/merge evidence is in [[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+| PR | Owner merge SHA | UTC |
+|---|---|---|
+| 14 | fff0b8c06d0c25a5c159aa8cad19227280f1baff | 2026-11-13T14:50:57Z |
+| 16 | 4560b53945d111a51e231a2b477cb0b8a194546f | 2026-11-13T14:51:08Z |
+| 13 | e2f8bf7b90763be196124cd2f8fff1088d755d16 | 2026-11-13T14:51:26Z |
+| 17 | 36649e456a60ddfc3463d1d752c35eb23cf7e415 | 2026-11-13T14:52:32Z |
+| 15 | 1f2f53f97dff39bc4f3094e4ad82653e8b03f52c | 2026-11-13T14:59:48Z |
+
+
+The prompt's historical36649e4and unmergedPR15 expectation are superseded. PR15merged bykraveerachat
+at1f2f53f;4documentation files,existing independent review,empty GitHub reviews/checks. Current
+PR15_READY_FOR_OWNER_MERGE=NOT_APPLICABLE_ALREADY_MERGED. Only open PR at preflight is8, Draft and
+conflicting. Local main03481f7066487c44631cb9065899894ee8db71fb is deliberately untouched; useorigin/main.
+
+New bounded branches:
+
+- Coordinator: codex/post-pr13-17-integration
+- DPT-PLAN-007: codex/plan-matching-contracts-golden
+- DPT-DATA-004: codex/research-regional-source-dossiers
+- DPT-PLAN-008: codex/plan-private-operation-contracts
+ All base1f2f53f. Exact heads/PR URLs follow actual review/publication, not assumed.
+No cross-branch ownership of shared status files. PR8 gets no automatic merge/rebase or receipt.
 
 ## Verified baseline and merged registry
 
@@ -176,3 +206,48 @@ published checkpoint3915d69b3f2fe2f190012b4997e6de5c4e6c9358, base58ceafe72129b7
 Scoped DPT-DOC-001 receipt exists after independent61check readiness verification. This metadata
 checkpoint and final archive/head readback are outside the immutable receipt; final digest is
 resolved in the external handoff registry/verification record. No unfinished feature acceptance.
+
+## Preparation Draft registry and completed review — 2026-11-14
+
+Owner explicitly confirmed preparation only; all DM/OP/source/auth/publication choices remain
+PROPOSED. The following exact GitHub readbacks are OPEN/DRAFT/unmerged. New18–20are mergeable at
+observation, not approved policies. PR8remains conflicting/blocked at its unchanged source head.
+
+| PR | Branch | Exact HEAD | Scope |
+|---|---|---|---|
+| [PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) | codex/imp-p1-04-local-benchmark-restore | 84dccb117971ab65e0bf39fa3d1d84a12d344f8d | blocked temporal cause; no new experiment |
+| [PR18](https://github.com/kraveerachat/DoomParfum-By-TK/pull/18) | codex/plan-matching-contracts-golden | c6ae33370907681ae87132eb0ba999286a73bcb9 | bounded preparation, independent review complete |
+| [PR19](https://github.com/kraveerachat/DoomParfum-By-TK/pull/19) | codex/research-regional-source-dossiers | 7b4a3e0c1fa0de10a110eb817b3e0cdb4b40180d | bounded preparation, independent review complete |
+| [PR20](https://github.com/kraveerachat/DoomParfum-By-TK/pull/20) | codex/plan-private-operation-contracts | b7b8a21c676234e3e6447f586920997f1f1d86a6 | bounded preparation, independent review complete |
+
+Independent review: method contracts by coordinator (author B),36corrected bounded assertions,
+plus45author arithmetic/73author static checks; regional dossiers byB(authorD),64independent and
+29author checks; private operation contracts byD(authorC),36independent checks; coordinator19docs
+byC,independent55offline/34pure-prefix/22audit checks and13literal Owner-reply delta assertions.
+These counts have different units and are not one total of feature tests. Method27/NC15/OC16cases
+remain future acceptance specifications, NOT RUN as runtime/scorer/API/SQL/RLS/relevance tests.
+
+All new task changed-path sets are disjoint. Coordinator alone edits shared notes. PR8shares only
+Project_Status,Agent_Run_Log,Change_Log with this coordinator; preserve both histories in any later
+authorized integration. No PR8merge/rebase/clock/import/replay/guard change. Main1f2f53f code and
+original13receipts unchanged. Independent review tooling failures remain in evidence: baselinecwd,
+EOF,newline oracle,static assertion/PowerShell edit/parser/probe issues were corrected without
+source/data/policy changes. Source-access404/timeout/UNKNOWN results remain unresolved as recorded.
+
+Next implementation categories:
+
+| Category | Work |
+|---|---|
+| READY NOW | review/source hashes,synthetic arithmetic,document contracts and permission research only |
+| AFTER OWNER DECISION + applicable Gate P | exact ModeA/B1/domain/rounding/normalization choices before separate TDD tasks; no automatic implementation from these Drafts |
+| AFTER SOURCE RIGHTS | specific sample/adapter/image intake with exact licensor,use and bounded task approval |
+| AFTER AUTHENTICATION APPROVAL | clean application-private pilot or accepted auth-model amendment,then genuine nonadmin tests before private API/UI |
+| BLOCKED | real-data ranking/promotion,B2actualstrengths,public API/UI/cache/cloud and PR8causal correction absent actual operands |
+
+Shared D1–D9 meanings remain unchanged. Fresh1479/1435/44/0,160brands/420notes/11972links and49
+fingerprint equality are observed operator audit facts, not app or global catalogue completeness.
+Usable images/accords/families/pairs/listings/prices0. No source/API/image acquisition,contact,
+account,install/config change,Production mutation or agent merge. Host restart remains PARTIAL.
+The single new handoff/readiness artifact still needs exact independent verification before the
+coordinator receipt/publication closeout. Final archive/PR heads are recorded outside any immutable
+receipt and self-referential archive digest. Existing verified previous ZIP is retained for recovery.

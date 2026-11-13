@@ -15,6 +15,19 @@ source_of_truth: "../../README.md"
 
 # Delivery Roadmap — DoomParfum By TK
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current origin/main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c includes Owner-merged13–17, including
+PR15. The prior dated pending statements remain historical. Merge does not answer DM/OP or grant
+new source/auth/publication rights. [[Next_Wave_Owner_Decision_Form]] is the current answer form;
+actual Git/test/data/tool/merge evidence is in [[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+Next order: exact Owner decisions; review proposed method/normalization/private operation contracts;
+merge any applicable Planning Amendment; only then separate synthetic ModeA/B1 implementation tasks
+with TDD. Real catalogue eligibility is a later separate gate; B2strengths unavailable. Source/media
+tasks additionally need exact usable licensor permissions. Auth/private pilot and API/UI remain
+separate approved tasks; no framework or provider chosen. Continue safe research/evidence now.
+
 ## Post-merge Waves 0–2 — 2026-11-13
 
 Order: review separate Owner answer packet; establish exact remaining scorer milestones; decide

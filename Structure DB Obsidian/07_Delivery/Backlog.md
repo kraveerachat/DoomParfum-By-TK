@@ -15,6 +15,24 @@ source_of_truth: "../../README.md"
 
 # Product Backlog — DoomParfum By TK
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current origin/main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c includes Owner-merged13–17, including
+PR15. The prior dated pending statements remain historical. Merge does not answer DM/OP or grant
+new source/auth/publication rights. [[Next_Wave_Owner_Decision_Form]] is the current answer form;
+actual Git/test/data/tool/merge evidence is in [[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+| Task | Current authorized work | Dependent gate |
+|---|---|---|
+| DPT-DOC-002 | shared integration,Owner form,normalization transition,RO audit,D1–D9/ZIP | independent review before docs Draft; no implementation grant |
+| DPT-PLAN-007 | proposed exact method contracts and rational goldens | exact DM/domain/missingness choices and applicable plan before scorer TDD |
+| DPT-DATA-004 | regional source/media operation dossiers and unsent permission templates | exact usable rights and bounded task before intake |
+| DPT-PLAN-008 | private read/write operation and UX acceptance contracts | OP05/06/session/stack and applicable plan before API/UI |
+| IMP-P1-04 / PR8 | retain existing no-go/source evidence | genuinely new attributable operands before causal fix; no equivalent run |
+
+Completed13–17are not reopened or duplicated. No placeholder implementation PR. Existing proposed
+documentation CI remains backlog only; no GitHubAction created. Holds44/eligibility0 unchanged.
+
 ## Post-merge Waves 0–2 — 2026-11-13
 
 | Task | Authorized now | Requires another gate / remains blocked |

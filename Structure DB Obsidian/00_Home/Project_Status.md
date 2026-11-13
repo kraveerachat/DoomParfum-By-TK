@@ -14,6 +14,34 @@ source_of_truth: "../../README.md"
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current origin/main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c includes Owner-merged13–17, including
+PR15. The prior dated pending statements remain historical. Merge does not answer DM/OP or grant
+new source/auth/publication rights. [[Next_Wave_Owner_Decision_Form]] is the current answer form;
+actual Git/test/data/tool/merge evidence is in [[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+| PR | Owner merge SHA | UTC |
+|---|---|---|
+| 14 | fff0b8c06d0c25a5c159aa8cad19227280f1baff | 2026-11-13T14:50:57Z |
+| 16 | 4560b53945d111a51e231a2b477cb0b8a194546f | 2026-11-13T14:51:08Z |
+| 13 | e2f8bf7b90763be196124cd2f8fff1088d755d16 | 2026-11-13T14:51:26Z |
+| 17 | 36649e456a60ddfc3463d1d752c35eb23cf7e415 | 2026-11-13T14:52:32Z |
+| 15 | 1f2f53f97dff39bc4f3094e4ad82653e8b03f52c | 2026-11-13T14:59:48Z |
+
+
+Fresh55offline methods PASS and34offline data checks PASS. Operator READ ONLY audit15:10:10Z:
+1479private/1435approved/44held/matching0,160brands/420notes/11972links;49data/security/role
+fingerprints unchanged. Canonical accords/families/images/pairs/listings/prices0. No completeness,
+world/regional edition coverage, source permission or app identity is inferred from raw list shape.
+
+PR8remains84dccb117971ab65e0bf39fa3d1d84a12d344f8d,OPEN/DRAFT/CONFLICTING/BLOCKED, without new
+operands, integration or experiment. PR15is already merged, not awaiting another Owner merge.
+New work is missing method goldens,regional rights dossiers,private operation/UX contracts and
+[[Normalization_Closure_and_Materialization_Transition]]; all policy-dependent implementation stays
+blocked. ContextMode functional PASS; host restart PARTIAL. No source/runtime/SQL/rights/hold/flag/
+old receipt or Production change. All new branches use origin/main; stale local main untouched.
+
 ## Post-merge Waves 0–2 — 2026-11-13
 
 Verified origin/main is `58ceafe72129b70f0333c7c4f2c6f38dba855272`. Owner merged PR10,11,12,9

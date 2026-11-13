@@ -433,3 +433,21 @@ activation. [[Post_Merge_Owner_Review_Matrix]] records exact review and branch e
 
 Post-review checkpoints and final PR heads are recorded in the task/review matrix; no old receipt
 is amended or duplicated. No existing runtime,SQL,rights,source observations or holds were changed.
+
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current origin/main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c includes Owner-merged13–17, including
+PR15. The prior dated pending statements remain historical. Merge does not answer DM/OP or grant
+new source/auth/publication rights. [[Next_Wave_Owner_Decision_Form]] is the current answer form;
+actual Git/test/data/tool/merge evidence is in [[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+Fresh source-bound offline55/55(24math+17research+14adapter),0DBcalls;34offline source/matrix checks.
+Guarded sole-leased operator READ ONLY audit:1479/1435/44/0,160brands/420notes/11972links,all49table/
+security/role manifests exact before/after and previous audit. No raw row export. Task container
+stopped,volume retained. Existing rootPR8lease/fingerprint helpers inspected as audit coordination,
+not merged product dependencies. No clock/import experiment; old full/live/replay results historical.
+
+Existing Caveman/ContextMode/Git/GitHub/gh/Python/PyYAML/localDocker and primary web used; no new
+installation/config/account/paid service. Doctor11PASS/1WARN/0FAIL+syntheticPASS; host restart still
+unverified. Coordinator alone owns shared logs and final ZIP; proposed scopes remain unanswered.
+No original source/SQL/runtime/RLS/auth/rights/hold/eligibility/receipt or Production mutation.

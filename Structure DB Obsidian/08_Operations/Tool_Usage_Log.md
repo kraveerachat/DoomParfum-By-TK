@@ -10,6 +10,14 @@ source_of_truth: "../../README.md"
 
 # Tool Usage Log
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+New health check: ContextMode2.1.10(877eebc),Nodev24.22.1,doctor11PASS/1WARN/0FAIL;
+SYNTHETIC_POST_PR13_17_SMOKE_OK passed. Caveman installed guidance read/applied. No installation,
+upgrade,hook/config/account/service change. Host restart not verified; gatePARTIAL. Old temp/data
+warning is retained safely, not cleaned. Full observation/evidence:[[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+
 ## 2026-11-13 — DPT-OPS-004 user-level defaults and Context Mode repair
 
 Owner requested Caveman/Context Mode installation and explanation of cross-chat effects. Inventory found the Caveman skill and Context Mode 2.1.8 already installed. Caveman bytes match the pinned v4.1.0 source; no duplicate installation. Context Mode initially had Node 24.14.0 below minimum and four untrusted hooks.

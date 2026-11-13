@@ -14,6 +14,13 @@ source_of_truth: "../README.md"
 
 # Project Index — DoomParfum By TK
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+Current integration: [[DPT-DOC-002_Post_PR13_17_Integration]], [[DPT-DOC-002_Post_PR13_17_Preflight]],
+[[Next_Wave_Owner_Decision_Form]], [[Normalization_Closure_and_Materialization_Transition]].
+Separate new task PRs are registered after actual publication; no broken cross-branch links.
+
+
 ## Post-merge Waves 0–2 — 2026-11-13
 
 Current merged-state and review entry point: [[Project_Status]], [[Post_Merge_Owner_Review_Matrix]],

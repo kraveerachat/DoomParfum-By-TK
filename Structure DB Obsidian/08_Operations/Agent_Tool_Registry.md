@@ -10,6 +10,14 @@ source_of_truth: "../../README.md"
 
 # Agent Tool Registry
 
+## Post-PR13–17 verified integration — 2026-11-13
+
+New health check: ContextMode2.1.10(877eebc),Nodev24.22.1,doctor11PASS/1WARN/0FAIL;
+SYNTHETIC_POST_PR13_17_SMOKE_OK passed. Caveman installed guidance read/applied. No installation,
+upgrade,hook/config/account/service change. Host restart not verified; gatePARTIAL. Old temp/data
+warning is retained safely, not cleaned. Full observation/evidence:[[DPT-DOC-002_Post_PR13_17_Preflight]].
+
+
 ## Post-merge Waves 0–2 — 2026-11-13
 
 Fresh functional observation: ContextMode2.1.10(877eebc),Nodev24.22.1,codex0.167.0-alpha.4.1;
