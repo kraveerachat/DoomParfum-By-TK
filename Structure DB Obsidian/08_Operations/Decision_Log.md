@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-13
+updated: 2026-11-14
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,17 @@ source_of_truth: "../../README.md"
 ---
 
 # Decision Log — DoomParfum By TK
+
+## Post-PR13–17 verified integration — 2026-11-13
+
+Owner merge13–17 is verified, including private architecture PR15. No exact individual answer to
+DM01–07/OP01–06 has been recorded or inferred. [[Next_Wave_Owner_Decision_Form]] is this wave's single
+answer-entry surface, retaining canonical definitions from [[Post_Merge_Owner_Decision_Packet]].
+Only actual Owner/date/reference/version/scope answers can change a decision. Source licensor rights
+must still be independently evidenced; Owner task approval cannot create third-party copyright.
+Current implementation gates remain blocked, independent research/planning continues. No accepted
+OD/DEC/ADR is changed; changed recommendations require the appropriate Planning Amendment.
+
 
 ## Post-merge Waves 0–2 — 2026-11-13
 
@@ -220,3 +231,12 @@ OD-01..06 bounded licensed/local approvals support [[IMP-P1-02_Licensed_Scento_E
 profiles approved by independently reviewed mapping;44 held. No NEW/DM status is changed here.
 PR4 remains Draft; capacity/restore, source-specific regional rights and per-image approval remain
 separate. Human Owner reviews/merges implementation. PRODUCTION_MUTATION=NO.
+
+## Owner execution-scope reply — 2026-11-14
+
+Actual Owner reply in the current conversation: “คงทุกข้อ PROPOSED และทำ preparation ต่อ”.
+Recorded 2026-11-14T01:59:34.926470+07:00. Execution scope is confirmed as preparation only. No DM01–07/OP01–06 choice,
+normalization/closure/source right,session/stack/publication policy or implementation is accepted.
+The integrated form remains unanswered for policy choices. Continue authorized independent research,
+golden arithmetic,contracts,documentation,review and handoff; stop only dependent implementation.
+This records the reply truthfully rather than treating it as acceptance of every recommendation.

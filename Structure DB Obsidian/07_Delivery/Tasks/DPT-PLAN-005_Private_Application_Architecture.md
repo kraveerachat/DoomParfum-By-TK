@@ -71,3 +71,9 @@ unmerged, with publishedhead`7798e6b676fa36bda5729bf984ff4db829086e5e` and base5
 This later metadata-only checkpoint records publication without changing the immutable receipt.
 Final Git/remote head is in the coordinator exact-head registry and consolidated handoff. Owner
 decisions and future implementation/source gates remain unapproved; no Production change or merge.
+
+## Post-PR13–17 verified integration — 2026-11-13
+
+Owner mergedPR15 at1f2f53f97dff39bc4f3094e4ad82653e8b03f52c on2026-11-13T14:59:48Z; sourceHEADcef7f5729ed2e71bf774e133f19b5975bf2d661a.
+This records the merge event without modifying the immutable receipt. All unanswered policy,source,
+auth/publication and dependent implementation gates stay open; current facts are in[[Project_Status]].
