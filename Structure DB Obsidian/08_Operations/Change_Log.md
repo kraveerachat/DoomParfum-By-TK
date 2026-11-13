@@ -397,3 +397,9 @@ Seven shared Markdown documents reconciled, all unrelated main files intact, cur
 branch comparison ahead9/behind0/23 changed docs and GitHub clean. Planning review only;
 DM01..07 are still PROPOSED; no actual matching tests/CI rerun, Owner Gate P,
 source/media permission, production or PR-to-main merge inferred.
+
+## 2026-11-13 — DPT-OPS-004 agent tooling setup checkpoint
+
+Owner-approved local Codex defaults now use the existing Caveman skill (bytes match v4.1.0) and Context Mode 2.1.8. Four Context Mode hooks were trusted after backup; explicit separate owner approval covered the system Node 24.22.3/npm 11.19.1 MSI update. Fresh-process MCP execution/doctor and hook checks pass; safe update/legacy warnings remain. Existing chat MCP transport closed after MSI, so restarting Codex and verifying its new host connection remain acceptance steps. No final task receipt yet.
+
+[[DPT-OPS-004_Agent_Tooling_Setup]] records exact paths/refs/checks, approval rejection and later authorization, failed non-admin MSI, successful UAC install, sandbox/PATH diagnostic limits, backups and rollback. Initial [[Agent_Tool_Registry]] and [[Tool_Usage_Log]] are proposed documentation additions on separate `codex/caveman-context-mode-setup` review branch from main aa55f8b. PR publication is pending at authoring; no merge is claimed. No application/database/production/data-rights/other-PR changes. User-level defaults affect local Codex chats; Node update affects programs sharing system Node.

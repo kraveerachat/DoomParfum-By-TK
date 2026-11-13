@@ -601,3 +601,9 @@ PR-only blob hashes and109 unrelated main file hashes preserved. Created two-par
 9bc92f0170325def43da67e92a9855d4e190d475 and updated existing branch by non-force,
 expected-head-verified fast forward. Readback PR4 OPEN/ready/mergeable clean, behind0,
 23 files; original DM01..07 all PROPOSED. No runtime tests rerun; no Production/main/PR merge.
+
+## 2026-11-13 — DPT-OPS-004 agent tooling setup checkpoint
+
+Owner-approved local Codex defaults now use the existing Caveman skill (bytes match v4.1.0) and Context Mode 2.1.8. Four Context Mode hooks were trusted after backup; explicit separate owner approval covered the system Node 24.22.3/npm 11.19.1 MSI update. Fresh-process MCP execution/doctor and hook checks pass; safe update/legacy warnings remain. Existing chat MCP transport closed after MSI, so restarting Codex and verifying its new host connection remain acceptance steps. No final task receipt yet.
+
+[[DPT-OPS-004_Agent_Tooling_Setup]] records exact paths/refs/checks, approval rejection and later authorization, failed non-admin MSI, successful UAC install, sandbox/PATH diagnostic limits, backups and rollback. Initial [[Agent_Tool_Registry]] and [[Tool_Usage_Log]] are proposed documentation additions on separate `codex/caveman-context-mode-setup` review branch from main aa55f8b. PR publication is pending at authoring; no merge is claimed. No application/database/production/data-rights/other-PR changes. User-level defaults affect local Codex chats; Node update affects programs sharing system Node.
