@@ -1,0 +1,97 @@
+{
+  "task": "DPT-QA-001",
+  "kind": "NEWLY_EXECUTED_SYNTHETIC_ACCEPTED_PRIMITIVE_QA",
+  "at_utc": "2026-11-13T20:13:25.016910+00:00",
+  "base": "8c6a8376680c7a10cc3eb4b5cf80afe4376a9282",
+  "branch": "codex/qa-primitive-invariants",
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "runs": [
+    {
+      "label": "focused",
+      "command": "python -m unittest discover -s matching_math/tests -p test_invariants.py -v",
+      "working_directory": "task checkout root (.local/worktrees/primitive-invariants relative to common checkout)",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_methods": 7,
+      "passed_methods": 7,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "command_wall_seconds": 0.16172390000429004,
+      "unittest_reported_seconds": "0.014",
+      "output_sha256": "16985aaacd08bad5a724bec551f43e1b01088f269b7a08924102bf6c13f242aa"
+    },
+    {
+      "label": "math_regression",
+      "command": "python -m unittest discover -s matching_math/tests -v",
+      "working_directory": "task checkout root (.local/worktrees/primitive-invariants relative to common checkout)",
+      "exit_code": 0,
+      "status": "PASS",
+      "test_methods": 31,
+      "passed_methods": 31,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "command_wall_seconds": 0.17665100000158418,
+      "unittest_reported_seconds": "0.045",
+      "output_sha256": "a2f5ef7070a1e6fe662886f2cb97f1d7223fe33291e118b277c82084851e8de4"
+    }
+  ],
+  "bounded_internal_case_counts": {
+    "set_metric_triples": 343,
+    "vector_l1_numeric_pairs": 80,
+    "vector_scaling_and_joint_zero_cases": 9,
+    "known_mean_affine_cases": 81,
+    "known_mean_split_weight_cases": 27,
+    "coverage_complement_cases": 27,
+    "public_wrong_operand_categories": 4
+  },
+  "internal_cases_total": 571,
+  "unit_count_notice": "571 deterministic internal cases across7new test methods; not571features or method tests",
+  "source_manifest": [
+    {
+      "path": "matching_math/primitives.py",
+      "sha256": "c1b69bdc74a4a060f6559a182306618f02c595b16e27f3ebb5e4bcca4ff7b735",
+      "binding": "canonical base Git blob"
+    },
+    {
+      "path": "matching_math/tests/test_primitives.py",
+      "sha256": "777b2e2b04d0f67ab32a279940faa2488ba59cc70050cacc4b487fcecacbde30",
+      "binding": "canonical base Git blob"
+    },
+    {
+      "path": "matching_math/tests/test_invariants.py",
+      "sha256": "9b285c675c84f98d8328c2dd46ac9d4d33205eacdc3bc709188d9c240c742343",
+      "binding": "new task working file UTF-8/LF"
+    },
+    {
+      "path": "matching_math/evidence/unit_results.json",
+      "sha256": "aa82385197b6f275f9ce3d0bc35c6458c83f258eedfde24abb2226256d5a3313",
+      "binding": "canonical base Git blob"
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "b683c5e59ee9ce6f92d70f73df9c758e2e27736124c278b942324d4d430688ae",
+      "binding": "canonical base Git blob"
+    },
+    {
+      "path": "DEVELOPMENT_WORKFLOW.md",
+      "sha256": "f5aeeb7046f216b86c82f1caf83f88c3d072758ca208d715a978eb66aba261f1",
+      "binding": "canonical base Git blob"
+    }
+  ],
+  "initial_test_phase": "TEST_ONLY_EXISTING_FEATURES_INITIAL_PASS",
+  "runtime_source_changed": false,
+  "database_calls": 0,
+  "network_calls": 0,
+  "real_data_used": false,
+  "not_run": [
+    "Full ModeA/B1/B2 scorer",
+    "Query normalization/alias or source-scale conversion",
+    "Real-data ranking",
+    "Database/RLS/rights/integration",
+    "Relevance/performance/recovery/publication"
+  ],
+  "independent_review": "PENDING",
+  "remaining_gate": "Independent exact-source/test review, then coordinator publication and Human Owner review; no merge"
+}
