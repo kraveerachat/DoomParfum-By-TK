@@ -2,7 +2,7 @@
 id: DPT-DOC-001-VERIFICATION
 project: DoomParfum By TK
 type: documentation_evidence
-status: independent-review-pending
+status: independent-review-complete-owner-review-pending
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, post-merge, evidence, review]
@@ -139,3 +139,45 @@ The task container was stopped through its guard after lease release; volume ret
 contents,security,role,44hold,rights or eligibility change. Single verified latest handoff packaging
 is the coordinator's final remaining closeout step. Its final archive hash/PR17head is resolved in
 the external exact-head registry, avoiding an impossible self-referential commit/archive digest.
+
+## Package readiness and final metadata closeout — 2026-11-13
+
+Independent package reviewer /root/postmerge_b_diagnostics, distinct from packager /root, completed
+61checks PASS/0failures on a single immutable captured byte buffer: READINESS archiveSHA256
+49ef5c076311adaadd9a63e7403fc11fe76a05439e403c39cc5e755b984e277b,16942953bytes,3365manifest
+entries/3366members,210exactGit snapshots. CRC,membership/hash/size,allHbytes,sixpinned source
+artifacts/CSVcounts,original migrations/receipts and source/private-rights boundaries verified.
+Review artifactSHA2565a2c97894663a42447184a5de1cf1650be6b7a8f118f62c6fd5fcdefc6a9c863. This is package/documentation readiness, not database/runtime or policy
+acceptance. The final archive will add publication/receipt metadata and receive its own exact review.
+
+Retained failure: initial independent report mixed an open preliminary ZIP handle with a later
+path-based digest after atomic replacement. Its20earlierassertions do not bind the later49efhash.
+It is preserved as historical instrumentation evidence, not acceptance. The new61checkreview uses
+one byte buffer throughout. Root/per-D stale currenthead/review/authority pointers were archived
+exactly and corrected before that review; original histories were not rewritten. Cfirstreviewer
+usage limit interrupted continuation; existing independent reviewerBcompleted actual new review.
+
+C/D/Epost-receipt header corrections now accurately say independent-review-complete / Owner review
+pending; no proposal/specification/test/permission/receipt changed. Their newer exact heads below
+supersede the earlier publication table. GitHub readback confirms OPEN/DRAFT/unmerged;13–16mergeable,
+8conflicting. Main re-fetchedunchanged58ceafe72129b70f0333c7c4f2c6f38dba855272 after user continuation.
+
+| Current PR | Exact HEAD |
+|---|---|
+| [PR8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) | 84dccb117971ab65e0bf39fa3d1d84a12d344f8d |
+| [PR13](https://github.com/kraveerachat/DoomParfum-By-TK/pull/13) | f5db9c5a96e8b6697344408e99736b9074961713 |
+| [PR14](https://github.com/kraveerachat/DoomParfum-By-TK/pull/14) | dc6e96fd3f8ac5cd1fac8c206ae043de81e5c9f2 |
+| [PR15](https://github.com/kraveerachat/DoomParfum-By-TK/pull/15) | cef7f5729ed2e71bf774e133f19b5975bf2d661a |
+| [PR16](https://github.com/kraveerachat/DoomParfum-By-TK/pull/16) | 97ce8b6e9138b64aa810eb23bef11497ff35020a |
+
+Safe continuation process-name/start-time observation found no matching process in its visible
+namespace. It does not establish a host restart; FremainsPARTIAL. Earlier functional ContextMode
+doctor/smoke evidence remains scoped to its actual observation time. No new DB or timestamp run.
+Owned local container stopped,volume retained. Final coordinator receipt records only completed
+docs/review/package-readiness scope. No receipt for unfinishedPR8/9fullscorer/12hostrestart.
+
+TOOL EXECUTION REPORT: existing Caveman/ContextMode,Git/GitHubconnector,Python/PyYAML,primaryweb
+research and guardedDocker/PostgreSQL aggregate audit used. No install/config/account/paid calls.
+Original SQL/runtime and all old receipts unchanged; no rawlogs,private rows,unlicensed bytes or
+machine configs committed/packaged in this wave. Exact files are in the external Git snapshot
+manifest and task/PRdiffs. Final source/PR/ZIPreadback follows without changing the immutable receipt.
