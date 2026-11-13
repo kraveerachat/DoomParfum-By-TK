@@ -46,3 +46,7 @@ GIT_WRITE: authorized task branch only. OBSIDIAN_WRITE: YES. PRODUCTION_MUTATION
 Independent exact-document and source/count/rights review completed with no blocking findings for
 this docs-only scope. Final validator and a single planning-review-ready receipt follow before
 Draft publication. No proposal is accepted and no implementation/source permission is granted.
+
+Final scoped documentation receipt: [[2026-11-13_153139_DPT-PLAN-006_Planning_Review_Ready]]. Reviewed payloadSHA`0be437a566e886c4d4c2c286aa7cd5b4e829129a`;
+independent review complete. Receipt adds no policy acceptance or runtime feature. Subsequent
+publication head/PR status is recorded without amending this immutable file.
