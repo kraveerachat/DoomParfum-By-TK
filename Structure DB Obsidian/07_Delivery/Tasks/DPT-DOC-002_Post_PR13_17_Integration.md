@@ -122,3 +122,11 @@ and prior verified archive preserved; final artifact digest lives outside itself
 
 Single scoped receipt: [[2026-11-14_021503_DPT-DOC-002_Preparation_Review_Ready]]. Reviewed payload`2c96b362fc340bb660251e33a62876abd7046bf2`.
 Publication metadata follows without amending this immutable receipt or accepting any policy.
+
+## Verified Draft publication — 2026-11-14T02:16:30.444292+07:00
+
+[PR21](https://github.com/kraveerachat/DoomParfum-By-TK/pull/21) created OPEN/DRAFT/unmerged
+at published head`dec59e539a566e46b086c1533797fa275a2b62e4`, base1f2f53f97dff39bc4f3094e4ad82653e8b03f52c. This later metadata-only
+checkpoint records publication; immutable receipt and reviewed specification stay unchanged.
+Final actual HEAD is in the coordinator registry/handoff. Owner confirmed preparation only:
+all policy/source/auth/implementation choices remain PROPOSED. No merge or Production mutation.
