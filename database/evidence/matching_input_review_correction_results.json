@@ -1,0 +1,113 @@
+{
+  "task": "IMP-MATCH-01",
+  "version": "matching-input-local-v2",
+  "reviewed_original_head": "ff9f840e49d54e511e2cd2ca0e7ad4460c25bb0a",
+  "independent_reviewer": "/root/pr11_exact_review; independent of parent implementer",
+  "initial_review": "CHANGES_REQUIRED; final independent re-review pending corrected checkpoint",
+  "findings": [
+    {
+      "id": "IR11-01",
+      "severity": "HIGH",
+      "trigger": "Trusted transport reuses established REPEATABLE READ READ ONLY snapshot contrary to documented precondition",
+      "demonstrated": "Two genuine synthetic sessions: revocation commits, old snapshot returns known_usable, fresh session returns uniform InputUnavailable",
+      "scope_limit": "No fresh-session RLS bypass or historical timestamp rootcause claim",
+      "correction": "Explicit READ COMMITTED READ ONLY and isolation gate before catalogue query; new two-session rights/member regression tests"
+    },
+    {
+      "id": "IR11-02",
+      "severity": "MEDIUM",
+      "trigger": "Malformed nested internal DTOs accepted despite typed output contract",
+      "demonstrated": "Eight adversarial accepted shapes;513membership contradiction; internal UUID error-class mismatch",
+      "scope_limit": "Defensive trusted-transport contract; most malformed shapes cannot originate from canonical SQL",
+      "correction": "Exact nested schemas, required qualified timestamps, nullable text, allowed states/layers, canonical internal UUIDs,512unique bound members and uniform AdapterUnavailable"
+    }
+  ],
+  "source_sha256": {
+    "database/image_validation.py": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+    "database/local.py": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+    "database/matching_input.py": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+    "database/performance.py": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+    "database/scento_etl.py": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+    "database/tests/fixtures.py": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+    "database/tests/test_deferred_performance.py": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+    "database/tests/test_foundation.py": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+    "database/tests/test_image_validation.py": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+    "database/tests/test_matching_input.py": "0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2",
+    "database/tests/test_scento_etl.py": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+    "database/validate_docs.py": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+    "database/verify.py": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+    "database/verify_images.py": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1",
+    "database/migrations/001_identity.sql": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+    "database/migrations/002_catalogue.sql": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+    "database/migrations/003_provenance.sql": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+    "database/migrations/004_associations_media_personal.sql": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+    "database/migrations/005_contract_functions.sql": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+    "database/migrations/006_media_and_deferred_contracts.sql": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+    "database/migrations/007_security_and_field_contract.sql": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+    "database/migrations/008_coalesced_deferred_validation.sql": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
+  },
+  "focused": {
+    "task": "IMP-MATCH-01 independent-review corrections",
+    "stage": "FOCUSED_CORRECTION_REGRESSION",
+    "tests_run": 28,
+    "passed": 28,
+    "failing_methods": 0,
+    "failed_assertions": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 35.5,
+    "at_utc": "2026-11-13T03:15:08.805785+00:00",
+    "persistent_pilot_all49_data_security_application_roles_unchanged": true,
+    "coordinator": "Existing PR8common O_EXCLlease and read-only fingerprint helpers; no adapter runtime dependency",
+    "fixture_resolution": "Full run only: original local module ROOT and Scento SOURCE resolve external fixtures; byte-equal harness/migrations/dictionary; assertions/mocks unchanged",
+    "historical_failures": "Original19/148runs and independent stale/malformed probes preserved, not overwritten",
+    "raw_logs": "Ignored local only; excluded from publicGit andZIP"
+  },
+  "offline_red": {
+    "stage": "RED_BEFORE_RUNTIME_CORRECTION",
+    "methods": 14,
+    "failing_methods": 8,
+    "failed_assertions": 34,
+    "errors": 7,
+    "source_sha256": "a33fb8a7ed555a240fb0fd94ac534fc97ec13cc04a57f0bc8f583de5f1ceec46",
+    "failed_method_ids": [
+      "test_matching_input.AdapterOfflineTests.test_all_memberships_and_brand_dtos_are_validated",
+      "test_matching_input.AdapterOfflineTests.test_defensive_payload_provenance_and_relationship_bounds",
+      "test_matching_input.AdapterOfflineTests.test_internal_uuids_are_contract_errors_not_missing_inputs",
+      "test_matching_input.AdapterOfflineTests.test_nested_keys_and_field_states_are_strict",
+      "test_matching_input.AdapterOfflineTests.test_note_lists_are_typed_and_memberships_unique",
+      "test_matching_input.AdapterOfflineTests.test_nullable_provenance_metadata_is_text",
+      "test_matching_input.AdapterOfflineTests.test_provenance_required_times_are_qualified_strings",
+      "test_matching_input.AdapterOfflineTests.test_sql_gates_principal_before_catalogue_and_is_read_only"
+    ],
+    "DB_calls": 0
+  },
+  "offline_green": {
+    "stage": "GREEN_AFTER_RUNTIME_CORRECTION",
+    "methods": 14,
+    "failed_assertions": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 0.016000000000076398,
+    "source_sha256": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+    "DB_calls": 0
+  },
+  "full_regression": "NOT_RUN_AT_THIS_SOURCE_CHECKPOINT",
+  "final_review": "PENDING",
+  "final_receipt_created": false,
+  "preserved_evidence": [
+    "Original19/148attempt reports unchanged",
+    "Independent Docker-offline attempt preserved",
+    "Independent exception-class probe instrumentation failure preserved",
+    "Completed stale-snapshot and malformed-DTO proofs preserved"
+  ],
+  "operational_limits": [
+    "Trusted local transport only; no application auth or public serializer",
+    "Real Scento nonadmin binding absent",
+    "Closure/normalization/DM01\u201307 individually unapproved",
+    "44holds and0matchingflags unchanged",
+    "No new source/asset grants or real-data ranking"
+  ],
+  "migrations_changed": 0,
+  "production_mutation": false
+}

@@ -4,6 +4,13 @@
 contracts. It implements no scorer, API, application authentication, public serializer or cache.
 Python here is an existing local test/runtime tool, not an accepted web stack decision.
 
+Current correction version is `matching-input-local-v2`. Independent exact-source review demonstrated
+that a reused REPEATABLE READ READ ONLY snapshot could retain revoked synthetic rights despite the
+transport's documented fresh-transaction requirement. The script now explicitly requests READ
+COMMITTED READ ONLY and checks both settings before catalogue access. An incompatible used snapshot
+fails rather than returning stale facts. This is a demonstrated adapter correction, not a change
+to migration005's historical timestamp guard or a proposed fix for PR8's unrelated23514failure.
+
 Call `read_profile(trusted_execute, canonical_uuid)` only through a trusted transport that executes
 the entire generated script on one genuine authenticated connection, stops at the first error and
 returns the single JSON object. Never inject a request-supplied transport/SQL, set a role/GUC to
@@ -39,6 +46,15 @@ rejects more than512 note links. Selected payloads are at most64KiB, variable pr
 response overflow fails explicitly. These are local defensive limits, not accepted search-query
 caps. SQL timeouts are3s statement/1s lock; a used read/write transaction cannot be adopted.
 
+The decoder independently enforces exact nested object keys, allowed field states/layers, canonical
+internal UUIDs, required qualified review/rights timestamps, nullable text types, per-payload and
+provenance bounds,512members and unique bound memberships. Malformed internal data raises uniform
+AdapterUnavailable; missing/unauthorized profiles retain InputUnavailable. rights usage_scope is
+free-form nonempty text under the schema, not an invented enum. The trusted transport must still
+open a fresh genuine session/transaction and enforce its wire-size boundary; no API caller may
+provide that callback. READ COMMITTED revalidates each statement snapshot, not revocations committed
+after that statement's snapshot was established. A later request must reauthorize again.
+
 Current RLS exposes public provenance to curators, not ordinary runtime sessions. Ordinary sessions
 may see a public identity with all selected fields unknown. The adapter does not expand permissions
 to hide this gap. Curator membership still cannot read another user's private scope. The persistent
@@ -59,7 +75,8 @@ The executed wrapper, fixture resolution, source hashes and results are retained
 handoff; it uses existing PR8 tooling only for test coordination, never as an adapter dependency.
 Do not run database tests on the persistent pilot or Production.
 
-See [sanitized evidence](evidence/matching_input_results.json) and the Obsidian
+See [current correction evidence](evidence/matching_input_review_correction_results.json), the
+preserved [historical baseline](evidence/matching_input_results.json) and the Obsidian
 [task](../Structure%20DB%20Obsidian/07_Delivery/Tasks/IMP-MATCH-01_Read_Only_Input_Adapter.md).
 Final independent source review is a distinct gate; preliminary findings and unresolved review
 availability must remain visible. No final receipt while acceptance is pending.

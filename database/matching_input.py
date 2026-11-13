@@ -15,7 +15,7 @@ from typing import Callable
 import unicodedata
 import uuid
 
-VERSION = 'matching-input-local-v1'
+VERSION = 'matching-input-local-v2'
 LAYERS = ('top','heart','base','general')
 FIELDS = ('name','brand_id','concentration_code','release_year',*(f'notes.{x}' for x in LAYERS))
 
@@ -95,7 +95,7 @@ class ProfileInput:
 
 def canonical_id(value):
     try:
-        if not isinstance(value,str):
+        if not isinstance(value,str) or len(value)!=36:
             raise ValueError()
         result=str(uuid.UUID(value))
         if result != value.lower():
@@ -121,12 +121,13 @@ def _rights(alias):
 
 def query(profile_id):
     ident=canonical_id(profile_id)
-    return """BEGIN READ ONLY;
+    return """BEGIN ISOLATION LEVEL READ COMMITTED READ ONLY;
 SET LOCAL statement_timeout='3s';
 SET LOCAL lock_timeout='1s';
 SET LOCAL row_security=on;
 DO $gate$ BEGIN
  IF current_setting('transaction_read_only')<>'on'
+ OR current_setting('transaction_isolation')<>'read committed'
  OR session_user<>current_user OR NOT pg_has_role(session_user,'dpt_runtime','MEMBER')
  OR pg_has_role(session_user,'dpt_owner','MEMBER')
  OR EXISTS(SELECT FROM pg_roles WHERE rolname IN (session_user,current_user) AND (rolsuper OR rolbypassrls))
@@ -221,19 +222,48 @@ SELECT CASE WHEN octet_length(body::text)>2097152 THEN
 COMMIT;"""
 
 
+def _keys(value,expected):
+    if type(value) is not dict or set(value)!=set(expected):
+        raise ValueError('Invalid object schema')
+
+
+def _dto_id(value):
+    # A missing request and a malformed internal UUID are different contracts.
+    try:
+        result=canonical_id(value)
+        if result!=value:raise ValueError('Noncanonical internal UUID')
+        return result
+    except InputUnavailable:
+        raise ValueError('Invalid internal UUID') from None
+
+
+def _text(value):
+    if type(value) is not str or not value.strip():
+        raise ValueError('Invalid text')
+
+
+def _json_bytes(value):
+    return len(json.dumps(value,ensure_ascii=False,allow_nan=False).encode('utf-8'))
+
+
 def _provenance(value):
-    if not isinstance(value,dict) or set(value)!=set(Provenance.__dataclass_fields__):
-        raise AdapterUnavailable('Adapter input contract unavailable')
+    _keys(value,Provenance.__dataclass_fields__)
     for key in ('observation_id','source_record_id','rights_id','source_id'):
-        canonical_id(value[key])
+        _dto_id(value[key])
     for key in ('reviewed_at','rights_checked_at','rights_review_after'):
-        if value[key] is not None and datetime.datetime.fromisoformat(value[key]).utcoffset() is None:
+        item=value[key]
+        if key=='rights_review_after' and item is None:continue
+        if type(item) is not str or len(item)>64 or datetime.datetime.fromisoformat(item).utcoffset() is None:
             raise ValueError('Unqualified time')
-    if len(value['payload_sha256'])!=64 or any(c not in '0123456789abcdef' for c in value['payload_sha256']):
+    if type(value['payload_sha256']) is not str or len(value['payload_sha256'])!=64 or any(c not in '0123456789abcdef' for c in value['payload_sha256']):
         raise ValueError('Invalid hash')
-    if any(not isinstance(value[k],str) or not value[k] for k in
-           ('source_url','claim_locator','transform_version','publisher','usage_scope')):
-        raise ValueError('Missing provenance')
+    required=('source_url','claim_locator','transform_version','publisher','usage_scope')
+    optional=('source_revision','license_code','license_url','attribution')
+    for key in required:_text(value[key])
+    for key in optional:
+        if value[key] is not None and type(value[key]) is not str:raise ValueError('Invalid nullable text')
+    if sum(len((value[k] or '').encode('utf-8')) for k in (*required,*optional))>8192:
+        raise ValueError('Provenance bound exceeded')
     return Provenance(**value)
 
 
@@ -248,44 +278,65 @@ def read_profile(execute: Callable[[str],dict], profile_id: str) -> ProfileInput
         return _decode(raw,profile_id)
     except (InputUnavailable,AdapterUnavailable):
         raise
-    except (ValueError,TypeError,KeyError,AttributeError,OverflowError):
+    except (ValueError,TypeError,KeyError,AttributeError,OverflowError,RecursionError):
         raise AdapterUnavailable('Adapter input contract unavailable') from None
 
 
 def _decode(raw,profile_id):
-    if not isinstance(raw,dict) or set(raw)!= {'profile','fields','memberships','brand','over_bound'}:
-        raise AdapterUnavailable('Adapter input contract unavailable')
-    if len(json.dumps(raw,ensure_ascii=False).encode('utf-8'))>2097152:
+    _keys(raw,{'profile','fields','memberships','brand','over_bound'})
+    if _json_bytes(raw)>2097152:
         raise AdapterUnavailable('Adapter input bound exceeded')
     if raw['over_bound'] is not False:
         raise AdapterUnavailable('Adapter input bound exceeded')
     p=raw['profile']
     if p is None:
         raise InputUnavailable('Input unavailable')
-    if (set(p)!= {'id','review_status','matching_eligible'} or canonical_id(p['id'])!=canonical_id(profile_id)
+    _keys(p,{'id','review_status','matching_eligible'})
+    if ( _dto_id(p['id'])!=canonical_id(profile_id)
         or type(p['matching_eligible']) is not bool or p['review_status'] not in {'draft','reviewed','approved','archived'}
-        or type(raw['fields']) is not list or len(raw['fields'])>8
-        or type(raw['memberships']) is not list or len(raw['memberships'])>513):
+        or type(raw['fields']) is not list or len(raw['fields'])>8 or type(raw['memberships']) is not list):
         raise AdapterUnavailable('Adapter input contract unavailable')
+    if len(raw['memberships'])>512:raise AdapterUnavailable('Adapter input bound exceeded')
     held=p['review_status']!='approved'
     result={}
     for row in raw['fields']:
+        _keys(row,{'path','state','value','provenance'})
         path=row['path']
         if path not in FIELDS or path in result:
             raise AdapterUnavailable('Adapter input contract unavailable')
         state=State(row['state'])
+        if state not in {State.USABLE,State.UNKNOWN,State.HELD,State.RIGHTS}:
+            raise ValueError('Invalid selected-field state')
+        if state is not State.USABLE and (row['value'] is not None or row['provenance'] is not None):
+            raise ValueError('Nonusable field carries facts')
         if state is State.USABLE:
             value=row['value']
-            if path in ('name','concentration_code') and (type(value) is not str or not value.strip()):
-                raise ValueError('Invalid scalar')
-            if path=='brand_id':canonical_id(value)
+            if _json_bytes(value)>65536:raise ValueError('Selected payload bound exceeded')
+            if path in ('name','concentration_code'):_text(value)
+            if path=='brand_id':_dto_id(value)
             if path=='release_year' and (type(value) is not int or not 1000<=value<=9999):
                 raise ValueError('Invalid integer')
+            if path.startswith('notes.'):
+                if type(value) is not list or len(value)>512:raise ValueError('Invalid note list')
+                for label in value:_text(label)
         result[path]=Field(state,row['value'] if state is State.USABLE else None,
             _provenance(row['provenance']) if state is State.USABLE else None)
     fields=tuple((path,Field(State.HELD,reason='review_hold') if held else
         result.get(path,Field(State.UNKNOWN,reason='selected_input_unavailable'))) for path in FIELDS)
     mapped=dict(fields)
+    seen=set()
+    for member in raw['memberships']:
+        _keys(member,{'layer','id','name','provenance'})
+        if member['layer'] not in LAYERS:raise ValueError('Invalid layer')
+        _dto_id(member['id']);_text(member['name']);_provenance(member['provenance'])
+        key=(member['layer'],member['id'])
+        if key in seen or mapped['notes.'+member['layer']].state is not State.USABLE:
+            raise ValueError('Duplicate or unbound membership')
+        seen.add(key)
+    brand=raw['brand']
+    if brand is not None:
+        _keys(brand,{'name','provenance'});_text(brand['name']);_provenance(brand['provenance'])
+        if held or mapped['brand_id'].state is not State.USABLE:raise ValueError('Unbound brand')
     layers=[]
     for layer in LAYERS:
         selected=mapped['notes.'+layer]
@@ -297,16 +348,15 @@ def _decode(raw,profile_id):
             or len({normalized(v) for v in labels})!=len(labels)
             or [normalized(v) for v in labels]!=[normalized(n['name']) for n in members]):
             layers.append((layer,Field(State.UNKNOWN,reason='vocabulary_or_provenance_unavailable')));continue
-        notes=tuple(Note(canonical_id(n['id']),n['name'],_provenance(n['provenance'])) for n in members)
+        notes=tuple(Note(_dto_id(n['id']),n['name'],_provenance(n['provenance'])) for n in members)
         layers.append((layer,Field(State.INCOMPLETE,notes,selected.provenance,'reported_membership_only_closure_unknown')))
     # List labels are never returned directly; only the rights-qualified canonical membership view.
     fields=tuple((k,v) for k,v in fields if not k.startswith('notes.'))
-    brand=raw['brand']
     brand_field=Field(State.UNKNOWN,reason='selected_brand_unavailable')
     if not held and mapped['brand_id'].state is State.USABLE and brand:
         brand_field=Field(State.USABLE,brand['name'],_provenance(brand['provenance']))
     elif mapped['brand_id'].state is State.USABLE:
         fields=tuple((k,Field(State.UNKNOWN,reason='selected_brand_unavailable') if k=='brand_id' else v) for k,v in fields)
     conflicted=any(v.state is State.HELD for _,v in (*fields,*layers))
-    return ProfileInput(canonical_id(p['id']),State.HELD if held or conflicted else State.ELIGIBILITY if not p['matching_eligible']
+    return ProfileInput(_dto_id(p['id']),State.HELD if held or conflicted else State.ELIGIBILITY if not p['matching_eligible']
         else State.INCOMPLETE,p['review_status'],p['matching_eligible'],fields,brand_field,tuple(layers))

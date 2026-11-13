@@ -2,7 +2,7 @@
 id: IMP-MATCH-01
 project: DoomParfum By TK
 type: implementation_task
-status: acceptance-pending
+status: in-progress
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, matching, adapter, security]
@@ -10,6 +10,42 @@ source_of_truth: "../../../README.md"
 ---
 
 # IMP-MATCH-01 — Read-only matching input adapter
+
+## Independent review and next-gate session — 2026-11-13
+
+Starting PR11 head ff9f840e49d54e511e2cd2ca0e7ad4460c25bb0a; main remains
+aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Owner explicitly requests final independent exact-source
+review, scoped corrections if needed, refreshed DM/nonadmin/completeness/normalization/rights/
+real-data/application gate proposals and consolidated handoff. No proposal acceptance inferred.
+
+Plan: independent reviewer examines pinned adapter/tests plus actual authentication/RLS/provenance
+contracts; separate agent revalidates PR9/10 offline source/tests and rights boundaries. Coordinator
+alone edits adapter/canonical task/common docs, serializes any disposable PostgreSQL tests under the
+common lease, preserves failed attempts and rechecks exact source after corrections. Expected evidence:
+independent findings/closeout, reproducible regression controls, source hashes, current PR/head registry,
+Markdown/diff/secret checks, D1-D9 and one validated LATEST ZIP. No final receipt while review or scoped
+acceptance is pending. Protected: original migrations/receipts, all44holds, source observations/rights,
+eligibility flags, persistent pilot and Production. No merge, force push, cloud or real-data ranking.
+PR12 tooling worktree/branch is separate and untouched. Existing ContextMode tools are healthy again;
+use bounded execute/search for long analysis, native tools for short output/edits; no tool installation.
+
+Independent reviewer confirmed IR11-01 HIGH: an established REPEATABLE READ READ ONLY snapshot
+returned a revoked synthetic selected fact; a fresh genuine session uniformly denied it. This is a
+documented transport-precondition violation, not a fresh-session RLS bypass or PR8clock rootcause.
+IR11-02 MEDIUM: malformed nested DTO/provenance cases were accepted, with an additional513member
+boundary inconsistency and internal UUID error-class mismatch. Original failed proofs remain intact.
+
+Parent correction v2 explicitly requests/checks READ COMMITTED READ ONLY and strictly validates
+nested keys/types/timestamps/UUIDs/states/layers/bounds. rights usage_scope stays free-form nonempty
+text. Seven added offline methods plus two two-session rights/member revocation methods make28tests.
+RED14offline methods:8failing methods,34failed assertions/7errors, retained separately. GREEN14/14;
+focused28/28PASS35.5s,0failure/error/skip; all49pilot/security/application-role manifests unchanged.
+Source SHA256e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b;
+test SHA2560b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2.
+Full157-method regression and final independent corrected-source review remain pending at this
+checkpoint. No receipt or acceptance claim. New explicit decision/session/closure proposals are
+[[Matching_Owner_Decision_Register]], [[Matching_Nonadmin_Session_and_Publication_Proposal]] and
+[[Matching_Data_Readiness_and_Closure_Gates]]; every individual DM remains PROPOSED.
 
 Base/start aa55f8b59acb0872b3b40273a8cdd25198f3ba27; branch codex/imp-match-01-input-adapter.
 GateP verified: Owner merged PR4 at this SHA, plusPR5/6/7merged. IndividualDM01–07remainPROPOSED.

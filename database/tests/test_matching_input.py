@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import sys
 import unittest
+import concurrent.futures
+import time
 from unittest import mock
 
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
@@ -16,6 +18,20 @@ class AdapterOfflineTests(unittest.TestCase):
     def empty(self):
         return {'profile':{'id':uid('perfume'),'review_status':'approved','matching_eligible':False},
             'fields':[],'memberships':[],'brand':None,'over_bound':False}
+
+    def provenance(self):
+        result={k:'SYNTHETIC' for k in adapter.Provenance.__dataclass_fields__}
+        for k in ['observation_id','source_record_id','rights_id','source_id']:
+            result[k]=uid('offline-'+k)
+        result.update(payload_sha256='a'*64,reviewed_at='2026-01-01T00:00:00+00:00',
+            rights_checked_at='2026-01-01T00:00:00+00:00',rights_review_after=None,
+            license_code=None,license_url=None,attribution=None,source_revision=None)
+        return result
+
+    def selected(self,path='name',value='SYNTHETIC'):
+        result=self.empty()
+        result['fields']=[{'path':path,'state':'known_usable','value':value,'provenance':self.provenance()}]
+        return result
 
     def test_invalid_ids_reject_before_transport(self):
         execute=mock.Mock()
@@ -56,7 +72,8 @@ class AdapterOfflineTests(unittest.TestCase):
     def test_sql_gates_principal_before_catalogue_and_is_read_only(self):
         sql=adapter.query(uid('perfume'))
         self.assertLess(sql.index('END $gate$;'),sql.index('FROM dpt.perfumes'))
-        self.assertIn('BEGIN READ ONLY;',sql)
+        self.assertIn('BEGIN ISOLATION LEVEL READ COMMITTED READ ONLY;',sql)
+        self.assertIn("current_setting('transaction_isolation')<>'read committed'",sql)
         for token in ['rolsuper','rolbypassrls','session_user<>current_user',
                       "automation_use='allowed'","storage_use='allowed'","display_use='allowed'",
                       'revoked_at IS NULL','LIMIT 513','65536']:
@@ -70,6 +87,81 @@ class AdapterOfflineTests(unittest.TestCase):
             value=self.empty();value.update(change)
             with self.subTest(change=change),self.assertRaises(adapter.AdapterUnavailable):
                 adapter.read_profile(lambda _:value,uid('perfume'))
+
+    def test_provenance_required_times_are_qualified_strings(self):
+        for key in ['reviewed_at','rights_checked_at','rights_review_after']:
+            for bad in [None,42,{},'','2026-01-01','2026-01-01T00:00:00','not-time']:
+                if key=='rights_review_after' and bad is None:continue
+                raw=self.selected();raw['fields'][0]['provenance'][key]=bad
+                with self.subTest(key=key,bad=bad),self.assertRaisesRegex(adapter.AdapterUnavailable,'^Adapter input contract unavailable$'):
+                    adapter.read_profile(lambda _:raw,uid('perfume'))
+
+    def test_nullable_provenance_metadata_is_text(self):
+        for key in ['license_code','license_url','attribution','source_revision']:
+            for bad in [{},[],42,True]:
+                raw=self.selected();raw['fields'][0]['provenance'][key]=bad
+                with self.subTest(key=key,bad=bad),self.assertRaises(adapter.AdapterUnavailable):
+                    adapter.read_profile(lambda _:raw,uid('perfume'))
+        self.assertEqual(dict(adapter.read_profile(lambda _:self.selected(),uid('perfume')).fields)['name'].value,'SYNTHETIC')
+
+    def test_internal_uuids_are_contract_errors_not_missing_inputs(self):
+        cases=[]
+        raw=self.empty();raw['profile']['id']='not-uuid';cases.append(raw)
+        raw=self.selected('brand_id','not-uuid');cases.append(raw)
+        for key in ['observation_id','source_record_id','rights_id','source_id']:
+            raw=self.selected();raw['fields'][0]['provenance'][key]='not-uuid';cases.append(raw)
+        raw=self.selected('notes.top',['SYNTHETIC note'])
+        raw['memberships']=[{'layer':'top','id':'not-uuid','name':'SYNTHETIC note','provenance':self.provenance()}];cases.append(raw)
+        for raw in cases:
+            with self.subTest(raw=raw),self.assertRaisesRegex(adapter.AdapterUnavailable,'^Adapter input contract unavailable$'):
+                adapter.read_profile(lambda _:raw,uid('perfume'))
+
+    def test_nested_keys_and_field_states_are_strict(self):
+        cases=[]
+        raw=self.selected();raw['fields'][0]['unexpected']='SYNTHETIC';cases.append(raw)
+        raw=self.selected();raw['fields'][0].pop('value');cases.append(raw)
+        for state in ['known_incomplete','eligibility_unavailable','unknown']:
+            raw=self.selected();raw['fields'][0]['state']=state;cases.append(raw)
+        raw=self.selected();raw['fields'][0]['provenance']['unexpected']='SYNTHETIC';cases.append(raw)
+        for raw in cases:
+            with self.subTest(raw=raw),self.assertRaises(adapter.AdapterUnavailable):
+                adapter.read_profile(lambda _:raw,uid('perfume'))
+
+    def test_all_memberships_and_brand_dtos_are_validated(self):
+        member={'layer':'top','id':uid('offline-note'),'name':'SYNTHETIC note','provenance':self.provenance()}
+        for key,bad in [('layer','INVALID'),('id','not-uuid'),('name',{}),('provenance',None)]:
+            raw=self.empty();raw['memberships']=[{**member,key:bad}]
+            with self.subTest(key=key),self.assertRaises(adapter.AdapterUnavailable):
+                adapter.read_profile(lambda _:raw,uid('perfume'))
+        raw=self.empty();raw['memberships']=[member]
+        with self.assertRaises(adapter.AdapterUnavailable):adapter.read_profile(lambda _:raw,uid('perfume'))
+        for brand in [{},{'name':{},'provenance':self.provenance()},
+                      {'name':'SYNTHETIC','provenance':self.provenance(),'extra':True}]:
+            raw=self.empty();raw['brand']=brand
+            with self.subTest(brand=brand),self.assertRaises(adapter.AdapterUnavailable):
+                adapter.read_profile(lambda _:raw,uid('perfume'))
+
+    def test_note_lists_are_typed_and_memberships_unique(self):
+        for bad in [{},[''],[42],['SYNTHETIC',None]]:
+            raw=self.selected('notes.top',bad)
+            with self.subTest(bad=bad),self.assertRaises(adapter.AdapterUnavailable):
+                adapter.read_profile(lambda _:raw,uid('perfume'))
+        raw=self.selected('notes.top',['SYNTHETIC note'])
+        member={'layer':'top','id':uid('offline-note'),'name':'SYNTHETIC note','provenance':self.provenance()}
+        raw['memberships']=[member,copy.deepcopy(member)]
+        with self.assertRaises(adapter.AdapterUnavailable):adapter.read_profile(lambda _:raw,uid('perfume'))
+
+    def test_defensive_payload_provenance_and_relationship_bounds(self):
+        raw=self.selected(value='x'*65537)
+        with self.assertRaises(adapter.AdapterUnavailable):adapter.read_profile(lambda _:raw,uid('perfume'))
+        raw=self.selected();raw['fields'][0]['provenance']['attribution']='x'*8193
+        with self.assertRaises(adapter.AdapterUnavailable):adapter.read_profile(lambda _:raw,uid('perfume'))
+        raw=self.empty();raw['memberships']=[{}]*513
+        with self.assertRaisesRegex(adapter.AdapterUnavailable,'bound'):
+            adapter.read_profile(lambda _:raw,uid('perfume'))
+        raw=self.empty();raw['memberships']=[{'unexpected':'x'*2097153}]
+        with self.assertRaisesRegex(adapter.AdapterUnavailable,'bound'):
+            adapter.read_profile(lambda _:raw,uid('perfume'))
 
 
 def private_fixture(key,scope='alice',record=None,status='approved'):
@@ -155,6 +247,44 @@ COMMIT;"""
         with self.assertRaises(adapter.AdapterUnavailable):
             adapter.read_profile(execute,uid('private-a'))
         self.assertIn('25001',captured[0])
+
+    def stale_snapshot_control(self,key,user,revoke,application):
+        """Two genuine sessions; wait for a known snapshot before committed revocation."""
+        captured=[]
+        def execute(script):
+            prefix=(f"SET application_name={q(application)};BEGIN ISOLATION LEVEL REPEATABLE READ READ ONLY;"
+                "SELECT count(*) FROM dpt.perfumes;SELECT pg_sleep(5);")
+            r=local.sql(prefix+script,user=user,check=False);captured.append(r.stderr)
+            if r.returncode:raise RuntimeError(r.stderr)
+            return json.loads(r.stdout.strip().splitlines()[-1])
+        with concurrent.futures.ThreadPoolExecutor(max_workers=1) as pool:
+            pending=pool.submit(adapter.read_profile,execute,uid(key))
+            deadline=time.monotonic()+12
+            while time.monotonic()<deadline:
+                ready=local.sql("SELECT count(*) FROM pg_stat_activity WHERE application_name="+q(application)+
+                    " AND wait_event='PgSleep';",'postgres').stdout.strip()
+                if ready=='1':break
+                if pending.done():self.fail('Snapshot worker ended before the revocation barrier')
+                time.sleep(.05)
+            else:self.fail('Snapshot worker did not reach the bounded barrier')
+            local.sql(revoke)
+            with self.assertRaises(adapter.AdapterUnavailable):pending.result(timeout=15)
+        self.assertTrue(captured);self.assertIn('25001',captured[0])
+        with self.assertRaisesRegex(adapter.InputUnavailable,'^Input unavailable$'):self.read(key,user)
+
+    def test_reused_repeatable_read_rights_snapshot_is_rejected(self):
+        right=self.isolated_right_fixture('rr-rights')
+        self.read('rr-rights')
+        self.stale_snapshot_control('rr-rights','dpt_test_alice',
+            "BEGIN;UPDATE dpt.rights_assessments SET revoked_at=clock_timestamp() WHERE id="+q(right)+";COMMIT;",
+            'SYNTHETIC-adapter-rr-rights')
+
+    def test_reused_repeatable_read_shared_snapshot_is_rejected(self):
+        self.read('shared-p','dpt_test_bob')
+        revoke="BEGIN;UPDATE dpt.scope_members SET revoked_at=clock_timestamp() WHERE access_scope_id="+q(uid('shared'))+" AND user_id="+q(uid('bob'))+";COMMIT;"
+        try:self.stale_snapshot_control('shared-p','dpt_test_bob',revoke,'SYNTHETIC-adapter-rr-shared')
+        finally:
+            local.sql("BEGIN;UPDATE dpt.scope_members SET revoked_at=NULL WHERE access_scope_id="+q(uid('shared'))+" AND user_id="+q(uid('bob'))+";COMMIT;")
 
     def test_expiry_is_revalidated_without_cache_or_source_mutation(self):
         self.isolated_right_fixture('expiring',expiry=True)
