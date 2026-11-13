@@ -120,3 +120,11 @@ manifest and task/PRdiffs. Final source/PR/ZIPreadback follows without changing 
 Final scoped documentation receipt: [[2026-11-13_202313_DPT-DOC-001_Planning_Review_Ready]]. Reviewed payloadSHA`5bec40726bd644559c7365f68bf287a3c674d2be`;
 independent review complete. Receipt adds no policy acceptance or runtime feature. Subsequent
 publication head/PR status is recorded without amending this immutable file.
+
+## Verified Draft publication checkpoint — 2026-11-13
+
+[PR#17](https://github.com/kraveerachat/DoomParfum-By-TK/pull/17) was created OPEN/DRAFT,
+unmerged, with publishedhead`3915d69b3f2fe2f190012b4997e6de5c4e6c9358` and base58ceafe72129b70f0333c7c4f2c6f38dba855272.
+This later metadata-only checkpoint records publication without changing the immutable receipt.
+Final Git/remote head is in the coordinator exact-head registry and consolidated handoff. Owner
+decisions and future implementation/source gates remain unapproved; no Production change or merge.

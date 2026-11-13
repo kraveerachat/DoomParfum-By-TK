@@ -168,3 +168,11 @@ research and guardedDocker/PostgreSQL aggregate audit used. No install/config/ac
 Original SQL/runtime and all old receipts unchanged; no rawlogs,private rows,unlicensed bytes or
 machine configs committed/packaged in this wave. Exact files are in the external Git snapshot
 manifest and task/PRdiffs. Final source/PR/ZIPreadback follows without changing the immutable receipt.
+
+## Coordinator Draft publication — 2026-11-13
+
+[PR17](https://github.com/kraveerachat/DoomParfum-By-TK/pull/17) verified OPEN/DRAFT/unmerged,
+published checkpoint3915d69b3f2fe2f190012b4997e6de5c4e6c9358, base58ceafe72129b70f0333c7c4f2c6f38dba855272.
+Scoped DPT-DOC-001 receipt exists after independent61check readiness verification. This metadata
+checkpoint and final archive/head readback are outside the immutable receipt; final digest is
+resolved in the external handoff registry/verification record. No unfinished feature acceptance.
