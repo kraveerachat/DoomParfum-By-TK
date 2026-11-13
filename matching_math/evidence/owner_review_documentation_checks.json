@@ -1,0 +1,29 @@
+{
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "checkpoint": "1ab317635bba0c53d87445cff8711ee2fc7c3305",
+  "changed_paths": [
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-02_Synthetic_Primitives.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-MATCH-02_Synthetic_Primitives_Evidence.md",
+    "matching_math/README.md",
+    "matching_math/__init__.py",
+    "matching_math/evidence/documentation_checks.json",
+    "matching_math/evidence/independent_review.json",
+    "matching_math/evidence/owner_review_documentation_checks.json",
+    "matching_math/evidence/owner_review_revalidation.json",
+    "matching_math/evidence/unit_results.json",
+    "matching_math/primitives.py",
+    "matching_math/tests/test_primitives.py"
+  ],
+  "markdown": 3,
+  "frontmatters": 2,
+  "wiki_links": 2,
+  "local_links": 3,
+  "protected_blobs": 30,
+  "logical_tables": 47,
+  "errors": [],
+  "secret_pattern_candidates": 0,
+  "limits": [
+    "Common secret patterns only",
+    "No browser/Mermaid rendering or external URL re-fetch"
+  ]
+}
