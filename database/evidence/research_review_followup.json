@@ -1,0 +1,101 @@
+{
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "reviewer": "/root/pr9_pr10_revalidate, independent read-only revalidator",
+  "at_utc": "2026-11-13T03:02:19.074979+00:00",
+  "checks_passed": 192,
+  "independent_report_sha256": "181dcab03a798ac0a6ca5520eb74bca1d28d5d2e1301b452a9b70cf64fe8632b",
+  "blocking_findings": [],
+  "real_matching_activated": false,
+  "production_mutation": false,
+  "PR": 10,
+  "reviewed_head": "b75e1f0a48e62bae6921cf061584facc36a9fa75",
+  "actual_unit_run": {
+    "command": "python -m unittest discover -s database/tests -p test_research_audit.py",
+    "methods": 17,
+    "passed": 17,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 0.014
+  },
+  "source_sha256": {
+    "database/research_audit.py": "fbbf4bf3cb253547feb8e8b0a71a5ea0d41347793a858edf2130396001a9cf93",
+    "database/tests/test_research_audit.py": "bf1999b0c6dacb788eb872d9e3d8f32c2d111fcd4ba149cd548d62cf9bdcb5ab"
+  },
+  "verdict": "READY_FOR_BOUNDED_OFFLINE_RESEARCH_OWNER_REVIEW; no policy/identity/source-right approval inferred",
+  "offline_audit_runtime_changed": false,
+  "preserved": {
+    "held": 44,
+    "unapproved_duplicate_sidecars": 43,
+    "Khamrah": "UNRESOLVED",
+    "new_grants": 0,
+    "usable_assets": 0,
+    "usable_pairs": 0,
+    "six_pinned_source_hashes": true,
+    "nine_research_input_hashes": true,
+    "eight_artifacts_byte_identical": true,
+    "all_prior_receipts_unchanged": true
+  },
+  "separate_authorized_metadata_followon": {
+    "completed_at_utc": "2026-11-13T03:02:39.762262+00:00",
+    "metadata_attempts": 2,
+    "new_verified_scope": "Three exact description-page revision-to-title bindings and nonempty revision text observed via official API HTTP200. Does not establish exact image identity, ownership or use permissions.",
+    "facts": [
+      {
+        "revision_id": 1158951883,
+        "page_title": "File:Ribes nigrum-1.jpg",
+        "timestamp": "2026-02-03T19:58:34Z",
+        "matches_expected_title": true,
+        "content_sha256": "aa254a11458523fdc79d12e90448522f6b6e3c0b2eb0e71075e65df3fe0fb6ea",
+        "license_template_names": [],
+        "revision_content_observed": true,
+        "ownership_authenticated": false,
+        "asset_reuse_approved": false
+      },
+      {
+        "revision_id": 1177424529,
+        "page_title": "File:Nutmeg-spice.jpg",
+        "timestamp": "2026-03-07T20:35:07Z",
+        "matches_expected_title": true,
+        "content_sha256": "22daf2694c8d95258008eee3f0bd03daed6f8c6a234532f9bb16b063dbabac07",
+        "license_template_names": [],
+        "revision_content_observed": true,
+        "ownership_authenticated": false,
+        "asset_reuse_approved": false
+      },
+      {
+        "revision_id": 1142894283,
+        "page_title": "File:Juniper berries 777.jpg",
+        "timestamp": "2026-01-06T09:59:35Z",
+        "matches_expected_title": true,
+        "content_sha256": "9037b3593449e459b86992dad757acbd1bd9db0853883728bdc2c13628a509d2",
+        "license_template_names": [
+          "cc-by-2.0",
+          "User:FlickreviewR/reviewed-pass"
+        ],
+        "revision_content_observed": true,
+        "ownership_authenticated": false,
+        "asset_reuse_approved": false
+      }
+    ],
+    "primary_API_url": "https://commons.wikimedia.org/w/api.php?action=query&prop=revisions&revids=1177424529%7C1158951883%7C1142894283&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&formatversion=2",
+    "retrieved_at_utc": "2026-11-13T03:00:53.556129+00:00",
+    "official_HTTP_status": 200,
+    "response_bytes": 2398,
+    "response_sha256": "fb15cda7c63100e372c9801d06b46f648db41681e09af7fb811409f59ef8d2eb",
+    "current_operation_permissions": "ALL15CANDIDATES_UNKNOWN_NOT_APPROVED_BLOCKED",
+    "new_rights_grants": 0,
+    "asset_binary_requests": 0,
+    "bytes_acquired": 0,
+    "limits": [
+      "content_sha256 hashes description-page revision text, not image bytes or a license deed",
+      "Juniper cc-by-2.0/FlickreviewR template names were observed; their ownership/source-chain/legal conditions were not authenticated",
+      "First2license declarations were not resolved by narrow template-name extraction; empty extraction is not absence of license",
+      "All prior pages, claims, attempts and audit003false pin flags remain historical; new event supersedes only pinned-page availability/binding uncertainty",
+      "No source, asset, normalization, publication or identity decision accepted"
+    ]
+  },
+  "metadata_followon_evidence_sha256": "dfaa45318c99d53528befa0d619a0730a4d69723e651f20ca0e8d949e11c546a",
+  "publication_boundary": "Only page identifiers/timestamps/text hashes and cautious metadata observations; no raw revision text/image bytes/rights approval",
+  "offline_scope_notice": "Original research audit module and003/004outputs remain immutable offline-only. New metadata event is separate bounded research preparation, not source acquisition or license/ownership authentication."
+}

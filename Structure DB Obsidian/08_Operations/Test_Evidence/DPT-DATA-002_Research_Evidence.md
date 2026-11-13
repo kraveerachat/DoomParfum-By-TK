@@ -11,6 +11,22 @@ source_of_truth: "../../../README.md"
 
 # DPT-DATA-002 — Offline audit execution evidence
 
+## Independent owner-readiness revalidation — 2026-11-13
+
+At source headb75e1f0a48e62bae6921cf061584facc36a9fa75,17/17methods independently PASS0.014s,
+0failure/error/skip;192cross-PR source/artifact/protection checks pass. Exact unchanged source/test
+hashes, prior reviews/receipt,6pinned files/9research hashes/8deterministic artifacts and all43sidecar
+arrays/ordinals/occurrences verified. Full code/test/guide reviewed; no blocking audit finding.
+Independent external report SHA181dcab03a798ac0a6ca5520eb74bca1d28d5d2e1301b452a9b70cf64fe8632b.
+
+Separate metadata follow-on:2requests, first web-tool inaccessible (no HTTP observed), then official
+API HTTP200/2398JSONbytes with3exact revision/title bindings and nonempty page-text hashes/timestamps.
+External summary SHAdfaa45318c99d53528befa0d619a0730a4d69723e651f20ca0e8d949e11c546a.
+No raw page copy, image bytes, grant or license/ownership authentication; all15asset uses blocked.
+This is not a network-enabled change to research_audit.py; original runtime and outputs remain
+strictly offline and exact. New sanitized research_review_followup.json distinguishes both scopes.
+No new canonical data, normalization approval, hold resolution, usable pair, eligibility or receipt.
+
 Base/start aa55f8b59acb0872b3b40273a8cdd25198f3ba27; branch codex/post-pr4-data-quality.
 Approved planning context: Owner-merged PR3/4 and explicit post-PR4 WorkstreamB request. No DM,
 normalization, identity or source/asset permission is accepted by this research execution.

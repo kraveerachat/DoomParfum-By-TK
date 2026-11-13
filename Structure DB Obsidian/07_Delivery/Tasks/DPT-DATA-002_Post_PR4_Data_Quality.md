@@ -11,6 +11,24 @@ source_of_truth: "../../../README.md"
 
 # DPT-DATA-002 — Post-PR4 data-quality and source-rights audit
 
+## Post-receipt review and separate metadata follow-on — 2026-11-13
+
+Revalidation starts atb75e1f0a48e62bae6921cf061584facc36a9fa75; main unchangedaa55f8b.
+Independent reviewer reran17/17offline methods PASS0.014s,0failure/error/skip and192cross-PR
+source/artifact/protection checks. Six pinned source/nine research input hashes and all8final003/004
+artifacts remain exact; all43sidecar raw arrays/order/occurrences and44held memberships preserved.
+No code, grant, mapping, canonical data, hold or eligibility change. Bounded offline audit remains
+ready for Human research review. Existing immutable receipt remains unchanged; no second receipt.
+
+Separately authorized source-rights metadata follow-on used2bounded requests: web-tool API access
+failed without observed HTTP response; direct official Commons API returned HTTP200 JSON2398bytes
+and matched3expected revision-to-page bindings. Description-page text hashes/timestamps, not image
+hashes, were observed. No raw revision text or image bytes stored/published; no ownership/legal/use
+permission inferred. All15asset operations remain blocked and unapproved; Khamrah remains unresolved.
+The original offline audit module/003/004flags remain historical unchanged execution evidence.
+database/evidence/research_review_followup.json and
+[[Post_PR4_Data_Quality_and_Rights_Audit]] record the narrow new observation and limits.
+
 Start/base main aa55f8b59acb0872b3b40273a8cdd25198f3ba27; branch codex/post-pr4-data-quality.
 Owner request explicitly authorizes independent research preparation after merged PR4. This task
 uses the merged PR3/4 research/data contracts and does not approve DM choices or source/asset rights.

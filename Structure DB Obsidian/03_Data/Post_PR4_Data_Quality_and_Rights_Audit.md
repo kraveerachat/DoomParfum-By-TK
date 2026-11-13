@@ -11,6 +11,27 @@ source_of_truth: "../../README.md"
 
 # Post-PR4 research reconciliation and proposed normalization
 
+## Current post-review metadata event — 2026-11-13
+
+Independent offline revalidation:17/17PASS0.014s,192cross-PR checks; no blocking finding in the
+bounded audit. All6source and9research input hashes,8deterministic artifacts,44holds and43unapproved
+sidecars unchanged. Prior observations, failures and immutable receipt remain preserved.
+
+A separate bounded official Commons API request newly verified description-page revision bindings:
+1177424529 File:Nutmeg-spice.jpg;1158951883 File:Ribes nigrum-1.jpg;1142894283
+File:Juniper berries 777.jpg. HTTP200/applicationJSON2398bytes, no bad revisions/API error/redirect.
+Page text hashes and historical revision timestamps are recorded, never represented as image hashes.
+Juniper cc-by-2.0/FlickreviewR template names were observed; ownership/source-chain/legal conditions
+were not authenticated. Narrow extraction did not resolve first2license declarations; empty results
+are not evidence of absent licenses. See [official revision metadata](https://commons.wikimedia.org/w/api.php?action=query&prop=revisions&revids=1177424529%7C1158951883%7C1142894283&rvprop=ids%7Ctimestamp%7Ccontent&rvslots=main&format=json&formatversion=2).
+
+The preceding web-tool attempt returned an internal URL-access error, not an observed upstream
+denial. Both attempts are retained. No bypass, image request/download/conversion or permission grant.
+All15candidates remain UNKNOWN_NOT_APPROVED_BLOCKED; format/size/acquisition/derivative/publication
+reviews remain separate. This new event resolves only3page-pin availability/binding uncertainties;
+it does not overwrite audit003's historical false flags or authenticate licenses/ownership. No
+further equivalent request is justified in this session. [Sanitized follow-on](../../database/evidence/research_review_followup.json).
+
 Base main aa55f8b59acb0872b3b40273a8cdd25198f3ba27 includes Owner-merged PR4/6/7.
 Planning merge does not accept DM choices or this normalization policy. The current explicit Owner
 request authorizes offline research preparation. [[DPT-DATA-002_Post_PR4_Data_Quality]] tracks the task.
