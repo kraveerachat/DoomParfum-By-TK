@@ -11,6 +11,18 @@ source_of_truth: "../../README.md"
 
 # Post-PR4 application and decision readiness
 
+## Current scoped source-review status — 2026-11-13
+
+Reference adapter checkpoint9be247a independently accepted within its local trusted-transport scope;
+28focused/157full tests pass and49pilot/security/role manifests unchanged. Both stale-snapshot and
+malformed-DTO findings fixed. This does not supply the absent genuine nonadmin Scento owner binding,
+accepted closure/DM policies or app/API/publication stack. Existing table entries below remain future
+operation proposals, not enabled routes. [[Matching_Owner_Decision_Register]],
+[[Matching_Nonadmin_Session_and_Publication_Proposal]] and [[Matching_Data_Readiness_and_Closure_Gates]]
+provide explicit recommendations/alternatives/approval status and implementation acceptance criteria.
+PR9full-task scope remains gated; all1479matching flags false,44holds unchanged and actual B2inputs
+absent. No public projection or provider/auth decision accepted by the review.
+
 Verified base main aa55f8b59acb0872b3b40273a8cdd25198f3ba27 includes Owner-merged PR4,6,7.
 The tracked tree contains database Python/SQL tooling and documentation; no web application,
 package manifest, Next.js/Drizzle runtime, API framework, authentication service or deployment

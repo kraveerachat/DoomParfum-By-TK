@@ -2,7 +2,7 @@
 id: IMP-MATCH-01
 project: DoomParfum By TK
 type: implementation_task
-status: in-progress
+status: reference-adapter-review-ready
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, matching, adapter, security]
@@ -10,6 +10,26 @@ source_of_truth: "../../../README.md"
 ---
 
 # IMP-MATCH-01 — Read-only matching input adapter
+
+## Current scoped closeout — 2026-11-13
+
+Corrected source checkpoint9be247a5ec724b4c0d057446610b31eacf3bceb2 completed independent review by
+/root/pr11_exact_review, distinct from implementer. IR11-01 HIGH stale reused snapshot and IR11-02
+MEDIUM malformed DTO findings are both RESOLVED; no remaining source blocker in authorized local
+reference scope. Final independent report SHA256
+ccc1f3b0561177ef65655792f7f65c19242e924e13dd748cc159ed770c53f0f5.
+Actual28/28focused PASS35.5s and157/157full PASS178.812s; independent14offline/6live plus8adversarial
+cases verified,22Git source bindings and49pilot/security/application-role manifests unchanged.
+[[IMP-MATCH-01_Adapter_Evidence]] preserves all failed probes, RED/GREEN and historical19/148runs.
+
+Ready for Human review of the trusted-local-transport reference adapter and aggregate audit only.
+A9truthfully reports1479aggregate capabilities disabled/application reads blocked; it does not
+claim per-profile real app evaluation. Keep OPEN/DRAFT; Human Owner decides merge. No individual DM,
+closure, normalization, nonadmin catalogue binding, publication or real matching is accepted.
+Original migrations/receipts/observations/rights and44holds/matching0 remain unchanged. One scoped
+receipt is created only after receipt-preflight documentation checks; final metadata descendants
+must preserve independently reviewed runtime/test/proposal hashes. The pending-review/quota text
+below records earlier checkpoints and is no longer the current source-review status.
 
 ## Independent review and next-gate session — 2026-11-13
 
@@ -104,3 +124,11 @@ Closeout tool preference event: installed Caveman skill read/applied for concise
 installation/config changes. ContextMode exposes only ctx_doctor; actual health call failed
 Transport closed, no diagnostic table or execution/search tool available. Bounded native fallback
 continues; Agent_Run_Log records exact outcome. No code/test/schema/rights changes or rerun required.
+
+
+## Scoped immutable receipt event — 2026-11-13T10:35:04.104547+07:00
+
+One new [[2026-11-13_103504_IMP-MATCH-01_Read_Only_Input_Adapter]] receipt created after independent review and pre-receipt doc checks.
+No previous receipt amended. Scope is local reference adapter/aggregate audit only; all real-data
+session/closure/DM/publication gates remain separate. Receipt-inclusive checks and final Git head
+are recorded in current evidence/PR/external registry after publication.

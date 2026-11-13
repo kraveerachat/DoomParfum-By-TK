@@ -15,6 +15,22 @@ source_of_truth: "../../README.md"
 
 # Product Backlog — DoomParfum By TK
 
+## Current review and next authorized tasks — 2026-11-13
+
+| Task | Current verified state | Next authorized boundary |
+|---|---|---|
+| IMP-MATCH-01 / PR11 | independent source review complete;28focused/157full PASS; scoped receipt created | Human reviews reference adapter; actual catalogue-session binding separate |
+| DPT-DATA-002 / PR10 |17offline methods/192checks; all44holds/rights/sidecars preserved | review exact identity/normalization/permission evidence; no automatic materialization |
+| IMP-MATCH-02 / PR9 |24pure primitive methods; source unchanged | Owner accepts primitive milestone boundary or retain full ModeA/DM01–04gate |
+| IMP-MATCH-03 / B1 | full scorer not implemented | accepted DM05/query/closure/strict-absence and input prerequisites |
+| IMP-MATCH-04 / B2 | observed accord strengths AND reviewed presence absent | no real B2until compatible data and accepted DM04/05/07 |
+| IMP-MATCH-05/06/07 | framework-neutral specification only | explicit session/stack/API/publication decisions, then scoped API/UI/performance/relevance |
+| IMP-P1-04 / PR8 | previous replay/recovery/218tests retained; historicalcause unknown | new actual diagnostic condition/operands before further experiment, no speculativefix |
+
+All seven DM approvals remain unrecorded. [[Matching_Owner_Decision_Register]] and related session/
+closure proposals state exact gate evidence. Synthetic tests/research may continue without activation;
+no raw dataset/image/credential publication, new Actions/cloud or Production operation.
+
 ## Current post-PR4 implementation backlog — 2026-11-13
 
 Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;

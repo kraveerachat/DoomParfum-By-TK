@@ -78,5 +78,8 @@ Do not run database tests on the persistent pilot or Production.
 See [current correction evidence](evidence/matching_input_review_correction_results.json), the
 preserved [historical baseline](evidence/matching_input_results.json) and the Obsidian
 [task](../Structure%20DB%20Obsidian/07_Delivery/Tasks/IMP-MATCH-01_Read_Only_Input_Adapter.md).
-Final independent source review is a distinct gate; preliminary findings and unresolved review
-availability must remain visible. No final receipt while acceptance is pending.
+Final independent source review completed at9be247a5ec724b4c0d057446610b31eacf3bceb2 after both
+demonstrated findings were fixed.28focused and157full methods pass; the reviewer independently
+passed14offline and6live methods plus all8original malformed cases. Historical pending-review,
+failed probes and test attempts remain preserved. One scoped reference-adapter receipt records the
+closeout after documentation checks; real application/session/closure/DM/publication gates remain separate.

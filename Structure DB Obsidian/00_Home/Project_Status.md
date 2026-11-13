@@ -14,6 +14,37 @@ source_of_truth: "../../README.md"
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
 
+## Current PR9–11 review closeout — 2026-11-13
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+PR11corrected source9be247a5ec724b4c0d057446610b31eacf3bceb2 independently reviewed with no blocking
+source finding in the authorized reference-adapter scope. Both demonstrated IR11-01HIGH stale
+snapshot and IR11-02MEDIUM malformed DTO findings resolved.28/28focused and157/157full PASS;
+independent14offline/6live plus8original adversarial cases verified. All22source bindings and49pilot
+data/security/application-role manifests unchanged. One scoped receipt records this closeout;
+real Scento app-session binding/closure/eligibility/publication remain separate, matching0/holds44.
+
+PR10head89930aa8b9843ca783a78c45b356547a9a240420: bounded offline audit revalidated17/17PASS and192
+cross-PR checks; all inputs/sidecars/receipt unchanged. Separate2-request metadata follow-on verifies
+3Commons description-page revision bindings, not image bytes/ownership/licenses/use grants. All15
+assets and5pair leads blocked;0usable assets/pairs/grants. Ready for bounded Human research review.
+
+PR9head8121ca4637cf3f4f22223f2b35cb37283489265f:24/24PASS and unchanged pure primitives; no defaults
+or real ranking. Full IMP-MATCH-02 task remains incomplete until Owner explicitly accepts a narrow
+primitives-only milestone boundary or accepts DM prerequisites and complete ModeA is implemented.
+No final PR9receipt or full scorer acceptance. PR8head3b01c8395d8ce28f426643f104da16090f11844d stays
+blocked: old218/218/replay/recovery evidence preserved; historical23514rootcause still unexplained,
+no new clock experiment/fix. PR11transaction isolation fix is a separate demonstrated revocation issue.
+
+[[Matching_Owner_Decision_Register]], [[Matching_Nonadmin_Session_and_Publication_Proposal]] and
+[[Matching_Data_Readiness_and_Closure_Gates]] separate all seven unaccepted DM choices, immutable
+identity/session alternatives, exact closure/absence,43duplicate sidecars/Khamrah, selected rights,
+A/B1criteria and application/publication boundaries. No real-data scoring, UI/cloud or agent merge.
+Coordinator refreshes D1–D9/exact PR heads/singleLATEST ZIP. PR12tooling is separate and untouched.
+
 ## Current post-PR4 workstreams — 2026-11-13
 
 Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;

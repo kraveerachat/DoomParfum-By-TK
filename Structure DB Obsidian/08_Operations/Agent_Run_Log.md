@@ -15,6 +15,33 @@ source_of_truth: "../../README.md"
 
 # Agent Run Log — DoomParfum By TK
 
+## 2026-11-13 — Final independent PR11 review and parallel revalidation
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+TOOL DECISION/EXECUTION: existing Caveman, ContextMode execute/search, PowerShell/Git/gh/Python,
+guarded local Docker/PostgreSQL, independent review agents. No new tool/config/auth/paid service.
+ContextMode tools are healthy again; prior Transport closed event remains historical. Read-only
+metadata research used one failed web-tool API attempt and one bounded officialAPI urllib success,
+2398JSONbytes, no raw page copy/image download. No email/messages/publication outside authorized PRs.
+
+Independent reviewer /root/pr11_exact_review is distinct from implementer /root. Pinned original
+ff9f840review found conditional stale RR snapshot and malformed DTO acceptance; parent added RED
+tests, fixed only adapter/tests, then reviewer independently accepted source9be247a.14offline/6live
+methods and8adversarial cases pass; parent28focused/157full reports and22Git bindings verified.
+No original migration, guard, rights or canonical data changed. Original probe/19/148failures and
+Docker-offline/reviewer exception-class instrumentation failures remain preserved. Existing Docker
+Desktop was started hidden and task container guarded, not installed/reconfigured. DB tests held
+common exclusive leases; all49pilot/security/role manifests unchanged, no persistent reset.
+
+Independent PR9/10reviewer reran24/17methods and192artifact/source/protection checks. PR9full-task
+scope remains pending; PR10existing receipt remains immutable and no second receipt created. All44
+holds/43unapproved sidecars and Khamrah unchanged; source/image/pair permissions not accepted.
+Coordinator alone updates shared status/log/decision/backlog/roadmap. No new temporal condition for
+PR8; no equivalent capture/clockfix experiment. PR12tooling branch/worktree preserved untouched.
+
 ## 2026-11-13 — Post-PR4 coordinator implementation checkpoint
 
 Owner workflow preference received during closeout: apply installed Caveman for concise chat,

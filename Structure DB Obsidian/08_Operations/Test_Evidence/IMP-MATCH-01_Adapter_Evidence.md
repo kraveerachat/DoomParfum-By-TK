@@ -2,7 +2,7 @@
 id: IMP-MATCH-01-EVIDENCE
 project: DoomParfum By TK
 type: test_evidence
-status: acceptance-pending
+status: reference-adapter-review-ready
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, matching, tests, security]
@@ -10,6 +10,45 @@ source_of_truth: "../../../README.md"
 ---
 
 # IMP-MATCH-01 — Adapter execution evidence
+
+## Current independent correction closeout — 2026-11-13
+
+Independent reviewer /root/pr11_exact_review, distinct from implementer /root, reviewed corrected
+exact checkpoint9be247a5ec724b4c0d057446610b31eacf3bceb2. Final verdict COMPLETED with no blocking
+source finding in the authorized trusted-local-transport reference scope. Original report SHA256
+ccc1f3b0561177ef65655792f7f65c19242e924e13dd748cc159ed770c53f0f5.
+[Independent structured report](../../../database/evidence/matching_input_final_independent_review.json)
+and [current correction results](../../../database/evidence/matching_input_review_correction_results.json)
+retain exact source, tests, scope and remaining gates. The following19/148test and quota statements
+are historical baseline evidence, superseded only for current readiness; none is overwritten.
+
+IR11-01 HIGH was demonstrated using two genuine sessions: old REPEATABLE READ READ ONLY snapshot
+returned a revoked SYNTHETIC selected fact, while a fresh session uniformly denied it. Explicit
+READ COMMITTED READ ONLY plus isolation gate now rejects incompatible old snapshots. IR11-02 MEDIUM
+malformed nested DTOs were demonstrated and fixed: strict schemas/types, qualified required times,
+nullable text, internal UUID errors, valid states/layers,512unique bound members and payload bounds.
+No migration, RLS/FK/grant, source observation, clock/timestamp guard or actual rights were weakened.
+This is not PR8's historical23514diagnosis or a fresh-session RLS bypass claim.
+
+Actual parent tests: RED14offline methods (8failing methods,34failed assertions/7errors) retained;
+GREEN14/14PASS; focused28/28PASS35.5s; full157/157PASS178.812s,0failure/error/skip. Main129plus28adapter
+methods, including new two-session rights and shared-membership stale-snapshot controls. Original
+fixture assertions/mocks and historical failures preserved.22executed source/migration Git bindings
+verified; all49persistent pilot data/security/application-role manifests unchanged.
+
+Independent actual execution:14/14offline,8original adversarial cases all now AdapterUnavailable,
+6/6live security methods PASS23.594s overall; reviewer verified the157report/raw tails and22Git
+bindings, rather than rerunning the full suite. Source SHAe4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b;
+test SHA0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2.
+Docker engine initially offline and a reviewer exception-class harness failure are preserved as
+failed instrumentation attempts, not claimed runtime failures or erased observations. Existing
+Docker Desktop/task container were started locally, with no installation/config/auth change.
+
+Scoped source acceptance covers the reference adapter and aggregate cohort capability audit only:
+all1479private profiles remain ranking-disabled,44holds unchanged, no approved nonadmin application
+binding or per-profile app evaluation. DM01–07, accepted closure/absence/normalization, selected
+rights/eligibility, app stack/auth/publication and real-data A/B1 remain separate gates. B2 data is
+absent. Human Owner alone reviews/merges; no Production change or full application acceptance.
 
 Base aa55f8b59acb0872b3b40273a8cdd25198f3ba27; branch codex/imp-match-01-input-adapter.
 Owner-merged PR4 and explicit post-PR4 request authorize this bounded local adapter; DM01–07 remain
@@ -73,7 +112,7 @@ session/ownership contract exists. No grant/owner reassignment/eligibility flip 
 runtime sessions cannot access public provenance without curatorial policy; unknown output preserves
 this gap. No approved closure, alias/family/currentness or compatible accord data is invented.
 
-## Independent review and remaining acceptance
+## Historical baseline review state — before corrected-source closeout
 
 Independent prototype review read actual source and identified read-only transaction, provenance
 bounds and DTO-validation concerns; changes were implemented and tested. Final exact-source/test

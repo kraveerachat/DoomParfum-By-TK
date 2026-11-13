@@ -3,7 +3,7 @@
   "version": "matching-input-local-v2",
   "reviewed_original_head": "ff9f840e49d54e511e2cd2ca0e7ad4460c25bb0a",
   "independent_reviewer": "/root/pr11_exact_review; independent of parent implementer",
-  "initial_review": "CHANGES_REQUIRED; final independent re-review pending corrected checkpoint",
+  "initial_review": "Historical CHANGES_REQUIRED at original ff9f840; both findings resolved by completed corrected-source review",
   "findings": [
     {
       "id": "IR11-01",
@@ -11,7 +11,8 @@
       "trigger": "Trusted transport reuses established REPEATABLE READ READ ONLY snapshot contrary to documented precondition",
       "demonstrated": "Two genuine synthetic sessions: revocation commits, old snapshot returns known_usable, fresh session returns uniform InputUnavailable",
       "scope_limit": "No fresh-session RLS bypass or historical timestamp rootcause claim",
-      "correction": "Explicit READ COMMITTED READ ONLY and isolation gate before catalogue query; new two-session rights/member regression tests"
+      "correction": "Explicit READ COMMITTED READ ONLY and isolation gate before catalogue query; new two-session rights/member regression tests",
+      "status": "RESOLVED_BY_INDEPENDENT_REVIEW"
     },
     {
       "id": "IR11-02",
@@ -19,7 +20,8 @@
       "trigger": "Malformed nested internal DTOs accepted despite typed output contract",
       "demonstrated": "Eight adversarial accepted shapes;513membership contradiction; internal UUID error-class mismatch",
       "scope_limit": "Defensive trusted-transport contract; most malformed shapes cannot originate from canonical SQL",
-      "correction": "Exact nested schemas, required qualified timestamps, nullable text, allowed states/layers, canonical internal UUIDs,512unique bound members and uniform AdapterUnavailable"
+      "correction": "Exact nested schemas, required qualified timestamps, nullable text, allowed states/layers, canonical internal UUIDs,512unique bound members and uniform AdapterUnavailable",
+      "status": "RESOLVED_BY_INDEPENDENT_REVIEW"
     }
   ],
   "source_sha256": {
@@ -92,9 +94,61 @@
     "source_sha256": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
     "DB_calls": 0
   },
-  "full_regression": "NOT_RUN_AT_THIS_SOURCE_CHECKPOINT",
-  "final_review": "PENDING",
-  "final_receipt_created": false,
+  "full_regression": {
+    "task": "IMP-MATCH-01 independent-review corrections",
+    "stage": "FULL_REGRESSION",
+    "tests_run": 157,
+    "passed": 157,
+    "failing_methods": 0,
+    "failed_assertions": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 178.812,
+    "at_utc": "2026-11-13T03:21:13.952063+00:00",
+    "persistent_pilot_all49_data_security_application_roles_unchanged": true,
+    "coordinator": "Existing PR8common O_EXCLlease and read-only fingerprint helpers; no adapter runtime dependency",
+    "fixture_resolution": "Full run only: original local module ROOT and Scento SOURCE resolve external fixtures; byte-equal harness/migrations/dictionary; assertions/mocks unchanged",
+    "historical_failures": "Original19/148runs and independent stale/malformed probes preserved, not overwritten",
+    "raw_logs": "Ignored local only; excluded from publicGit andZIP"
+  },
+  "final_review": {
+    "status": "COMPLETED_NO_BLOCKING_SOURCE_FINDINGS_WITHIN_AUTHORIZED_REFERENCE_SCOPE",
+    "reviewer": "/root/pr11_exact_review",
+    "reviewed_checkpoint": "9be247a5ec724b4c0d057446610b31eacf3bceb2",
+    "original_report_sha256": "ccc1f3b0561177ef65655792f7f65c19242e924e13dd748cc159ed770c53f0f5",
+    "independent_execution": {
+      "offline_methods": 14,
+      "offline_passed": 14,
+      "original_adversarial_cases_retested": 8,
+      "all_adversarial_now": "AdapterUnavailable",
+      "live_methods": 6,
+      "live_passed": 6,
+      "live_seconds": 23.594,
+      "live_methods_names": [
+        "test_owner_gets_selected_typed_inputs_and_provenance",
+        "test_other_user_and_missing_profile_are_uniform",
+        "test_reused_repeatable_read_rights_snapshot_is_rejected",
+        "test_reused_repeatable_read_shared_snapshot_is_rejected",
+        "test_existing_readwrite_transaction_is_rejected",
+        "test_admin_is_rejected_before_profile_query"
+      ],
+      "failures": 0,
+      "errors": 0,
+      "skips": 0,
+      "persistent_pilot_all49_data_security_roles_unchanged": true
+    },
+    "source_bindings_verified": 22,
+    "remaining_source_findings": [],
+    "scope_acceptance": "Authorized internal trusted-local-transport reference adapter and capability audit can complete source review without inventing application rights or changing canonical task. A9 cohort result is aggregate all1479disabled and application-read blocked, not per-profile authenticated evaluation.",
+    "remaining_separate_gates": [
+      "Human Owner review and merge",
+      "Real operator-private catalogue genuine nonadmin session/ownership contract; no auth_subject or ownership rewrites",
+      "Accepted complete-as-reported/absence/normalization and individual DM01\u201307 choices",
+      "Selected-field/source-use rights and explicit eligibility before real A/B1",
+      "Application/API/UI/publication/cache/provider approval; actual B2 accord data absent"
+    ]
+  },
+  "final_receipt_created": true,
   "preserved_evidence": [
     "Original19/148attempt reports unchanged",
     "Independent Docker-offline attempt preserved",
@@ -109,5 +163,10 @@
     "No new source/asset grants or real-data ranking"
   ],
   "migrations_changed": 0,
-  "production_mutation": false
+  "production_mutation": false,
+  "source_checkpoint": "9be247a5ec724b4c0d057446610b31eacf3bceb2",
+  "real_data_matching_ready": false,
+  "owner_merge_authorized": false,
+  "final_receipt": "Structure DB Obsidian/08_Operations/Receipts/2026-11-13_103504_IMP-MATCH-01_Read_Only_Input_Adapter.md",
+  "receipt_scope": "AUTHORIZED_LOCAL_REFERENCE_ADAPTER_AND_AGGREGATE_AUDIT_ONLY"
 }

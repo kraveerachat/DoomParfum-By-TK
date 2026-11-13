@@ -15,6 +15,21 @@ source_of_truth: "../../README.md"
 
 # Delivery Roadmap — DoomParfum By TK
 
+## Verified review boundary and dependency order — 2026-11-13
+
+PR11reference adapter now independently reviewed after actual fixes,28/157tests pass; real-data
+application binding/closure/selected-rights/eligibility remain separate. PR10bounded research ready;
+PR9pure primitives reviewed but full ModeA scope/milestone acceptance pending. PR8historicaltimestamp
+cause unresolved despite preserved successful replay/recovery evidence. No new Owner merge or scope
+acceptance is inferred. Original migrations, receipts and44holds remain untouched.
+
+Next: Human review PR11/10, explicitly decide PR9milestone and DM01–07, choose nonadmin application
+binding and domain closure/absence. Then separately reviewed full synthetic A/B1scorers and controlled
+permissioned app-private pilot; API follows approved authorization/stack, UI follows API, performance/
+relevance follows accepted implementation/eligible fixtures. Actual B2stays disabled without accord
+inputs. See [[Matching_Owner_Decision_Register]], [[Matching_Nonadmin_Session_and_Publication_Proposal]]
+and [[Matching_Data_Readiness_and_Closure_Gates]]. No agent merge or Production change.
+
 ## Current dependency graph — 2026-11-13
 
 Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;

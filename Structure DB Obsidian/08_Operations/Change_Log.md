@@ -15,6 +15,25 @@ source_of_truth: "../../README.md"
 
 # Change Log — DoomParfum By TK
 
+## 2026-11-13 — Independent review corrections and next-gate register
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+PR11source9be247a corrects two demonstrated findings: explicitly READ COMMITTED READ ONLY plus
+isolation gate; strict nested typed DTO/provenance/UUID/state/member/bounds validation and uniform
+internal error class. Source e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b;
+tests0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2.28focused/157full PASS,
+independent source review completed with both findings resolved and49pilot manifests unchanged.
+Receipt limited to reference implementation/audit after doc checks; no application readiness claim.
+
+Added explicit DM/register, immutable nonadmin binding/application/publication proposal and note
+closure/absence/normalization/selected-rights/A-B1gate proposal. No DM accepted by this documentation.
+PR9/10metadata-only heads8121ca4/89930aa preserve math/research source and all previous receipts;
+new3page-pin facts do not create asset rights. PR8unchanged/blocked, old histories/failures retained.
+Final publication metadata/heads are in canonical task and external registry; no receipt rewrite.
+
 ## 2026-11-13 — Post-PR4 correction and implementation checkpoint
 
 Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
