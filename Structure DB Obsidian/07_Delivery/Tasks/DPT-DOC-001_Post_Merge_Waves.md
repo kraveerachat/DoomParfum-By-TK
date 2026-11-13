@@ -116,3 +116,7 @@ research and guardedDocker/PostgreSQL aggregate audit used. No install/config/ac
 Original SQL/runtime and all old receipts unchanged; no rawlogs,private rows,unlicensed bytes or
 machine configs committed/packaged in this wave. Exact files are in the external Git snapshot
 manifest and task/PRdiffs. Final source/PR/ZIPreadback follows without changing the immutable receipt.
+
+Final scoped documentation receipt: [[2026-11-13_202313_DPT-DOC-001_Planning_Review_Ready]]. Reviewed payloadSHA`5bec40726bd644559c7365f68bf287a3c674d2be`;
+independent review complete. Receipt adds no policy acceptance or runtime feature. Subsequent
+publication head/PR status is recorded without amending this immutable file.
