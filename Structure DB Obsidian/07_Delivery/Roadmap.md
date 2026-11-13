@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - delivery
@@ -14,6 +14,40 @@ source_of_truth: "../../README.md"
 ---
 
 # Delivery Roadmap — DoomParfum By TK
+
+## Verified review boundary and dependency order — 2026-11-13
+
+PR11reference adapter now independently reviewed after actual fixes,28/157tests pass; real-data
+application binding/closure/selected-rights/eligibility remain separate. PR10bounded research ready;
+PR9pure primitives reviewed but full ModeA scope/milestone acceptance pending. PR8historicaltimestamp
+cause unresolved despite preserved successful replay/recovery evidence. No new Owner merge or scope
+acceptance is inferred. Original migrations, receipts and44holds remain untouched.
+
+Next: Human review PR11/10, explicitly decide PR9milestone and DM01–07, choose nonadmin application
+binding and domain closure/absence. Then separately reviewed full synthetic A/B1scorers and controlled
+permissioned app-private pilot; API follows approved authorization/stack, UI follows API, performance/
+relevance follows accepted implementation/eligible fixtures. Actual B2stays disabled without accord
+inputs. See [[Matching_Owner_Decision_Register]], [[Matching_Nonadmin_Session_and_Publication_Proposal]]
+and [[Matching_Data_Readiness_and_Closure_Gates]]. No agent merge or Production change.
+
+## Current dependency graph — 2026-11-13
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Stage1: local IMP-MATCH-01 implementation/testing and DPT-DATA-002offline research; PR8reconciled
+but reliabilityblocked; PR9generic mathematical primitives reviewed. Stage2: final adapter review
+and accepted DM/data policies precede full IMP-MATCH-02ModeA and03B1. IMP-MATCH-04realB2 needs actual
+reviewed compatible accord values/presence, currently unavailable; synthetic math is not realdata.
+Stage3: IMP-MATCH-05scoped API needs accepted session/architecture and scorer gates;06UI needs
+explicit stack/auth and API approval;07performance/relevance needs accepted implementation and
+permissioned eligible fixtures. No bypass through a database eligibility boolean or admin read.
+
+See [[Post_PR4_Application_Readiness]] and [[IMP-MATCH-01_Read_Only_Input_Adapter]]. Human Owner
+reviews Draft PRs separately. PR10offline audit ready; PR9fullfeature acceptance pending; PR8rootcause
+blocked; adapter final independent review pending. No automatic merge or Production work.
 
 ## DPT-PLAN-003 independent P2 planning lane — 2026-11-11
 

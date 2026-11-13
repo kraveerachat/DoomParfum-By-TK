@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-11
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,42 @@ source_of_truth: "../../README.md"
 ---
 
 # Decision Log — DoomParfum By TK
+
+## 2026-11-13 — Explicit DM and operational proposals, no new acceptance
+
+No individual DM01–07approval text/date/version is recorded. Owner-merged PR4 and the current
+review request authorize bounded work, not the proposed numeric weights, closure/fallbacks, lifecycle,
+stack/auth/publication/provider or source/image permissions. [[Matching_Owner_Decision_Register]]
+states recommendation, alternative, operational effect and exact unapproved status for every row.
+
+[[Matching_Nonadmin_Session_and_Publication_Proposal]] records actual immutable auth_subject and
+scope owner/kind constraints: no private membership shortcut or administrative impersonation.
+Recommended clean separately approved application-private pilot and alternative auth-model amendment
+are proposals only; no current pilot owner, role or assessment changed. [[Matching_Data_Readiness_and_Closure_Gates]]
+separates complete-as-reported from chemical/perceptual absence,43proposed duplicate membership views
+from retained occurrence evidence, Khamrah conflict, selected-field rights and eligibility.
+
+Independent source acceptance of PR11is not Owner merge, data rights or real-data matching approval.
+PR9needs explicit bounded-milestone acceptance before its full-task closeout can change; otherwise
+ModeA remains gated. Commons revision bindings authenticate page metadata availability only, not
+ownership/effective asset rights. Existing OD/DEC rows and allDM PROPOSED statuses remain unchanged.
+
+## 2026-11-13 — Owner merge event versus individual DM decisions
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Record the Planning Gate merge event only. The explicit post-PR4 request authorizes scoped local
+adapter implementation, conservative audits, generic synthetic mathematical primitives and
+application-readiness specifications. It does not accept proposed50/30/20,25/37.5/37.5,80/20,
+completeness/currentness/freshness thresholds, accord presence/strength fallback, stack/auth,
+public sharing, providers or new rights. All DM01–07 remain PROPOSED; no OD/DEC row changes.
+
+[[Post_PR4_Application_Readiness]] records the concise seven-row recommendation/gate matrix.
+Selected-field/rights/closure/eligibility/auth gates keep real matching disabled.43duplicate-hold
+normalization sidecars are unapproved; Khamrah and21identity conflicts remain unresolved.
 
 ## DPT-PLAN-003 decision review — 2026-11-11 / PROPOSED
 

@@ -1,0 +1,140 @@
+{
+  "task": "IMP-MATCH-01",
+  "main": "aa55f8b59acb0872b3b40273a8cdd25198f3ba27",
+  "branch": "codex/imp-match-01-input-adapter",
+  "status": "DRAFT_ACCEPTANCE_PENDING_FINAL_INDEPENDENT_REVIEW",
+  "source_sha256": {
+    "database/image_validation.py": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+    "database/local.py": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+    "database/matching_input.py": "a33fb8a7ed555a240fb0fd94ac534fc97ec13cc04a57f0bc8f583de5f1ceec46",
+    "database/performance.py": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+    "database/scento_etl.py": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+    "database/tests/fixtures.py": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+    "database/tests/test_deferred_performance.py": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+    "database/tests/test_foundation.py": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+    "database/tests/test_image_validation.py": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+    "database/tests/test_matching_input.py": "344272e91d9aaf84bc06de4c6bfa74d047e33a4006e50b859c8e4d11e9d59705",
+    "database/tests/test_scento_etl.py": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+    "database/validate_docs.py": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+    "database/verify.py": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+    "database/verify_images.py": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1",
+    "database/migrations/001_identity.sql": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+    "database/migrations/002_catalogue.sql": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+    "database/migrations/003_provenance.sql": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+    "database/migrations/004_associations_media_personal.sql": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+    "database/migrations/005_contract_functions.sql": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+    "database/migrations/006_media_and_deferred_contracts.sql": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+    "database/migrations/007_security_and_field_contract.sql": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+    "database/migrations/008_coalesced_deferred_validation.sql": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
+  },
+  "focused": {
+    "methods": 19,
+    "passed": 19,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "seconds": 23.515999999828637
+  },
+  "full_regression": {
+    "tests_run": 148,
+    "passed": 148,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0,
+    "seconds": 187.078,
+    "at_utc": "2026-11-12T21:53:53.169010+00:00",
+    "fixture_override": "Original local module ROOT and Scento SOURCE resolve original external fixture packages; harness/schema/dictionary verified byte-equal; original module and mocks/assertions preserved",
+    "coordination": "Common O_EXCL lease from existing PR8 test tooling only; not a runtime dependency"
+  },
+  "persistent_pilot_all49_table_security_application_roles_unchanged": true,
+  "cohort_counts": {
+    "notes": 420,
+    "brands": 160,
+    "approved": 1435,
+    "perfumes": 1479,
+    "held_draft": 44,
+    "scope_kinds": {
+      "user_private": 1479
+    },
+    "accord_links": 0,
+    "family_links": 0,
+    "image_assets": 0,
+    "note_alias_rows": 0,
+    "brand_alias_rows": 0,
+    "matching_eligible": 0,
+    "pending_validation": 0,
+    "comparison_evidence": 0,
+    "canonical_note_links": 11972,
+    "selected_note_layer_claims": {
+      "notes.top": 1348,
+      "notes.base": 1348,
+      "notes.heart": 1348,
+      "notes.general": 87
+    },
+    "profiles_with_approved_nonadmin_owner_session": 0
+  },
+  "cohort_capabilities": {
+    "cohort_size": 1479,
+    "ranking_allowed_count": 0,
+    "accepted_complete_domains": 0,
+    "profile_application_input_evaluation": "BLOCKED_NO_APPROVED_NONADMIN_OWNER_SESSION_BINDING",
+    "reported_membership": "EXISTS_BUT_NOT_ACCEPTED_DOMAIN_CLOSURE",
+    "accord_strength": "UNAVAILABLE",
+    "accord_presence": "UNAVAILABLE",
+    "family": "UNAVAILABLE",
+    "lifecycle": "UNKNOWN",
+    "public_search_or_share": "NOT_AUTHORIZED",
+    "eligible_boolean_changes": 0,
+    "hold_status_changes": 0
+  },
+  "cohort_audit_mode": "AUTHORIZED_OPERATOR_ONLY_READ_ONLY_AGGREGATE_NOT_APPLICATION_CANDIDATE_RETRIEVAL",
+  "preserved_failures": [
+    {
+      "run": "focused002",
+      "passed": 18,
+      "failed": 1,
+      "cause": "Test incorrectly expected unused BEGIN transaction could not switch READ ONLY; corrected to establish a snapshot, then assert PostgreSQL25001"
+    },
+    {
+      "run": "full001",
+      "passed": 146,
+      "errors": 2,
+      "cause": "Nested worktree historical external fixture path resolution; wrapper only"
+    },
+    {
+      "run": "full002",
+      "passed": 145,
+      "failed_subtests": 3,
+      "cause": "Copied local module namespace broke original security-test mocks; wrapper only; original module identity restored"
+    }
+  ],
+  "independent_review": {
+    "preliminary": "Actual prototype review identified transaction/provenance/DTO concerns; addressed",
+    "final_exact_source_review": "NOT_COMPLETED_REVIEWERS_USAGE_LIMIT_RETRY0712_LOCAL",
+    "self_approval": false,
+    "final_receipt_created": false
+  },
+  "security": "Genuine nonadmin sessions/RLS plus active storage-display-automation permissions before selected value projection; no admin fallback/raw staging/cache/public export",
+  "remaining_gates": [
+    "Final independent exact-source review",
+    "Approved genuine nonadmin owner/session contract for operator-private Scento catalogue",
+    "Ordinary-runtime public provenance policy without privilege expansion",
+    "Accepted DM numeric/policy/closure decisions and selected inputs/rights/eligibility before real scoring",
+    "Separate stack/auth/API/UI/publication approval"
+  ],
+  "not_run": [
+    "Actual API/UI/scorer/cache/performance/relevance tests; no such implementation",
+    "Per-profile Scento application reads under unapproved owner binding",
+    "New historical timestamp/capture/benchmark/recovery experiments; no new diagnostic condition"
+  ],
+  "production_mutation": false,
+  "canonical_or_eligibility_or_rights_mutations": 0,
+  "new_migrations": 0,
+  "new_dependencies": 0,
+  "limits": [
+    "Internal DTO is not a publication serializer",
+    "Aggregate operator inventory is separate from application candidate retrieval",
+    "Source code/tests unchanged after successful full run; docs metadata can differ",
+    "Common secret scans and local links do not prove legal/source approval"
+  ]
+}

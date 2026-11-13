@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,72 @@ source_of_truth: "../../README.md"
 ---
 
 # Agent Run Log — DoomParfum By TK
+
+## 2026-11-13 — Final independent PR11 review and parallel revalidation
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+TOOL DECISION/EXECUTION: existing Caveman, ContextMode execute/search, PowerShell/Git/gh/Python,
+guarded local Docker/PostgreSQL, independent review agents. No new tool/config/auth/paid service.
+ContextMode tools are healthy again; prior Transport closed event remains historical. Read-only
+metadata research used one failed web-tool API attempt and one bounded officialAPI urllib success,
+2398JSONbytes, no raw page copy/image download. No email/messages/publication outside authorized PRs.
+
+Independent reviewer /root/pr11_exact_review is distinct from implementer /root. Pinned original
+ff9f840review found conditional stale RR snapshot and malformed DTO acceptance; parent added RED
+tests, fixed only adapter/tests, then reviewer independently accepted source9be247a.14offline/6live
+methods and8adversarial cases pass; parent28focused/157full reports and22Git bindings verified.
+No original migration, guard, rights or canonical data changed. Original probe/19/148failures and
+Docker-offline/reviewer exception-class instrumentation failures remain preserved. Existing Docker
+Desktop was started hidden and task container guarded, not installed/reconfigured. DB tests held
+common exclusive leases; all49pilot/security/role manifests unchanged, no persistent reset.
+
+Independent PR9/10reviewer reran24/17methods and192artifact/source/protection checks. PR9full-task
+scope remains pending; PR10existing receipt remains immutable and no second receipt created. All44
+holds/43unapproved sidecars and Khamrah unchanged; source/image/pair permissions not accepted.
+Coordinator alone updates shared status/log/decision/backlog/roadmap. No new temporal condition for
+PR8; no equivalent capture/clockfix experiment. PR12tooling branch/worktree preserved untouched.
+
+## 2026-11-13 — Post-PR4 coordinator implementation checkpoint
+
+Owner workflow preference received during closeout: apply installed Caveman for concise chat,
+preserving complete durable documents and exact technical/security facts. Read existing
+C:/Users/User/.codex/skills/caveman/SKILL.md; no installation/config change. Current ContextMode
+inventory exposes only ctx_doctor, no execution/search tools. Actual ctx_doctor({}) health call
+failed with Transport closed and returned no diagnostic table. Continue bounded native short-output
+checks; do not claim ContextMode execution/search succeeded. Tool health remains unavailable in this
+session, no setup/authentication/global changes attempted. This metadata event changes no tested code.
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+TOOL DECISION/EXECUTION: existing PowerShell, Git2.53, Python3.11.9, gh2.97 and guarded local
+PostgreSQL16.15/Docker. GitHubMCP earlier returned errors, so existing gh is the verified fallback.
+No installer, skill/MCP configuration, paid API or authentication change. Separate worktrees:
+codex/imp-match-01-input-adapter, codex/post-pr4-data-quality(PR10),
+codex/imp-match-02-synthetic-primitives(PR9); PR8 stays on its existing branch.
+
+Independent agents owned exclusive source/task files; coordinator alone integrates common docs.
+Shared DB tests serialized with the common O_EXCL lease. Only disposable test databases reset;
+49-table persistent pilot/security/role integrity checked read-only. No canonical/eligibility/rights
+mutation. Offline research17/17 plus203parent assertions; math24/24 plus independent source review;
+PR8combined218/218plus50parent checks. Adapter19/19focused PASS. Exact full-regression outcomes,
+wrapper failures/corrections and executed source hashes remain in [[IMP-MATCH-01_Adapter_Evidence]].
+
+Preliminary independent adapter review identified read-only transaction, provenance bounds and
+DTO validation needs; these were addressed. Reviewers then hit usage quota (retry7:12AM), so final
+exact-source independent review is NOT COMPLETE. Do not self-approve or create an adapter receipt.
+No equivalent clock experiments: no new condition justifies another historical23514run. No natural
+reproduction claimed from synthetic operand capture. No merge/main/Production/cloud/image work.
+
+Research PR-create first failed on a body-file relative path before creating a PR; absolute-path
+retry created only PR10. Research original sources/all receipts unchanged. Parent reviewed actual
+research source/tests/guide and artifact lineage; shared D1–D9/status/ZIP reconciliation remains
+coordinator-owned. No raw logs/dumps/credentials/private package are committed or packaged as logs.
 
 ## Existing CLI fallback publication checkpoint — 2026-11-12
 

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - operations
@@ -14,6 +14,51 @@ source_of_truth: "../../README.md"
 ---
 
 # Change Log — DoomParfum By TK
+
+## 2026-11-13 — Independent review corrections and next-gate register
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+PR11source9be247a corrects two demonstrated findings: explicitly READ COMMITTED READ ONLY plus
+isolation gate; strict nested typed DTO/provenance/UUID/state/member/bounds validation and uniform
+internal error class. Source e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b;
+tests0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2.28focused/157full PASS,
+independent source review completed with both findings resolved and49pilot manifests unchanged.
+Receipt limited to reference implementation/audit after doc checks; no application readiness claim.
+
+Added explicit DM/register, immutable nonadmin binding/application/publication proposal and note
+closure/absence/normalization/selected-rights/A-B1gate proposal. No DM accepted by this documentation.
+PR9/10metadata-only heads8121ca4/89930aa preserve math/research source and all previous receipts;
+new3page-pin facts do not create asset rights. PR8unchanged/blocked, old histories/failures retained.
+Final publication metadata/heads are in canonical task and external registry; no receipt rewrite.
+
+## 2026-11-13 — Post-PR4 correction and implementation checkpoint
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+Added IMP-MATCH-01 local exact-identity read-only adapter/tests/guide/evidence; no schema migration,
+runtime privilege expansion, scoring endpoint or framework installation. Added framework-neutral
+application readiness/DM register. Reconciled planning task/plan/ADR and shared status/roadmap/backlog
+with the verified Owner merge event; original decision rows/history/receipts preserved.
+
+Separate packages: PR8nonrewriting reconciliation3b01c839 (218tests, rootcause stillblocked),
+PR9synthetic math1ab3176(24tests, full scorers gated), PR10offline researchb75e1f0(17tests,
+203review assertions,9paths).43proposed hold sidecars and15blocked media metadata candidates do not
+change44holds/0matching/0usablepairs/0acquiredassets. Adapter final independent review pending.
+See [[IMP-MATCH-01_Read_Only_Input_Adapter]], [[IMP-MATCH-01_Adapter_Evidence]] and
+[[Post_PR4_Application_Readiness]]. Current source checkpoint/PR head is recorded additively in task
+closeout and PR description; do not overwrite old immutable receipts or make a second task receipt.
+
+Adapter source checkpoint715c398e9aa3b2eb25bfc629d4f15da79ab9cda3 published in
+[Draft PR11](https://github.com/kraveerachat/DoomParfum-By-TK/pull/11). Full148/148PASS187.078s,
+focused19/19PASS; final independent review not complete, no final receipt. Closeout metadata does
+not alter executed source. Exact final head/changed-file manifests and ZIP hash are in the current
+external post_PR4 registry; Git/PR is canonical for the latest head.
 
 ## 2026-11-12 S4 DM approval/proposal crosswalk
 

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-12
+updated: 2026-11-13
 tags:
   - doomparfum
   - status
@@ -13,6 +13,63 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Current PR9–11 review closeout — 2026-11-13
+
+Verified main remains aa55f8b59acb0872b3b40273a8cdd25198f3ba27; no new Owner merge occurred.
+PRs8–11remain OPEN/DRAFT. Current source/evidence below supersedes earlier pending/quota statements;
+dated prior failures, original migrations/receipts/observations and all proposed decisions remain.
+
+PR11corrected source9be247a5ec724b4c0d057446610b31eacf3bceb2 independently reviewed with no blocking
+source finding in the authorized reference-adapter scope. Both demonstrated IR11-01HIGH stale
+snapshot and IR11-02MEDIUM malformed DTO findings resolved.28/28focused and157/157full PASS;
+independent14offline/6live plus8original adversarial cases verified. All22source bindings and49pilot
+data/security/application-role manifests unchanged. One scoped receipt records this closeout;
+real Scento app-session binding/closure/eligibility/publication remain separate, matching0/holds44.
+
+PR10head89930aa8b9843ca783a78c45b356547a9a240420: bounded offline audit revalidated17/17PASS and192
+cross-PR checks; all inputs/sidecars/receipt unchanged. Separate2-request metadata follow-on verifies
+3Commons description-page revision bindings, not image bytes/ownership/licenses/use grants. All15
+assets and5pair leads blocked;0usable assets/pairs/grants. Ready for bounded Human research review.
+
+PR9head8121ca4637cf3f4f22223f2b35cb37283489265f:24/24PASS and unchanged pure primitives; no defaults
+or real ranking. Full IMP-MATCH-02 task remains incomplete until Owner explicitly accepts a narrow
+primitives-only milestone boundary or accepts DM prerequisites and complete ModeA is implemented.
+No final PR9receipt or full scorer acceptance. PR8head3b01c8395d8ce28f426643f104da16090f11844d stays
+blocked: old218/218/replay/recovery evidence preserved; historical23514rootcause still unexplained,
+no new clock experiment/fix. PR11transaction isolation fix is a separate demonstrated revocation issue.
+
+[[Matching_Owner_Decision_Register]], [[Matching_Nonadmin_Session_and_Publication_Proposal]] and
+[[Matching_Data_Readiness_and_Closure_Gates]] separate all seven unaccepted DM choices, immutable
+identity/session alternatives, exact closure/absence,43duplicate sidecars/Khamrah, selected rights,
+A/B1criteria and application/publication boundaries. No real-data scoring, UI/cloud or agent merge.
+Coordinator refreshes D1–D9/exact PR heads/singleLATEST ZIP. PR12tooling is separate and untouched.
+
+## Current post-PR4 workstreams — 2026-11-13
+
+Verified origin/main aa55f8b59acb0872b3b40273a8cdd25198f3ba27. Human Owner merged PRs1–7;
+PR4 GateP is merged, but DM01–07 remain PROPOSED. Historical OPEN/DRAFT/pending statements below
+are dated snapshots. No source/asset/publication right, numeric default or application stack is
+accepted by inference. All8migrations and every pre-existing immutable receipt remain exact.
+
+- IMP-MATCH-01: local read-only typed adapter, genuine nonadmin RLS sessions, selected provenance,
+  rights/conflict/hold/unknown controls;19/19focused tests pass. Full regression evidence and final
+  review limits are [[IMP-MATCH-01_Adapter_Evidence]]. Draft acceptance pending; no final receipt.
+- PR8 head3b01c8395d8ce28f426643f104da16090f11844d: nonrewriting reconciliation with main complete,
+  218/218regression and50parent assertions. Historical23514operands/rootcause unresolved; keep
+  OPEN/DRAFT/blocked. Prior full1479import/replay/inventory/recovery evidence preserved; no clockfix.
+- PR9 head1ab317635bba0c53d87445cff8711ee2fc7c3305: generic exact synthetic math only,24/24PASS and
+  independent source review. Full A/B1/B2 scoring remains gated, no real matches or accepted weights.
+- PR10 headb75e1f0a48e62bae6921cf061584facc36a9fa75:9-file offline research closeout,17/17tests,
+  203independent assertions,8deterministic output artifacts and one new receipt. Ready for bounded
+  Human review;43membership sidecars remain proposals and all44holds remain unresolved.
+
+Local cohort1479/1435approved/44held/160brands/420notes/11972links; matching0, usablepairs0,
+approved/acquired realimages0. No private-public publication or source acquisition. Ordinary-runtime
+public provenance and the operator-private pilot's nonadmin owner/session binding remain gaps;
+adapter returns unknown/unavailable rather than expanding privileges. See
+[[Post_PR4_Application_Readiness]] for DM matrix, API/UI dependency graph and disabled B2 capability.
+Coordinator updates external D1–D9/PR registry and singleLATEST ZIP; no agent merge or Production.
 
 ## Current verified checkpoint — 2026-11-11 / IMP-P1-02
 
