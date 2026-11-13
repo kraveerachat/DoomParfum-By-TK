@@ -1,0 +1,230 @@
+{
+  "task": "IMP-P1-04",
+  "wave": "1B",
+  "kind": "READ_ONLY_POST_MERGE_DIAGNOSTIC_HYPOTHESIS_MATRIX",
+  "at_utc": "2026-11-13T08:07:05.527228+00:00",
+  "PR8_head": "3b01c8395d8ce28f426643f104da16090f11844d",
+  "verified_main": "58ceafe72129b70f0333c7c4f2c6f38dba855272",
+  "PR8_state": "OPEN/DRAFT/BLOCKED/CONFLICTING; not integrated",
+  "historical_failing_rows": [
+    {
+      "server_error_time_utc": "2026-11-11 16:18:32.241",
+      "source_key": "armaf-match-point",
+      "field": "notes.base",
+      "entity_id": "eddf28d2-37bc-56c0-8c3b-9fb38565e2fd",
+      "observation_id": "9474d650-19fd-5496-9a28-479a19f808f8",
+      "review_expression": "statement_timestamp()",
+      "actual_reviewed_at": null,
+      "actual_comparison_clock": null,
+      "delta_microseconds": null,
+      "operand_status": "NOT_RECORDED; errorlog time is neither operand"
+    },
+    {
+      "server_error_time_utc": "2026-11-11 19:29:32.535",
+      "source_key": "armaf-club-de-nuit-maleka",
+      "field": "name",
+      "entity_id": "d54fff25-fba7-5edd-888b-2f9d77a8f1bc",
+      "observation_id": "42470420-2092-5fe2-a807-423a99e4bc8b",
+      "review_expression": "statement_timestamp()",
+      "actual_reviewed_at": null,
+      "actual_comparison_clock": null,
+      "delta_microseconds": null,
+      "operand_status": "NOT_RECORDED; errorlog time is neither operand"
+    }
+  ],
+  "source_hashes": {
+    "database/migrations/003_provenance.sql": {
+      "sha256_canonical_UTF8_LF": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "sha256_checkout_bytes": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "same_as_merged_main": true
+    },
+    "database/migrations/005_contract_functions.sql": {
+      "sha256_canonical_UTF8_LF": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "sha256_checkout_bytes": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "same_as_merged_main": true
+    },
+    "database/migrations/006_media_and_deferred_contracts.sql": {
+      "sha256_canonical_UTF8_LF": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "sha256_checkout_bytes": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "same_as_merged_main": true
+    },
+    "database/scento_etl.py": {
+      "sha256_canonical_UTF8_LF": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "sha256_checkout_bytes": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "same_as_merged_main": true
+    },
+    "database/temporal_capture.py": {
+      "sha256_canonical_UTF8_LF": "e452a2e2157c809877265cae22d8f68050661b01c68a84eaf084620e529c9259",
+      "sha256_checkout_bytes": "e452a2e2157c809877265cae22d8f68050661b01c68a84eaf084620e529c9259"
+    },
+    "database/tests/test_review_timestamps.py": {
+      "sha256_canonical_UTF8_LF": "77a2d0f89768c79ea8c8474d72505a45644fda3b7c01a766a6d5b45686e50930",
+      "sha256_checkout_bytes": "77a2d0f89768c79ea8c8474d72505a45644fda3b7c01a766a6d5b45686e50930"
+    }
+  },
+  "original_selection_guard_function_definition_sha256": "c7a0a152b5d6b072168f3c439f9f033fc0e5f6bcf66aebb1104a347959000441",
+  "hash_notice": "Function-definition pin differs from whole migration-file pin by design. CanonicalLF source vs checkout hashes are separately labelled.",
+  "evidence_hashes": {
+    "temporal_followup_results.json": "3a2bc4d5420bb8376929f10fee31dfc4f9ea395ad0d930f1bde8bb0cd60f5c54",
+    "bounded_temporal_capture_results.json": "a373b25364a387dc1bd2372ac7640e982b2cb59f8e28a14e1a1305894583cebc",
+    "bounded_temporal_capture_tests.json": "c161f8de7fab3f9191d5291d1e47420502a7f1d7a652db3be445a0b340a3d0f4",
+    "temporal_regression_results.json": "e8bdd1cb6524f594b38e6289cdc454580eec811f9743e12ba6b27c8c52d4a06e",
+    "temporal_recovery_results.json": "08c4802831d481e517b699efda70c90141a685128aef61f53a2831e0f0f9b9a7",
+    "post_pr4_merge_regression_results.json": "0ab1ce3e50a069bc9bfb96f6a187e8539d96a3b3445f4890a5589acf42e23eb9"
+  },
+  "hypotheses": [
+    {
+      "id": "B-H01",
+      "hypothesis": "Wall-clock chronology changed between statement capture and guard evaluation (including a virtualized/server clock event)",
+      "status": "PLAUSIBLE_NOT_DEMONSTRATED",
+      "existing_evidence": "Both historicalR/Coperands absent; later8normal pairs cannot establish historical host/server clock movement",
+      "smallest_new_observable": "One unforced rejecting same-row R,C,S,X pair, R=S flag, delta and correlated server/host wall/monotonic or time-service event evidence",
+      "interpretation": "R=S and R>C establishes reversed wall-clock ordering for that captured context; it alone does not identify an OS/hypervisor/time-service cause",
+      "do_not": "Do not reset/backdate clocks, add tolerances, offset timestamps or claim sourceRow cause from runtime resume alone"
+    },
+    {
+      "id": "B-H02",
+      "hypothesis": "The actual NEW.reviewed_at origin differs from the assumed statement expression or a preceding writer/trigger path",
+      "status": "UNRESOLVED_PROVENANCE_GAP",
+      "existing_evidence": "Current importer generatedvalue is statement_timestamp(); historical effective SQL/function/trigger context was not captured with rejecting operands",
+      "smallest_new_observable": "Same-row R,S equality plus exact generatedscript hash, backend/database/relation/trigger identities and ordered BEFOREtrigger-definition hashes",
+      "interpretation": "R!=S distinguishes a value-origin/path question from simple equality-to-statement chronology; inspect exact provenance before altering runtime",
+      "do_not": "Do not assume the current code hash proves the exact historical installed function or recover rolled-backNEW from surviving canonical rows"
+    },
+    {
+      "id": "B-H03",
+      "hypothesis": "The captured exception/clock sample is associated with a different row/backend/statement or sampled after the deciding comparison",
+      "status": "TRACE_VALIDITY_QUESTION_NOT_A_DB_CAUSE",
+      "existing_evidence": "Historical tuples known, but no same-evaluation temporal operands or backend correlation marker; error-log time is notC",
+      "smallest_new_observable": "Single diagnostic marker joining SQLSTATE/message,TG_OP,entity/observation/field,backend/session/database and the singleCsample actually consumed by the predicate",
+      "interpretation": "If a supposed23514Future trace has R<=C, first reject an inconsistent/misattributed trace; a later wall-clock sample cannot stand in for the decidingC",
+      "do_not": "Do not treat a separately timed NOTICE/log line, error logger timestamp or timestamp from another connection as the predicate operand"
+    },
+    {
+      "id": "B-H04",
+      "hypothesis": "Successful zero-growth replay means selection guards were skipped or all previous review times were reused",
+      "status": "UNSUPPORTED_EXPLANATION_COUNTERED_BY_SOURCE_TESTS_AND_DOCUMENTATION",
+      "existing_evidence": "c_selection is BEFOREINSERT/UPDATE; importer generates NEWstatement timestamps and DO NOTHING; existing test future_insert_is_rejected_before_conflict_suppression validates this path",
+      "smallest_new_observable": "For any future causal trace, recordTG_OP/conflict context/NEWR and a non-mutating existing-selection hash to distinguish proposed from persisted row",
+      "interpretation": "Zero new records does not mean no trigger evaluation or no writes; known44held stagingupdated_at touches remain explicit",
+      "do_not": "Do not suppress triggers or bypass BEFOREvalidation on conflict to make replay succeed"
+    },
+    {
+      "id": "B-H05",
+      "hypothesis": "Displayed timezone/log precision explains the strict timestamp comparison",
+      "status": "NOT_DEMONSTRATED_AND_NOT_A_SUFFICIENT_EXPLANATION",
+      "existing_evidence": "reviewed_at is timestamptz; current statement/clock expressions are time-qualified PostgreSQL values; historical logger times have only displayed millisecond precision",
+      "smallest_new_observable": "Full-precision timezone-qualified R,C and exact numeric R-C from the same evaluation, retained without display truncation",
+      "interpretation": "Display format alone does not supply missing internal operands; inspect unexpected coercion only if actualSQL/value provenance supports it",
+      "do_not": "Do not parse logger time into a fabricated reviewed_at/comparison timestamp or silently round away a positive delta"
+    },
+    {
+      "id": "B-H06",
+      "hypothesis": "PR11 reused-snapshot revocation finding or PR9\u201312 merge resolves the historical timestamp failure",
+      "status": "NOT_A_DEMONSTRATED_CAUSAL_LINK",
+      "existing_evidence": "PR11fixed a separate trusted-input snapshot/DTO issue; original importer/guard code matches mergedmain; merged primitive/tool/research docs do not reveal oldR/C",
+      "smallest_new_observable": "A real rejecting operand/context trace establishing a causal connection, not analogy to another security finding",
+      "interpretation": "Treat independent source acceptance, merge events and passingfocused tests as their own scope only",
+      "do_not": "Do not relabel PR8fixed, integrate it, run equivalent broad experiments or alter original eight migrations based on unrelated merges"
+    }
+  ],
+  "temporal_operand_contract": {
+    "R": "NEW.reviewed_at",
+    "C": "single clock_timestamp sample actually used by comparison",
+    "S": "statement_timestamp in same row/statement context",
+    "X": "transaction_timestamp",
+    "delta": "exactR-Cinmicroseconds",
+    "minimum_new_value": "an UNFORCED actual rejecting tuple with exactR,C and attributable source/context; not another deliberately future synthetic control"
+  },
+  "existing_capture_history": {
+    "status": "CAPTURE_SELFTEST_VERIFIED",
+    "trials_actually_recorded": 8,
+    "natural_failure_observed": false,
+    "natural_probe_rejections": 0,
+    "delta_microseconds": [
+      -3569.0,
+      -3688.0,
+      -3450.0,
+      -3448.0,
+      -4023.0,
+      -4264.0,
+      -4245.0,
+      -3585.0
+    ],
+    "all_review_equals_statement": true,
+    "original_controls": 5,
+    "instrumented_controls": 5,
+    "parity": true,
+    "configured_run_limit_seconds_not_elapsed": 240,
+    "observer_effect": "Decision semantics equivalent; instrumentation may alter timing/scheduling.",
+    "historical_failure_reproduced": false
+  },
+  "retained_replay004": {
+    "status": "COMPLETE_FULL_REPLAY_ZERO_NEW_RECORDS_INTEGRITY_VERIFIED_WITH_EXACT_EXPECTED_STAGING_TOUCHES",
+    "verified": {
+      "input_and_importer_hashes_unchanged": true,
+      "zero_all49_row_count_deltas": true,
+      "unchanged_nonstaging_table_hashes": 48,
+      "unchanged_staging_substantive_rows": 2059,
+      "exact_held_updated_at_only_changes": 44,
+      "security_roles_guard_exact": true,
+      "pending_markers": 0
+    },
+    "source_report_sha256": "d3e42c6a07ec51e66ae473fa906db314c5c1a5f6fe5e3010e451d36aeeca16d2"
+  },
+  "retained_pair003": {
+    "source_report_sha256": "8e463b297e006fdc0edcb0246cb6dce1226c152819162e3e89fc11a7a6ff2887",
+    "sql_status": "BOTH_COMPLETE_COMMITTED",
+    "strict_comparison_status": "FAILED_ONLY_STAGING_CONTENT_HASH; retained overstrict oracle failure, not SQL failure",
+    "source_report_status": "FAILED_STOPPED",
+    "inventory_equal": true,
+    "all49_counts_zero_delta": true,
+    "raw_different_tables": [
+      "dpt.staging_records"
+    ],
+    "security_and_roles_equal": true
+  },
+  "execution_this_session": {
+    "DB_calls": 0,
+    "clock_or_import_experiments": 0,
+    "runtime_source_edits": 0,
+    "migrations_edits": 0,
+    "merge_rebase_or_integration": false,
+    "new_rootcause_evidence": false,
+    "new_diagnostic_harness": false
+  },
+  "decision": "NO_GO_FOR_ANOTHER_EXPERIMENT: no distinct reproducible condition/new historical operand evidence identified; preserveexisting mechanism rather than repeat it",
+  "future_go_criteria": [
+    "Specific new condition/actual failure signal supported by evidence, not meremerge/startup",
+    "Exact isolated owned target, commonlease, image/function/source pins and pre-manifests",
+    "Same-call singleCcapture and original/instrumented verdict parity with explicit observer-effect limit",
+    "Fresh bounded output path and private logs; no broad1479retry or no-op loop",
+    "Independent approval of causal interpretation before any runtime correction"
+  ],
+  "future_hard_stop": [
+    "Any unexpected persistent/operator/rawdata/rights/eligibility/source drift",
+    "Targetidentity/pin/lease/ownership ambiguity",
+    "Different expected error/guardparity or invalid/incomplete operand trace",
+    "No unforced rejection within predeclared smalltrial/time bound",
+    "Cleanup/restore exactness cannot be verified; stopownedtarget and retain evidence"
+  ],
+  "future_budget_proposal_not_authorization": "Only afterGOcriteria: cap atone original/instrumented pair for a specified new condition and atmost8totaltrials/240s run, existing command/cleanup budgets retained; stop earlier on capture/no-value. No run authorized/executed by this matrix.",
+  "independent_review_required": true,
+  "final_receipt_created": false,
+  "historical_rootcause": "UNRESOLVED",
+  "production_mutation": false,
+  "primary_semantics_sources": [
+    {
+      "title": "PostgreSQL16 current date/time semantics",
+      "url": "https://www.postgresql.org/docs/16/functions-datetime.html#FUNCTIONS-DATETIME-CURRENT"
+    },
+    {
+      "title": "PostgreSQL16 INSERT/ONCONFLICT trigger ordering",
+      "url": "https://www.postgresql.org/docs/16/sql-insert.html#SQL-ON-CONFLICT"
+    },
+    {
+      "title": "PostgreSQL16 trigger behavior",
+      "url": "https://www.postgresql.org/docs/16/trigger-definition.html"
+    }
+  ]
+}

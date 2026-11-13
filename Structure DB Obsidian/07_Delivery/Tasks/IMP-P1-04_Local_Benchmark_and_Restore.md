@@ -11,6 +11,39 @@ source_of_truth: "../../../README.md"
 
 # IMP-P1-04 — Controlled local ETL benchmark and recovery
 
+## Post-merge diagnostic-preservation session — 2026-11-13
+
+Session IN PROGRESS from PR8head3b01c8395d8ce28f426643f104da16090f11844d on existing branch
+codex/imp-p1-04-local-benchmark-restore. Owner-merged main is now
+58ceafe72129b70f0333c7c4f2c6f38dba855272 after PR9–12. The current Master Prompt explicitly keeps
+PR8OPEN/DRAFT/BLOCKED and does not authorize integration into main or main into this branch.
+Its Project_Status conflict is documented, not removed by deleting history. No merge/rebase/source
+fix, DB call, clock/full-import experiment or final receipt in this bounded documentation session.
+
+Scope: verify existing historical tuple/source evidence, distinguish missing exact operands from
+server log times, document competing hypotheses and the smallest genuinely new observable with
+strict no-go criteria. Protected: every original migration/importer/capture/runtime/test, all old
+failure/replay/recovery reports/receipts, raw observations,44holds, eligibility/operator scopes and
+Production. Shared status/roadmap/logs remain coordinator-owned. Dedicated evidence is
+[[IMP-P1-04_Post_Merge_Diagnostic_Matrix]]; only this task, that note and a sanitized matrix JSON may
+change. No current root-cause or runtime acceptance claim is made.
+
+Post-merge diagnostic documentation is prepared: both exact historical tuple identities verified,
+actualR/C/delta remain NOT_RECORDED, six competing hypothesis/trace-validity rows and smallest new
+observable documented. Current decision is NO-GO for another experiment: no distinct condition was
+identified. Existing8unforced samples/10decision controls and successful replay/recovery remain
+historical evidence only; no new DB or runtime test ran here. The failed pair003staging oracle and
+verified004exact44held staging timestamp touches both remain explicit. Guard/importer pins match
+merged main; every original source/evidence/receipt is protected. Independent parent review and
+dedicated Markdown/source consistency checks are required before any publication checkpoint.
+Overall IMP-P1-04 remains partial-blocked; no integration, root-cause fix or final receipt.
+
+Static check result for this documentation session:216/216PASS,2frontmatters/9Wikilinks/1local
+link, zero common-secret candidates and git diff --check PASS. Checks bind the exact two historical
+row records, missing operands, six source files, six preserved evidence hashes and every original
+tracked blob other than this additive task note. No database/runtime tests were executed. Only the
+three assigned task/matrix paths changed; parent independent review/publication remains pending.
+
 ## Start / authority / scope
 
 Owner explicitly requested independent post-PR5 workstreams. PR5 owner merge verified at
@@ -282,3 +315,7 @@ in externalpost_PR4/reliability. InitialreviewHEAD-racecheck detectedlocalcheckp
 reviewthenpinned explicitcommits andpassed, no source/data defect. Parentmade noDBcalls forreview.
 Metadata-onlycloseout follows, no runtime/test/executionreport changes. Samebranchnormalpush and
 PR8Draft/readback follow; historicalcause/correction remainsblocked/no finalreceipt.
+
+Independent coordinator reviewed the post-merge matrix and all6source/6historical artifact bindings;
+no blocker for the evidence-only checkpoint. Root cause remains unresolved; no receipt or runtime
+change. Existing PR8branch retained without main integration. Publication head follows in task/PR.
