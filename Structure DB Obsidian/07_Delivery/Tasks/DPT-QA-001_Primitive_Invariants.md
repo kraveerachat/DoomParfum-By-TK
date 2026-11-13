@@ -94,3 +94,11 @@ Live/full PostgreSQL/security/replay/recovery NOT RUN. Matching0,44holds,source 
 
 Single scoped receipt: [[2026-11-14_031943_DPT-QA-001_Scoped_Review_Ready]]. Payload/checkpointc2ebea74b15b6409aeb9a2300a06f0d0da158aab.
 Exact publication metadata follows; no policy or full-feature acceptance is inferred.
+
+## Verified Draft publication — 2026-11-13T20:20:51.825396+00:00
+
+[PR22](https://github.com/kraveerachat/DoomParfum-By-TK/pull/22) is OPEN/DRAFT/unmerged
+at published checkpoint7afa2112b03acae1700d27ec42d400fa20790bee; base8c6a8376680c7a10cc3eb4b5cf80afe4376a9282.
+This metadata-only checkpoint records actual publication. Final head is verified in the PR/head
+registry; the immutable receipt and reviewed source scope are unchanged. High-level direction is
+confirmed; exact unchosen policies remain PROPOSED. No merge,real ranking or Production change.
