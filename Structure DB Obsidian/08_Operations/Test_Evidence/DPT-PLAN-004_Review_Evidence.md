@@ -2,7 +2,7 @@
 id: DPT-PLAN-004-EVIDENCE
 project: DoomParfum By TK
 type: documentation_evidence
-status: independent-review-pending
+status: independent-review-complete-owner-review-pending
 owner: human-owner
 updated: 2026-11-13
 tags: [doomparfum, planning, evidence, decisions]
@@ -119,3 +119,10 @@ The local check manifest is ignored `.local/postmerge-B/independent_C_review.jso
 workspace. No database, scorer, RLS, API/UI, rights-service or relevance test ran. No commit, push,
 receipt, policy acceptance or Production mutation occurred. Parent still owns shared reconciliation,
 final diff/publication and recording actual Owner responses before affected implementation.
+
+## Post-receipt metadata correction — 2026-11-13
+
+The evidence frontmatter now records the already completed independent review and pending Human
+Owner review. Earlier pending statements are authoring history, superseded by the independent
+review section. This header correction changes no proposal,reviewed specification,source right,
+test result or immutable receipt. Exact new HEAD is in the coordinator publication registry.
