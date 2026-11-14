@@ -144,3 +144,8 @@ flowchart TD
 - [[Post_PR18_21_Implementation_Gate_Audit]]
 - [[DPT-DOC-003_Wave0_Evidence]]
 - [[Next_Wave_Owner_Decision_Form]]
+
+## Current observed-audit closeout
+
+- [[DPT-DOC-003_Wave_Closeout]]
+- Exact filename/branch/worker-head manifest: `08_Operations/Test_Evidence/DPT-DOC-003_Exact_File_Manifest.json`.

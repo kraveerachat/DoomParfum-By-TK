@@ -1,0 +1,72 @@
+{
+  "task": "DPT-DOC-003",
+  "base": "8c6a8376680c7a10cc3eb4b5cf80afe4376a9282",
+  "at_utc": "2026-11-14T09:10:31.248633+00:00",
+  "qualification": "Worker publication heads exact; coordinator final head and future receipt are recorded by later actual PR/packagedregistry,not guessed here",
+  "records": [
+    {
+      "task": "DPT-QA-001",
+      "PR": 22,
+      "branch": "codex/qa-primitive-invariants",
+      "head": "5d69fa8b54b5c54f33d25df858607769f6ccf187",
+      "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/22",
+      "exact_changed_paths": [
+        "Structure DB Obsidian/07_Delivery/Tasks/DPT-QA-001_Primitive_Invariants.md",
+        "Structure DB Obsidian/08_Operations/Receipts/2026-11-14_031943_DPT-QA-001_Scoped_Review_Ready.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-QA-001_Invariant_Evidence.md",
+        "matching_math/evidence/independent_invariant_review.json",
+        "matching_math/evidence/invariant_results.json",
+        "matching_math/tests/test_invariants.py"
+      ]
+    },
+    {
+      "task": "DPT-DATA-005",
+      "PR": 23,
+      "branch": "codex/audit-catalogue-note-completeness",
+      "head": "50adb60f487690510c8f4e189f5e072698845198",
+      "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/23",
+      "exact_changed_paths": [
+        "Structure DB Obsidian/03_Data/Catalogue_and_Brand_Completeness_Audit.md",
+        "Structure DB Obsidian/03_Data/Note_Vocabulary_and_Field_Readiness_Audit.md",
+        "Structure DB Obsidian/07_Delivery/Tasks/DPT-DATA-005_Catalogue_Completeness_Audit.md",
+        "Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160416_DPT-DATA-005_Scoped_Review_Ready.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DATA-005_Audit_Evidence.md"
+      ]
+    },
+    {
+      "task": "DPT-DATA-006",
+      "PR": 24,
+      "branch": "codex/audit-source-media-operations",
+      "head": "8c04fcdc9384955d2e49eefcd9f54c1ebd462378",
+      "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/24",
+      "exact_changed_paths": [
+        "Structure DB Obsidian/03_Data/Media_Asset_Readiness_Audit.md",
+        "Structure DB Obsidian/03_Data/Source_Inventory_and_Operation_Audit.md",
+        "Structure DB Obsidian/07_Delivery/Tasks/DPT-DATA-006_Source_Media_Operation_Audit.md",
+        "Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160537_DPT-DATA-006_Scoped_Review_Ready.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DATA-006_Audit_Evidence.md"
+      ]
+    },
+    {
+      "task": "DPT-DOC-003",
+      "branch": "codex/post-pr18-21-catalogue-audit",
+      "prior_reviewed_payload": "9bcc09027ca50983b00b24f479d295c4c2f93a55",
+      "exact_pre_receipt_changed_paths": [
+        "Structure DB Obsidian/00_Home/Project_Index.md",
+        "Structure DB Obsidian/00_Home/Project_Status.md",
+        "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+        "Structure DB Obsidian/06_Engineering/Post_PR18_21_Implementation_Gate_Audit.md",
+        "Structure DB Obsidian/07_Delivery/Backlog.md",
+        "Structure DB Obsidian/07_Delivery/Roadmap.md",
+        "Structure DB Obsidian/07_Delivery/Tasks/DPT-DOC-003_Post_PR18_21_Catalogue_Wave.md",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+        "Structure DB Obsidian/08_Operations/Change_Log.md",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md",
+        "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Exact_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Wave0_Evidence.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Wave_Closeout.md"
+      ]
+    }
+  ]
+}
