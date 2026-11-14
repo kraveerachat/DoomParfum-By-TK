@@ -91,9 +91,17 @@ These are data checks, not91 feature tests or the separate55-method coordinator 
 Exact checker SHA-256: `96a81f790a9475ea91c8265a79e82f5c24e00d87c4bdb9367fc6f1727b46544d`.
 Safe aggregate AUDIT_SUMMARY SHA-256:
 `8519a589619f2931d45fbe2f01219ce36f6a8bf8a8af0a846e2ff81d494f1492`.
-The checker was subsequently extended with an explicit34-target CSV disposition export and portable
-manifest paths; final hashes/results are recorded in the final checkpoint below, superseding these
-earlier worker hash values without erasing them.
+The final checker includes an explicit34-target CSV disposition export and portable manifest paths.
+The checker and summary hashes above remain current. The final91-check result has SHA-256
+`807bb9ddd6f32eb8e3b273e478d76042235a8290701a70275bb65c6bf1b4f62d`.
+No nonexistent later checkpoint or hash mismatch is inferred.
+
+Independent review identified a material schema classification error in the initial audit payload:
+flanker_of is explicitly modeled by perfume_relations with directed orientation, not an unmodeled
+field. The observed table is empty. The catalogue matrix, identity register and explanatory text
+are corrected accordingly; original payload/history remains in Git. No schema, data, eligibility
+or source-rights change follows. Independent verification of this correction is required before
+scope acceptance or a final receipt.
 
 ## Local reports and privacy boundary
 

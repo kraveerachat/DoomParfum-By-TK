@@ -92,7 +92,7 @@ row's C/M counts do not establish complete-as-reported closure or strict negativ
 |---|---:|---|---|---:|---|---|---:|
 | Perfume UUID / source identity | 1479 | 1479 / 0 UUIDs | 1479 source IDs | NA identity key | 44 | identity visibility separate / 0 | edition equivalence 1479 |
 | Perfume name aliases | 1479 | NM separate perfume-alias model | NC | 0 recorded selection | 44 | not established / 0 | 1479 |
-| Flanker relation | 1479 | NM explicit flanker model | NC | 0 recorded selection | 44 | not established / 0 | 1479 |
+| Flanker relation | 1479 | modeled as directed perfume_relations.flanker_of;0/1479 linked profiles | NC | 0 recorded selection | 44 | 0 /0 | 1479 |
 | Reformulation lineage | 1479 | NM explicit lineage model | NC | 0 recorded selection | 44 | not established / 0 | 1479 |
 | Discontinued / stock / historical-current status | 1479 | NM explicit lifecycle/stock field | NC | 0 recorded selection | 44 | not established / 0 | 1479 |
 | Product variant association | 1479 perfumes | 0 /1479 linked profiles;variant table D=0 | NC | 0 | 44 | 0 /0 | 1479 |
@@ -105,8 +105,9 @@ row's C/M counts do not establish complete-as-reported closure or strict negativ
 | Popularity rank | 1479 | NM separately materialized rank | 613 | 0 | 44 | not established /0 | 1479 canonical targets |
 | Dupe/pair evidence | 1479 profile coverage;0 evidence rows | 0 /1479 covered profiles | NC independent pair evidence | 0 | 44 | 0 /0 | 1479 profiles |
 
-Existing generic relation/usage facilities are not evidence that an explicit flanker, lifecycle or
-perfumer mapping exists. No meaning is inferred from a name suffix, prose or release year. EDT
+The schema explicitly supports directed flanker_of relationships, but the observed relation table
+is empty. Lifecycle, perfumer and reformulation mappings are not separately established. No meaning
+is inferred from a name suffix, prose or release year. EDT
 (221 raw profiles), EDP (874), extrait (55), parfum (55), cologne (14), elixir (9) and unknown (251)
 remain distinct source labels; no equivalence is approved.
 
@@ -166,7 +167,7 @@ substituted for this predicate. Candidate row details/URLs remain in the ignored
 | Missing UUID/name/brand FK | 0/1479 UUID/name/same-scope-brand gaps | source transcription does not settle edition equivalence |
 | Concentration | 1228/1479 populated;251 missing;40populated held | 291 lack approved selected concentration |
 | Year | 80/1479 populated;1399 missing;4populated held | 1403 lack approved selected year;year is not stock/currentness |
-| Edition/flanker/reformulation | no dedicated raw columns;edition_label empty1479 | all1479 require separate exact-edition evidence;other dedicated models not established |
+| Edition/flanker/reformulation | no dedicated raw columns;edition_label empty1479;modeled flanker_of has0rows | all1479 require separate exact-edition/flanker evidence;reformulation lineage not separately established |
 | Variant/size/SKU/GTIN | product_variants0 | no declared total SKU/edition/size universe;1479 lack variant association |
 | Candidate collisions | SQL groups0/profiles0 | exact predicate only: brand_id,lower(btrim(name)),coalesce(lower(btrim(concentration_code)),'');not full Unicode casefold or fuzzy identity approval |
 | Source index linkage | external keys1479 exactly equal pinned IDs | canonical_* columns blank1479 and needs_review1479 are historical index state,not UUID mismatch or current DB state |
