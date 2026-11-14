@@ -2,7 +2,7 @@
 id: DPT-DATA-006-MEDIA
 project: DoomParfum By TK
 type: media_readiness_audit
-status: independent-review-pending
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, sources, audit, media, permissions]

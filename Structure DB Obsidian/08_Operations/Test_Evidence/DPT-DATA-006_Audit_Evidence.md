@@ -2,7 +2,7 @@
 id: DPT-DATA-006-EVIDENCE
 project: DoomParfum By TK
 type: audit_evidence
-status: independent-review-pending
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, sources, audit, media, permissions]
@@ -101,3 +101,45 @@ patterns, exact four-file scope/no tracked mutations, base/branch, 40 audit asse
 Git diff omits untracked content, so new docs were checked explicitly; external links/rights/runtime
 were not tested. Exact final file/artifact hashes and definitions are in ignored
 `.local/post1821-D/DOCUMENTATION_CHECKS.json`. Independent review still required; no final receipt.
+
+## Independent exact-source review — current scoped audit closeout
+
+Reviewer `/root/source_media_exact_review` independently examined author
+`postmerge_d_evidence_coverage` payload `264ad04849cb333b18dee16c4cf80198e02a1baa` and the corrected
+exact source `9ff83406a31be048d2c4cd689ed2ee2e3fa56d04`. The latter changes exactly one displayed
+description-page title to `Juniper berries 777.jpg`; revision 1142894283 and its text hash were
+already correct. Finding IR-DATA006-01 (LOW) is resolved. No open or blocking review finding remains.
+
+**83/83 independently executed local assertions PASS; zero failures.** Review compared all 212
+existing base Git objects, retained 17 old receipts/eight migrations, all six pinned Git blob hashes,
+the eight historical index output hashes and prior byte-identical index replay. Independently
+reconciled the 1,479 index keys/names/houses/revision/license, blank canonical-ID columns and historical
+needs_review labels; rederived all 1,479 sidecar UUID targets and canonical parsed-field hashes.
+Targets remain distinct from verified DB bindings or authorized application identity.
+
+The committed 25-by-11 matrix matches all 275 local classification cells: six approved existing
+pinned-local operations, 20 conditional, 189 unknown, 56 restricted and four not verified. Seven
+inherited operation columns preserve their earlier evidence states. No scheduled-use or new image
+grant is inferred. The separate 22-row registry retains Fragrantica's explicit denied operations;
+SRC-code collisions remain qualified by artifact identity. The 220-brand registry and 15 Thai
+A-priority records are unchanged. No new source/sample task becomes executable.
+
+Review directly recounted 15 note candidates/five bottle leads, zero acquired/usable/authenticated
+assets, preserved bottle negative flags, seven reported SHA1 metadata fields and 14 JPG/one PNG
+format hints. Three historical description-revision/title/text-hash facts match the preserved direct
+API-attempt report; none proves binary ownership, selected reuse rights or a current external check.
+The current 420-note/1,479-profile image gaps and 44 holds/matching0 are consumed coordinator aggregate
+evidence, not a new DB query. The 49-table before/after/prior fingerprint result was not rerun here.
+
+Sanitized report: ignored `.local/post1821-A/INDEPENDENT_SOURCE_MEDIA_REVIEW.json`, SHA-256
+`139c03c7b7b98faa8cc2d711067db5b3aea51631885d46493149389872c483e8`. It binds the exact four reviewed file hashes and separates independent assertions from the
+author's 40 checks. Reviewer initially expected the shorthand CC0 instead of raw `CC0 1.0`, and used
+a wording/line-break-sensitive static probe. Both checker errors and their initial reports are
+preserved locally; corrected checks passed. They were not source-data or permission failures.
+
+No DB, Docker, network, new source/media request, code, rights, hold, eligibility, Git publication or
+receipt mutation by this reviewer. Detailed SOURCE_OPERATIONS_11, MEDIA_READINESS_20 and
+PINNED_SOURCE_AUDIT_INDEX_1479 artifacts remain ignored and excluded from public Git/ZIP. Current
+external terms, creator authority, image binaries, SQL/RLS, decoder, import/replay/recovery and
+future application tests are NOT RUN. Scoped audit readiness permits Human Owner review; it grants
+no acquisition, policy acceptance, catalogue promotion, real matching or public publication.

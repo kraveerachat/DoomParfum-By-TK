@@ -2,7 +2,7 @@
 id: DPT-DATA-006
 project: DoomParfum By TK
 type: audit_task
-status: independent-review-pending
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, sources, inventory, media, permissions]
@@ -68,3 +68,17 @@ Git metadata/commit/push mutation NO; shared files NO; source/rights/canonical/a
 changes NO; PRODUCTION_MUTATION NO. Branch/base remain as recorded. Next: independent exact audit
 review and coordinator publication/handoff; Owner chooses a concrete permitted source/asset/use
 task before acquisition, while dependent policy/access/format gates remain unapproved.
+
+## Scoped closeout after completed independent review
+
+Reviewed corrected payload9ff83406a31be048d2c4cd689ed2ee2e3fa56d04. Actual independent source/data assertions83/83PASS;
+no open blocking finding in this bounded audit. Author's40offline artifact checks remain a separate evidence unit,
+not runtime feature tests. Resolved exact Juniper page-title typo; original revision/hash and historical rights boundaries preserved.
+Current detailed evidence is in the dedicated Test_Evidence note; exact independent JSON is bound
+by SHA-256 and preserved in the approved handoff. Canonical/source data,all44holds,matching0,
+rights,old receipts and original migrations unchanged. Scope is ready for Human Owner review;
+full matching,API/UI,source/media intake,SQL/RLS/ETL/recovery tests are NOT RUN. Single scoped
+receipt and actual Draft publication metadata follow without changing historical evidence.
+
+Single scoped receipt: [[2026-11-14_160537_DPT-DATA-006_Scoped_Review_Ready]]. Payload/checkpoint9ff83406a31be048d2c4cd689ed2ee2e3fa56d04.
+Exact publication metadata follows; no policy or full-feature acceptance is inferred.
