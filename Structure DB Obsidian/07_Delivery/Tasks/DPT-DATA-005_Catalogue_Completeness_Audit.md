@@ -46,8 +46,8 @@ Four dedicated audit/task/evidence files completed.91/91offline quantitative art
 all34source columns accounted for. No DB/network/canonical/rights mutation. Fresh coordinator
 counts remain1479/1435/44/matching0,160brands,420notes/417used/11972links. Raw families/country/
 aliases are separate unselected inputs. Historical index canonical IDs are blank andneeds_review
-on1479rows; neither wrong UUIDs nor current DB review state is inferred. Three alias-token repeat
-units are not perfume projections; see exact note audit counts and denominator-qualified matrices.
+on1479rows; neither wrong UUIDs nor current DB review state is inferred. Alias-token repeats are
+a separate population from perfume projections; see exact note counts and qualified denominators.
 Initial index-column checker assumption and preparatory manifest-key KeyError remain preserved
 under ignored local failure/correction reports. Independent exact-source review is pending;
 no final receipt,feature acceptance,source promotion or publication claim at this checkpoint.
