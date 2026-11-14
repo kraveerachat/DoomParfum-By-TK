@@ -264,3 +264,20 @@ CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04Bangkokcount
 [[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
 preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
 receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.
+
+## IMP-MATCH-08 — allocated exact synthetic M1, 2026-11-14
+
+Human Owner allocated the proposed task identifier through [[M1_Exact_Owner_Acceptance]].
+Status: IN PROGRESS. One branch codex/imp-match-08-synthetic-m1 from main0da217671ec6473716eea5947f013d44e6fd91cb.
+Pure typed mc-a-notes-layered-p1/config m1-nl-typed-config-1 only; no Full Mode A/B1/B2/API/UI/DB.
+Acceptance: actual RED/GREEN golden/negative and bounded property tests, existing offline
+regressions, exact independent source review, protected artifacts, documentation and one Draft PR.
+[[IMP-MATCH-08_Synthetic_M1]] owns current execution status. B1 80/20 and real-data/app/source
+choices keep their separate gates and are not artificial prerequisites for this synthetic scorer.
+
+## M1 agent acceptance checkpoint — 2026-11-14
+
+IMP-MATCH-08 exact synthetic M1 meets agent criteria:49focused/property and111combined
+offline methods PASS; independent167review assertions/111rerun PASS,0findings.
+[[IMP-MATCH-08_Synthetic_M1]] remains pending Human Owner review/merge via one Draft PR.
+Next B1 contract, broader policies and real-data/application/source gates remain separate.
