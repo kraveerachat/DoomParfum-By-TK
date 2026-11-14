@@ -82,3 +82,11 @@ receipt and actual Draft publication metadata follow without changing historical
 
 Single scoped receipt: [[2026-11-14_160537_DPT-DATA-006_Scoped_Review_Ready]]. Payload/checkpoint9ff83406a31be048d2c4cd689ed2ee2e3fa56d04.
 Exact publication metadata follows; no policy or full-feature acceptance is inferred.
+
+## Verified Draft publication — 2026-11-14T09:06:25.647006+00:00
+
+[PR24](https://github.com/kraveerachat/DoomParfum-By-TK/pull/24) is OPEN/DRAFT/unmerged
+at published checkpoint504ecc6c74c1e68052f770c9240d4e9ffb7b57de; base8c6a8376680c7a10cc3eb4b5cf80afe4376a9282.
+This metadata-only checkpoint records actual publication. Final head is verified in the PR/head
+registry; the immutable receipt and reviewed source scope are unchanged. High-level direction is
+confirmed; exact unchosen policies remain PROPOSED. No merge,real ranking or Production change.
