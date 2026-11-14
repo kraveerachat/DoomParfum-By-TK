@@ -81,3 +81,11 @@ All17priorreceipts/eight migrations/PR8evidence stay exact. No second receipt or
 
 Single scoped receipt: [[2026-11-14_162141_DPT-DOC-003_Scoped_Review_Ready]]. Payload/checkpointeaf9111a41a21245ae285322d84b0d94fdb40301.
 Exact publication metadata follows; no policy or full-feature acceptance is inferred.
+
+## Verified Draft publication — 2026-11-14T09:22:51.159242+00:00
+
+[PR25](https://github.com/kraveerachat/DoomParfum-By-TK/pull/25) is OPEN/DRAFT/unmerged
+at published checkpointe5606670a5c4e81a9b26e83a1cd8c96c95e00872; base8c6a8376680c7a10cc3eb4b5cf80afe4376a9282.
+This metadata-only checkpoint records actual publication. Final head is verified in the PR/head
+registry; the immutable receipt and reviewed source scope are unchanged. High-level direction is
+confirmed; exact unchosen policies remain PROPOSED. No merge,real ranking or Production change.
