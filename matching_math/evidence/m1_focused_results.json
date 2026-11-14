@@ -1,0 +1,29 @@
+{
+  "phase": "GREEN",
+  "methods": 49,
+  "focused_methods": 45,
+  "property_methods": 4,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 1.3121663999918383,
+  "property_examples": {
+    "exhaustive_complete_pairs": 4096,
+    "seeded_pairs": 250,
+    "candidate_permutations": 24,
+    "unsupported_config_variants": 5
+  },
+  "DB_calls": 0,
+  "network_calls": 0,
+  "source_sha256": {
+    "matching_math/synthetic_m1.py": "07fc33ebf87fc5ba02a55d39b0a2ac0f6a8f58af2ff07db8c943bcea84c3263b",
+    "matching_math/tests/test_synthetic_m1.py": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+    "matching_math/tests/test_synthetic_m1_properties.py": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442"
+  },
+  "scope": "Approved pure typed-input synthetic-only M1; not Full Mode A/real-data/API/UI/DB acceptance",
+  "prior_failures_preserved": [
+    "m1_red_results.json",
+    "m1_shape_red_results.json"
+  ],
+  "Hypothesis": "NOT_INSTALLED;bounded stdlib properties executed"
+}

@@ -153,3 +153,12 @@ flowchart TD
 ## Post-PR22–25 current review checkpoint
 
 - [[Post_PR22_25_Owner_Review_and_Unlock]]
+
+## Synthetic M1 implementation — 2026-11-14
+
+- [[M1_Exact_Owner_Acceptance]] — exact dated version/hash and synthetic-only scope.
+- [[M1_Notes_Layered_Typed_Contract]] — unchanged accepted artifact; historical proposal wording retained.
+- [[IMP-MATCH-08_Synthetic_M1]] — isolated implementation task and actual current status.
+- [[IMP-MATCH-08_Synthetic_M1_Evidence]] — actual RED/GREEN, properties, regressions and independent review.
+- [[M1_Contract_Preparation]], [[M1_Next_B1_Owner_Packet]], [[M1_Parallel_Data_Readiness_Checkpoint]]
+  and [[M1_Preparation_Preflight_and_Gate]] — preserved dated preparation annexes, not new B1/data approvals.

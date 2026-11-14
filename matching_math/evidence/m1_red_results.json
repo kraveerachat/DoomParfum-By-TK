@@ -1,0 +1,21 @@
+{
+  "phase": "RED",
+  "methods": 43,
+  "failures": 43,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 0.009119499998632818,
+  "reason": "scorer module absent; setup assertions fail before feature bodies; no feature acceptance claimed",
+  "test_source_sha256": {
+    "matching_math/tests/test_synthetic_m1.py": "60e820f17ab766c8244e6d7035f40b064432bb9e217f4eb6d307773f5891bded",
+    "matching_math/tests/test_synthetic_m1_properties.py": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442"
+  },
+  "scorer_present_at_RED": false,
+  "DB_calls": 0,
+  "network_calls": 0,
+  "contract_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+  "execution": "python -c inline stdlib unittest loader + TextTestRunner over the two named test modules",
+  "process_exit_code": 0,
+  "exit_qualification": "Harness expected RED and asserted all43 failures; test result unsuccessful",
+  "RED_log_sha256": "340c5c163b02c10db4956dc4bc62631a9f7fffc144172ddd31d89af1153df5ac"
+}

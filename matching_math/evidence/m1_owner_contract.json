@@ -1,0 +1,67 @@
+{
+  "decision_id": "OWNER-M1-NL-TYPED-1-20261114",
+  "Owner": "Human Owner",
+  "owner_date_Asia_Bangkok": "2026-11-14",
+  "recorded_at_utc": "2026-11-14T16:35:28.997554+00:00",
+  "source": "Explicit direct user message HUMAN OWNER APPROVAL — M1 SYNTHETIC MATCHING",
+  "contract_id": "M1-NL-TYPED-1",
+  "contract_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+  "method_id": "mc-a-notes-layered-p1",
+  "config_id": "m1-nl-typed-config-1",
+  "task": "IMP-MATCH-08",
+  "status": "ACCEPTED_FOR_EXACT_SYNTHETIC_M1_SCOPE_ONLY",
+  "scope": [
+    "synthetic-only matching",
+    "pure typed-input Python",
+    "exact M1-NL-TYPED-1 version/hash",
+    "RED then GREEN TDD",
+    "golden and property tests",
+    "independent exact implementation review",
+    "isolated task branch",
+    "one Draft PR after acceptance criteria"
+  ],
+  "excluded": [
+    "Full Mode A",
+    "Mode B1/B2",
+    "API/UI",
+    "transport or 8KiB parser",
+    "database mutation",
+    "real-data ranking",
+    "source/image acquisition",
+    "normalization promotion",
+    "44 holds or matching eligibility changes",
+    "Production changes",
+    "agent PR merge"
+  ],
+  "base": "0da217671ec6473716eea5947f013d44e6fd91cb",
+  "branch": "codex/imp-match-08-synthetic-m1",
+  "preserved_preparation": [
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+      "bytes": 22856
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Next_B1_Owner_Packet.md",
+      "sha256": "da8ff394f4fb9c3f1d33e28076cad734538fbda557426a27a5470d9bad3baf94",
+      "bytes": 14435
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/M1_Parallel_Data_Readiness_Checkpoint.md",
+      "sha256": "42971d578378b588928ab44ef54d78ecf78925a276961c9cacb011411894f2b2",
+      "bytes": 11145
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/M1_Contract_Preparation.md",
+      "sha256": "dc0cf59b747d51ae318210494a3cc9ad95adfeede7ff2822b05d9300e4b8a5dd",
+      "bytes": 4175
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/M1_Preparation_Preflight_and_Gate.md",
+      "sha256": "d2c75805878c80d3267315fc4fa5b4dfe6b76e69fda733a17989e01eed7d0592",
+      "bytes": 3945
+    }
+  ],
+  "contract_text_notice": "Exact frozen proposal bytes retain historical NOT ACCEPTED wording; this separate explicit Owner decision supersedes that gate without altering the approved artifact.",
+  "other_decisions": "No general DM/OP, B1 80/20, rights, application or real-data approval inferred"
+}

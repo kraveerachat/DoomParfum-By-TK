@@ -260,3 +260,11 @@ CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04Bangkokcount
 [[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
 preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
 receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.
+
+## Exact synthetic matching M1 execution — 2026-11-14
+
+[[IMP-MATCH-08_Synthetic_M1]] begins from explicit [[M1_Exact_Owner_Acceptance]], not PR merge inference.
+Milestone is the bounded notes-layered pure typed scorer and synthetic validation only.
+TDD, focused/property/regression tests and independent review precede one Draft PR for Owner.
+Full Mode A, next B1 contract, application/session and real-data readiness remain separate milestones.
+No activation, source/image acquisition, normalization or hold/eligibility change accompanies M1.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-13
+updated: 2026-11-14
 tags:
   - doomparfum
   - status
@@ -13,6 +13,24 @@ source_of_truth: "../../README.md"
 ---
 
 # Project Status — Local Licensed Catalogue, Implementation Review Pending
+
+## Exact Owner acceptance and M1 start — 2026-11-14
+
+Human Owner explicitly accepted M1-NL-TYPED-1 SHA-256
+a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3,
+mc-a-notes-layered-p1/config m1-nl-typed-config-1, allocating IMP-MATCH-08 to synthetic-only
+pure typed Python. [[M1_Exact_Owner_Acceptance]] records the exact dated scope and exclusions.
+This is explicit approval, not an inference from merged PR22–25. Other unaccepted DM/OP/B1,
+real-data/source/app policies remain PROPOSED or gated in their own scopes.
+
+Verified main/base0da217671ec6473716eea5947f013d44e6fd91cb includes Owner merges21–25.
+Isolated branch codex/imp-match-08-synthetic-m1 starts there; [[IMP-MATCH-08_Synthetic_M1]] is
+IN PROGRESS. All five preparation documents and existing immutable receipts/migrations are
+preserved. New code/test work uses TDD and requires independent exact implementation review
+before agent acceptance/one Draft PR. PR8 stays OPEN/DRAFT/BLOCKED; no timestamp experiment.
+No database mutation, real ranking, acquisition, hold/eligibility or Production change.
+
+Earlier dated status snapshots below are historical; this event establishes current M1 authority.
 
 ## Post-PR13–17 verified integration — 2026-11-13
 

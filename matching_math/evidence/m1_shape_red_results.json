@@ -1,0 +1,16 @@
+{
+  "phase": "SHAPE_RED",
+  "methods": 49,
+  "failures": 0,
+  "errors": 1,
+  "skips": 0,
+  "seconds": 1.602591900009429,
+  "reason": "Missing-field exact dataclass object raised AttributeError instead of required bounded ValueError; first broken-row error stops that method",
+  "source_sha256": {
+    "matching_math/synthetic_m1.py": "3b3356172acfcdb782e7aa12edac89d01c28194e3956e29fd32a02da0d603972",
+    "matching_math/tests/test_synthetic_m1.py": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+    "matching_math/tests/test_synthetic_m1_properties.py": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442"
+  },
+  "DB_calls": 0,
+  "network_calls": 0
+}
