@@ -2,7 +2,7 @@
 id: DPT-DOC-003
 project: DoomParfum By TK
 type: coordination_task
-status: scoped-review-ready
+status: in-progress
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, catalogue, audit, direction, gates]
@@ -89,3 +89,37 @@ at published checkpointe5606670a5c4e81a9b26e83a1cd8c96c95e00872; base8c6a8376680
 This metadata-only checkpoint records actual publication. Final head is verified in the PR/head
 registry; the immutable receipt and reviewed source scope are unchanged. High-level direction is
 confirmed; exact unchosen policies remain PROPOSED. No merge,real ranking or Production change.
+
+## Post-PR22–25 continuation — IN PROGRESS
+
+New Owner Master read completely: SHA2565aad76a73b40e33a7723094e23ed04767e5a250fb0790686c7a8f97899ccd12a, 724lines.
+StartingHEAD6fe355625ad9aeb53ff9a8bc1e5900302bc5e6d7; existingbranchcodex/post-pr18-21-catalogue-audit /PR25. Freshfetch/main
+8c6a8376680c7a10cc3eb4b5cf80afe4376a9282;PR22–25stillOPEN/DRAFT/CLEAN,notOwner-merged. Formalreviews/comments/checkrollups empty;
+local independent evidence is not a GitHub approval or CI PASS. Exact Owner answers still absent.
+
+Continue bounded review/preparation on the same PR; no duplicate Planning PR or second receipt.
+Parallel workers own distinct matching/source-media/field-app delta documents; coordinator owns
+shared histories,review matrix,Owner batch,PR evidence and D1–D9/handoff. No implementation unlock
+is inferred from strategy or unmerged candidates. Fresh DB counts are BLOCKED: Docker engine pipe
+missing;no service start/restart or database call. Historical03:04Bangkok14counts remain dated,
+not revalidated. Original receipts,migrations,observations,rights,44holds,matching0 andPR8preserved.
+Expected evidence: fresh offline tests,exact source/hash/rights/lineage checks,independent review,
+documentation validation and single independently verified latestZIP. GIT_WRITE:YES existingtask
+branchonly;OBSIDIAN_WRITE:YES;PRODUCTION_MUTATION:NO. No scorer/default/API/UI/source/image intake.
+
+## Post-PR22–25 source checkpoint — verification boundaries
+
+New preparation documents cover exact synthetic unlock,24datedfield/hold/private-app gates and
+bounded source/media sample choices. Freshoffline62/62PASS includes55baseline+7candidateinvariants;
+documentarithmetic45/45PASS is not a scorer test. Narrow licensed-local field-inventory rehearsal
+18/18PASS covered2profiles+1parenthouse,nointake/mapping/promotion. Worker static18/29checks are
+separate evidence. Initial19vs20CSV-column,case-sensitiveprobe,missinginspectionpath and taskEOF
+checker failures preserved and corrected. Source/media worker hitusage limit;existing artifacts
+were inspected,not accepted merely from worker termination. Coordinator reviewed three worker
+documents;independent review of coordinator-owned exact checkpoint is still PENDING.
+
+FreshDB/role/rightstime revalidation BLOCKED:missingDockerpipe,no restart/query. Prior03:04Bangkok
+counts remain HISTORICALONLY,currentcountsUNKNOWN. All choicesPROPOSED apart from confirmed
+direction;no newruntime/default/scorer/API/UI/source/image/SQL/rights/hold/eligibility change.
+No secondreceipt:existing fourcandidate receipts and17mainreceipts/eightmigrationsstay exact.
+Current checkpoint is review preparation,not completion of blocked requirements.

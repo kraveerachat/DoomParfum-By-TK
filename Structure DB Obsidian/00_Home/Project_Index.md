@@ -149,3 +149,7 @@ flowchart TD
 
 - [[DPT-DOC-003_Wave_Closeout]]
 - Exact filename/branch/worker-head manifest: `08_Operations/Test_Evidence/DPT-DOC-003_Exact_File_Manifest.json`.
+
+## Post-PR22–25 current review checkpoint
+
+- [[Post_PR22_25_Owner_Review_and_Unlock]]

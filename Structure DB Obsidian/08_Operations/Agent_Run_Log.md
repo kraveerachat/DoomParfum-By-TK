@@ -697,3 +697,30 @@ are recorded by actual publication/packaged registry. No new source/feature/poli
 real matching/API/UI/publication,DB/identity/rights/hold/eligibility change,merge orProduction.
 Current Docker recheck remains UNAVAILABLE/NOTRECONFIRMED; prior Wave0stop proof is retained.
 All17priorreceipts/eight migrations/PR8evidence stay exact. No second receipt or speculative fix.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.
+
+## Post-PR22–25 source checkpoint — verification boundaries
+
+New preparation documents cover exact synthetic unlock,24datedfield/hold/private-app gates and
+bounded source/media sample choices. Freshoffline62/62PASS includes55baseline+7candidateinvariants;
+documentarithmetic45/45PASS is not a scorer test. Narrow licensed-local field-inventory rehearsal
+18/18PASS covered2profiles+1parenthouse,nointake/mapping/promotion. Worker static18/29checks are
+separate evidence. Initial19vs20CSV-column,case-sensitiveprobe,missinginspectionpath and taskEOF
+checker failures preserved and corrected. Source/media worker hitusage limit;existing artifacts
+were inspected,not accepted merely from worker termination. Coordinator reviewed three worker
+documents;independent review of coordinator-owned exact checkpoint is still PENDING.
+
+FreshDB/role/rightstime revalidation BLOCKED:missingDockerpipe,no restart/query. Prior03:04Bangkok
+counts remain HISTORICALONLY,currentcountsUNKNOWN. All choicesPROPOSED apart from confirmed
+direction;no newruntime/default/scorer/API/UI/source/image/SQL/rights/hold/eligibility change.
+No secondreceipt:existing fourcandidate receipts and17mainreceipts/eightmigrationsstay exact.
+Current checkpoint is review preparation,not completion of blocked requirements.

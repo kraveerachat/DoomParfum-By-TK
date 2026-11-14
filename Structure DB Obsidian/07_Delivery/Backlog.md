@@ -254,3 +254,13 @@ Next safe work: exact-source audit review and existing-primitive invariant QA; v
 then gated synthetic A/B1 implementation. New source intake needs bounded source/field/use rights;
 image metadata candidates need exact per-asset grants and formats. Current0usable media/pairs and
 app-accessible catalogue are blockers,not absent raw-source fields. Keep PR8causal evidence separate.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.

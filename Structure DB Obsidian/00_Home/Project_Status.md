@@ -312,3 +312,13 @@ are recorded by actual publication/packaged registry. No new source/feature/poli
 real matching/API/UI/publication,DB/identity/rights/hold/eligibility change,merge orProduction.
 Current Docker recheck remains UNAVAILABLE/NOTRECONFIRMED; prior Wave0stop proof is retained.
 All17priorreceipts/eight migrations/PR8evidence stay exact. No second receipt or speculative fix.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.

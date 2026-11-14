@@ -250,3 +250,13 @@ DPT-DOC-003 coordination/Owner direction/gates/handoff. Exact independent eviden
 Full synthetic A/B1 depends on accepted method versions; real data additionally needs rights,
 selected completeness/normalization/eligibility,genuine nonadmin and relevance/security gates.
 Initial local-private direction is confirmed; exact stack/auth remains unselected. PR8stays blocked.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.

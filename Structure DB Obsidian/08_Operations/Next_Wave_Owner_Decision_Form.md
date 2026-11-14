@@ -148,3 +148,18 @@ Alternative for each blocked row: explicitly defer the dependent feature and con
 audit/tests under the existing source permissions. Roadmap approval cannot cure a missing licensor
 grant. A selected reviewed field,usable rights,accepted completeness,matching eligibility and a
 genuine accessible principal are different conditions; satisfying one does not satisfy the others.
+
+## Post-PR22–25 prioritized response overlay — still unanswered
+
+Response reference DPT-OWNER-FORM-POST2225-1. All original answer cells stay blank; no Owner choice
+is invented. PR22–25are OPEN/DRAFT,not merged;new Master preserves exact proposals. Start with
+synthetic-only A: proposed mc-a-notes-layered-p1,explicit fixture/config/domain/mask/empty/support/
+ordering/rounding and typed-input versus serialized-byte boundary. Then separately select proposed
+mc-b1-pyramid-positive-domain-p1 and its clause/domain/hard rules. See
+[[Synthetic_Implementation_Unlock_Checklist]];all method weights and limits remain PROPOSED.
+New source acquisition,real-source closure/normalization and app identity/stack are not artificial
+dependencies for isolated synthetic math. Those choices retain their own future gates. Source
+sampleSRC-SAMPLE-PINNED-FIELDS-P1 and mediaMEDIA-REVIEW-JUNIPER-P1 remain review-only proposals;
+the executed narrower existing-local two-profile field inventory confers no mapping/intake rights.
+Use [[Post_PR22_25_Owner_Review_and_Unlock]] as the current status/risk/dependency/test matrix;
+answer here only once with exact version/scope or Defer. Current DB revalidation remains BLOCKED.

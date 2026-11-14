@@ -263,3 +263,13 @@ application principal,source acquisition,cloud or public publication is created 
 Merged PR18/19/20/21 establish plan/research integration at main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282,
 not hidden policy defaults. Actual Wave0:55offline methods PASS; fresh leased READ ONLY audit;
 all49data/security/application-role fingerprints unchanged. Matching0/holds44 remain unchanged.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.
