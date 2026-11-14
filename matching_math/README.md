@@ -1,3 +1,33 @@
+---
+id: MATCHING-MATH-README
+project: DoomParfum By TK
+type: package_readme
+status: synthetic-only
+owner: human-owner
+updated: 2026-11-14
+tags: [doomparfum, synthetic, matching]
+source_of_truth: "../README.md"
+---
+
+# Matching mathematics — synthetic-only modules
+
+Human Owner explicitly accepted M1-NL-TYPED-1 for IMP-MATCH-08 on 2026-11-14 (Asia/Bangkok).
+The new `synthetic_m1.py` exposes only the exact notes-layered pure typed scorer, with explicit
+configuration, bounded synthetic fixtures, exact rational fit/coverage, partitioned ordering and
+display rounding. Existing `primitives.py` is unchanged. This is not Full Mode A, B1/B2 or real-data
+matching. No database, adapter, API/UI, transport parser, source/image or Production integration.
+
+See the [implementation guide](../Structure%20DB%20Obsidian/04_Matching/Synthetic_M1_Implementation.md),
+[exact Owner acceptance](../Structure%20DB%20Obsidian/08_Operations/M1_Exact_Owner_Acceptance.md)
+and [executed evidence](../Structure%20DB%20Obsidian/08_Operations/Test_Evidence/IMP-MATCH-08_Synthetic_M1_Evidence.md).
+M1 tests: `python -m unittest discover -s matching_math/tests -p "test_synthetic_m1*.py" -v`.
+
+The following original generic-primitives documentation and counts are preserved as historical
+PR9 evidence. Its pending/no-percentage statements describe that earlier module/milestone;
+the separately accepted exact M1 profile above does not approve wider DM/OP or real-data policies.
+
+## Historical generic primitives milestone
+
 # Exact mathematical primitives — SYNTHETIC verification only
 
 This is partial IMP-MATCH-02 progress after Owner-merged Planning PR4 at

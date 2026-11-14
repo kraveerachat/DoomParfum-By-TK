@@ -163,3 +163,16 @@ sampleSRC-SAMPLE-PINNED-FIELDS-P1 and mediaMEDIA-REVIEW-JUNIPER-P1 remain review
 the executed narrower existing-local two-profile field inventory confers no mapping/intake rights.
 Use [[Post_PR22_25_Owner_Review_and_Unlock]] as the current status/risk/dependency/test matrix;
 answer here only once with exact version/scope or Defer. Current DB revalidation remains BLOCKED.
+
+## Scoped exact M1 approval — 2026-11-14
+
+[[M1_Exact_Owner_Acceptance]] records Human Owner acceptance of M1-NL-TYPED-1,
+SHA-256 a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3,
+mc-a-notes-layered-p1/config m1-nl-typed-config-1 for IMP-MATCH-08 only.
+Its exact synthetic fixture weights, domains, completeness, partitions, typed schema and bounds
+are accepted for this bounded pure function. This does not finalize the wider DM/OP rows,
+Full Mode A, B1/B2, real-source completeness/normalization/rights/eligibility, application stack,
+session binding or publication choices. Historical PROPOSED statements elsewhere retain their
+original wider scope; the one accepted M1 contract is a separate explicit dated decision.
+Current implementation and actual evidence: [[IMP-MATCH-08_Synthetic_M1]] and
+[[IMP-MATCH-08_Synthetic_M1_Evidence]]. Human Owner retains final implementation review/merge.

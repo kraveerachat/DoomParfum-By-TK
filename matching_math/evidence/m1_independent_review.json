@@ -1,0 +1,959 @@
+{
+  "reviewer": "/root/m1_independent_review; independent of implementer and coordinator",
+  "at_utc": "2026-11-14T16:52:15.709474+00:00",
+  "reviewed_commit": "207d18a2740c56c10dddfc8b1fbd35da3b2b097e",
+  "base": "0da217671ec6473716eea5947f013d44e6fd91cb",
+  "source_file_sha256": {
+    "matching_math/synthetic_m1.py": "07fc33ebf87fc5ba02a55d39b0a2ac0f6a8f58af2ff07db8c943bcea84c3263b",
+    "matching_math/tests/test_synthetic_m1.py": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+    "matching_math/tests/test_synthetic_m1_properties.py": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442"
+  },
+  "approved_contract_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+  "changed_paths": [
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/03_Data/M1_Parallel_Data_Readiness_Checkpoint.md",
+    "Structure DB Obsidian/04_Matching/M1_Next_B1_Owner_Packet.md",
+    "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+    "Structure DB Obsidian/04_Matching/Synthetic_Implementation_Unlock_Checklist.md",
+    "Structure DB Obsidian/04_Matching/Synthetic_M1_Implementation.md",
+    "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/M1_Contract_Preparation.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/M1_Exact_Owner_Acceptance.md",
+    "Structure DB Obsidian/08_Operations/M1_Preparation_Preflight_and_Gate.md",
+    "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-MATCH-08_Synthetic_M1_Evidence.md",
+    "matching_math/README.md",
+    "matching_math/evidence/m1_focused_results.json",
+    "matching_math/evidence/m1_owner_contract.json",
+    "matching_math/evidence/m1_red_results.json",
+    "matching_math/evidence/m1_regression_results.json",
+    "matching_math/evidence/m1_shape_red_results.json",
+    "matching_math/synthetic_m1.py",
+    "matching_math/tests/test_synthetic_m1.py",
+    "matching_math/tests/test_synthetic_m1_properties.py"
+  ],
+  "checks": [
+    {
+      "check": "exact_HEAD_before_review",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "branch",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "clean_at_start",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "base_ancestor",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "28_changed_paths",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "no_database_or_private_paths",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "committed_source_pin:matching_math/synthetic_m1.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "executed_source_pin:matching_math/synthetic_m1.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "committed_source_pin:matching_math/tests/test_synthetic_m1.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "executed_source_pin:matching_math/tests/test_synthetic_m1.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "committed_source_pin:matching_math/tests/test_synthetic_m1_properties.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "executed_source_pin:matching_math/tests/test_synthetic_m1_properties.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_committed",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_raw",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "actual_owner_acceptance_binding",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_preparation:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_preparation:Structure DB Obsidian/04_Matching/M1_Next_B1_Owner_Packet.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_preparation:Structure DB Obsidian/03_Data/M1_Parallel_Data_Readiness_Checkpoint.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_preparation:Structure DB Obsidian/07_Delivery/Tasks/M1_Contract_Preparation.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_preparation:Structure DB Obsidian/08_Operations/M1_Preparation_Preflight_and_Gate.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:AGENTS.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:DEVELOPMENT_WORKFLOW.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:README.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-10_201028_DPT-PLAN-001_P1_Planning.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_000730_IMP-P1-01_Local_PostgreSQL.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_160700_DPT-PLAN-003_Dual_Mode_Matching.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_213752_IMP-P1-02_Licensed_Scento.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_022117_IMP-P1-03_Local_Image_Rights.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_024301_DPT-DATA-001_Post_PR5_Review.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_045200_DPT-DATA-002_Offline_Research_Audit.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_103504_IMP-MATCH-01_Read_Only_Input_Adapter.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_152649_DPT-PLAN-004_Planning_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_152650_DPT-DATA-003_Planning_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_153126_DPT-PLAN-005_Planning_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_153139_DPT-PLAN-006_Planning_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_202313_DPT-DOC-001_Planning_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020213_DPT-PLAN-007_Preparation_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020227_DPT-DATA-004_Preparation_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020240_DPT-PLAN-008_Preparation_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_021503_DPT-DOC-002_Preparation_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_031943_DPT-QA-001_Scoped_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160416_DPT-DATA-005_Scoped_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160537_DPT-DATA-006_Scoped_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_162141_DPT-DOC-003_Scoped_Review_Ready.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:Structure DB Obsidian/README.md",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/image_validation.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/local.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/matching_input.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/001_identity.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/002_catalogue.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/003_provenance.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/004_associations_media_personal.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/005_contract_functions.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/006_media_and_deferred_contracts.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/007_security_and_field_contract.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/migrations/008_coalesced_deferred_validation.sql",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/performance.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/research_audit.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/scento_etl.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/fixtures.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_deferred_performance.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_foundation.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_image_validation.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_matching_input.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_research_audit.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/tests/test_scento_etl.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/validate_docs.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/verify.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:database/verify_images.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:matching_math/__init__.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:matching_math/primitives.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:matching_math/tests/test_invariants.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "protected:matching_math/tests/test_primitives.py",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "53_protected_files",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "21_old_receipts_no_new_yet",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "eight_migrations",
+      "category": "binding",
+      "pass": true
+    },
+    {
+      "check": "stdlib_and_existing_primitives_only",
+      "category": "static_semantics",
+      "pass": true
+    },
+    {
+      "check": "no_IO_dynamic_eval_float_calls",
+      "category": "static_semantics",
+      "pass": true
+    },
+    {
+      "check": "required_four_argument_signature",
+      "category": "static_semantics",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:M1Config",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:FixtureVocabulary",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:FixtureProfile",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:FixtureLayer",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:FixtureLineage",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:LayerSide",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:LayerExplanation",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:LayerDomain",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:PartitionKey",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:PairResult",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:PartitionResult",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "frozen_record:M1BatchResult",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "no_constructor_defaults:M1Config",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "no_constructor_defaults:FixtureVocabulary",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "no_constructor_defaults:FixtureProfile",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "no_constructor_defaults:FixtureLayer",
+      "category": "schema",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_00",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_01",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_02",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_03",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_04",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_05",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_06",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_07",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_08",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_09",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_10",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_11",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_12",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_13",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_14",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_15",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_16",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_17",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_18",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_19",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_20",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_21",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_22",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_23",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_24",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_25",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_26",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_27",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_28",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_29",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_30",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_31",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_32",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_33",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_34",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_35",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_36",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_37",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_38",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_39",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_40",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_41",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_42",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_43",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_44",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_45",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_46",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_47",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "layer_state_pair_48",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "independent_exact_golden_7_12",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "no_note_ids_or_arbitrary_payload_in_output",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "confidence_evidence_separate_constants",
+      "category": "independent_runtime",
+      "pass": true
+    },
+    {
+      "check": "hostile_field_no_repr",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "hostile_candidates_no_iteration",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "65_tuple_before_fingerprint",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "513_vocabulary_before_fingerprint",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "513_reference_incomplete_memberships_before_fingerprint",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "last_candidate_bad_lineage_no_partial_scoring",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "invalid_reference_empty_batch_still_validated",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "129_bit_fraction_rejected_before_numeric_equality",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "128_bit_fraction_within_bound_but_wrong_policy",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "missing_config_has_no_default",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "forged_missing_shape_M1Config",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "forged_missing_shape_FixtureVocabulary",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "forged_missing_shape_FixtureProfile",
+      "category": "independent_negative",
+      "pass": true
+    },
+    {
+      "check": "independent_offline111_pass",
+      "category": "executed_suite",
+      "pass": true
+    },
+    {
+      "check": "source_pins_after_execution",
+      "category": "post_execution",
+      "pass": true
+    },
+    {
+      "check": "HEAD_unchanged_after_execution",
+      "category": "post_execution",
+      "pass": true
+    },
+    {
+      "check": "clean_after_execution",
+      "category": "post_execution",
+      "pass": true
+    },
+    {
+      "check": "preserved_initial_RED_snapshot_bindings",
+      "category": "historical_failure_binding",
+      "pass": true
+    },
+    {
+      "check": "preserved_shape_RED_snapshot_bindings",
+      "category": "historical_failure_binding",
+      "pass": true
+    },
+    {
+      "check": "only_bounded_shape_error_correction",
+      "category": "historical_failure_binding",
+      "pass": true
+    }
+  ],
+  "passed": 167,
+  "failed": 0,
+  "findings": [],
+  "executed_tests": {
+    "command": "independent stdlib unittest suite: matching_math/tests + test_research_audit + AdapterOfflineTests",
+    "components": {
+      "math_including_M1": 80,
+      "research_offline": 17,
+      "adapter_offline": 14
+    },
+    "methods": 111,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "duration_seconds": 2.0721475999744143,
+    "M1_focused_methods": 45,
+    "M1_property_methods": 4,
+    "property_internal_cases": {
+      "exhaustive_complete_pyramid_pairs": 4096,
+      "seeded_pairs": 250,
+      "candidate_permutations": 24,
+      "config_replacements": 5
+    }
+  },
+  "independent_reviewer_probes": {
+    "complete_missing_incomplete_domain_state_pairs": 49,
+    "negative_cases": 13
+  },
+  "semantic_review": [
+    "All397 runtime lines and both test files read directly at pinned source bytes",
+    "Exact frozen schemas, input bounds/order, no default policy, immutable explanations and separate confidence/evidence agree with contract",
+    "Known zero, unavailable reason precedence, two-layer minimum, rational fit/support and mask/domain partition/ties/display agree with contract",
+    "No runtime I/O, DB/adapter integration, transport parser, B1/B2/fullModeA or real-source rights assertion"
+  ],
+  "preservation": {
+    "protected_main_files": 53,
+    "old_receipts": 21,
+    "migrations": 8,
+    "preparation_files": 5
+  },
+  "DB_calls": 0,
+  "network_calls": 0,
+  "source_edits": 0,
+  "Git_writes": 0,
+  "limits": [
+    "Pure typed synthetic contract only; not real-data/source-rights/eligibility/authentication acceptance",
+    "No API/UI/transport/8KiB boundary, DB/RLS/replay/recovery/performance/Production tests run",
+    "Bounded stdlib properties only; no Hypothesis installation or unbounded fuzzing",
+    "No new final receipt; final agent acceptance and Human Owner merge remain coordinator/Owner responsibilities",
+    "Claims of authentic historical RED are bound to preserved reports and source snapshots, not a new replay of the pre-implementation environment"
+  ],
+  "source_sha256": {
+    "matching_math/synthetic_m1.py": "07fc33ebf87fc5ba02a55d39b0a2ac0f6a8f58af2ff07db8c943bcea84c3263b",
+    "matching_math/tests/test_synthetic_m1.py": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+    "matching_math/tests/test_synthetic_m1_properties.py": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442"
+  },
+  "tests": {
+    "command": "independent stdlib unittest suite: matching_math/tests + test_research_audit + AdapterOfflineTests",
+    "components": {
+      "math_including_M1": 80,
+      "research_offline": 17,
+      "adapter_offline": 14
+    },
+    "methods": 111,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "duration_seconds": 2.0721475999744143,
+    "M1_focused_methods": 45,
+    "M1_property_methods": 4,
+    "property_internal_cases": {
+      "exhaustive_complete_pyramid_pairs": 4096,
+      "seeded_pairs": 250,
+      "candidate_permutations": 24,
+      "config_replacements": 5
+    }
+  },
+  "review_status": "NO_BLOCKING_FINDINGS_WITHIN_APPROVED_EXACT_SYNTHETIC_M1_SCOPE",
+  "historical_failure_review": "Read-only snapshot/report hash verification; original RED and shape-failure runs were not reenacted or overwritten",
+  "documentation_review": "Read README/implementation guide/evidence note at reviewed source commit; current pending independent-review wording is appropriate pre-closeout history, not premature acceptance"
+}
