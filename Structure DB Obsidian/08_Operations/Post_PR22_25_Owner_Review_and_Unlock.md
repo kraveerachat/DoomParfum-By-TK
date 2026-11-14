@@ -2,7 +2,7 @@
 id: DPT-DOC-003-POST2225-GATES
 project: DoomParfum By TK
 type: owner_review_readiness_and_implementation_gates
-status: in-progress
+status: review-preparation-ready-db-blocked
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, gates, owner-review, preflight]
@@ -123,3 +123,66 @@ Owner review checklist: review22–25within their actual scopes;answer the prior
 method/missingness/closure choices;choose/defer normalization/source-media/nonadmin stack tasks;
 make an approved local DB target available for the blocked READ ONLY revalidation;retain44holds,
 matching0,PR8blocked and no public/Production change. Agent does not merge or infer answers.
+
+## Independent corrected-checkpoint review — actual scope
+
+Independent reviewer `/root/unlock_matching` reviewed corrected checkpoint
+`746c87fafb9fd46fa21f6698e1a766b90a3bb26a` against starting PR25 head6fe355625ad9aeb53ff9a8bc1e5900302bc5e6d7,
+including the one-row correction from initiala9b2c714079d3bb5c0048b63e376359d4bdedd00.
+**95/95 independent static/exact-source/hash/evidence assertions PASS;0open findings.** This
+review covers12other-author paths:the central matrix,field/private-app and source/media documents,
+and nine shared-history/form/task append deltas. It explicitly excludes the matching checklist
+authored by this reviewer; the coordinator's separate independent review covers that document.
+There are13session-delta paths including that excluded file and19total PR25 paths at the checkpoint.
+
+IR-POST2225-01 LOW is RESOLVED:source/media PUB-01's earlier DEFERRED-scope label could be confused
+with an exact Owner Defer answer. The sole correction now says OUT OF CURRENT SCOPE,records the
+confirmed current restriction,and explicitly declines to infer an exact Defer answer or broader
+policy. No third-party permission,Owner answer,runtime or source value changed. Original finding
+and both source commits remain attributable.
+
+The review independently checked45protected blobs,17main receipts/eight migrations and the existing
+single PR25 receipt. All are byte-exact;the branch still contains18receipts and no second receipt
+for this task. Root PR8 remained clean at84dccb117971ab65e0bf39fa3d1d84a12d344f8d. Source changes
+are Markdown only;range diff/frontmatter/Wiki/whitespace/common-secret probes passed. Twelve files'
+canonical Git hashes and consumed evidence hashes are bound in the independent JSON report.
+
+Fresh62candidate execution evidence,its private log's62/OK result,and27baseline source bindings
+were inspected without exporting the log or rerunning the tests. The45document-arithmetic,18local
+two-profile/one-house rehearsal and29field/app static results were separately inspected,not rerun
+or added into a feature-test total. The three pinned source-file hashes still match those evidence
+bindings. The rehearsal is an inventory of unchanged parsed strings/presence flags,not mapping,
+intake,canonical review or a new1479-profile DB validation. Its private two-row payload is not in
+Git;the future archive must still verify its stated exclusion independently.
+
+The24-field table consistently labels T0 numbers historical and current DB/role/rights-time
+revalidation blocked/unknown. All13exact DM/OP answer cells remain blank;strategy confirmation
+does not choose their defaults. The minimal synthetic batch does not impose unrelated app/source
+decisions as prerequisites and does not approve real-source closure or the43projections. All44holds,
+Khamrah and eligibility restrictions remain unchanged. The exact8KiB transport/typed-input boundary
+gap is acknowledged,not silently filled. Real B2,source grants,Juniper binary rights,new codecs,
+unsafe identity bridges,public endpoints/cache/cloud and personal-data writes remain outside scope.
+
+Independent review JSON SHA256 `126db351698fd7c11787a0d0a877d9eaf6b904f3ce6f20e2bac2831b6c6e88ee`,under ignored
+`.local/post2225/INDEPENDENT_CHECKPOINT_REVIEW.json`. An initial case-sensitive static text probe
+failed on No/no;its failure is preserved and the corrected normalized probe passed. This was a
+review-checker error,not a source/policy/runtime failure. A preliminary missing artifact-name probe
+was corrected to the actual FIELD_APP_CHECKS.json. No model/account/settings change was attempted.
+
+This is scoped corrected-document readiness,not current database,source ownership,full feature,
+new archive or publication acceptance. GitHub/CI/Docker facts were consumed from pinned parent
+preflight,not freshly fetched by this reviewer. No DB/network/service action,test rerun,Git staging/
+commit/push or receipt creation was performed. Only this authorized review section was appended;
+the matching author's own file and all other tracked documents remain untouched by this review.
+
+## Current continuation review outcome — bounded preparation only
+
+Independent exact-checkpoint review95/95PASS,0openfindings at746c87fafb9fd46fa21f6698e1a766b90a3bb26a.
+Reviewer excluded its own matching checklist;coordinator's separate full-worker-document review
+covers that file. LOWPUB01label ambiguity resolved;no exact OwnerDefer answer invented. Current
+62offline/45arithmetic/18localrehearsal/18matching-doc/29field-doc checks remain different units.
+CurrentDB/role/rights-time revalidation is still BLOCKED;no full-scoperuntime/data acceptance.
+This is a review-preparation checkpoint onexistingPR25. Preserve its single immutable receipt;
+do not create another receipt or reinterpret the oldreceipt as acceptance of this new DB preflight.
+Finalpublicationandnewarchiveverification followactualevidence. No source/runtime/SQL/API/UI,
+rights/normalization/44hold/eligibility/identity/Production mutation or agentmerge.

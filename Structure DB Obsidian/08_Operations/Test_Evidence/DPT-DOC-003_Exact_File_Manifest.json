@@ -68,5 +68,35 @@
         "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Wave_Closeout.md"
       ]
     }
-  ]
+  ],
+  "post_pr22_25_correction_checkpoint": {
+    "at_utc": "2026-11-14T10:48:18.523558+00:00",
+    "main": "8c6a8376680c7a10cc3eb4b5cf80afe4376a9282",
+    "previous_publication_head": "6fe355625ad9aeb53ff9a8bc1e5900302bc5e6d7",
+    "reviewed_source_commit": "746c87fafb9fd46fa21f6698e1a766b90a3bb26a",
+    "independent_checks": 95,
+    "current_DB_revalidation": "BLOCKED;historicalT0only",
+    "exact_current_PR25_paths": [
+      "Structure DB Obsidian/00_Home/Project_Index.md",
+      "Structure DB Obsidian/00_Home/Project_Status.md",
+      "Structure DB Obsidian/03_Data/Bounded_Source_and_Media_Sample_Decisions.md",
+      "Structure DB Obsidian/03_Data/Field_Readiness_and_Private_App_Gates.md",
+      "Structure DB Obsidian/04_Matching/Synthetic_Implementation_Unlock_Checklist.md",
+      "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "Structure DB Obsidian/06_Engineering/Post_PR18_21_Implementation_Gate_Audit.md",
+      "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "Structure DB Obsidian/07_Delivery/Tasks/DPT-DOC-003_Post_PR18_21_Catalogue_Wave.md",
+      "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "Structure DB Obsidian/08_Operations/Post_PR22_25_Owner_Review_and_Unlock.md",
+      "Structure DB Obsidian/08_Operations/Receipts/2026-11-14_162141_DPT-DOC-003_Scoped_Review_Ready.md",
+      "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Exact_File_Manifest.json",
+      "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Wave0_Evidence.md",
+      "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-DOC-003_Wave_Closeout.md"
+    ],
+    "qualification": "FinalpublicationSHAstoredinPR/handoffregistry,notself-referentialhere;oneexistingreceiptunchanged"
+  }
 }
