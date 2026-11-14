@@ -274,3 +274,10 @@ Acceptance: actual RED/GREEN golden/negative and bounded property tests, existin
 regressions, exact independent source review, protected artifacts, documentation and one Draft PR.
 [[IMP-MATCH-08_Synthetic_M1]] owns current execution status. B1 80/20 and real-data/app/source
 choices keep their separate gates and are not artificial prerequisites for this synthetic scorer.
+
+## M1 agent acceptance checkpoint — 2026-11-14
+
+IMP-MATCH-08 exact synthetic M1 meets agent criteria:49focused/property and111combined
+offline methods PASS; independent167review assertions/111rerun PASS,0findings.
+[[IMP-MATCH-08_Synthetic_M1]] remains pending Human Owner review/merge via one Draft PR.
+Next B1 contract, broader policies and real-data/application/source gates remain separate.
