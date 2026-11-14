@@ -2,7 +2,7 @@
 id: DPT-DATA-005-CATALOGUE-AUDIT
 project: DoomParfum By TK
 type: observed_data_audit
-status: independent-review-pending
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, catalogue, brands, completeness, audit]

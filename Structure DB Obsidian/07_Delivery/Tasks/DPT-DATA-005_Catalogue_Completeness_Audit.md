@@ -2,7 +2,7 @@
 id: DPT-DATA-005
 project: DoomParfum By TK
 type: data_audit_task
-status: in-progress
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, audit, catalogue, brands, notes, completeness]
@@ -51,3 +51,17 @@ a separate population from perfume projections; see exact note counts and qualif
 Initial index-column checker assumption and preparatory manifest-key KeyError remain preserved
 under ignored local failure/correction reports. Independent exact-source review is pending;
 no final receipt,feature acceptance,source promotion or publication claim at this checkpoint.
+
+## Scoped closeout after completed independent review
+
+Reviewed corrected payload95e407a035fe0b7f17e5dfd74463e707a8d7d759. Actual independent source/data assertions110/110PASS;
+no open blocking finding in this bounded audit. Author's91quantitative artifact checks remain a separate evidence unit,
+not runtime feature tests. Resolved flanker modeled-empty classification and hash-checkpoint wording; original findings preserved.
+Current detailed evidence is in the dedicated Test_Evidence note; exact independent JSON is bound
+by SHA-256 and preserved in the approved handoff. Canonical/source data,all44holds,matching0,
+rights,old receipts and original migrations unchanged. Scope is ready for Human Owner review;
+full matching,API/UI,source/media intake,SQL/RLS/ETL/recovery tests are NOT RUN. Single scoped
+receipt and actual Draft publication metadata follow without changing historical evidence.
+
+Single scoped receipt: [[2026-11-14_160416_DPT-DATA-005_Scoped_Review_Ready]]. Payload/checkpoint95e407a035fe0b7f17e5dfd74463e707a8d7d759.
+Exact publication metadata follows; no policy or full-feature acceptance is inferred.

@@ -2,7 +2,7 @@
 id: DPT-DATA-005-EVIDENCE
 project: DoomParfum By TK
 type: observed_audit_evidence
-status: independent-review-pending
+status: scoped-review-ready
 owner: human-owner
 updated: 2026-11-14
 tags: [doomparfum, data-audit, evidence, completeness]
@@ -146,3 +146,42 @@ TOOL EXECUTION REPORT: Context Mode bounded full-input/source retrieval and loca
 read-only Git baseline checks; apply_patch edits only four new dedicated audit documents and ignored
 audit tooling/evidence. Installed/configured NONE. Git/DB/Production mutation NONE. Documentation
 checks and final worker hashes follow actual execution below; independent review PENDING.
+
+## Independent exact-source and source-data review — completed
+
+Reviewer /root/catalogue_exact_review is independent from author postmerge_c_owner_packet.
+Initial payload b5f073f82023dba81ce4f35b9913dc8ee56a6013 and corrected payload
+95e407a035fe0b7f17e5dfd74463e707a8d7d759 were examined against base8c6a8376680c7a10cc3eb4b5cf80afe4376a9282.
+All four changed documents, actual catalogue DDL/dictionary, pinned inputs and quantitative source
+evidence were inspected.110/110 newly executed independent offline assertions PASS; these are
+source/data/review assertions, not110 feature tests or a rerun of the author's91-check command.
+
+Independent recomputation covered all34 raw-column populations,1,479/160/420 unique source IDs,
+160 coherent per-house counts, historical index external keys and blank canonical IDs,43sidecars/
+44groups/45extras plus independent Khamrah, raw3850/3873/4305/420 layer token accounting,
+approved3693/3742/4150/387 links and1348/87 representations,12,448raw/11,972approved/476held
+occurrences,420used/417approved-source/3held-only materials,327alias records/1,635tokens/
+1,626distinct/9repeats,92literal brand suggestions/134none/68unsuggested houses and15Thai A
+priorities. Candidate normalization is an offline literal predicate, not semantic identity approval.
+
+IR-DATA005-01 MEDIUM is RESOLVED: flanker_of is explicitly modeled as a directed relation under
+perfume_relations_k5; the observed relation table is empty. Catalogue matrix, identity register
+and explanation now distinguish modeled-but-empty flanker facts from unestablished other mappings.
+IR-DATA005-02 LOW is RESOLVED: the evidence now records actual current96/851 checker/summary hashes
+and the91-check result hash, rather than promising an absent superseding checkpoint. Original
+findings and corrected commit remain in Git/report history. No schema/data/rights/policy change.
+
+Independent review JSON SHA-256 29f73da0a348bc5ea675c0ff9ef9b8d0b48f1bae8f0018c6fae557e81ff6efb4; exact corrected source/input hashes and all110
+assertions are recorded in ignored .local/post1821-QA/INDEPENDENT_CATALOGUE_REVIEW.json. Initial
+review-helper HEAD guard stopped before reads when the notified parent correction landed; the
+review pinned that corrected commit. A later overly literal corrected-flanker text oracle and an
+unsupported Context Mode search limit were corrected and retained as reviewer tooling failures.
+Neither changed source data/documents or concealed an application failure.
+
+No blocking scope finding remains. Scoped observed audit is ready for Human Owner review after
+coordinator publication; this is not catalogue completeness, source/publication rights, closure,
+normalization, matching eligibility, application or Production acceptance. Zero reviewer DB/network
+calls; coordinator aggregate/fingerprint execution was consumed as pinned evidence, not rerun.
+No individual DB identity-set export or future scorer/API/security/ETL/replay/recovery tests.
+Detailed private registers stay ignored and excluded from public Git/ZIP. All44holds and strategic/
+exact-policy distinctions are preserved. This append is review evidence, not an immutable receipt.
