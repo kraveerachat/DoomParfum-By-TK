@@ -54,3 +54,13 @@ evidence and proposed sidecars without canonical promotion. Full A/B1 implementa
 accepted DM/input prerequisites; real-data activation additionally needs all readiness gates.
 B2 remains unavailable without actual reviewed accord inputs. No application stack, API/UI,
 cloud resource or public publication is authorized by this register.
+
+## Post-PR18–21 authority overlay — 2026-11-14
+
+Latest Owner Master explicitly confirms the conservative strategic direction. Earlier blanket
+"no direction accepted" language is historical. A/B1 first, deterministic/synthetic work,
+Fit/Confidence/Evidence separation, source fidelity/no false absence and initially local-private
+with no public API/shared cache are CONFIRMED constraints. Exact formula/version/domain/closure,
+normalization/session/stack and source-use choices remain PROPOSED. See the single
+[[Next_Wave_Owner_Decision_Form]] and [[Post_PR18_21_Implementation_Gate_Audit]]. No real ranking,
+new scorer defaults,API/UI or catalogue promotion is enabled by this overlay.

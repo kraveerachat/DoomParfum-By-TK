@@ -271,3 +271,66 @@ This docs-only research task doesnotapprove DMdecisions, newsourcegrants, normal
 Owner-approved local Codex defaults now use the existing Caveman skill (bytes match v4.1.0) and Context Mode 2.1.8. Four Context Mode hooks were trusted after backup; explicit separate owner approval covered the system Node 24.22.3/npm 11.19.1 MSI update. Fresh-process MCP execution/doctor and hook checks pass; safe update/legacy warnings remain. Existing chat MCP transport closed after MSI, so restarting Codex and verifying its new host connection remain acceptance steps. No final task receipt yet.
 
 [[DPT-OPS-004_Agent_Tooling_Setup]] records exact paths/refs/checks, approval rejection and later authorization, failed non-admin MSI, successful UAC install, sandbox/PATH diagnostic limits, backups and rollback. Initial [[Agent_Tool_Registry]] and [[Tool_Usage_Log]] are proposed documentation additions on separate `codex/caveman-context-mode-setup` review branch from main aa55f8b. PR publication is pending at authoring; no merge is claimed. No application/database/production/data-rights/other-PR changes. User-level defaults affect local Codex chats; Node update affects programs sharing system Node.
+
+## Current post-PR18–21 catalogue wave — 2026-11-14
+
+This section supersedes dated current-state claims above. Verified main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282;
+Owner merged18–21. New Master confirms conservative strategic direction,not unspecified DM/OP,
+source/auth/formula/closure/normalization/stack choices. See [[Post_PR18_21_Implementation_Gate_Audit]]
+and the single [[Next_Wave_Owner_Decision_Form]]. No duplicate planning PR is needed for merged plans.
+
+Fresh55offline methods PASS; READ ONLY49before/after/prior fingerprints equal.1479identities/
+1435approved/44held/matching0;160brands/420notes/417used/11972links.0canonical assets,accords,
+families,pairs,listings/prices; raw country/family/aliases remain separate unpromoted inputs.
+World/live/regional/SKU universes UNKNOWN; no completeness percentage inferred. Three isolated
+actual audit/test tasks plus coordination are IN PROGRESS; exact final evidence follows closeout.
+No source/asset acquisition,SQL/API/UI,owner/rights/hold/eligibility change or Production mutation.
+PR8unchanged84dccb117971ab65e0bf39fa3d1d84a12d344f8d OPEN/DRAFT/CONFLICTING/BLOCKED,no new operands.
+
+## Current audit/QA publication checkpoint — 2026-11-14
+
+PR22policy-freeQA,PR23catalogue/notes andPR24source/media are OPEN/DRAFT,clean mergeability at
+verified worker heads in [[DPT-DOC-003_Wave_Closeout]]. Independent reviews17/110/83scope assertions
+complete;55baseline/62postQAoffline methods overlap.0open worker findings;no full-feature acceptance.
+Conservative Ownerdirection CONFIRMED;exactindividualchoicesPROPOSED. All44holds/matching0,
+17oldreceipts/eight migrations/rootPR8preserved. Coordinatorcloseout/ZIPstillindependentreviewpending.
+
+## Independent handoff readiness accepted — scoped closeout
+
+Completed independent coordinator delta review66/66PASS at8332ad7f14496d2b657c1bb25e388c1537bb92cd,
+then independent READINESS archive review71/71PASS with0findings.
+Verified archive SHA256256dbe4b0eedf6558f98047e8e93b315037014c3b8507f0cf1cebedeb3c93da3, 19352053bytes,
+3911manifest files/3912members;
+244exact Git snapshots. Reviewer captured one ZIP byte buffer
+for digest/size/CRC/manifest/source/Git/receipt/ledger/privacy/live-head checks. This is actual
+readiness proof, not a claim that a later rebuilt final artifact already passed.
+
+The single scoped coordinator receipt may now be created. Publication/receipt metadata will be
+included in one final LATEST ZIP, followed by separate independent final-artifact verification.
+Final digest/report remain outside that archive to avoid self-reference. Exact final HEAD and PR
+are recorded by actual publication/packaged registry. No new source/feature/policy acceptance,
+real matching/API/UI/publication,DB/identity/rights/hold/eligibility change,merge orProduction.
+Current Docker recheck remains UNAVAILABLE/NOTRECONFIRMED; prior Wave0stop proof is retained.
+All17priorreceipts/eight migrations/PR8evidence stay exact. No second receipt or speculative fix.
+
+## Post-PR22–25 continuation checkpoint — 2026-11-14
+
+Actual main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282 unchanged;22–25OPEN/DRAFT/clean,notmerged.
+No formalreviews/comments/checkrollups;noCI PASS or exactOwneranswers. Fresh62offlinecandidate
+methodsPASS(55baseline+7invariantsincluded),runtime mainbyte-exact;future/full/live testsNOTRUN.
+CurrentDBrevalidationBLOCKED Dockerpipeabsent,no restart/query;03:04BangkokcountsHISTORICALONLY.
+[[Post_PR22_25_Owner_Review_and_Unlock]] coordinates exact review/gate/sample/normalization/app
+preparation onexistingPR25. AllindividualchoicesPROPOSED,strategicdirectionCONFIRMED. Preserve
+receipts/migrations/44holds/matching0/PR8;no secondreceipt/newduplicatePR or implementationunlock.
+
+## Current continuation review outcome — bounded preparation only
+
+Independent exact-checkpoint review95/95PASS,0openfindings at746c87fafb9fd46fa21f6698e1a766b90a3bb26a.
+Reviewer excluded its own matching checklist;coordinator's separate full-worker-document review
+covers that file. LOWPUB01label ambiguity resolved;no exact OwnerDefer answer invented. Current
+62offline/45arithmetic/18localrehearsal/18matching-doc/29field-doc checks remain different units.
+CurrentDB/role/rights-time revalidation is still BLOCKED;no full-scoperuntime/data acceptance.
+This is a review-preparation checkpoint onexistingPR25. Preserve its single immutable receipt;
+do not create another receipt or reinterpret the oldreceipt as acceptance of this new DB preflight.
+Finalpublicationandnewarchiveverification followactualevidence. No source/runtime/SQL/API/UI,
+rights/normalization/44hold/eligibility/identity/Production mutation or agentmerge.

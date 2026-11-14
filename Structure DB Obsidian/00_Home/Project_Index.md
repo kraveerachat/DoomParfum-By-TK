@@ -137,3 +137,19 @@ flowchart TD
 2. **Clear Decision Status:** แยกสถานะ `[CONFIRMED]`, `[PROPOSED]`, `[RESEARCH]`, `[DEFERRED]` อย่างเข้มงวด
 3. **Data Provenance & Rights:** ไม่กวาดข้อมูล (Scrape) ละเมิดสิทธิ์ ไม่เก็บข้อมูลที่ไม่มีที่มา และไม่ประดิษฐ์คะแนนขึ้นมาเอง
 4. **Distinction between Cart and Ownership:** สถานะ Cart, Ordered, Purchased, Owned และ Previously Owned แยกออกจากกันเด็ดขาด
+
+## Post-PR18–21 current audit and gates
+
+- [[DPT-DOC-003_Post_PR18_21_Catalogue_Wave]]
+- [[Post_PR18_21_Implementation_Gate_Audit]]
+- [[DPT-DOC-003_Wave0_Evidence]]
+- [[Next_Wave_Owner_Decision_Form]]
+
+## Current observed-audit closeout
+
+- [[DPT-DOC-003_Wave_Closeout]]
+- Exact filename/branch/worker-head manifest: `08_Operations/Test_Evidence/DPT-DOC-003_Exact_File_Manifest.json`.
+
+## Post-PR22–25 current review checkpoint
+
+- [[Post_PR22_25_Owner_Review_and_Unlock]]

@@ -11,8 +11,10 @@ source_of_truth: "../../README.md"
 
 # Next-wave consolidated Owner Decision Form
 
-Version: DPT-OWNER-FORM-POST1317-1. Base main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c.
-All entries are **PROPOSED / NO OWNER ANSWER RECORDED**. Owner merged PR13–17, including PR15;
+Historical form version: DPT-OWNER-FORM-POST1317-1. Historical base main1f2f53f97dff39bc4f3094e4ad82653e8b03f52c.
+Current direction/status overlay below: DPT-OWNER-FORM-POST1821-2, base8c6a8376680c7a10cc3eb4b5cf80afe4376a9282.
+Individual exact-choice entries remain **PROPOSED / NO EXACT OWNER ANSWER RECORDED**.
+High-level conservative direction is now CONFIRMED in the post-PR18–21 overlay below. Owner merged PR13–17, including PR15;
 none of those merges chose an unanswered policy. The PR13/15/16 discussion snapshots contain no
 answers. This is the single answer-entry form for this wave, extending rather than replacing the
 definitions in [[Post_Merge_Owner_Decision_Packet]] and [[Matching_Owner_Decision_Register]].
@@ -93,3 +95,71 @@ normalization/closure/source right,session/stack/publication policy or implement
 The integrated form remains unanswered for policy choices. Continue authorized independent research,
 golden arithmetic,contracts,documentation,review and handoff; stop only dependent implementation.
 This records the reply truthfully rather than treating it as acceptance of every recommendation.
+
+## Current explicit Owner direction — post-PR18–21 / 2026-11-14
+
+Authority: full Owner Master Prompt, POST-PR18–21 DEVELOPMENT & CATALOGUE COMPLETENESS WAVE,
+1,376 lines/28,635 bytes; SHA256 b459c07e94ff6c68682165c3a166c7965a31b36e39e6a231118c304c1e402b23.
+This later instruction supersedes the earlier preparation-only reply **at strategic direction level**.
+The earlier reply remains historical evidence. It does not accept unspecified individual options.
+
+**CONFIRMED direction:** prioritize Mode A/B1 before real B2; deterministic/synthetic first; keep
+Structural/Query Fit, Data Confidence and Pair Evidence separate; preserve source claims and44holds;
+do not infer absence from incomplete lists; initial local-private/no public API/shared cache;
+permissioned catalogue enrichment including names,brands,notes andimages; no autonomous Production.
+
+**UNRESOLVED exact choices:** DM03/05 formulas/constants/method/domain/fallback versions;
+DM04 taxonomy/scale; DM06 lifecycle/freshness thresholds; OP01 full-task milestone scope;
+OP02 closure assertions; OP03 repeated-note/Khamrah normalization; OP04 field/use/audience rights;
+OP05 genuine nonadmin binding; OP06 stack/auth/transport/budgets. Individual DM/OP policy rows remain
+PROPOSED unless their exact text/version/scope is explicitly answered. No third-party permission,
+application principal,source acquisition,cloud or public publication is created by this direction.
+
+Merged PR18/19/20/21 establish plan/research integration at main8c6a8376680c7a10cc3eb4b5cf80afe4376a9282,
+not hidden policy defaults. Actual Wave0:55offline methods PASS; fresh leased READ ONLY audit;
+all49data/security/application-role fingerprints unchanged. Matching0/holds44 remain unchanged.
+
+## One consolidated decision batch — exact implementation unlocks
+
+The recommendation/alternative/risk/test columns above still apply. This overlay distinguishes
+the accepted direction from the exact answer still needed. Do not ask the Owner to reapprove
+the same strategic direction. Submit one versioned answer for the remaining affected choices.
+
+| ID | Confirmed portion | Exact unresolved answer and dependencies | Implementation enabled only after answer/tests |
+|---|---|---|---|
+| DM-01 | A/B1 before real B2 | exact synthetic milestone/version and OP01 scope | separate full A and B1 tasks; not PR9 full-scorer acceptance |
+| DM-02 | Fit,Confidence,Pair Evidence separate; no scientific smell percentage | label/confidence/coverage/explanation version | versioned explainable output schema; separation/golden tests |
+| DM-03 | deterministic synthetic evaluation | exact weights,layers,missing masks,domain,empty,denominator,comparability,rounding | full synthetic Mode A; existing exact primitive tests need no new defaults |
+| DM-04 | real B2 deferred without compatible data | accepted taxonomy/scale/presence-only capability | independent accord method; no intensity from names/order/repetition |
+| DM-05 | B1 direction; incomplete list cannot prove absence | exact coverage/focus formula,any-layer occurrence,contradictions,optional-only/empty and OP02 closure | full synthetic B1 with unknown/hard-rule tests |
+| DM-06 | source fidelity | lifecycle grouping/freshness/source-market policy | lifecycle/availability filters, never inferred from release year |
+| DM-07 | initially local-private,no public API/shared cache | exact principal binding,transport,response lifetime and OP05/06 | private read service only after genuine-session and leak tests |
+| OP01 | synthetic primitives may continue | precise primitives-only vs full A acceptance/task scope | no retrospective PR9receipt or automatic full task completion |
+| OP02 | no false absence | exact reviewed source/capture/edition/layer/domain completeness assertion/version | strict exclusion/required negatives only in accepted complete domains |
+| OP03 | preserve44holds/occurrences,Khamrah independent | version43projections and reviewer/selection rules | explicit reviewed transition; no automatic hold release |
+| OP04 | enrich permissioned catalogue | exact source/field/use/audience/expiry/revocation and selected materialization | only eligible reviewed facts for the specifically granted use |
+| OP05 | genuine nonadmin; no admin fetch/filter | clean app-private pilot vs reviewed auth amendment vs defer | approved identity and intake task; no immutable owner/subject rewrite |
+| OP06 | local-private first | Python vs TypeScript vs CLI; exact framework/auth/transport/bounds and write scope | separate API and UI tasks, no dependency install by inference |
+| SOURCE-01 | enrich names/brands/notes/images with permission | publisher/revision/field/sample limit and11operation rights | approved incremental source/sample intake; existing pinned index need not be rebuilt |
+| MEDIA-01/02 | licensed bottle/note media desired; placeholders now | asset/revision/creator/license/audience/derivative/attribution plus format limits | rights-reviewed sample; JPEG/WebP code separately tested/gated |
+| APP-01/PUB-01 | private first,Cart bookmark/manual status | exact read/write family and publication/auth/cache/retention boundary | no public endpoint,cloud,shared cache or shopping-account integration |
+
+Alternative for each blocked row: explicitly defer the dependent feature and continue independent
+audit/tests under the existing source permissions. Roadmap approval cannot cure a missing licensor
+grant. A selected reviewed field,usable rights,accepted completeness,matching eligibility and a
+genuine accessible principal are different conditions; satisfying one does not satisfy the others.
+
+## Post-PR22–25 prioritized response overlay — still unanswered
+
+Response reference DPT-OWNER-FORM-POST2225-1. All original answer cells stay blank; no Owner choice
+is invented. PR22–25are OPEN/DRAFT,not merged;new Master preserves exact proposals. Start with
+synthetic-only A: proposed mc-a-notes-layered-p1,explicit fixture/config/domain/mask/empty/support/
+ordering/rounding and typed-input versus serialized-byte boundary. Then separately select proposed
+mc-b1-pyramid-positive-domain-p1 and its clause/domain/hard rules. See
+[[Synthetic_Implementation_Unlock_Checklist]];all method weights and limits remain PROPOSED.
+New source acquisition,real-source closure/normalization and app identity/stack are not artificial
+dependencies for isolated synthetic math. Those choices retain their own future gates. Source
+sampleSRC-SAMPLE-PINNED-FIELDS-P1 and mediaMEDIA-REVIEW-JUNIPER-P1 remain review-only proposals;
+the executed narrower existing-local two-profile field inventory confers no mapping/intake rights.
+Use [[Post_PR22_25_Owner_Review_and_Unlock]] as the current status/risk/dependency/test matrix;
+answer here only once with exact version/scope or Defer. Current DB revalidation remains BLOCKED.
