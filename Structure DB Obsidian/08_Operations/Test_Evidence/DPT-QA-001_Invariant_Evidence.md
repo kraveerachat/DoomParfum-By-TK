@@ -132,3 +132,13 @@ the historical pre-review state; this later exact-source report records actual r
 Scoped QA acceptance: ready for Human Owner review,not full A/B1/B2 or real-data acceptance.
 Live/full PostgreSQL/security/replay/recovery NOT RUN. Matching0,44holds,source rights and all
 17old receipts/eight migrations unchanged. Final receipt and publication metadata follow separately.
+
+## Post-review correction checkpoint — result newline/hash labels
+
+Independent handoff preparation identified a label ambiguity, not a changed result. The author
+result hash above is checkout bytes: SHA256d9bdb4500cf712015ed894b38681f4fca25784092b9eba171d726a1dd44de203, 3784bytes (CRLF).
+The canonical Git LF blob is SHA2568dc4e9ce4b9f4cac0295f423dd47dc123e855791e8f097f6bebfe9e377ef877f, 3687bytes. Comparing after
+CRLF-to-LF normalization is byte-exact; JSON values, executed tests and new test source are unchanged.
+The independent review and exact Git snapshots use the canonical Git hash. This append-only
+clarification leaves the original result, prior review and single immutable receipt unchanged.
+No rerun is needed for a line-ending label clarification; no second receipt or expanded acceptance.
