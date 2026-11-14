@@ -78,7 +78,7 @@ not ownership, source chain, selected license, exact file SHA or any use approva
 |---|---|---|
 | Nutmeg-spice.jpg |1177424529|`22daf2694c8d95258008eee3f0bd03daed6f8c6a234532f9bb16b063dbabac07`|
 | Ribes nigrum-1.jpg |1158951883|`aa254a11458523fdc79d12e90448522f6b6e3c0b2eb0e71075e65df3fe0fb6ea`|
-| Juniper berries777.jpg |1142894283|`9037b3593449e459b86992dad757acbd1bd9db0853883728bdc2c13628a509d2`|
+| Juniper berries 777.jpg |1142894283|`9037b3593449e459b86992dad757acbd1bd9db0853883728bdc2c13628a509d2`|
 
 These hashes describe page revision text, not image binaries or a license deed. Remaining 12 page
 bindings lack equivalent available exact-revision verification in this audit. Narrow extraction
