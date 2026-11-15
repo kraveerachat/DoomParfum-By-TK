@@ -1,5 +1,5 @@
 {
-  "phase": "FOCUSED_GREEN",
+  "phase": "FOCUSED_GREEN_AFTER_IR_B1_IMPL_01",
   "command": [
     "python",
     "-m",
@@ -9,12 +9,12 @@
     "-v"
   ],
   "returncode": 0,
-  "tests_run": 53,
-  "golden_negative_schema_boundary_methods": 45,
+  "tests_run": 56,
+  "golden_negative_schema_boundary_methods": 48,
   "property_methods": 8,
   "failures": 0,
   "errors": 0,
-  "seconds": 0.28654,
+  "seconds": 0.302462,
   "property_scorer_calls": {
     "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_1_exhaustive_complete_subsets_and_seeded_states": 320,
     "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_2_permutations_and_duplicates": 25,
@@ -57,13 +57,13 @@
   "source_bindings": [
     {
       "path": "matching_math/synthetic_b1.py",
-      "sha256": "271a563c29685b0aaf214c334aafa103ccb75678aff4d8639abc4af5662d9b40",
-      "bytes": 21573
+      "sha256": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+      "bytes": 22074
     },
     {
       "path": "matching_math/tests/test_synthetic_b1.py",
-      "sha256": "4269ff5c9474dba539b792acfd441166f208199294085f081ef1a4333b624826",
-      "bytes": 32287
+      "sha256": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+      "bytes": 33922
     },
     {
       "path": "matching_math/tests/test_synthetic_b1_properties.py",
@@ -93,5 +93,16 @@
     "API/UI/transport",
     "real relevance/performance/capacity/SLA",
     "parent-owned existing111regressions and independent review"
-  ]
+  ],
+  "review_correction": {
+    "finding": "IR-B1-IMPL-01",
+    "scope": "All record/container shapes and membership counts now checked before any vocabulary/candidate/layer token/member scan. Formula, fingerprint categories and approved schemas unchanged.",
+    "red_evidence": "b1_validation_order_red_results.json",
+    "red_feature_bodies": 3,
+    "red_errors": 3,
+    "new_regression_methods": 3,
+    "valid_at_bound_control": "1 Top +511 Base memberships with all three searched layers closed yields Dsize512 and focus1/512",
+    "earlier_focused_report_preserved": "ignored .local/b1-implementation/before_validation_order_b1_focused_results.json",
+    "parameter_annotations": "B1Query, tuple[B1Profile,...], B1Vocabulary and B1Config; no defaults or behavior change"
+  }
 }

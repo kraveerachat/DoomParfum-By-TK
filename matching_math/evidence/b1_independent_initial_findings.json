@@ -1,0 +1,26 @@
+{
+  "reviewer": "/root/b1_contract_review",
+  "reviewed_commit": "87c2a76b3e4cdad582e09cf30985fd5c00da5e50",
+  "approved_contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "status": "REVIEW_IN_PROGRESS_WITH_TARGETED_FINDING",
+  "findings": [
+    {
+      "id": "IR-B1-IMPL-01",
+      "severity": "MEDIUM",
+      "status": "OPEN",
+      "file": "matching_math/synthetic_b1.py",
+      "symbol": "_shapes",
+      "issue": "Vocabulary and earlier layer/candidate note members are scanned for type/token length before every candidate/layer membership cap has been checked. This violates the approved global bounded-shape/count stage before member scans and changes the specified error-stage precedence.",
+      "actual_evidence": "Three independent cases combine an early malformed member type with a later513-membership layer. Current code raises TypeError Invalid typed input while the global count stage should first reject ValueError Input bound exceeded. Probe cases cover vocabulary-before-candidate, earlier-candidate-before-later-candidate and earlier-layer-before-later-layer.",
+      "expected_correction": "Separate bounded container/record-shape and complete membership-count pass from all vocabulary/profile/layer/query token/member scans. Preserve exact types needed to inspect containers safely, then enforce every512/32768 cap before scanning any member values; do not alter accepted policies/errors or weaken validation.",
+      "future_regression_controls": "Add explicit negative tests for all three precedence cases and a valid-at-bound control. Preserve original probe report and rerun focused/regression after the targeted source correction.",
+      "scope": "Approved contract conformance and bounded resource validation; no demonstrated data/rights bypass or scoring-formula defect"
+    }
+  ],
+  "fingerprint_taxonomy_assessment": "No additional finding: a well-formed64hex but wrong digest is Invalid fixture vocabulary; malformed strict fingerprint syntax is Invalid identifier under the contract syntax-stage category. All observed messages are fixed and bounded.",
+  "actual_probe_artifact": "INITIAL_VALIDATION_PROBES.json",
+  "DB_calls": 0,
+  "network_calls": 0,
+  "source_Git_edits": false,
+  "final_acceptance": "PENDING_TARGETED_CORRECTION_AND_EXACT_SOURCE_REVIEW"
+}

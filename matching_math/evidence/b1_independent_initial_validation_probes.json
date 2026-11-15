@@ -1,0 +1,62 @@
+{
+  "source_commit": "87c2a76b3e4cdad582e09cf30985fd5c00da5e50",
+  "validation_probes": [
+    {
+      "case": "vocabulary_member_type_before_later_candidate_cap",
+      "observed_type": "TypeError",
+      "observed_message": "Invalid typed input",
+      "expected_stage": "all count caps before member/token scans",
+      "expected_type": "ValueError",
+      "expected_message": "Input bound exceeded"
+    },
+    {
+      "case": "first_candidate_member_type_before_second_candidate_cap",
+      "observed_type": "TypeError",
+      "observed_message": "Invalid typed input",
+      "expected_stage": "all count caps before member/token scans",
+      "expected_type": "ValueError",
+      "expected_message": "Input bound exceeded"
+    },
+    {
+      "case": "first_layer_member_type_before_later_layer_cap",
+      "observed_type": "TypeError",
+      "observed_message": "Invalid typed input",
+      "expected_stage": "all count caps before member/token scans",
+      "expected_type": "ValueError",
+      "expected_message": "Input bound exceeded"
+    }
+  ],
+  "fingerprint_taxonomy_probes": [
+    {
+      "fingerprint_shape": "0*64",
+      "observed": [
+        "ValueError",
+        "Invalid fixture vocabulary"
+      ]
+    },
+    {
+      "fingerprint_shape": "A*64",
+      "observed": [
+        "ValueError",
+        "Invalid identifier"
+      ]
+    },
+    {
+      "fingerprint_shape": "z*64",
+      "observed": [
+        "ValueError",
+        "Invalid identifier"
+      ]
+    },
+    {
+      "fingerprint_shape": "a*63",
+      "observed": [
+        "ValueError",
+        "Invalid identifier"
+      ]
+    }
+  ],
+  "DB_calls": 0,
+  "network_calls": 0,
+  "source_edits": false
+}

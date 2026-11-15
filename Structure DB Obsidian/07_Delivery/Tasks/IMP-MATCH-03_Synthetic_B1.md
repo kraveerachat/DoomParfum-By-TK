@@ -66,3 +66,25 @@ Parallel research completed independently: [[IMP_MATCH_03_Data_Research_Continua
 with2official property-reference reads(no entity/sample queries), and [[IMP_MATCH_03_Media_Research_Continuation]]
 39static checks on retained metadata/current PNG validator(no new network/image bytes). Neither
 approves data imports, image intake, source normalization,44holds or eligibility changes.
+
+## Independent finding correction checkpoint — 2026-11-15
+
+Reviewer confirmed IR-B1-IMPL-01 MEDIUM at initial source87c2a76b3e4cdad582e09cf30985fd5c00da5e50:
+early token/member scans could precede a later candidate/layer membership cap. Three bounded
+reviewer probes showed TypeError before the contract-required Input bound exceeded ValueError.
+Initial findings/probes/source and prior53/164passing evidence remain preserved, not overwritten
+as final acceptance. Fingerprint syntax-versus-value assessment was NO ISSUE and is unchanged.
+
+Implementer first added3regression bodies against unchanged271a563c... runtime:exit1/errors3,
+all3bodies executed; b1_validation_order_red_results.json preserves the failure. Runtime now uses
+two passes: global record/container/count checks before token/member scans, then unchanged semantic
+validation/scoring. Exact public parameter annotations were added without defaults or behavior change.
+No approved contract/formula/schema/bound change, no validation weakening and no new Owner decision.
+
+Corrected focused56/56 PASS =48focused+8properties,0failures/errors/skips;subprocess0.302462s,
+unittest0.140s,py_compile0.443property scorer calls remain separate internal cases. Valid512cross-layer
+control and all3new precedence controls pass. Public focused/validation-order GREEN reports bind
+corrected runtime SHA3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746.
+Coordinator combined167/167 PASS,0failures/errors/skips,1.2061718999757431s:existing111+new56.
+Protected57basefiles/22receipts8migrations/8frozenstandalonepreps and M1evidence unchanged.
+Independent rereview of a new exact source commit remains PENDING. No final receipt or PR yet.

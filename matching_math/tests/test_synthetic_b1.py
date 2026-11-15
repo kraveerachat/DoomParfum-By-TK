@@ -521,6 +521,31 @@ class B1Validation(unittest.TestCase):
                 ((FractionSubclass(4, 5), F(1, 5)), TypeError, "Invalid typed input")):
             self.check_error(error, message, config=dc.replace(config(), formula_weights=weights))
 
+    def test_all_membership_caps_precede_vocabulary_member_scan(self):
+        # IR-B1-IMPL-01: later container lengths must win over early bad members.
+        v = dc.replace(vocabulary(512), note_ids=frozenset({False}))
+        p = profile(top=layer(range(1, 514)))
+        self.check_error(ValueError, "Input bound exceeded", candidates=(p,), vocabulary=v)
+
+    def test_all_membership_caps_precede_earlier_candidate_member_scan(self):
+        bad_set = forged(SetInput, members=frozenset({False}), complete=True,
+                         domain_id="synth-top-b1-v1")
+        bad_first = profile(1, top=dc.replace(layer(), notes=bad_set))
+        over_bound_last = profile(2, top=layer(range(1, 514)))
+        self.check_error(ValueError, "Input bound exceeded", candidates=(bad_first, over_bound_last),
+                         vocabulary=vocabulary(512))
+
+    def test_all_membership_caps_precede_earlier_layer_member_scan(self):
+        bad_set = forged(SetInput, members=frozenset({False}), complete=True,
+                         domain_id="synth-top-b1-v1")
+        p = profile(top=dc.replace(layer(), notes=bad_set), base=layer(range(1, 513), "base"))
+        self.check_error(ValueError, "Input bound exceeded", candidates=(p,), vocabulary=vocabulary(512))
+        # Valid exactly-at-bound control: 1 Top + 511 Base memberships.
+        valid = profile(top=layer((1,)), base=layer(range(2, 513), "base"))
+        r = one((clause(selector="any_pyramid"),),
+                dc.replace(valid, heart=layer((), "heart")), vocabulary=vocabulary(512))
+        self.assertEqual((r.positive_domain_size, r.focus), (512, F(1, 512)))
+
 
 if __name__ == "__main__":
     unittest.main()

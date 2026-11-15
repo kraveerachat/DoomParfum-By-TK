@@ -297,26 +297,18 @@ def _config(value):
 
 
 def _shapes(query, candidates, vocabulary):
-    """Check bounded containers and field types before token scans/arithmetic."""
+    """Check all record/container shapes and counts before scanning any tokens."""
     _exact(vocabulary.layer_domains, tuple)
     _exact(vocabulary.note_ids, frozenset)
     _bound(len(vocabulary.note_ids) <= 512)
     # Fixed table size is a context policy, checked before scanning its records.
     if len(vocabulary.layer_domains) != 3:
         raise ValueError("Unsupported fixture context")
-    for field in fields(B1Vocabulary):
-        if field.name not in ("layer_domains", "note_ids"):
-            _text(getattr(vocabulary, field.name))
     for domain in vocabulary.layer_domains:
         _record(domain, B1LayerDomain)
-        _text(domain.layer)
-        _text(domain.domain_id)
-    for note in vocabulary.note_ids:
-        _text(note)
     total = 0
     for candidate in candidates:
         _record(candidate, B1Profile)
-        _text(candidate.perfume_id)
         count = 0
         for name in _LAYERS:
             layer = getattr(candidate, name)
@@ -330,6 +322,26 @@ def _shapes(query, candidates, vocabulary):
             _bound(count <= 512)
             total += len(layer.notes.members)
             _bound(total <= 32768)
+    for clause in query.clauses:
+        _record(clause, B1Clause)
+
+
+def _token_shapes(query, candidates, vocabulary):
+    """After global count checks, bound every token and clause numeric field."""
+    for field in fields(B1Vocabulary):
+        if field.name not in ("layer_domains", "note_ids"):
+            _text(getattr(vocabulary, field.name))
+    for domain in vocabulary.layer_domains:
+        _text(domain.layer)
+        _text(domain.domain_id)
+    for note in vocabulary.note_ids:
+        _text(note)
+    for candidate in candidates:
+        _text(candidate.perfume_id)
+        for name in _LAYERS:
+            layer = getattr(candidate, name)
+            if layer is None:
+                continue
             _text(layer.notes.domain_id)
             for field in fields(B1Layer):
                 if field.name == "notes":
@@ -340,7 +352,6 @@ def _shapes(query, candidates, vocabulary):
             for note in layer.notes.members:
                 _text(note)
     for clause in query.clauses:
-        _record(clause, B1Clause)
         _text(clause.note_id)
         _text(clause.selector)
         _text(clause.role)
@@ -546,7 +557,8 @@ def _score(candidate, key, positive, strict, relevant, denominator, specificity)
         "not_evaluated_policy_pending", "not_evaluated_synthetic_only")
 
 
-def score_synthetic_b1(query, candidates, *, vocabulary, config) -> B1BatchResult:
+def score_synthetic_b1(query: B1Query, candidates: tuple[B1Profile, ...], *,
+                       vocabulary: B1Vocabulary, config: B1Config) -> B1BatchResult:
     """Validate the entire bounded call, then score only its synthetic candidates."""
     _exact(query, B1Query)
     _exact(candidates, tuple)
@@ -559,6 +571,7 @@ def score_synthetic_b1(query, candidates, *, vocabulary, config) -> B1BatchResul
     clean_config = _config(config)
     _record(vocabulary, B1Vocabulary)
     _shapes(query, candidates, vocabulary)
+    _token_shapes(query, candidates, vocabulary)
     _syntax(query, candidates, vocabulary)
     context = _context(vocabulary)
     _memberships(query, candidates, vocabulary)
