@@ -2,7 +2,7 @@
 id: IMP-MATCH-03-DESIGN
 project: DoomParfum By TK
 type: implementation_design
-status: in-progress
+status: implemented-synthetic-only-review-ready
 owner: human-owner
 updated: 2026-11-15
 tags: [doomparfum, synthetic, b1, typed]

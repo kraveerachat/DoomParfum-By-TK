@@ -635,3 +635,26 @@ snapshots remain unchanged; prior statements are retained dated history.
 [[IMP-MATCH-03_Synthetic_B1]] is IN PROGRESS on codex/imp-match-03-synthetic-b1 from main604d447.
 Actual tests/review are pending, no final receipt/PR. Research B/C continues independently;
 no acquisition/import/rights/publication,real ranking,DB/Production/44hold/eligibility or agent merge.
+
+## Independent corrected-source review completed — 2026-11-15
+
+Independent reviewer /root/b1_contract_review completed exact-source review at
+fbadf797959ed96f70a8ca4d8924375c26a04a36:247/247 review assertions PASS,0open findings.
+Reviewer independently reran167/167 offline methods,0failures/errors/skips,1.2937761999783106s,
+plus128reviewer-owned state pairs,15negative probes and1valid64x512boundary control. These are
+separate counts, not extra unittest methods or property cases. B1focused48+properties8=56;
+443internal property scorer calls remain separately qualified. Fingerprint semantics NO ISSUE.
+
+IR-B1-IMPL-01 is RESOLVED: all3original cap-precedence cases now return Input bound exceeded
+before member/token scans. Exact AST comparison confirms only shape/token staging and public
+annotations changed; scoring/gate/formula ASTs are identical to initial87c2source. No contract,
+schema, policy, numeric bound or rights change. All original RED/failure/source evidence retained.
+Review report matching_math/evidence/b1_independent_review.json SHA-256 54f1d9be7674efc57ed98259250d618e32f42a444ca64d64a4fcd56c604db1f4.
+The finalized report was written only after actual execution and preserved-evidence bindings.
+
+Agent technical acceptance criteria are met for exact synthetic B1 only. Human Owner implementation
+acceptance/merge still pending. Only metadata/docs/one scoped receipt closeout follows this reviewed
+source; any runtime/test change requires affected retests and renewed independent exact-source review.
+One Draft PR will remain OPEN/DRAFT. No final receipt exists at this checkpoint before PR URL.
+No Full Mode A/B2/real-data/API/UI/transport/DB/liveRLS/replay/recovery/performance/rights acceptance.
+Research16/39static checks are independent bounded metadata work, not acquisition or image approval.

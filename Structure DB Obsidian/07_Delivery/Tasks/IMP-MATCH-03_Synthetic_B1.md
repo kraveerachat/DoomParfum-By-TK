@@ -2,7 +2,7 @@
 id: IMP-MATCH-03
 project: DoomParfum By TK
 type: implementation_task
-status: in-progress
+status: agent-review-ready-publication-pending
 owner: human-owner
 updated: 2026-11-15
 tags: [doomparfum, synthetic, b1, implementation]
@@ -82,9 +82,32 @@ validation/scoring. Exact public parameter annotations were added without defaul
 No approved contract/formula/schema/bound change, no validation weakening and no new Owner decision.
 
 Corrected focused56/56 PASS =48focused+8properties,0failures/errors/skips;subprocess0.302462s,
-unittest0.140s,py_compile0.443property scorer calls remain separate internal cases. Valid512cross-layer
+unittest0.140s,py_compile exited0. The443property scorer calls remain separate internal cases. Valid512cross-layer
 control and all3new precedence controls pass. Public focused/validation-order GREEN reports bind
 corrected runtime SHA3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746.
 Coordinator combined167/167 PASS,0failures/errors/skips,1.2061718999757431s:existing111+new56.
 Protected57basefiles/22receipts8migrations/8frozenstandalonepreps and M1evidence unchanged.
 Independent rereview of a new exact source commit remains PENDING. No final receipt or PR yet.
+
+## Independent corrected-source review completed — 2026-11-15
+
+Independent reviewer /root/b1_contract_review completed exact-source review at
+fbadf797959ed96f70a8ca4d8924375c26a04a36:247/247 review assertions PASS,0open findings.
+Reviewer independently reran167/167 offline methods,0failures/errors/skips,1.2937761999783106s,
+plus128reviewer-owned state pairs,15negative probes and1valid64x512boundary control. These are
+separate counts, not extra unittest methods or property cases. B1focused48+properties8=56;
+443internal property scorer calls remain separately qualified. Fingerprint semantics NO ISSUE.
+
+IR-B1-IMPL-01 is RESOLVED: all3original cap-precedence cases now return Input bound exceeded
+before member/token scans. Exact AST comparison confirms only shape/token staging and public
+annotations changed; scoring/gate/formula ASTs are identical to initial87c2source. No contract,
+schema, policy, numeric bound or rights change. All original RED/failure/source evidence retained.
+Review report matching_math/evidence/b1_independent_review.json SHA-256 54f1d9be7674efc57ed98259250d618e32f42a444ca64d64a4fcd56c604db1f4.
+The finalized report was written only after actual execution and preserved-evidence bindings.
+
+Agent technical acceptance criteria are met for exact synthetic B1 only. Human Owner implementation
+acceptance/merge still pending. Only metadata/docs/one scoped receipt closeout follows this reviewed
+source; any runtime/test change requires affected retests and renewed independent exact-source review.
+One Draft PR will remain OPEN/DRAFT. No final receipt exists at this checkpoint before PR URL.
+No Full Mode A/B2/real-data/API/UI/transport/DB/liveRLS/replay/recovery/performance/rights acceptance.
+Research16/39static checks are independent bounded metadata work, not acquisition or image approval.

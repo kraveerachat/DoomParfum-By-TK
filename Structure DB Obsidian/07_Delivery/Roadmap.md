@@ -300,3 +300,9 @@ publication and acquisition choices are not accepted by this scoped decision.
 task branch/Draft PR is authorized; no agent merge or real-data activation. Existing M1 unchanged.
 [[IMP_MATCH_03_Data_Research_Continuation]] and [[IMP_MATCH_03_Media_Research_Continuation]] record
 separate bounded research done in parallel: no entity/API/sample acquisition or image bytes.
+
+## B1 corrected-source agent acceptance — 2026-11-15
+
+IMP-MATCH-03 exact synthetic B1 meets agent criteria:56focused/property and167combined offline
+methods PASS;independent247assertions/167rerun PASS,0open findings. [[IMP-MATCH-03_Synthetic_B1]]
+awaits Human Owner through one Draft PR. No real activation or data/media permission expansion.
