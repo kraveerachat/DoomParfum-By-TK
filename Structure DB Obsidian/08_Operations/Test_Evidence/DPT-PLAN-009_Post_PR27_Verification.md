@@ -2,9 +2,9 @@
 id: DPT-PLAN-009-VERIFICATION
 project: DoomParfum By TK
 type: verification_evidence
-status: IN PROGRESS
+status: READY FOR REVIEW
 owner: project
-updated: 2026-11-15
+updated: 2026-11-16
 tags: [doomparfum, verification, planning, evidence]
 source_of_truth: "../../../README.md"
 ---
@@ -38,13 +38,19 @@ Initial run: 194 methods, zero assertion failures but four error records from tw
 
 C's first author check recorded 88 PASS and two raw-contract-hash failures in the fresh checkout. C's operand diagnosis established that the new worktree contains 310 CRLF pairs for M1 and 494 for B1. Canonical Git blobs match the exact approved SHA-256 values; CRLF-to-LF is the only representation difference. Approved original artifacts and Git history were not rewritten, and no Git/global configuration or contract changed. C preserved the original report/verifier/operand details and added canonical-hash, raw-projection and unchanged-blob checks before recording 94/94. This is an author-checker representation correction, not an independent review or permission to accept a changed contract.
 
-## Verification still being completed
+## Independent review and delivery checkpoints
 
 Independent review of checkpoint `aeb9b4c483e01a083ec867d6d9becd64503ac201` identified **IR-P27-01, MEDIUM**: three A evidence identifier fields appended proposal-status suffixes although the exact proposal note/Owner packet use unsuffixed task/transform/schema IDs. The author changed only those three JSON values to `IMP-ENR-01`, `enr-pinned-scento-preview-1` and `enr-pinned-scento-preview-schema-1`. Separate `pilot.status` remains `PROPOSED_NOT_APPROVED`; no approval, source field, transform semantics or runtime changed. Original JSON SHA-256 `f4bf3037f64ac7800ba882a540d630c95b2a1e0025e15adc36c1a22ddf179097` is preserved in Git checkpoint history and ignored `A/INITIAL_BEFORE_IR_P27_01.json`. Corrected JSON SHA-256 is `22adbb15e66b1ea27a424f1f3caba163e34fb9c6f0c980d3cd5429e78fb84067`.
 
-The original three mismatches were reproduced and retained; 25/25 targeted author checks now verify exact note/packet/JSON IDs and unchanged proposal status. [Correction evidence](Post_PR27_Data_Identity_Correction.json) records the precise delta. Original 72 source/count/preservation assertions remain historical execution proof, not an assertion that the initial three IDs agreed. Independent corrected-source closeout is pending and is not claimed by these author checks.
+The original three mismatches were reproduced and retained; 25/25 targeted author checks now verify exact note/packet/JSON IDs and unchanged proposal status. [Correction evidence](Post_PR27_Data_Identity_Correction.json) records the precise delta. Original 72 source/count/preservation assertions remain historical execution proof, not an assertion that the initial three IDs agreed. Those author checks did not themselves close independent review; completed corrected-source review is recorded below.
 
-Coordinator final source/receipt/contract/history preservation, documentation/link/frontmatter/table/common-secret checks, independent planning review, staged diff, exact publication head and latest handoff validation will be recorded before final delivery. No PASS is claimed for those unfinished operations here.
+Coordinator source-checkpoint documentation checks passed: 20 Markdown/frontmatter files, 487 Wiki links, 12 local links, 57 table-width checks, 47 logical-table parity and six original approved OD rows; zero errors/common-secret candidates. All 278 nonshared base blobs, 11 shared histories, 23 old receipts and eight migrations are preserved. Final receipt/manifest metadata receive their own final static check; final publication head and ZIP digest are bound externally after they exist.
+
+Independent reviewer `/root/post27_independent_review` completed exact-source review of `77fb9080ad62e3463ae9a6006a2b6570a101ca8c`: **316 verified assertions, zero findings/open**. These comprise 283 earlier passing assertions retained through exact blob/delta/input bindings, three identifier failures independently closed, and 30 targeted correction assertions. No 194-method runtime suite was rerun by the reviewer. [Frozen independent report](Post_PR27_Independent_Review.json), SHA-256 `4e42cae336c68abd342e17e9222a3c5335347cf5d98c7e0bf1681b72eadabaf8`, finalized at UTC 2026-11-15T17:01:21.260901Z.
+
+Review history is retained: initial 280 PASS/five failed predicates; two reviewer-oracle assumptions were corrected with recorded operands (later pinned Juniper dossier subject versus an earlier generic lead label; explicit PROPOSED prose versus an invented enum). Corrected-oracle initial review had 283 PASS/three identifier failures, constituting the single MEDIUM IR-P27-01. The subsequent three-value correction resolved that finding without changing proposal status, data/rights scope, source, runtime or accepted contracts. Original reports/verifiers and correction provenance remain under ignored `.local/post27-planning/independent/` and the handoff history.
+
+Frozen Owner packet POST27-ODP-1 SHA-256: `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`. All A–I answers remain PROPOSED/UNANSWERED. Independent readiness is planning-review readiness, not an implementation unlock or Human acceptance.
 
 Existing B1 archive history is preserved: original independent 63 PASS/three oracle false failures, independent operand diagnosis and coordinator-only targeted three-check resolution. Do not relabel that historical result as 66 independently rerun checks.
 

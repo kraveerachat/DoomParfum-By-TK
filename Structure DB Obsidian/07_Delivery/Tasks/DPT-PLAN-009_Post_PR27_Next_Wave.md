@@ -2,9 +2,9 @@
 id: DPT-PLAN-009
 project: DoomParfum By TK
 type: planning_task
-status: IN PROGRESS
+status: READY FOR REVIEW
 owner: human-owner
-updated: 2026-11-15
+updated: 2026-11-16
 tags: [doomparfum, planning, readiness, media, security]
 source_of_truth: "../../../README.md"
 ---
@@ -34,3 +34,13 @@ This task consolidates the next decisions and acceptance gates from existing pla
 ## Execution state
 
 IN PROGRESS. No implementation, new source/image acquisition, database query/write, timestamp experiment, service start or Owner policy acceptance has occurred in this task.
+
+## Completed preparation and independent review
+
+A/B/C deliverables are complete as planning: [[Post_PR27_Data_Readiness_and_Pilot]], [[Post_PR27_Media_Rights_and_Storage]], [[Post_PR27_Application_Integration_and_Security]] and [[ADR_Post_PR27_Local_Private_Integration_Proposed]]. No future implementation, source/image intake or policy was approved. Exact proposal/Owner questions: [[Post_PR27_Consolidated_Next_Wave_Plan]] and [[Post_PR27_Owner_Decision_Packet]] POST27-ODP-1, SHA-256 `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`.
+
+Source checkpoints: initial `aeb9b4c483e01a083ec867d6d9becd64503ac201`; independently reviewed correction `77fb9080ad62e3463ae9a6006a2b6570a101ca8c`. IR-P27-01 MEDIUM resolved by three exact identifier values in A evidence; proposal status and scope unchanged. Independent review verified 316 assertions with zero open findings. Existing offline regression passed 194 methods with zero failures, errors or skips and zero Docker/SQL/network guard calls. Initial fixture, author-newline and reviewer-oracle failures are retained as qualified in [[DPT-PLAN-009_Post_PR27_Verification]]. No duplicate feature planning or M1/B1 implementation was performed.
+
+Docker engine unavailable; current canonical DB/roles/rights/closure/eligibility and backup recovery NOT REVALIDATED. Four backup-file metadata hashes are not restore proof. Data intake, regional grants, PNG bytes, real matching and application identity/stack remain separately gated. All 44 source holds, 43 normalization proposals and the independent Khamrah conflict are preserved; no promotion or current DB count is inferred.
+
+Next delivery steps: publish this exact docs branch as one Draft Planning PR; create the task's sole immutable planning receipt after its real URL exists; validate final metadata/source parity and one updated candidate handoff before replacing the previous verified LATEST. Publication HEAD is recorded after commit in the PR and exact external registry, not self-invented in this note. Human Owner alone decides and merges. Recommended future IMP-ENR-01 remains PROPOSED until exact A/B/I and preview-contract approval plus planning merge.
