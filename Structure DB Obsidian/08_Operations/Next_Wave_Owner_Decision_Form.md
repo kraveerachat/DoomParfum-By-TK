@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: owner_decision_form
 status: proposed-unanswered
 owner: human-owner
-updated: 2026-11-14
+updated: 2026-11-15
 tags: [doomparfum, decisions, gates, owner-review]
 source_of_truth: "../../README.md"
 ---
@@ -176,3 +176,28 @@ session binding or publication choices. Historical PROPOSED statements elsewhere
 original wider scope; the one accepted M1 contract is a separate explicit dated decision.
 Current implementation and actual evidence: [[IMP-MATCH-08_Synthetic_M1]] and
 [[IMP-MATCH-08_Synthetic_M1_Evidence]]. Human Owner retains final implementation review/merge.
+
+## Actual B1 Owner response / final-review request — 2026-11-15
+
+Owner response to the exact B1 question: “ยังไม่อนุมัติ implementation”. Latest instruction agrees
+in principle with mc-b1-pyramid-positive-domain-p1/configb1-pd-typed-config-1/IMP-MATCH-03 synthetic
+pure typed scope, and requests13-point final review before Exact Approval. Exact status:
+NOT APPROVED PENDING FINAL OWNER REVIEW;80/20 remains PROPOSED. No unanswered blank or elapsed
+time converts this response to approval. [[B1_Final_Owner_Review_Summary]] presents the reviewed
+77bfca59... contract and suggested whole-contract approval text, not an answer already given.
+Contract125 and summary24review assertions pass with0open findings; no B1 feature tests or code.
+Data Enrichment/Media Rights Research continue independently. Sample intake approval NOT GRANTED;
+no source rights, normalization,44holds,eligibility,app or Production policy changes.
+
+## Exact B1 Owner approval and implementation start — 2026-11-15
+
+Human Owner explicitly accepted B1-PD-TYPED-1 revision2 SHA-256
+77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977,
+mc-b1-pyramid-positive-domain-p1/configb1-pd-typed-config-1/schemab1-pd-typed-schema-1,
+IMP-MATCH-03 synthetic-only pure typed Python, including4/5Coverage+1/5Focus and all exact rules.
+[[B1_Exact_Owner_Acceptance]] records the actual dated scope/exclusions. This is a new explicit
+decision, not inference from prior NO/principle agreement/PR26merge. Frozen contract and preparation
+snapshots remain unchanged; prior statements are retained dated history.
+[[IMP-MATCH-03_Synthetic_B1]] is IN PROGRESS on codex/imp-match-03-synthetic-b1 from main604d447.
+Actual tests/review are pending, no final receipt/PR. Research B/C continues independently;
+no acquisition/import/rights/publication,real ranking,DB/Production/44hold/eligibility or agent merge.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-14
+updated: 2026-11-15
 tags:
   - doomparfum
   - operations
@@ -575,3 +575,96 @@ into the immutable receipt. matching_math/evidence/m1_file_manifest.json lists a
 Human Owner implementation acceptance/merge remain pending; no automatic merge or activation.
 Current DB NOT REVALIDATED,44holds/rights/eligibility unchanged,PR8stillBLOCKED. Earlier IN PROGRESS/
 pending statements are retained session history. New artifact/execution limits remain unchanged.
+
+## Owner M1 merge and B1 preparation — 2026-11-15
+
+Verified PR26Owner merge604d447e599aa8359d3427dfbfbceaac85373e48 at2026-11-14T21:33:25Z
+(2026-11-15 04:33:25 Asia/Bangkok). M1 head63cb56c54aacef99fa8937e7a5211acca8ae6a63 has exactly
+the same complete Git tree as the merge. Existing M1 code/tests/contract/reports and its one receipt
+are unchanged; all22receipts and8migrations are preserved. No M1 test rerun or repeated planning.
+
+[[B1_Contract_Preparation]] is IN PROGRESS in a new detached latest-main checkout. The existing
+separate IMP-MATCH-03 B1 task remains gated on one exact Owner contract.80/20 remains PROPOSED.
+No B1 implementation branch/runtime/PR/receipt, data/rights/hold/eligibility or Production mutation.
+PR8 remains OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new causal
+timestamp evidence/experiment/fix. Current database counts/role/rights are NOT REVALIDATED.
+Historical pending statements and immutable receipts are retained, not rewritten.
+
+## Final B1 Owner summary and current parallel workstreams — 2026-11-15
+
+[[B1_Final_Owner_Review_Summary]] is complete for the unchanged B1-PD-TYPED-1 contract
+SHA-25677bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977.
+Contract review125/125 and summary review24/24 assertions pass,0open findings. They are static/
+semantic/literal-arithmetic checks, not B1 feature tests. IR-B1-01 property wording and summary
+whole-positive-domain clarity are resolved with initial snapshots retained. Owner answered NOT
+APPROVED and requested final review; principle agreement is not Exact Approval.80/20 stays PROPOSED.
+No implementation branch, code, PR or receipt. Final approval is proposed in the review summary.
+
+Current independent workstreams: A DONE for exact contract/summary, implementation BLOCKED on
+Exact Owner Approval. B PARTIAL: [[B1_Data_Enrichment_and_Acquisition_Backlog]] has full34field
+raw-source audit,18artifact/14static checks and5bounded acquisition packages;4source dossiers
+retain inaccessible/restricted permissions. Acquisition/import NOT ATTEMPTED, current DB UNKNOWN.
+C PARTIAL: [[B1_Media_Rights_Inventory_and_Sample_Proposal]] has23leads(17note/6bottle),4conditional
+per-filelicense dossiers,permission/operation matrix,metadata priority queue and2PNGsample proposal.
+55staticchecks pass. Binary intake/Owner approval/actual technical image tests are NOT STARTED;
+no image download or new grant. Initial duplicated draft/report retained and deduplication verified.
+Both B/C ran in this wave without waiting for B1; neither grants the other's permissions.
+
+Raw-source gaps: concentration251/1479missing,year1399/1479missing;1388raw pyramids/91general.
+These fresh pinned-file counts are not current canonical DB counts or completeness acceptance.
+Material-origin'accord' tags and chemical INCI never become perfume accords/families/notes.
+[[B1_Parallel_Preparation_Checkpoint]] preserves earlier64artifact/10static checks and3historical
+backup/recovery report bindings, not a new restore/backup-file inspection. Current DB/roles/rights
+NOT REVALIDATED.43normalization proposals,44holds,Khamrah and matching eligibility untouched.
+
+Verified main604d447e599aa8359d3427dfbfbceaac85373e48 includes Owner-merged PR26; M1 source/tests/
+contract/evidence and all22receipts/8migrations remain unchanged. No M1 runtime rerun or new receipt.
+PR8 remains OPEN/DRAFT/BLOCKED with original failures, no speculative fix/equivalent experiment.
+No Production mutation, scraper/import, acquisition, normalization promotion, public API/UI or merge.
+Exact local draft/status/evidence snapshots and D1–D9 are coordinator-owned in the next handoff.
+
+## Exact B1 Owner approval and implementation start — 2026-11-15
+
+Human Owner explicitly accepted B1-PD-TYPED-1 revision2 SHA-256
+77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977,
+mc-b1-pyramid-positive-domain-p1/configb1-pd-typed-config-1/schemab1-pd-typed-schema-1,
+IMP-MATCH-03 synthetic-only pure typed Python, including4/5Coverage+1/5Focus and all exact rules.
+[[B1_Exact_Owner_Acceptance]] records the actual dated scope/exclusions. This is a new explicit
+decision, not inference from prior NO/principle agreement/PR26merge. Frozen contract and preparation
+snapshots remain unchanged; prior statements are retained dated history.
+[[IMP-MATCH-03_Synthetic_B1]] is IN PROGRESS on codex/imp-match-03-synthetic-b1 from main604d447.
+Actual tests/review are pending, no final receipt/PR. Research B/C continues independently;
+no acquisition/import/rights/publication,real ranking,DB/Production/44hold/eligibility or agent merge.
+
+## Independent corrected-source review completed — 2026-11-15
+
+Independent reviewer /root/b1_contract_review completed exact-source review at
+fbadf797959ed96f70a8ca4d8924375c26a04a36:247/247 review assertions PASS,0open findings.
+Reviewer independently reran167/167 offline methods,0failures/errors/skips,1.2937761999783106s,
+plus128reviewer-owned state pairs,15negative probes and1valid64x512boundary control. These are
+separate counts, not extra unittest methods or property cases. B1focused48+properties8=56;
+443internal property scorer calls remain separately qualified. Fingerprint semantics NO ISSUE.
+
+IR-B1-IMPL-01 is RESOLVED: all3original cap-precedence cases now return Input bound exceeded
+before member/token scans. Exact AST comparison confirms only shape/token staging and public
+annotations changed; scoring/gate/formula ASTs are identical to initial87c2source. No contract,
+schema, policy, numeric bound or rights change. All original RED/failure/source evidence retained.
+Review report matching_math/evidence/b1_independent_review.json SHA-256 54f1d9be7674efc57ed98259250d618e32f42a444ca64d64a4fcd56c604db1f4.
+The finalized report was written only after actual execution and preserved-evidence bindings.
+
+Agent technical acceptance criteria are met for exact synthetic B1 only. Human Owner implementation
+acceptance/merge still pending. Only metadata/docs/one scoped receipt closeout follows this reviewed
+source; any runtime/test change requires affected retests and renewed independent exact-source review.
+One Draft PR will remain OPEN/DRAFT. No final receipt exists at this checkpoint before PR URL.
+No Full Mode A/B2/real-data/API/UI/transport/DB/liveRLS/replay/recovery/performance/rights acceptance.
+Research16/39static checks are independent bounded metadata work, not acquisition or image approval.
+
+## Draft publication and single receipt — 2026-11-15
+
+PR27:https://github.com/kraveerachat/DoomParfum-By-TK/pull/27 OPEN/DRAFT. Independent final source:fbadf797959ed96f70a8ca4d8924375c26a04a36;code/tests unchanged after review.
+Sole new receipt [[2026-11-15_182615_IMP-MATCH-03_Synthetic_B1]] created2026-11-15T11:26:15.278878+00:00 after finalized actual review.
+Recorded publication checkpoint:fd8d2a21f54d8dbbd209e1c26e30657ba56f7344;final metadata-only commit/remote HEAD belongs to PR/external
+registry, not an immutable receipt rewrite. matching_math/evidence/b1_file_manifest.json lists42paths.
+Agent criteria met;Human Owner reviews/accepts/merges. No real activation or automatic merge.
+All earlier INPROGRESS/NOTAPPROVED statements are dated history. Exact synthetic approval doesnot
+authorize imports/assetbytes/realranking/DB/Production or44hold/eligibility changes. PR8stillBLOCKED.

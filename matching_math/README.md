@@ -4,12 +4,22 @@ project: DoomParfum By TK
 type: package_readme
 status: synthetic-only
 owner: human-owner
-updated: 2026-11-14
+updated: 2026-11-15
 tags: [doomparfum, synthetic, matching]
 source_of_truth: "../README.md"
 ---
 
 # Matching mathematics — synthetic-only modules
+
+Human Owner also accepted B1-PD-TYPED-1 revision2 for IMP-MATCH-03 on2026-11-15 (Asia/Bangkok).
+The separate `synthetic_b1.py` entry point implements the exact pure typed custom-query contract:
+required/optional/excluded gates, exact/any-pyramid domains, canonical query deduplication,
+Coverage4/5+Focus1/5 and deterministic explanations/order. It connects to no real-data adapter,
+database, API/UI or transport parser. Existing primitives and M1 source/tests remain unchanged.
+See the [B1 implementation guide](../Structure%20DB%20Obsidian/04_Matching/Synthetic_B1_Implementation.md),
+[B1 Owner acceptance](../Structure%20DB%20Obsidian/08_Operations/B1_Exact_Owner_Acceptance.md)
+and [B1 actual evidence](../Structure%20DB%20Obsidian/08_Operations/Test_Evidence/IMP-MATCH-03_Synthetic_B1_Evidence.md).
+Focused B1: `python -m unittest matching_math.tests.test_synthetic_b1 matching_math.tests.test_synthetic_b1_properties -v`.
 
 Human Owner explicitly accepted M1-NL-TYPED-1 for IMP-MATCH-08 on 2026-11-14 (Asia/Bangkok).
 The new `synthetic_m1.py` exposes only the exact notes-layered pure typed scorer, with explicit

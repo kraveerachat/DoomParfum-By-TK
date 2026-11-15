@@ -1,0 +1,41 @@
+{
+  "phase": "REVIEW_CORRECTION_RED",
+  "finding": "IR-B1-IMPL-01",
+  "source_commit": "87c2a76b3e4cdad582e09cf30985fd5c00da5e50",
+  "contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "matching_math.tests.test_synthetic_b1.B1Validation.test_all_membership_caps_precede_vocabulary_member_scan",
+    "matching_math.tests.test_synthetic_b1.B1Validation.test_all_membership_caps_precede_earlier_candidate_member_scan",
+    "matching_math.tests.test_synthetic_b1.B1Validation.test_all_membership_caps_precede_earlier_layer_member_scan",
+    "-v"
+  ],
+  "returncode": 1,
+  "tests_run": 3,
+  "executed_feature_test_bodies": 3,
+  "errors": 3,
+  "failures": 0,
+  "seconds": 0.158197,
+  "observed_error": "TypeError: Invalid typed input",
+  "expected_error": "ValueError: Input bound exceeded",
+  "qualification": "All three new feature tests executed against unchanged reviewed runtime; each errored at an early malformed member before the later count cap. The valid-at-bound follow-on assertion in the third test was not reached during RED.",
+  "source_bindings": [
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "sha256": "271a563c29685b0aaf214c334aafa103ccb75678aff4d8639abc4af5662d9b40",
+      "bytes": 21573
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "sha256": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+      "bytes": 33922
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "bytes": 9108
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "phase": "REVIEW_CORRECTION_GREEN",
+  "finding": "IR-B1-IMPL-01",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "matching_math.tests.test_synthetic_b1",
+    "matching_math.tests.test_synthetic_b1_properties",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests_run": 56,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.302462,
+  "new_precedence_controls": 3,
+  "positive_boundary_control": "512 memberships across Top/Base; heart explicitly closed",
+  "property_methods": 8,
+  "property_scorer_calls": 443,
+  "source_bindings": [
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "sha256": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+      "bytes": 22074
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "sha256": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+      "bytes": 33922
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "bytes": 9108
+    }
+  ],
+  "compile_returncode": 0,
+  "contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "parameter_annotations": "Exact accepted input schema types; no default/signature semantics change"
+}

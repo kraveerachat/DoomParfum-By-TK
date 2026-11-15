@@ -1,0 +1,1825 @@
+{
+  "reviewer": "/root/b1_contract_review independent of B1 implementer/coordinator",
+  "at_utc": "2026-11-15T11:19:40.811427+00:00",
+  "reviewed_commit": "fbadf797959ed96f70a8ca4d8924375c26a04a36",
+  "base": "604d447e599aa8359d3427dfbfbceaac85373e48",
+  "approved_contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "source_file_sha256": {
+    "matching_math/synthetic_b1.py": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+    "matching_math/tests/test_synthetic_b1.py": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+    "matching_math/tests/test_synthetic_b1_properties.py": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c"
+  },
+  "changed_paths": [
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/03_Data/B1_Data_Enrichment_and_Acquisition_Backlog.md",
+    "Structure DB Obsidian/03_Data/B1_Media_Rights_Inventory_and_Sample_Proposal.md",
+    "Structure DB Obsidian/03_Data/B1_Parallel_Preparation_Checkpoint.md",
+    "Structure DB Obsidian/03_Data/IMP_MATCH_03_Data_Research_Continuation.md",
+    "Structure DB Obsidian/03_Data/IMP_MATCH_03_Media_Research_Continuation.md",
+    "Structure DB Obsidian/04_Matching/B1_Exact_Owner_Decision_Batch.md",
+    "Structure DB Obsidian/04_Matching/B1_Final_Owner_Review_Summary.md",
+    "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+    "Structure DB Obsidian/04_Matching/Synthetic_B1_Implementation.md",
+    "Structure DB Obsidian/04_Matching/Synthetic_Implementation_Unlock_Checklist.md",
+    "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/B1_Contract_Preparation.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/B1_Exact_Owner_Acceptance.md",
+    "Structure DB Obsidian/08_Operations/B1_Preflight_and_M1_Merge_Reconciliation.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-MATCH-03_Synthetic_B1_Evidence.md",
+    "matching_math/README.md",
+    "matching_math/evidence/b1_first_green_attempt_failure.json",
+    "matching_math/evidence/b1_focused_results.json",
+    "matching_math/evidence/b1_independent_initial_findings.json",
+    "matching_math/evidence/b1_independent_initial_validation_probes.json",
+    "matching_math/evidence/b1_owner_contract.json",
+    "matching_math/evidence/b1_red_results.json",
+    "matching_math/evidence/b1_regression_results.json",
+    "matching_math/evidence/b1_validation_order_green_results.json",
+    "matching_math/evidence/b1_validation_order_red_results.json",
+    "matching_math/synthetic_b1.py",
+    "matching_math/tests/test_synthetic_b1.py",
+    "matching_math/tests/test_synthetic_b1_properties.py"
+  ],
+  "checks": [
+    {
+      "check": "approved_contract_raw_SHA",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "explicit_Owner_exact_synthetic_acceptance",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "executed_source_equals_commit:matching_math/synthetic_b1.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "executed_source_equals_commit:matching_math/tests/test_synthetic_b1.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "executed_source_equals_commit:matching_math/tests/test_synthetic_b1_properties.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:AGENTS.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:DEVELOPMENT_WORKFLOW.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:README.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-10_201028_DPT-PLAN-001_P1_Planning.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_000730_IMP-P1-01_Local_PostgreSQL.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_160700_DPT-PLAN-003_Dual_Mode_Matching.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-11_213752_IMP-P1-02_Licensed_Scento.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_022117_IMP-P1-03_Local_Image_Rights.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-12_024301_DPT-DATA-001_Post_PR5_Review.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_045200_DPT-DATA-002_Offline_Research_Audit.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_103504_IMP-MATCH-01_Read_Only_Input_Adapter.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_152649_DPT-PLAN-004_Planning_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_152650_DPT-DATA-003_Planning_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_153126_DPT-PLAN-005_Planning_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_153139_DPT-PLAN-006_Planning_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-13_202313_DPT-DOC-001_Planning_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020213_DPT-PLAN-007_Preparation_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020227_DPT-DATA-004_Preparation_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_020240_DPT-PLAN-008_Preparation_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_021503_DPT-DOC-002_Preparation_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_031943_DPT-QA-001_Scoped_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160416_DPT-DATA-005_Scoped_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_160537_DPT-DATA-006_Scoped_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_162141_DPT-DOC-003_Scoped_Review_Ready.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/08_Operations/Receipts/2026-11-14_235806_IMP-MATCH-08_Synthetic_M1.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:Structure DB Obsidian/README.md",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/image_validation.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/local.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/matching_input.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/001_identity.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/002_catalogue.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/003_provenance.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/004_associations_media_personal.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/005_contract_functions.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/006_media_and_deferred_contracts.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/007_security_and_field_contract.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/migrations/008_coalesced_deferred_validation.sql",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/performance.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/research_audit.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/scento_etl.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/fixtures.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_deferred_performance.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_foundation.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_image_validation.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_matching_input.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_research_audit.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/tests/test_scento_etl.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/validate_docs.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/verify.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:database/verify_images.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/__init__.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/primitives.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/synthetic_m1.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/tests/test_invariants.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/tests/test_primitives.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/tests/test_synthetic_m1.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base:matching_math/tests/test_synthetic_m1_properties.py",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "protected_base_count57",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all22_existing_receipts",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all8_existing_migrations",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "eight_standalone_preps_byte_exact",
+      "kind": "preservation",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "only_three_authorized_Python_additions",
+      "kind": "scope",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_SQL_raw_dataset_binary_or_config_delta",
+      "kind": "scope",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "runtime_only_stdlib_and_unchanged_SetInput_imports",
+      "kind": "purity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_IO_eval_or_dynamic_import_calls",
+      "kind": "purity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no_mutable_module_global_state",
+      "kind": "purity",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "public_signature_requires_all_four_args",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all18_declared_record_schemas_present",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Query",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Clause",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Profile",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Layer",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1LayerDomain",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Vocabulary",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Config",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1ContextKey",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1QueryKey",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Lineage",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1LayerStatus",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1Occurrence",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1ClauseEvaluation",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1GateSummary",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1PartitionKey",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1CandidateResult",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1PartitionResult",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_frozen_required_schema:B1BatchResult",
+      "kind": "typed_schema",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "independent_combined_offline_suite",
+      "kind": "executed_suite",
+      "pass": true,
+      "detail": "167methods/0failures/0errors/0skips"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('computed', 'computed')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('computed', 'computed')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_absent:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:complete_empty:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_missing_required', 'rejected_missing_required')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:incomplete_empty:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:missing:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:required:mismatch_incomplete:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_required_domain', 'unverified_required_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('computed', 'computed')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('computed', 'computed')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_no_positive_match', 'rejected_no_positive_match')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_no_positive_match', 'rejected_no_positive_match')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_absent:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_no_positive_match', 'rejected_no_positive_match')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_no_positive_match', 'rejected_no_positive_match')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:complete_empty:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:incomplete_empty:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:missing:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_present:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:complete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:complete_absent",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:complete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_positive_domain', 'unverified_positive_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:incomplete_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('rejected_excluded', 'rejected_excluded')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:incomplete_empty",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:missing",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:mismatch_present",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "independent_state_pair:optional:mismatch_incomplete:mismatch_incomplete",
+      "kind": "reviewer_state_probe",
+      "pass": true,
+      "detail": "('unverified_exclusion_domain', 'unverified_exclusion_domain')"
+    },
+    {
+      "check": "global_cap_before_vocabulary_member_scan",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Input bound exceeded')"
+    },
+    {
+      "check": "global_cap_before_earlier_candidate_member_scan",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Input bound exceeded')"
+    },
+    {
+      "check": "global_cap_before_earlier_layer_member_scan",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Input bound exceeded')"
+    },
+    {
+      "check": "fingerprint:wrong_digest",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid fixture vocabulary')"
+    },
+    {
+      "check": "fingerprint:uppercase_syntax",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid identifier')"
+    },
+    {
+      "check": "fingerprint:short_syntax",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid identifier')"
+    },
+    {
+      "check": "malformed_fraction:6",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('TypeError', 'Invalid typed input')"
+    },
+    {
+      "check": "malformed_fraction:7",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('TypeError', 'Invalid typed input')"
+    },
+    {
+      "check": "malformed_fraction:8",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Unsupported configuration')"
+    },
+    {
+      "check": "malformed_fraction:9",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Unsupported configuration')"
+    },
+    {
+      "check": "query:excluded_only",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid empty positive query')"
+    },
+    {
+      "check": "query:all_zero",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid empty positive query')"
+    },
+    {
+      "check": "no_partial_output_bad_last_candidate",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Invalid fixture lineage')"
+    },
+    {
+      "check": "raw31_before_malformed_record",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Input bound exceeded')"
+    },
+    {
+      "check": "candidate65_before_scan",
+      "kind": "reviewer_negative_probe",
+      "pass": true,
+      "detail": "('ValueError', 'Input bound exceeded')"
+    },
+    {
+      "check": "reviewer_at_bound64x512_complete_control",
+      "kind": "reviewer_positive_control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact_HEAD_preserved_after_review",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "working_tree_clean_after_review",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source_unchanged_after_execution:matching_math/synthetic_b1.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source_unchanged_after_execution:matching_math/tests/test_synthetic_b1.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source_unchanged_after_execution:matching_math/tests/test_synthetic_b1_properties.py",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "contract_unchanged_after_review",
+      "kind": "source_binding",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "IR_B1_IMPL_01_three_global_count_controls_resolved",
+      "kind": "finding_resolution",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "original_RED_import_failure_and_exact_test_snapshots_retained",
+      "kind": "historical_evidence",
+      "pass": true,
+      "detail": "Post-execution source/failure evidence binding; no test reenactment"
+    },
+    {
+      "check": "first_GREEN_fixture_failure_and_failed_source_retained",
+      "kind": "historical_evidence",
+      "pass": true,
+      "detail": "Post-execution source/failure evidence binding; no test reenactment"
+    },
+    {
+      "check": "three_targeted_RED_feature_errors_bound_to_initial_reviewed_source",
+      "kind": "historical_evidence",
+      "pass": true,
+      "detail": "Post-execution source/failure evidence binding; no test reenactment"
+    },
+    {
+      "check": "correction_changes_only_two_pass_validation_and_public_annotations",
+      "kind": "targeted_correction_scope",
+      "pass": true,
+      "detail": "Post-execution source/failure evidence binding; no test reenactment"
+    }
+  ],
+  "check_kind_counts": {
+    "executed_suite": 1,
+    "finding_resolution": 1,
+    "historical_evidence": 3,
+    "preservation": 61,
+    "purity": 3,
+    "reviewer_negative_probe": 15,
+    "reviewer_positive_control": 1,
+    "reviewer_state_probe": 128,
+    "scope": 2,
+    "source_binding": 11,
+    "targeted_correction_scope": 1,
+    "typed_schema": 20
+  },
+  "passed": 247,
+  "failed": 0,
+  "findings": [],
+  "executed_tests": {
+    "command": "python .local/b1-independent-review/run_review.py <SOURCE_COMMIT>",
+    "components": {
+      "math_all_including_M1_B1": 136,
+      "research_offline": 17,
+      "adapter_offline": 14
+    },
+    "methods": 167,
+    "failures": 0,
+    "errors": 0,
+    "skips": 0,
+    "duration_seconds": 1.2937761999783106,
+    "B1_focused_methods": 48,
+    "B1_property_methods": 8,
+    "B1_property_scorer_calls": 443,
+    "baseline_existing_methods": 111
+  },
+  "independent_reviewer_probes": {
+    "state_pairs": 128,
+    "negative_cases": 15,
+    "at_bound_controls": 1,
+    "negative_results": [
+      {
+        "case": "global_cap_before_vocabulary_member_scan",
+        "expected": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "observed": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "pass": true
+      },
+      {
+        "case": "global_cap_before_earlier_candidate_member_scan",
+        "expected": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "observed": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "pass": true
+      },
+      {
+        "case": "global_cap_before_earlier_layer_member_scan",
+        "expected": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "observed": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "pass": true
+      },
+      {
+        "case": "fingerprint:wrong_digest",
+        "expected": [
+          "ValueError",
+          "Invalid fixture vocabulary"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid fixture vocabulary"
+        ],
+        "pass": true
+      },
+      {
+        "case": "fingerprint:uppercase_syntax",
+        "expected": [
+          "ValueError",
+          "Invalid identifier"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid identifier"
+        ],
+        "pass": true
+      },
+      {
+        "case": "fingerprint:short_syntax",
+        "expected": [
+          "ValueError",
+          "Invalid identifier"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid identifier"
+        ],
+        "pass": true
+      },
+      {
+        "case": "malformed_fraction:6",
+        "expected": [
+          "TypeError",
+          "Invalid typed input"
+        ],
+        "observed": [
+          "TypeError",
+          "Invalid typed input"
+        ],
+        "pass": true
+      },
+      {
+        "case": "malformed_fraction:7",
+        "expected": [
+          "TypeError",
+          "Invalid typed input"
+        ],
+        "observed": [
+          "TypeError",
+          "Invalid typed input"
+        ],
+        "pass": true
+      },
+      {
+        "case": "malformed_fraction:8",
+        "expected": [
+          "ValueError",
+          "Unsupported configuration"
+        ],
+        "observed": [
+          "ValueError",
+          "Unsupported configuration"
+        ],
+        "pass": true
+      },
+      {
+        "case": "malformed_fraction:9",
+        "expected": [
+          "ValueError",
+          "Unsupported configuration"
+        ],
+        "observed": [
+          "ValueError",
+          "Unsupported configuration"
+        ],
+        "pass": true
+      },
+      {
+        "case": "query:excluded_only",
+        "expected": [
+          "ValueError",
+          "Invalid empty positive query"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid empty positive query"
+        ],
+        "pass": true
+      },
+      {
+        "case": "query:all_zero",
+        "expected": [
+          "ValueError",
+          "Invalid empty positive query"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid empty positive query"
+        ],
+        "pass": true
+      },
+      {
+        "case": "no_partial_output_bad_last_candidate",
+        "expected": [
+          "ValueError",
+          "Invalid fixture lineage"
+        ],
+        "observed": [
+          "ValueError",
+          "Invalid fixture lineage"
+        ],
+        "pass": true
+      },
+      {
+        "case": "raw31_before_malformed_record",
+        "expected": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "observed": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "pass": true
+      },
+      {
+        "case": "candidate65_before_scan",
+        "expected": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "observed": [
+          "ValueError",
+          "Input bound exceeded"
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "initial_findings_retained": {
+    "reviewer": "/root/b1_contract_review",
+    "reviewed_commit": "87c2a76b3e4cdad582e09cf30985fd5c00da5e50",
+    "approved_contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+    "status": "REVIEW_IN_PROGRESS_WITH_TARGETED_FINDING",
+    "findings": [
+      {
+        "id": "IR-B1-IMPL-01",
+        "severity": "MEDIUM",
+        "status": "OPEN",
+        "file": "matching_math/synthetic_b1.py",
+        "symbol": "_shapes",
+        "issue": "Vocabulary and earlier layer/candidate note members are scanned for type/token length before every candidate/layer membership cap has been checked. This violates the approved global bounded-shape/count stage before member scans and changes the specified error-stage precedence.",
+        "actual_evidence": "Three independent cases combine an early malformed member type with a later513-membership layer. Current code raises TypeError Invalid typed input while the global count stage should first reject ValueError Input bound exceeded. Probe cases cover vocabulary-before-candidate, earlier-candidate-before-later-candidate and earlier-layer-before-later-layer.",
+        "expected_correction": "Separate bounded container/record-shape and complete membership-count pass from all vocabulary/profile/layer/query token/member scans. Preserve exact types needed to inspect containers safely, then enforce every512/32768 cap before scanning any member values; do not alter accepted policies/errors or weaken validation.",
+        "future_regression_controls": "Add explicit negative tests for all three precedence cases and a valid-at-bound control. Preserve original probe report and rerun focused/regression after the targeted source correction.",
+        "scope": "Approved contract conformance and bounded resource validation; no demonstrated data/rights bypass or scoring-formula defect"
+      }
+    ],
+    "fingerprint_taxonomy_assessment": "No additional finding: a well-formed64hex but wrong digest is Invalid fixture vocabulary; malformed strict fingerprint syntax is Invalid identifier under the contract syntax-stage category. All observed messages are fixed and bounded.",
+    "actual_probe_artifact": "INITIAL_VALIDATION_PROBES.json",
+    "DB_calls": 0,
+    "network_calls": 0,
+    "source_Git_edits": false,
+    "final_acceptance": "PENDING_TARGETED_CORRECTION_AND_EXACT_SOURCE_REVIEW"
+  },
+  "resolved_findings": [
+    "IR-B1-IMPL-01"
+  ],
+  "fingerprint_taxonomy_assessment": "Strict malformed syntax is Invalid identifier; valid-hex wrong digest is Invalid fixture vocabulary under separate syntax/value stages",
+  "semantic_review": [
+    "Complete approved record/error/gate schemas and all current runtime/test source read directly",
+    "Exact required/optional/exclusion/any-layer/positive-domain assignment, diagnostics, formula and output/ordering semantics reviewed against accepted77bf contract",
+    "No source rights/auth/real-data activation inferred; no code, documentation or receipt edits"
+  ],
+  "preservation": {
+    "protected_base_files": 57,
+    "existing_receipts": 22,
+    "migrations": 8,
+    "frozen_standalone_preps": 8
+  },
+  "DB_calls": 0,
+  "network_calls": 0,
+  "Git_writes": 0,
+  "source_edits": 0,
+  "limits": [
+    "Synthetic typed B1 only; not real-source completeness, rights, eligibility, app/publication or Production acceptance",
+    "No DB/live RLS/replay/recovery/API/UI/transport/8KiB/performance/relevance tests run",
+    "Review assertion/probe counts are separate from unittest method/property-call counts; no latency/capacity claim",
+    "Original RED/finding evidence retained; coordinator owns one scoped final receipt and Human Owner retains merge"
+  ],
+  "verifier_sha256": "3eb24258a4443572fbfb6675401067376e575d74fb25a0a7633e9be7db95f99d",
+  "report_state": "COMPLETE",
+  "execution_completed_at_utc": "2026-11-15T11:16:03.578931+00:00",
+  "finalized_at_utc": "2026-11-15T11:19:40.811427+00:00",
+  "open_findings": [],
+  "targeted_correction_changed_functions": [
+    "_shapes",
+    "_token_shapes",
+    "score_synthetic_b1"
+  ],
+  "source_sha256": {
+    "matching_math/synthetic_b1.py": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+    "matching_math/tests/test_synthetic_b1.py": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+    "matching_math/tests/test_synthetic_b1_properties.py": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c"
+  },
+  "historical_failure_qualification": "Original absent-module RED and fixture failure, initial independent finding/probes, and three actual new RED feature errors retained; no historical failure reenacted during final review",
+  "metadata_completion_note": "Four post-execution evidence/AST bindings added without changing runtime/test source or rerunning the suite."
+}

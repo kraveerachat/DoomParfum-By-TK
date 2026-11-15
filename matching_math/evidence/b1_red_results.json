@@ -1,0 +1,30 @@
+{
+  "phase": "RED",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "matching_math.tests.test_synthetic_b1",
+    "matching_math.tests.test_synthetic_b1_properties",
+    "-v"
+  ],
+  "returncode": 1,
+  "seconds": 0.188629,
+  "tests_run": 2,
+  "import_errors": 2,
+  "feature_test_bodies_executed": 0,
+  "qualification": "Absent synthetic_b1 module caused both test-module imports to fail; no feature bodies executed. Tests and snapshots existed before runtime source.",
+  "source_bindings": [
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "sha256": "21b80e694e36f1a067978e9b9b236ab6037348730251a13368a2f3ef1a426844",
+      "bytes": 24509
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "bytes": 9108
+    }
+  ],
+  "contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977"
+}
