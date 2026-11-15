@@ -658,3 +658,13 @@ source; any runtime/test change requires affected retests and renewed independen
 One Draft PR will remain OPEN/DRAFT. No final receipt exists at this checkpoint before PR URL.
 No Full Mode A/B2/real-data/API/UI/transport/DB/liveRLS/replay/recovery/performance/rights acceptance.
 Research16/39static checks are independent bounded metadata work, not acquisition or image approval.
+
+## Draft publication and single receipt — 2026-11-15
+
+PR27:https://github.com/kraveerachat/DoomParfum-By-TK/pull/27 OPEN/DRAFT. Independent final source:fbadf797959ed96f70a8ca4d8924375c26a04a36;code/tests unchanged after review.
+Sole new receipt [[2026-11-15_182615_IMP-MATCH-03_Synthetic_B1]] created2026-11-15T11:26:15.278878+00:00 after finalized actual review.
+Recorded publication checkpoint:fd8d2a21f54d8dbbd209e1c26e30657ba56f7344;final metadata-only commit/remote HEAD belongs to PR/external
+registry, not an immutable receipt rewrite. matching_math/evidence/b1_file_manifest.json lists42paths.
+Agent criteria met;Human Owner reviews/accepts/merges. No real activation or automatic merge.
+All earlier INPROGRESS/NOTAPPROVED statements are dated history. Exact synthetic approval doesnot
+authorize imports/assetbytes/realranking/DB/Production or44hold/eligibility changes. PR8stillBLOCKED.
