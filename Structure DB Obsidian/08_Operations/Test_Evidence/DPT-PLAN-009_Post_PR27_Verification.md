@@ -40,6 +40,10 @@ C's first author check recorded 88 PASS and two raw-contract-hash failures in th
 
 ## Verification still being completed
 
+Independent review of checkpoint `aeb9b4c483e01a083ec867d6d9becd64503ac201` identified **IR-P27-01, MEDIUM**: three A evidence identifier fields appended proposal-status suffixes although the exact proposal note/Owner packet use unsuffixed task/transform/schema IDs. The author changed only those three JSON values to `IMP-ENR-01`, `enr-pinned-scento-preview-1` and `enr-pinned-scento-preview-schema-1`. Separate `pilot.status` remains `PROPOSED_NOT_APPROVED`; no approval, source field, transform semantics or runtime changed. Original JSON SHA-256 `f4bf3037f64ac7800ba882a540d630c95b2a1e0025e15adc36c1a22ddf179097` is preserved in Git checkpoint history and ignored `A/INITIAL_BEFORE_IR_P27_01.json`. Corrected JSON SHA-256 is `22adbb15e66b1ea27a424f1f3caba163e34fb9c6f0c980d3cd5429e78fb84067`.
+
+The original three mismatches were reproduced and retained; 25/25 targeted author checks now verify exact note/packet/JSON IDs and unchanged proposal status. [Correction evidence](Post_PR27_Data_Identity_Correction.json) records the precise delta. Original 72 source/count/preservation assertions remain historical execution proof, not an assertion that the initial three IDs agreed. Independent corrected-source closeout is pending and is not claimed by these author checks.
+
 Coordinator final source/receipt/contract/history preservation, documentation/link/frontmatter/table/common-secret checks, independent planning review, staged diff, exact publication head and latest handoff validation will be recorded before final delivery. No PASS is claimed for those unfinished operations here.
 
 Existing B1 archive history is preserved: original independent 63 PASS/three oracle false failures, independent operand diagnosis and coordinator-only targeted three-check resolution. Do not relabel that historical result as 66 independently rerun checks.

@@ -855,8 +855,8 @@
     "id": "ENR-PINNED-SCENTO-1",
     "revision": 1,
     "status": "PROPOSED_NOT_APPROVED",
-    "future_task": "IMP-ENR-01_PROPOSED_ONLY",
-    "transform_version": "enr-pinned-scento-preview-1_PROPOSED",
+    "future_task": "IMP-ENR-01",
+    "transform_version": "enr-pinned-scento-preview-1",
     "records": [
       {
         "file": "perfumes.csv",
@@ -927,7 +927,7 @@
     "maximum_source_records": 5,
     "canonical_writes": 0,
     "new_source_records": 0,
-    "schema_version": "enr-pinned-scento-preview-schema-1_PROPOSED",
+    "schema_version": "enr-pinned-scento-preview-schema-1",
     "fixed_total_input_bytes": 905307,
     "maximum_review_field_slots_including_IDs_and_URLs": 46,
     "proposed_fields": {

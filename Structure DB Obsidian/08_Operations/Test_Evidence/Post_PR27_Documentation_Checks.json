@@ -1,13 +1,13 @@
 {
   "task": "DPT-PLAN-009",
-  "at_utc": "2026-11-15T16:47:55.010672+00:00",
+  "at_utc": "2026-11-15T16:57:14.371370+00:00",
   "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
   "branch": "plan/post-pr27-next-wave",
   "counts": {
     "markdown": 20,
     "frontmatter": 20,
     "wiki_links": 487,
-    "local_links": 11,
+    "local_links": 12,
     "tables": 57
   },
   "changed_paths": [
@@ -31,7 +31,9 @@
     "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
     "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
     "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json",
     "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
     "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json",
     "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md",
     "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json",
