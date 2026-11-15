@@ -1,0 +1,97 @@
+{
+  "phase": "FOCUSED_GREEN",
+  "command": [
+    "python",
+    "-m",
+    "unittest",
+    "matching_math.tests.test_synthetic_b1",
+    "matching_math.tests.test_synthetic_b1_properties",
+    "-v"
+  ],
+  "returncode": 0,
+  "tests_run": 53,
+  "golden_negative_schema_boundary_methods": 45,
+  "property_methods": 8,
+  "failures": 0,
+  "errors": 0,
+  "seconds": 0.28654,
+  "property_scorer_calls": {
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_1_exhaustive_complete_subsets_and_seeded_states": 320,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_2_permutations_and_duplicates": 25,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_3_normalization_conflicts_assignment": 10,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_4_positive_and_excluded_domain_monotonicity": 27,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_5_closure_cannot_manufacture_pass": 14,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_6_order_conservation_partition_identity": 39,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_7_frozen_schema_types_bounded_no_payload": 1,
+    "matching_math.tests.test_synthetic_b1_properties.B1Properties.test_family_8_no_fallback_and_directional_weights": 7
+  },
+  "property_total_scorer_calls": 443,
+  "property_case_detail": {
+    "family_1_complete_subset_combinations": 192,
+    "family_1_seeded_unavailable_states": 128,
+    "family_2_query_candidate_permutation_combinations": 12,
+    "family_2_set_construction_permutations": 6,
+    "family_4_fixed_assignment_monotonic_comparisons": 12,
+    "family_6_seeded_candidate_permutations": 32,
+    "seeds": [
+      20261115,
+      88
+    ]
+  },
+  "coverage": [
+    "MC-B01 through MC-B14",
+    "MC-B15 unsupported flat/general controls",
+    "B1-X01 through B1-X10",
+    "all18 frozen record schemas",
+    "0/30/31 raw clauses and30 normalized",
+    "0/64/65 candidates",
+    "512/513 vocabulary and per-candidate membership bounds including incomplete/irrelevant",
+    "32768 reachable total; no independent excess fixture claimed",
+    "128/129 token and numeric bit caps",
+    "malformed Fraction internals and forged missing fields",
+    "canonical-only identity, unknown rejection, fixed config, no defaults",
+    "strict closure gates, nullable diagnostics, known subsets, reason precedence",
+    "positive-domain focus, exact assignment, sort before half-up display",
+    "eight bounded standard-library property families"
+  ],
+  "source_bindings": [
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "sha256": "271a563c29685b0aaf214c334aafa103ccb75678aff4d8639abc4af5662d9b40",
+      "bytes": 21573
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "sha256": "4269ff5c9474dba539b792acfd441166f208199294085f081ef1a4333b624826",
+      "bytes": 32287
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "bytes": 9108
+    }
+  ],
+  "contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "compile_check": {
+    "command": [
+      "python",
+      "-m",
+      "py_compile",
+      "matching_math/synthetic_b1.py",
+      "matching_math/tests/test_synthetic_b1.py",
+      "matching_math/tests/test_synthetic_b1_properties.py"
+    ],
+    "returncode": 0
+  },
+  "earlier_failures": [
+    "b1_red_results.json: two absent-module import failures; zero feature bodies",
+    "b1_first_green_attempt_failure.json: one test fixture expectation corrected; runtime accepted unchanged all-digit uppercase ID correctly"
+  ],
+  "scope": "Synthetic-only exact typed B1; no Full Mode A/B2/real data/DB/API/UI/transport/performance claims",
+  "not_run": [
+    "SQL/live RLS/replay/recovery",
+    "API/UI/transport",
+    "real relevance/performance/capacity/SLA",
+    "parent-owned existing111regressions and independent review"
+  ]
+}

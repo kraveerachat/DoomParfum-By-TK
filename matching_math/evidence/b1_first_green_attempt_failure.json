@@ -1,0 +1,23 @@
+{
+  "phase": "FIRST_GREEN_ATTEMPT",
+  "returncode": 1,
+  "tests_run": 45,
+  "failures": 1,
+  "errors": 0,
+  "seconds": 0.280411,
+  "cause": "Test fixture used uppercase on perfume UUID suffix 1, which contains no letters and remains a valid identifier. Test expectation was wrong; runtime correctly accepted it.",
+  "source_bindings": [
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "sha256": "b75720fdac5452b17e51e1cae9cea71ebc3b38a8db39d27a8381fe9387875769"
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "sha256": "21b80e694e36f1a067978e9b9b236ab6037348730251a13368a2f3ef1a426844"
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c"
+    }
+  ]
+}

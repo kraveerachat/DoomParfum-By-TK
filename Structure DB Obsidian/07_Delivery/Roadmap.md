@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-13
+updated: 2026-11-15
 tags:
   - doomparfum
   - delivery
@@ -275,3 +275,28 @@ IMP-MATCH-08 exact synthetic M1 meets agent criteria:49focused/property and111co
 offline methods PASS; independent167review assertions/111rerun PASS,0findings.
 [[IMP-MATCH-08_Synthetic_M1]] remains pending Human Owner review/merge via one Draft PR.
 Next B1 contract, broader policies and real-data/application/source gates remain separate.
+
+## Post-M1 exact B1 Owner gate — 2026-11-15
+
+PR26 is Owner-merged at604d447e599aa8359d3427dfbfbceaac85373e48. [[B1_Contract_Preparation]]
+contains current execution facts. [[B1_Positive_Domain_Typed_Contract]] / [[B1_Exact_Owner_Decision_Batch]]
+and [[B1_Final_Owner_Review_Summary]] bind the reviewed77bfca59... proposal. Owner explicitly has
+not approved implementation; current principle agreement is not exact version/hash acceptance.
+Target IMP-MATCH-03 remains synthetic-only pure typed Python after exact approval;80/20 PROPOSED.
+No branch/code/PR/receipt or broader DM/OP/source/real-data/app approval is inferred.
+[[B1_Data_Enrichment_and_Acquisition_Backlog]] and [[B1_Media_Rights_Inventory_and_Sample_Proposal]]
+are separate current-wave bounded research outputs; import/binary intake and rights remain gated.
+
+## Exact synthetic B1 scope accepted — 2026-11-15
+
+[[B1_Exact_Owner_Acceptance]] records explicit Human Owner approval of B1-PD-TYPED-1 revision2,
+SHA-25677bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977,
+mc-b1-pyramid-positive-domain-p1/configb1-pd-typed-config-1/schemab1-pd-typed-schema-1.
+This accepts the complete4/5Coverage+1/5Focus typed synthetic IMP-MATCH-03 contract and its
+exact gates, schemas, bounds, errors and ordering. Earlier NOT APPROVED and principle-only entries
+remain dated history. Other broader DM/OP, real-source closure, rights, alias, app/session,
+publication and acquisition choices are not accepted by this scoped decision.
+[[IMP-MATCH-03_Synthetic_B1]] owns current implementation/TDD/evidence/review status. Only one
+task branch/Draft PR is authorized; no agent merge or real-data activation. Existing M1 unchanged.
+[[IMP_MATCH_03_Data_Research_Continuation]] and [[IMP_MATCH_03_Media_Research_Continuation]] record
+separate bounded research done in parallel: no entity/API/sample acquisition or image bytes.

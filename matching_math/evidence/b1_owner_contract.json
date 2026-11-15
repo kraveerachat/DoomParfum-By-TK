@@ -1,0 +1,165 @@
+{
+  "decision_id": "OWNER-B1-PD-TYPED-1-20261115",
+  "Owner": "Human Owner",
+  "owner_date_Asia_Bangkok": "2026-11-15",
+  "recorded_at_utc": "2026-11-15T10:50:22.572331+00:00",
+  "source": "Direct explicit user message HUMAN OWNER APPROVAL — SYNTHETIC MODE B1",
+  "contract_id": "B1-PD-TYPED-1",
+  "revision": 2,
+  "contract_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+  "method_id": "mc-b1-pyramid-positive-domain-p1",
+  "config_id": "b1-pd-typed-config-1",
+  "schema_id": "b1-pd-typed-schema-1",
+  "task": "IMP-MATCH-03",
+  "status": "ACCEPTED_EXACT_SYNTHETIC_SCOPE",
+  "scope": [
+    "pure typed Python",
+    "exact approved config",
+    "Coverage4/5+Focus1/5",
+    "required/optional/excluded",
+    "exact/any-pyramid",
+    "hard rules/contradictions",
+    "missing/unknown/incomplete",
+    "canonical synthetic IDs",
+    "exact bounds/validation",
+    "deterministic ordering/explanations",
+    "RED then GREEN",
+    "golden/property/regression tests",
+    "independent implementation review",
+    "isolated branch",
+    "one Draft PR"
+  ],
+  "not_authorized": [
+    "Full Mode A",
+    "B2",
+    "API/UI",
+    "transport or8KiB parser",
+    "real-data ranking",
+    "DB/Production mutation",
+    "source/image acquisition",
+    "normalization promotion",
+    "44holds/eligibility changes",
+    "agent merge"
+  ],
+  "base": "604d447e599aa8359d3427dfbfbceaac85373e48",
+  "branch": "codex/imp-match-03-synthetic-b1",
+  "preserved_preparation": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "sha256": "bedd8a391c6296ce39f17ed622e6bb8b5769aa85a87d0ed84a778a145fd53604",
+      "bytes": 14252,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "sha256": "791bba92952238ef352f90176f4c0d0476e6f4eda506559ae13dc725838725e8",
+      "bytes": 33800,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/B1_Data_Enrichment_and_Acquisition_Backlog.md",
+      "sha256": "d518856641e543bfbb8d731e8f9f9ad663a9719b6668d6f9d6ec38b2bc6be958",
+      "bytes": 19369,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/B1_Media_Rights_Inventory_and_Sample_Proposal.md",
+      "sha256": "c4a296c07c6f2758e6e7673984a736c4b3fc4c5ae3b43aa290fb5392245a2fe6",
+      "bytes": 28248,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/B1_Parallel_Preparation_Checkpoint.md",
+      "sha256": "2a7f7030ecfd0ade5cd40b58b8520978ed1df24d2a01378a6d38cbf5b2f689c8",
+      "bytes": 13397,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Exact_Owner_Decision_Batch.md",
+      "sha256": "35a64a41051abd5f8cdc38f4528086e4bf8e1d43342aa7bb5fe7407a1eaadc27",
+      "bytes": 6330,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Final_Owner_Review_Summary.md",
+      "sha256": "3ea8205733960570bc9988e14625f3d419d7e05b5eee96ab1e8b64acbdfd2450",
+      "bytes": 17439,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+      "bytes": 40403,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/Synthetic_Implementation_Unlock_Checklist.md",
+      "sha256": "4fe64babfde27c3d33dc96427300c8a2d25580fbd9f67667ef4563d42ae32507",
+      "bytes": 16808,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "sha256": "84dedda193a1f95dd45144793175af36e2eadd5c3badd655054854111d5eb8fc",
+      "bytes": 8444,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "sha256": "2c7bd848432e32d3d951c911e0fe1feb054adf20259d7d6d70bb239a650224cf",
+      "bytes": 23286,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "sha256": "2cd8dab4b27afd9cc5a9725070c6b57afa0f7f92a7a526a97b3c6a13f4882da4",
+      "bytes": 20094,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/B1_Contract_Preparation.md",
+      "sha256": "fefd5b69616d1395ad92498b0db8084881be87b7ad2c3fd4c47f71077236ea11",
+      "bytes": 8183,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+      "sha256": "b80b6c7e3f64c795e87752eae5ed580c2dcea6736973e8fc16119c9b6ff21ad2",
+      "bytes": 7581,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "sha256": "b814f26d2f0f58676249b506b5b03eb6e12d3b30b90a8e308fd88231bc477a70",
+      "bytes": 61752,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/B1_Preflight_and_M1_Merge_Reconciliation.md",
+      "sha256": "60ec1ffbabefec04980416feedb75963105e656a042c9ec61519941373eab9ed",
+      "bytes": 3804,
+      "preservation": "FROZEN_STANDALONE"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "sha256": "800b2a04dfb381ce5ecfc10b77d07de5e91ffec775296e14cf0de1b4e71c151a",
+      "bytes": 49327,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "sha256": "f17b2ef3eb04c436733be8acb536502d87239baac5b8e73c0632e60e1128a636",
+      "bytes": 27676,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "sha256": "1f487724f145d8411617c09b590836c1c314080f9cb06cab8a3b7c4dafa1e0e0",
+      "bytes": 18146,
+      "preservation": "SNAPSHOTTED_SHARED_HISTORY_APPEND_ONLY"
+    }
+  ],
+  "standalone_frozen_files": 8,
+  "shared_history_snapshots": 11,
+  "notice": "Frozen proposal/summary retains historical not-approved wording; this separate explicit dated approval supersedes that gate. Other data/media/app decisions are not accepted."
+}

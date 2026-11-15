@@ -2,9 +2,9 @@
 id: IMP-MATCH-08
 project: DoomParfum By TK
 type: implementation_task
-status: ready-for-human-review-draft
+status: owner-merged-synthetic-m1
 owner: human-owner
-updated: 2026-11-14
+updated: 2026-11-15
 tags: [doomparfum, synthetic, matching, m1]
 source_of_truth: "../../../README.md"
 ---
@@ -91,3 +91,17 @@ into the immutable receipt. matching_math/evidence/m1_file_manifest.json lists a
 Human Owner implementation acceptance/merge remain pending; no automatic merge or activation.
 Current DB NOT REVALIDATED,44holds/rights/eligibility unchanged,PR8stillBLOCKED. Earlier IN PROGRESS/
 pending statements are retained session history. New artifact/execution limits remain unchanged.
+
+## Owner M1 merge and B1 preparation — 2026-11-15
+
+Verified PR26Owner merge604d447e599aa8359d3427dfbfbceaac85373e48 at2026-11-14T21:33:25Z
+(2026-11-15 04:33:25 Asia/Bangkok). M1 head63cb56c54aacef99fa8937e7a5211acca8ae6a63 has exactly
+the same complete Git tree as the merge. Existing M1 code/tests/contract/reports and its one receipt
+are unchanged; all22receipts and8migrations are preserved. No M1 test rerun or repeated planning.
+
+[[B1_Contract_Preparation]] is IN PROGRESS in a new detached latest-main checkout. The existing
+separate IMP-MATCH-03 B1 task remains gated on one exact Owner contract.80/20 remains PROPOSED.
+No B1 implementation branch/runtime/PR/receipt, data/rights/hold/eligibility or Production mutation.
+PR8 remains OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new causal
+timestamp evidence/experiment/fix. Current database counts/role/rights are NOT REVALIDATED.
+Historical pending statements and immutable receipts are retained, not rewritten.

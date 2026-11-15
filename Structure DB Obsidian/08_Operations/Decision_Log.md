@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-14
+updated: 2026-11-15
 tags:
   - doomparfum
   - operations
@@ -289,3 +289,42 @@ IN PROGRESS. All five preparation documents and existing immutable receipts/migr
 preserved. New code/test work uses TDD and requires independent exact implementation review
 before agent acceptance/one Draft PR. PR8 stays OPEN/DRAFT/BLOCKED; no timestamp experiment.
 No database mutation, real ranking, acquisition, hold/eligibility or Production change.
+
+## Owner M1 merge and B1 preparation — 2026-11-15
+
+Verified PR26Owner merge604d447e599aa8359d3427dfbfbceaac85373e48 at2026-11-14T21:33:25Z
+(2026-11-15 04:33:25 Asia/Bangkok). M1 head63cb56c54aacef99fa8937e7a5211acca8ae6a63 has exactly
+the same complete Git tree as the merge. Existing M1 code/tests/contract/reports and its one receipt
+are unchanged; all22receipts and8migrations are preserved. No M1 test rerun or repeated planning.
+
+[[B1_Contract_Preparation]] is IN PROGRESS in a new detached latest-main checkout. The existing
+separate IMP-MATCH-03 B1 task remains gated on one exact Owner contract.80/20 remains PROPOSED.
+No B1 implementation branch/runtime/PR/receipt, data/rights/hold/eligibility or Production mutation.
+PR8 remains OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new causal
+timestamp evidence/experiment/fix. Current database counts/role/rights are NOT REVALIDATED.
+Historical pending statements and immutable receipts are retained, not rewritten.
+
+## Owner holds implementation pending final review — 2026-11-15
+
+Owner explicitly answered “ยังไม่อนุมัติ implementation”, then agreed in principle with method/config/
+IMP-MATCH-03 synthetic-only pure typed scope while requesting a13-point final summary before Exact Approval.
+[[B1_Final_Owner_Review_Summary]] now records the exact77bfca59... contract, formulas/examples, schemas,
+gates, bounds, deterministic output, future tests, independent125review and exclusions. Contract bytes
+and125-review artifact are unchanged. Three fresh literal rational example assertions pass; no B1
+evaluator/feature test runs. No implementation branch, source, PR or receipt is created.
+The previous question is answered NOT APPROVED; do not treat principle agreement as exact acceptance.
+Final Owner Approval is proposed only after the summary is reviewable. Workstreams B/C resumed from
+their preserved partial evidence and remain independent in this current wave; no import/asset download.
+
+## Exact B1 Owner approval and implementation start — 2026-11-15
+
+Human Owner explicitly accepted B1-PD-TYPED-1 revision2 SHA-256
+77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977,
+mc-b1-pyramid-positive-domain-p1/configb1-pd-typed-config-1/schemab1-pd-typed-schema-1,
+IMP-MATCH-03 synthetic-only pure typed Python, including4/5Coverage+1/5Focus and all exact rules.
+[[B1_Exact_Owner_Acceptance]] records the actual dated scope/exclusions. This is a new explicit
+decision, not inference from prior NO/principle agreement/PR26merge. Frozen contract and preparation
+snapshots remain unchanged; prior statements are retained dated history.
+[[IMP-MATCH-03_Synthetic_B1]] is IN PROGRESS on codex/imp-match-03-synthetic-b1 from main604d447.
+Actual tests/review are pending, no final receipt/PR. Research B/C continues independently;
+no acquisition/import/rights/publication,real ranking,DB/Production/44hold/eligibility or agent merge.
