@@ -1,0 +1,1413 @@
+{
+  "task": "DPT-PLAN-009",
+  "workstream": "C",
+  "at_utc": "2026-11-15T16:40:16.772586+00:00",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "source_inspection_HEAD": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "branch": "plan/post-pr27-next-wave",
+  "source_inventory": [
+    {
+      "path": "database/image_validation.py",
+      "Git_blob": "114142b76580264f916dcfe3a080d9462cbac4ff",
+      "canonical_Git_LF_sha256": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+      "working_raw_sha256": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+      "canonical_bytes": 8010,
+      "working_bytes": 8010,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "inspect_png",
+          "parameters": "content: bytes, limits: Limits=Limits()"
+        },
+        {
+          "name": "validate_registered_asset",
+          "parameters": "asset_id: str, read_content: Callable[[], bytes], *, operation: str, db: str, user: str, limits: Limits=Limits()"
+        }
+      ],
+      "classes": [
+        "ImageRejected",
+        "Limits",
+        "ImageMetadata"
+      ]
+    },
+    {
+      "path": "database/local.py",
+      "Git_blob": "c5aabe32391ff7364e7ad56460cd4cda23324dd2",
+      "canonical_Git_LF_sha256": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+      "working_raw_sha256": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+      "canonical_bytes": 7572,
+      "working_bytes": 7572,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "docker",
+          "parameters": "*args: str, input: str | None=None, check: bool=True"
+        },
+        {
+          "name": "guard",
+          "parameters": ""
+        },
+        {
+          "name": "sql",
+          "parameters": "text: str, db: str='dpt_schema_test', user: str='postgres', check=True"
+        },
+        {
+          "name": "assert_local_endpoint",
+          "parameters": ""
+        },
+        {
+          "name": "start",
+          "parameters": ""
+        },
+        {
+          "name": "recreate",
+          "parameters": "db: str"
+        },
+        {
+          "name": "reset_empty_foundation",
+          "parameters": ""
+        },
+        {
+          "name": "migration_digest",
+          "parameters": "file: Path"
+        },
+        {
+          "name": "migrate",
+          "parameters": "db: str='dpt_foundation', extra: Path | None=None"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/matching_input.py",
+      "Git_blob": "1a1a4bb638a2889ec1829de4567b6f515e5656c8",
+      "canonical_Git_LF_sha256": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+      "working_raw_sha256": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+      "canonical_bytes": 17706,
+      "working_bytes": 17706,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "canonical_id",
+          "parameters": "value"
+        },
+        {
+          "name": "normalized",
+          "parameters": "value"
+        },
+        {
+          "name": "query",
+          "parameters": "profile_id"
+        },
+        {
+          "name": "read_profile",
+          "parameters": "execute: Callable[[str], dict], profile_id: str"
+        }
+      ],
+      "classes": [
+        "State",
+        "InputUnavailable",
+        "AdapterUnavailable",
+        "Provenance",
+        "Field",
+        "Note",
+        "ProfileInput"
+      ]
+    },
+    {
+      "path": "database/migrations/001_identity.sql",
+      "Git_blob": "dfbd5fd9b8eda00a99e119ad5fa1b3c9ab047e63",
+      "canonical_Git_LF_sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+      "working_raw_sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+      "canonical_bytes": 6016,
+      "working_bytes": 6016,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/002_catalogue.sql",
+      "Git_blob": "95a72fc7de5057877bc6dac31ed98082bc5a6eaf",
+      "canonical_Git_LF_sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+      "working_raw_sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+      "canonical_bytes": 7632,
+      "working_bytes": 7632,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/003_provenance.sql",
+      "Git_blob": "727a2448130895ea0cae28e496d2ca1afc64d37d",
+      "canonical_Git_LF_sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "working_raw_sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "canonical_bytes": 16044,
+      "working_bytes": 16044,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/004_associations_media_personal.sql",
+      "Git_blob": "6e053d9bd4324dcf97891318d9a89159daac99c9",
+      "canonical_Git_LF_sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+      "working_raw_sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+      "canonical_bytes": 33387,
+      "working_bytes": 33387,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/005_contract_functions.sql",
+      "Git_blob": "94fc4e637f7c5a5486b589f6ca6c3cfec0027419",
+      "canonical_Git_LF_sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "working_raw_sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "canonical_bytes": 26519,
+      "working_bytes": 26519,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/006_media_and_deferred_contracts.sql",
+      "Git_blob": "d61932da61eed478e639203f3a93f0ea633f902a",
+      "canonical_Git_LF_sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "working_raw_sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "canonical_bytes": 17417,
+      "working_bytes": 17417,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/007_security_and_field_contract.sql",
+      "Git_blob": "acee501166e0af25391c0e48e75c1fd3c8970245",
+      "canonical_Git_LF_sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+      "working_raw_sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+      "canonical_bytes": 52821,
+      "working_bytes": 52821,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/migrations/008_coalesced_deferred_validation.sql",
+      "Git_blob": "1700faafb72a3ce15df06b8f178bf584efc972a6",
+      "canonical_Git_LF_sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+      "working_raw_sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+      "canonical_bytes": 3515,
+      "working_bytes": 3515,
+      "working_blob_matches_base": true
+    },
+    {
+      "path": "database/performance.py",
+      "Git_blob": "f8095506f1824fde6af0c895f30f28464bc6ce9a",
+      "canonical_Git_LF_sha256": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+      "working_raw_sha256": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+      "canonical_bytes": 5386,
+      "working_bytes": 5386,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "prepare",
+          "parameters": "phase"
+        },
+        {
+          "name": "workload",
+          "parameters": "count"
+        },
+        {
+          "name": "measure",
+          "parameters": "count, operation='insert'"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/research_audit.py",
+      "Git_blob": "d2b411434ef0bb079d6c67967ed3bdc4542cbe68",
+      "canonical_Git_LF_sha256": "fbbf4bf3cb253547feb8e8b0a71a5ea0d41347793a858edf2130396001a9cf93",
+      "working_raw_sha256": "fbbf4bf3cb253547feb8e8b0a71a5ea0d41347793a858edf2130396001a9cf93",
+      "canonical_bytes": 21191,
+      "working_bytes": 21191,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "canonical",
+          "parameters": "value"
+        },
+        {
+          "name": "sha",
+          "parameters": "raw"
+        },
+        {
+          "name": "require_equal",
+          "parameters": "actual, expected, label"
+        },
+        {
+          "name": "read_csv",
+          "parameters": "path"
+        },
+        {
+          "name": "safe_path",
+          "parameters": "path"
+        },
+        {
+          "name": "brand_crosswalk",
+          "parameters": "seed, additions, houses"
+        },
+        {
+          "name": "proposed_membership",
+          "parameters": "row, note_lookup"
+        },
+        {
+          "name": "held_proposals",
+          "parameters": "snapshot, plan, prior"
+        },
+        {
+          "name": "false_flag",
+          "parameters": "value"
+        },
+        {
+          "name": "asset_audit",
+          "parameters": "candidates, extras"
+        },
+        {
+          "name": "pair_queue",
+          "parameters": "candidates"
+        },
+        {
+          "name": "enrichment_index",
+          "parameters": "snapshot, plan"
+        },
+        {
+          "name": "run",
+          "parameters": "bundle, output"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/scento_etl.py",
+      "Git_blob": "af0a3ba28c5cf0ff3add3a0556d074287a51b569",
+      "canonical_Git_LF_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "working_raw_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "canonical_bytes": 30800,
+      "working_bytes": 30800,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "canonical",
+          "parameters": "value"
+        },
+        {
+          "name": "digest",
+          "parameters": "value"
+        },
+        {
+          "name": "entity_id",
+          "parameters": "kind, key"
+        },
+        {
+          "name": "tokens",
+          "parameters": "text"
+        },
+        {
+          "name": "normalize",
+          "parameters": "text"
+        },
+        {
+          "name": "optional_year",
+          "parameters": "text"
+        },
+        {
+          "name": "load_snapshot",
+          "parameters": "path"
+        },
+        {
+          "name": "note_lists",
+          "parameters": "row"
+        },
+        {
+          "name": "classify",
+          "parameters": "row, snapshot"
+        },
+        {
+          "name": "build_plan",
+          "parameters": "snapshot, cohort"
+        },
+        {
+          "name": "mapping_proposal",
+          "parameters": "plan, snapshot"
+        },
+        {
+          "name": "validate_mapping",
+          "parameters": "mapping, plan, snapshot"
+        },
+        {
+          "name": "q",
+          "parameters": "value"
+        },
+        {
+          "name": "insert",
+          "parameters": "table, values"
+        },
+        {
+          "name": "capture_rows",
+          "parameters": "snapshot, plan"
+        },
+        {
+          "name": "batch_identity",
+          "parameters": "snapshot, plan, mapping"
+        },
+        {
+          "name": "import_sql",
+          "parameters": "snapshot, plan, mapping=None, transaction=True"
+        },
+        {
+          "name": "promotion_sql",
+          "parameters": "snapshot, plan, rows, batch, mapping"
+        },
+        {
+          "name": "prepare_database",
+          "parameters": "db"
+        },
+        {
+          "name": "inventory_expression",
+          "parameters": ""
+        },
+        {
+          "name": "inventory",
+          "parameters": "db"
+        },
+        {
+          "name": "run_import",
+          "parameters": "snapshot, cohort, db, mapping=None"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/tests/fixtures.py",
+      "Git_blob": "fce4506f7bebf7a50da671cb5ea24299e7f4617d",
+      "canonical_Git_LF_sha256": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+      "working_raw_sha256": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+      "canonical_bytes": 9032,
+      "working_bytes": 9032,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "uid",
+          "parameters": "name"
+        },
+        {
+          "name": "q",
+          "parameters": "value"
+        },
+        {
+          "name": "insert",
+          "parameters": "table, **values"
+        },
+        {
+          "name": "source",
+          "parameters": "scope, suffix, allowed='allowed'"
+        },
+        {
+          "name": "entity",
+          "parameters": "fixture_key, kind, table, scope='public', **values"
+        },
+        {
+          "name": "observation",
+          "parameters": "name, target='perfume', kind='perfume', path='notes.heart', value=None, scope='public', source_suffix='public', locator=None, key='list-1', status='present', transform='synthetic-v1'"
+        },
+        {
+          "name": "select",
+          "parameters": "name, target='perfume', kind='perfume', path='notes.heart', scope='public', reviewer='postgres'"
+        },
+        {
+          "name": "note_join",
+          "parameters": "note='rose', layer='heart', scope='public', source_suffix='public', order=0, name='note-join'"
+        },
+        {
+          "name": "image",
+          "parameters": "name, scope='public', source_suffix='public', parent=None, permission=None, state='validated'"
+        },
+        {
+          "name": "baseline",
+          "parameters": ""
+        }
+      ],
+      "classes": [],
+      "static_test_method_counts": {}
+    },
+    {
+      "path": "database/tests/test_deferred_performance.py",
+      "Git_blob": "ae1a78b8225007e0e45e516c6b2d3a9b5e0031ff",
+      "canonical_Git_LF_sha256": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+      "working_raw_sha256": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+      "canonical_bytes": 7573,
+      "working_bytes": 7573,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": [
+        "DeferredPerformanceTests"
+      ],
+      "static_test_method_counts": {
+        "DeferredPerformanceTests": 10
+      }
+    },
+    {
+      "path": "database/tests/test_foundation.py",
+      "Git_blob": "fb645c0eee3d5d369d32ec4273f1cf9632fd8c83",
+      "canonical_Git_LF_sha256": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+      "working_raw_sha256": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+      "canonical_bytes": 48417,
+      "working_bytes": 48417,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": [
+        "FoundationTests"
+      ],
+      "static_test_method_counts": {
+        "FoundationTests": 69
+      }
+    },
+    {
+      "path": "database/tests/test_image_validation.py",
+      "Git_blob": "561e66b6e6304b10d2f6a331adf80356431334f1",
+      "canonical_Git_LF_sha256": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+      "working_raw_sha256": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+      "canonical_bytes": 14953,
+      "working_bytes": 14953,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "chunk",
+          "parameters": "kind, payload=b''"
+        },
+        {
+          "name": "synthetic_png",
+          "parameters": "width=2, height=3, colour=2, *, raw=None, extra=b'', compressed=None"
+        }
+      ],
+      "classes": [
+        "ImageOfflineTests",
+        "ImageDatabaseTests"
+      ],
+      "static_test_method_counts": {
+        "ImageOfflineTests": 20,
+        "ImageDatabaseTests": 11
+      }
+    },
+    {
+      "path": "database/tests/test_matching_input.py",
+      "Git_blob": "b7a97dfd73e7bd06f703ad9ef3b77cbe5b3eed69",
+      "canonical_Git_LF_sha256": "0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2",
+      "working_raw_sha256": "0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2",
+      "canonical_bytes": 21619,
+      "working_bytes": 21619,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "private_fixture",
+          "parameters": "key, scope='alice', record=None, status='approved'"
+        }
+      ],
+      "classes": [
+        "AdapterOfflineTests",
+        "AdapterDatabaseTests"
+      ],
+      "static_test_method_counts": {
+        "AdapterOfflineTests": 14,
+        "AdapterDatabaseTests": 14
+      }
+    },
+    {
+      "path": "database/tests/test_research_audit.py",
+      "Git_blob": "d1daf57fb65cf0c558ccaee1b9d7e8249d7398eb",
+      "canonical_Git_LF_sha256": "bf1999b0c6dacb788eb872d9e3d8f32c2d111fcd4ba149cd548d62cf9bdcb5ab",
+      "working_raw_sha256": "bf1999b0c6dacb788eb872d9e3d8f32c2d111fcd4ba149cd548d62cf9bdcb5ab",
+      "canonical_bytes": 9031,
+      "working_bytes": 9031,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "perfume",
+          "parameters": "**values"
+        },
+        {
+          "name": "asset",
+          "parameters": "**values"
+        },
+        {
+          "name": "pair",
+          "parameters": "**values"
+        }
+      ],
+      "classes": [
+        "ResearchAuditTests"
+      ],
+      "static_test_method_counts": {
+        "ResearchAuditTests": 17
+      }
+    },
+    {
+      "path": "database/tests/test_scento_etl.py",
+      "Git_blob": "c46e26301b1d634b5ae20bed5dabaecfe5fddf27",
+      "canonical_Git_LF_sha256": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+      "working_raw_sha256": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+      "canonical_bytes": 13067,
+      "working_bytes": 13067,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": [
+        "ScentoOfflineTests",
+        "ScentoDatabaseTests"
+      ],
+      "static_test_method_counts": {
+        "ScentoOfflineTests": 7,
+        "ScentoDatabaseTests": 12
+      }
+    },
+    {
+      "path": "database/validate_docs.py",
+      "Git_blob": "bf2ff54d35fc0f5f532010b127c70df2efd9dfc1",
+      "canonical_Git_LF_sha256": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+      "working_raw_sha256": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+      "canonical_bytes": 7856,
+      "working_bytes": 7856,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "git",
+          "parameters": "*args"
+        },
+        {
+          "name": "changed_paths",
+          "parameters": ""
+        },
+        {
+          "name": "without_fences",
+          "parameters": "text"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/verify.py",
+      "Git_blob": "00dfd74f5734315aa3782bf5812430d54742af10",
+      "canonical_Git_LF_sha256": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+      "working_raw_sha256": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+      "canonical_bytes": 6271,
+      "working_bytes": 6271,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "inventory",
+          "parameters": ""
+        },
+        {
+          "name": "investigate_duplicates",
+          "parameters": ""
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "database/verify_images.py",
+      "Git_blob": "7619de0723e63ba7759fb861bcbc9ab1036630e7",
+      "canonical_Git_LF_sha256": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1",
+      "working_raw_sha256": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1",
+      "canonical_bytes": 4727,
+      "working_bytes": 4727,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "collect",
+          "parameters": "suite"
+        },
+        {
+          "name": "main",
+          "parameters": ""
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "matching_math/__init__.py",
+      "Git_blob": "1a9b0680d68fd725387a713d18987a25d8888799",
+      "canonical_Git_LF_sha256": "52787f3b39a18013db9db0d042b53c2fa0ad559f85c73f2bcc677e5a9f25c61f",
+      "working_raw_sha256": "accb18f7d497c03b38b15a44f25ee1a590a1f7872227ca1086e355c899d2c911",
+      "canonical_bytes": 87,
+      "working_bytes": 88,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": []
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "Git_blob": "60fd13e25a4f17c1228f9744e145d91358ca1483",
+      "canonical_Git_LF_sha256": "c1b69bdc74a4a060f6559a182306618f02c595b16e27f3ebb5e4bcca4ff7b735",
+      "working_raw_sha256": "b683304e3e8c0e4c4969594e8aa57c7eed8aff031a500357476e35afdbedb5d1",
+      "canonical_bytes": 7776,
+      "working_bytes": 7975,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "set_jaccard",
+          "parameters": "left: SetInput | None, right: SetInput | None"
+        },
+        {
+          "name": "weighted_jaccard",
+          "parameters": "left: VectorInput | None, right: VectorInput | None"
+        },
+        {
+          "name": "weighted_mean",
+          "parameters": "values, weights"
+        },
+        {
+          "name": "coverage",
+          "parameters": "reliabilities, weights"
+        },
+        {
+          "name": "stable_order",
+          "parameters": "rows: tuple[RankItem, ...]"
+        }
+      ],
+      "classes": [
+        "SetInput",
+        "VectorInput",
+        "Measure",
+        "RankItem"
+      ]
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "Git_blob": "633d435f54426cfdfb0df30d70e2ab6d54671b65",
+      "canonical_Git_LF_sha256": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+      "working_raw_sha256": "9ae2b7de97c0afb8060ac35b330a9d014c34a5cf5ebd6f5f59184b0daf777f22",
+      "canonical_bytes": 22074,
+      "working_bytes": 22667,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "score_synthetic_b1",
+          "parameters": "query: B1Query, candidates: tuple[B1Profile, ...], *, vocabulary: B1Vocabulary, config: B1Config"
+        }
+      ],
+      "classes": [
+        "B1Query",
+        "B1Clause",
+        "B1Profile",
+        "B1Layer",
+        "B1LayerDomain",
+        "B1Vocabulary",
+        "B1Config",
+        "B1ContextKey",
+        "B1QueryKey",
+        "B1Lineage",
+        "B1LayerStatus",
+        "B1Occurrence",
+        "B1ClauseEvaluation",
+        "B1GateSummary",
+        "B1PartitionKey",
+        "B1CandidateResult",
+        "B1PartitionResult",
+        "B1BatchResult"
+      ]
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "Git_blob": "caf78548e62f01e400195cb4faa5a78ab8803833",
+      "canonical_Git_LF_sha256": "07fc33ebf87fc5ba02a55d39b0a2ac0f6a8f58af2ff07db8c943bcea84c3263b",
+      "working_raw_sha256": "6b0edbd42234e223e4e7f844a872f33600bad7a88e9de9d62916c32d2bd88bcd",
+      "canonical_bytes": 15136,
+      "working_bytes": 15533,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "score_synthetic_notes_layered",
+          "parameters": "reference: FixtureProfile, candidates: tuple[FixtureProfile, ...], *, vocabulary: FixtureVocabulary, config: M1Config"
+        }
+      ],
+      "classes": [
+        "M1Config",
+        "FixtureVocabulary",
+        "FixtureProfile",
+        "FixtureLayer",
+        "FixtureLineage",
+        "LayerSide",
+        "LayerExplanation",
+        "LayerDomain",
+        "PartitionKey",
+        "PairResult",
+        "PartitionResult",
+        "M1BatchResult"
+      ]
+    },
+    {
+      "path": "matching_math/tests/test_invariants.py",
+      "Git_blob": "5d87dc1d25cba3bb211c66b14d67fae1f38e40ef",
+      "canonical_Git_LF_sha256": "9b285c675c84f98d8328c2dd46ac9d4d33205eacdc3bc709188d9c240c742343",
+      "working_raw_sha256": "817aa61a058289e833a39947367d9316aaf3b8ad294cc91648389ada3167b14f",
+      "canonical_bytes": 7687,
+      "working_bytes": 7825,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "synthetic_set",
+          "parameters": "items"
+        },
+        {
+          "name": "synthetic_vector",
+          "parameters": "values, domain='S-invariant-vector-domain'"
+        }
+      ],
+      "classes": [
+        "PrimitiveInvariantTests"
+      ],
+      "static_test_method_counts": {
+        "PrimitiveInvariantTests": 7
+      }
+    },
+    {
+      "path": "matching_math/tests/test_primitives.py",
+      "Git_blob": "b66f2c64e08aef2d8eebe3011487aeebad349d62",
+      "canonical_Git_LF_sha256": "777b2e2b04d0f67ab32a279940faa2488ba59cc70050cacc4b487fcecacbde30",
+      "working_raw_sha256": "3a5a11dd74fbcf927b76fa1d668491f89df0e92fa96651e79fbde3338410919f",
+      "canonical_bytes": 8566,
+      "working_bytes": 8739,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "sets",
+          "parameters": "items=(), complete=True, domain='synthetic-note-domain-v1'"
+        },
+        {
+          "name": "vector",
+          "parameters": "values, complete=True, domain='synthetic-accord-domain-v1', scale='synthetic-scale-v1'"
+        },
+        {
+          "name": "uuid",
+          "parameters": "number"
+        }
+      ],
+      "classes": [
+        "SetComparisonTests",
+        "VectorComparisonTests",
+        "WeightAndOrderingTests"
+      ],
+      "static_test_method_counts": {
+        "SetComparisonTests": 8,
+        "VectorComparisonTests": 9,
+        "WeightAndOrderingTests": 7
+      }
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "Git_blob": "afbd4113b1ca572ac009fa75c5b32ef0b8fd74f7",
+      "canonical_Git_LF_sha256": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+      "working_raw_sha256": "73fa7bbbe7ee6226fb17332563dfc9689531e2958823223769751360525438de",
+      "canonical_bytes": 33922,
+      "working_bytes": 34473,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "note",
+          "parameters": "i"
+        },
+        {
+          "name": "perfume",
+          "parameters": "i"
+        },
+        {
+          "name": "vocabulary",
+          "parameters": "size=5"
+        },
+        {
+          "name": "config",
+          "parameters": ""
+        },
+        {
+          "name": "clause",
+          "parameters": "i=1, selector='top', role='optional', weight=1"
+        },
+        {
+          "name": "layer",
+          "parameters": "ids=(), name='top', complete=True, domain=None"
+        },
+        {
+          "name": "profile",
+          "parameters": "i=1, top=None, heart=None, base=None"
+        },
+        {
+          "name": "run",
+          "parameters": "clauses=(None,), candidates=(), **kwargs"
+        },
+        {
+          "name": "one",
+          "parameters": "clauses, p, **kwargs"
+        },
+        {
+          "name": "forged",
+          "parameters": "cls, **attrs"
+        }
+      ],
+      "classes": [
+        "B1Goldens",
+        "B1Validation"
+      ],
+      "static_test_method_counts": {
+        "B1Goldens": 23,
+        "B1Validation": 25
+      }
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "Git_blob": "edbae58acac711fe0d1e8f359048366e2008c452",
+      "canonical_Git_LF_sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "working_raw_sha256": "bd6d2be8670a91dd33d9c7c92cfad4f75f8f0aba7f735e1e43c414cb9b13fa0f",
+      "canonical_bytes": 9108,
+      "working_bytes": 9268,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": [
+        "B1Properties"
+      ],
+      "static_test_method_counts": {
+        "B1Properties": 8
+      }
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_m1.py",
+      "Git_blob": "e3377a26c63c5614f49ce2049551f98bfa74cceb",
+      "canonical_Git_LF_sha256": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+      "working_raw_sha256": "9927340848e7e044893c81e7ceaac3c9995fc6ff0c6de753cd506f91e547ac45",
+      "canonical_bytes": 26457,
+      "working_bytes": 26913,
+      "working_blob_matches_base": true,
+      "public_functions": [
+        {
+          "name": "nid",
+          "parameters": "value"
+        },
+        {
+          "name": "pid",
+          "parameters": "value"
+        },
+        {
+          "name": "config",
+          "parameters": "**changes"
+        },
+        {
+          "name": "vocabulary",
+          "parameters": "count=7, **changes"
+        },
+        {
+          "name": "layer",
+          "parameters": "numbers, domain='pyramid-domain', complete=True, **changes"
+        },
+        {
+          "name": "profile",
+          "parameters": "identity=1, top=(1, 2), heart=(4,), base=(5, 6)"
+        },
+        {
+          "name": "batch",
+          "parameters": "reference=None, candidates=None, *, context=None, settings=None"
+        },
+        {
+          "name": "pair",
+          "parameters": "result"
+        }
+      ],
+      "classes": [
+        "SyntheticM1Tests"
+      ],
+      "static_test_method_counts": {
+        "SyntheticM1Tests": 45
+      }
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_m1_properties.py",
+      "Git_blob": "e2e7dc3061952d43fb70faf9c730e3266c45c9ba",
+      "canonical_Git_LF_sha256": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442",
+      "working_raw_sha256": "500d10e805404b9593d0d97380e1ed74760be5a5672cf46f16e11f1a9fa200a5",
+      "canonical_bytes": 3776,
+      "working_bytes": 3845,
+      "working_blob_matches_base": true,
+      "public_functions": [],
+      "classes": [
+        "SyntheticM1PropertyTests"
+      ],
+      "static_test_method_counts": {
+        "SyntheticM1PropertyTests": 4
+      }
+    }
+  ],
+  "original_migrations": [
+    "database/migrations/001_identity.sql",
+    "database/migrations/002_catalogue.sql",
+    "database/migrations/003_provenance.sql",
+    "database/migrations/004_associations_media_personal.sql",
+    "database/migrations/005_contract_functions.sql",
+    "database/migrations/006_media_and_deferred_contracts.sql",
+    "database/migrations/007_security_and_field_contract.sql",
+    "database/migrations/008_coalesced_deferred_validation.sql"
+  ],
+  "source_files_inspected": 34,
+  "approved_synthetic_contracts": {
+    "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+    "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977"
+  },
+  "contract_representations": [
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "approved_canonical_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+      "working_raw_sha256": "1fbcceec91929177be9e0a82e89119c0bdc1299d78379e2460392b02d2153f41",
+      "working_bytes": 23166,
+      "canonical_Git_bytes": 22856,
+      "working_CRLF_pairs": 310,
+      "working_CRLF_to_LF_equals_exact_approved_bytes": true
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "approved_canonical_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+      "working_raw_sha256": "6fc611eb17419249c82eb46ba5f19e384cc5e12abaf194c31ffb7772364e8503",
+      "working_bytes": 40897,
+      "canonical_Git_bytes": 40403,
+      "working_CRLF_pairs": 494,
+      "working_CRLF_to_LF_equals_exact_approved_bytes": true
+    }
+  ],
+  "checker_correction": {
+    "initial_result": "88 PASS / 2 raw-contract SHA failures",
+    "initial_report_sha256": "8608794ff25b0cee8ea543a7e7c6baed4365087992eb12c548d24c409376e105",
+    "initial_verifier_sha256": "063915231ee981530af0f0b1c5674d64d2ce303755d2d60d71b0c69076ddab83",
+    "operand_evidence_sha256": "d3edaf97003443383c595aba5e3a7160634ecb1024ed792e9da5d4d3d472e527",
+    "cause": "Existing core.autocrlf=true fresh checkout has only CRLF vs canonical Git LF differences: M1 310 CRLF pairs; B1 494 pairs.",
+    "resolution": "Pin approved canonical Git bytes and additionally prove raw CRLF-only projection plus unchanged Git blob; no contract/source/config edit.",
+    "remaining_findings": 0
+  },
+  "current_database_state": "NOT VERIFIED; Docker engine unavailable in coordinator diagnostics; no C-lane Docker or DB calls",
+  "tracked_web_application_manifests": [],
+  "checks": [
+    {
+      "check": "current_branch",
+      "pass": true
+    },
+    {
+      "check": "base_is_verified_merged_main",
+      "pass": true
+    },
+    {
+      "check": "PR27_source_tree_parity",
+      "pass": true
+    },
+    {
+      "check": "eight_original_migrations",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/image_validation.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/local.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/matching_input.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/001_identity.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/002_catalogue.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/003_provenance.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/004_associations_media_personal.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/005_contract_functions.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/006_media_and_deferred_contracts.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/007_security_and_field_contract.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/migrations/008_coalesced_deferred_validation.sql",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/performance.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/research_audit.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/scento_etl.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/fixtures.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_deferred_performance.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_foundation.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_image_validation.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_matching_input.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_research_audit.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/tests/test_scento_etl.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/validate_docs.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/verify.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:database/verify_images.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/__init__.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/primitives.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/synthetic_b1.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/synthetic_m1.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_invariants.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_primitives.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_synthetic_b1.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_synthetic_b1_properties.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_synthetic_m1.py",
+      "pass": true
+    },
+    {
+      "check": "unchanged_source:matching_math/tests/test_synthetic_m1_properties.py",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:fresh_readonly_transaction",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:genuine_session_equality",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:runtime_membership",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:owner_membership_rejected",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:admin_BYPASSRLS_rejected",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:row_security_enabled",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:internal_DTO_2MiB_cap",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:selected_payload_64KiB_cap",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:membership_512_cap",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:field_eight_cap",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:selected_observation_join",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:source_record_provenance",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:conflict_query",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:rights_revocation",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:rights_checked_time",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:rights_review_window",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:storage_right",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:display_right",
+      "pass": true
+    },
+    {
+      "check": "adapter_source_marker:automation_right",
+      "pass": true
+    },
+    {
+      "check": "principal_genuine_subject_binding",
+      "pass": true
+    },
+    {
+      "check": "existing_temporal_guard_unchanged",
+      "pass": true
+    },
+    {
+      "check": "M1_typed_entrypoint_present",
+      "pass": true
+    },
+    {
+      "check": "B1_typed_entrypoint_present",
+      "pass": true
+    },
+    {
+      "check": "M1_fixed_synthetic_scope",
+      "pass": true
+    },
+    {
+      "check": "B1_fixed_synthetic_scope",
+      "pass": true
+    },
+    {
+      "check": "PNG_only_contract_retained",
+      "pass": true
+    },
+    {
+      "check": "no_tracked_web_application_manifests",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_canonical_Git_hash:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_raw_CRLF_projection:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_Git_blob_unchanged:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_canonical_Git_hash:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_raw_CRLF_projection:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "approved_contract_Git_blob_unchanged:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true
+    },
+    {
+      "check": "existing_plan_unmodified:Structure DB Obsidian/06_Engineering/Private_Application_Architecture_Plan.md",
+      "pass": true
+    },
+    {
+      "check": "existing_plan_unmodified:Structure DB Obsidian/06_Engineering/Private_Operation_Contracts_and_UX_Acceptance.md",
+      "pass": true
+    },
+    {
+      "check": "existing_plan_unmodified:Structure DB Obsidian/06_Engineering/Matching_Nonadmin_Session_and_Publication_Proposal.md",
+      "pass": true
+    },
+    {
+      "check": "existing_plan_unmodified:Structure DB Obsidian/06_Engineering/Post_Merge_Owner_Decision_Packet.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_frontmatter:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_explicit_unexecuted:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_single_packet:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_frontmatter:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_explicit_unexecuted:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true
+    },
+    {
+      "check": "new_doc_single_packet:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Structural Fit",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Data Confidence",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Direct Pairwise Evidence",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Do not relabel catalogue records",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:44 holds",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:43 normalization proposals",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Genuine nonadmin",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:same approved unauthorized-result envelope",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Side-by-Side Comparison",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:Catalog",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:read-only",
+      "pass": true
+    },
+    {
+      "check": "C_document_requirement:No transport DTO parser",
+      "pass": true
+    },
+    {
+      "check": "mermaid_fence_count",
+      "pass": true
+    }
+  ],
+  "passed": 94,
+  "failed": 0,
+  "findings": [],
+  "new_document_bindings": {
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md": {
+      "sha256": "d8299205b19fdc088eabb4cca7750db2d72abd7dccc6f97a661ae3059fe17b35",
+      "bytes": 20311
+    },
+    "Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md": {
+      "sha256": "644df97bb7fdcf0e0709c46a01ae717763bde9e717faa5431ba7bb68a3246c0e",
+      "bytes": 7692
+    }
+  },
+  "architecture_decision_status": "PROPOSED; no G/H/I Owner answer or implementation approval inferred",
+  "C_lane_runtime_tests": "NOT RUN",
+  "live_DB_RLS_auth_pool_API_UI_transport_real_matching_tests": "NOT RUN",
+  "DB_calls": 0,
+  "network_calls": 0,
+  "Docker_calls": 0,
+  "source_or_image_acquisition": 0,
+  "source_runtime_or_migration_edits": 0,
+  "Git_writes": 0,
+  "Production_mutation": false,
+  "limits": [
+    "Static source/plan observations are not live PostgreSQL, effective-privilege, rights or application proof.",
+    "Static test method inventory is not test execution; coordinator records any actual offline test run separately.",
+    "Canonical Git LF and raw working-file SHA256 are separate representations, not different approved algorithms.",
+    "Fixed synthetic context validation is not real-data authorization; no fixture relabeling is permitted.",
+    "No browser/Mermaid render, new independent C review or real application acceptance is claimed by these checks."
+  ],
+  "verifier_sha256": "88b3ceffb5ed7a6bd4311bdcbecd97911ac506b03e7f3e45558e3d7ff1eaeaf0"
+}

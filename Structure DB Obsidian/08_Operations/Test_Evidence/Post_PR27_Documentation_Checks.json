@@ -1,0 +1,124 @@
+{
+  "task": "DPT-PLAN-009",
+  "at_utc": "2026-11-15T17:08:55.473063+00:00",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "branch": "plan/post-pr27-next-wave",
+  "counts": {
+    "markdown": 21,
+    "frontmatter": 21,
+    "wiki_links": 502,
+    "local_links": 13,
+    "tables": 57
+  },
+  "changed_paths": [
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+    "Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+    "Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+    "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+    "Structure DB Obsidian/08_Operations/Receipts/2026-11-16_000747_DPT-PLAN-009_Post_PR27_Planning.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_File_Manifest.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Independent_Review.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests_Initial_Failure.json"
+  ],
+  "existing_base_files_preserved": 278,
+  "shared_histories_preserved": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "missing_nonblank_historical_lines": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "missing_nonblank_historical_lines": 0
+    }
+  ],
+  "old_receipts_preserved": 23,
+  "migrations_preserved": 8,
+  "approved_contract_representations": [
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "approved_canonical_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+      "raw_checkout_sha256": "1fbcceec91929177be9e0a82e89119c0bdc1299d78379e2460392b02d2153f41",
+      "CRLF_pairs": 310,
+      "Git_blob_unchanged": true
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "approved_canonical_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+      "raw_checkout_sha256": "6fc611eb17419249c82eb46ba5f19e384cc5e12abaf194c31ffb7772364e8503",
+      "CRLF_pairs": 494,
+      "Git_blob_unchanged": true
+    }
+  ],
+  "logical_tables": 47,
+  "original_OD_rows": 6,
+  "secret_pattern_candidates": 0,
+  "errors": [],
+  "owner_packet_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+  "coordinator_role": true,
+  "independent_review": "SEPARATE_EVIDENCE",
+  "limits": [
+    "Static checks only; no Mermaid rendering or external URL re-fetch",
+    "Common secret patterns only, not exhaustive secret/legal audit",
+    "Git canonical LF preservation differs from raw fresh Windows checkout hashes",
+    "Live DB/roles/rights and all app/real-matching tests NOT RUN"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "task": "DPT-PLAN-009",
+  "report_at_utc": "2026-11-15T16:35:32.145250+00:00",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "observed_commands": [
+    {
+      "command": "docker version --format '{{.Client.Version}}|{{if .Server}}{{.Server.Version}}{{end}}'",
+      "exit": 1,
+      "client_version": "28.3.2",
+      "server_version": null,
+      "failure": "dockerDesktopLinuxEngine named pipe not found"
+    },
+    {
+      "command": "docker context show",
+      "exit": 0,
+      "result": "desktop-linux"
+    },
+    {
+      "command": "docker context inspect --format '{{.Name}}|{{.Endpoints.docker.Host}}'",
+      "exit": 0,
+      "result": "desktop-linux|npipe:////./pipe/dockerDesktopLinuxEngine"
+    }
+  ],
+  "Docker_engine": "DOCKER_NOT_AVAILABLE",
+  "database": "DB_NOT_REVALIDATED",
+  "live_container_names": null,
+  "live_container_states": null,
+  "live_bind_mounts": null,
+  "live_named_volumes": null,
+  "live_persistence_host_location": null,
+  "configured_source_only": {
+    "container": "doomparfum-p1-01",
+    "volume": "doomparfum-p1-01-data",
+    "volume_target": "/var/lib/postgresql/data",
+    "label": "com.doomparfum.task=IMP-P1-01",
+    "compose_files_at_repository_root": 0,
+    "warning": "Names/configuration are not evidence a container or volume currently exists"
+  },
+  "private_backup_metadata": {
+    "files": 4,
+    "bytes": 17183972,
+    "path_pattern": ".local/p1-04/recovery_00[2-5]/pilot.dump",
+    "new_hash_inventory_available_locally": true,
+    "dump_contents_parsed": false,
+    "restore_run": false,
+    "recoverability": "NOT_REVALIDATED"
+  },
+  "source_configuration_sha256": {
+    "database/local.py": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+    "database/README.md": "b1b23d770df7971aff28e2598d32e29c5254702eef0d18975226b6f871564f7f"
+  },
+  "DB_calls": 0,
+  "service_mutations": 0,
+  "credentials_read_or_published": false,
+  "old_PR8_experiments_rerun": false,
+  "limits": [
+    "File hashes prove observed bytes only; not backup completeness, recovery or production readiness",
+    "Historical 1479/1435/44 and role/rights observations remain historical, not current queries",
+    "No container inspect attempted after engine absence; all live mount/volume facts UNKNOWN"
+  ]
+}

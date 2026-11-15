@@ -2,7 +2,7 @@
 id: IMP-MATCH-08
 project: DoomParfum By TK
 type: implementation_task
-status: owner-merged-synthetic-m1
+status: MERGED
 owner: human-owner
 updated: 2026-11-15
 tags: [doomparfum, synthetic, matching, m1]
@@ -105,3 +105,7 @@ No B1 implementation branch/runtime/PR/receipt, data/rights/hold/eligibility or 
 PR8 remains OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new causal
 timestamp evidence/experiment/fix. Current database counts/role/rights are NOT REVALIDATED.
 Historical pending statements and immutable receipts are retained, not rewritten.
+
+## Post-PR27 consolidated planning checkpoint — 2026-11-15
+
+Human Owner merge VERIFIED: PR#26, merge `604d447e599aa8359d3427dfbfbceaac85373e48`, actual merged UTC `2026-11-14T21:33:25Z`. Current main `8eef8f13265adc14db0cae82ff77cfc4863853ce` preserves the exact implemented synthetic source, contract and immutable receipt. Post-merge existing offline regression is194/194PASS as qualified in [[DPT-PLAN-009_Post_PR27_Verification]]. Earlier awaiting-review wording is dated history. No deployment, real matching, wider policy or rights approval follows from merge. Status MERGED refers only to this exact synthetic implementation. New data/media/app preparation belongs to [[DPT-PLAN-009_Post_PR27_Next_Wave]], not a repeat implementation here.

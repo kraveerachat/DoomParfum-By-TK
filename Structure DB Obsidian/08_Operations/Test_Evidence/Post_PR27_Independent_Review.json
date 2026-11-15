@@ -1,0 +1,2323 @@
+{
+  "reviewer": "/root/post27_independent_review; independent of A/B/C authors and coordinator",
+  "at_utc": "2026-11-15T17:01:21.260901+00:00",
+  "reviewed_commit": "77fb9080ad62e3463ae9a6006a2b6570a101ca8c",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "changed_files": 28,
+  "changed_paths": [
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+    "Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+    "Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+    "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests_Initial_Failure.json"
+  ],
+  "canonical_file_sha256": {
+    "Structure DB Obsidian/00_Home/Project_Index.md": "6c1658169d165e2d0a43b024ed4772d0c39b439ce44e518e2359fd95571cc3e1",
+    "Structure DB Obsidian/00_Home/Project_Status.md": "91208ea450964af925713ef365f87275597e40d274f16f6fe2e6d8567391f71e",
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+    "Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md": "2f2797ff0398f1a1219c1937fb6b0307f9f9c4fbfcc69b0308fea1efae6d8ffc",
+    "Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md": "644df97bb7fdcf0e0709c46a01ae717763bde9e717faa5431ba7bb68a3246c0e",
+    "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md": "a415782c39bd6cac8c0568687c25257a8543be6e808d48cb6e6433c21294266d",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md": "d8299205b19fdc088eabb4cca7750db2d72abd7dccc6f97a661ae3059fe17b35",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md": "75b3c1d5790b546bafda0896dff62db12229c1a5791b2ea1392da837faedb425",
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+    "Structure DB Obsidian/07_Delivery/Backlog.md": "655cca5ac407dee73e58f1922c59cdd5a0a18bf15af82126be07ef4fef6734a1",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md": "79dada39fa91eb40b06f3d2a95fd35b687eee2b9cad8917631385074737034b7",
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md": "2f1e5f00e0e4ba39d0286b8ef2a0324cf32f0b4bf9d4586b4de83901514aaa78",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md": "b97ddbfe23acfcd0572aff2a74525aaf0a39e5dc58bb15d90574ca9bc29e7e72",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md": "95ece342dd664023e5ea03ac2c145b34bf6b17266f055935676aa8c45917f5c4",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md": "af97789c2afa8611cf481ab0bcf39dd6a2fccb4431ed1bf10652f72972979ca7",
+    "Structure DB Obsidian/08_Operations/Change_Log.md": "6edf3894bc9448cf8e4615eda65b8ad7171b72c3c9026a50d587fe7a1a8b6339",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md": "2ad848e07dfe2d22218e96bd169436063e3a982f8e12985e194bb76decbd9776",
+    "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md": "3fa0adb4d8496689953b3c1015f863706befc58b2917032be9015e9a78575a19",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md": "25537ca1f7e2caf0ab801ac702b1c6aed5efef4601075bb89d80a72f2c4b3712",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json": "72531ee8797833921689ce6da9cab96f476f5d1084ed097c0bc12ef7884fbec5",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json": "a940ffe60855f327a45645eed3071211c12c783640fcc8a4a14ba423efaeef09",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json": "22adbb15e66b1ea27a424f1f3caba163e34fb9c6f0c980d3cd5429e78fb84067",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json": "88325d1f6f762e781f4e461fccfe388d6517758f8423d8439839b8c91f24ba62",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json": "c58d05fd369f3c824799afd1512f7a16b15d798ec4769f0e013a0e380498ea67",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md": "0c47ec1398bb60aa48d16fabfec8b74f147babdf36617147119f34183b0812b1",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json": "c5025e756e31c0fe40fcfb85d135cac184506ef8f56564fb53f2c246fa01a7a5",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests.json": "d35f48ed252397607cf9a93f37ed734a0e68bafffcf1b958d23ad21d9fe0be11",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests_Initial_Failure.json": "d48898882105891c82908fdc249cf1a93916fc8bb36befb36b2546343b1ed4c7"
+  },
+  "approved_contract_representations": [
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "canonical_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+      "fresh_raw_sha256": "1fbcceec91929177be9e0a82e89119c0bdc1299d78379e2460392b02d2153f41",
+      "CRLF_pairs": 310,
+      "original_raw_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3"
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "canonical_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+      "fresh_raw_sha256": "6fc611eb17419249c82eb46ba5f19e384cc5e12abaf194c31ffb7772364e8503",
+      "CRLF_pairs": 494,
+      "original_raw_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977"
+    }
+  ],
+  "existing_nonshared_files_preserved": 278,
+  "old_receipts_preserved": 23,
+  "migrations_preserved": 8,
+  "shared_histories_preserved": 11,
+  "owner_packet_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+  "checks": [
+    {
+      "check": "review_commit_exists",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "base_is_ancestor",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "docs_only_scope",
+      "pass": true,
+      "detail": "27",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "only_shared_existing_paths_changed",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "all_nonshared_existing_Git_blobs_preserved",
+      "pass": true,
+      "detail": "278",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "23_old_receipts_no_new_receipt",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "eight_migrations_preserved",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/00_Home/Project_Status.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/07_Delivery/Backlog.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/08_Operations/Change_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/00_Home/Project_Index.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_history:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "shared_deletions_only_current_frontmatter",
+      "pass": true,
+      "detail": "2",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "approved_canonical_contract:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "fresh_checkout_only_CRLF_projection:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "original_approved_raw_artifact:Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "approved_canonical_contract:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "fresh_checkout_only_CRLF_projection:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "original_approved_raw_artifact:Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "PR27_merge_tree_parity",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "PR27_merge_parent",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "PR26_merge_parent",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "coordinator_verified_PR_registry",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "root_PR8_checkout_untouched",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:perfumes.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "source_record_count:perfumes.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/id",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/name",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/house_id",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/house",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/year",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/perfumers",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/concentration",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/family",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/secondary_family",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/character",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/seasons",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/times_of_day",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/top_notes",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/heart_notes",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/base_notes",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/notes",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/description",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/popularity_rank",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:perfumes.csv/url",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:houses.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "source_record_count:houses.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/id",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/name",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/country",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/founded",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/type",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/portrait",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/perfume_count",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:houses.csv/url",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:materials.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "source_record_count:materials.csv",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/id",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/name",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/aliases",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/material_family",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/origin",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/smell",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "raw_field_count:materials.csv/url",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:LICENSE",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:README.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_licensed_source_pin:datapackage.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "pinned_license_attribution_assertion",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "exact_five_proposed_inputs",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_pilot_locator:perfumes.csv/afnan-9-am",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_pilot_locator:perfumes.csv/afnan-9-am-dive",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_pilot_locator:houses.csv/afnan",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_pilot_locator:materials.csv/mint",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "actual_pilot_locator:materials.csv/bergamot",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "pilot_field_slot_cap",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "pilot_fixed_input_byte_cap",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "exact_task_identifier",
+      "pass": true,
+      "detail": "Status must be separate from task identity.",
+      "kind": "mechanical",
+      "verification_origin": "Reexecuted against corrected77fb exact identifiers and status separation."
+    },
+    {
+      "check": "exact_transform_identifier",
+      "pass": true,
+      "detail": "Status must be separate from version identity.",
+      "kind": "mechanical",
+      "verification_origin": "Reexecuted against corrected77fb exact identifiers and status separation."
+    },
+    {
+      "check": "exact_schema_identifier",
+      "pass": true,
+      "detail": "Status must be separate from version identity.",
+      "kind": "mechanical",
+      "verification_origin": "Reexecuted against corrected77fb exact identifiers and status separation."
+    },
+    {
+      "check": "pilot_not_accepted",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "all_34_input_readiness_fields",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "retained_sidecar_pin:projection",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "retained_sidecar_pin:normalization_proposals",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "retained_sidecar_pin:Khamrah_exclusion",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "44_holds_and1435_nonheld_preserved",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "all_retained_activation_flags_false",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "43_proposals_unapproved",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "Khamrah_independent_not_normalization_shortcut",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "current_canonical_DB_not_established",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "retained_perfile_dossier_pin",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "retained_media_inventory_pin",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "23_media_17note6bottle",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-001",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-002",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-003",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-004",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-005",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-006",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-007",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-008",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-009",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-010",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-011",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-012",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-013",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-014",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:NOTECAND-015",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:BOTTLE-CAND-001",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:BOTTLE-CAND-002",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:BOTTLE-CAND-003",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:BOTTLE-CAND-004",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:BOTTLE-CAND-005",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:B1-MEDIA-021",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:B1-MEDIA-022",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_metadata_and_no_grant:B1-MEDIA-023",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "four_conditional_not_four_approved",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "exact_PNG_pair_no_fallback",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "two_PNG_exact_assertions:B1-MEDIA-021",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "two_PNG_exact_assertions:B1-MEDIA-022",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "media_current_catalogue_count_UNKNOWN",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/image_validation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/local.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/matching_input.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/001_identity.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/002_catalogue.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/003_provenance.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/004_associations_media_personal.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/005_contract_functions.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/006_media_and_deferred_contracts.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/007_security_and_field_contract.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/migrations/008_coalesced_deferred_validation.sql",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/performance.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/research_audit.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/scento_etl.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/fixtures.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_deferred_performance.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_foundation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_image_validation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_matching_input.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_research_audit.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/tests/test_scento_etl.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/validate_docs.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/verify.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:database/verify_images.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/__init__.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/primitives.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/synthetic_b1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/synthetic_m1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_invariants.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_primitives.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_synthetic_b1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_synthetic_b1_properties.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_synthetic_m1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_source_binding:matching_math/tests/test_synthetic_m1_properties.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_note_binding:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_note_binding:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_no_web_runtime_manifest",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_original_representation_failure_retained",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "C_initial_failure_exact_pin",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "offline194_exact_components",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "offline_result0failure_error_skip",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "offline_zero_external_guards",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/image_validation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/local.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/matching_input.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/performance.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/research_audit.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/scento_etl.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/fixtures.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_deferred_performance.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_foundation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_image_validation.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_matching_input.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_research_audit.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/tests/test_scento_etl.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/validate_docs.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/verify.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:database/verify_images.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/__init__.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/primitives.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/synthetic_b1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/synthetic_m1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_invariants.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_primitives.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_synthetic_b1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_synthetic_b1_properties.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_synthetic_m1.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "executed_source_raw_binding:matching_math/tests/test_synthetic_m1_properties.py",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "first_offline_failure_retained",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "initial_offline_log_no_source_relaxation",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "Docker_absent_DB_not_revalidated",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "four_backup_metadata_not_restore",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "packet_transitive_A_contract_binding",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "packet_allnine_unanswered",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:existing_acceptances_scoped_not_merge_inference",
+      "pass": true,
+      "detail": "Owner packet20–37",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:future_preview_independent_of_app_media",
+      "pass": true,
+      "detail": "Plan62–72;A326–330",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:real_input_cannot_fake_synthetic",
+      "pass": true,
+      "detail": "Plan60;C69–99",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:missing_unknown_not_absent_zero",
+      "pass": true,
+      "detail": "Plan44–60;A117–157;C85–99",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:general_only_not_pyramid",
+      "pass": true,
+      "detail": "Plan58;A101–105",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:no_accord_strength_inference",
+      "pass": true,
+      "detail": "Plan58;A107–115;C97",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:source_mapping_rights_selection_eligibility_separate",
+      "pass": true,
+      "detail": "Plan58;A151–157;C85–95",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:exact_preview_unselected_no_extra_source_expansion",
+      "pass": true,
+      "detail": "A159–249",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:source_time_not_backdated_review_time",
+      "pass": true,
+      "detail": "A209–219",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:preview_replay_atomic_withdrawal_no_DBrestore",
+      "pass": true,
+      "detail": "A223–249",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:regional_external_permission_no_scraping_contact",
+      "pass": true,
+      "detail": "A286–314",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:media_actual_sha_unknown_not_page_revision",
+      "pass": true,
+      "detail": "B16–28",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:PNG_numeric_fit_not_technicalPASS",
+      "pass": true,
+      "detail": "B75–99",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:PNG_only_no_repair_to_pass",
+      "pass": true,
+      "detail": "B93–99",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:media_rights_both_metadata_bytes_tenant_scoped",
+      "pass": true,
+      "detail": "B109–121",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:media_CC_revocation_not_invented",
+      "pass": true,
+      "detail": "B69,121",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:media_unsent_permission_requests_only",
+      "pass": true,
+      "detail": "B101–107",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:stack_comparison_proposed_not_installed",
+      "pass": true,
+      "detail": "ADR22–59",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:genuine_session_no_admin_shim",
+      "pass": true,
+      "detail": "C43–57;actualSQL reviewed",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:actual_adapter_not_all_effective_privilege_proof",
+      "pass": true,
+      "detail": "C45–47",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:pool_and_error_boundaries_proposals",
+      "pass": true,
+      "detail": "C57,63",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:public_entity_private_overlay_no_leak",
+      "pass": true,
+      "detail": "C59–67;B119",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:rights_recheck_next_use_no_inflight_promise",
+      "pass": true,
+      "detail": "C65",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:HTTP_transport_not_impliedby_internal_bounds",
+      "pass": true,
+      "detail": "C99",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:six_screens_all_not_runtime",
+      "pass": true,
+      "detail": "C101–112",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:separate_fit_confidence_pair_evidence",
+      "pass": true,
+      "detail": "C97",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:all_future_app_tests_NOTRUN",
+      "pass": true,
+      "detail": "C114–126;ADR49",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:PR8_blocked_no_equivalent_experiment",
+      "pass": true,
+      "detail": "Plan24,95;Packet108",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:no_self_approval_in_packet_reply",
+      "pass": true,
+      "detail": "Packet55–100",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "semantic:noncommerce_remains_personal_bookmark",
+      "pass": true,
+      "detail": "C67",
+      "kind": "independent_exact_source_semantic_review",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/00_Home/Project_Index.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/00_Home/Project_Index.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/00_Home/Project_Status.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/00_Home/Project_Status.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/06_Engineering/ADR_Post_PR27_Local_Private_Integration_Proposed.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/07_Delivery/Backlog.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/07_Delivery/Backlog.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-03_Synthetic_B1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/07_Delivery/Tasks/IMP-MATCH-08_Synthetic_M1.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Change_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Change_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Application_Inventory.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Revalidated by bounded correction JSON/secret/diff assertions."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Revalidated by bounded correction JSON/secret/diff assertions."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "frontmatter_and_fences:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Local_Diagnostics.md",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Media_Rights.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "no_common_secret_pattern:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests_Initial_Failure.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "valid_JSON:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Offline_Tests_Initial_Failure.json",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "all_changed_doc_links",
+      "pass": true,
+      "detail": "{\"markdown\": 20, \"wiki_links\": 487, \"local_links\": 11}",
+      "kind": "mechanical",
+      "verification_origin": "Prior independent exact-source review retained by exact four-path delta and input/document bindings."
+    },
+    {
+      "check": "exact_commit_diff_whitespace",
+      "pass": true,
+      "detail": "",
+      "kind": "mechanical",
+      "verification_origin": "Revalidated by bounded correction JSON/secret/diff assertions."
+    },
+    {
+      "check": "corrected_commit_exact",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_worktree_clean",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "exact_four_correction_paths",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_parent_is_reviewed_checkpoint",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_exact_identifier:future_task",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_exact_identifier:transform_version",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_exact_identifier:schema_version",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "all_other_A_payload_and_status_unchanged",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "proposal_not_accepted",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "six_source_pins34counts_and_five_inputs_unchanged",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "original_A_json_preserved",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "new_A_json_exact_binding",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "author25_checks_distinct_from_independent",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_precisely_describes_3fields",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_before_after_hashes",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "A_note_exact_scope_unchanged",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "Owner_packet_unchanged",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "no_runtime_contract_migration_receipt_or_shared_history_delta",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "verification_history_only_additive",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "verification_note_retains_author_independent_distinction",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "new_correction_link_resolves",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "doc_refresh_same_boundaries_no_errors",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "doc_refresh_adds_only_expected_local_link",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_no_common_secret:Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_no_common_secret:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_no_common_secret:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "correction_no_common_secret:Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_json_valid",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "corrected_commit_diff_check",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    },
+    {
+      "check": "initial_reviews_preserved",
+      "pass": true,
+      "detail": "",
+      "kind": "independent_targeted_correction_review"
+    }
+  ],
+  "passed": 316,
+  "failed": 0,
+  "findings": [],
+  "kind_counts": {
+    "mechanical": 256,
+    "independent_exact_source_semantic_review": 30,
+    "independent_targeted_correction_review": 30
+  },
+  "runtime_suites_rerun": false,
+  "offline194_report_examined": true,
+  "fresh_local_source_pin_count_checks": true,
+  "network_calls": 0,
+  "DB_calls": 0,
+  "Docker_calls": 0,
+  "Git_writes": 0,
+  "source_doc_receipt_edits": 0,
+  "limits": [
+    "Pinned-source planning review only; not app/real-ranking/current DB/legal/permissions acceptance",
+    "Coordinator GitHub event evidence independently crosschecked with local merge ancestry/content; no live GitHub call by reviewer",
+    "Only common secret patterns and local link/frontmatter checks; no browser/Mermaid/external-URL validation",
+    "Offline194 suite inspected through bound source/report and preserved failure log; not rerun",
+    "Historical B1 archive63PASS/3falsefails plus coordinator3 is not66independently reexecuted checks",
+    "Initial reviewer run280PASS/5fails included two documented oracle assumptions; corrected-oracle source review283PASS/3actual identifier failures is preserved. No initial failure is overwritten or counted as historical PASS."
+  ],
+  "verifier_sha256": "52f3d78ec77e64f6d6a5352c6c2f838e22ea1a68bdfb72eae8960ff913108bc5",
+  "report_state": "COMPLETE_FROZEN",
+  "open_findings": 0,
+  "initial_independent_review_sha256": "2ded26868f2f18e816f390d13f6279707c7bf38f9152d6a8d04e93850d0f63af",
+  "initial_after_oracle_correction_sha256": "f0c234a958e5733c38cfaa43a44bc79e558d5012ad46660432fca95e6a1a8c10",
+  "reviewer_oracle_corrections_sha256": "f9f17986a1430fafdcee8879ccac06c7458e5e263073381da5a2f8176cc3c40b",
+  "previous_passed_assertions_retained": 283,
+  "previous_identifier_failures_independently_closed": 3,
+  "targeted_correction_assertions": 30,
+  "resolved_findings": [
+    {
+      "id": "IR-P27-01",
+      "severity": "MEDIUM",
+      "status": "RESOLVED",
+      "initial_source": "aeb9b4c483e01a083ec867d6d9becd64503ac201",
+      "corrected_source": "77fb9080ad62e3463ae9a6006a2b6570a101ca8c",
+      "exact_change": "Only three task/transform/schema identifier values corrected; proposal status, exact A scope/Owner packet/runtime/rights/holds unchanged."
+    }
+  ],
+  "correction_paths": [
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-009_Post_PR27_Verification.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Identity_Correction.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Data_Readiness.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR27_Documentation_Checks.json"
+  ],
+  "review_method": "Full initial pinned-source semantic/mechanical review plus independent exact four-path correction closure; unaffected assertions retained by blob/delta/input bindings, not a runtime rerun.",
+  "initial_verifier_sha256": "f10e7a8138c7085a1a41095b945b8918c69e583bd2759e524c5c43e306728001"
+}

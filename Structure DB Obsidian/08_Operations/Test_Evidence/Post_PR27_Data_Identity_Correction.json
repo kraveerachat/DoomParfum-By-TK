@@ -1,0 +1,166 @@
+{
+  "finding": "IR-P27-01",
+  "severity": "MEDIUM",
+  "at_utc": "2026-11-15T16:55:08.281797+00:00",
+  "reviewed_source": "aeb9b4c483e01a083ec867d6d9becd64503ac201",
+  "status": "CORRECTED_AWAITING_INDEPENDENT_REVIEW",
+  "initial_json_sha256": "f4bf3037f64ac7800ba882a540d630c95b2a1e0025e15adc36c1a22ddf179097",
+  "corrected_json_sha256": "22adbb15e66b1ea27a424f1f3caba163e34fb9c6f0c980d3cd5429e78fb84067",
+  "initial_snapshot": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\post27-planning\\A\\INITIAL_BEFORE_IR_P27_01.json",
+  "initial_expected_failures": [
+    {
+      "check": "exact identifier consistency pilot.future_task",
+      "actual_before": "IMP-ENR-01_PROPOSED_ONLY",
+      "expected": "IMP-ENR-01",
+      "initial_pass": false
+    },
+    {
+      "check": "exact identifier consistency pilot.transform_version",
+      "actual_before": "enr-pinned-scento-preview-1_PROPOSED",
+      "expected": "enr-pinned-scento-preview-1",
+      "initial_pass": false
+    },
+    {
+      "check": "exact identifier consistency pilot.schema_version",
+      "actual_before": "enr-pinned-scento-preview-schema-1_PROPOSED",
+      "expected": "enr-pinned-scento-preview-schema-1",
+      "initial_pass": false
+    }
+  ],
+  "changed_fields": [
+    {
+      "path": "pilot.future_task",
+      "before": "IMP-ENR-01_PROPOSED_ONLY",
+      "after": "IMP-ENR-01"
+    },
+    {
+      "path": "pilot.transform_version",
+      "before": "enr-pinned-scento-preview-1_PROPOSED",
+      "after": "enr-pinned-scento-preview-1"
+    },
+    {
+      "path": "pilot.schema_version",
+      "before": "enr-pinned-scento-preview-schema-1_PROPOSED",
+      "after": "enr-pinned-scento-preview-schema-1"
+    }
+  ],
+  "note_sha256_unchanged": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+  "packet_sha256_unchanged": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+  "checks": [
+    {
+      "check": "historical initial JSON preserved byte-exact",
+      "pass": true
+    },
+    {
+      "check": "three reviewed identifier mismatches reproduced",
+      "pass": true
+    },
+    {
+      "check": "public JSON exact pilot.future_task",
+      "pass": true
+    },
+    {
+      "check": "frozen data note exact pilot.future_task",
+      "pass": true
+    },
+    {
+      "check": "public JSON exact pilot.transform_version",
+      "pass": true
+    },
+    {
+      "check": "frozen data note exact pilot.transform_version",
+      "pass": true
+    },
+    {
+      "check": "public JSON exact pilot.schema_version",
+      "pass": true
+    },
+    {
+      "check": "frozen data note exact pilot.schema_version",
+      "pass": true
+    },
+    {
+      "check": "Owner packet exact transform identifier",
+      "pass": true
+    },
+    {
+      "check": "Owner packet exact schema identifier",
+      "pass": true
+    },
+    {
+      "check": "Owner packet implementation choice binds exact future task",
+      "pass": true
+    },
+    {
+      "check": "only three intended JSON value lines changed",
+      "pass": true
+    },
+    {
+      "check": "all other JSON content unchanged",
+      "pass": true
+    },
+    {
+      "check": "proposal approval status unchanged and not accepted",
+      "pass": true
+    },
+    {
+      "check": "Owner packet retains proposed/unanswered status",
+      "pass": true
+    },
+    {
+      "check": "data note retains proposed/not-approved status",
+      "pass": true
+    },
+    {
+      "check": "frozen data note unchanged",
+      "pass": true
+    },
+    {
+      "check": "Owner packet unchanged",
+      "pass": true
+    },
+    {
+      "check": "original72 source/count checks retained unchanged",
+      "pass": true
+    },
+    {
+      "check": "six pinned source bindings unchanged",
+      "pass": true
+    },
+    {
+      "check": "34 source field counts unchanged",
+      "pass": true
+    },
+    {
+      "check": "five proposed record locators unchanged",
+      "pass": true
+    },
+    {
+      "check": "unavailable canonical database state unchanged",
+      "pass": true
+    },
+    {
+      "check": "rights/holds/normalization/eligibility and call counts unchanged",
+      "pass": true
+    },
+    {
+      "check": "public corrected JSON matches expected bytes",
+      "pass": true
+    }
+  ],
+  "passed": 25,
+  "failed": 0,
+  "source_checks_rerun": false,
+  "original72_qualification": "The original72 checks concern source/count/preservation; they did not validate identifier agreement. Their values/history remain unchanged; only the new targeted checks establish corrected identifier/status consistency.",
+  "local_original_execution_artifact": "LOCAL_DATA_READINESS.json retains original execution metadata/identifiers and is historical for the three corrected identifiers; corrected public JSON is the current metadata authority.",
+  "DB_calls": 0,
+  "network_calls": 0,
+  "Git_writes": 0,
+  "runtime_changes": 0,
+  "limits": [
+    "Coordinator correction and targeted static checks, not independent acceptance.",
+    "No source72 replay, future preview runtime, database or rights revalidation was executed.",
+    "No Owner policy is accepted or expanded; pilot.status remains PROPOSED_NOT_APPROVED."
+  ],
+  "verifier_sha256": "ec0753f0ea53f16f1fed2f49b81124e08b41ef5b89acd9833d2ad12315597389"
+}

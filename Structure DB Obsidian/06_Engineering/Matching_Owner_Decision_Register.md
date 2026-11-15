@@ -102,3 +102,15 @@ publication and acquisition choices are not accepted by this scoped decision.
 task branch/Draft PR is authorized; no agent merge or real-data activation. Existing M1 unchanged.
 [[IMP_MATCH_03_Data_Research_Continuation]] and [[IMP_MATCH_03_Media_Research_Continuation]] record
 separate bounded research done in parallel: no entity/API/sample acquisition or image bytes.
+
+## Post-PR27 consolidated planning checkpoint — 2026-11-15
+
+Verified main `8eef8f13265adc14db0cae82ff77cfc4863853ce` includes Owner-merged PR26 (merge604d447e599aa8359d3427dfbfbceaac85373e48) and PR27 (head3ed276f298c082b7450c4bbe338c8965eacc25a7; merge equals current main). Their exact M1/B1 synthetic contracts remain accepted and implemented. Earlier awaiting-review/NOTAPPROVED snapshots are dated history; no broader policy approval is inferred.
+
+[[DPT-PLAN-009_Post_PR27_Next_Wave]] coordinates one docs-only branch `plan/post-pr27-next-wave` and one Draft Planning PR. See [[Post_PR27_Consolidated_Next_Wave_Plan]] and [[Post_PR27_Owner_Decision_Packet]] version POST27-ODP-1. A/B/C preparation is complete; exact A–I choices remain PROPOSED/UNANSWERED. Future IMP-ENR-01 is only a proposed five-record offline preview after exact A/B/I acceptance and planning merge, not an active implementation task.
+
+Source1479/160/420 are pinned raw-file counts, not current canonical DB counts. All44holds,43unapproved normalization proposals and independent Khamrah evidence remain unchanged. All23media leads (17note/6bottle),fourconditionaldossiers and the two-PNG proposal remain references only; no new binaries or grants. No real-data ranking, Full Mode A/B2, source adaptation/import, database or authentication change, API/UI/transport, cloud or Production operation occurred.
+
+Docker client28.3.2 exists but engine pipe is absent: DOCKER_NOT_AVAILABLE / DB_NOT_REVALIDATED. Configured names/mounts and four backup-file metadata hashes are not live service or recovery proof. PR8 stays OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new timestamp experiment, speculative fix, integration or receipt. [[DPT-PLAN-009_Post_PR27_Verification]] distinguishes lane checks,194offline regression methods, initial fixture/checker failures, future NOTRUN tests and independent review.
+
+Current decision overlay: DM03 exact notes-only synthetic M1 and DM05 exact synthetic B1 are accepted by separate Owner contract/hash decisions. This does not accept Full Mode A component weights, real accord taxonomy/strengths/fallback, real closure/normalization, lifecycle thresholds, stack/session/cache or public publication. DM02 separation is mandatory; no scientific smell equivalence claim. See the A–I packet for recommended choices, alternatives, consequences, acceptance and exact reply text; no cell is automatically selected.
