@@ -187,3 +187,12 @@ publication and acquisition choices are not accepted by this scoped decision.
 task branch/Draft PR is authorized; no agent merge or real-data activation. Existing M1 unchanged.
 [[IMP_MATCH_03_Data_Research_Continuation]] and [[IMP_MATCH_03_Media_Research_Continuation]] record
 separate bounded research done in parallel: no entity/API/sample acquisition or image bytes.
+
+## Post-PR27 consolidated planning checkpoint — 2026-11-15
+
+- [[Post_PR27_Consolidated_Next_Wave_Plan]] and [[Post_PR27_Owner_Decision_Packet]].
+- [[Post_PR27_Data_Readiness_and_Pilot]]; [[Post_PR27_Media_Rights_and_Storage]].
+- [[Post_PR27_Application_Integration_and_Security]]; [[ADR_Post_PR27_Local_Private_Integration_Proposed]].
+- [[DPT-PLAN-009_Post_PR27_Next_Wave]]; [[DPT-PLAN-009_Post_PR27_Verification]]; [[Post_PR27_Local_Diagnostics]].
+
+Main `8eef8f13265adc14db0cae82ff77cfc4863853ce` contains Owner-merged PR26/27; wider data/media/app gates remain proposed. PR8 blocked; no Production mutation.

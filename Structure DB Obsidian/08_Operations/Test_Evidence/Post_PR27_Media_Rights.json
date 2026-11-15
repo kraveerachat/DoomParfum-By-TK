@@ -1,0 +1,1570 @@
+{
+  "task": "DPT-PLAN-009",
+  "lane": "B",
+  "at_utc": "2026-11-15T16:38:54.107906+00:00",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "status": "PREPARATION_COMPLETE; RIGHTS_INTAKE_BLOCKED",
+  "source_bindings": {
+    "retained_candidate_inventory_sha256": "74f136a3e66380b0d84e0c37d49efdc4195303e153c13b33037fbf4257d57ac7",
+    "retained_metadata_retrieval_sha256": "b740dd9fd2f74b28c0f13cade45f2891940e5141f82fcff98e7ff7853052baf4",
+    "image_validation_raw_checkout_sha256": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+    "source_hash_qualification": "Raw checkout digest; preservation additionally compares canonical Git blobs."
+  },
+  "inventory_counts": {
+    "historical": 20,
+    "added": 3,
+    "total": 23,
+    "note": 17,
+    "bottle": 6,
+    "conditional_metadata_dossiers": 4,
+    "current_canonical_usable_assets": "UNKNOWN_NOT_REVALIDATED",
+    "new_image_binaries_this_wave": 0,
+    "new_intake_approvals_this_wave": 0,
+    "new_canonical_bindings_this_wave": 0
+  },
+  "records": [
+    {
+      "candidate_asset_id": "NOTECAND-001",
+      "kind": "note",
+      "subject": "Lavender",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Lavender_plant.jpg",
+      "creator_assertion": "TorbeyCharbel",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1166286192",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-002",
+      "kind": "note",
+      "subject": "Lemon",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Lemon_fruits.jpg",
+      "creator_assertion": "பிருந்தா சுப்ரமணி",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1056243399",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-003",
+      "kind": "note",
+      "subject": "Bergamot",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Citrus_bergamia_-_Bergamot.jpg",
+      "creator_assertion": "James Steakley",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1137729612",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-004",
+      "kind": "note",
+      "subject": "Vanilla",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Vanilla_pods_in_a_test_tube.jpg",
+      "creator_assertion": "Tanguy Ortolo",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1275835053",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-005",
+      "kind": "note",
+      "subject": "Coffee",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Coffeebeans.png",
+      "creator_assertion": "Eptalon",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1096830175",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-006",
+      "kind": "note",
+      "subject": "Cinnamon",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cinnamon_sticks_(1).jpg",
+      "creator_assertion": "Fumikas Sagisavas",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1125698424",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-007",
+      "kind": "note",
+      "subject": "Jasmine Sambac",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jasminum_sambac_is_a_species_of_Jasmine_native_to_tropical_asia.jpg",
+      "creator_assertion": "Sathiyaraj Durai",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1224365118",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-008",
+      "kind": "note",
+      "subject": "Cardamom",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Cardamom_seeds.jpg",
+      "creator_assertion": "E.dronism",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1113980264",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11T16:10:45Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-009",
+      "kind": "note",
+      "subject": "Patchouli",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Patchouli.jpg",
+      "creator_assertion": "Joe Laurence, Seychelles News Agency",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1217657892",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11T16:10:45Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-010",
+      "kind": "note",
+      "subject": "Tonka Bean",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Tonka_Beans.jpg",
+      "creator_assertion": "Mecredis / Fred Benenson",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1063081513",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11T16:10:45Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-011",
+      "kind": "note",
+      "subject": "Saffron",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Saffron.JPG",
+      "creator_assertion": "Miansari66",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1265041944",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "PD-self",
+      "license_url": "https://commons.wikimedia.org/wiki/File:Saffron.JPG#Licensing",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11T16:10:45Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-012",
+      "kind": "note",
+      "subject": "Ylang-Ylang",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ylang-ylang_(Cananga_odorata)_in_the_Philippines_01.jpg",
+      "creator_assertion": "Obsidian Soul",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "897537087",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11T16:10:45Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-013",
+      "kind": "note",
+      "subject": "Nutmeg",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Nutmeg-spice.jpg",
+      "creator_assertion": "Dominikmatus",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1177424529",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC0 1.0",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-12T15:13:16Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-014",
+      "kind": "note",
+      "subject": "Blackcurrant",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ribes_nigrum-1.jpg",
+      "creator_assertion": "Mariluna",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1158951883",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-12T15:13:16Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_display_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_derivative_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "copyright_redistribution_ceiling": "UNVERIFIED_FOR_SELECTED_FILE",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "NOTECAND-015",
+      "kind": "note",
+      "subject": "Juniper berries; ingredient illustration proposal",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Juniper_berries_777.jpg",
+      "creator_assertion": "liz west (Flickr account Muffet)",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1142894283",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "2012-03-20T07:53:00Z; FlickreviewR replaced from Flickr original",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "CC BY 2.0",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "permission_evidence_class": "RETAINED_CONDITIONAL_PER_FILE_DOSSIER",
+      "retained_observation_at": "2026-11-14T22:13:56Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "Juniper berries 777.jpg — liz west (Muffet), via Wikimedia Commons; CC BY 2.0; changes: none (proposal only).",
+      "attribution_requirements": "Retain supplied credit, source, license version/link, notices and change statement; BY2/BY3 supplied title matters. For 022, shared adaptations require compatible ShareAlike treatment. No derivative is approved.",
+      "copyright_storage_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_display_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_derivative_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_redistribution_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "Upstream Flickr page fetch failed Cache miss; upstream ownership/current license not independently verified.",
+        "Exact oldid fetch failed Cache miss; current description claims that revision.",
+        "JPEG is outside current PNG intake; no conversion approval.",
+        "No source-reported checksum found in checked page text."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "image/jpeg",
+      "reported_dimensions": {
+        "width": 1400,
+        "height": 1050
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "BOTTLE-CAND-001",
+      "kind": "bottle",
+      "subject": "Dossier — Ambery Saffron",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://dossier.co/products/ambery-saffron",
+      "creator_assertion": "NOT RECORDED",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "UNKNOWN",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "NOT RECORDED",
+      "license_url": "UNKNOWN",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_display_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_derivative_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_redistribution_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted.",
+        "Product page does not identify a reusable photograph or photographer.",
+        "Written file-specific grant and excluded trademark/label/design/third-party rights need review."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "BOTTLE-CAND-002",
+      "kind": "bottle",
+      "subject": "Dossier — Ambery Saffron (Extrait de Parfum)",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://dossier.co/products/ambery-saffron-extrait-de-parfum",
+      "creator_assertion": "NOT RECORDED",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "UNKNOWN",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "NOT RECORDED",
+      "license_url": "UNKNOWN",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_display_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_derivative_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_redistribution_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted.",
+        "Product page does not identify a reusable photograph or photographer.",
+        "Written file-specific grant and excluded trademark/label/design/third-party rights need review."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "BOTTLE-CAND-003",
+      "kind": "bottle",
+      "subject": "Dossier — Musky Musk",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://dossier.co/products/musky-musk",
+      "creator_assertion": "NOT RECORDED",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "UNKNOWN",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "NOT RECORDED",
+      "license_url": "UNKNOWN",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_display_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_derivative_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_redistribution_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted.",
+        "Product page does not identify a reusable photograph or photographer.",
+        "Written file-specific grant and excluded trademark/label/design/third-party rights need review."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "BOTTLE-CAND-004",
+      "kind": "bottle",
+      "subject": "Dossier — Woody Sandalwood",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://dossier.co/products/woody-sandalwood",
+      "creator_assertion": "NOT RECORDED",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "UNKNOWN",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "NOT RECORDED",
+      "license_url": "UNKNOWN",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_display_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_derivative_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_redistribution_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted.",
+        "Product page does not identify a reusable photograph or photographer.",
+        "Written file-specific grant and excluded trademark/label/design/third-party rights need review."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "BOTTLE-CAND-005",
+      "kind": "bottle",
+      "subject": "ALT. Fragrances — Crystal",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://altfragrances.com/products/inspired-by-baccarat-rouge-540",
+      "creator_assertion": "NOT RECORDED",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "UNKNOWN",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "UNKNOWN",
+      "source_reported_sha1": null,
+      "actual_sha256": null,
+      "license_assertion": "NOT RECORDED",
+      "license_url": "UNKNOWN",
+      "permission_evidence_class": "HISTORICAL_ASSERTION_ONLY",
+      "retained_observation_at": "2026-11-11",
+      "fresh_source_recheck": false,
+      "attribution_draft": "NOT_PREPARED: exact supplied title/creator/license/notices require file-level review",
+      "attribution_requirements": "UNKNOWN until exact selected-file rights review. Recorded license assertion is retained; no new legal attribution condition or grant is inferred.",
+      "copyright_storage_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_display_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_derivative_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "copyright_redistribution_ceiling": "RESTRICTED_OR_GRANT_MISSING",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "No current file-level recheck in this wave.",
+        "Exact file revision, actual bytes/SHA-256 and ownership authority are unverified.",
+        "Owner approval for binary intake, storage, display, derivatives and redistribution is not granted.",
+        "Product page does not identify a reusable photograph or photographer.",
+        "Written file-specific grant and excluded trademark/label/design/third-party rights need review."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "UNKNOWN",
+      "reported_dimensions": {
+        "width": null,
+        "height": null
+      },
+      "reported_bytes": null,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "B1-MEDIA-021",
+      "kind": "note",
+      "subject": "Bergamot essential-oil vial; not a fruit photograph or formula evidence",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:BergamotEssOil.png",
+      "creator_assertion": "Itineranttrader",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "975562139",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "2009-01-19T04:53:00Z; Itineranttrader",
+      "source_reported_sha1": "14304c89a9eee5ad6c1a2e42eea045768a16e9fe",
+      "actual_sha256": null,
+      "license_assertion": "PD-self dedication with fallback broad permission where dedication is ineffective",
+      "license_url": "https://commons.wikimedia.org/wiki/File:BergamotEssOil.png#Licensing",
+      "permission_evidence_class": "RETAINED_CONDITIONAL_PER_FILE_DOSSIER",
+      "retained_observation_at": "2026-11-14T22:13:56Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "BergamotEssOil.png — Itineranttrader, via Wikimedia Commons; PD-self assertion; changes: none (proposal only).",
+      "attribution_requirements": "Retain PD-self permission statement and source; proposed creator credit is provenance practice, not an invented PD attribution condition. Other rights remain unverified.",
+      "copyright_storage_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_display_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_derivative_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_redistribution_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "Exact oldid fetch failed Cache miss; current description claims that revision.",
+        "PD-self uploader assertion is not legally authenticated authorship or all-rights clearance.",
+        "PNG bit depth/color/interlace/chunks and exact bytes remain unverified.",
+        "Reviewer must accept oil-vial illustration association; it must not imply actual perfume ingredients."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "image/png",
+      "reported_dimensions": {
+        "width": 841,
+        "height": 1280
+      },
+      "reported_bytes": 535064,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "B1-MEDIA-022",
+      "kind": "note",
+      "subject": "Ginger root; symbolic ingredient illustration proposal",
+      "proposed_use": "Symbolic note illustration, not ingredient/formula evidence",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ginger.png",
+      "creator_assertion": "Tiia Monto (Commons user Kulmalukko)",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "1273470273",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "2018-01-13T18:07:00Z; Kulmalukko",
+      "source_reported_sha1": "f68727598e677ac7367344d8cfdf795c99c0955c",
+      "actual_sha256": null,
+      "license_assertion": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "permission_evidence_class": "RETAINED_CONDITIONAL_PER_FILE_DOSSIER",
+      "retained_observation_at": "2026-11-14T22:13:56Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "Ginger.png — Tiia Monto (Kulmalukko), via Wikimedia Commons; CC BY-SA 4.0; changes: none (proposal only).",
+      "attribution_requirements": "Retain supplied credit, source, license version/link, notices and change statement; BY2/BY3 supplied title matters. For 022, shared adaptations require compatible ShareAlike treatment. No derivative is approved.",
+      "copyright_storage_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_display_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_derivative_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_redistribution_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "Revision ID read from current page; exact revision endpoint not requested.",
+        "Page exposes camera/editing metadata; actual ancillary chunks are unknown and may make the PNG inadmissible.",
+        "Any shared adaptation needs compatible ShareAlike treatment; no derivative is approved.",
+        "Ownership and all other rights remain source assertions."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "image/png",
+      "reported_dimensions": {
+        "width": 2424,
+        "height": 1126
+      },
+      "reported_bytes": 3689052,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    },
+    {
+      "candidate_asset_id": "B1-MEDIA-023",
+      "kind": "bottle",
+      "subject": "Chanel N°5 bottle; page describes a 1970 bottle model, not a verified current SKU",
+      "proposed_use": "Edition-specific bottle photograph only after exact identity and rights review",
+      "source_page": "https://commons.wikimedia.org/wiki/File:CHANEL_N%C2%B05.jpg",
+      "creator_assertion": "Foto: Jonn Leffmann (uploader Jonnmann)",
+      "creator_or_rightsholder_authenticated": false,
+      "description_page_revision_assertion": "972949938",
+      "exact_file_revision_verified": false,
+      "file_history_assertion": "2016-03-16T01:20:00Z; Jonnmann",
+      "source_reported_sha1": "2b1cab6f466af6bc679313211414b59fbf515da6",
+      "actual_sha256": null,
+      "license_assertion": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0/",
+      "permission_evidence_class": "RETAINED_CONDITIONAL_PER_FILE_DOSSIER",
+      "retained_observation_at": "2026-11-14T22:13:56Z",
+      "fresh_source_recheck": false,
+      "attribution_draft": "CHANEL N°5.jpg — Foto: Jonn Leffmann, via Wikimedia Commons; CC BY 3.0; changes: none (proposal only).",
+      "attribution_requirements": "Retain supplied credit, source, license version/link, notices and change statement; BY2/BY3 supplied title matters. For 022, shared adaptations require compatible ShareAlike treatment. No derivative is approved.",
+      "copyright_storage_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_display_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_derivative_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "copyright_redistribution_ceiling": "CONDITIONAL_COPYRIGHT_CEILING_IF_ASSERTION_VALID; NOT_PROJECT_APPROVAL",
+      "approved_project_operations": [],
+      "acquisition_method_permission": "UNKNOWN_NOT_APPROVED",
+      "private_storage_permission": "NOT_GRANTED_FOR_PROJECT_INTAKE",
+      "private_display_permission": "NOT_GRANTED; APPLICATION_AUTHORIZATION_GATE_SEPARATE",
+      "derivative_permission": "NOT_APPROVED_FOR_PROJECT; ORIGINAL_ONLY_PROPOSAL",
+      "redistribution_or_publication_permission": "NOT_APPROVED_FOR_PROJECT",
+      "permission_evidence_gaps": [
+        "Exact oldid fetch failed Cache miss; current description claims that revision.",
+        "Photographic copyright license does not independently clear marks, label graphics, bottle design or endorsement.",
+        "1970 model and structured eau-de-toilette claims are not verified size/concentration/year/SKU identity.",
+        "JPEG unsupported in current PNG lane; no conversion approval.",
+        "No exact Chanel-house locator found by case-insensitive substring in retained source house labels; no canonical binding inferred."
+      ],
+      "owner_status": "NOT_GRANTED",
+      "canonical_binding": "NOT_APPROVED",
+      "reported_mime": "image/jpeg",
+      "reported_dimensions": {
+        "width": 671,
+        "height": 999
+      },
+      "reported_bytes": 707713,
+      "binary_validation": "NOT_RUN",
+      "this_wave_image_bytes_acquired": 0
+    }
+  ],
+  "sample_proposal": {
+    "id": "MEDIA-PNG-PAIR-B1-PROPOSED",
+    "asset_ids": [
+      "B1-MEDIA-021",
+      "B1-MEDIA-022"
+    ],
+    "status": "PROPOSED_NOT_APPROVED",
+    "original_only": true,
+    "max_files": 2,
+    "max_bytes_per_file": 5242880,
+    "max_cumulative_network_payload": 10485760,
+    "actual_file_SHA256s": [
+      null,
+      null
+    ],
+    "binary_tests": "NOT_RUN"
+  },
+  "current_validator": {
+    "contract": "local-static-png-v1",
+    "limits": {
+      "max_bytes": 5242880,
+      "max_width": 4096,
+      "max_height": 4096,
+      "max_pixels": 4000000,
+      "max_decoded_bytes": 20971520,
+      "max_chunks": 1024
+    },
+    "allowed_chunks": [
+      "IHDR",
+      "IDAT",
+      "IEND"
+    ],
+    "colour": "8-bit RGB/RGBA non-interlaced"
+  },
+  "previous_failed_followups_retained": [
+    {
+      "url": "https://commons.wikimedia.org/w/index.php?oldid=975562139&title=File%3ABergamotEssOil.png",
+      "result": "Cache miss"
+    },
+    {
+      "url": "https://commons.wikimedia.org/w/index.php?oldid=972949938&title=File%3ACHANEL_N%C2%B05.jpg",
+      "result": "Cache miss"
+    },
+    {
+      "url": "https://commons.wikimedia.org/w/index.php?oldid=1142894283&title=File%3AJuniper_berries_777.jpg",
+      "result": "Cache miss"
+    },
+    {
+      "url": "https://www.flickr.com/photos/53133240%40N00/33946878",
+      "result": "Cache miss"
+    }
+  ],
+  "static_checks": [
+    {
+      "check": "unique required evidence fields: NOTECAND-001",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-001",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-002",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-002",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-003",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-003",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-004",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-004",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-005",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-005",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-006",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-006",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-007",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-007",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-008",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-008",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-009",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-009",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-010",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-010",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-011",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-011",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-012",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-012",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-013",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-013",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-014",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-014",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: NOTECAND-015",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: NOTECAND-015",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: BOTTLE-CAND-001",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: BOTTLE-CAND-001",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: BOTTLE-CAND-002",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: BOTTLE-CAND-002",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: BOTTLE-CAND-003",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: BOTTLE-CAND-003",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: BOTTLE-CAND-004",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: BOTTLE-CAND-004",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: BOTTLE-CAND-005",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: BOTTLE-CAND-005",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: B1-MEDIA-021",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: B1-MEDIA-021",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: B1-MEDIA-022",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: B1-MEDIA-022",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "unique required evidence fields: B1-MEDIA-023",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no approval or binary proof invented: B1-MEDIA-023",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "23 unique candidates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "17 note and 6 bottle candidates",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "20 historical plus 3 added",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "exact four conditional dossiers retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "only proposed pair021022",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "four failed metadata followups retained",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source candidate inventory pin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "source metadata retrieval pin",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "current PNG numeric limits exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "current PNG contract version",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "reported numeric budget only: B1-MEDIA-021",
+      "pass": true,
+      "detail": "Metadata arithmetic, not measured bytes or PNG acceptance."
+    },
+    {
+      "check": "reported numeric budget only: B1-MEDIA-022",
+      "pass": true,
+      "detail": "Metadata arithmetic, not measured bytes or PNG acceptance."
+    },
+    {
+      "check": "required document boundary: MEDIA-PNG-PAIR-B1-PROPOSED",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "required document boundary: local-static-png-v1",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "required document boundary: NOT_GRANTED",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "required document boundary: SPECIFIED, NOT RUN",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "document current database counts unknown",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "document does not infer Ginger rejection",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "private public-parent boundary explicit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no derivative or codec expansion",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "revocation restore boundary explicit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "single consolidated decision packet",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all23 IDs in note",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "original copyright license versions preserved",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "valid YAML frontmatter with proposed status",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "frontmatter source_of_truth resolves to root README",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "no trailing whitespace or conflict markers",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all23 inventory table rows complete",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Markdown table column widths consistent",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "table source URLs avoid unescaped Markdown parentheses",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "local evidence link points to assigned evidence",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "all protected runtime/evidence/governance/receipts unchanged",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "current base exact",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "PNG source unchanged",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 80,
+  "failed": 0,
+  "protected_paths_checked": 124,
+  "note_sha256": "2f2797ff0398f1a1219c1937fb6b0307f9f9c4fbfcc69b0308fea1efae6d8ffc",
+  "note": "Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+  "network_calls": 0,
+  "DB_calls": 0,
+  "source_or_image_acquisition": 0,
+  "permission_messages": 0,
+  "Git_writes": 0,
+  "Production_mutation": false,
+  "not_run": [
+    "Image bytes/decoder/SQL/RLS/restore/storage/service tests",
+    "Fresh remote ownership or license verification"
+  ],
+  "verification_role": "Workstream author static verification; not independent acceptance or legal clearance"
+}

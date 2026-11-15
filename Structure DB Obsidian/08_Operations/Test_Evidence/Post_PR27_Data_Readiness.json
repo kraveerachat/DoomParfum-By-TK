@@ -1,0 +1,1295 @@
+{
+  "task": "DPT-PLAN-009",
+  "workstream": "A",
+  "at_utc": "2026-11-15T16:40:40.168538+00:00",
+  "base": "8eef8f13265adc14db0cae82ff77cfc4863853ce",
+  "scope": "Fresh existing-local-source aggregate verification and five-record planning proposal; no acquisition or runtime mapping",
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "source_bindings": {
+    "perfumes.csv": {
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+      "bytes": 780683,
+      "records": 1479
+    },
+    "houses.csv": {
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18",
+      "bytes": 29765,
+      "records": 160
+    },
+    "materials.csv": {
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+      "bytes": 87027,
+      "records": 420
+    },
+    "LICENSE": {
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84",
+      "bytes": 188
+    },
+    "README.md": {
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688",
+      "bytes": 2799
+    },
+    "datapackage.json": {
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2",
+      "bytes": 4845
+    }
+  },
+  "field_coverage": {
+    "perfumes.csv": {
+      "id": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "name": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "house_id": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "house": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "year": {
+        "populated": 80,
+        "missing": 1399,
+        "denominator": 1479
+      },
+      "perfumers": {
+        "populated": 69,
+        "missing": 1410,
+        "denominator": 1479
+      },
+      "concentration": {
+        "populated": 1228,
+        "missing": 251,
+        "denominator": 1479
+      },
+      "family": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "secondary_family": {
+        "populated": 1075,
+        "missing": 404,
+        "denominator": 1479
+      },
+      "character": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "seasons": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "times_of_day": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "top_notes": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      },
+      "heart_notes": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      },
+      "base_notes": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      },
+      "notes": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "description": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      },
+      "popularity_rank": {
+        "populated": 613,
+        "missing": 866,
+        "denominator": 1479
+      },
+      "url": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    "houses.csv": {
+      "id": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      },
+      "name": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      },
+      "country": {
+        "populated": 158,
+        "missing": 2,
+        "denominator": 160
+      },
+      "founded": {
+        "populated": 97,
+        "missing": 63,
+        "denominator": 160
+      },
+      "type": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      },
+      "portrait": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      },
+      "perfume_count": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      },
+      "url": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    "materials.csv": {
+      "id": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      },
+      "name": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      },
+      "aliases": {
+        "populated": 327,
+        "missing": 93,
+        "denominator": 420
+      },
+      "material_family": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      },
+      "origin": {
+        "populated": 402,
+        "missing": 18,
+        "denominator": 420
+      },
+      "smell": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      },
+      "url": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    }
+  },
+  "input_readiness": [
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "id",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "name",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "house_id",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "house",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "year",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 80,
+        "missing": 1399,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "perfumers",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 69,
+        "missing": 1410,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "concentration",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1228,
+        "missing": 251,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "family",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "secondary_family",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1075,
+        "missing": 404,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "character",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "seasons",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "times_of_day",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "top_notes",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "heart_notes",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "base_notes",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1388,
+        "missing": 91,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "notes",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "description",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "popularity_rank",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 613,
+        "missing": 866,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "perfumes.csv",
+      "field": "url",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 1479,
+        "missing": 0,
+        "denominator": 1479
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "id",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "name",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "country",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 158,
+        "missing": 2,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "founded",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 97,
+        "missing": 63,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "type",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "portrait",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "perfume_count",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "houses.csv",
+      "field": "url",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 160,
+        "missing": 0,
+        "denominator": 160
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "id",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "name",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "aliases",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 327,
+        "missing": 93,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "material_family",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "origin",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 402,
+        "missing": 18,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "smell",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    },
+    {
+      "source": "Scento pinned local export",
+      "file": "materials.csv",
+      "field": "url",
+      "version": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+      "rights_status": "CC_BY_4_0_PINNED_LOCAL_PILOT;PROPOSED_TRANSFORM_NOT_APPROVED",
+      "completeness_status": "UNKNOWN_NO_ACCEPTED_REAL_SOURCE_CLOSURE",
+      "canonical_mapping_status": "UNVERIFIED_CURRENT_MAPPING;NO_PROMOTION_IN_THIS_WAVE",
+      "selection_status": "UNKNOWN_NOT_QUERIED",
+      "matching_eligibility": "NOT_AUTHORIZED;CURRENT_DB_UNKNOWN",
+      "outstanding_owner_decision": "A/B exact pilot/selected-field use; C closure; D any normalization",
+      "raw_presence_only": {
+        "populated": 420,
+        "missing": 0,
+        "denominator": 420
+      }
+    }
+  ],
+  "raw_pyramid_shapes": {
+    "layered": 1388,
+    "general_only": 91
+  },
+  "retained_review_bucket_counts": {
+    "SOURCE_PROMOTABLE_UNDER_MERGED_RULES_NOT_NEW_APPROVAL": 1435,
+    "PRESERVED_HELD_SOURCE_PROFILE": 44
+  },
+  "raw_house_country_claims": {
+    "Canada": 1,
+    "France": 56,
+    "Germany": 4,
+    "India": 1,
+    "Italy": 24,
+    "Japan": 2,
+    "Lebanon": 1,
+    "Netherlands": 1,
+    "Oman": 1,
+    "Saudi Arabia": 1,
+    "Spain": 2,
+    "Sweden": 2,
+    "Switzerland": 2,
+    "Turkey": 1,
+    "UNKNOWN_EMPTY": 2,
+    "United Arab Emirates": 14,
+    "United Kingdom": 15,
+    "United States": 30
+  },
+  "retained_regional_seed_aggregate": [
+    {
+      "region": "Indonesia",
+      "candidates": 16,
+      "with_stored_scento_house_suggestion": 0,
+      "without_stored_suggestion": 16,
+      "identity_approval_by_this_audit": 0
+    },
+    {
+      "region": "Middle East",
+      "candidates": 31,
+      "with_stored_scento_house_suggestion": 14,
+      "without_stored_suggestion": 17,
+      "identity_approval_by_this_audit": 0
+    },
+    {
+      "region": "Thailand",
+      "candidates": 15,
+      "with_stored_scento_house_suggestion": 1,
+      "without_stored_suggestion": 14,
+      "identity_approval_by_this_audit": 0
+    }
+  ],
+  "regional_market_universe_denominator": "UNKNOWN",
+  "retained_matching_activation_false_records": 1479,
+  "unapproved_normalization_proposals": 43,
+  "independent_Khamrah_conflicts_preserved": 1,
+  "current_canonical_DB": "UNKNOWN_NOT_QUERIED",
+  "verified_real_source_closed_layers": "NOT_ESTABLISHED",
+  "verified_real_source_complete_empty_domains": "NOT_ESTABLISHED",
+  "real_accord_strength_profiles_available_in_pinned_schema": 0,
+  "pilot": {
+    "id": "ENR-PINNED-SCENTO-1",
+    "revision": 1,
+    "status": "PROPOSED_NOT_APPROVED",
+    "future_task": "IMP-ENR-01_PROPOSED_ONLY",
+    "transform_version": "enr-pinned-scento-preview-1_PROPOSED",
+    "records": [
+      {
+        "file": "perfumes.csv",
+        "source_key": "afnan-9-am",
+        "source_label": "9 AM",
+        "logical_csv_record_ordinal": 644,
+        "ordinal_contract": "one-based data record; header excluded",
+        "source_file_sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "current_canonical_identity": "UNKNOWN_NOT_QUERIED",
+        "proposed_output": "UNSELECTED_LOCAL_REVIEW_PREVIEW_ONLY",
+        "retained_review_bucket": "SOURCE_PROMOTABLE_UNDER_MERGED_RULES_NOT_NEW_APPROVAL",
+        "exact_edition_verified": false,
+        "closure": "UNKNOWN",
+        "matching_activation_authorized": false,
+        "parsed_source_fields_sha256": "0cac160856d83fed52dfa902388f60aecedeca02b2a3fa77c4d0e72c6dc49e1f"
+      },
+      {
+        "file": "perfumes.csv",
+        "source_key": "afnan-9-am-dive",
+        "source_label": "9 AM Dive",
+        "logical_csv_record_ordinal": 645,
+        "ordinal_contract": "one-based data record; header excluded",
+        "source_file_sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "current_canonical_identity": "UNKNOWN_NOT_QUERIED",
+        "proposed_output": "UNSELECTED_LOCAL_REVIEW_PREVIEW_ONLY",
+        "retained_review_bucket": "SOURCE_PROMOTABLE_UNDER_MERGED_RULES_NOT_NEW_APPROVAL",
+        "exact_edition_verified": false,
+        "closure": "UNKNOWN",
+        "matching_activation_authorized": false,
+        "parsed_source_fields_sha256": "4a0a7ba6fb77a0f4aa9f89e4a01c10b663b93981215caf479ef3cd5dcaab7e9a"
+      },
+      {
+        "file": "houses.csv",
+        "source_key": "afnan",
+        "source_label": "Afnan",
+        "logical_csv_record_ordinal": 3,
+        "ordinal_contract": "one-based data record; header excluded",
+        "source_file_sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "current_canonical_identity": "UNKNOWN_NOT_QUERIED",
+        "proposed_output": "UNSELECTED_LOCAL_REVIEW_PREVIEW_ONLY"
+      },
+      {
+        "file": "materials.csv",
+        "source_key": "mint",
+        "source_label": "Mint",
+        "logical_csv_record_ordinal": 257,
+        "ordinal_contract": "one-based data record; header excluded",
+        "source_file_sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "current_canonical_identity": "UNKNOWN_NOT_QUERIED",
+        "proposed_output": "UNSELECTED_LOCAL_REVIEW_PREVIEW_ONLY"
+      },
+      {
+        "file": "materials.csv",
+        "source_key": "bergamot",
+        "source_label": "Bergamot",
+        "logical_csv_record_ordinal": 46,
+        "ordinal_contract": "one-based data record; header excluded",
+        "source_file_sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c",
+        "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+        "current_canonical_identity": "UNKNOWN_NOT_QUERIED",
+        "proposed_output": "UNSELECTED_LOCAL_REVIEW_PREVIEW_ONLY"
+      }
+    ],
+    "maximum_source_records": 5,
+    "canonical_writes": 0,
+    "new_source_records": 0,
+    "schema_version": "enr-pinned-scento-preview-schema-1_PROPOSED",
+    "fixed_total_input_bytes": 905307,
+    "maximum_review_field_slots_including_IDs_and_URLs": 46,
+    "proposed_fields": {
+      "perfumes.csv": [
+        "id",
+        "name",
+        "house_id",
+        "house",
+        "year",
+        "concentration",
+        "family",
+        "secondary_family",
+        "top_notes",
+        "heart_notes",
+        "base_notes",
+        "notes",
+        "url"
+      ],
+      "houses.csv": [
+        "id",
+        "name",
+        "country",
+        "founded",
+        "type",
+        "url"
+      ],
+      "materials.csv": [
+        "id",
+        "name",
+        "aliases",
+        "material_family",
+        "origin",
+        "smell",
+        "url"
+      ]
+    },
+    "output_contract": "Local unselected candidate-claim review preview; no database/schema/eligibility changes"
+  },
+  "retained_input_bindings": {
+    "projection": {
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    },
+    "normalization_proposals": {
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    "Khamrah_exclusion": {
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    },
+    "prior_raw_aggregate": {
+      "sha256": "0601fd8746769809f32c0b3e84c960f4b8b15162b2fcdb2f6a049ab568d8764c"
+    },
+    "retained_source_index": {
+      "sha256": "f86f944d2ec7cc5f849e997283e6fb2723a89f1147b1c831718765b409612908"
+    }
+  },
+  "checks": [
+    {
+      "check": "pinned source hash perfumes.csv",
+      "pass": true
+    },
+    {
+      "check": "pinned source hash houses.csv",
+      "pass": true
+    },
+    {
+      "check": "pinned source hash materials.csv",
+      "pass": true
+    },
+    {
+      "check": "pinned source hash LICENSE",
+      "pass": true
+    },
+    {
+      "check": "pinned source hash README.md",
+      "pass": true
+    },
+    {
+      "check": "pinned source hash datapackage.json",
+      "pass": true
+    },
+    {
+      "check": "source IDs unique perfumes.csv",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.id",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.name",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.house_id",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.house",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.year",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.perfumers",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.concentration",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.family",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.secondary_family",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.character",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.seasons",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.times_of_day",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.top_notes",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.heart_notes",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.base_notes",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.notes",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.description",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.popularity_rank",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate perfumes.csv.url",
+      "pass": true
+    },
+    {
+      "check": "source IDs unique houses.csv",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.id",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.name",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.country",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.founded",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.type",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.portrait",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.perfume_count",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate houses.csv.url",
+      "pass": true
+    },
+    {
+      "check": "source IDs unique materials.csv",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.id",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.name",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.aliases",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.material_family",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.origin",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.smell",
+      "pass": true
+    },
+    {
+      "check": "fresh field count matches retained aggregate materials.csv.url",
+      "pass": true
+    },
+    {
+      "check": "three exact denominators",
+      "pass": true
+    },
+    {
+      "check": "34 field counts freshly recomputed",
+      "pass": true
+    },
+    {
+      "check": "all source house references resolve",
+      "pass": true
+    },
+    {
+      "check": "raw pyramid shapes retained",
+      "pass": true
+    },
+    {
+      "check": "retained projection exact pin",
+      "pass": true
+    },
+    {
+      "check": "1479 retained projection records",
+      "pass": true
+    },
+    {
+      "check": "44 retained held profiles",
+      "pass": true
+    },
+    {
+      "check": "1435 retained nonheld profiles",
+      "pass": true
+    },
+    {
+      "check": "all retained projection matching flags false",
+      "pass": true
+    },
+    {
+      "check": "43 unapproved normalization proposals",
+      "pass": true
+    },
+    {
+      "check": "normalization proposals preserve holds/writes/eligibility",
+      "pass": true
+    },
+    {
+      "check": "Khamrah independent source-conflict exclusion",
+      "pass": true
+    },
+    {
+      "check": "retained repeated-note groups/extras",
+      "pass": true
+    },
+    {
+      "check": "retained source index covers the same source IDs",
+      "pass": true
+    },
+    {
+      "check": "pilot exact source key exists once perfumes.csv/afnan-9-am",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume retained nonheld afnan-9-am",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume ordinal agrees retained index afnan-9-am",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume closure remains unknown afnan-9-am",
+      "pass": true
+    },
+    {
+      "check": "pilot exact source key exists once perfumes.csv/afnan-9-am-dive",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume retained nonheld afnan-9-am-dive",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume ordinal agrees retained index afnan-9-am-dive",
+      "pass": true
+    },
+    {
+      "check": "pilot perfume closure remains unknown afnan-9-am-dive",
+      "pass": true
+    },
+    {
+      "check": "pilot exact source key exists once houses.csv/afnan",
+      "pass": true
+    },
+    {
+      "check": "pilot exact source key exists once materials.csv/mint",
+      "pass": true
+    },
+    {
+      "check": "pilot exact source key exists once materials.csv/bergamot",
+      "pass": true
+    },
+    {
+      "check": "pilot cap exact two plus one plus two equals five",
+      "pass": true
+    },
+    {
+      "check": "six source files unchanged after inspection",
+      "pass": true
+    },
+    {
+      "check": "projection and review sidecars not modified",
+      "pass": true
+    },
+    {
+      "check": "future IMP-ENR-01 unallocated in starting main docs",
+      "pass": true
+    }
+  ],
+  "passed": 72,
+  "failed": 0,
+  "DB_calls": 0,
+  "network_calls": 0,
+  "new_permissions": 0,
+  "source_or_image_acquisition": 0,
+  "canonical_writes": 0,
+  "normalizations_applied": 0,
+  "holds_released": 0,
+  "matching_eligibility_changes": 0,
+  "not_run": [
+    "Canonical database queries/security/rights revalidation",
+    "Real-data ranking",
+    "Mapping/ETL runtime",
+    "Replay/rollback of proposed preview",
+    "New external source/license verification"
+  ],
+  "qualification": "Raw field population and retained historical flags are not canonical selections, fresh DB counts, accepted completeness, source-wide media rights or real-data authorization.",
+  "verifier_sha256": "23bf0312fb9e1c481e0810fe50b88d74e335bfce0977f75e335a8519fcafc962"
+}
