@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-15
+updated: 2026-11-16
 tags:
   - doomparfum
   - operations
@@ -680,3 +680,7 @@ Source1479/160/420 are pinned raw-file counts, not current canonical DB counts. 
 Docker client28.3.2 exists but engine pipe is absent: DOCKER_NOT_AVAILABLE / DB_NOT_REVALIDATED. Configured names/mounts and four backup-file metadata hashes are not live service or recovery proof. PR8 stays OPEN/DRAFT/BLOCKED at84dccb117971ab65e0bf39fa3d1d84a12d344f8d, with no new timestamp experiment, speculative fix, integration or receipt. [[DPT-PLAN-009_Post_PR27_Verification]] distinguishes lane checks,194offline regression methods, initial fixture/checker failures, future NOTRUN tests and independent review.
 
 Changes are dedicated A/B/C specifications, proposed ADR, consolidated specification/Owner packet/task/evidence and additive shared history only. No runtime/test/migration/frozen-contract/old-receipt change. Initial ETL-offline temp-directory errors and C raw-newline checker failures are retained before correction. Final source checkpoint, Draft PR URL and publication head are recorded in this task and the exact registry after they exist; no SHA is invented in advance.
+
+## Planning delivery checkpoint — 2026-11-16
+
+Actual Draft PR28: https://github.com/kraveerachat/DoomParfum-By-TK/pull/28, OPEN/DRAFT, created at publication checkpoint `87329bf3162f21b14234a89c81d4a9c795f9bed3` from base `8eef8f13265adc14db0cae82ff77cfc4863853ce`. Exact independent source `77fb9080ad62e3463ae9a6006a2b6570a101ca8c` passed316verified assertions with0open findings; IR-P27-01MEDIUM resolved and all failures retained. The sole planning receipt is [[2026-11-16_000747_DPT-PLAN-009_Post_PR27_Planning]]. All23old receipts/eightmigrations remain unchanged. No new A–I policy answer, rights grant, implementation or Production operation. Final publication HEAD and verified archive digest are recorded after they exist in PR description and external exact registry.

@@ -325,6 +325,6 @@ Docker client28.3.2 exists but engine pipe is absent: DOCKER_NOT_AVAILABLE / DB_
 
 | Proposed unit | Current status | Required next gate |
 |---|---|---|
-| DPT-PLAN-009 next-wave consolidation | IN PROGRESS, documentation only | Current Draft Planning PR and Human Owner review |
+| DPT-PLAN-009 next-wave consolidation | READY FOR REVIEW, documentation only | Draft PR28; Human Owner review and exact new decisions |
 | IMP-ENR-01 five-record offline preview | PROPOSED, not started | Exact A/B/I plus pinned preview-contract acceptance and merged planning authority |
 | Two-PNG intake / application-private session / private service | Separate future task scopes, not started | Exact rights, E/F/G/H and applicable source/security/implementation gates |
