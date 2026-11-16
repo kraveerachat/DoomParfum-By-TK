@@ -4,13 +4,21 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## IMP-ENR-01 current Owner-approved offline implementation — 2026-11-17
+
+Current verified main/base `81b281acb418af230746bb00fb923e60509e8e92` includes Owner-merged PR26/27/28/29. PR29 merged UTC2026-11-16T18:55:32Z; it is architecture documentation only. Human Owner's current master prompt **explicitly accepts A=A-PREVIEW-5, B=B-PINNED-PREVIEW, I=I-IMP-ENR-01**, exact ENR-PINNED-SCENTO-1 revision1, transform/schema versions and frozen canonical contract/packet hashes. This is new exact scoped approval, not inference from merged plans. All other A–I/ARC choices remain unaccepted proposals.
+
+[[IMP-ENR-01_Pinned_Scento_Offline_Preview]] is IN PROGRESS on `codex/imp-enr-01-offline-preview`. Source six pins905307bytes and CSV1479/160/420 verified locally; those are source counts, not canonical DB counts. Fresh independent compatibility gate permits bounded TDD start, with 16 relationships/12 columns and no blocking architecture conflict. Independent data agent `/root/enr_independent_data_review` assigned before implementation; no human identity invented. See [[IMP_ENR_01_Preflight.json]] and [[IMP_ENR_01_Architecture_Compatibility]].
+
+Exactly five records/46 unselected fields; no live DB, source/asset acquisition, URL/API fetch, canonical/normalization promotion,44-hold release, eligibility, synthetic bridge, real ranking, API/UI/auth, cloud or Production mutation. Eight migrations,25 prior receipts,43 proposals and Khamrah protected. PR8 remains OPEN/DRAFT/BLOCKED84dcc; no experiment. Focused RED/GREEN, regression and both post-implementation reviews remain pending. Earlier contradictory task/PR/approval snapshots below are dated history, not current state.
 
 ## Post-PR28 architecture refinement checkpoint — 2026-11-16
 

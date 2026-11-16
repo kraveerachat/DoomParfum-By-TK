@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - delivery
@@ -346,3 +346,11 @@ All 24 prior receipts, eight migrations, accepted contracts, 43 proposals, 44 ho
 | DPT-PLAN-010 architecture amendment | IN PROGRESS; docs/research only | Static consistency and independent architecture review, then one Draft Planning PR |
 | Existing IMP-ENR-01 preview | PROPOSED / NOT STARTED | Original exact A/B/I and preview contract; not PR28 general direction |
 | AM-01 through AM-11 | Proposed roadmap units, not active implementation task IDs | Exact relevant ADR/contracts/rights and Planning/Implementation Gates |
+
+## IMP-ENR-01 exact Owner authority and preimplementation gate — 2026-11-17
+
+Current user-provided master prompt explicitly accepts POST27-ODP-1 **A-PREVIEW-5 / B-PINNED-PREVIEW / I-IMP-ENR-01**, ENR-PINNED-SCENTO-1 revision1, frozen data-note canonical SHA256 `053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5`, packet SHA256 `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`, transform `enr-pinned-scento-preview-1` and schema `enr-pinned-scento-preview-schema-1`. Only exact five-record/46-field local unselected preview is authorized. Frozen proposal files remain unchanged; this dated decision supersedes only their earlier A/B/I unanswered state. No separate unseen chat statement, human reviewer identity, other policy/ARC acceptance or new source rights are fabricated.
+
+Merged PR28/29 and actual main81b281 satisfy Planning Gate. Fresh independent `/root/enr_architecture_compatibility` review permits bounded TDD; named `/root/enr_independent_data_review` role was assigned before implementation under the current delegated review instruction. Human/canonical acceptance remains pending. Six source pins/sidecars and25prior receipts/eight migrations verified. Current DB/Docker not probed; no service start. Existing tools only; no install/configuration.
+
+Task/branch/source/tests/results: [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], [[IMP_ENR_01_Preflight.json]], [[IMP_ENR_01_Architecture_Compatibility]]. No runtime PASS or final implementation readiness at this checkpoint. PR8 blocked;43proposals/44holds/Khamrah/rights/eligibility untouched; no API/UI/DB/acquisition/real matching/Production or merge.

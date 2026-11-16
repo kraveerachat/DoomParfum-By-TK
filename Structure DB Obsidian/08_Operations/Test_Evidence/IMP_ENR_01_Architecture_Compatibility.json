@@ -1,0 +1,5060 @@
+{
+  "task_id": "IMP-ENR-01",
+  "review_type": "INDEPENDENT_PRE_IMPLEMENTATION_ARCHITECTURE_COMPATIBILITY",
+  "reviewer": {
+    "identity": "/root/enr_architecture_compatibility",
+    "role": "Independent architecture compatibility reviewer; not implementer or data reviewer",
+    "kind": "agent",
+    "human_identity_claimed": false
+  },
+  "captured_at_utc": "2026-11-16T19:28:46.097476+00:00",
+  "baseline": {
+    "HEAD": "81b281acb418af230746bb00fb923e60509e8e92",
+    "origin_main_local_ref": "81b281acb418af230746bb00fb923e60509e8e92",
+    "branch": "codex/imp-enr-01-offline-preview",
+    "expected_merge_base": "81b281acb418af230746bb00fb923e60509e8e92",
+    "remote_PR_metadata": "NOT RECHECKED by this reviewer; coordinator owns live GitHub verification"
+  },
+  "owner_approval_binding": {
+    "packet": "POST27-ODP-1",
+    "choices": {
+      "A": "A-PREVIEW-5",
+      "B": "B-PINNED-PREVIEW",
+      "I": "I-IMP-ENR-01"
+    },
+    "contract": "ENR-PINNED-SCENTO-1",
+    "revision": 1,
+    "transform": "enr-pinned-scento-preview-1",
+    "schema": "enr-pinned-scento-preview-schema-1",
+    "evidence": "Current Owner master prompt supplied in chat on 2026-11-17, sections 0–3; exact scope reiterated in sections 4–17. No other Owner choice inferred.",
+    "pins": {
+      "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5"
+    }
+  },
+  "PREIMPLEMENTATION_GATE": "SATISFIED_FOR_BOUNDED_TDD_START",
+  "compatibility_result": "CONDITIONALLY_COMPATIBLE",
+  "genuine_contract_architecture_conflicts": [],
+  "unresolved_blocking_architecture_findings": [],
+  "reviewer_designation": {
+    "original_clause": "Human Owner designates a data reviewer independent of the future preview implementer.",
+    "current_owner_instruction": "Assign review to a genuinely independent reviewer/agent when available and identify the reviewer in evidence.",
+    "interpretation": "The newer explicit Owner instruction authorizes assignment of an agent role. The coordinator assigned a distinct named agent before implementation. This satisfies the designation mechanism for this task without fabricating a human identity or canonical acceptance.",
+    "data_reviewer": "/root/enr_independent_data_review",
+    "human_final_acceptance": "PENDING",
+    "future_canonical_selection": "NOT AUTHORIZED",
+    "post_implementation_data_review": "PENDING"
+  },
+  "static_checks": [
+    {
+      "id": "ARCH-S01",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "HEAD": "81b281acb418af230746bb00fb923e60509e8e92",
+        "origin_main_local_ref": "81b281acb418af230746bb00fb923e60509e8e92",
+        "branch": "codex/imp-enr-01-offline-preview",
+        "remote_fetch": "NOT RUN by this reviewer"
+      }
+    },
+    {
+      "id": "ARCH-S02",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "pinned_canonical_hashes_match": true,
+        "checkout_CRLF_accounted_for": true
+      }
+    },
+    {
+      "id": "ARCH-S03",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "components": 30,
+        "interfaces": 29,
+        "routes": 17,
+        "elements": 110,
+        "handlers": 110
+      }
+    },
+    {
+      "id": "ARCH-S04",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "consumer_dependency_edges": 53,
+        "acyclic": true,
+        "unknown_component_refs": []
+      }
+    },
+    {
+      "id": "ARCH-S05",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "all_29_interfaces_proposed_unimplemented": true,
+        "errors": []
+      }
+    },
+    {
+      "id": "ARCH-S06",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "all_110_element_handler_schema_route_status_bindings_checked": true,
+        "errors": [],
+        "cross_route_destination_bindings": [
+          {
+            "element": "EL-D08",
+            "interface": "IF-PROFILE-READ-1",
+            "origin_routes": [
+              "R-CATALOGUE"
+            ],
+            "target_routes": [
+              "R-DETAIL"
+            ],
+            "disposition": "RESOLVED_BY_EXPLICIT_DESTINATION_ROUTE; not an undeclared operation"
+          },
+          {
+            "element": "EL-D15",
+            "interface": "IF-CATALOGUE-QUERY-1",
+            "origin_routes": [
+              "R-PYRAMID"
+            ],
+            "target_routes": [
+              "R-CATALOGUE"
+            ],
+            "disposition": "RESOLVED_BY_EXPLICIT_DESTINATION_ROUTE; not an undeclared operation"
+          },
+          {
+            "element": "EL-M17",
+            "interface": "IF-COMPARISON-READ-1",
+            "origin_routes": [
+              "R-RESULTS"
+            ],
+            "target_routes": [
+              "R-COMPARE"
+            ],
+            "disposition": "RESOLVED_BY_EXPLICIT_DESTINATION_ROUTE; not an undeclared operation"
+          }
+        ]
+      }
+    },
+    {
+      "id": "ARCH-S07",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "diagram_ids": [
+          "DGM-A",
+          "DGM-B",
+          "DGM-C",
+          "DGM-D",
+          "DGM-E",
+          "DGM-F",
+          "DGM-G",
+          "DGM-H"
+        ],
+        "diagram_blocks": 8,
+        "rendering": "NOT RUN; source and boundaries reviewed"
+      }
+    },
+    {
+      "id": "ARCH-S08",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "canonical_python_files_checked": 26,
+        "changed_since_merged_architecture_inventory": 0,
+        "project_imports_executed": 0
+      }
+    },
+    {
+      "id": "ARCH-S09",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "preview_source_and_test_absent_at_preimplementation_capture": {
+          "database/scento_preview.py": true,
+          "database/tests/test_scento_preview.py": true
+        },
+        "production_implementation_examined": false
+      }
+    },
+    {
+      "id": "ARCH-S10",
+      "kind": "STATIC",
+      "result": "VERIFIED",
+      "observation": {
+        "independent_data_reviewer_assigned_before_implementation": "/root/enr_independent_data_review",
+        "assignment_evidence": "Coordinator message to independent architecture reviewer during this review, current Owner master prompt sections 2 and 13",
+        "reviewer_is_agent": true,
+        "human_identity_claimed": false,
+        "final_human_acceptance": "PENDING",
+        "46_slot_result": "NOT REVERIFIED by architecture reviewer; belongs to independent data role"
+      }
+    }
+  ],
+  "review_input_manifest": [
+    {
+      "path": "AGENTS.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "b683c5e59ee9ce6f92d70f73df9c758e2e27736124c278b942324d4d430688ae",
+      "canonical_bytes": 20990,
+      "checkout_sha256": "25247fd3e0dfe54b1ae30bc581d4b292ef7789023e7cec8a423788bd68653bd5",
+      "checkout_bytes": 21204,
+      "newline_only_difference": true,
+      "lines": 214
+    },
+    {
+      "path": "DEVELOPMENT_WORKFLOW.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "f5aeeb7046f216b86c82f1caf83f88c3d072758ca208d715a978eb66aba261f1",
+      "canonical_bytes": 60982,
+      "checkout_sha256": "721fc6658a0bb500d9478b4cd10170d0f03b9faf20a7a8d412f16c052288bd03",
+      "checkout_bytes": 61940,
+      "newline_only_difference": true,
+      "lines": 958
+    },
+    {
+      "path": "README.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "dfb35dd4269f0cccd4df53e36f97cf4ff92d1da2cefb865993124f5a0ab93cc0",
+      "canonical_bytes": 48885,
+      "checkout_sha256": "0ba50657c74ddbbdfc6d40f3faa73c89cc94fc70e8d05fc4b7f32b8286f8d22e",
+      "checkout_bytes": 49342,
+      "newline_only_difference": true,
+      "lines": 457
+    },
+    {
+      "path": "Structure DB Obsidian/README.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "6a027877e9ef0c634efdb87cb8e43f066913d90e2df0ae0f97d51f4501f38ed5",
+      "canonical_bytes": 12417,
+      "checkout_sha256": "04bc6641b20b34ed9b8e2cbf3c3b96aa482de5118f2e8626a0aeae6a49dffbbe",
+      "checkout_bytes": 12545,
+      "newline_only_difference": true,
+      "lines": 128
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "259a0e2b5863630471d62ab27ce48920ec8860fbd6826caab276b02fab697596",
+      "canonical_bytes": 44422,
+      "checkout_sha256": "0fef3e168158c43d63b0cfc54177ac1d720893501fc4253e391469324442173f",
+      "checkout_bytes": 44946,
+      "newline_only_difference": true,
+      "lines": 524
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "canonical_bytes": 13421,
+      "checkout_sha256": "5007580393e6c754e25e9ef120f2899eb3322763b0880784582c53058e45873c",
+      "checkout_bytes": 13531,
+      "newline_only_difference": true,
+      "lines": 110
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+      "canonical_bytes": 28613,
+      "checkout_sha256": "ea366ffefad100b3fe13f48e0af313b1b7969fc2f2b4a550fa3d51ab989006b9",
+      "checkout_bytes": 28943,
+      "newline_only_difference": true,
+      "lines": 330
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/System_Architecture_Refinement.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "a2a0d22a02eb93bf7ba9179e254d3d55b17deb3f7df9ba14d33db813a0f334c8",
+      "canonical_bytes": 17829,
+      "checkout_sha256": "f9f91f627eb8a5019a50358559e09c146399cd823c9c8ec6fa0abd9c6480e1d5",
+      "checkout_bytes": 17952,
+      "newline_only_difference": true,
+      "lines": 123
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Owner_Review_Packet.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "0e265149f87b0c797b9e563b7fdb9bc6a1a4379844842d2e97ffd4549ba0747f",
+      "canonical_bytes": 12602,
+      "checkout_sha256": "7ecbd280e184d570123baee79f3903f3f7d1373f1ea74d4f3c15ca172c6a4821",
+      "checkout_bytes": 12690,
+      "newline_only_difference": true,
+      "lines": 88
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Function_Interface_and_DTO_Contracts.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "18dbc775e30d9cd54647903299f84ce01a2d34be6fa1f23dbb5b07659c241ecf",
+      "canonical_bytes": 125580,
+      "checkout_sha256": "579bbdaa4697b77d4d4b37cbe65e34ca3f0f5a1a3a97b9c2e4d87ce4bb1152ff",
+      "checkout_bytes": 126537,
+      "newline_only_difference": true,
+      "lines": 957
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Component_and_Dependency_Registry.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "c66477d4c8c95a02e4ec2ef73994bc29a23568227c7b7e5e6de09cfd4f7537f5",
+      "canonical_bytes": 27814,
+      "checkout_sha256": "3d06a8553d2d71643645f51b85035e57fc90887ab4b91d52ed420104a5ad3ff0",
+      "checkout_bytes": 28347,
+      "newline_only_difference": true,
+      "lines": 533
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/UI_Element_Function_Matrix.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "2be08f8f3e3eba8ff7406aa0e59b3541256f840c7c9ebefbf4b6060de7cfc16d",
+      "canonical_bytes": 271762,
+      "checkout_sha256": "2bb745e335ef5ea03fdb0a72e2f2db4a3457f4f8cef9b8505981bf20a19e8b57",
+      "checkout_bytes": 275097,
+      "newline_only_difference": true,
+      "lines": 3335
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Data_and_Media_Lifecycle_Architecture.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "5e87b4becabae30b2917547db4c41a1ece28238eabda45f8a6cc854418456902",
+      "canonical_bytes": 16486,
+      "checkout_sha256": "5d8dd2fdcaeff88c55a10efe469f5e8592cd9fa8f1b61a1813aad43e1fda2429",
+      "checkout_bytes": 16619,
+      "newline_only_difference": true,
+      "lines": 133
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Authorization_and_Trust_Boundaries.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "eec392fc93be0a62c3dc88505f083b3e4c1370adcda5ee27a1bbb93209d23f03",
+      "canonical_bytes": 19343,
+      "checkout_sha256": "3aceccf97cfa6200e1e0dd976f4c9a83d8b51877907e18178a3b5e141e525ab1",
+      "checkout_bytes": 19456,
+      "newline_only_difference": true,
+      "lines": 113
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Alternatives_and_ADR.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "092c47f5bfcfd3c8b6b4e4ea065c5b49a8fab5ff1a37ec0919d0d67532e55839",
+      "canonical_bytes": 10249,
+      "checkout_sha256": "ea926ba7a20c67033722cef87c6f46ea1b1a2a8ffa8b0336493b66b8257390a6",
+      "checkout_bytes": 10319,
+      "newline_only_difference": true,
+      "lines": 70
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Dependency_Based_Implementation_Roadmap.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "f9a36e0cc546750c5cfcab5db737fcdf0feddce50987ad6e04c5e486614d5593",
+      "canonical_bytes": 12144,
+      "checkout_sha256": "c619ab32f143b27d4db72c1b29181805637e5568237d3fb9f2b8890ab39c9176",
+      "checkout_bytes": 12226,
+      "newline_only_difference": true,
+      "lines": 82
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/C4_Context_and_Container_Design.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "d8d7a36c522be701115e53ed252c5a587cef2cfbe3a870d2122dce561c3fdc7f",
+      "canonical_bytes": 16107,
+      "checkout_sha256": "ba099f4fb6277bd546c9ff17bb31a7d0a4bbd6c360260b5678f6975de212e223",
+      "checkout_bytes": 16410,
+      "newline_only_difference": true,
+      "lines": 303
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Consolidated_Next_Wave_Plan.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "75b3c1d5790b546bafda0896dff62db12229c1a5791b2ea1392da837faedb425",
+      "canonical_bytes": 11907,
+      "checkout_sha256": "f4d4e962e368e74b45c9d0d63a8fc54df1aa307d2589772d30541c8019c39357",
+      "checkout_bytes": 12002,
+      "newline_only_difference": true,
+      "lines": 95
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "d8299205b19fdc088eabb4cca7750db2d72abd7dccc6f97a661ae3059fe17b35",
+      "canonical_bytes": 20311,
+      "checkout_sha256": "ec84c2417ea7d729d2ed25fa6adad41cf9636f5682fe41419ba8693a90c91da6",
+      "checkout_bytes": 20445,
+      "newline_only_difference": true,
+      "lines": 134
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR27_Media_Rights_and_Storage.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "2f2797ff0398f1a1219c1937fb6b0307f9f9c4fbfcc69b0308fea1efae6d8ffc",
+      "canonical_bytes": 21694,
+      "checkout_sha256": "8abba1b49d51d5972af21d467ceaee5a4cfcb1d1c4920ab08eb6c8b6cc892020",
+      "checkout_bytes": 21840,
+      "newline_only_difference": true,
+      "lines": 146
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "fc1ff1393037af96007818aae8b01150f699d17b3e17fa059f330ea8123a4a5e",
+      "canonical_bytes": 6369,
+      "checkout_sha256": "c0d3a5ee13eddc526df724fcbcf82d04d3f919beb5caec98b817a30613c5f784",
+      "checkout_bytes": 6423,
+      "newline_only_difference": true,
+      "lines": 54
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-010_System_Architecture_Refinement.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "3c7d44fedcdebde941305a5c1ed63b8dae9b802a5cd98e16bec1025095c9aff3",
+      "canonical_bytes": 6042,
+      "checkout_sha256": "2afd32ed31cc4615fb9c708edcbc66126b380368322c7d7682f0c2518243ef2a",
+      "checkout_bytes": 6092,
+      "newline_only_difference": true,
+      "lines": 50
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Receipts/2026-11-16_000747_DPT-PLAN-009_Post_PR27_Planning.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "0d0422ea13feb484692f1a4682981b2c259953bb017e78f7b3a6f18c967f0989",
+      "canonical_bytes": 6091,
+      "checkout_sha256": "17afc5028413e3838eb7125acbb5e8caa29a53edcd7deeb13fd88088a160dc70",
+      "checkout_bytes": 6140,
+      "newline_only_difference": true,
+      "lines": 49
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Receipts/2026-11-16_223118_DPT-PLAN-010_Architecture_Planning.md",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "310cd41f92493b7c776653cf5c54d14f9c10637d0a61f883ff1d55120536e4ce",
+      "canonical_bytes": 4464,
+      "checkout_sha256": "6c76e69fb4f64b796c483d82d698604a4781f4c679bb15d57ae1d63476109e63",
+      "checkout_bytes": 4500,
+      "newline_only_difference": true,
+      "lines": 36
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Unified_Model.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "3cb27385da70cdace2a254b5a9dbaba6c07a424f513170804e42c01396e94ca9",
+      "canonical_bytes": 383150,
+      "checkout_sha256": "b497c98d9aa07b973a7578bc5afeaa56556a678a6093ef6ed2036a41966b84b4",
+      "checkout_bytes": 390370,
+      "newline_only_difference": true,
+      "lines": 7220
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Interface_Registry.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "4bad11aa627ede324eca7b228102392e5a54b18d1b23e46617edb9ba2ec41081",
+      "canonical_bytes": 174861,
+      "checkout_sha256": "7cd5e7b5cedff27a38c51c2edb9c3646d24bb1b03a676b389517174b37a6d9a6",
+      "checkout_bytes": 177433,
+      "newline_only_difference": true,
+      "lines": 2572
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Routes_and_States.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "43416322eebde2b4033454f31ef1d49f63666cbd7cd3c1be61a8b45113ddef6b",
+      "canonical_bytes": 62871,
+      "checkout_sha256": "b2568075d9ef3582d2c82425078a24a0177a28dff63c07df71630d334c2844b6",
+      "checkout_bytes": 64376,
+      "newline_only_difference": true,
+      "lines": 1505
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Source_Inventory.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "c60bfbe48369b195d7ab61b690412dccf07dce413e35cafc52b4a71b487b500c",
+      "canonical_bytes": 728413,
+      "checkout_sha256": "f42b245efe5fefbb3d755daf0e4556186b4dcacc099c5d945bafcf5e882e59f7",
+      "checkout_bytes": 743881,
+      "newline_only_difference": true,
+      "lines": 15468
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Security_and_Cache_Model.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "6c64ed010724b579c69ee088ce47587167d15280b38ce2c5a8fe76c527999d08",
+      "canonical_bytes": 28186,
+      "checkout_sha256": "f4a993175dc95a9c428b06d0c502a56decd50f125a228497e46d82142c52bb7b",
+      "checkout_bytes": 28759,
+      "newline_only_difference": true,
+      "lines": 573
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Independent_Review.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "b6fd90c391fbac9ee22b1a227abcc193b122877d437400d92610f40d9b713084",
+      "canonical_bytes": 23867,
+      "checkout_sha256": "fbd9fe5dcd16d4560b75149f3c67b0450af48025aae648970bd7e197f1237de7",
+      "checkout_bytes": 24245,
+      "newline_only_difference": true,
+      "lines": 379
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Static_Verification.json",
+      "base": "81b281acb418af230746bb00fb923e60509e8e92",
+      "canonical_git_sha256": "19e11376a47691194d87e7068b8beefe2140c2763881d830d70f82c5151c0442",
+      "canonical_bytes": 4759,
+      "checkout_sha256": "0196c2a10d247395fafd8a8b78468c5081929b0826c12d781ce2494a0a8ce4d6",
+      "checkout_bytes": 4873,
+      "newline_only_difference": true,
+      "lines": 114
+    }
+  ],
+  "python_source_inventory_recheck": [
+    {
+      "path": "database/image_validation.py",
+      "canonical_sha256": "d50bb159e0223e21c74d10b64176190569c9889f88726706df3ece143d54f29f",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/local.py",
+      "canonical_sha256": "fa5ede50172fd435ec643d31b9902cf34c9d8a872e397f0adf41d27a6373c0ed",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/matching_input.py",
+      "canonical_sha256": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/performance.py",
+      "canonical_sha256": "409f5d24ff2fc8be20a50d79cc8a3bde972d87855eb3afeeea057dd1d4029952",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/research_audit.py",
+      "canonical_sha256": "fbbf4bf3cb253547feb8e8b0a71a5ea0d41347793a858edf2130396001a9cf93",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/scento_etl.py",
+      "canonical_sha256": "a9a392ab6c17b01f937a313536cd002f4e0446af2370518d8084fd28f3031be0",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/fixtures.py",
+      "canonical_sha256": "119316497d6e2a13cbada70c0af460c83a076a81458b2781802be818453e0f45",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_deferred_performance.py",
+      "canonical_sha256": "369439c114481eefe1c5157d6d68ea4b3895bf7c4d23a2e8b05b1d8e04988cd2",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_foundation.py",
+      "canonical_sha256": "939063ef0c0752417fc7ea058160d24859ac11fa8fd8c232e23d6752236d8cfc",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_image_validation.py",
+      "canonical_sha256": "4f10ca81f22479d3736e008c501eb994331b1f0db5ea44cae69e8f88d915641c",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_matching_input.py",
+      "canonical_sha256": "0b16716d7b76b1190434d01e7a7d8c26c3454952df0ba8ab0df8da5696ac74e2",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_research_audit.py",
+      "canonical_sha256": "bf1999b0c6dacb788eb872d9e3d8f32c2d111fcd4ba149cd548d62cf9bdcb5ab",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/tests/test_scento_etl.py",
+      "canonical_sha256": "6985c7c21d3263a7bc6383d17f5ec1e501e209ab3aabff3489be6ec232298298",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/validate_docs.py",
+      "canonical_sha256": "d72844ce8db0660656d5e653dbcdb60b79e823c8fe48a72f056037fd49c7f127",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/verify.py",
+      "canonical_sha256": "bdddbe68611807a88fc8c3eac4e083ad4d1a23413102a17331b4fef8256c18bc",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "database/verify_images.py",
+      "canonical_sha256": "2f433d44eb874249616aac71f2c320502a915c5db3a52b865401e17296c131b1",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/__init__.py",
+      "canonical_sha256": "52787f3b39a18013db9db0d042b53c2fa0ad559f85c73f2bcc677e5a9f25c61f",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "canonical_sha256": "c1b69bdc74a4a060f6559a182306618f02c595b16e27f3ebb5e4bcca4ff7b735",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "canonical_sha256": "3fe584ac87862e80469823e9643c5a20b933b4913b4efe0ca20a55bc4b7f1746",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "canonical_sha256": "07fc33ebf87fc5ba02a55d39b0a2ac0f6a8f58af2ff07db8c943bcea84c3263b",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_invariants.py",
+      "canonical_sha256": "9b285c675c84f98d8328c2dd46ac9d4d33205eacdc3bc709188d9c240c742343",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_primitives.py",
+      "canonical_sha256": "777b2e2b04d0f67ab32a279940faa2488ba59cc70050cacc4b487fcecacbde30",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1.py",
+      "canonical_sha256": "e365e2b9ec7829ebcceaeb2267000eb0fdb01a6b86802a87cd584c90c68acdb7",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_b1_properties.py",
+      "canonical_sha256": "2c87f2bb0caba155be62b88f11218845c0c9e85d22c0ea752305393ee26afb0c",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_m1.py",
+      "canonical_sha256": "ec9d6992010cfd59e826e0486b1b7e75537511c42674eda7982ba120dee9d0ce",
+      "matches_merged_architecture_inventory": true
+    },
+    {
+      "path": "matching_math/tests/test_synthetic_m1_properties.py",
+      "canonical_sha256": "1b1d864230e7ce0a9f66ced4424934eb68cc747570c2d0b2f37dfa9117998442",
+      "matches_merged_architecture_inventory": true
+    }
+  ],
+  "actual_source_signatures_examined": [
+    {
+      "path": "database/image_validation.py",
+      "line": 23,
+      "name": "ImageRejected",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/image_validation.py",
+      "line": 28,
+      "name": "Limits",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/image_validation.py",
+      "line": 42,
+      "name": "ImageMetadata",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/image_validation.py",
+      "line": 50,
+      "name": "inspect_png",
+      "kind": "function",
+      "signature": "content: bytes, limits: Limits=Limits()",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/image_validation.py",
+      "line": 127,
+      "name": "_authorized_snapshot",
+      "kind": "function",
+      "signature": "asset_id: str, operation: str, *, db: str, user: str",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/image_validation.py",
+      "line": 145,
+      "name": "validate_registered_asset",
+      "kind": "function",
+      "signature": "asset_id: str, read_content: Callable[[], bytes], *, operation: str, db: str, user: str, limits: Limits=Limits()",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 21,
+      "name": "docker",
+      "kind": "function",
+      "signature": "*args: str, input: str | None=None, check: bool=True",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 26,
+      "name": "guard",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 43,
+      "name": "sql",
+      "kind": "function",
+      "signature": "text: str, db: str='dpt_schema_test', user: str='postgres', check=True",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 56,
+      "name": "assert_local_endpoint",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 62,
+      "name": "start",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 95,
+      "name": "recreate",
+      "kind": "function",
+      "signature": "db: str",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 102,
+      "name": "reset_empty_foundation",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 115,
+      "name": "migration_digest",
+      "kind": "function",
+      "signature": "file: Path",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 120,
+      "name": "migrate",
+      "kind": "function",
+      "signature": "db: str='dpt_foundation', extra: Path | None=None",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/local.py",
+      "line": 141,
+      "name": "main",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 23,
+      "name": "State",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 32,
+      "name": "InputUnavailable",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 36,
+      "name": "AdapterUnavailable",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 41,
+      "name": "Provenance",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 62,
+      "name": "Field",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 70,
+      "name": "Note",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 77,
+      "name": "ProfileInput",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 96,
+      "name": "canonical_id",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 108,
+      "name": "normalized",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 112,
+      "name": "_rights",
+      "kind": "function",
+      "signature": "alias",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 122,
+      "name": "query",
+      "kind": "function",
+      "signature": "profile_id",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 225,
+      "name": "_keys",
+      "kind": "function",
+      "signature": "value, expected",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 230,
+      "name": "_dto_id",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 240,
+      "name": "_text",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 245,
+      "name": "_json_bytes",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 249,
+      "name": "_provenance",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 270,
+      "name": "read_profile",
+      "kind": "function",
+      "signature": "execute: Callable[[str], dict], profile_id: str",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/matching_input.py",
+      "line": 285,
+      "name": "_decode",
+      "kind": "function",
+      "signature": "raw, profile_id",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 46,
+      "name": "canonical",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 50,
+      "name": "digest",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 54,
+      "name": "entity_id",
+      "kind": "function",
+      "signature": "kind, key",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 62,
+      "name": "tokens",
+      "kind": "function",
+      "signature": "text",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 66,
+      "name": "normalize",
+      "kind": "function",
+      "signature": "text",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 71,
+      "name": "optional_year",
+      "kind": "function",
+      "signature": "text",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 78,
+      "name": "load_snapshot",
+      "kind": "function",
+      "signature": "path",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 101,
+      "name": "note_lists",
+      "kind": "function",
+      "signature": "row",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 106,
+      "name": "classify",
+      "kind": "function",
+      "signature": "row, snapshot",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 122,
+      "name": "build_plan",
+      "kind": "function",
+      "signature": "snapshot, cohort",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 141,
+      "name": "mapping_proposal",
+      "kind": "function",
+      "signature": "plan, snapshot",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 152,
+      "name": "validate_mapping",
+      "kind": "function",
+      "signature": "mapping, plan, snapshot",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 166,
+      "name": "q",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 174,
+      "name": "insert",
+      "kind": "function",
+      "signature": "table, values",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 180,
+      "name": "capture_rows",
+      "kind": "function",
+      "signature": "snapshot, plan",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 193,
+      "name": "batch_identity",
+      "kind": "function",
+      "signature": "snapshot, plan, mapping",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 198,
+      "name": "import_sql",
+      "kind": "function",
+      "signature": "snapshot, plan, mapping=None, transaction=True",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 256,
+      "name": "promotion_sql",
+      "kind": "function",
+      "signature": "snapshot, plan, rows, batch, mapping",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 350,
+      "name": "prepare_database",
+      "kind": "function",
+      "signature": "db",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 357,
+      "name": "inventory_expression",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 363,
+      "name": "inventory",
+      "kind": "function",
+      "signature": "db",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 368,
+      "name": "run_import",
+      "kind": "function",
+      "signature": "snapshot, cohort, db, mapping=None",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "database/scento_etl.py",
+      "line": 391,
+      "name": "main",
+      "kind": "function",
+      "signature": "",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 14,
+      "name": "_identifier",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 21,
+      "name": "_number",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 27,
+      "name": "_unit",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 34,
+      "name": "_metadata",
+      "kind": "function",
+      "signature": "complete, *identifiers",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 42,
+      "name": "SetInput",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 56,
+      "name": "VectorInput",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 80,
+      "name": "Measure",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 96,
+      "name": "_profile",
+      "kind": "function",
+      "signature": "value, expected",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 101,
+      "name": "set_jaccard",
+      "kind": "function",
+      "signature": "left: SetInput | None, right: SetInput | None",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 116,
+      "name": "weighted_jaccard",
+      "kind": "function",
+      "signature": "left: VectorInput | None, right: VectorInput | None",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 139,
+      "name": "_weighted_inputs",
+      "kind": "function",
+      "signature": "values, weights, *, allow_unknown",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 156,
+      "name": "weighted_mean",
+      "kind": "function",
+      "signature": "values, weights",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 166,
+      "name": "coverage",
+      "kind": "function",
+      "signature": "reliabilities, weights",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 174,
+      "name": "RankItem",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/primitives.py",
+      "line": 186,
+      "name": "stable_order",
+      "kind": "function",
+      "signature": "rows: tuple[RankItem, ...]",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 16,
+      "name": "B1Query",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 21,
+      "name": "B1Clause",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 29,
+      "name": "B1Profile",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 37,
+      "name": "B1Layer",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 48,
+      "name": "B1LayerDomain",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 54,
+      "name": "B1Vocabulary",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 68,
+      "name": "B1Config",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 93,
+      "name": "B1ContextKey",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 106,
+      "name": "B1QueryKey",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 113,
+      "name": "B1Lineage",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 123,
+      "name": "B1LayerStatus",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 133,
+      "name": "B1Occurrence",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 139,
+      "name": "B1ClauseEvaluation",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 148,
+      "name": "B1GateSummary",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 156,
+      "name": "B1PartitionKey",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 165,
+      "name": "B1CandidateResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 195,
+      "name": "B1PartitionResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 201,
+      "name": "B1BatchResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 221,
+      "name": "_exact",
+      "kind": "function",
+      "signature": "value, expected",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 226,
+      "name": "_record",
+      "kind": "function",
+      "signature": "value, expected",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 232,
+      "name": "_get",
+      "kind": "function",
+      "signature": "value, name",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 239,
+      "name": "_bound",
+      "kind": "function",
+      "signature": "condition",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 244,
+      "name": "_text",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 249,
+      "name": "_integer",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 254,
+      "name": "_token",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 259,
+      "name": "_uuid",
+      "kind": "function",
+      "signature": "value, namespace",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 265,
+      "name": "_config",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 299,
+      "name": "_shapes",
+      "kind": "function",
+      "signature": "query, candidates, vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 329,
+      "name": "_token_shapes",
+      "kind": "function",
+      "signature": "query, candidates, vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 364,
+      "name": "_context",
+      "kind": "function",
+      "signature": "vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 381,
+      "name": "_syntax",
+      "kind": "function",
+      "signature": "query, candidates, vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 410,
+      "name": "_memberships",
+      "kind": "function",
+      "signature": "query, candidates, vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 421,
+      "name": "_candidate_semantics",
+      "kind": "function",
+      "signature": "candidates, vocabulary",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 437,
+      "name": "_clauses",
+      "kind": "function",
+      "signature": "query",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 470,
+      "name": "_search",
+      "kind": "function",
+      "signature": "clause",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 474,
+      "name": "_mask",
+      "kind": "function",
+      "signature": "clauses",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 478,
+      "name": "_status",
+      "kind": "function",
+      "signature": "candidate, context",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 492,
+      "name": "_evaluate",
+      "kind": "function",
+      "signature": "candidate, clauses, statuses",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 515,
+      "name": "_gate",
+      "kind": "function",
+      "signature": "evaluations, role, failure",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 520,
+      "name": "_score",
+      "kind": "function",
+      "signature": "candidate, key, positive, strict, relevant, denominator, specificity",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_b1.py",
+      "line": 560,
+      "name": "score_synthetic_b1",
+      "kind": "function",
+      "signature": "query: B1Query, candidates: tuple[B1Profile, ...], *, vocabulary: B1Vocabulary, config: B1Config",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 30,
+      "name": "M1Config",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 46,
+      "name": "FixtureVocabulary",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 57,
+      "name": "FixtureProfile",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 65,
+      "name": "FixtureLayer",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 76,
+      "name": "FixtureLineage",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 86,
+      "name": "LayerSide",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 94,
+      "name": "LayerExplanation",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 106,
+      "name": "LayerDomain",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 112,
+      "name": "PartitionKey",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 128,
+      "name": "PairResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 148,
+      "name": "PartitionResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 154,
+      "name": "M1BatchResult",
+      "kind": "class",
+      "signature": null,
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 169,
+      "name": "_exact",
+      "kind": "function",
+      "signature": "value, declared",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 174,
+      "name": "_token_bound",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 180,
+      "name": "_token",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 186,
+      "name": "_numeric",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 199,
+      "name": "_config",
+      "kind": "function",
+      "signature": "config",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 220,
+      "name": "_profile_shape",
+      "kind": "function",
+      "signature": "profile",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 238,
+      "name": "_profile_tokens",
+      "kind": "function",
+      "signature": "profile",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 252,
+      "name": "_fixture_uuid",
+      "kind": "function",
+      "signature": "value, prefix",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 260,
+      "name": "_validate",
+      "kind": "function",
+      "signature": "reference, candidates, vocabulary, config",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 316,
+      "name": "_side",
+      "kind": "function",
+      "signature": "layer",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 325,
+      "name": "_layer_explanation",
+      "kind": "function",
+      "signature": "name, left, right, weight",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 335,
+      "name": "_display",
+      "kind": "function",
+      "signature": "value",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 341,
+      "name": "_pair",
+      "kind": "function",
+      "signature": "reference, candidate, vocabulary, config",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 364,
+      "name": "_group_order",
+      "kind": "function",
+      "signature": "key",
+      "current_execution": "NOT RUN"
+    },
+    {
+      "path": "matching_math/synthetic_m1.py",
+      "line": 371,
+      "name": "score_synthetic_notes_layered",
+      "kind": "function",
+      "signature": "reference: FixtureProfile, candidates: tuple[FixtureProfile, ...], *, vocabulary: FixtureVocabulary, config: M1Config",
+      "current_execution": "NOT RUN"
+    }
+  ],
+  "retained_review_tool_failures": [
+    {
+      "attempt": 1,
+      "result": "ERROR",
+      "error_type": "KeyError",
+      "safe_detail": "Independent review helper originally required optional target_route_ids on every UI element. No output files were produced by that run.",
+      "disposition": "Corrected helper to treat absent destination route lists as empty; no project model/source/test changed.",
+      "not_an_implementation_failure": true
+    }
+  ],
+  "compatibility_matrix_columns": [
+    "Source component",
+    "Consuming component",
+    "Existing/proposed status",
+    "Function/interface reference",
+    "Input/output type",
+    "Provenance requirements",
+    "Rights requirements",
+    "Authentication requirements",
+    "Data state semantics",
+    "Applicable Owner gate",
+    "Test evidence",
+    "Compatibility result"
+  ],
+  "compatibility_matrix": [
+    {
+      "id": "M01",
+      "source_component": "Existing local licensed snapshot; C-SOURCE-CAPTURE conceptual boundary",
+      "consuming_component": "Proposed standalone PinnedSourceVerifier",
+      "existing_proposed_status": "Existing bytes; proposed preview responsibility NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed PinnedSourceVerifier; no import/call to database.scento_etl.load_snapshot",
+      "input_output_type": "Six byte snapshots -> verified in-memory bytes and pinned manifest",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "Reject pin/revision/count/path mutation; no acquisition.",
+      "applicable_owner_gate": "POST27 A-PREVIEW-5/B-PINNED-PREVIEW/I-IMP-ENR-01; master prompt §4/7/11",
+      "test_evidence": "ARCH-S02/S08/S09; future T01/T05/T21/T22/T23. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M02",
+      "source_component": "Verified CSV snapshots",
+      "consuming_component": "Proposed BoundedRecordSelector",
+      "existing_proposed_status": "Proposed; NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed BoundedRecordSelector; no fuzzy/alias/linked-record resolver",
+      "input_output_type": "Strict CSV logical records -> exactly 2 perfumes +1 house +2 materials",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "One-based data ordinal excludes header; key AND ordinal bind; no sixth/linked record.",
+      "applicable_owner_gate": "Same exact A/B/I; contract five-record table",
+      "test_evidence": "Future T02/T04/T06/T07/T08/T09. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M03",
+      "source_component": "Exact five selected rows",
+      "consuming_component": "Proposed RawEvidenceExtractor",
+      "existing_proposed_status": "Proposed; NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed RawEvidenceExtractor; forbid ETL tokens/note_lists reuse",
+      "input_output_type": "Allowlisted cells -> exactly 46 review slots plus ordered raw occurrences",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "Top/Heart/Base/General separate; repeats/order retained; empty value=MISSING with no known value.",
+      "applicable_owner_gate": "Same A/B/I; 13+13+6+7+7 review fields",
+      "test_evidence": "Future T03/T10/T11/T12/T13/T30. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M04",
+      "source_component": "Raw evidence and missing states",
+      "consuming_component": "Proposed PreviewTransformer",
+      "existing_proposed_status": "Proposed; NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed PreviewTransformer; enr-pinned-scento-preview-1",
+      "input_output_type": "Raw slots -> typed UNSELECTED candidate claims, unmapped canonical targets",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "No canonical IDs, review timestamp, normalization, closure, selection, eligibility, Fit/confidence/pairwise proof.",
+      "applicable_owner_gate": "Same A/B/I; no C/D/real-method acceptance",
+      "test_evidence": "Future T10–T15/T24/T25/T28/T30. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M05",
+      "source_component": "Unselected candidate claims",
+      "consuming_component": "Proposed PreviewSerializer",
+      "existing_proposed_status": "Proposed; NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed PreviewSerializer; enr-pinned-scento-preview-schema-1",
+      "input_output_type": "Versioned candidate structure -> deterministic UTF-8 bytes + SHA-256",
+      "provenance_requirements": "Identity tuple binds revision/hash/ordinal/key/field/transform/schema; stable field and occurrence order.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "Execution time separate; replay equality; no transport DTO or volatile reviewer approval.",
+      "applicable_owner_gate": "Exact A/B/I transform/schema only; ARC-04 not selected",
+      "test_evidence": "Future T18/T19/T30. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M06",
+      "source_component": "Complete verified candidate bytes/manifest",
+      "consuming_component": "Proposed PreviewPublisher and private reviewer bundle",
+      "existing_proposed_status": "Proposed; NOT IMPLEMENTED",
+      "function_interface_reference": "Proposed PreviewPublisher; local pointer/manifest transition, not service deployment",
+      "input_output_type": "Same-volume candidate -> new private bundle + atomic pointer",
+      "provenance_requirements": "Preserve previous pointer/bundle/failure evidence; bind payload digest; never touch source bytes.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "Fail closed; no partial acceptance; rollback withdraws/restores pointer, never DB/receipt/source rollback.",
+      "applicable_owner_gate": "Exact local A/B/I bundle publication only; no public/source rehosting authority",
+      "test_evidence": "Future T20/T21/T22/T23/T27. Windows failure/rename behavior NOT RUN.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M07",
+      "source_component": "Private 46-slot preview dossier",
+      "consuming_component": "Independent data reviewer /root/enr_independent_data_review",
+      "existing_proposed_status": "Independent agent role assigned; implementation output NOT AVAILABLE",
+      "function_interface_reference": "Contract reviewer/replay clause; master prompt §2/13",
+      "input_output_type": "Pinned field locators + output -> ACCEPT/REJECT/UNKNOWN/DEFER dossier decisions",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions. Review actual output against source; role is separate from implementer.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "Named independent local review role; not an application user, SQL role or invented human.",
+      "data_state_semantics": "Dossier outcome never becomes canonical selection or permission grant; final Human Owner acceptance PENDING.",
+      "applicable_owner_gate": "Current Owner explicit agent assignment authorization; separate later canonical/storage gates",
+      "test_evidence": "ARCH-S10 assignment evidence; actual post-implementation 46-slot review PENDING.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M08",
+      "source_component": "database.scento_etl existing helpers / C-OPERATOR-CLI",
+      "consuming_component": "Preview via imported ETL workflow (forbidden relationship)",
+      "existing_proposed_status": "Existing ETL implemented; proposed reuse excluded",
+      "function_interface_reference": "tokens; note_lists; build_plan; mapping_proposal; import_sql; run_import",
+      "input_output_type": "ETL data/plan/UUID/SQL workflow -> NOT an approved preview input/output",
+      "provenance_requirements": "ETL pins do not replace exact new preview contract binding.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "ETL imports local operator tooling; unnecessary privileged dependency.",
+      "data_state_semantics": "tokens strips; note_lists can suppress General; build_plan expands linked rows; mapping_proposal creates UUID proposals.",
+      "applicable_owner_gate": "Separate existing ETL approval does not authorize this reuse",
+      "test_evidence": "Actual AST/source examined; no ETL executed. Negative isolation tests future T15/T17.",
+      "compatibility_result": "INCOMPATIBLE"
+    },
+    {
+      "id": "M09",
+      "source_component": "Real unselected Scento claims",
+      "consuming_component": "C-SYNTHETIC-M1 / C-SYNTHETIC-B1 (forbidden bridge)",
+      "existing_proposed_status": "Implemented synthetic-only code; real boundary BLOCKED",
+      "function_interface_reference": "score_synthetic_notes_layered / score_synthetic_b1",
+      "input_output_type": "Real raw records -> fixture profile is forbidden",
+      "provenance_requirements": "Never fabricate fixture IDs, vocab/closure/version provenance to satisfy shape guards.",
+      "rights_requirements": "No real matching rights/eligibility created.",
+      "authentication_requirements": "No application or scoring authorization from preview.",
+      "data_state_semantics": "No real Fit; no canonical membership or complete-domain inference.",
+      "applicable_owner_gate": "Separate accepted real method/data contract required; ARC-07 unaccepted",
+      "test_evidence": "Source and DGM-B/F reviewed; future T14/T15; scorers NOT RUN by reviewer.",
+      "compatibility_result": "INCOMPATIBLE"
+    },
+    {
+      "id": "M10",
+      "source_component": "C-PG-READ / C-PG-SCHEMA",
+      "consuming_component": "Offline preview dependency (excluded)",
+      "existing_proposed_status": "Internal read_profile and eight migrations implemented; live DB NOT VERIFIED",
+      "function_interface_reference": "database.matching_input.read_profile(execute, profile_id); database.local guards",
+      "input_output_type": "Trusted executor + canonical UUID -> ProfileInput; not raw preview type",
+      "provenance_requirements": "DB-selected observations/review timestamps cannot be invented from raw CSV.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "A genuine application principal is required for a future service, not local raw preview.",
+      "data_state_semantics": "Known_usable ProfileInput differs from UNSELECTED candidate; no SQL/driver/guard calls.",
+      "applicable_owner_gate": "No DB/auth gate selected by A/B/I; separate later storage/intake approval",
+      "test_evidence": "ARCH-S08; source inspection only; future T17/T28; DB NOT REVALIDATED.",
+      "compatibility_result": "NOT_APPLICABLE"
+    },
+    {
+      "id": "M11",
+      "source_component": "29 proposed IF/schema contracts; C-TRANSPORT/C-DTO/C-PORTS",
+      "consuming_component": "Preview dependency (excluded)",
+      "existing_proposed_status": "All 29 PROPOSED / NOT IMPLEMENTED",
+      "function_interface_reference": "IF-AUTH-SESSION-1 through explicit registry; no new IF created",
+      "input_output_type": "Transport operation schemas != private preview schema",
+      "provenance_requirements": "Future selected-field/authorized projection provenance not produced by preview.",
+      "rights_requirements": "No audience/display permission inferred.",
+      "authentication_requirements": "No C-AUTHN/C-PRINCIPAL/C-AUTHZ dependency for preview.",
+      "data_state_semantics": "Private preview never masquerades as catalogue/profile/review service response.",
+      "applicable_owner_gate": "AM-01 independent; ARC-01–ARC-09 remain unselected",
+      "test_evidence": "ARCH-S03/S05/S06; all future application runtime tests NOT RUN.",
+      "compatibility_result": "NOT_APPLICABLE"
+    },
+    {
+      "id": "M12",
+      "source_component": "110 proposed UI handlers/elements and 17 routes",
+      "consuming_component": "Preview consumer (excluded)",
+      "existing_proposed_status": "PROPOSED; no handlers/routes implemented",
+      "function_interface_reference": "Architecture_Unified_Model elements, ui_handler_registry, routes",
+      "input_output_type": "UI-local/strict service DTO -> safe presentation; no preview feed",
+      "provenance_requirements": "Raw staging/claims never become browser DTOs automatically.",
+      "rights_requirements": "No public/private UI display grant from dataset license alone.",
+      "authentication_requirements": "All future browser/service auth gates remain separate.",
+      "data_state_semantics": "No route/prefetch/cache/action activation; source URLs remain inert.",
+      "applicable_owner_gate": "No AM-05/06/09/10 or ARC-03/05/06 acceptance",
+      "test_evidence": "ARCH-S06; 110/110 refs reviewed; destination route bindings explicit; runtime NOT RUN.",
+      "compatibility_result": "NOT_APPLICABLE"
+    },
+    {
+      "id": "M13",
+      "source_component": "Literal url field in allowlist",
+      "consuming_component": "Private raw evidence only",
+      "existing_proposed_status": "Allowed existing source literal; fetch capability excluded",
+      "function_interface_reference": "RawEvidenceExtractor literal retention; no urllib/HTTP/browser/source request",
+      "input_output_type": "Literal str -> same inert str in UNSELECTED claim",
+      "provenance_requirements": "Revision/file SHA-256/size and exact logical ordinal+source key; field locator; transform/schema versions.",
+      "rights_requirements": "Pinned Scento CC BY 4.0 attribution and transformation notice; private review only; no page/image rights inheritance.",
+      "authentication_requirements": "No application authentication/principal/lease. Explicit authorized local paths; no credentials or browser input.",
+      "data_state_semantics": "No URL dereference, link preview, page content, image intake or asset validation.",
+      "applicable_owner_gate": "A/B/I allowlist only; source/media acquisition explicitly excluded",
+      "test_evidence": "Future T16/T26/T30. STATIC review only; implementation tests SPECIFIED / NOT RUN at this checkpoint.",
+      "compatibility_result": "CONDITIONALLY_COMPATIBLE"
+    },
+    {
+      "id": "M14",
+      "source_component": "Scento source permission / literal URLs",
+      "consuming_component": "C-ASSET-STORE/C-ASSET-VALIDATOR/C-APP-MEDIA (forbidden inheritance)",
+      "existing_proposed_status": "Media metadata/validator source exists; intake/delivery unapproved",
+      "function_interface_reference": "No IF-MEDIA-RESOLVE/DELIVER or image_validation call",
+      "input_output_type": "Dataset reference -> page/image rights is forbidden",
+      "provenance_requirements": "Asset byte hash/lineage and per-use grant cannot come from source URL.",
+      "rights_requirements": "No linked prose/image/asset rights inheritance.",
+      "authentication_requirements": "No app/media session or local registered-image callback exposed.",
+      "data_state_semantics": "No image bytes/download/derivative/placeholder implementation.",
+      "applicable_owner_gate": "E/F and per-asset approval remain absent; ARC-08 unaccepted",
+      "test_evidence": "DGM-G/H and lifecycle source reviewed; future T16/T26.",
+      "compatibility_result": "INCOMPATIBLE"
+    },
+    {
+      "id": "M15",
+      "source_component": "Unselected review claim / independent dossier decision",
+      "consuming_component": "C-REVIEW-DATA canonical selection, normalization or eligibility (forbidden transition)",
+      "existing_proposed_status": "Schema exists; transition unapproved",
+      "function_interface_reference": "No source_observations insert, canonical_selections, UUID mapping or normalization write",
+      "input_output_type": "Candidate/dossier decision -> canonical/materialized/eligible record forbidden",
+      "provenance_requirements": "Canonical definitions/selections require separate exact per-field evidence.",
+      "rights_requirements": "Review/canonical/storage/matching uses need distinct approvals.",
+      "authentication_requirements": "No human approval auto-created; no DB role change.",
+      "data_state_semantics": "43 proposals/44 holds/Khamrah evidence unchanged; no real completeness claim.",
+      "applicable_owner_gate": "C/D and independent mutation gates not accepted by A/B/I",
+      "test_evidence": "DGM-D/H and lifecycle reviewed; future T14/T15/T24/T25/T28.",
+      "compatibility_result": "INCOMPATIBLE"
+    },
+    {
+      "id": "M16",
+      "source_component": "Architecture ARC-01–ARC-09 recommendations",
+      "consuming_component": "Any task/framework/auth/cache/deployment selection (excluded)",
+      "existing_proposed_status": "PROPOSED / UNANSWERED in frozen historical packet",
+      "function_interface_reference": "POST28-ARCH-ODP-1 and ADR-ARCH-POST28-1",
+      "input_output_type": "Architecture review recommendation -> no implicit accepted runtime configuration",
+      "provenance_requirements": "Preserve original packet bytes; new authorization binds only A/B/I.",
+      "rights_requirements": "No licensor/Production authority from Planning PR merge.",
+      "authentication_requirements": "No provider/credential/lease implementation.",
+      "data_state_semantics": "History remains dated; do not edit frozen PROPOSED text to record present scope.",
+      "applicable_owner_gate": "Current exact Owner A/B/I only; remaining ARC choices pending",
+      "test_evidence": "ARCH-S02; architecture Owner packet + AM-01 inspected.",
+      "compatibility_result": "NOT_APPLICABLE"
+    }
+  ],
+  "mandatory_findings_A_to_J": [
+    {
+      "id": "A",
+      "classification": "COMPATIBLE",
+      "title": "Offline private review adapter, not a public service",
+      "source_references": [
+        "Roadmap AM-01",
+        "C4 DGM-A/B/H",
+        "Contract exact pilot/target scope",
+        "M01–M07"
+      ],
+      "reasoning": "The accepted contract and PR29 explicitly isolate the five-record unselected preview from any web/application slice.",
+      "required_implementation_evidence": "T01–T30 and later independent review; no public endpoint or public payload.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "B",
+      "classification": "COMPATIBLE",
+      "title": "No authentication, transport, API or UI dependency",
+      "source_references": [
+        "Roadmap AM-01/independent lanes",
+        "Function/DTO contracts",
+        "Component registry",
+        "M10–M12"
+      ],
+      "reasoning": "Application proof/principal/transport gates apply to future services, not this bounded local adapter; no application behavior is activated.",
+      "required_implementation_evidence": "Static import/call isolation and T16/T17/T29; all 29 IFs/110 elements/17 routes remain unimplemented.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "C",
+      "classification": "COMPATIBLE",
+      "title": "No real-record to synthetic-fixture scorer bridge",
+      "source_references": [
+        "System actual architecture",
+        "C4 DGM-B/F",
+        "synthetic_m1.py",
+        "synthetic_b1.py",
+        "M08/M09"
+      ],
+      "reasoning": "Accepted synthetic contracts reject scope expansion; relabeling records would violate both planning packages. Existing ETL helpers also change semantics and must not be reused.",
+      "required_implementation_evidence": "T14/T15; accepted M1/B1 canonical bytes unchanged; no scorer import/call.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "D",
+      "classification": "COMPATIBLE",
+      "title": "No matching eligibility is created",
+      "source_references": [
+        "Lifecycle LC-08/LC-09",
+        "C4 DGM-D/H",
+        "Contract reviewer/target scope",
+        "M04/M15"
+      ],
+      "reasoning": "Preview and review outcomes are independent of selection, closure, rights and separately accepted real-method eligibility.",
+      "required_implementation_evidence": "T14/T15/T24/T28; every output remains unselected/noneligible.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "E",
+      "classification": "COMPATIBLE",
+      "title": "No canonical selection, approved normalization or reviewed source observation",
+      "source_references": [
+        "Contract claim categories/transform/reviewer",
+        "Lifecycle independent records",
+        "M04/M07/M15"
+      ],
+      "reasoning": "The 46 slots are review-manifest fields, not SQL observation paths or approval events; unmapped meanings remain unmapped.",
+      "required_implementation_evidence": "T03/T13/T14/T24/T25; no UUID generation, generic SQL field path or reviewed_at claim.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "F",
+      "classification": "COMPATIBLE",
+      "title": "Unknown and incomplete states survive",
+      "source_references": [
+        "Contract transform/value states",
+        "Function/DTO field-state contracts",
+        "C4 DGM-D",
+        "M03/M04"
+      ],
+      "reasoning": "Blank, unverified, general-only and repeated evidence cannot become zero, false, complete-empty, deduplicated aliases or inferred layers.",
+      "required_implementation_evidence": "T10/T11/T12/T13/T19; missing scalar and missing-list cases require synthetic fixtures where actual selected fields are present.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "G",
+      "classification": "COMPATIBLE",
+      "title": "Literal source URLs are inert evidence",
+      "source_references": [
+        "Contract acceptance control Source URL",
+        "C4 DGM-G",
+        "M13"
+      ],
+      "reasoning": "Retaining allowlisted literal URLs does not authorize following them or performing link previews/acquisition.",
+      "required_implementation_evidence": "T16: zero requests, fetches, image loads or browser actions.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "H",
+      "classification": "COMPATIBLE",
+      "title": "Source rights do not grant page/image rights",
+      "source_references": [
+        "Contract Source pins and attribution",
+        "Data/Media lifecycle",
+        "Post_PR27_Media_Rights_and_Storage",
+        "M14"
+      ],
+      "reasoning": "Pinned CC BY 4.0 dataset use and attribution remain bounded; unrelated page text, assets and new source revisions receive no inherited grant.",
+      "required_implementation_evidence": "T26/T30 and independent 46-slot data/rights review; actual asset permissions remain NOT VERIFIED.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "I",
+      "classification": "COMPATIBLE",
+      "title": "Live PostgreSQL is unnecessary",
+      "source_references": [
+        "Roadmap AM-01 independent lanes",
+        "System actual architecture",
+        "matching_input.read_profile",
+        "M10"
+      ],
+      "reasoning": "Read_profile is a trusted SQL/selected-data adapter with a different state model; importing it or operator tooling is unnecessary and excluded.",
+      "required_implementation_evidence": "T17/T28; no DB guard, SQL, driver or Docker execution. DB NOT REVALIDATED.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    },
+    {
+      "id": "J",
+      "classification": "COMPATIBLE",
+      "title": "ARC-01–ARC-09 remain unselected",
+      "source_references": [
+        "Architecture Owner packet Preserved authority/effect on A–I",
+        "Roadmap Approval/change rules",
+        "M16"
+      ],
+      "reasoning": "Planning merge supplies design context; the newer exact Owner request accepts only A-PREVIEW-5/B-PINNED-PREVIEW/I-IMP-ENR-01, not optional architecture choices.",
+      "required_implementation_evidence": "T29 and frozen packet hash preservation; no framework/auth/cache configuration or install.",
+      "runtime_status": "NOT VERIFIED / NOT RUN at preimplementation checkpoint",
+      "disposition": "RETAINED_IMPLEMENTATION_CONSTRAINT; no contract amendment required",
+      "blocking_architecture_conflict": false
+    }
+  ],
+  "all_components": [
+    {
+      "id": "C-UI-SHELL",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-DTO"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-UI-PAGES",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-DTO"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-TRANSPORT",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-DTO",
+        "C-AUTHN",
+        "C-PRINCIPAL",
+        "C-PORTS"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-DTO",
+      "source_status": "PROPOSED",
+      "dependencies": [],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-AUTHN",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-PRINCIPAL",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-AUTHN",
+        "C-PORTS",
+        "C-PG-SCHEMA"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-AUTHZ",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-PG-READ",
+        "C-CONFIG"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-CATALOGUE",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-MATCH",
+      "source_status": "BLOCKED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES",
+        "C-DOMAIN-REAL"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-COMPARE",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-MEDIA",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-PRIVATE",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-APP-REVIEW",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-PORTS",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-DOMAIN-TYPES",
+      "source_status": "PROPOSED",
+      "dependencies": [],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-DOMAIN-REAL",
+      "source_status": "BLOCKED",
+      "dependencies": [
+        "C-DOMAIN-TYPES",
+        "C-MATH-PRIMITIVES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-SYNTHETIC-M1",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-MATH-PRIMITIVES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-SYNTHETIC-B1",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-MATH-PRIMITIVES"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-MATH-PRIMITIVES",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-PG-READ",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-PG-SCHEMA"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-PG-WRITE",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS",
+        "C-PG-SCHEMA"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-PG-SCHEMA",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-OPERATOR-CLI",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-PG-SCHEMA"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-SOURCE-CAPTURE",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-OPERATOR-CLI"
+      ],
+      "classification": "CONDITIONALLY_COMPATIBLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-REVIEW-DATA",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-PG-SCHEMA"
+      ],
+      "classification": "CONDITIONALLY_COMPATIBLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-ASSET-VALIDATOR",
+      "source_status": "IMPLEMENTED",
+      "dependencies": [
+        "C-OPERATOR-CLI"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-ASSET-STORE",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-AUDIT",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-PORTS"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-CONFIG",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-DOMAIN-TYPES"
+      ],
+      "classification": "CONDITIONALLY_COMPATIBLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    },
+    {
+      "id": "C-COMPOSITION",
+      "source_status": "PROPOSED",
+      "dependencies": [
+        "C-TRANSPORT",
+        "C-APP-CATALOGUE",
+        "C-APP-MATCH",
+        "C-APP-COMPARE",
+        "C-APP-MEDIA",
+        "C-APP-PRIVATE",
+        "C-APP-REVIEW",
+        "C-AUTHZ",
+        "C-PG-WRITE",
+        "C-ASSET-STORE",
+        "C-AUDIT"
+      ],
+      "classification": "NOT_APPLICABLE",
+      "disposition": "Conceptual boundary/context only; no existing component import, call, role or implementation activated by preview."
+    }
+  ],
+  "all_interfaces": [
+    {
+      "id": "IF-AUTH-SESSION-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-AUTH-SESSION-1.input.v1",
+      "output_schema": "IF-AUTH-SESSION-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PRINCIPAL-LEASE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PRINCIPAL-LEASE-1.input.v1",
+      "output_schema": "IF-PRINCIPAL-LEASE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-CATALOGUE-QUERY-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PROFILE-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-VOCABULARY-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-VOCABULARY-READ-1.input.v1",
+      "output_schema": "IF-VOCABULARY-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-CAPABILITY-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-MATCH-VALIDATE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-MATCH-VALIDATE-1.input.v1",
+      "output_schema": "IF-MATCH-VALIDATE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-MATCH-EXECUTE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-MATCH-EXECUTE-1.input.v1",
+      "output_schema": "IF-MATCH-EXECUTE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-COMPARISON-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-COMPARISON-READ-1.input.v1",
+      "output_schema": "IF-COMPARISON-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-MEDIA-RESOLVE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-MEDIA-RESOLVE-1.input.v1",
+      "output_schema": "IF-MEDIA-RESOLVE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-MEDIA-DELIVER-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-MEDIA-DELIVER-1.input.v1",
+      "output_schema": "IF-MEDIA-DELIVER-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-BUYING-SOURCES-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-BUYING-SOURCES-READ-1.input.v1",
+      "output_schema": "IF-BUYING-SOURCES-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-BUYING-SOURCE-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-BUYING-SOURCE-WRITE-1.input.v1",
+      "output_schema": "IF-BUYING-SOURCE-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PURCHASE-STATUS-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PURCHASE-STATUS-WRITE-1.input.v1",
+      "output_schema": "IF-PURCHASE-STATUS-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-COLLECTION-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-COLLECTION-READ-1.input.v1",
+      "output_schema": "IF-COLLECTION-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-COLLECTION-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-DASHBOARD-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-DASHBOARD-READ-1.input.v1",
+      "output_schema": "IF-DASHBOARD-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-REVIEW-QUEUE-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-REVIEW-QUEUE-READ-1.input.v1",
+      "output_schema": "IF-REVIEW-QUEUE-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-REVIEW-DECISION-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-REVIEW-DECISION-WRITE-1.input.v1",
+      "output_schema": "IF-REVIEW-DECISION-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-SOURCE-INTAKE-REQUEST-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-SOURCE-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-SOURCE-INTAKE-REQUEST-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-ASSET-INTAKE-REQUEST-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-ASSET-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-ASSET-INTAKE-REQUEST-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PRIVATE-SETTINGS-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PRIVATE-SETTINGS-1.input.v1",
+      "output_schema": "IF-PRIVATE-SETTINGS-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-OPERATOR-STATUS-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-OPERATOR-STATUS-READ-1.input.v1",
+      "output_schema": "IF-OPERATOR-STATUS-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-RIGHTS-REVIEW-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-RIGHTS-REVIEW-1.input.v1",
+      "output_schema": "IF-RIGHTS-REVIEW-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-SESSION-END-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-SESSION-END-1.input.v1",
+      "output_schema": "IF-SESSION-END-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PERSONAL-STATE-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PERSONAL-STATE-READ-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PERSONAL-STATE-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PURCHASE-RECORD-WRITE-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PURCHASE-RECORD-WRITE-1.input.v1",
+      "output_schema": "IF-PURCHASE-RECORD-WRITE-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    },
+    {
+      "id": "IF-PURCHASE-RECORD-READ-1",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": "IF-PURCHASE-RECORD-READ-1.input.v1",
+      "output_schema": "IF-PURCHASE-RECORD-READ-1.output.v1",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE; preview is not an application interface"
+    }
+  ],
+  "all_elements": [
+    {
+      "id": "EL-NAV-01",
+      "handler": "H-EL-NAV-01",
+      "proposed_callable": "proposed.ui.handle_el_nav_01",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-CATALOGUE"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-02",
+      "handler": "H-EL-NAV-02",
+      "proposed_callable": "proposed.ui.handle_el_nav_02",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-DETAIL"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-03",
+      "handler": "H-EL-NAV-03",
+      "proposed_callable": "proposed.ui.handle_el_nav_03",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-PYRAMID"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-04",
+      "handler": "H-EL-NAV-04",
+      "proposed_callable": "proposed.ui.handle_el_nav_04",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-MATCH"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-05",
+      "handler": "H-EL-NAV-05",
+      "proposed_callable": "proposed.ui.handle_el_nav_05",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-RESULTS"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-06",
+      "handler": "H-EL-NAV-06",
+      "proposed_callable": "proposed.ui.handle_el_nav_06",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-COMPARE"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-07",
+      "handler": "H-EL-NAV-07",
+      "proposed_callable": "proposed.ui.handle_el_nav_07",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-CART"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-08",
+      "handler": "H-EL-NAV-08",
+      "proposed_callable": "proposed.ui.handle_el_nav_08",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-COLLECTION"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-09",
+      "handler": "H-EL-NAV-09",
+      "proposed_callable": "proposed.ui.handle_el_nav_09",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-10",
+      "handler": "H-EL-NAV-10",
+      "proposed_callable": "proposed.ui.handle_el_nav_10",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-DASHBOARD"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-11",
+      "handler": "H-EL-NAV-11",
+      "proposed_callable": "proposed.ui.handle_el_nav_11",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-SYSTEM"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-12",
+      "handler": "H-EL-NAV-12",
+      "proposed_callable": "proposed.ui.handle_el_nav_12",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-SOURCES"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-13",
+      "handler": "H-EL-NAV-13",
+      "proposed_callable": "proposed.ui.handle_el_nav_13",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-REVIEWS"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-14",
+      "handler": "H-EL-NAV-14",
+      "proposed_callable": "proposed.ui.handle_el_nav_14",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-RIGHTS-MEDIA"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-15",
+      "handler": "H-EL-NAV-15",
+      "proposed_callable": "proposed.ui.handle_el_nav_15",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-OPERATIONS"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-16",
+      "handler": "H-EL-NAV-16",
+      "proposed_callable": "proposed.ui.handle_el_nav_16",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-SETTINGS"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-NAV-17",
+      "handler": "H-EL-NAV-17",
+      "proposed_callable": "proposed.ui.handle_el_nav_17",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [
+        "R-SIGNIN"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D01",
+      "handler": "H-EL-D01",
+      "proposed_callable": "proposed.ui.handle_el_d01",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D02",
+      "handler": "H-EL-D02",
+      "proposed_callable": "proposed.ui.handle_el_d02",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D03",
+      "handler": "H-EL-D03",
+      "proposed_callable": "proposed.ui.handle_el_d03",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D04",
+      "handler": "H-EL-D04",
+      "proposed_callable": "proposed.ui.handle_el_d04",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D05",
+      "handler": "H-EL-D05",
+      "proposed_callable": "proposed.ui.handle_el_d05",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D06",
+      "handler": "H-EL-D06",
+      "proposed_callable": "proposed.ui.handle_el_d06",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D07",
+      "handler": "H-EL-D07",
+      "proposed_callable": "proposed.ui.handle_el_d07",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D08",
+      "handler": "H-EL-D08",
+      "proposed_callable": "proposed.ui.handle_el_d08",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [
+        "R-DETAIL"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D09",
+      "handler": "H-EL-D09",
+      "proposed_callable": "proposed.ui.handle_el_d09",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D10",
+      "handler": "H-EL-D10",
+      "proposed_callable": "proposed.ui.handle_el_d10",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D11",
+      "handler": "H-EL-D11",
+      "proposed_callable": "proposed.ui.handle_el_d11",
+      "operation": "IF-CAPABILITY-READ-1",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D12",
+      "handler": "H-EL-D12",
+      "proposed_callable": "proposed.ui.handle_el_d12",
+      "operation": "IF-CAPABILITY-READ-1",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D13",
+      "handler": "H-EL-D13",
+      "proposed_callable": "proposed.ui.handle_el_d13",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D14",
+      "handler": "H-EL-D14",
+      "proposed_callable": "proposed.ui.handle_el_d14",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-PYRAMID"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D15",
+      "handler": "H-EL-D15",
+      "proposed_callable": "proposed.ui.handle_el_d15",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-PYRAMID"
+      ],
+      "target_route_ids": [
+        "R-CATALOGUE"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D16",
+      "handler": "H-EL-D16",
+      "proposed_callable": "proposed.ui.handle_el_d16",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-PYRAMID"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D17",
+      "handler": "H-EL-D17",
+      "proposed_callable": "proposed.ui.handle_el_d17",
+      "operation": "IF-MEDIA-RESOLVE-1",
+      "input_schema": "IF-MEDIA-RESOLVE-1.input.v1",
+      "output_schema": "IF-MEDIA-RESOLVE-1.output.v1",
+      "route_ids": [
+        "R-PYRAMID"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D18",
+      "handler": "H-EL-D18",
+      "proposed_callable": "proposed.ui.handle_el_d18",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M01",
+      "handler": "H-EL-M01",
+      "proposed_callable": "proposed.ui.handle_el_m01",
+      "operation": "IF-CAPABILITY-READ-1",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M02",
+      "handler": "H-EL-M02",
+      "proposed_callable": "proposed.ui.handle_el_m02",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M03",
+      "handler": "H-EL-M03",
+      "proposed_callable": "proposed.ui.handle_el_m03",
+      "operation": "IF-VOCABULARY-READ-1",
+      "input_schema": "IF-VOCABULARY-READ-1.input.v1",
+      "output_schema": "IF-VOCABULARY-READ-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M04",
+      "handler": "H-EL-M04",
+      "proposed_callable": "proposed.ui.handle_el_m04",
+      "operation": "IF-VOCABULARY-READ-1",
+      "input_schema": "IF-VOCABULARY-READ-1.input.v1",
+      "output_schema": "IF-VOCABULARY-READ-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M05",
+      "handler": "H-EL-M05",
+      "proposed_callable": "proposed.ui.handle_el_m05",
+      "operation": "IF-VOCABULARY-READ-1",
+      "input_schema": "IF-VOCABULARY-READ-1.input.v1",
+      "output_schema": "IF-VOCABULARY-READ-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M06",
+      "handler": "H-EL-M06",
+      "proposed_callable": "proposed.ui.handle_el_m06",
+      "operation": "IF-MATCH-VALIDATE-1",
+      "input_schema": "IF-MATCH-VALIDATE-1.input.v1",
+      "output_schema": "IF-MATCH-VALIDATE-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M07",
+      "handler": "H-EL-M07",
+      "proposed_callable": "proposed.ui.handle_el_m07",
+      "operation": "IF-MATCH-VALIDATE-1",
+      "input_schema": "IF-MATCH-VALIDATE-1.input.v1",
+      "output_schema": "IF-MATCH-VALIDATE-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; BLOCKED: Alternative real query policies need a separate exact contract; current synthetic B1 rules remain unchanged.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M08",
+      "handler": "H-EL-M08",
+      "proposed_callable": "proposed.ui.handle_el_m08",
+      "operation": "IF-CAPABILITY-READ-1",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; BLOCKED: B2 remains blocked; compatible strengths/taxonomy/method and Owner approval are absent.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M09",
+      "handler": "H-EL-M09",
+      "proposed_callable": "proposed.ui.handle_el_m09",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M10",
+      "handler": "H-EL-M10",
+      "proposed_callable": "proposed.ui.handle_el_m10",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M11",
+      "handler": "H-EL-M11",
+      "proposed_callable": "proposed.ui.handle_el_m11",
+      "operation": "IF-MATCH-EXECUTE-1",
+      "input_schema": "IF-MATCH-EXECUTE-1.input.v1",
+      "output_schema": "IF-MATCH-EXECUTE-1.output.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M12",
+      "handler": "H-EL-M12",
+      "proposed_callable": "proposed.ui.handle_el_m12",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M13",
+      "handler": "H-EL-M13",
+      "proposed_callable": "proposed.ui.handle_el_m13",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M14",
+      "handler": "H-EL-M14",
+      "proposed_callable": "proposed.ui.handle_el_m14",
+      "operation": "IF-PROFILE-READ-1",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [
+        "R-DETAIL"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M15",
+      "handler": "H-EL-M15",
+      "proposed_callable": "proposed.ui.handle_el_m15",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M16",
+      "handler": "H-EL-M16",
+      "proposed_callable": "proposed.ui.handle_el_m16",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M17",
+      "handler": "H-EL-M17",
+      "proposed_callable": "proposed.ui.handle_el_m17",
+      "operation": "IF-COMPARISON-READ-1",
+      "input_schema": "IF-COMPARISON-READ-1.input.v1",
+      "output_schema": "IF-COMPARISON-READ-1.output.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [
+        "R-COMPARE"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M18",
+      "handler": "H-EL-M18",
+      "proposed_callable": "proposed.ui.handle_el_m18",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M19",
+      "handler": "H-EL-M19",
+      "proposed_callable": "proposed.ui.handle_el_m19",
+      "operation": "IF-MATCH-EXECUTE-1",
+      "input_schema": "IF-MATCH-EXECUTE-1.input.v1",
+      "output_schema": "IF-MATCH-EXECUTE-1.output.v1",
+      "route_ids": [
+        "R-RESULTS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-C01",
+      "handler": "H-EL-C01",
+      "proposed_callable": "proposed.ui.handle_el_c01",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-COMPARE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-C02",
+      "handler": "H-EL-C02",
+      "proposed_callable": "proposed.ui.handle_el_c02",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-COMPARE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-C03",
+      "handler": "H-EL-C03",
+      "proposed_callable": "proposed.ui.handle_el_c03",
+      "operation": "IF-COMPARISON-READ-1",
+      "input_schema": "IF-COMPARISON-READ-1.input.v1",
+      "output_schema": "IF-COMPARISON-READ-1.output.v1",
+      "route_ids": [
+        "R-COMPARE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-C04",
+      "handler": "H-EL-C04",
+      "proposed_callable": "proposed.ui.handle_el_c04",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COMPARE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P01",
+      "handler": "H-EL-P01",
+      "proposed_callable": "proposed.ui.handle_el_p01",
+      "operation": "IF-PERSONAL-STATE-READ-1",
+      "input_schema": "IF-PERSONAL-STATE-READ-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-READ-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P02",
+      "handler": "H-EL-P02",
+      "proposed_callable": "proposed.ui.handle_el_p02",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P03",
+      "handler": "H-EL-P03",
+      "proposed_callable": "proposed.ui.handle_el_p03",
+      "operation": "IF-BUYING-SOURCE-WRITE-1",
+      "input_schema": "IF-BUYING-SOURCE-WRITE-1.input.v1",
+      "output_schema": "IF-BUYING-SOURCE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P04",
+      "handler": "H-EL-P04",
+      "proposed_callable": "proposed.ui.handle_el_p04",
+      "operation": "IF-BUYING-SOURCE-WRITE-1",
+      "input_schema": "IF-BUYING-SOURCE-WRITE-1.input.v1",
+      "output_schema": "IF-BUYING-SOURCE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P05",
+      "handler": "H-EL-P05",
+      "proposed_callable": "proposed.ui.handle_el_p05",
+      "operation": "IF-BUYING-SOURCE-WRITE-1",
+      "input_schema": "IF-BUYING-SOURCE-WRITE-1.input.v1",
+      "output_schema": "IF-BUYING-SOURCE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P06",
+      "handler": "H-EL-P06",
+      "proposed_callable": "proposed.ui.handle_el_p06",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P07",
+      "handler": "H-EL-P07",
+      "proposed_callable": "proposed.ui.handle_el_p07",
+      "operation": "IF-PURCHASE-STATUS-WRITE-1",
+      "input_schema": "IF-PURCHASE-STATUS-WRITE-1.input.v1",
+      "output_schema": "IF-PURCHASE-STATUS-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P08",
+      "handler": "H-EL-P08",
+      "proposed_callable": "proposed.ui.handle_el_p08",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P09",
+      "handler": "H-EL-P09",
+      "proposed_callable": "proposed.ui.handle_el_p09",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P10",
+      "handler": "H-EL-P10",
+      "proposed_callable": "proposed.ui.handle_el_p10",
+      "operation": "IF-SOURCE-INTAKE-REQUEST-1",
+      "input_schema": "IF-SOURCE-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-SOURCE-INTAKE-REQUEST-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P11",
+      "handler": "H-EL-P11",
+      "proposed_callable": "proposed.ui.handle_el_p11",
+      "operation": "IF-ASSET-INTAKE-REQUEST-1",
+      "input_schema": "IF-ASSET-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-ASSET-INTAKE-REQUEST-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P12",
+      "handler": "H-EL-P12",
+      "proposed_callable": "proposed.ui.handle_el_p12",
+      "operation": "IF-COLLECTION-READ-1",
+      "input_schema": "IF-COLLECTION-READ-1.input.v1",
+      "output_schema": "IF-COLLECTION-READ-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P13",
+      "handler": "H-EL-P13",
+      "proposed_callable": "proposed.ui.handle_el_p13",
+      "operation": "IF-COLLECTION-READ-1",
+      "input_schema": "IF-COLLECTION-READ-1.input.v1",
+      "output_schema": "IF-COLLECTION-READ-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION"
+      ],
+      "target_route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P14",
+      "handler": "H-EL-P14",
+      "proposed_callable": "proposed.ui.handle_el_p14",
+      "operation": "IF-PURCHASE-RECORD-WRITE-1",
+      "input_schema": "IF-PURCHASE-RECORD-WRITE-1.input.v1",
+      "output_schema": "IF-PURCHASE-RECORD-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P15",
+      "handler": "H-EL-P15",
+      "proposed_callable": "proposed.ui.handle_el_p15",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P16",
+      "handler": "H-EL-P16",
+      "proposed_callable": "proposed.ui.handle_el_p16",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P17",
+      "handler": "H-EL-P17",
+      "proposed_callable": "proposed.ui.handle_el_p17",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P18",
+      "handler": "H-EL-P18",
+      "proposed_callable": "proposed.ui.handle_el_p18",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P19",
+      "handler": "H-EL-P19",
+      "proposed_callable": "proposed.ui.handle_el_p19",
+      "operation": "IF-COLLECTION-WRITE-1",
+      "input_schema": "IF-COLLECTION-WRITE-1.input.v1",
+      "output_schema": "IF-COLLECTION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P20",
+      "handler": "H-EL-P20",
+      "proposed_callable": "proposed.ui.handle_el_p20",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-COLLECTION"
+      ],
+      "target_route_ids": [
+        "R-CART"
+      ],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P21",
+      "handler": "H-EL-P21",
+      "proposed_callable": "proposed.ui.handle_el_p21",
+      "operation": "IF-DASHBOARD-READ-1",
+      "input_schema": "IF-DASHBOARD-READ-1.input.v1",
+      "output_schema": "IF-DASHBOARD-READ-1.output.v1",
+      "route_ids": [
+        "R-DASHBOARD"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P22",
+      "handler": "H-EL-P22",
+      "proposed_callable": "proposed.ui.handle_el_p22",
+      "operation": "IF-DASHBOARD-READ-1",
+      "input_schema": "IF-DASHBOARD-READ-1.input.v1",
+      "output_schema": "IF-DASHBOARD-READ-1.output.v1",
+      "route_ids": [
+        "R-DASHBOARD"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P23",
+      "handler": "H-EL-P23",
+      "proposed_callable": "proposed.ui.handle_el_p23",
+      "operation": "IF-COLLECTION-READ-1",
+      "input_schema": "IF-COLLECTION-READ-1.input.v1",
+      "output_schema": "IF-COLLECTION-READ-1.output.v1",
+      "route_ids": [
+        "R-DASHBOARD"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P24",
+      "handler": "H-EL-P24",
+      "proposed_callable": "proposed.ui.handle_el_p24",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-DASHBOARD"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S01",
+      "handler": "H-EL-S01",
+      "proposed_callable": "proposed.ui.handle_el_s01",
+      "operation": "IF-REVIEW-QUEUE-READ-1",
+      "input_schema": "IF-REVIEW-QUEUE-READ-1.input.v1",
+      "output_schema": "IF-REVIEW-QUEUE-READ-1.output.v1",
+      "route_ids": [
+        "R-SYSTEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S02",
+      "handler": "H-EL-S02",
+      "proposed_callable": "proposed.ui.handle_el_s02",
+      "operation": "IF-REVIEW-QUEUE-READ-1",
+      "input_schema": "IF-REVIEW-QUEUE-READ-1.input.v1",
+      "output_schema": "IF-REVIEW-QUEUE-READ-1.output.v1",
+      "route_ids": [
+        "R-SOURCES"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S03",
+      "handler": "H-EL-S03",
+      "proposed_callable": "proposed.ui.handle_el_s03",
+      "operation": "IF-SOURCE-INTAKE-REQUEST-1",
+      "input_schema": "IF-SOURCE-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-SOURCE-INTAKE-REQUEST-1.output.v1",
+      "route_ids": [
+        "R-SOURCES"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S04",
+      "handler": "H-EL-S04",
+      "proposed_callable": "proposed.ui.handle_el_s04",
+      "operation": "IF-REVIEW-QUEUE-READ-1",
+      "input_schema": "IF-REVIEW-QUEUE-READ-1.input.v1",
+      "output_schema": "IF-REVIEW-QUEUE-READ-1.output.v1",
+      "route_ids": [
+        "R-REVIEWS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S05",
+      "handler": "H-EL-S05",
+      "proposed_callable": "proposed.ui.handle_el_s05",
+      "operation": "IF-REVIEW-QUEUE-READ-1",
+      "input_schema": "IF-REVIEW-QUEUE-READ-1.input.v1",
+      "output_schema": "IF-REVIEW-QUEUE-READ-1.output.v1",
+      "route_ids": [
+        "R-REVIEWS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S06",
+      "handler": "H-EL-S06",
+      "proposed_callable": "proposed.ui.handle_el_s06",
+      "operation": "IF-REVIEW-DECISION-WRITE-1",
+      "input_schema": "IF-REVIEW-DECISION-WRITE-1.input.v1",
+      "output_schema": "IF-REVIEW-DECISION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-REVIEWS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S07",
+      "handler": "H-EL-S07",
+      "proposed_callable": "proposed.ui.handle_el_s07",
+      "operation": "IF-REVIEW-DECISION-WRITE-1",
+      "input_schema": "IF-REVIEW-DECISION-WRITE-1.input.v1",
+      "output_schema": "IF-REVIEW-DECISION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-REVIEWS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S08",
+      "handler": "H-EL-S08",
+      "proposed_callable": "proposed.ui.handle_el_s08",
+      "operation": "IF-REVIEW-DECISION-WRITE-1",
+      "input_schema": "IF-REVIEW-DECISION-WRITE-1.input.v1",
+      "output_schema": "IF-REVIEW-DECISION-WRITE-1.output.v1",
+      "route_ids": [
+        "R-REVIEWS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S09",
+      "handler": "H-EL-S09",
+      "proposed_callable": "proposed.ui.handle_el_s09",
+      "operation": "IF-RIGHTS-REVIEW-1",
+      "input_schema": "IF-RIGHTS-REVIEW-1.input.v1",
+      "output_schema": "IF-RIGHTS-REVIEW-1.output.v1",
+      "route_ids": [
+        "R-RIGHTS-MEDIA"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S10",
+      "handler": "H-EL-S10",
+      "proposed_callable": "proposed.ui.handle_el_s10",
+      "operation": "IF-RIGHTS-REVIEW-1",
+      "input_schema": "IF-RIGHTS-REVIEW-1.input.v1",
+      "output_schema": "IF-RIGHTS-REVIEW-1.output.v1",
+      "route_ids": [
+        "R-RIGHTS-MEDIA"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S11",
+      "handler": "H-EL-S11",
+      "proposed_callable": "proposed.ui.handle_el_s11",
+      "operation": "IF-ASSET-INTAKE-REQUEST-1",
+      "input_schema": "IF-ASSET-INTAKE-REQUEST-1.input.v1",
+      "output_schema": "IF-ASSET-INTAKE-REQUEST-1.output.v1",
+      "route_ids": [
+        "R-RIGHTS-MEDIA"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S12",
+      "handler": "H-EL-S12",
+      "proposed_callable": "proposed.ui.handle_el_s12",
+      "operation": "IF-RIGHTS-REVIEW-1",
+      "input_schema": "IF-RIGHTS-REVIEW-1.input.v1",
+      "output_schema": "IF-RIGHTS-REVIEW-1.output.v1",
+      "route_ids": [
+        "R-RIGHTS-MEDIA"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S13",
+      "handler": "H-EL-S13",
+      "proposed_callable": "proposed.ui.handle_el_s13",
+      "operation": "IF-OPERATOR-STATUS-READ-1",
+      "input_schema": "IF-OPERATOR-STATUS-READ-1.input.v1",
+      "output_schema": "IF-OPERATOR-STATUS-READ-1.output.v1",
+      "route_ids": [
+        "R-OPERATIONS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S14",
+      "handler": "H-EL-S14",
+      "proposed_callable": "proposed.ui.handle_el_s14",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-OPERATIONS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S15",
+      "handler": "H-EL-S15",
+      "proposed_callable": "proposed.ui.handle_el_s15",
+      "operation": "IF-PRIVATE-SETTINGS-1",
+      "input_schema": "IF-PRIVATE-SETTINGS-1.input.v1",
+      "output_schema": "IF-PRIVATE-SETTINGS-1.output.v1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S16",
+      "handler": "H-EL-S16",
+      "proposed_callable": "proposed.ui.handle_el_s16",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S17",
+      "handler": "H-EL-S17",
+      "proposed_callable": "proposed.ui.handle_el_s17",
+      "operation": "IF-SESSION-END-1",
+      "input_schema": "IF-SESSION-END-1.input.v1",
+      "output_schema": "IF-SESSION-END-1.output.v1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-S18",
+      "handler": "H-EL-S18",
+      "proposed_callable": "proposed.ui.handle_el_s18",
+      "operation": "IF-AUTH-SESSION-1",
+      "input_schema": "IF-AUTH-SESSION-1.input.v1",
+      "output_schema": "IF-AUTH-SESSION-1.output.v1",
+      "route_ids": [
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-M20",
+      "handler": "H-EL-M20",
+      "proposed_callable": "proposed.ui.handle_el_m20",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-MATCH"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P25",
+      "handler": "H-EL-P25",
+      "proposed_callable": "proposed.ui.handle_el_p25",
+      "operation": "IF-PURCHASE-RECORD-WRITE-1",
+      "input_schema": "IF-PURCHASE-RECORD-WRITE-1.input.v1",
+      "output_schema": "IF-PURCHASE-RECORD-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P27",
+      "handler": "H-EL-P27",
+      "proposed_callable": "proposed.ui.handle_el_p27",
+      "operation": "IF-PURCHASE-RECORD-READ-1",
+      "input_schema": "IF-PURCHASE-RECORD-READ-1.input.v1",
+      "output_schema": "IF-PURCHASE-RECORD-READ-1.output.v1",
+      "route_ids": [
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D20",
+      "handler": "H-EL-D20",
+      "proposed_callable": "proposed.ui.handle_el_d20",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D21",
+      "handler": "H-EL-D21",
+      "proposed_callable": "proposed.ui.handle_el_d21",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-P26",
+      "handler": "H-EL-P26",
+      "proposed_callable": "proposed.ui.handle_el_p26",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "route_ids": [
+        "R-CART"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-UI-01",
+      "handler": "H-EL-UI-01",
+      "proposed_callable": "proposed.ui.handle_el_ui_01",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-CART",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DASHBOARD",
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-D19",
+      "handler": "H-EL-D19",
+      "proposed_callable": "proposed.ui.handle_el_d19",
+      "operation": "UI-LOCAL-STATE-1",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; BLOCKED: Future P5 research assistance has no selected provider, interface or implementation approval.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-MEDIA-01",
+      "handler": "H-EL-MEDIA-01",
+      "proposed_callable": "proposed.ui.handle_el_media_01",
+      "operation": "IF-MEDIA-DELIVER-1",
+      "input_schema": "IF-MEDIA-DELIVER-1.input.v1",
+      "output_schema": "IF-MEDIA-DELIVER-1.output.v1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-RIGHTS-MEDIA"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "EL-MEDIA-02",
+      "handler": "H-EL-MEDIA-02",
+      "proposed_callable": "proposed.ui.handle_el_media_02",
+      "operation": "IF-MEDIA-RESOLVE-1",
+      "input_schema": "IF-MEDIA-RESOLVE-1.input.v1",
+      "output_schema": "IF-MEDIA-RESOLVE-1.output.v1",
+      "route_ids": [
+        "R-DETAIL",
+        "R-PYRAMID",
+        "R-RESULTS",
+        "R-COMPARE"
+      ],
+      "target_route_ids": [],
+      "implementation_status": "PROPOSED; No UI handler, application service or route implemented.",
+      "test_execution": "NOT RUN",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    }
+  ],
+  "all_routes": [
+    {
+      "id": "R-CATALOGUE",
+      "path": "/catalogue",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-DETAIL",
+      "path": "/perfumes/:id",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-PYRAMID",
+      "path": "/perfumes/:id/notes",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-MATCH",
+      "path": "/matching",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-RESULTS",
+      "path": "/matching/results",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-COMPARE",
+      "path": "/compare",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-CART",
+      "path": "/my-cart",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-COLLECTION",
+      "path": "/collection",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-COLLECTION-ITEM",
+      "path": "/collection/:id",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-DASHBOARD",
+      "path": "/dashboard",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-SYSTEM",
+      "path": "/system",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-SOURCES",
+      "path": "/system/sources",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-REVIEWS",
+      "path": "/system/reviews",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-RIGHTS-MEDIA",
+      "path": "/system/rights-media",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-OPERATIONS",
+      "path": "/system/operations",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-SETTINGS",
+      "path": "/settings",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    },
+    {
+      "id": "R-SIGNIN",
+      "path": "/sign-in",
+      "status": "PROPOSED",
+      "classification": "NOT_APPLICABLE",
+      "preview_binding": "NONE"
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "DGM-A",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-B",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-C",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-D",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-E",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-F",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-G",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    },
+    {
+      "id": "DGM-H",
+      "classification": "COMPATIBLE",
+      "runtime_status": "NOT RUN",
+      "reason": "Static design accommodates isolated unselected review lane without activating application flows."
+    }
+  ],
+  "scope_and_limits": {
+    "project_modules_imported": false,
+    "project_tests_executed": false,
+    "raw_source_files_opened_by_this_reviewer": false,
+    "source_pin_validation": "NOT VERIFIED by architecture reviewer; assigned independent data role owns real six-file checks",
+    "network_or_acquisition": false,
+    "DB_Docker_SQL": false,
+    "implementation_or_test_files_edited": false,
+    "runtime_PASS_claim": false,
+    "independent_implementation_review": "PENDING after GREEN",
+    "Human_Owner_review_merge": "PENDING",
+    "final_receipt": "NOT CREATED by this reviewer",
+    "historical_194_methods": "Historical only; zero fresh project tests claimed"
+  },
+  "next_action": "Coordinator may start required RED tests within exact A/B/I constraints. Implement only after RED evidence. Runtime isolation, publication failures, source integrity and 46-slot output require fresh evidence and independent reviews before any final readiness claim.",
+  "tool_execution_report": {
+    "working_path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\worktrees\\imp-enr-01-offline-preview",
+    "used": [
+      "Caveman skill read",
+      "Context Mode ctx_execute/ctx_search: bounded local documentation/source analysis",
+      "Git CLI: read-only local baseline and canonical blob reads",
+      "Python standard library: static AST/hash/reference checks",
+      "PowerShell/exec_command: bounded local reads",
+      "apply_patch: assigned review helper/evidence authoring"
+    ],
+    "requested_but_not_used": "NONE",
+    "install_config_changes": "NONE",
+    "files_changed": [
+      "Structure DB Obsidian/06_Engineering/IMP_ENR_01_Architecture_Compatibility.md",
+      "Structure DB Obsidian/08_Operations/Test_Evidence/IMP_ENR_01_Architecture_Compatibility.json"
+    ],
+    "helper_path": ".local/imp-enr-01/architecture/build_architecture_review.py (ignored local review helper, outside public worktree)",
+    "Obsidian_updated": true,
+    "Git_write": false,
+    "Production_mutation": false
+  }
+}

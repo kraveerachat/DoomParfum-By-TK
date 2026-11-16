@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - operations
@@ -916,3 +916,19 @@ Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: fou
 [PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
 
 Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.
+
+## IMP-ENR-01 exact Owner authority and preimplementation gate — 2026-11-17
+
+Current user-provided master prompt explicitly accepts POST27-ODP-1 **A-PREVIEW-5 / B-PINNED-PREVIEW / I-IMP-ENR-01**, ENR-PINNED-SCENTO-1 revision1, frozen data-note canonical SHA256 `053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5`, packet SHA256 `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`, transform `enr-pinned-scento-preview-1` and schema `enr-pinned-scento-preview-schema-1`. Only exact five-record/46-field local unselected preview is authorized. Frozen proposal files remain unchanged; this dated decision supersedes only their earlier A/B/I unanswered state. No separate unseen chat statement, human reviewer identity, other policy/ARC acceptance or new source rights are fabricated.
+
+Merged PR28/29 and actual main81b281 satisfy Planning Gate. Fresh independent `/root/enr_architecture_compatibility` review permits bounded TDD; named `/root/enr_independent_data_review` role was assigned before implementation under the current delegated review instruction. Human/canonical acceptance remains pending. Six source pins/sidecars and25prior receipts/eight migrations verified. Current DB/Docker not probed; no service start. Existing tools only; no install/configuration.
+
+Task/branch/source/tests/results: [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], [[IMP_ENR_01_Preflight.json]], [[IMP_ENR_01_Architecture_Compatibility]]. No runtime PASS or final implementation readiness at this checkpoint. PR8 blocked;43proposals/44holds/Khamrah/rights/eligibility untouched; no API/UI/DB/acquisition/real matching/Production or merge.
+
+## Source checkpoint S2 — initial focused implementation, independent reviews pending
+
+Initial tests were written before the module existed. Actual RED was one unittest loader `ModuleNotFoundError`; it was not 40 executed behavioral failures. Initial test-file SHA256 `f8b053a5030cd414299c4867ba929a12de23cf75699e00a419309a0c86a7ff59` and missing-module source state are preserved privately. The actual invocation was an inline PowerShell Python here-string piped to `python -`; an equivalent CLI label in the original report is explicitly corrected by a separate clarification, without rewriting initial evidence.
+
+First GREEN40 methods was followed by additional coverage/cleanup refinements, then49/49 focused methods passed,0failures/errors/skips,Python3.11.9. Three property methods contain512deterministic iterations, counted separately. Supplemental tests are later refinements, not invented initial RED evidence. [[IMP_ENR_01_Focused_Tests.json]] mapsT01–T30 and binds exact tested files. Full offline regression and independent implementation/data review remain pending; no final receipt or readiness claim.
+
+New source is only `database/scento_preview.py` and its dedicated test file. It reads six pinned snapshots, strictly parses verified bytes, preserves exact5records/46slots and raw ordered evidence, serializes deterministic private payload and uses a tested local active-pointer publication/rollback. Existing ETL/scorers/adapter/guards/migrations are not changed or imported by the preview module. No actual worktree preview bundle is published at this checkpoint; test publications used disposable private fixtures. Human/canonical acceptance remains pending.

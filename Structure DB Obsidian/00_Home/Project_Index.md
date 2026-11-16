@@ -207,3 +207,10 @@ Main `8eef8f13265adc14db0cae82ff77cfc4863853ce` contains Owner-merged PR26/27; w
 - [[DPT-PLAN-010_System_Architecture_Refinement]]; [[DPT-PLAN-010_Architecture_Verification]].
 
 Main `168715bc9bc5fff968524074257dc106a8a63638` includes Owner-merged PR28; all new design/implementation choices remain proposed. Existing exact contracts/receipts preserved; PR8 blocked.
+
+## IMP-ENR-01 implementation and evidence index — 2026-11-17
+
+- [[IMP-ENR-01_Pinned_Scento_Offline_Preview]] — approved scope and session/evidence ledger.
+- [[IMP_ENR_01_Preflight.json]] — exact authority/pins/protection.
+- [[IMP_ENR_01_Architecture_Compatibility]] — fresh preimplementation gate/matrix.
+- [[IMP_ENR_01_Independent_Data_Review]] — independent46-slot review; completion status is explicit.

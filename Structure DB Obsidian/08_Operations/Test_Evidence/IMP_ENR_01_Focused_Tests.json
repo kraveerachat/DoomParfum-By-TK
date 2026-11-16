@@ -1,0 +1,200 @@
+{
+  "task": "IMP-ENR-01",
+  "kind": "Implementer focused RED/GREEN evidence; independent review pending",
+  "at_utc": "2026-11-16T20:33:38.741300+00:00",
+  "base": "81b281acb418af230746bb00fb923e60509e8e92",
+  "reviewed_commit": "NOT YET COMMITTED; exact source hash bindings below",
+  "RED_initial": {
+    "phase": "RED_INITIAL",
+    "command": "python -m unittest discover -s database/tests -p test_scento_preview.py -v",
+    "python": "3.11.9",
+    "methods_executed": 1,
+    "failures": 0,
+    "errors": 1,
+    "skipped": 0,
+    "duration_seconds": 0.14377759996568784,
+    "module_existed": false,
+    "test_sha256": "f8b053a5030cd414299c4867ba929a12de23cf75699e00a419309a0c86a7ff59",
+    "test_bytes": 20058,
+    "cause": "ModuleNotFoundError: No module named scento_preview",
+    "behavioral_red": "NOT RUN: module absent"
+  },
+  "RED_invocation_clarification": {
+    "retained_initial_evidence_unchanged": true,
+    "actual_invocation": "PowerShell inline Python here-string piped to python -",
+    "runner": "unittest.defaultTestLoader.loadTestsFromName(test_scento_preview); unittest.TextTestRunner(verbosity=2)",
+    "command_field_in_initial_report": "Equivalent CLI label, not literal command executed",
+    "result": "ModuleNotFoundError before production module existed; 1 loader placeholder, 0 passed behavioral methods"
+  },
+  "GREEN": {
+    "phase": "GREEN_FINAL",
+    "invocation": [
+      "python",
+      "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\imp-enr-01\\implementation\\run_focused.py",
+      "GREEN_FINAL"
+    ],
+    "runner": "unittest.TextTestRunner(verbosity=2); loadTestsFromName(test_scento_preview)",
+    "python": "3.11.9",
+    "methods_executed": 49,
+    "passed": 49,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 3.5783956999657676,
+    "source_files": {
+      "database\\scento_preview.py": {
+        "sha256": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+        "bytes": 18246
+      },
+      "database\\tests\\test_scento_preview.py": {
+        "sha256": "cbb23801466e4e2f7e9f26497b3721ed77cb31033436c6cfc9cc7ffc2118607b",
+        "bytes": 26533
+      }
+    },
+    "failed_methods": [],
+    "limitations": [
+      "No DB/Docker/network/scorer execution",
+      "Only focused preview tests; parent owns full regression and protected sidecar checks"
+    ]
+  },
+  "initial_GREEN_methods": 40,
+  "final_GREEN_methods": 49,
+  "properties": {
+    "methods": 3,
+    "cases": 512,
+    "qualification": "256 token-occurrence +128 CSV-literal +128 key-permutation iterations, not 512 unittest methods"
+  },
+  "T01_T30_map": {
+    "T01": [
+      "test_T01_exact_six_pins"
+    ],
+    "T02": [
+      "test_T02_five_keys_and_logical_ordinals"
+    ],
+    "T03": [
+      "test_T03_exact_field_allowlists"
+    ],
+    "T04": [
+      "test_T04_sixth_record_rejected"
+    ],
+    "T05": [
+      "test_T05_altered_hash_and_missing_pin"
+    ],
+    "T06": [
+      "test_T06_wrong_ordinal_rejected"
+    ],
+    "T07": [
+      "test_T07_wrong_key_rejected"
+    ],
+    "T08": [
+      "test_T08_header_duplicate_reordered_missing"
+    ],
+    "T09": [
+      "test_T09_extra_short_malformed_cells"
+    ],
+    "T10": [
+      "test_T10_missing_year_concentration_aliases"
+    ],
+    "T11": [
+      "test_T11_layers_and_general_separate"
+    ],
+    "T12": [
+      "test_T12_ordered_repeated_occurrences"
+    ],
+    "T13": [
+      "test_T13_aliases_literal_no_normalization"
+    ],
+    "T14": [
+      "test_T14_no_canonical_selection_or_review"
+    ],
+    "T15": [
+      "test_T15_no_eligibility_or_fit"
+    ],
+    "T16": [
+      "test_T16_T17_runtime_no_network_or_process_calls",
+      "test_T16_T17_T29_stdlib_only_no_architecture_bridge"
+    ],
+    "T17": [
+      "test_T16_T17_runtime_no_network_or_process_calls",
+      "test_T16_T17_T29_stdlib_only_no_architecture_bridge"
+    ],
+    "T18": [
+      "test_T18_deterministic_replay"
+    ],
+    "T19": [
+      "test_T19_execution_time_separate"
+    ],
+    "T20": [
+      "test_T20_windows_replace_failure_preserves_active",
+      "test_T20_partial_candidate_failure_preserves_active",
+      "test_T20_interruption_retains_failure_evidence_and_prior_pointer",
+      "test_T20_rollback_restores_pointer_retains_history"
+    ],
+    "T21": [
+      "test_T21_traversal_source_output_rollback",
+      "test_T21_source_symlink_or_windows_reparse_rejected",
+      "test_T21_unc_source_rejected_before_filesystem_read",
+      "test_T21_output_symlink_or_reparse_rejected"
+    ],
+    "T22": [
+      "test_T22_parse_verified_bytes_without_reopen",
+      "test_T22_source_replacement_after_verify_uses_verified_snapshot"
+    ],
+    "T23": [
+      "test_T23_all_source_and_sidecars_unchanged"
+    ],
+    "T24": [
+      "test_T24_T25_actual_holds_proposals_sidecars_unchanged",
+      "test_T24_T25_T26_no_promotion_or_rights_inheritance"
+    ],
+    "T25": [
+      "test_T24_T25_actual_holds_proposals_sidecars_unchanged",
+      "test_T24_T25_T26_no_promotion_or_rights_inheritance"
+    ],
+    "T26": [
+      "test_T24_T25_T26_no_promotion_or_rights_inheritance"
+    ],
+    "T27": [
+      "test_T27_payload_fixed_private_path_and_no_raw_stdout"
+    ],
+    "T28": [
+      "test_T28_current_database_unknown"
+    ],
+    "T29": [
+      "test_T16_T17_T29_stdlib_only_no_architecture_bridge"
+    ],
+    "T30": [
+      "test_T30_every_field_provenance_rights_and_versions"
+    ]
+  },
+  "source_bindings": [
+    {
+      "path": "database/scento_preview.py",
+      "raw_sha256": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb"
+    },
+    {
+      "path": "database/tests/test_scento_preview.py",
+      "raw_sha256": "cbb23801466e4e2f7e9f26497b3721ed77cb31033436c6cfc9cc7ffc2118607b"
+    }
+  ],
+  "payload_metadata": {
+    "bytes": 33953,
+    "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9",
+    "records": 5,
+    "field_slots": 46,
+    "missing": 3
+  },
+  "preservation": "Six raw pins plus provenance/audit sidecars checked; broader baseline checked separately",
+  "limitations": [
+    "Power-loss directory-entry durability NOT VERIFIED; file fsync plus atomic local pointer tested",
+    "No hostile concurrent directory ancestor replacement assumed; existing symlink/reparse/UNC paths rejected",
+    "Actual Windows junction behavior simulated by lstat reparse attributes; no junction created",
+    "No broad regression run by implementer",
+    "No DB/Docker/live rights/current canonical status validation",
+    "No actual application API/UI/auth/scorer operation",
+    "Final Human Owner/canonical acceptance PENDING"
+  ],
+  "source_or_asset_acquisition": 0,
+  "DB_calls": 0,
+  "Production_mutation": false
+}
