@@ -1,0 +1,114 @@
+{
+  "task": "DPT-PLAN-010",
+  "base": "168715bc9bc5fff968524074257dc106a8a63638",
+  "at_utc": "2026-11-16T15:20:16.148684+00:00",
+  "kind": "PRE-REVIEW STATIC ARCHITECTURE CHECKPOINT; not feature/runtime acceptance",
+  "coordinator": {
+    "passed": 1460,
+    "failed": 0,
+    "report_sha256": "88baeacf0b8f4b687aca8260338269aeb47e2df4e0257dd59990734cb12a2972",
+    "scope": "Protected canonical source/history, AST, IDs/joins/schema names, DAGs, 19-field interaction completeness, 31 product requirements, frontmatter/local links/table widths/fences, bounded credential signatures and git diff --check"
+  },
+  "source_author": {
+    "passed": 250,
+    "failed": 0,
+    "report_sha256": "1e340ea1af69e03228975a12da85a948fffd30ed80373636e62bb06b8c9bab56",
+    "matrix_row_parity_passed": 110,
+    "matrix_row_parity_sha256": "2a19be0293f8d825a8cff99932e374c068b80dbe06911c1f3c66bc4b1a58654b",
+    "not_independent_acceptance": true
+  },
+  "author_ux": {
+    "report_sha256": "63aa899a2868859b791727cdd650054cb047f07d40dbfdaefd1002dd72f109f8",
+    "routes": 17,
+    "states": 13,
+    "future_scenarios": 58,
+    "future_tests": "NOT RUN"
+  },
+  "source_inventory": {
+    "python_files": 26,
+    "AST_definitions": 593,
+    "dataclasses": 40,
+    "top_level_public_runtime_definitions": 117,
+    "migrations": 8,
+    "old_receipts": 24
+  },
+  "model": {
+    "components": 30,
+    "dependency_edges": 53,
+    "routes": 17,
+    "interfaces": 29,
+    "operation_schemas": 58,
+    "common_schemas": 31,
+    "elements": 110
+  },
+  "protected": {
+    "canonical_M1_SHA256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+    "canonical_B1_SHA256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+    "canonical_POST27_packet_SHA256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+    "nonshared_base_blobs_unchanged": 297,
+    "shared_histories_retained": 12
+  },
+  "retained_failures": {
+    "coordinator_oracle_correction": {
+      "initial_pass": 1354,
+      "initial_fail": 41,
+      "artifact": ".local\\post28-architecture\\COORDINATOR_CHECKS_INITIAL_ORACLE_FAILURES.json",
+      "artifact_sha256": "f2381e85f58213240bc38012a1554984e202e654f7e6d65a3b442c8920aa9fd3",
+      "corrected_oracles": {
+        "UI-local service name assumption": 32,
+        "PROPOSED status qualifier assumption": 8,
+        "Obsidian vault JSON wiki-link resolution assumption": 1
+      },
+      "design_changes_due_to_these_checker_failures": 0,
+      "distinction": "Independent semantic findings are separate actual design defects; not relabelled oracle failures"
+    },
+    "independent_initial_report_sha256": "64e1be2ba92214f6bac422718ff379c0050c5e244720e51e154e74949bbf83d2",
+    "independent_initial_findings": 4,
+    "corrected_source_review": "PENDING; no finding closed by this author/static report"
+  },
+  "not_run": [
+    "Application/UI/API/security runtime tests",
+    "Database/role/session/recovery tests",
+    "194 historical offline regressions (source unchanged)",
+    "Mermaid visual rendering",
+    "Transport/OpenAPI executable conformance"
+  ],
+  "limitations": [
+    "No exhaustive secret/legal scanner",
+    "No current DB/server/rights/image-byte availability proof",
+    "No live external URL or browser/Mermaid rendering acceptance",
+    "Historical 194-method implementation result is not rerun"
+  ],
+  "semantic_input_bindings": [
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Interface_Registry.json",
+      "raw_sha256": "7cd5e7b5cedff27a38c51c2edb9c3646d24bb1b03a676b389517174b37a6d9a6",
+      "bytes": 177433
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Research_Index.json",
+      "raw_sha256": "7fba8967e461f01a7ef0d1d217a996bae33cf8ac73939701fc68f3e080515ede",
+      "bytes": 31113
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Routes_and_States.json",
+      "raw_sha256": "b2568075d9ef3582d2c82425078a24a0177a28dff63c07df71630d334c2844b6",
+      "bytes": 64376
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Security_and_Cache_Model.json",
+      "raw_sha256": "f4a993175dc95a9c428b06d0c502a56decd50f125a228497e46d82142c52bb7b",
+      "bytes": 28759
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Source_Inventory.json",
+      "raw_sha256": "f42b245efe5fefbb3d755daf0e4556186b4dcacc099c5d945bafcf5e882e59f7",
+      "bytes": 743881
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Unified_Model.json",
+      "raw_sha256": "3cb27385da70cdace2a254b5a9dbaba6c07a424f513170804e42c01396e94ca9",
+      "bytes": 383150
+    }
+  ]
+}

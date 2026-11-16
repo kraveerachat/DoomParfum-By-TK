@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: index
 status: draft
 owner: project
-updated: 2026-11-15
+updated: 2026-11-16
 tags:
   - doomparfum
   - moc
@@ -196,3 +196,14 @@ separate bounded research done in parallel: no entity/API/sample acquisition or 
 - [[DPT-PLAN-009_Post_PR27_Next_Wave]]; [[DPT-PLAN-009_Post_PR27_Verification]]; [[Post_PR27_Local_Diagnostics]].
 
 Main `8eef8f13265adc14db0cae82ff77cfc4863853ce` contains Owner-merged PR26/27; wider data/media/app gates remain proposed. PR8 blocked; no Production mutation.
+
+## Post-PR28 architecture refinement checkpoint — 2026-11-16
+
+- [[System_Architecture_Refinement]]; [[C4_Context_and_Container_Design]]; [[Component_and_Dependency_Registry]].
+- [[Unified_Information_Architecture]]; [[UI_Element_Function_Matrix]]; [[State_and_Error_Contracts]].
+- [[Function_Interface_and_DTO_Contracts]]; [[Authorization_and_Trust_Boundaries]]; [[Data_and_Media_Lifecycle_Architecture]]; [[Cache_Offline_and_Privacy_Policy]].
+- [[Architecture_Technical_Research_Python]]; [[Architecture_Technical_Research_Security]]; [[Architecture_Technical_Research_UX]].
+- [[Architecture_Alternatives_and_ADR]]; [[Dependency_Based_Implementation_Roadmap]]; [[Architecture_Owner_Review_Packet]].
+- [[DPT-PLAN-010_System_Architecture_Refinement]]; [[DPT-PLAN-010_Architecture_Verification]].
+
+Main `168715bc9bc5fff968524074257dc106a8a63638` includes Owner-merged PR28; all new design/implementation choices remain proposed. Existing exact contracts/receipts preserved; PR8 blocked.

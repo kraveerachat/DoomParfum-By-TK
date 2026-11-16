@@ -12,6 +12,19 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## Post-PR28 architecture refinement checkpoint — 2026-11-16
+
+Verified main `168715bc9bc5fff968524074257dc106a8a63638` contains Owner-merged PR26, PR27 and PR28. PR28 merged from head `6521c5201f4f4d0e85c4fd8542db222284e96e9e` at UTC `2026-11-15T17:39:38Z`. Its general direction is confirmed; exact POST27 A–I choices are not accepted. POST27-ODP-1 and SHA `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c` remain unchanged. IMP-ENR-01 is not started.
+
+[[DPT-PLAN-010_System_Architecture_Refinement]] owns one docs-only amendment branch `plan/post-pr28-architecture` and a future Draft Planning PR. [[System_Architecture_Refinement]] joins eight C4-style/sequence diagrams, 30 components and an explicit source dependency DAG, 17 proposed routes retaining the full product roadmap, 28 proposed operation interfaces, strict DTO/state/rights contracts and [[UI_Element_Function_Matrix]]. All UI handlers/application services are PROPOSED, not source APIs. No framework/driver/ORM/auth provider/port/image, numeric transport policy or new rights are selected.
+
+[[Architecture_Alternatives_and_ADR]] recommends retaining CLI now and a Python-first boundary with logically separate UI after exact decisions; [[Architecture_Owner_Review_Packet]] version POST28-ARCH-ODP-1 proposes choices and A–I impacts without answering them. [[Dependency_Based_Implementation_Roadmap]] separates preview, selected fields/eligibility, genuine principal, read service, shell/pages, media, real methods, private records, dashboard and operations. Factual catalogue access does not require real matching eligibility, but it still needs an authorized accessible scope and field rights.
+
+Current code remains approved Python/operator/SQL tooling plus fixed-fixture synthetic M1/B1. Real records must never be relabelled as synthetic. Genuine nonadmin initial LOGIN, object/field/use rights and current snapshots precede restricted lookup/count/page/scoring/bytes; no admin fetch/filter or browser identity claim. Fit, confidence and direct evidence remain separate. Unknown is not zero; incomplete is not absent. No new live DB/source/media/runtime proof is inferred from historical tests or diagrams.
+
+All 24 prior receipts, eight migrations, accepted contracts, 43 proposals, 44 holds and Khamrah evidence are protected. PR8 remains OPEN/DRAFT/BLOCKED at `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`; no temporal/replay experiment or speculative fix. No acquisition, image bytes, normalization, hold/eligibility change, API/UI/auth/cache/service-worker/framework implementation, installation/configuration, database operation, cloud, Production mutation or agent merge. [[DPT-PLAN-010_Architecture_Verification]] records actual research/static/independent evidence and future NOT RUN tests separately.
+
+
 ## Post-PR27 consolidated planning checkpoint — 2026-11-15
 
 Current task DPT-PLAN-009: READY FOR REVIEW through [Draft PR28](https://github.com/kraveerachat/DoomParfum-By-TK/pull/28). Independent316verified assertions,0open findings; existing scoped offline194methods PASS. One new planning receipt; all new A–I choices remain PROPOSED. No implementation or Production change.
@@ -499,3 +512,13 @@ registry, not an immutable receipt rewrite. matching_math/evidence/b1_file_manif
 Agent criteria met;Human Owner reviews/accepts/merges. No real activation or automatic merge.
 All earlier INPROGRESS/NOTAPPROVED statements are dated history. Exact synthetic approval doesnot
 authorize imports/assetbytes/realranking/DB/Production or44hold/eligibility changes. PR8stillBLOCKED.
+
+## DPT-PLAN-010 independent architecture checkpoint — 2026-11-16
+
+Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: four initial P2 design findings resolved, four companion correction groups reviewed, zero open documentation findings; 13 named static verification groups. See [[DPT-PLAN-010_System_Architecture_Refinement]] and [[Architecture_Independent_Review.json]]. All new design choices remain PROPOSED; no Owner option acceptance, IMP-ENR-01 start, implementation or Production change. Original failed findings/oracles remain retained. Draft/receipt/handoff publication follows separately.
+
+## Draft publication and immutable planning receipt — 2026-11-16
+
+[PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
+
+Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.

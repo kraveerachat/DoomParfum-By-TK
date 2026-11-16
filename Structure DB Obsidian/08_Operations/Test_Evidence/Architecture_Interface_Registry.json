@@ -1,0 +1,2572 @@
+{
+  "task": "DPT-PLAN-010",
+  "registry_version": "architecture-interface-registry-v1",
+  "status": "PROPOSED",
+  "captured_at_utc": "2026-11-16T15:14:58.999026+00:00",
+  "source_commit": "168715bc9bc5fff968524074257dc106a8a63638",
+  "scope": "Logical application/service contracts only; source bindings are separate in Architecture_Source_Inventory.json. This JSON is a reviewable typed-field design, not deployable OpenAPI/JSON Schema or executable DTO code.",
+  "approval": "No exact new A-I acceptance; IMP-ENR-01 NOT STARTED; POST27-ODP-1 unchanged SHA-256 0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c.",
+  "common_schemas": {
+    "TransportBudgetPolicy": {
+      "schema_id": "TransportBudgetPolicy.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "policy_id": "string; exact approved immutable ID",
+        "version": "string; exact approved version",
+        "max_request_bytes": "positive integer; approved value required",
+        "max_response_bytes": "positive integer; approved value required",
+        "max_depth": "positive integer; approved value required",
+        "max_collection_items": "positive integer; approved value required",
+        "max_string_bytes": "positive integer; approved value required",
+        "max_candidates": "positive integer; approved value required for matching",
+        "max_numeric_bits": "positive integer; approved value required",
+        "max_pages_and_work": "positive integer; explicit request total bound",
+        "deadline_ms": "positive integer; approved value required",
+        "max_stream_bytes": "positive integer; media-only approved value",
+        "status": "literal PROPOSED; no numeric values accepted yet"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "RequestContext": {
+      "schema_id": "RequestContext.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "verified_session_ref": "opaque server-created reference; never browser user/role/SQL",
+        "principal_lease_ref": "opaque server-owned reference to IF-PRINCIPAL-LEASE-1 output; not credentials",
+        "scope_binding": "server-verified exact scope reference",
+        "authorization_epoch": "server-read current membership/revocation version",
+        "rights_epoch": "server-read current rights version",
+        "budget_policy_ref": "TransportBudgetPolicy.v1",
+        "request_id": "opaque safe correlation string"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "Provenance": {
+      "schema_id": "Provenance.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "selected_observation_id": "canonical UUID string",
+        "source_record_id": "canonical UUID string",
+        "source_id": "canonical UUID string",
+        "source_revision": "explicit string or null with unknown state",
+        "capture_hash": "exact digest string",
+        "field_path": "approved allowlisted string",
+        "transform_version": "exact string",
+        "reviewer_evidence_ref": "authorized projection of review evidence; no private reviewer identity by default",
+        "rights_decision_ref": "current exact-use rights reference",
+        "selection_snapshot_id": "exact string",
+        "retrieved_at": "UTC timestamp string; never fabricated"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "FieldProjection": {
+      "schema_id": "FieldProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "Ready | Unknown | Partial / Incomplete | Unavailable | Conflicted / Held | Expired / Revoked; distinguish only if caller authorized to that detail",
+        "value": "explicit typed field value or null; no absent-to-zero conversion",
+        "value_type": "string | canonical_uuid | integer | boolean | note_memberships; required discriminant",
+        "provenance": "Provenance.v1 or null; usable facts require provenance",
+        "reason_code": "allowlisted non-sensitive string",
+        "closure_assertion_ref": "explicit accepted closure reference or null; absence does not prove empty"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ProfileProjection": {
+      "schema_id": "ProfileProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "profile_id": "canonical UUID string, authorized",
+        "selection_snapshot_id": "exact string",
+        "fields": "ordered bounded map of approved field paths to FieldProjection.v1",
+        "notes": "bounded layer map; top/heart/base/general remain separate",
+        "media_reference": "opaque authorized asset reference or null",
+        "matching_capability": "explicit available/unavailable state with permitted reason",
+        "private_overlay": "explicit caller-owned projection or null; distinct from shared facts"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ExactRational": {
+      "schema_id": "ExactRational.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "numerator": "canonical decimal integer string; nonnegative, no sign/leading zeros except 0; bit bound required",
+        "denominator": "canonical positive decimal integer string; no leading zeros; bit bound required",
+        "normalization": "gcd=1; range checked for metric; parse only after length/bit limits",
+        "semantics": "computed and ordered as exact rational BEFORE wire decimal integer strings or display rounding; never float"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "Page": {
+      "schema_id": "Page.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "items": "bounded ordered typed sequence as specified by operation",
+        "next_cursor": "opaque signed/bound cursor or null; bound to principal/scope/filter/snapshot/rights epoch",
+        "snapshot_ref": "exact permitted selection/private snapshot",
+        "completeness": "page_only | full_authorized_snapshot | partial; never full-catalogue claim from truncation",
+        "authorized_total": "explicit permitted integer or null; compute only after authorization; null is not zero"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "SafeOutcome": {
+      "schema_id": "SafeOutcome.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "one of shared state names; unauthorized/missing/revoked private object distinctions masked to current caller",
+        "request_id": "safe opaque correlation string",
+        "payload": "operation-specific typed payload or null",
+        "reason_code": "allowlisted safe code or null; no SQL/path/source/credential leakage",
+        "schema_version": "exact operation output schema ID"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "RealMatchContext": {
+      "schema_id": "RealMatchContext.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "method_id": "separately approved real method ID; NEVER synthetic ID",
+        "config_version": "separately approved exact config",
+        "input_schema_version": "separately approved real schema",
+        "canonical_vocabulary_version": "reviewed real version/fingerprint",
+        "domain_version": "reviewed compatible layer domains",
+        "normalization_version": "accepted real mapping version",
+        "selection_snapshot_id": "authorized selected evidence snapshot",
+        "closure_policy_version": "accepted completeness/absence contract",
+        "eligibility_policy_version": "accepted AND gates for holds/conflicts/rights/eligibility",
+        "scope_binding": "verified RequestContext scope; no synthetic scope disguise"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "MutationPrecondition": {
+      "schema_id": "MutationPrecondition.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "expected_version": "exact current record/version for optimistic concurrency",
+        "idempotency_key": "bounded opaque caller-operation key; server binds to principal/scope/request digest",
+        "proposed_change": "operation-specific explicit field set; no mass assignment",
+        "intent_evidence": "explicit user/manual/reviewer intent reference; no hidden automatic purchase/selection"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "Money": {
+      "schema_id": "Money.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted enum/policy required before use",
+        "amount_decimal": "canonical finite decimal string or null for unknown; exact grammar/scale/sign/range/length policy unselected and required; no float/coercion",
+        "currency": "explicit accepted currency code or null for unknown; no default currency or inference from seller/locale",
+        "unknown_policy": "unknown amount/currency never becomes zero; explicit zero allowed only if manually recorded and later exact policy accepts it"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "Quantity": {
+      "schema_id": "Quantity.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted enum/policy required before use",
+        "amount_decimal": "canonical finite decimal string or null for unknown; exact grammar/scale/sign/range/length policy unselected and required; no float/coercion",
+        "unit": "explicit accepted unit code or null for unknown; unit enum and conversion policy unselected; no mL default or inferred bottle size",
+        "unknown_policy": "unknown volume/remaining amount is not zero; no implicit unit conversion or paid-volume-to-remaining coupling"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "PurchaseDate": {
+      "schema_id": "PurchaseDate.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted enum/policy required before use",
+        "calendar_date": "explicit calendar-date string or null for unknown; exact grammar/calendar/precision/range policy unselected and required",
+        "date_semantics": "manually recorded purchase date; no fallback to today, ordered-at timestamp, delivery date or locale/timezone guess"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "SellerValue": {
+      "schema_id": "SellerValue.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted enum/policy required before use",
+        "manual_label": "bounded explicit seller label or null for unknown; text length/character policy unselected and required",
+        "evidence": "manual user assertion; no verified seller identity, live source lookup or canonical seller promotion"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "PurchaseRecordProjection": {
+      "schema_id": "PurchaseRecordProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "purchase_record_id": "own canonical UUID string",
+        "profile_id": "authorized canonical UUID string",
+        "own_saved_buying_source_id": "own saved buying-source UUID or explicit null; permission checked independently",
+        "paid_price": "Money.v1; explicit known/unknown",
+        "purchased_volume": "Quantity.v1; explicit known/unknown; separate from physical remaining amount",
+        "purchase_date": "PurchaseDate.v1; explicit known/unknown",
+        "seller": "SellerValue.v1; explicit known/unknown",
+        "revision": "exact immutable current version",
+        "record_state": "proposed active | withdrawn; exact retention/withdrawal policy unselected and required",
+        "history_version": "own purchase-history version, separate from collection/bottle and ordered states"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "MatchPartitionKey": {
+      "schema_id": "MatchPartitionKey.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "method_id": "exact separately accepted real method ID; no synthetic ID",
+        "method_version": "exact separately accepted real method version",
+        "config_id": "exact separately accepted real configuration ID",
+        "config_version": "exact separately accepted real configuration version",
+        "real_context": "RealMatchContext.v1; authorized exact vocabulary/domain/normalization/closure/eligibility/snapshot/scope versions",
+        "comparable_component_layer_mask": "explicit bounded exact compatible component/layer identities; values/ordering semantics require accepted real contract",
+        "query_context_ref": "exact authorized validated query digest/reference; no browser-supplied compatibility assertion",
+        "comparison_policy_version": "exact accepted partition compatibility policy; none selected here"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "FitExplanation": {
+      "schema_id": "FitExplanation.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "method_id": "exact separately accepted real method ID",
+        "method_version": "exact separately accepted real method version",
+        "config_id": "exact separately accepted real configuration ID",
+        "config_version": "exact separately accepted real configuration version",
+        "compatibility_context": "RealMatchContext.v1; exact authorized real context",
+        "partition_key": "MatchPartitionKey.v1 or explicit null for unavailable/unranked result",
+        "matched_fact_refs": "bounded authorized canonical note/fact references with exact source-side/layer and Provenance.v1 references; no hidden/private facts or inferred absent notes",
+        "support": "ExactRational.v1 or null with explicit unavailable/unknown state; exact meaning requires accepted real method policy",
+        "layer_states": "bounded explicit layer/domain/state/support and authorized Provenance.v1 reference records; exact schema/method-specific details blocked pending real contract",
+        "unavailable_reason_codes": "bounded safe reason codes; details only where caller authorized",
+        "provenance_refs": "bounded authorized Provenance.v1 references for usable explanation facts; empty only with explicit unavailable state",
+        "formula_evidence_ref": "authorized exact accepted method/formula/config evidence reference or null; no weights/default formula selected by this proposal",
+        "explanation_policy_version": "exact accepted real explanation projection/bounds policy; missing policy blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "DataConfidenceProjection": {
+      "schema_id": "DataConfidenceProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit known | unknown | unavailable under later accepted evidence-quality policy; exact enum remains proposed",
+        "value": "explicit separately typed bounded confidence value or null; no percentage/band selected; usable representation blocked until exact policy accepted",
+        "policy_version": "exact accepted confidence/evidence-quality policy or null with unavailable state",
+        "provenance_refs": "bounded authorized evidence/provenance references, distinct from structural fit inputs",
+        "safe_reason": "allowlisted authorized reason or null; fit/support never substitutes for confidence evidence"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "DirectPairwiseEvidenceProjection": {
+      "schema_id": "DirectPairwiseEvidenceProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit available | unknown | unavailable under later exact accepted projection policy",
+        "evidence_refs": "bounded authorized exact cited pairwise record/provenance references; empty does not establish no similarity",
+        "policy_version": "exact accepted evidence projection policy or null with unavailable state",
+        "safe_reason": "allowlisted authorized reason or null; never derive direct evidence from structural/query fit or confidence"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "MatchResultProjection": {
+      "schema_id": "MatchResultProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "candidate_id": "authorized canonical real perfume UUID string",
+        "method_id": "exact separately accepted real method ID",
+        "method_version": "exact separately accepted real method version",
+        "config_id": "exact separately accepted real configuration ID",
+        "config_version": "exact separately accepted real configuration version",
+        "compatibility_context": "RealMatchContext.v1; exact authorized real context",
+        "partition_key": "MatchPartitionKey.v1 or null only for unranked/unavailable result",
+        "state": "explicit shared authorized result state; missing/denied private object remains masked",
+        "fit": "ExactRational.v1 or null; exact rational sorting occurs before serialization; null never zero",
+        "display_only_rounded_score": "approved rounded presentation string or null; not sort key and never measured smell similarity",
+        "fit_explanation": "FitExplanation.v1; already-authorized returned projection, never a new scoring command",
+        "data_confidence": "DataConfidenceProjection.v1; separate evidence-quality channel",
+        "direct_pairwise_evidence": "DirectPairwiseEvidenceProjection.v1; separate cited evidence channel",
+        "provenance_refs": "bounded authorized Provenance.v1 references for returned facts",
+        "result_projection_policy_version": "exact accepted output/explanation/confidence/evidence/bounds policy version; absent policy blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "MatchPartitionProjection": {
+      "schema_id": "MatchPartitionProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "key": "MatchPartitionKey.v1; exact compatibility key",
+        "results": "bounded ordered sequence of MatchResultProjection.v1 with exactly the same non-null partition key",
+        "ordering": "exact rational ordering with separately accepted deterministic tie policy BEFORE wire integer strings/display rounding; no cross-partition rank",
+        "completeness": "explicit authorized snapshot/page/partial qualification; no catalogue completeness from truncation",
+        "projection_policy_version": "exact accepted partition/result/budget policy version; no policy selected here"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "PlatformValue": {
+      "schema_id": "PlatformValue.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted field/enum policy required",
+        "platform": "bounded accepted platform code or own recorded platform label; explicit null when unknown; no Shopee or locale default",
+        "field_policy_ref": "exact accepted platform enum/label/length policy version; unselected, missing blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "OwnNoteValue": {
+      "schema_id": "OwnNoteValue.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted field/retention policy required",
+        "text": "bounded own plain-text string or null for unknown; empty text is distinct from unknown under accepted policy",
+        "field_policy_ref": "exact accepted text/character/length/retention policy version; unselected, missing blocks; no unsafe markup or implied source facts"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ManualDateValue": {
+      "schema_id": "ManualDateValue.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown; exact accepted temporal policy required",
+        "precision": "explicit accepted date | timestamp discriminator or null when unknown; enum/precision policy unselected",
+        "value": "canonical calendar-date/timestamp string or null when unknown; exact grammar/calendar/timezone/range policy unselected",
+        "field_policy_ref": "exact accepted temporal/bounds policy; no fallback to today or inferred order/purchase/receipt/observation dates"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "BuyingSourceProjection": {
+      "schema_id": "BuyingSourceProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "bookmark_id": "own canonical UUID string",
+        "profile_id": "independently authorized canonical perfume UUID string; no browser owner/scope assignment",
+        "platform": "PlatformValue.v1; explicit known/unknown",
+        "store": "SellerValue.v1; explicit manually recorded known/unknown seller label",
+        "url": "explicit bounded permitted http(s) bookmark link under exact accepted URL policy; never fetched by this operation",
+        "observed_price": "Money.v1; explicit known/unknown observed seller price, NOT paid purchase price",
+        "observed_size": "Quantity.v1; explicit known/unknown observed listing size, NOT purchased volume or bottle capacity",
+        "observed_at": "ManualDateValue.v1; explicit manually recorded observed date/time or unknown",
+        "own_note": "OwnNoteValue.v1; caller-own recorded note or unknown",
+        "manual_status": "separate accepted manual-status projection or unavailable; no order confirmation",
+        "record_state": "proposed active | withdrawn, exact accepted retention/visibility policy required",
+        "revision": "exact current record version; no implicit physical inventory/purchase-history link"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "PersonalStateProjection": {
+      "schema_id": "PersonalStateProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "entry_id": "own canonical UUID string or null when absent under exact accepted policy",
+        "profile_id": "authorized canonical perfume UUID string",
+        "interest_cart_state": "proposed wishlist | research | app_cart | tried | skipped or explicit null for withdrawn/absent, distinguished only under accepted visibility policy",
+        "record_state": "proposed active | withdrawn; exact accepted operation/retention policy required",
+        "revision": "exact current/tombstone version; no undocumented deletion semantics",
+        "recorded_at": "ManualDateValue.v1 or explicit null when no permitted date; no invented timestamp",
+        "side_effect_boundary": "interest/cart only; buying bookmarks, purchase statuses/records and inventory remain unchanged"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "CollectionProjection": {
+      "schema_id": "CollectionProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "collection_item_id": "own canonical UUID string; physical inventory identity",
+        "profile_id": "authorized canonical perfume UUID string",
+        "ownership": "explicit accepted own physical ownership value or unknown; no purchase inference",
+        "lifecycle": "proposed received/active/finished/sold/gifted/withdrawn state only after exact transition policy accepted",
+        "remaining_amount": "Quantity.v1; explicit known/unknown physical remaining amount, not inferred from paid/purchased volume",
+        "capacity": "Quantity.v1; explicit manually recorded known/unknown physical capacity; no assumed purchase linkage/unit conversion",
+        "own_note": "OwnNoteValue.v1; own personal note or unknown",
+        "lifecycle_dates": "bounded explicit action-to-ManualDateValue.v1 map under accepted date/transition policy; no today default",
+        "revision": "exact inventory record version",
+        "history_version": "own physical lifecycle history version; separate from purchase history",
+        "purchase_linkage": "NONE in this schema; own_purchase_record_ref is an unknown field and rejected pending exact field/FK amendment"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ScopedReviewReference": {
+      "schema_id": "ScopedReviewReference.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "kind": "proposed source | capture | observation | proposal | asset | rights_evidence; exact accepted reference-kind policy required",
+        "id": "canonical UUID or exact accepted immutable evidence reference",
+        "revision": "explicit expected source/proposal/evidence version; no implicit latest",
+        "scope_binding": "verified context-bound authorization reference, never browser privilege widening"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ReviewDetailProjection": {
+      "schema_id": "ReviewDetailProjection.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "subject_ref": "ScopedReviewReference.v1 already authorized to this reviewer",
+        "state": "safe permitted review/evidence state; hidden private object remains uniform unavailable",
+        "revision": "exact current/selected immutable review version",
+        "authorized_fields": "bounded allowlisted typed text/integer/boolean/UUID/enum/null values under exact accepted detail projection schema; raw staging/private dossier excluded by default",
+        "evidence_refs": "bounded separately authorized ScopedReviewReference.v1 sequence; refs do not grant dereference permission",
+        "snapshot_ref": "exact authorized review snapshot/version",
+        "projection_policy_ref": "exact accepted queue/detail/evidence/filter/bounds policy; missing blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ManualFactValue": {
+      "schema_id": "ManualFactValue.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "state": "explicit proposed known | unknown for unverified user assertion",
+        "value_type": "explicit proposed text | integer | canonical_reference discriminator; exact field policy required",
+        "value": "bounded exact typed scalar or null when unknown; no coercion or canonical promotion",
+        "evidence_ref": "explicit user-provided metadata-only claim locator or null for unknown; never fetched",
+        "field_policy_ref": "exact accepted private proposal field/grammar/bounds policy; missing blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    },
+    "ManualMissingPerfumeProposal": {
+      "schema_id": "ManualMissingPerfumeProposal.v1",
+      "version": "1",
+      "status": "PROPOSED",
+      "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+      "required_fields": {
+        "private_owner": "derived verified actor only; browser cannot choose owner or wider scope",
+        "facts": "bounded allowlisted perfume field paths to ManualFactValue.v1; all are unverified private assertions",
+        "source_locator": "bounded user-provided metadata locator or explicit null for unknown",
+        "permission_evidence_ref": "bounded metadata-only permission evidence ref or explicit null for unknown; null grants no acquisition/display permission",
+        "canonical_effect": "NONE; no canonical identity, selection, hold release, capture/import or source acquisition",
+        "proposal_policy_ref": "exact accepted private metadata/retention/bounds policy; missing blocks"
+      },
+      "unknown_fields": "REJECT",
+      "implicit_coercion": "FORBIDDEN",
+      "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+    }
+  },
+  "states": [
+    "Idle",
+    "Loading",
+    "Ready",
+    "Valid Empty",
+    "Partial / Incomplete",
+    "Unknown",
+    "Unavailable",
+    "Unauthorized",
+    "Conflicted / Held",
+    "Expired / Revoked",
+    "Timeout",
+    "Validation Error",
+    "Offline"
+  ],
+  "interfaces": [
+    {
+      "id": "IF-AUTH-SESSION-1",
+      "name": "Verify application session",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-AUTH-SESSION-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "auth_proof": "opaque bounded proof under later approved provider/session ADR; never DB username",
+          "audience": "exact approved application audience",
+          "budget_policy_ref": "TransportBudgetPolicy.v1"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-AUTH-SESSION-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "verified_session_ref": "server-created opaque reference",
+          "audience": "verified exact audience",
+          "expiry": "UTC expiry",
+          "allowed_scope_choices": "authorized opaque scope references only"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-SHELL / C-TRANSPORT",
+      "dependencies": [
+        "C-AUTHN",
+        "C-CONFIG",
+        "C-AUDIT"
+      ],
+      "authorization_gate": "Validate authentic proof, audience, expiry, revocation and anti-CSRF/origin policy before any private resource access.",
+      "provenance": "Approved session issuer evidence; no source facts returned.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read validation is repeatable; never cache revocation decisions beyond approved policy.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Validate authentic proof, audience, expiry, revocation and anti-CSRF/origin policy before any private resource access.",
+          "Read validation is repeatable; never cache revocation decisions beyond approved policy."
+        ]
+      },
+      "capability_blockers": [
+        "Provider/session architecture, secret handling and exact policy not approved.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PRINCIPAL-LEASE-1",
+      "name": "Lease genuine nonadmin principal",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PRINCIPAL-LEASE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "verified_session_ref": "server-verified reference from IF-AUTH-SESSION-1",
+          "scope_binding": "server-validated immutable audience/scope association",
+          "budget_policy_ref": "TransportBudgetPolicy.v1"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PRINCIPAL-LEASE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "principal_lease_ref": "opaque server-only handle; no browser credentials",
+          "verified_database_binding": "server-only immutable genuine session_user binding",
+          "transaction_policy": "explicit approved read-only/writer-separated policy",
+          "expiry": "bounded UTC expiry"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-AUTHN / trusted application composition ONLY",
+      "dependencies": [
+        "C-PRINCIPAL",
+        "C-AUTHZ",
+        "C-CONFIG",
+        "C-AUDIT"
+      ],
+      "authorization_gate": "SERVICE ONLY. Establish approved genuine nonadmin login; verify session_user=current_user, effective privileges, no superuser/BYPASSRLS/owner/writer inheritance. No browser login/role choice, SET ROLE/GUC impersonation or admin fallback.",
+      "provenance": "Server-reviewed immutable session-to-principal mapping and live effective-role evidence; no change to existing operator identity.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Lease creation/release tied to one principal and request; clean cancellation, rollback, reset and discard on reuse ambiguity; never share across users.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "SERVICE ONLY. Establish approved genuine nonadmin login; verify session_user=current_user, effective privileges, no superuser/BYPASSRLS/owner/writer inheritance. No browser login/role choice, SET ROLE/GUC impersonation or admin fallback.",
+          "Lease creation/release tied to one principal and request; clean cancellation, rollback, reset and discard on reuse ambiguity; never share across users."
+        ]
+      },
+      "capability_blockers": [
+        "Principal ADR, genuine login provisioning, pool/ownership/reset tests not implemented or authorized.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-CATALOGUE-QUERY-1",
+      "name": "Query authorized catalogue",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-CATALOGUE-QUERY-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "query_text": "bounded literal string; no expressions",
+          "filters": "explicit allowlisted typed filters",
+          "page_size": "positive integer within approved policy; required",
+          "cursor": "opaque string or null",
+          "sort": "explicit approved stable sort"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-CATALOGUE-QUERY-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of ProfileProjection.v1"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-CATALOGUE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize session/scope and each selected field before lookup, filter counts, pagination or totals.",
+      "provenance": "Reviewed selected accessible facts, source rights and authorized private overlays remain distinct.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; deterministic within bound snapshot; stale rights/epoch invalidates cursor.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize session/scope and each selected field before lookup, filter counts, pagination or totals.",
+          "Read-only; deterministic within bound snapshot; stale rights/epoch invalidates cursor."
+        ]
+      },
+      "capability_blockers": [
+        "Catalogue principal, selected-field projection, pagination and transport policies pending.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PROFILE-READ-1",
+      "name": "Read authorized profile projection",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PROFILE-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "profile_id": "canonical UUID string",
+          "projection_fields": "bounded explicit allowlisted field paths"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PROFILE-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "profile": "ProfileProjection.v1 or null"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES / C-APP-COMPARE / C-APP-MATCH",
+      "dependencies": [
+        "C-APP-CATALOGUE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authenticate/authorize scope before restricted lookup; object and field rights AND selection gates; UUID is not permission.",
+      "provenance": "Selected observation/capture/revision/transform/review/rights references; adapter DTO must not be returned raw.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; reauthorize for each operation; missing/hidden/denied object same safe outcome.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authenticate/authorize scope before restricted lookup; object and field rights AND selection gates; UUID is not permission.",
+          "Read-only; reauthorize for each operation; missing/hidden/denied object same safe outcome."
+        ]
+      },
+      "capability_blockers": [
+        "Existing read_profile is local callback adapter; no application session or public serializer exists.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-VOCABULARY-READ-1",
+      "name": "Read reviewed canonical vocabulary",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-VOCABULARY-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "vocabulary_version": "explicit requested real or approved fixture version; no mixing",
+          "domain_version": "explicit version",
+          "page_size": "bounded positive integer",
+          "cursor": "opaque string or null"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-VOCABULARY-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of canonical note ID, authorized label and compatible layer-domain membership",
+          "vocabulary_fingerprint": "exact digest",
+          "alias_normalization_version": "explicit accepted version or unavailable"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES / C-APP-MATCH",
+      "dependencies": [
+        "C-APP-CATALOGUE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize vocabulary/source projection before labels/counts/pages; do not infer alias acceptance.",
+      "provenance": "Reviewed vocabulary, alias and normalization evidence with exact fingerprints.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; version mismatch fails; no latest/fallback substitution.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize vocabulary/source projection before labels/counts/pages; do not infer alias acceptance.",
+          "Read-only; version mismatch fails; no latest/fallback substitution."
+        ]
+      },
+      "capability_blockers": [
+        "Real vocabulary/domain/alias/normalization approvals pending;43 proposals remain unpromoted.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-CAPABILITY-READ-1",
+      "name": "Check bounded operation capability",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-CAPABILITY-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "operation": "explicit method/use case string",
+          "object_refs": "bounded permitted references",
+          "requested_context": "RealMatchContext.v1 or explicit synthetic contract reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-CAPABILITY-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "capability": "available | unavailable | unknown",
+          "required_versions": "exact permitted version references",
+          "safe_blockers": "bounded permitted reason codes; no hidden object counts"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES / C-APP-MATCH",
+      "dependencies": [
+        "C-APP-MATCH",
+        "C-AUTHZ",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize objects before checking their policy/capability details; recheck again at execution.",
+      "provenance": "Separate data, policy, rights, identity and testing prerequisites; no capability from nonempty notes alone.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only advisory result; never an authorization token or durable grant.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize objects before checking their policy/capability details; recheck again at execution.",
+          "Read-only advisory result; never an authorization token or durable grant."
+        ]
+      },
+      "capability_blockers": [
+        "Real matching remains unavailable; capability reader unimplemented.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-MATCH-VALIDATE-1",
+      "name": "Validate future real matching request",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-MATCH-VALIDATE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "real_context": "RealMatchContext.v1",
+          "mode": "explicit approved real reference | real required-optional-excluded method",
+          "reference_id": "authorized canonical UUID or explicit null for custom query",
+          "clauses": "bounded explicit canonical note ID, selector, role, positive weight or null where allowed",
+          "layer_policy": "explicit compatible policy/version"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-MATCH-VALIDATE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "validated_query_ref": "server-bound immutable digest/reference or null",
+          "canonical_query": "exact separately approved real query shape or null",
+          "capability": "explicit available/unavailable state"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-MATCH",
+        "C-DTO",
+        "C-DOMAIN-TYPES",
+        "C-DOMAIN-REAL",
+        "C-AUTHZ"
+      ],
+      "authorization_gate": "Authorize scope/note/reference access before evidence lookup; strict shape and budget validation never grants eligibility.",
+      "provenance": "Preserve real note identity and versioned closure/domain policy; no SYNTHETIC context relabeling.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Pure validation given fixed context; no writes, scoring, auto-normalization or fallback modes.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize scope/note/reference access before evidence lookup; strict shape and budget validation never grants eligibility.",
+          "Pure validation given fixed context; no writes, scoring, auto-normalization or fallback modes."
+        ]
+      },
+      "capability_blockers": [
+        "Separate real query/method/closure/normalization contract not accepted; no wrapper around synthetic scorers authorized.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-MATCH-EXECUTE-1",
+      "name": "Orchestrate future real matching",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-MATCH-EXECUTE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "validated_query_ref": "server-bound exact query/context reference",
+          "real_context": "RealMatchContext.v1",
+          "candidate_scope": "explicit authorized bounded snapshot policy",
+          "pagination_policy": "explicit partition-preserving approved policy"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-MATCH-EXECUTE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "partitions": "bounded sequence of MatchPartitionProjection.v1; ordering exact within key only",
+          "unranked": "bounded sequence of MatchResultProjection.v1 with null fit/partition where unavailable and safe authorized reason",
+          "completeness": "full_authorized_snapshot | partial; exact authorized scope explicit; no global ranking",
+          "projection_policy_ref": "exact accepted result/explanation/confidence/evidence/budget versions; no policies selected here"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-MATCH",
+        "C-DOMAIN-REAL",
+        "C-DOMAIN-TYPES",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Genuine principal and current membership/source-field rights/selection/closure/hold/eligibility gates precede candidate counts/pages/scoring. Revalidate stale input context.",
+      "provenance": "Canonical real perfume/note IDs, selected evidence snapshot, reviewed vocabulary/domain/normalization/closure/method/config versions; no synthetic IDs/lineage.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only reproducible only for identical authorized snapshot/config; exact rational ordering inside partition before serialization/rounding; never cross-partition rank.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Genuine principal and current membership/source-field rights/selection/closure/hold/eligibility gates precede candidate counts/pages/scoring. Revalidate stale input context.",
+          "Read-only reproducible only for identical authorized snapshot/config; exact rational ordering inside partition before serialization/rounding; never cross-partition rank."
+        ]
+      },
+      "capability_blockers": [
+        "Real matching, input contract, current eligible data, closure policy and performance limits unapproved/unimplemented.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-COMPARISON-READ-1",
+      "name": "Project side-by-side facts",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-COMPARISON-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "profile_ids": "bounded distinct canonical UUID sequence",
+          "field_paths": "explicit allowlisted sequence"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-COMPARISON-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "profiles": "bounded ProfileProjection.v1 sequence",
+          "differences": "typed factual differences with unknown/partial markers; no chemical equivalence",
+          "matching": "separately gated projection or unavailable"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-COMPARE",
+        "C-APP-CATALOGUE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize every object/field/overlay before projection; missing another private object remains masked.",
+      "provenance": "Selected comparable facts; source assertions and personal overlays stay separate.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; deterministic permitted projection; no automatic scoring side effect.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize every object/field/overlay before projection; missing another private object remains masked.",
+          "Read-only; deterministic permitted projection; no automatic scoring side effect."
+        ]
+      },
+      "capability_blockers": [
+        "Private read service pending; real scoring remains separately blocked.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-MEDIA-RESOLVE-1",
+      "name": "Resolve asset use rights",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-MEDIA-RESOLVE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "asset_ref": "opaque asset reference",
+          "operation": "explicit display; other uses require separate approved interface policy",
+          "projection_binding": "authorized profile/note and asset association"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-MEDIA-RESOLVE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "authorized_media_ref": "short-lived principal/scope/operation-bound opaque reference or null",
+          "attribution": "authorized required credit/license text or null",
+          "state": "shared safe state; placeholder where denied"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES / C-APP-MEDIA",
+      "dependencies": [
+        "C-APP-MEDIA",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize object association and current source/capture/per-asset exact-use/parent/derivative/expiry/revocation before any locator/bytes.",
+      "provenance": "Exact registered asset hash/lineage/rights version and current authorization; public URL/license label alone insufficient.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only short-lived resolution; not reusable cached permission; delivery must reauthorize.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize object association and current source/capture/per-asset exact-use/parent/derivative/expiry/revocation before any locator/bytes.",
+          "Read-only short-lived resolution; not reusable cached permission; delivery must reauthorize."
+        ]
+      },
+      "capability_blockers": [
+        "Application media binding, owned storage, sample rights and intake not approved;0 canonical assets historically.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-MEDIA-DELIVER-1",
+      "name": "Deliver authorized owned media",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-MEDIA-DELIVER-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "authorized_media_ref": "opaque exact-use reference from resolver",
+          "delivery_budget_ref": "approved stream/response bound policy"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-MEDIA-DELIVER-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "content": "bounded verified image/png bytes only if approved; no source URL/proxy",
+          "metadata": "exact hash/dimensions/byte count",
+          "attribution": "authorized required credit/license projection",
+          "cache_policy": "explicit private no-store direction pending exact transport ADR"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES through C-APP-MEDIA",
+      "dependencies": [
+        "C-APP-MEDIA",
+        "C-ASSET-VALIDATOR",
+        "C-ASSET-STORE",
+        "C-PORTS",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Reauthorize before owned object read and immediately before delivery; reject changed binding/rights; no arbitrary URL/file path/user login input.",
+      "provenance": "Exact owned registered binary, verified technical metadata, active current display rights/lineage; technical PNG success is not a grant.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only bounded stream; stop on revocation/deadline; no acquisition, transform or stored derivative side effect.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Reauthorize before owned object read and immediately before delivery; reject changed binding/rights; no arbitrary URL/file path/user login input.",
+          "Read-only bounded stream; stop on revocation/deadline; no acquisition, transform or stored derivative side effect."
+        ]
+      },
+      "capability_blockers": [
+        "No HTTP/media service or safe owned-object adapter exists; registered callback validator is local tooling.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-BUYING-SOURCES-READ-1",
+      "name": "Read personal buying-source bookmarks",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-BUYING-SOURCES-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "profile_id": "authorized canonical UUID or null for all own bookmarks",
+          "page_size": "bounded positive integer",
+          "cursor": "opaque string or null",
+          "projection_policy_ref": "exact accepted own bookmark/observed fields/withdrawn visibility/page/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-BUYING-SOURCES-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of BuyingSourceProjection.v1 including explicit platform/store/URL/observed Money/observed Quantity/observed ManualDateValue/own note and revision",
+          "price_currentness": "manual observed timestamp/unknown only; not live current price, paid price or availability"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authenticate owner binding before object lookup/count/page; no other user cart exposure.",
+      "provenance": "User-entered seller-specific link and recorded price; source listing facts require separate rights.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only own records; no live price or cart synchronization.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authenticate owner binding before object lookup/count/page; no other user cart exposure.",
+          "Read-only own records; no live price or cart synchronization."
+        ]
+      },
+      "capability_blockers": [
+        "Private write/read service and personal operation policy not implemented.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-BUYING-SOURCE-WRITE-1",
+      "name": "Write personal buying-source bookmark",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-BUYING-SOURCE-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; owner derived from verified actor only",
+          "operation": "proposed create | update | withdraw; exact action/retention policy unselected and required",
+          "bookmark_id": "own canonical UUID for update/withdraw; explicit null for create",
+          "profile_id": "independently authorized canonical perfume UUID for create/update; existing binding must match unless exact rebind policy accepted",
+          "mutation": "MutationPrecondition.v1; expected revision or exact accepted create-absence semantics, principal-bound idempotency",
+          "changed_fields": "explicit bounded allowlisted field-name set; create/update/withdraw required sets require accepted action policy; reject undeclared fields and non-null inactive fields",
+          "platform": "PlatformValue.v1 or explicit null only when inactive/unchanged under action policy",
+          "store": "SellerValue.v1 or explicit null only when inactive/unchanged",
+          "url": "bounded explicit permitted http(s) bookmark link or null only when inactive/unchanged; URL/bounds policy required",
+          "observed_price": "Money.v1 known/unknown or null only when inactive/unchanged; observed listing price, never paid price",
+          "observed_size": "Quantity.v1 known/unknown or null only when inactive/unchanged; observed size, never inferred physical capacity",
+          "observed_at": "ManualDateValue.v1 known/unknown or null only when inactive/unchanged",
+          "own_note": "OwnNoteValue.v1 known/unknown or null only when inactive/unchanged",
+          "confirmation": "explicit withdraw confirmation under exact accepted policy; null for other operations",
+          "field_policy_ref": "exact accepted field/URL/platform/observed values/action/withdraw-retention/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-BUYING-SOURCE-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "bookmark": "BuyingSourceProjection.v1 for accepted own change or explicit null for safe failure/withdraw under exact policy",
+          "record_state": "explicit accepted active/withdrawn state; never silently delete retained history",
+          "revision": "exact new record/tombstone revision",
+          "operation_receipt": "safe principal/scope/key/digest/version reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Derive owner from verified actor. Authorize profile and own bookmark BEFORE lookup/create/update/withdraw; source ID/URL is not permission. Independently check unchanged profile binding, explicit action/field/withdraw/retention policy, expected revision/create-absence, idempotency and origin/CSRF. No arbitrary owner/scope or mass assignment; no admin/operator fallback.",
+      "provenance": "User manually observed platform/store/URL/price/size/date and own note, with explicit known/unknown typed values. Observed facts are separate from paid purchase facts and current canonical seller data.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Same actor/scope/action/key/request digest has one effect; changed digest or stale revision conflicts atomically. Withdraw only under exact accepted retention/visibility policy. No fetch, seller-network access, checkout/payment/order/cart sync, purchase-record/ordered-state change or inventory cascade.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Derive owner from verified actor. Authorize profile and own bookmark BEFORE lookup/create/update/withdraw; source ID/URL is not permission. Independently check unchanged profile binding, explicit action/field/withdraw/retention policy, expected revision/create-absence, idempotency and origin/CSRF. No arbitrary owner/scope or mass assignment; no admin/operator fallback.",
+          "Same actor/scope/action/key/request digest has one effect; changed digest or stale revision conflicts atomically. Withdraw only under exact accepted retention/visibility policy. No fetch, seller-network access, checkout/payment/order/cart sync, purchase-record/ordered-state change or inventory cascade."
+        ]
+      },
+      "capability_blockers": [
+        "Exact field/platform/URL/observed Money/Quantity/date/note grammars, limits, action/withdraw/retention policy and private writer unselected/unapproved; no R31 activation.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PURCHASE-STATUS-WRITE-1",
+      "name": "Record manual purchase status",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PURCHASE-STATUS-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "bookmark_id": "own canonical UUID",
+          "mutation": "MutationPrecondition.v1",
+          "manual_status": "explicit approved state enum; later policy must enumerate values",
+          "recorded_at": "explicit user-supplied bounded timestamp or unknown marker"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PURCHASE-STATUS-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "status": "own manually recorded value and timestamp",
+          "version": "new record version",
+          "operation_receipt": "safe idempotency/version reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Owner check before lookup/write; CSRF/origin and exact transition validation; no merchant session/account access.",
+      "provenance": "User intent and manual timestamp only; not payment/order confirmation.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Key/digest/version protected; retries cannot place any order because no order operation exists.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Owner check before lookup/write; CSRF/origin and exact transition validation; no merchant session/account access.",
+          "Key/digest/version protected; retries cannot place any order because no order operation exists."
+        ]
+      },
+      "capability_blockers": [
+        "Exact manual state-transition contract and trusted private writer not approved.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-COLLECTION-READ-1",
+      "name": "Read own collection",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-COLLECTION-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; owner derived from verified actor",
+          "operation": "proposed list | detail | lifecycle_history | aggregate_drilldown; exact accepted projection policy required",
+          "collection_item_id": "own canonical UUID for detail/history or explicit null for list/drilldown",
+          "profile_filter": "explicit authorized canonical UUID filter or null",
+          "lifecycle_filter": "bounded explicit accepted lifecycle/status set or null; enum/unknown behavior unselected",
+          "projection_fields": "bounded exact allowlisted current/history field mask",
+          "snapshot_ref": "exact authorized physical-inventory snapshot/version or explicit null for fresh accepted query",
+          "authorized_metric_context_ref": "previously authorized dashboard metric/aggregate bucket/context reference for drilldown; explicit null otherwise; reauthorize before use",
+          "drilldown_filter": "explicit accepted bounded bucket filter bound to authorized metric/context/snapshot; null otherwise; never browser authority",
+          "page_size": "explicit positive integer within accepted page/work budget or null for single-detail policy",
+          "cursor": "opaque owner/scope/operation/filter/order/snapshot/rights-bound cursor or null",
+          "projection_policy_ref": "exact accepted lifecycle/current/history/filter/drilldown/temporal/page/retention/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-COLLECTION-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of CollectionProjection.v1 for list/drilldown; partial/page scope explicit, not full inventory aggregates",
+          "item": "CollectionProjection.v1 for authorized own detail or explicit null",
+          "lifecycle_history": "bounded authorized own versioned physical lifecycle CollectionProjection.v1 sequence or null under accepted history policy",
+          "metric_context": "same reauthorized metric/bucket/snapshot binding or null; no recomputation of complete brand/note counts from a single item page",
+          "completeness": "explicit page_only | partial | full_authorized_snapshot under accepted policy; never infer whole-collection coverage"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Owner authorization before item lookup/lifecycle history/count/filter/page or drilldown. Reauthorize previously permitted aggregate bucket/metric context, underlying own rows and related catalogue fields; cursor/filter is not permission. Partial item page never proves complete brand/note counts.",
+      "provenance": "Manual ownership/user notes separate from selected product facts and purchase bookmarks.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; no inferred ownership from shopping status.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Owner authorization before item lookup/lifecycle history/count/filter/page or drilldown. Reauthorize previously permitted aggregate bucket/metric context, underlying own rows and related catalogue fields; cursor/filter is not permission. Partial item page never proves complete brand/note counts.",
+          "Read-only; no inferred ownership from shopping status."
+        ]
+      },
+      "capability_blockers": [
+        "Exact inventory operation/lifecycle/filter/history/projection/aggregate drilldown/page/retention policies and principal unselected/unapproved; no collection purchase FK.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-COLLECTION-WRITE-1",
+      "name": "Record own collection changes",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-COLLECTION-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; actor-derived owner",
+          "operation": "proposed create | update | mark_received | mark_finished | mark_sold | mark_gifted | withdraw; exact accepted transition/retention policy required",
+          "collection_item_id": "own canonical UUID for existing item; explicit null for create only under accepted absence policy",
+          "profile_id": "independently authorized canonical UUID; existing binding must match",
+          "mutation": "MutationPrecondition.v1; expected revision/create-absence, principal/action key/digest and user intent",
+          "changed_fields": "explicit bounded accepted physical field set; exact action-required fields; non-null inactive/unknown fields rejected",
+          "ownership": "explicit accepted target ownership or null when unchanged under exact action policy",
+          "lifecycle": "explicit accepted target lifecycle or null when unchanged; action/lifecycle consistency checked",
+          "remaining_amount": "Quantity.v1 known/unknown or null only when inactive/unchanged; no guessed zero",
+          "capacity": "Quantity.v1 manually recorded known/unknown or null only when inactive/unchanged; not derived from purchase record or observed listing size",
+          "own_note": "OwnNoteValue.v1 or null only when inactive/unchanged",
+          "action_date": "ManualDateValue.v1 or null under exact accepted action/date policy; no today default",
+          "confirmation": "explicit lifecycle/withdraw confirmation under exact policy, null otherwise",
+          "field_policy_ref": "exact accepted physical quantity/unit/capacity/date/note/ownership/lifecycle/action/withdraw-retention/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-COLLECTION-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "item": "CollectionProjection.v1 or explicit null under accepted safe failure/withdrawal visibility policy",
+          "revision": "exact new physical inventory/tombstone revision",
+          "history_version": "own physical lifecycle history version, separate from purchase history",
+          "operation_receipt": "safe actor/scope/action/key/digest/version reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize genuine actor-owned item and profile BEFORE lookup/create/lifecycle/update/withdraw; trusted private writer and origin/CSRF gates. Explicit action, expected revision, accepted ownership/lifecycle/field/retention policy required; no submitted owner/role, automatic purchase link, price or unselected FK.",
+      "provenance": "Explicit manual user intent; no canonical product fact mutation.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Actor/scope/action/key/request digest and expected revision; stale/conflicting command atomically fails; exact accepted lifecycle/withdraw retention policy required. No paid-price/history write, inferred ownership, purchase/ordered state change or inventory cascade. Capacity is manual physical projection, never assumed purchase-derived.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize genuine actor-owned item and profile BEFORE lookup/create/lifecycle/update/withdraw; trusted private writer and origin/CSRF gates. Explicit action, expected revision, accepted ownership/lifecycle/field/retention policy required; no submitted owner/role, automatic purchase link, price or unselected FK.",
+          "Actor/scope/action/key/request digest and expected revision; stale/conflicting command atomically fails; exact accepted lifecycle/withdraw retention policy required. No paid-price/history write, inferred ownership, purchase/ordered state change or inventory cascade. Capacity is manual physical projection, never assumed purchase-derived."
+        ]
+      },
+      "capability_blockers": [
+        "Physical inventory action/lifecycle/capacity/remaining/unit/date/note/retention/bounds policies and private writer remain unselected/unapproved; no paid price or collection-purchase FK accepted.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-DASHBOARD-READ-1",
+      "name": "Read authorized personal summary",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-DASHBOARD-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "summary_spec": "explicit approved metric set and time range",
+          "snapshot_ref": "own snapshot reference or explicit fresh request"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-DASHBOARD-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "metrics": "bounded own authorized aggregates with definitions, evidence timestamps and unknown states",
+          "catalogue_scope": "explicit authorized scope; no global hidden counts"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize owner and underlying rows/fields BEFORE every aggregate/count; hide other-user existence.",
+      "provenance": "Own manual records plus separately permitted facts; no fake completeness/rating/smell metrics.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only fixed definitions/snapshot; no materialization or persistent private cache implied.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize owner and underlying rows/fields BEFORE every aggregate/count; hide other-user existence.",
+          "Read-only fixed definitions/snapshot; no materialization or persistent private cache implied."
+        ]
+      },
+      "capability_blockers": [
+        "Dashboard metric definitions, private read path and aggregate policy pending.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-REVIEW-QUEUE-READ-1",
+      "name": "Read authorized review queue",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-REVIEW-QUEUE-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1 with separately verified reviewer capability/scope",
+          "operation": "proposed queue | source_detail | proposal_detail | evidence_detail; exact action/projection policy required",
+          "queue_kind": "explicit accepted source/normalization/conflict/rights queue; null only for exact detail policy",
+          "subject_ref": "ScopedReviewReference.v1 for detail; explicit null for queue; kind/id/revision/scope binding required",
+          "filters": "bounded explicit allowlisted review state/source/proposal-kind filter values or null; exact filter schema/policy unselected",
+          "snapshot_ref": "exact authorized review snapshot/version or explicit null for fresh accepted queue request",
+          "projection_fields": "bounded exact allowlisted detail/evidence/queue fields; no arbitrary raw payload/private dossier",
+          "page_size": "explicit positive integer within accepted budget for queue or null for detail",
+          "cursor": "opaque reviewer/scope/action/filter/snapshot/rights-bound cursor or null",
+          "projection_policy_ref": "exact accepted action/scoped-reference/queue/detail/evidence/filter/history/page/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-REVIEW-QUEUE-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of ReviewDetailProjection.v1 for queue or explicit null for detail",
+          "detail": "ReviewDetailProjection.v1 for exact authorized scoped source/capture/observation/proposal/evidence or explicit null",
+          "snapshot_ref": "exact authorized immutable/current queue/detail snapshot version"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Authorized reviewer through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-REVIEW-DATA",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Separately verified reviewer capability and exact source/capture/proposal/evidence scope/revision authorization BEFORE detail lookup, evidence dereference, filters/counts/pages. Submitted scoped ref/cursor is not authority. Mask missing/hidden/denied; raw staging/private grant dossiers require their own explicit projection rights.",
+      "provenance": "Existing immutable review/proposal/evidence chain;43 proposals/44 holds unchanged.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; list projection cannot release a hold or select claims.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Separately verified reviewer capability and exact source/capture/proposal/evidence scope/revision authorization BEFORE detail lookup, evidence dereference, filters/counts/pages. Submitted scoped ref/cursor is not authority. Mask missing/hidden/denied; raw staging/private grant dossiers require their own explicit projection rights.",
+          "Read-only; list projection cannot release a hold or select claims."
+        ]
+      },
+      "capability_blockers": [
+        "Exact queue/detail/evidence actions, scoped reference/filter/projection/page/rights policies and genuine reviewer principal unselected/unapproved; no ordinary user/operator privilege inheritance.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-REVIEW-DECISION-WRITE-1",
+      "name": "Record bounded review decision",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-REVIEW-DECISION-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "proposal_ref": "authorized exact versioned proposal",
+          "mutation": "MutationPrecondition.v1",
+          "decision": "explicit later-approved decision enum and reason/evidence references"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-REVIEW-DECISION-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "decision_record": "immutable audited decision projection",
+          "downstream_status": "separate selection/hold/eligibility states; no automatic activation",
+          "operation_receipt": "safe key/version reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Explicit authorized reviewer through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-REVIEW-DATA",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Explicit reviewer/task authority and evidence rights before access/write; accepted decision policy required. Never expose admin CLI or assume authority to release holds.",
+      "provenance": "Exact proposal/reviewer/time/reason/evidence/version; source facts remain immutable.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Append once under principal-bound key and expected proposal version; atomic conflict; no implicit canonical promotion.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Explicit reviewer/task authority and evidence rights before access/write; accepted decision policy required. Never expose admin CLI or assume authority to release holds.",
+          "Append once under principal-bound key and expected proposal version; atomic conflict; no implicit canonical promotion."
+        ]
+      },
+      "capability_blockers": [
+        "New decision powers and transitions unapproved;43 proposals/44holds/Khamrah untouched.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-SOURCE-INTAKE-REQUEST-1",
+      "name": "Submit source acquisition request",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-SOURCE-INTAKE-REQUEST-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "source_locator": "bounded metadata-only source locator; explicit null for unknown OwnPrivateManualProposal, required known only under exact accepted curator branch policy",
+          "intended_use": "explicit fields/operation/audience/scope",
+          "permission_evidence_ref": "bounded metadata-only evidence ref or explicit null for unknown private manual proposal; unknown grants no rights/acquisition/capture",
+          "request_key": "bounded owner-bound idempotency key",
+          "request_kind": "OwnPrivateManualProposal | CuratorSourceAcquisitionRequest",
+          "manual_proposal": "ManualMissingPerfumeProposal.v1 for own-private manual branch; explicit null for curator branch",
+          "acquisition_proposal": "explicit bounded metadata-only method/fields/budget/use/permission/task proposal for curator branch; null for manual branch; no source capture/network/import",
+          "request_policy_ref": "exact accepted discriminated private-manual/curator metadata/unknown-field/retention/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-SOURCE-INTAKE-REQUEST-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "request_ref": "metadata-only review request reference",
+          "approval_state": "PROPOSED | BLOCKED; no acquisition performed"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Own private user or authorized curator through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-REVIEW-DATA",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "OwnPrivateManualProposal: derive owner from session, store private metadata only, no network/acquisition/canonical selection. CuratorSourceAcquisitionRequest: explicit curator scope/evidence access and separate human rights/acquisition/cost approval. Submission fetches no URL.",
+      "provenance": "Submitted metadata/evidence; record unknown permission as unknown.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Deduplicate key/digest; metadata request only; no capture/download/import/jobs triggered.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "OwnPrivateManualProposal: derive owner from session, store private metadata only, no network/acquisition/canonical selection. CuratorSourceAcquisitionRequest: explicit curator scope/evidence access and separate human rights/acquisition/cost approval. Submission fetches no URL.",
+          "Deduplicate key/digest; metadata request only; no capture/download/import/jobs triggered."
+        ]
+      },
+      "capability_blockers": [
+        "Request workflow unimplemented; acquisition not authorized by this architecture.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-ASSET-INTAKE-REQUEST-1",
+      "name": "Submit image intake request",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-ASSET-INTAKE-REQUEST-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "candidate_locator": "bounded metadata-only locator or explicit null for unknown private screenshot request; no bytes/cookies/local path fetch",
+          "asset_kind": "proposed note illustration | bottle photograph for corresponding metadata branch; explicit null for private_screenshot_metadata, which does NOT assign canonical asset kind",
+          "exact_use": "explicit acquisition/storage/private-display/public-display/derivative scopes",
+          "per_file_rights_evidence_ref": "authorized exact per-file evidence ref or explicit unknown",
+          "request_key": "bounded principal-bound key",
+          "request_kind": "private_screenshot_metadata | note_illustration_metadata | bottle_photo_metadata",
+          "intake_proposal": "bounded explicit metadata-only candidate/revision/format/method/budget/use/task request under accepted policy; no acquisition job or binary action",
+          "request_policy_ref": "exact accepted branch/metadata/evidence/retention/bounds policy; unselected, missing blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-ASSET-INTAKE-REQUEST-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "request_ref": "metadata-only review request reference",
+          "approval_state": "PROPOSED | BLOCKED; no bytes acquired/registered"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Authorized owner/reviewer through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-REVIEW-DATA",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Exact human asset/use approval required separately; URL or license label is not an approved binding; no fetch/proxy. Private screenshot proposal is metadata/approval only; no screenshot bytes or intake authority.",
+      "provenance": "Per-file creator/revision/license/attribution/lineage/operation evidence; unknowns explicit.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Metadata only, key/digest deduplication; no automatic binary intake or technical validation claim.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Exact human asset/use approval required separately; URL or license label is not an approved binding; no fetch/proxy. Private screenshot proposal is metadata/approval only; no screenshot bytes or intake authority.",
+          "Metadata only, key/digest deduplication; no automatic binary intake or technical validation claim."
+        ]
+      },
+      "capability_blockers": [
+        "No accepted sample asset binding or intake/storage operation approved.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PRIVATE-SETTINGS-1",
+      "name": "Read or change bounded private preferences",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PRIVATE-SETTINGS-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "operation": "explicit read | write",
+          "preference_fields": "bounded allowlisted presentation preferences only",
+          "mutation": "MutationPrecondition.v1 for write; explicit null for read"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PRIVATE-SETTINGS-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "preferences": "own permitted presentation values",
+          "version": "current/new version",
+          "operation_receipt": "safe receipt for write or explicit null for read"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Owner binding before lookup/write; write CSRF/origin gates; preferences cannot choose DB login/role/rights/eligibility/cache privilege.",
+      "provenance": "User preference intent, separate from security/policy configuration.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only read; key/digest/version for write; no secret or operator configuration change.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Owner binding before lookup/write; write CSRF/origin gates; preferences cannot choose DB login/role/rights/eligibility/cache privilege.",
+          "Read-only read; key/digest/version for write; no secret or operator configuration change."
+        ]
+      },
+      "capability_blockers": [
+        "Exact preference allowlist and private writer not approved.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-OPERATOR-STATUS-READ-1",
+      "name": "Read safe operational status projection",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-OPERATOR-STATUS-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "status_scope": "explicit approved safe telemetry projection",
+          "evidence_ref": "bounded immutable report reference or fresh authorized read request"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-OPERATOR-STATUS-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "status": "dated safe states and historical/current qualification",
+          "checks": "bounded safe test/evidence metadata; no SQL execution, credentials, private paths or process controls"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Explicit authorized system reviewer through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-AUDIT",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Explicit telemetry capability; no application admin/operator CLI connection. Authenticate before private evidence lookup.",
+      "provenance": "Immutable report SHA/time/source binding; historical PASS never becomes current service health.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only safe projection; no start/stop/migrate/restore/container execution.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Explicit telemetry capability; no application admin/operator CLI connection. Authenticate before private evidence lookup.",
+          "Read-only safe projection; no start/stop/migrate/restore/container execution."
+        ]
+      },
+      "capability_blockers": [
+        "Telemetry projection/role policy unimplemented; DB/service state NOT VERIFIED.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-RIGHTS-REVIEW-1",
+      "name": "Record explicit rights review",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-RIGHTS-REVIEW-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "rights_target_ref": "exact source/field/asset/operation reference",
+          "mutation": "MutationPrecondition.v1",
+          "review_evidence": "bounded authorized revision/license/creator/attribution/expiry evidence refs",
+          "decision": "explicit approved operation-specific review/revocation value"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-RIGHTS-REVIEW-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "review_record": "audited exact-use decision evidence projection",
+          "revocation_epoch": "new version where applicable",
+          "affected_use_state": "safe unavailable/allowed state only under approved policy"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "Explicit authorized rights reviewer through C-UI-PAGES",
+      "dependencies": [
+        "C-APP-REVIEW",
+        "C-PORTS",
+        "C-REVIEW-DATA",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Separate explicit rights-review authority, source/asset evidence access and accepted operation policy; no broad source license inheritance or reverse revocation.",
+      "provenance": "Source/capture plus per-field/per-asset/use/parent/expiry evidence; historical review cannot grant unrelated uses.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Principal/key/digest/precondition; immutable review history; revocation invalidates grants/cursors/media/results; no implicit acquisition.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Separate explicit rights-review authority, source/asset evidence access and accepted operation policy; no broad source license inheritance or reverse revocation.",
+          "Principal/key/digest/precondition; immutable review history; revocation invalidates grants/cursors/media/results; no implicit acquisition."
+        ]
+      },
+      "capability_blockers": [
+        "Rights review powers/schema transition ADR unapproved; no new source or asset grant in this task.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-SESSION-END-1",
+      "name": "End application session",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-SESSION-END-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "session_reference": "current authenticated server-bound session or opaque invalid/missing proof",
+          "end_scope": "explicit current session; all-sessions requires later separate accepted policy",
+          "budget_policy_ref": "TransportBudgetPolicy.v1"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-SESSION-END-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "state": "safe ended/unavailable public result without prior-session existence leak",
+          "private_state_policy": "discard in-memory private results/leases and cancel outstanding requests"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-SHELL via C-TRANSPORT",
+      "dependencies": [
+        "C-AUTHN",
+        "C-PRINCIPAL",
+        "C-AUDIT",
+        "C-CONFIG"
+      ],
+      "authorization_gate": "Session-bound invalidation with origin/CSRF policy; no cross-user session identifiers or DB role choices.",
+      "provenance": "Session issuer/revocation epoch only; no product/source facts.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Repeated end requests yield same safe ended result; close/rollback/discard leases and prohibit stale response rendering.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Session-bound invalidation with origin/CSRF policy; no cross-user session identifiers or DB role choices.",
+          "Repeated end requests yield same safe ended result; close/rollback/discard leases and prohibit stale response rendering."
+        ]
+      },
+      "capability_blockers": [
+        "Session provider, transport and invalidation/cancellation policy unimplemented.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PERSONAL-STATE-READ-1",
+      "name": "Read own interest and cart state",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PERSONAL-STATE-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1",
+          "profile_id": "authorized canonical UUID or null for own list",
+          "state_filter": "explicit bounded subset of wishlist | research | app_cart | tried | skipped or null",
+          "page_size": "bounded positive integer",
+          "cursor": "opaque string or null"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PERSONAL-STATE-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "page": "Page.v1 of PersonalStateProjection.v1 under exact accepted active/withdrawn visibility policy",
+          "states": "explicit wishlist | research | app_cart | tried | skipped; absent/withdrawn is not coerced to skipped"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Derive owner from verified actor and authorize own state before lookup/filter/count/page; no browser owner or role selector.",
+      "provenance": "User-recorded interest/cart state distinct from seller-specific buying bookmarks, ordered/purchase state and physical ownership.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only deterministic own-state snapshot; no seller network access or automatic ownership inference.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Derive owner from verified actor and authorize own state before lookup/filter/count/page; no browser owner or role selector.",
+          "Read-only deterministic own-state snapshot; no seller network access or automatic ownership inference."
+        ]
+      },
+      "capability_blockers": [
+        "Private read principal and exact personal transition/retention policies pending.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PERSONAL-STATE-WRITE-1",
+      "name": "Write own interest and cart state",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; owner derived only from verified actor",
+          "operation": "proposed create | move | update | withdraw; exact accepted action/transition/retention policy required",
+          "entry_id": "own canonical UUID for existing entry or explicit null for create under accepted absence semantics",
+          "profile_id": "independently authorized canonical UUID; existing entry binding must match",
+          "interest_cart_state": "proposed wishlist | research | app_cart | tried | skipped target for active transition; explicit null for withdraw; never coerce remove into skipped",
+          "recorded_at": "ManualDateValue.v1 or explicit null under exact accepted date policy; no invented timestamp",
+          "confirmation": "explicit withdraw confirmation under accepted policy; null for other operations",
+          "mutation": "MutationPrecondition.v1; expected entry revision/create-absence and principal/scope/action-bound key/digest",
+          "transition_policy_ref": "exact accepted action/state/null/withdraw/retention/budget policy; unselected, missing makes remove/move unavailable"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "personal_state": "PersonalStateProjection.v1 or null according to exact accepted safe withdrawal visibility policy",
+          "record_state": "explicit accepted active/withdrawn state; no implicit hard deletion",
+          "revision": "exact new entry/tombstone revision",
+          "operation_receipt": "safe actor/scope/action/key/digest/version reference",
+          "side_effects": "NONE outside own interest/cart state; bookmarks, purchase statuses/history and physical inventory untouched"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Authorize verified actor-owned entry/profile before lookup/write; exact explicit operation, transition, withdraw confirmation/retention, expected revision and idempotency required. Reject browser owner/role and invalid null/target combinations; absent policy keeps removal unavailable, never coerces skipped.",
+      "provenance": "Explicit manual user intent; separate from buying-source management, IF-PURCHASE-STATUS-WRITE-1 ordered/purchase status and IF-COLLECTION-WRITE-1 physical bottles.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Actor/scope/action/key/request digest and expected revision protect create/move/update/withdraw. Stale or conflicting commands atomically fail. Exact accepted withdrawal retention/tombstone policy required; no bookmark, purchase/order/history or inventory mutation.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Authorize verified actor-owned entry/profile before lookup/write; exact explicit operation, transition, withdraw confirmation/retention, expected revision and idempotency required. Reject browser owner/role and invalid null/target combinations; absent policy keeps removal unavailable, never coerces skipped.",
+          "Actor/scope/action/key/request digest and expected revision protect create/move/update/withdraw. Stale or conflicting commands atomically fail. Exact accepted withdrawal retention/tombstone policy required; no bookmark, purchase/order/history or inventory mutation."
+        ]
+      },
+      "capability_blockers": [
+        "Exact operation/state/withdraw/null/retention/date/bounds policies and private writer unselected/unapproved; no inferred deletion or permission.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PURCHASE-RECORD-WRITE-1",
+      "name": "Write own manual purchase record and history",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PURCHASE-RECORD-WRITE-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; owner derived only from verified actor",
+          "operation": "proposed create | update | withdraw; exact transitions/retention policy unselected and required",
+          "profile_id": "authorized canonical UUID string",
+          "purchase_record_id": "own canonical UUID string for update/withdraw; explicit null for create",
+          "own_saved_buying_source_id": "own canonical UUID string or explicit null; optional linkage, independently authorized",
+          "paid_price": "Money.v1; optional fact represented by explicit known/unknown state, never omitted/coerced to zero",
+          "purchased_volume": "Quantity.v1; optional fact represented by explicit known/unknown state",
+          "purchase_date": "PurchaseDate.v1; optional fact represented by explicit known/unknown state",
+          "seller": "SellerValue.v1; optional fact represented by explicit known/unknown state",
+          "mutation": "MutationPrecondition.v1; expected revision/create-absence semantics and principal-bound idempotency required",
+          "field_policy_ref": "exact accepted decimal/currency/unit/date/seller/bounds/enum/retention policy version; currently unselected, absence blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PURCHASE-RECORD-WRITE-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "purchase_record": "PurchaseRecordProjection.v1 owned authorized projection or null for safe failure",
+          "history_version": "own purchase-history version; no other user existence/count leakage",
+          "operation_receipt": "safe principal/scope/key/request-digest/version reference"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-WRITE",
+        "C-AUTHZ",
+        "C-AUDIT",
+        "C-DTO"
+      ],
+      "authorization_gate": "Derive owner from genuine verified actor, never request owner/user/role. Authorize profile, own record and optional own saved buying source BEFORE lookup/count/write. Trusted private writer, origin/CSRF, expected revision, exact field/retention policies and atomic audit required; no operator/admin fallback.",
+      "provenance": "Explicit manual purchase facts/history with known/unknown Money/Quantity/date/seller; user assertions do not confirm merchant order/payment or canonical price/source facts.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Principal/scope/operation/key/request digest and expected revision; identical retry has one effect, changed digest conflicts; atomic record/history/receipt or rollback. Withdraw only under exact approved retention policy. No inventory cascade, bottle creation, ordered-state update, order/payment/network operation or ownership inference.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Derive owner from genuine verified actor, never request owner/user/role. Authorize profile, own record and optional own saved buying source BEFORE lookup/count/write. Trusted private writer, origin/CSRF, expected revision, exact field/retention policies and atomic audit required; no operator/admin fallback.",
+          "Principal/scope/operation/key/request digest and expected revision; identical retry has one effect, changed digest conflicts; atomic record/history/receipt or rollback. Withdraw only under exact approved retention policy. No inventory cascade, bottle creation, ordered-state update, order/payment/network operation or ownership inference."
+        ]
+      },
+      "capability_blockers": [
+        "Exact money/quantity/date/seller grammars, bounds, currency/unit enums, create/update/withdraw retention transitions and private writer remain unselected/unapproved; no R31 activation.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    },
+    {
+      "id": "IF-PURCHASE-RECORD-READ-1",
+      "name": "Read own manual purchase history and record",
+      "status": "PROPOSED",
+      "implementation_status": "NOT IMPLEMENTED",
+      "input_schema": {
+        "schema_id": "IF-PURCHASE-RECORD-READ-1.input.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "context": "RequestContext.v1; owner derived only from verified actor",
+          "operation": "proposed history | detail; exact enum/projection policy unselected and required",
+          "purchase_record_id": "own canonical UUID string for detail; explicit null for history",
+          "profile_id": "canonical UUID filter or explicit null for all caller-own history; detail requires null; linked catalogue access checked separately",
+          "page_size": "positive integer within exact accepted budget for history; explicit null for detail; no hidden default",
+          "cursor": "opaque principal/scope/filter/snapshot/rights-bound cursor or explicit null; detail requires null",
+          "record_state_filter": "explicit accepted active/withdrawn history filter policy; enum/retention visibility unselected, no implicit exposure of withdrawn facts",
+          "field_policy_ref": "exact accepted manual paid-fact/history projection/retention/version/budget policy; absence blocks"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "output_schema": {
+        "schema_id": "IF-PURCHASE-RECORD-READ-1.output.v1",
+        "version": "1",
+        "status": "PROPOSED",
+        "representation": "Architecture typed-field schema; not an executable JSON Schema or selected framework model.",
+        "required_fields": {
+          "outcome": "SafeOutcome.v1",
+          "history_page": "Page.v1 of PurchaseRecordProjection.v1 for history or explicit null for detail; include caller-own records with no saved buying-source and no collection/bottle linkage",
+          "purchase_record": "PurchaseRecordProjection.v1 for authorized own detail or explicit null for history/safe failure",
+          "history_version": "exact caller-own purchase-history snapshot/version",
+          "linked_catalogue_state": "explicit separately authorized catalogue projection state or unavailable; own manual facts do not grant current catalogue/source access",
+          "linkage_semantics": "No collection FK/filter/automatic linkage assumed; unlinked purchase history remains discoverable through own history/profile filter"
+        },
+        "unknown_fields": "REJECT",
+        "implicit_coercion": "FORBIDDEN",
+        "budget_policy": "TransportBudgetPolicy.v1; exact numeric policy must be owner-approved before implementation/use; missing policy blocks the operation."
+      },
+      "caller": "C-UI-PAGES on R-CART / R-COLLECTION / R-COLLECTION-ITEM via C-TRANSPORT",
+      "dependencies": [
+        "C-APP-PRIVATE",
+        "C-PORTS",
+        "C-PG-READ",
+        "C-AUTHZ",
+        "C-DTO"
+      ],
+      "authorization_gate": "Derive owner from genuine verified actor before any restricted purchase lookup, filtered history count, pagination, detail or linked-object access. Authorize every own record; browser user/owner/role and another user record ID never grant access. Optional profile filter cannot probe hidden catalogue existence. Linked catalogue/seller-source facts require separate current authorization. Missing/denied private record responses are uniform; never use operator/admin fallback.",
+      "provenance": "Own manually recorded PurchaseRecordProjection.v1 with explicit Money.v1/Quantity.v1/PurchaseDate.v1/SellerValue.v1 known/unknown states and exact record/history versions; recorded paid facts are private user assertions, not current canonical price, merchant confirmation or live seller facts.",
+      "version": "1; incompatible semantics require a new exact schema/policy version; no implicit latest",
+      "failure_behavior": "Fail closed on missing/unsupported policy, context/version/budget, permission or dependency. Uniform private missing/denied/expired response; distinguish authorized unknown/incomplete/unavailable only where allowed. Atomic write rollback; no admin/algorithm/default fallback.",
+      "idempotency": "Read-only; repeatable only within the same authorized history snapshot/filter/version. Cursors bind owner/scope/filter/snapshot/rights epoch, stale context fails closed. No writes, order/payment/network access, bottle creation or ordered/cart state coupling.",
+      "tests": {
+        "status": "SPECIFIED / NOT RUN",
+        "required": [
+          "Strict schema/version/unknown-field/type/coercion and explicit size/depth/collection/numeric/deadline bounds.",
+          "Forged or stale session/scope, admin/BYPASSRLS/owner and cross-user reference denial before lookup/count/page/scoring/bytes.",
+          "Operation-specific provenance/rights/revocation/snapshot failures and safe error projection.",
+          "Idempotency, cancellation/rollback or read reproducibility within authorized exact snapshot, as applicable.",
+          "Derive owner from genuine verified actor before any restricted purchase lookup, filtered history count, pagination, detail or linked-object access. Authorize every own record; browser user/owner/role and another user record ID never grant access. Optional profile filter cannot probe hidden catalogue existence. Linked catalogue/seller-source facts require separate current authorization. Missing/denied private record responses are uniform; never use operator/admin fallback.",
+          "Read-only; repeatable only within the same authorized history snapshot/filter/version. Cursors bind owner/scope/filter/snapshot/rights epoch, stale context fails closed. No writes, order/payment/network access, bottle creation or ordered/cart state coupling."
+        ]
+      },
+      "capability_blockers": [
+        "Own-history read principal, exact field/state/retention visibility/pagination/unknown-value/budget policies remain unselected/unapproved. Existing catalogue/profile/collection/bookmark reads do not implement this contract; no collection FK or R31 activation accepted.",
+        "Exact Human Owner architecture/operation policy and separate implementation approval required.",
+        "TransportBudgetPolicy.v1 has no accepted numeric values; execution blocked until exact policy accepted."
+      ],
+      "transport_binding": "UNSELECTED; no HTTP path/method/router/port/framework exists for this ID."
+    }
+  ],
+  "future_tests_status": "SPECIFIED / NOT RUN",
+  "runtime_changes": "NONE",
+  "production_mutation": false
+}

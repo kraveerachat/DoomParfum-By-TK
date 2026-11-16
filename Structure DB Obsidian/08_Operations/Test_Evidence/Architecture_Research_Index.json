@@ -1,0 +1,511 @@
+{
+  "task": "DPT-PLAN-010",
+  "base": "168715bc9bc5fff968524074257dc106a8a63638",
+  "at_utc": "2026-11-16T14:16:05.046795+00:00",
+  "scope": "Approved official technical documentation research only; no perfume/data/image acquisition, installs or dependency selection",
+  "records": [
+    {
+      "id": "S-IF-01",
+      "url": "https://docs.python.org/3.11/library/typing.html",
+      "title": "typing — Support for type hints",
+      "document_version": "Python 3.11.18 documentation; /3.11 living maintenance series",
+      "findings": "Annotations are not runtime validation. Protocol supports structural interface descriptions. Runtime-checkable protocol checks do not validate complete function signatures.",
+      "project_inference": "Keep ports/domain typed independently of HTTP and validate untrusted input separately. A Protocol sketch would describe a future port, not create an authenticated transport.",
+      "limits": "Installed Python observed3.11.9; no type checker installed/run; maintenance documentation version is not installed runtime version.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-02",
+      "url": "https://docs.python.org/3.11/library/dataclasses.html",
+      "title": "dataclasses — Data Classes",
+      "document_version": "Python 3.11.18 documentation; /3.11 living maintenance series",
+      "findings": "Dataclasses generate methods from annotated fields. With limited exceptions the decorator does not inspect annotated field types. Frozen dataclasses emulate read-only instances.",
+      "project_inference": "Reuse existing frozen typed domain records without treating construction or frozen=True as proof of strict validation, rights, deeply immutable referenced objects or authorization.",
+      "limits": "No new dataclass or runtime validator implemented; source fields and generated methods must be distinguished.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-03",
+      "url": "https://docs.python.org/3.11/library/fractions.html",
+      "title": "fractions — Rational numbers",
+      "document_version": "Python 3.11.18 documentation; /3.11 living maintenance series",
+      "findings": "Fraction supports exact rational arithmetic. Constructing from a binary float preserves that float value rather than the intended decimal ratio.",
+      "project_inference": "Preserve accepted exact int/Fraction inputs and rational comparison. Order within compatible partitions before proposed wire integer-string serialization and display rounding.",
+      "limits": "Python Fraction itself accepts formats the project forbids; a future transport must apply narrower explicit grammar and numeric bounds. No float coercion or limit_denominator repair.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-04",
+      "url": "https://fastapi.tiangolo.com/tutorial/dependencies/",
+      "title": "Dependencies — FastAPI",
+      "document_version": "UNVERSIONED / LIVING; no installed FastAPI version selected or verified",
+      "findings": "Dependency injection supplies declared shared dependencies and can organize authentication, role checks and database connections.",
+      "project_inference": "If later selected, compose session verification, a genuine principal lease and per-use authorization through explicit dependencies. Domain modules must not import framework dependencies.",
+      "limits": "A dependency does not create PostgreSQL logins, verify all effective privileges, establish an immutable owner binding or prove RLS/pool isolation. Official page installer suggestions were not executed.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-05",
+      "url": "https://fastapi.tiangolo.com/advanced/security/oauth2-scopes/",
+      "title": "OAuth2 scopes — FastAPI",
+      "document_version": "UNVERSIONED / LIVING; no installed FastAPI version selected or verified",
+      "findings": "OAuth2 scopes are integrated with OpenAPI. The application still enforces scopes and other security requirements in its own code. OAuth2 scopes are optional.",
+      "project_inference": "Keep provider/session choice unresolved; scopes alone cannot authorize a private object, source use, asset or genuine database principal. Verify ownership/scope before lookup/count/pagination/scoring/bytes.",
+      "limits": "Research does not select OAuth2, JWT, an auth provider, the examples secret handling, or a browser password flow.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-06",
+      "url": "https://pydantic.dev/docs/validation/latest/concepts/strict_mode/",
+      "title": "Strict Mode — Pydantic Validation",
+      "document_version": "UNVERSIONED / LIVING latest; original https://docs.pydantic.dev/latest/concepts/strict_mode/ redirected here; exact package version not shown",
+      "findings": "Default validation can coerce input. Strict mode reduces coercion but JSON input can still accept representations such as date strings that strict Python validation rejects.",
+      "project_inference": "If selected later, specify exact JSON grammar, forbid unknown keys/coercion and validate resource bounds plus domain semantics explicitly; a strict flag is insufficient. Never log rejected private values by default.",
+      "limits": "No Pydantic version selected, installed or tested. JSON and Python validation paths need separate acceptance cases.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-07",
+      "url": "https://spec.openapis.org/oas/latest.html",
+      "title": "OpenAPI Specification latest",
+      "document_version": "Observed v3.2.1, published10 September2026; latest alias is mutable",
+      "findings": "OpenAPI describes HTTP interfaces. Multiple security requirement alternatives are OR; schemes within one requirement are AND. An empty requirement permits anonymous access.",
+      "project_inference": "Use explicit operation security and bounded schemas only after HTTP/stack ADR. Review generated contracts for accidental optional security; keep logical IF IDs independent of HTTP paths.",
+      "limits": "Latest published specification is not a selected runtime/framework contract version. No OpenAPI document or endpoints generated.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-08",
+      "url": "https://spec.openapis.org/oas/v3.2.1.html",
+      "title": "OpenAPI Specification v3.2.1",
+      "document_version": "v3.2.1,10 September2026; explicit published version URL",
+      "findings": "The versioned specification describes HTTP operations, schemas and security requirements. Security scheme documentation does not itself enforce application policy.",
+      "project_inference": "A later explicit ADR must choose a supported published contract version and verify generator/client/server compatibility. This inventory remains framework-neutral.",
+      "limits": "No compatibility test or adoption of3.2.1; package versions cannot be inferred from this page.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-IF-09",
+      "url": "https://spec.openapis.org/oas/v3.1.2.html",
+      "title": "OpenAPI Specification v3.1.2",
+      "document_version": "v3.1.2,19 September2025; explicit published version URL",
+      "findings": "An independently versioned published3.1-series specification remains available, distinct from the observed latest3.2.1.",
+      "project_inference": "Compare tooling support for versioned contracts after the stack ADR; do not equate an older supported contract with an implementation defect or silently upgrade.",
+      "limits": "No version choice, runtime acceptance or generated contract implied; compatibility remains untested.",
+      "retrieved_at_utc": "2026-11-16T13:27:17.256884+00:00"
+    },
+    {
+      "id": "S-SEC-01",
+      "url": "https://www.postgresql.org/docs/18/ddl-rowsecurity.html",
+      "title": "PostgreSQL row security",
+      "document_version": "PostgreSQL 18, section 5.9",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Enabled RLS defaults to denial without policies. Superusers and BYPASSRLS roles bypass it; owners normally bypass it.",
+      "project_inference": "Reject privileged application connections; inspect effective privileges and applicable policies.",
+      "limits": "Not proof of repository policies or live-server behavior."
+    },
+    {
+      "id": "S-SEC-02",
+      "url": "https://www.postgresql.org/docs/18/functions-info.html",
+      "title": "PostgreSQL session information",
+      "document_version": "PostgreSQL 18, section 9.27",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "session_user identifies the session; current_user identifies execution context. Privilege inquiry functions answer different membership and access questions.",
+      "project_inference": "Preserve the existing session_user subject mapping and verify connection identity separately from browser authentication.",
+      "limits": "Documentation reference version is not the unknown deployed version."
+    },
+    {
+      "id": "S-SEC-03",
+      "url": "https://www.postgresql.org/docs/18/sql-set-role.html",
+      "title": "PostgreSQL SET ROLE",
+      "document_version": "PostgreSQL 18 SQL command",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "SET ROLE changes current_user and privilege checking. It does not change the original authenticated login. Membership SET and INHERIT capabilities differ.",
+      "project_inference": "Role switching cannot establish a browser user as the genuine database subject.",
+      "limits": "No role command executed."
+    },
+    {
+      "id": "S-SEC-04",
+      "url": "https://www.postgresql.org/docs/18/sql-set-session-authorization.html",
+      "title": "PostgreSQL SET SESSION AUTHORIZATION",
+      "document_version": "PostgreSQL 18 SQL command",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Changing session identity to another user requires an initially superuser-authenticated session. Reset restores the original identity.",
+      "project_inference": "Reject superuser impersonation as the future application binding design.",
+      "limits": "An identity equality check alone cannot prove an unprivileged connection origin."
+    },
+    {
+      "id": "S-SEC-05",
+      "url": "https://www.postgresql.org/docs/18/role-attributes.html",
+      "title": "PostgreSQL role attributes",
+      "document_version": "PostgreSQL 18, section 21.2",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "LOGIN permits an initial connection. Superuser privileges bypass permission checks. Role management and database creation are separate capabilities.",
+      "project_inference": "Review genuine LOGIN, NOSUPERUSER, NOBYPASSRLS and absence of administrative powers before a pilot.",
+      "limits": "Role names or flags alone are insufficient privilege proof."
+    },
+    {
+      "id": "S-SEC-06",
+      "url": "https://www.postgresql.org/docs/18/role-membership.html",
+      "title": "PostgreSQL role membership",
+      "document_version": "PostgreSQL 18, section 21.3",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Membership can expose privileges through inheritance or permit role switching. Membership chains and options affect the resulting access.",
+      "project_inference": "Test effective object/function privileges and indirect memberships; do not assume NOINHERIT alone removes all capabilities.",
+      "limits": "Actual server-version compatibility remains unverified."
+    },
+    {
+      "id": "S-SEC-07",
+      "url": "https://www.postgresql.org/docs/18/transaction-iso.html",
+      "title": "PostgreSQL transaction isolation",
+      "document_version": "PostgreSQL 18, section 13.2",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Read Committed SELECT uses a statement snapshot; later statements can observe subsequently committed changes. A snapshot does not prevent concurrent revocation after checking.",
+      "project_inference": "Use fresh authorization reads and final operation checks; specify cancellation and race behavior.",
+      "limits": "No strict instantaneous revocation guarantee follows from a transaction."
+    },
+    {
+      "id": "S-SEC-08",
+      "url": "https://api-security.owasp.org/editions/2023/en/0xa1-broken-object-level-authorization/",
+      "title": "OWASP API1 object authorization",
+      "document_version": "OWASP API Security Top 10, 2023",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Object identifiers must be checked against the caller and requested action. Identifier complexity does not replace authorization.",
+      "project_inference": "Authorize objects and fields before restricted counts, pagination, scoring or byte access.",
+      "limits": "Guidance does not certify any proposed handler."
+    },
+    {
+      "id": "S-SEC-09",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html",
+      "title": "OWASP authorization",
+      "document_version": "Living cheat sheet, observed 2026-11-16",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Recommend least privilege, default denial, request-level permission checks, safe failures, appropriate logging and authorization tests.",
+      "project_inference": "Centralize gate contracts while preserving service and database enforcement.",
+      "limits": "Exact framework integration and test evidence remain future work."
+    },
+    {
+      "id": "S-SEC-10",
+      "url": "https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html",
+      "title": "OWASP session management",
+      "document_version": "Living cheat sheet, observed 2026-11-16",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Session management connects authentication with access control. Session identifiers require protection, renewal and expiration or invalidation controls.",
+      "project_inference": "Specify server-side validation, logout, privilege changes and pool cleanup in a later exact contract.",
+      "limits": "No cookie, token, provider, TLS or session implementation selected."
+    },
+    {
+      "id": "S-SEC-11",
+      "url": "https://www.rfc-editor.org/rfc/rfc9111.html",
+      "title": "HTTP caching",
+      "document_version": "RFC 9111, June 2022, sections 5.2.1.5 and 5.2.2.5",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "no-store restricts intentional cache storage and requests prompt volatile cleanup; it is not sufficient privacy protection. private differs from no-store.",
+      "project_inference": "Propose no-store for operational data and explicit in-memory cleanup; never promise remote browser erasure.",
+      "limits": "No headers or storage behavior implemented or tested."
+    },
+    {
+      "id": "S-SEC-12",
+      "url": "https://docs.docker.com/engine/storage/volumes/",
+      "title": "Docker volumes",
+      "document_version": "Living Docker Engine manual, observed 2026-11-16",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "Volumes persist beyond container lifecycles and can be mounted by containers. Container removal does not by itself erase volume data.",
+      "project_inference": "Separate private asset storage, access controls, retention and restore checks from container packaging.",
+      "limits": "Named volumes do not provide application authorization; Docker availability not revalidated."
+    },
+    {
+      "id": "S-SEC-13",
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "title": "Creative Commons BY-SA 4.0",
+      "document_version": "CC BY-SA 4.0 deed",
+      "retrieved_at_utc": "2026-11-16T13:22:02Z",
+      "findings": "License freedoms remain while conditions are met. Attribution and ShareAlike conditions apply; other rights may still matter. The deed is a summary.",
+      "project_inference": "Keep project authorization denial separate from license revocation; verify exact asset binding and permission conditions.",
+      "limits": "No candidate rights grant or legal clearance established by this research."
+    },
+    {
+      "id": "S-UX-01",
+      "url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "document_version": "WCAG 2.2; Recommendation 2024-12-12",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Normative accessibility criteria cover keyboard operation, text alternatives, focus, errors and status semantics; they are technology independent."
+      ],
+      "project_inference": [
+        "Propose WCAG 2.2 AA acceptance for future pages; document concrete keyboard, screen-reader and responsive checks."
+      ],
+      "limits": [
+        "This research is not a conformance audit; the future UI does not exist."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-02",
+      "url": "https://www.w3.org/WAI/ARIA/apg/practices/read-me-first/",
+      "title": "Read Me First — ARIA Authoring Practices Guide",
+      "document_version": "LIVING; APG guidance for ARIA 1.2, no immutable page release observed",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "ARIA roles do not supply native keyboard behavior. Examples require browser and assistive-technology interoperability testing."
+      ],
+      "project_inference": [
+        "Prefer native HTML controls and labels; explicitly test custom tabs, comboboxes and chip controls."
+      ],
+      "limits": [
+        "Informative widget guidance does not prove cross-browser support or WCAG conformance."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-03",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/tabs/",
+      "title": "Tabs Pattern — APG",
+      "document_version": "LIVING; no immutable page release observed",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "The pattern defines tab/panel relationships, selected state and arrow-key navigation; automatic activation assumes panels appear without noticeable latency."
+      ],
+      "project_inference": [
+        "Use manual activation for remote protected panels; focus movement must not demand private prefetch."
+      ],
+      "limits": [
+        "A widget pattern is not application authorization or an implemented control."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-04",
+      "url": "https://www.w3.org/WAI/ARIA/apg/patterns/combobox/",
+      "title": "Combobox Pattern — APG",
+      "document_version": "LIVING; no immutable page release observed",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "The pattern specifies labeled input/popup semantics, option navigation, Enter selection, Escape dismissal and standard text-editing behavior."
+      ],
+      "project_inference": [
+        "Reference and vocabulary pickers must preserve editing/focus while selecting explicit authorized identities."
+      ],
+      "limits": [
+        "Authorization, exact domain validation and suggestion-query bounds remain project requirements."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-05",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html",
+      "title": "Understanding SC 4.1.3: Status Messages",
+      "document_version": "WCAG 2.2 Understanding; LIVING informative page",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Status messages can be programmatically exposed without focus; concise search completion/count messages differ from the entire result list."
+      ],
+      "project_inference": [
+        "Announce loading/completion summaries without moving focus or repeatedly reading result cards."
+      ],
+      "limits": [
+        "Live announcements must themselves avoid unauthorized counts or private hidden details."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-06",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-visible.html",
+      "title": "Understanding SC 2.4.7: Focus Visible",
+      "document_version": "WCAG 2.2 Understanding; LIVING informative page",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Keyboard-operable interfaces need a visible focus indicator; it must remain visible while keyboard focus is shown."
+      ],
+      "project_inference": [
+        "Retain visible focus across local results, dialogs and tab/combobox interaction."
+      ],
+      "limits": [
+        "Actual styling, contrast and browser behavior need later testing."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-07",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/focus-not-obscured-minimum.html",
+      "title": "Understanding SC 2.4.11: Focus Not Obscured (Minimum)",
+      "document_version": "WCAG 2.2 Understanding; LIVING informative page",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Author-created content must not entirely hide a component when it receives keyboard focus."
+      ],
+      "project_inference": [
+        "Test sticky navigation, notices and dialogs against focus visibility on narrow layouts."
+      ],
+      "limits": [
+        "AA minimum partial visibility differs from the stronger AAA enhanced criterion."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-08",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/error-identification.html",
+      "title": "Understanding SC 3.3.1: Error Identification",
+      "document_version": "WCAG 2.2 Understanding; LIVING informative page",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Detected input errors identify the affected item and describe the error in text; no single error-layout arrangement is mandated."
+      ],
+      "project_inference": [
+        "Use linked error summary and field descriptions after explicit failed submit; preserve safe inputs."
+      ],
+      "limits": [
+        "Summary focus behavior is a project choice; native validation and security still need independent tests."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-09",
+      "url": "https://nextjs.org/docs/app/getting-started/server-and-client-components",
+      "title": "Server and Client Components — Next.js App Router",
+      "document_version": "LIVING; observed documentation selector Latest v16.4.6; installed project version NOT VERIFIED",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "App Router defaults pages/layouts to Server Components. Interactive handlers use Client Components; payloads include client props and navigation can prefetch/cache."
+      ],
+      "project_inference": [
+        "If selected later, keep interactive drafts separate from authorized server projections; review serialized props, streaming, prefetch and caches."
+      ],
+      "limits": [
+        "Reading documentation selects no framework or version and proves no private-cache behavior."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-10",
+      "url": "https://nextjs.org/docs/app/guides/authentication",
+      "title": "How to implement authentication — Next.js",
+      "document_version": "LIVING; observed documentation selector Latest v16.4.6; installed project version NOT VERIFIED",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "The guide separates authentication, sessions and authorization; recommends authorization near data in a DAL and limited DTOs, beyond optimistic route checks."
+      ],
+      "project_inference": [
+        "A hidden route or UI component is insufficient; enforce session/object/field rights at service/data access and preserve genuine PostgreSQL identity."
+      ],
+      "limits": [
+        "Guide examples do not solve this repository's nonadmin session binding, RLS, pool reuse or revocation contracts."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-11",
+      "url": "https://c4model.com/abstractions/container",
+      "title": "Container — C4 model",
+      "document_version": "LIVING; no versioned specification observed",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "A C4 container is an application or data store runtime boundary; Docker and physical deployment are separate concerns."
+      ],
+      "project_inference": [
+        "Label future UI/service, existing CLI runtime, PostgreSQL and asset store by responsibility without choosing Docker images."
+      ],
+      "limits": [
+        "Conceptual container separation is not proof of network, process or permission isolation."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    },
+    {
+      "id": "S-UX-12",
+      "url": "https://c4model.com/diagrams/container",
+      "title": "Container diagram — C4 model",
+      "document_version": "LIVING; no versioned specification observed",
+      "retrieved_at_utc": "2026-11-16T13:31:05Z",
+      "retrieval_time_basis": "Completed research-batch recording checkpoint after all page opens; not a server publication timestamp or per-page request timestamp.",
+      "findings": [
+        "Container diagrams describe system-level responsibility distribution and communication; deployment topology is better documented separately."
+      ],
+      "project_inference": [
+        "Keep the proposed container view distinct from implementation/deployment evidence and component-level dependencies."
+      ],
+      "limits": [
+        "A diagram is not a deployed service, security test or framework decision."
+      ],
+      "source_type": "official primary documentation",
+      "retrieval_tool": "mcp__codex_apps__search_service_web_run",
+      "status": "OBSERVED documentation; project design PROPOSED"
+    }
+  ],
+  "record_count": 34,
+  "unique_URL_count": 34,
+  "domains": [
+    "api-security.owasp.org",
+    "c4model.com",
+    "cheatsheetseries.owasp.org",
+    "creativecommons.org",
+    "docs.docker.com",
+    "docs.python.org",
+    "fastapi.tiangolo.com",
+    "nextjs.org",
+    "pydantic.dev",
+    "spec.openapis.org",
+    "www.postgresql.org",
+    "www.rfc-editor.org",
+    "www.w3.org"
+  ],
+  "lane_bindings": [
+    {
+      "lane": "source",
+      "path": ".local\\post28-architecture\\source\\RESEARCH.json",
+      "sha256": "624074efd0e38134afffaf82cba9b4e482ff006daa3d4b0303c60afc3642ae40",
+      "records": 9
+    },
+    {
+      "lane": "security",
+      "path": ".local\\post28-architecture\\security\\RESEARCH.json",
+      "sha256": "6bd054c1c5656dbc928d41cd84a3fb847cfa4e5ce4713ff14543201501d6ff7b",
+      "records": 13
+    },
+    {
+      "lane": "ux",
+      "path": ".local\\post28-architecture\\ux\\RESEARCH.json",
+      "sha256": "97fc3b2360753dab34b54b39941ea8bf095684fa9d7b5643b66d983b08d36172",
+      "records": 12
+    }
+  ],
+  "limits": [
+    "Living documentation and observed selectors are not installed/accepted package versions",
+    "Research PostgreSQL18 is not the live database version",
+    "Source findings and project design inferences are explicitly distinguished in lane notes",
+    "No full web pages or private account content retained in public artifact"
+  ]
+}

@@ -2,7 +2,7 @@
 id: DPT-PLAN-009
 project: DoomParfum By TK
 type: planning_task
-status: READY FOR REVIEW
+status: MERGED
 owner: human-owner
 updated: 2026-11-16
 tags: [doomparfum, planning, readiness, media, security]
@@ -48,3 +48,7 @@ Next delivery steps: publish this exact docs branch as one Draft Planning PR; cr
 ## Planning delivery checkpoint — 2026-11-16
 
 Actual Draft PR28: https://github.com/kraveerachat/DoomParfum-By-TK/pull/28, OPEN/DRAFT, created at publication checkpoint `87329bf3162f21b14234a89c81d4a9c795f9bed3` from base `8eef8f13265adc14db0cae82ff77cfc4863853ce`. Exact independent source `77fb9080ad62e3463ae9a6006a2b6570a101ca8c` passed316verified assertions with0open findings; IR-P27-01MEDIUM resolved and all failures retained. The sole planning receipt is [[2026-11-16_000747_DPT-PLAN-009_Post_PR27_Planning]]. All23old receipts/eightmigrations remain unchanged. No new A–I policy answer, rights grant, implementation or Production operation. Final publication HEAD and verified archive digest are recorded after they exist in PR description and external exact registry.
+
+## Post-PR28 architecture refinement checkpoint — 2026-11-16
+
+Human Owner merge VERIFIED: [PR28](https://github.com/kraveerachat/DoomParfum-By-TK/pull/28), head `6521c5201f4f4d0e85c4fd8542db222284e96e9e`, merge `168715bc9bc5fff968524074257dc106a8a63638`, UTC `2026-11-15T17:39:38Z`. Status MERGED refers to that docs-only planning task, not exact A–I acceptance or implementation. Its immutable receipt remains unchanged. The Owner explicitly requests [[DPT-PLAN-010_System_Architecture_Refinement]] before implementation. Preserve POST27-ODP-1/hash and the original five-record proposal; IMP-ENR-01 not started. Later diagrams/IA/contracts live in [[System_Architecture_Refinement]] and do not reopen or rewrite PR28.
