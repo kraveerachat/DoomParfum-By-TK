@@ -6,6 +6,7 @@ status: AGENT DATA REVIEW COMPLETE; HUMAN ACCEPTANCE PENDING
 owner: human-owner
 updated: 2026-11-17
 tags: [doomparfum, offline-preview, independent-review, provenance]
+source_of_truth: "../../../README.md"
 ---
 
 # IMP-ENR-01 independent data review
@@ -40,7 +41,11 @@ All six source files, `VERIFIED_SOURCE_PROVENANCE.json` and the three protected 
 
 The private verified-field baseline is `.local/imp-enr-01/data/PINNED_FIELD_BASELINE_PRIVATE.json`, SHA-256 `c1118322d9d40de4d52a263531c4e726f6d8f823fb2eff22d2590d215d3bbda9`. It contains selected literals and must remain ignored/private. Sanitized details and all 46 per-locator comparison/outcome entries are in [[IMP_ENR_01_Independent_Data_Review.json]].
 
-The reviewed private payload is `DATA_CANDIDATE_PRIVATE.json`: **33953 bytes**, SHA-256 `16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9`. Coordinator-provided source commit: `892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3`. Independently observed implementation-file SHA-256: `302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb`. This role hashes the actual file but does not independently resolve Git commits; the coordinator binds that commit. Input metadata states no active pointer was published.
+The reviewed private payload is `DATA_CANDIDATE_PRIVATE.json`: **33953 bytes**, SHA-256 `16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9`. Current coordinator-provided source commit: `4fdbd29b3f345fcbce3eb08862748672657ef22c`. Independently observed implementation-file SHA-256: `ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae`. This role hashes the actual file but does not independently resolve Git commits; the coordinator binds that commit. Original candidate input metadata states no active pointer was published; the coordinator reports publication remains pending.
+
+The previous comparison bound source `892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3`, implementation SHA-256 `302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb`. Its exact public JSON/Markdown reports, private comparison report and private comparator are preserved under `data/REVIEW_892b725_*`, with public-report hashes recorded in the current JSON. The coordinator reports a source-read safety correction; behavior/security approval remains the independent implementation reviewer's responsibility. No prior binding was erased.
+
+For this rebind the data reviewer freshly read and hashed all six raw source buffers before parsing, then strictly parsed the same verified CSV buffers. Header, row width, unique identifiers, 1479/160/420 populations, exact five key/ordinal pairs and all **46** literal/state/occurrence comparisons independently agree with the original pre-implementation baseline. The actual candidate remains byte-identical. All **18** private-payload negative controls were executed again and rejected; these are reruns, not 18 additional distinct controls. Source/provenance/three-sidecar fingerprints still match the initial preflight.
 
 The reviewer-owned comparator imports no preview implementation. It checked exact root/record/field/occurrence allowlists, five ordered key/ordinal pairs, six source artifact pins, 46 unique ordered field locators, original literal values and missing representations, full field provenance, source dataset/revision/schema/transform, raw semicolon-token order and whitespace, layer/general/alias domains, unknown closure, unmapped/unselected state, absent review timestamps, disabled eligibility, rights and attribution notices, and no mutation assertions. All **46 literal/provenance/state comparisons MATCH**. Deterministic serialization independently reproduces the exact payload bytes using UTF-8, sorted keys and fixed separators, with no volatile timestamp or trailing newline.
 
@@ -50,4 +55,4 @@ Dossier outcomes remain **ACCEPT 0 / REJECT 0 / UNKNOWN 3 / DEFER 43**. Missing 
 
 All source/provenance/sidecar fingerprints match both the initial preflight and the post-comparison check. Initial sanitized preflight reports are preserved byte-for-byte at private `data/INITIAL_PREFLIGHT_PUBLIC_REPORT.json` and `.md`, with snapshot hashes recorded in the current JSON report. No earlier failure or preflight evidence was erased. No independent data finding remains for this exact payload.
 
-Next action: coordinator completes independent implementation review and rebinds this data comparison if the implementation source changes. Any changed payload must receive another 46-slot comparison. Unchanged payload bytes may retain the same literal comparison while a later source checkpoint is separately recorded. Human/canonical acceptance remains PENDING regardless of agent comparison results.
+Next action: coordinator completes independent implementation review and controlled private publication against this exact payload hash. Any subsequent changed implementation source requires an explicit review rebind; any changed payload requires another 46-slot comparison. Human/canonical acceptance remains PENDING regardless of agent comparison results.

@@ -214,3 +214,7 @@ Main `168715bc9bc5fff968524074257dc106a8a63638` includes Owner-merged PR28; all 
 - [[IMP_ENR_01_Preflight.json]] — exact authority/pins/protection.
 - [[IMP_ENR_01_Architecture_Compatibility]] — fresh preimplementation gate/matrix.
 - [[IMP_ENR_01_Independent_Data_Review]] — independent46-slot review; completion status is explicit.
+
+- [[IMP_ENR_01_Field_Review_Mapping]] —46sanitized locator/state/outcome rows.
+- [[IMP_ENR_01_Implementation_Boundary]] —actualfunctions, scope and limits.
+- [[IMP_ENR_01_Implementation_Review.json]], [[IMP_ENR_01_Offline_Regression.json]], [[IMP_ENR_01_Private_Publication.json]] —exact independent/regression/publication evidence.

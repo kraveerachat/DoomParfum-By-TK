@@ -65,9 +65,23 @@
   "final_readiness_qualification": "Independent agent data comparison complete for exact payload/source-file hash only; independent implementation review, final source rebind if changed, publication and Owner approval are coordinator gates.",
   "final_receipt_created": false,
   "findings": [],
+  "fresh_pinned_buffer_field_comparisons": 46,
+  "fresh_rebind_verification": {
+    "all_six_raw_files_rehashed_before_parse": true,
+    "fresh_selected_slot_comparisons": 46,
+    "fresh_strict_csv_populations": [
+      1479,
+      160,
+      420
+    ],
+    "human_canonical_acceptance": "PENDING",
+    "negative_controls_reexecuted": 18,
+    "payload_hash_unchanged": true,
+    "same_verified_csv_buffers_parsed": true
+  },
   "git_commit_independently_resolved_by_this_role": false,
   "human_owner_acceptance": "PENDING",
-  "implementation_file_sha256_at_review": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+  "implementation_file_sha256_at_review": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
   "independent_agent_not_owner_human": true,
   "initial_preflight_preserved": {
     "json_sha256": "a4cb48a87576254794eca95ee25f97d2373be7012cfbceef236fda8437097df2",
@@ -152,10 +166,24 @@
     }
   },
   "phase": "AGENT_DATA_REVIEW_COMPLETE",
+  "previous_review_checkpoint": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "previous_review_preserved": {
+    "checkpoint": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+    "implementation_file_sha256": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+    "json_sha256": "a8177f972c5e7ba76a99b18453dee6522e4bccc7fb1b9c343df273edf0581a55",
+    "md_sha256": "113dc8a4b79bb9217811b1944c512830b692b3e9633bc071eb94aeb4e1b87c9b",
+    "private_snapshot_files": [
+      "data/REVIEW_892b725_PUBLIC.json",
+      "data/REVIEW_892b725_PUBLIC.md",
+      "data/REVIEW_892b725_verify_candidate_independently.py",
+      "data/REVIEW_892b725_CANDIDATE_DATA_REVIEW.json"
+    ]
+  },
   "private_baseline_path": "data/PINNED_FIELD_BASELINE_PRIVATE.json",
   "private_baseline_sha256": "c1118322d9d40de4d52a263531c4e726f6d8f823fb2eff22d2590d215d3bbda9",
   "private_payload_bytes": 33953,
   "private_payload_sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9",
+  "rebind_reason": "Coordinator safety correction changes source read bounds; independent data review confirms exact same payload and all pinned literals; behavior security remains implementation reviewer scope.",
   "retained_sidecar_states": {
     "activation_false": 1479,
     "held": 44,
@@ -783,7 +811,7 @@
       "source_key": "bergamot"
     }
   ],
-  "source_commit_provided_by_coordinator": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "source_commit_provided_by_coordinator": "4fdbd29b3f345fcbce3eb08862748672657ef22c",
   "source_pins": {
     "LICENSE": {
       "bytes": 188,

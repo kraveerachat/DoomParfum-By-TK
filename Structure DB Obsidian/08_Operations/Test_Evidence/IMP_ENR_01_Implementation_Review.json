@@ -1,0 +1,128 @@
+{
+  "task": "IMP-ENR-01",
+  "review_type": "Independent corrected exact-source implementation review",
+  "reviewer": "/root/enr_implementation_review",
+  "independence": "Reviewer did not implement the production module, project tests, architecture review or data review. Reviewer wrote only ignored private review helpers, probes, logs and reports.",
+  "source_commit": "4fdbd29b3f345fcbce3eb08862748672657ef22c",
+  "previous_reviewed_commit": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "base": "81b281acb418af230746bb00fb923e60509e8e92",
+  "branch": "codex/imp-enr-01-offline-preview",
+  "source_bindings": {
+    "database/scento_preview.py": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
+    "database/tests/test_scento_preview.py": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef"
+  },
+  "decision": "IMPLEMENTATION_REVIEW_PASS_WITH_RECORDED_LIMITS",
+  "open_implementation_findings": 0,
+  "resolved_findings": [
+    {
+      "id": "IR-ENR-IMPL-001",
+      "author_evidence_aliases": [
+        "IR-001",
+        "IR001"
+      ],
+      "initial_severity": "P2 / MEDIUM",
+      "status": "RESOLVED_BY_INDEPENDENT_EXACT_COMMIT_RETEST",
+      "initial_source_line": "database/scento_preview.py:138 at 892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+      "corrected_source_lines": [
+        129,
+        139,
+        143,
+        144,
+        169,
+        416,
+        441,
+        443,
+        444,
+        446
+      ],
+      "correction_verified": "_read_regular requires expected_size, checks descriptor regular-file mode and exact st_size before any read, reads only expected_size+1, and rejects a nonexact returned length. Pinned callers pass fixed pin sizes and retain complete hash checks. Candidate readback uses known canonical payload length. Rollback first reconstructs expected pinned payload/manifest, then reads historical files using their deterministic expected lengths. No caller-provided pin or payload override was added.",
+      "reproduction_and_retest": {
+        "RR-P01": "Original oversized source fixture rejected PIN_MISMATCH before any descriptor data read.",
+        "RR-P02": "Reviewer appended 17 bytes to an owned disposable source after genuine fstat returned expected metadata. A single read of at most 780684 bytes returned 780684 and rejected PIN_MISMATCH. No fake source metadata or large allocation was required.",
+        "RR-P03": "Reviewer truncated an owned disposable source after genuine fstat. Finite read returned 0 and rejected PIN_MISMATCH.",
+        "RR-P04": "Successful source load/publication used six pin.size+1 read limits and payload readback limit 33954; returned lengths were exactly pinned sizes and payload 33953.",
+        "RR-P05": "Original oversized rollback payload rejected PUBLICATION_FAILED before reading the payload. Expected source was rebuilt first; prior pointer stayed byte-identical.",
+        "RR-P06": "Oversized rollback manifest rejected before reading manifest bytes; prior pointer stayed byte-identical.",
+        "RR-P07": "Successful rollback used finite source/payload bounds and a 162-byte manifest read limit for the exact 161-byte canonical manifest.",
+        "RR-P08": "Same-size modified source remained rejected by complete SHA-256 pin validation; new length checks do not weaken content validation."
+      },
+      "actual_disposition": "Closed only after reviewer read the committed production/test delta and independently executed all eight controls plus the 55-method focused suite against the bound corrected files.",
+      "initial_failure_preservation": "INITIAL_REVIEW.json/.md, PROBE_RESULTS.json, METADATA_RESULTS.json, JUNCTION_RESULTS.json and FOCUSED_REVIEW_RUN.log remain byte-identical. Initial finding/failure evidence is not overwritten by this separate report."
+    }
+  ],
+  "scope_review": {
+    "production_delta": "Only bounded read helper/calls and expected rollback manifest construction changed. No field, source key, ordinal, source pin, transform/schema, raw-state, normalization, selection, rights, scorer, application or publication-pointer policy changed.",
+    "tests_delta": "Six regression methods and two private test helpers added. Negative size/read/growth/rollback controls are behavior-sensitive and failed against the prior implementation; payload identity control passed before and after.",
+    "remaining_initial_assessment": "Initial exact-source review of all module/tests and contract boundaries remains applicable to unchanged code. Corrected source delta inspected in full. No additional blocking implementation defect identified.",
+    "protected_git_surfaces": "Corrected-commit diff contains no change to either frozen contract/packet, migrations, matching_math or prior receipts. Initial base comparison verified 25 receipts, 8 migrations and 38 matching files unchanged; correction retains those exact blobs.",
+    "canonical_payload": "33953 bytes, SHA-256 16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9; independently recomputed unchanged.",
+    "test_quality_limits": "The focused T27 no-stdout/fixed-path test alone does not prove a whole-Git secret/raw-data scan. Mocked reparse tests alone do not establish actual Windows junction behavior. Those limits remain explicit rather than being converted into PASS.",
+    "publication_limits": "Actual Windows sharing-denial pointer preservation was independently tested on initial source. Pointer transition/locking code is unchanged in this correction; focused publication failure/rollback/cleanup tests rerun. No new actual platform experiment or machine/power-loss durability claim made."
+  },
+  "independent_execution": {
+    "command": "python .local/imp-enr-01/implementation_review/rereview_probes.py",
+    "runner": "unittest.TextTestRunner; only explicitly loaded test_scento_preview module",
+    "python": "3.11.9",
+    "methods_executed": 55,
+    "passed": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 4.136255399964284,
+    "property_methods": 3,
+    "property_iterations_separate": 512,
+    "reviewer_owned_probe_controls_separate": 8,
+    "source_directory_artifacts_hashed": 7,
+    "protected_audit_sidecars_hashed": 3,
+    "source_and_sidecars_unchanged": true,
+    "initial_review_evidence_unchanged": true,
+    "module_and_test_hashes_match_commit_before_and_after": true,
+    "git_status_immediately_after_probe_run": "clean",
+    "git_diff_check_exit": 0,
+    "later_worktree_note": "Separate assigned data-review documentation may change after this runtime snapshot. That does not alter the source/test commit reviewed here."
+  },
+  "retained_author_evidence_inspected": {
+    "not_a_reviewer_rerun": true,
+    "behavioral_red": "55 methods, 50 passed, 5 failures, 0 errors/skips against old module SHA-256 302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb and new tests SHA-256 d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef.",
+    "green": "Author report records 55/55 on corrected module; reviewer independently reran these methods as reported separately above.",
+    "preserved_files_hash_check": "All 8 files bound by IMP_ENR_01_Read_Bounds_Correction.json matched their recorded SHA-256 values, including original failed log and old module/new test snapshots."
+  },
+  "not_run_or_not_claimed": [
+    "Fresh full 194-method regression: coordinator-owned; reviewer ran only 55 focused methods",
+    "Independent 46-slot source data dossier: separate assigned data reviewer",
+    "Whole-Git secret/raw-data scan, sanitized public publication and packaging review: coordinator-owned",
+    "Actual Windows symlink/junction rejection: initial creation unavailable; NOT RUN, no repeated experiment",
+    "POSIX FIFO/device/platform controls: NOT RUN on this Windows host",
+    "Hostile concurrent directory-ancestor replacement: outside explicit local trust assumption",
+    "Directory-entry durability through machine/power failure: NOT VERIFIED",
+    "Current DB/SQL/RLS/auth/roles/Docker/live source-rights/image/scorer acceptance",
+    "Remote PR state, final Draft PR, receipt/handoff ZIP and final agent readiness",
+    "Human Owner acceptance, canonical selection, merge or Production deployment"
+  ],
+  "evidence": [
+    "rereview_probes.py",
+    "RE_REVIEW_PROBE_RESULTS.json",
+    "RE_REVIEW_FOCUSED.log",
+    "INITIAL_REVIEW.json",
+    "INITIAL_REVIEW.md"
+  ],
+  "tools": {
+    "used": [
+      "Caveman skill",
+      "PowerShell",
+      "read-only Git CLI",
+      "Python stdlib/unittest/mock",
+      "apply_patch for ignored reviewer helpers/reports only"
+    ],
+    "requested_but_not_used": [],
+    "new_tools_or_configuration": [],
+    "git_write": false,
+    "tracked_document_or_obsidian_write": false,
+    "production_mutation": false
+  },
+  "next_action": "Coordinator completes separate data-review, full offline regression, public sanitization, documentation and Draft PR/receipt/handoff gates. Human Owner review and merge remain pending. Any further production module or project test change requires affected retesting and renewed exact-source review.",
+  "public_copy_provenance": {
+    "original_private_report_sha256": "9e30897e68d39a27886141495058f8d81cc40cfe7e3dea51dbb248c57e82ab82",
+    "change": "Absolute local paths aliased; findings/results/source hashes unchanged; original report retained"
+  }
+}
