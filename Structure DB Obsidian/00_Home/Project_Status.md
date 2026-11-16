@@ -512,3 +512,7 @@ registry, not an immutable receipt rewrite. matching_math/evidence/b1_file_manif
 Agent criteria met;Human Owner reviews/accepts/merges. No real activation or automatic merge.
 All earlier INPROGRESS/NOTAPPROVED statements are dated history. Exact synthetic approval doesnot
 authorize imports/assetbytes/realranking/DB/Production or44hold/eligibility changes. PR8stillBLOCKED.
+
+## DPT-PLAN-010 independent architecture checkpoint — 2026-11-16
+
+Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: four initial P2 design findings resolved, four companion correction groups reviewed, zero open documentation findings; 13 named static verification groups. See [[DPT-PLAN-010_System_Architecture_Refinement]] and [[Architecture_Independent_Review.json]]. All new design choices remain PROPOSED; no Owner option acceptance, IMP-ENR-01 start, implementation or Production change. Original failed findings/oracles remain retained. Draft/receipt/handoff publication follows separately.
