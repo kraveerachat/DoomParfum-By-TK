@@ -1,0 +1,573 @@
+{
+  "task": "DPT-PLAN-010",
+  "base": "168715bc9bc5fff968524074257dc106a8a63638",
+  "status": "PROPOSED",
+  "runtime_security_tests": "NOT RUN",
+  "trust_boundaries": [
+    {
+      "id": "TB-SEC-01",
+      "name": "Browser to application service",
+      "from_components": [
+        "C-UI-PAGES"
+      ],
+      "to_components": [
+        "C-TRANSPORT",
+        "C-AUTHN",
+        "C-AUTHZ"
+      ],
+      "interfaces": [
+        "IF-AUTH-SESSION-1"
+      ],
+      "rule": "Treat all IDs, headers, filters, claimed roles and DTO fields as untrusted; validate session proof at the service. Browser authentication does not prove a PostgreSQL login."
+    },
+    {
+      "id": "TB-SEC-02",
+      "name": "Service to PostgreSQL",
+      "from_components": [
+        "C-PRINCIPAL",
+        "C-PG-READ",
+        "C-PG-WRITE"
+      ],
+      "to_components": [
+        "C-PG-SCHEMA"
+      ],
+      "interfaces": [
+        "IF-PRINCIPAL-LEASE-1"
+      ],
+      "rule": "Lease a genuine nonadmin LOGIN connection for the exact authenticated subject; retain immutable session_user mapping, current privilege checks, RLS and transaction cleanup."
+    },
+    {
+      "id": "TB-SEC-03",
+      "name": "Application to media objects",
+      "from_components": [
+        "C-APP-MEDIA"
+      ],
+      "to_components": [
+        "C-ASSET-VALIDATOR",
+        "C-ASSET-STORE"
+      ],
+      "interfaces": [
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1"
+      ],
+      "rule": "Resolve only authorized metadata, then operation-specific source and asset rights; private object keys and hashes are not bearer grants."
+    },
+    {
+      "id": "TB-SEC-04",
+      "name": "Intake to reviewed canonical selection",
+      "from_components": [
+        "C-SOURCE-CAPTURE",
+        "C-REVIEW-DATA"
+      ],
+      "to_components": [
+        "C-APP-REVIEW",
+        "C-PG-WRITE"
+      ],
+      "interfaces": [
+        "IF-SOURCE-INTAKE-REQUEST-1",
+        "IF-REVIEW-DECISION-WRITE-1"
+      ],
+      "rule": "Acquisition, raw claims, normalization proposals, review decisions, selected fields and eligibility remain independent gated records."
+    },
+    {
+      "id": "TB-SEC-05",
+      "name": "Private operational data to browser/storage/audit",
+      "from_components": [
+        "C-APP-CATALOGUE",
+        "C-APP-MATCH",
+        "C-APP-PRIVATE"
+      ],
+      "to_components": [
+        "C-UI-PAGES",
+        "C-AUDIT"
+      ],
+      "interfaces": [
+        "IF-SESSION-END-1",
+        "IF-PRIVATE-SETTINGS-1"
+      ],
+      "rule": "Project only authorized fields; no persistent operational browser/shared caches, secrets, private payload logs or cross-principal state reuse."
+    }
+  ],
+  "authorization_gates": [
+    {
+      "id": "G-SEC-01",
+      "name": "Authenticate and validate request",
+      "interfaces": [
+        "IF-AUTH-SESSION-1"
+      ],
+      "components": [
+        "C-TRANSPORT",
+        "C-AUTHN",
+        "C-DTO"
+      ],
+      "before": "Any user-bound lookup",
+      "requires": "Validated server-side session proof; exact DTO schema and explicit operation; no browser identity override."
+    },
+    {
+      "id": "G-SEC-02",
+      "name": "Lease genuine principal",
+      "interfaces": [
+        "IF-PRINCIPAL-LEASE-1"
+      ],
+      "components": [
+        "C-PRINCIPAL",
+        "C-PG-READ"
+      ],
+      "before": "Any restricted database operation",
+      "requires": "Exact subject-to-LOGIN server binding, session_user=current_user, nonadmin effective privileges, fresh transaction, immutable subject/scope ownership."
+    },
+    {
+      "id": "G-SEC-03",
+      "name": "Authorize object and field scope",
+      "interfaces": [
+        "IF-CATALOGUE-QUERY-1",
+        "IF-PROFILE-READ-1",
+        "IF-COMPARISON-READ-1",
+        "IF-PERSONAL-STATE-READ-1",
+        "IF-COLLECTION-READ-1",
+        "IF-DASHBOARD-READ-1"
+      ],
+      "components": [
+        "C-AUTHZ",
+        "C-PG-READ"
+      ],
+      "before": "Restricted lookup, counts, pagination, aggregates or source details",
+      "requires": "Current ownership/shared membership and allowed field/source provenance; public entity visibility does not publish private related records."
+    },
+    {
+      "id": "G-SEC-04",
+      "name": "Recheck source/asset operation rights",
+      "interfaces": [
+        "IF-RIGHTS-REVIEW-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1",
+        "IF-BUYING-SOURCES-READ-1"
+      ],
+      "components": [
+        "C-AUTHZ",
+        "C-APP-MEDIA",
+        "C-PG-READ"
+      ],
+      "before": "Use, render or read/deliver bytes and after long processing",
+      "requires": "Current grant, purpose/audience/action, evidence binding, review deadline, revocation and full derivative lineage; unknown denies."
+    },
+    {
+      "id": "G-SEC-05",
+      "name": "Validate matching eligibility and partition",
+      "interfaces": [
+        "IF-CAPABILITY-READ-1",
+        "IF-MATCH-VALIDATE-1",
+        "IF-MATCH-EXECUTE-1"
+      ],
+      "components": [
+        "C-AUTHZ",
+        "C-APP-MATCH",
+        "C-DOMAIN-REAL"
+      ],
+      "before": "Candidate expansion and scoring",
+      "requires": "Authorized selected observations, policy/version compatibility, completeness, no conflict/hold, accepted real-data contract; synthetic remains separate."
+    },
+    {
+      "id": "G-SEC-06",
+      "name": "Authorize private/reviewer mutation",
+      "interfaces": [
+        "IF-PERSONAL-STATE-WRITE-1",
+        "IF-BUYING-SOURCE-WRITE-1",
+        "IF-PURCHASE-STATUS-WRITE-1",
+        "IF-PURCHASE-RECORD-WRITE-1",
+        "IF-COLLECTION-WRITE-1",
+        "IF-REVIEW-DECISION-WRITE-1",
+        "IF-SOURCE-INTAKE-REQUEST-1",
+        "IF-ASSET-INTAKE-REQUEST-1"
+      ],
+      "components": [
+        "C-AUTHZ",
+        "C-PG-WRITE",
+        "C-APP-PRIVATE",
+        "C-APP-REVIEW"
+      ],
+      "before": "Any future write or intake",
+      "requires": "Exact object/action permission, replay/version protection and separate approved task; no generic admin browser endpoint."
+    },
+    {
+      "id": "G-SEC-07",
+      "name": "Project safe response and ephemeral state",
+      "interfaces": [
+        "IF-MEDIA-DELIVER-1",
+        "IF-MATCH-EXECUTE-1",
+        "IF-CATALOGUE-QUERY-1"
+      ],
+      "components": [
+        "C-AUTHZ",
+        "C-DTO",
+        "C-TRANSPORT"
+      ],
+      "before": "Response, error, log or UI update",
+      "requires": "Final authorization/rights check, uniform private unavailable result, no restricted IDs/counts/paths, no-store operational response and redacted audit."
+    },
+    {
+      "id": "G-SEC-08",
+      "name": "Revoke and release",
+      "interfaces": [
+        "IF-SESSION-END-1",
+        "IF-PRINCIPAL-LEASE-1"
+      ],
+      "components": [
+        "C-AUTHN",
+        "C-PRINCIPAL",
+        "C-AUDIT"
+      ],
+      "before": "Reuse, logout, expiry or cancellation completion",
+      "requires": "Abort/rollback request, invalidate session and in-flight publication, clear UI buffers, discard suspect connections, verify fresh lease; no cross-principal reuse."
+    }
+  ],
+  "cache_operations": [
+    {
+      "id": "CACHE-01",
+      "operation": "C-UI-SHELL",
+      "data_class": "Static UI assets",
+      "data": "Content-hashed UI code, styles and generic icons only",
+      "allowed_location": "Ordinary browser HTTP cache only for independently approved immutable public shell files",
+      "cache_key": "Build/content hash + resource variant; no user or catalogue payload",
+      "scope_binding": "Public build artifact only",
+      "lifetime": "Content identity/build lifecycle; numeric TTL not selected",
+      "invalidation_trigger": "New build/hash or withdrawn asset",
+      "revocation_behavior": "Stop future fetch and remove managed copies where possible; already delivered assets cannot be recalled",
+      "offline_behavior": "Previously cached generic shell may render; every operational feature remains Offline/Unavailable",
+      "security_risk": "Embedding private initial state or licensed catalogue/media in a shell bypasses policy",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-02",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "data_class": "Authorized public catalogue data",
+      "data": "Catalogue fields proven public for this exact projection",
+      "allowed_location": "Request memory and current authorized render only; HTTP no-store",
+      "cache_key": "No reusable cache; request + public projection + source/selection/rights versions",
+      "scope_binding": "Exact public fields and purpose, after current rights checks",
+      "lifetime": "Current request/render only; no numeric TTL",
+      "invalidation_trigger": "Source/right/review/selection/schema change or navigation/session end",
+      "revocation_behavior": "Recheck before every operation; discard pending projection and best-effort clear render",
+      "offline_behavior": "Unavailable offline; public entity scope alone does not allow retained source data",
+      "security_risk": "Public perfume identity can be combined with private source fields or unsupported cache permission",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-03",
+      "operation": "IF-PERSONAL-STATE-READ-1",
+      "data_class": "User-private catalogue overlays",
+      "data": "Private notes, annotations, wishlist/research/app_cart/tried/skipped states and user overlays",
+      "allowed_location": "Request memory and current principal-bound render only; HTTP no-store",
+      "cache_key": "No reusable cache; request + exact principal/scope + membership/rights/projection versions",
+      "scope_binding": "One verified principal and authorized scope/action",
+      "lifetime": "Current request/render only; no numeric TTL",
+      "invalidation_trigger": "Logout, expiry, principal/scope/membership/rights or overlay version change",
+      "revocation_behavior": "Deny next operation; clear render and request buffers; cancel stale response publication",
+      "offline_behavior": "Unavailable offline; no local history or deferred replay",
+      "security_risk": "Cross-user overlays leaked by shared response keys, SSR data or browser persistence",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-04",
+      "operation": "IF-MATCH-EXECUTE-1",
+      "data_class": "Matching requests/results",
+      "data": "Queries, candidate projections, exact rational results and explanations",
+      "allowed_location": "Request memory and current authorized render only; HTTP no-store; no query history",
+      "cache_key": "No reusable cache; request + principal/scope + exact query, partition, dataset/selection, vocabulary, normalization, method/config and rights versions",
+      "scope_binding": "One authorized request and compatible partition; no cross-user deduplication",
+      "lifetime": "Current request/render only; no numeric TTL",
+      "invalidation_trigger": "Any query/config/selection/eligibility/rights/member change, logout or cancellation",
+      "revocation_behavior": "Recheck before candidate use/scoring and publication; discard stale results",
+      "offline_behavior": "Unavailable offline; no stale score fallback or synthesized 0%",
+      "security_risk": "A score, rank, candidate count or explanation can disclose restricted evidence",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-05",
+      "operation": "IF-BUYING-SOURCES-READ-1",
+      "data_class": "Buying sources",
+      "data": "Seller links, recorded listing prices, manual Ordered bookmark stamps and separate owner-private manual purchase-history records with optional paid price, volume, date and seller",
+      "allowed_location": "Request memory and current authorized render only; HTTP no-store",
+      "cache_key": "No reusable cache; request + principal/scope + listing/status/purchase-record and rights versions",
+      "scope_binding": "Caller-owned/authorized listing and purchase-history records; Cart remains a bookmark list",
+      "lifetime": "Current request/render only; no numeric TTL",
+      "invalidation_trigger": "Listing, permission, status, purchase-record, principal or scope change and logout",
+      "revocation_behavior": "Clear render; deny revoked links/details; no automatic external-cart action",
+      "offline_behavior": "Unavailable offline; no queued orders or status/history writes",
+      "security_risk": "Private seller choices, paid prices, purchase history, stale prices and external link requests can reveal preferences",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-06",
+      "operation": "IF-COLLECTION-READ-1",
+      "data_class": "Collection data",
+      "data": "Owned items, ownership history and personal dashboard aggregates",
+      "allowed_location": "Request memory and current authorized render only; HTTP no-store",
+      "cache_key": "No reusable cache; request + principal/scope + collection version",
+      "scope_binding": "Current owner/authorized records; aggregate only after object filtering",
+      "lifetime": "Current request/render only; no numeric TTL",
+      "invalidation_trigger": "Collection mutation, membership/scope change, logout or expiry",
+      "revocation_behavior": "Clear detail and aggregate renders; reject pending writes under stale session",
+      "offline_behavior": "Unavailable offline; no offline mutation queue",
+      "security_risk": "Shared dashboards/counts can disclose ownership or another user collection",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-07",
+      "operation": "IF-MEDIA-DELIVER-1",
+      "data_class": "Media binaries",
+      "data": "Authorized original or separately approved derivative bytes",
+      "allowed_location": "Bounded request buffer and current authorized display only; HTTP no-store; no CDN/public bucket",
+      "cache_key": "No reusable cache; request + principal/scope + asset hash/binding + operation/audience + rights/lineage versions",
+      "scope_binding": "Exact asset and audience; display is distinct from acquire/transform/redistribute/cache",
+      "lifetime": "Current authorized delivery/render only; no numeric TTL",
+      "invalidation_trigger": "Asset binding/hash, parent rights, expiry, revocation, session or audience change",
+      "revocation_behavior": "Check before read and final delivery; cancel outstanding reads best effort; bytes already delivered cannot be erased",
+      "offline_behavior": "Unavailable offline; generic unlicensed placeholder shell icon only",
+      "security_risk": "Public URLs, content hashes, stale blob URLs or signed links may expose restricted assets",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    },
+    {
+      "id": "CACHE-08",
+      "operation": "IF-RIGHTS-REVIEW-1",
+      "data_class": "Rights/permission decisions",
+      "data": "Allow/deny facts, expiry, membership and selected-field grants",
+      "allowed_location": "Fresh authorization reads plus request-local checks; no reusable allow decision",
+      "cache_key": "No reusable cache; request + principal/scope + action/audience + exact rights, review, membership and lineage versions",
+      "scope_binding": "Exact operation; source grants and application permissions both required",
+      "lifetime": "Current operation only; recheck after processing and before each next operation",
+      "invalidation_trigger": "Any grant/member/review/dependency change, deadline or revocation",
+      "revocation_behavior": "Fail closed; no stale-while-revalidate or background refresh that permits use",
+      "offline_behavior": "Deny operational use offline; absence of current proof is Unavailable",
+      "security_risk": "Cached allow decisions can survive revocation and wrongly authorize counts, scores or bytes",
+      "status": "PROPOSED; NOT IMPLEMENTED"
+    }
+  ],
+  "lifecycle_transitions": [
+    {
+      "id": "LC-01",
+      "transition": "Source discovery",
+      "preconditions": "No content capture requested; metadata-only research scope accepted",
+      "evidence": "Candidate URL, publisher and intended purpose, rights unknown",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Authorized researcher",
+      "allowed_operations": "Record a lead; no raw bytes or ingestion",
+      "rollback_withdrawal_revocation": "Withdraw lead; preserve provenance and denial history",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-02",
+      "transition": "Permission verification",
+      "preconditions": "Exact candidate identity and intended actions recorded",
+      "evidence": "Authority, terms/license revision, action/audience flags, expiry, evidence location",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Rights reviewer",
+      "allowed_operations": "Record allowed/denied/unknown actions; no acquisition",
+      "rollback_withdrawal_revocation": "Supersede assessment; unknown, expired or revoked actions deny",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-03",
+      "transition": "Acquisition approval",
+      "preconditions": "Permission supports exact method, fields/files, source revision and purpose",
+      "evidence": "Owner-approved bounded acquisition task, allowlist, attribution and rollback plan",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Human Owner",
+      "allowed_operations": "Approve only named capture; no implied linked pages or images",
+      "rollback_withdrawal_revocation": "Withdraw pending task; cancel future capture and review permitted retention",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-04",
+      "transition": "Raw capture",
+      "preconditions": "Separate task approved; permissions rechecked immediately before action",
+      "evidence": "Immutable capture revision, timestamp, ordinal, byte/content hash and provenance",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Bounded intake operator",
+      "allowed_operations": "Capture only approved fields/bytes to isolated staging",
+      "rollback_withdrawal_revocation": "Quarantine/withdraw access; retention deletion needs separately reviewed operation",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-05",
+      "transition": "Validation",
+      "preconditions": "Raw evidence isolated; no canonical promotion",
+      "evidence": "Schema/type/size/rights checks, versions, failures and exact source linkage",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Validator and operator",
+      "allowed_operations": "Produce technical validation outcomes; no right granted by validation",
+      "rollback_withdrawal_revocation": "Quarantine failures; rerun new validator version without rewriting raw claims",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-06",
+      "transition": "Normalization proposal",
+      "preconditions": "Validated raw claim and explicit transform policy",
+      "evidence": "Proposal version, input references, transform version, conflicts and unknown states",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Proposal author",
+      "allowed_operations": "Propose mappings; preserve original occurrence and unresolved alternatives",
+      "rollback_withdrawal_revocation": "Supersede proposal; preserve 43 existing proposals and 44 holds",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-07",
+      "transition": "Human review",
+      "preconditions": "Exact proposal, source evidence, rights and conflict dossier available",
+      "evidence": "Named reviewer decision, version, reasons, permitted fields and audience",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Authorized human reviewer",
+      "allowed_operations": "Accept/reject/hold a proposal for an explicit later operation",
+      "rollback_withdrawal_revocation": "Withdraw decision with audit; never erase conflicting Khamrah observations",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-08",
+      "transition": "Canonical selection",
+      "preconditions": "Reviewed choice and separate mutation approval; current rights valid",
+      "evidence": "Versioned selected claim links, provenance, field-specific rights, prior selection",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Authorized curator in approved task",
+      "allowed_operations": "Select named fields without rewriting raw observations",
+      "rollback_withdrawal_revocation": "Withdraw/supersede selection; invalidate dependent views and preserve prior versions",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-09",
+      "transition": "Eligibility evaluation",
+      "preconditions": "Selected fields and exact real-data policy separately accepted",
+      "evidence": "Selection snapshot, vocabulary/normalization/method versions, completeness and conflict/hold evaluation",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Authorized policy evaluator",
+      "allowed_operations": "Produce purpose-specific eligible/blocked/unknown decision; no score activation",
+      "rollback_withdrawal_revocation": "Invalidate decision on dependency change, expiry, revocation or hold; reevaluate",
+      "status": "PROPOSED"
+    },
+    {
+      "id": "LC-10",
+      "transition": "Authorized projection",
+      "preconditions": "Current principal, action, scope, selected evidence and operation-specific rights pass; LC-09 required additionally only for matching, not independently permitted factual display or per-asset media",
+      "evidence": "Request-bound subject/scope, rights and selection versions; safe projection/audit result; real method/config and eligible decision additionally for scoring only",
+      "version": "PROPOSED lifecycle contract v1; exact record/source/review/policy versions required",
+      "actor": "Future authorized service",
+      "allowed_operations": "Project permitted factual fields or separately cleared media independently of matching; scoring additionally requires LC-09. Authorize before lookup/count/page/bytes",
+      "rollback_withdrawal_revocation": "Stop future operations; cancel unfinished delivery best effort; clear local buffers without claiming delivered bytes erased",
+      "status": "PROPOSED",
+      "predecessors_by_operation": {
+        "factual_display": [
+          "LC-08",
+          "current field/display rights and principal gates"
+        ],
+        "matching": [
+          "LC-08",
+          "LC-09",
+          "accepted real method/config and all matching gates"
+        ],
+        "media": [
+          "separate asset/source lineage and display rights",
+          "principal/object gates"
+        ]
+      }
+    }
+  ],
+  "security_tests": [
+    {
+      "id": "SEC-N01",
+      "name": "Forged browser identity",
+      "scenario": "Forge user UUID, claimed role, scope header and principal DTO while holding another session.",
+      "acceptance": "Service ignores client identity claims; no principal lease or restricted lookup for forged subject.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N02",
+      "name": "Admin/BYPASSRLS and origin",
+      "scenario": "Try superuser, BYPASSRLS, owner membership, direct excessive ACL and initially-admin impersonated connection.",
+      "acceptance": "Lease rejected before object access, even if identity equality holds after impersonation.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N03",
+      "name": "Cross-user object access",
+      "scenario": "Use valid private perfume, buying-source, collection and asset IDs owned by another principal.",
+      "acceptance": "Uniform private Unavailable; no object fields, identifiers, counts or paths disclosed.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N04",
+      "name": "Role/GUC substitution",
+      "scenario": "Change SET ROLE, custom GUC, request header or claimed auth_subject instead of genuine LOGIN.",
+      "acceptance": "No identity substitution accepted; session_user contract and equality gate remain intact.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N05",
+      "name": "Stale membership",
+      "scenario": "Revoke a shared membership between operations and while a response is prepared.",
+      "acceptance": "Fresh next operation denies; final check discards unpublished response and clears stale UI state.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N06",
+      "name": "Revoked/expired source rights",
+      "scenario": "Revoke grant or cross review deadline after lookup but before projection/scoring.",
+      "acceptance": "No new counts, score publication or field display from stale permission; no cached allow fallback.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N07",
+      "name": "Unauthorized media and lineage",
+      "scenario": "Deny acquire/display/cache/transform/redistribution independently, including a parent derivative grant.",
+      "acceptance": "No reader callback before authorization; final binding/right change aborts publication; no storage key exposed.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N08",
+      "name": "Pool reuse and cancellation",
+      "scenario": "Interleave owner A and owner B, timeout, exception, rollback and logout on leased connections.",
+      "acceptance": "No cross-principal connection, transaction, prepared state, result buffer or snapshot reuse; suspect lease discarded.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N09",
+      "name": "Public/private relationship leak",
+      "scenario": "Request public entity with private observations, seller rows, collection overlay or media.",
+      "acceptance": "Public entity does not widen related records; projection omits unauthorized fields before aggregates.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N10",
+      "name": "Existence/error/timing leakage",
+      "scenario": "Compare nonexistent, hidden, expired, revoked and unauthorized private IDs and deliberate parser failures.",
+      "acceptance": "Uniform externally observable error shape/class, no restricted IDs/counts/paths; assess timing statistically before acceptance, without claiming perfect constant time.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N11",
+      "name": "Persistent/shared cache leakage",
+      "scenario": "Inspect HTTP/framework/client caches, service workers, IndexedDB, localStorage, SSR payloads and log exports after logout and user switch.",
+      "acceptance": "Operational data is no-store/request-local only; no persistent/shared private entry or hidden query history.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N12",
+      "name": "Rights/selection race and restore",
+      "scenario": "Change selected claim, hold, asset binding or rights while work runs; restore an old backup.",
+      "acceptance": "Revalidate current dependency versions; reject stale publication; restored permission never reactivates withdrawn use automatically.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N13",
+      "name": "Private mutation authorization",
+      "scenario": "Forge collection/status/review writes; retry stale or duplicate write intent.",
+      "acceptance": "Validate exact action, object, version/replay and user scope; no order placement or generic admin operation.",
+      "status": "NOT RUN"
+    },
+    {
+      "id": "SEC-N14",
+      "name": "Logout/offline behavior",
+      "scenario": "Expire/logout session during display, then disconnect and reopen routes.",
+      "acceptance": "New operation denied, pending results discarded, local controlled renders cleared; no stale offline results, automatic replay or promise of remote erasure.",
+      "status": "NOT RUN"
+    }
+  ]
+}

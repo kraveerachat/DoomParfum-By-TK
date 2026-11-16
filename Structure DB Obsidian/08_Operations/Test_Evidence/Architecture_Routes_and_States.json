@@ -1,0 +1,1505 @@
+{
+  "task": "DPT-PLAN-010",
+  "base": "168715bc9bc5fff968524074257dc106a8a63638",
+  "status": "PROPOSED",
+  "route_semantics": "Proposed logical application page routes, not implemented API endpoints or authorization grants.",
+  "state_contract": "All states require safe projection after authorization; internal reasons are not an existence oracle.",
+  "routes": [
+    {
+      "id": "R-CATALOGUE",
+      "path": "/catalogue",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Browse and search caller-authorized perfume identities; independently filter brand origin, positioning and reviewed fields.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "global navigation",
+        "global search",
+        "note/brand chip",
+        "sign-in success"
+      ],
+      "exit_points": [
+        "R-DETAIL",
+        "R-MATCH",
+        "R-COMPARE",
+        "R-CART"
+      ],
+      "child_components": [
+        "search form",
+        "brand/origin/position filters",
+        "price/currentness filters",
+        "perfume cards",
+        "pagination",
+        "capability notices"
+      ],
+      "available_data": [
+        "Future projection of authorized reviewed catalogue identity/profile fields with source/date/rights; actual Python/DB source presence is separate from a UI service."
+      ],
+      "unavailable_features": [
+        "All page handlers and services unimplemented",
+        "No anonymous private suggestions or counts",
+        "Unavailable region/stock/price fields cannot be advertised as complete filters"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-CATALOGUE-QUERY-1",
+        "IF-CAPABILITY-READ-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-CATALOGUE",
+        "C-AUTHN",
+        "C-PRINCIPAL",
+        "C-AUTHZ"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-CATALOGUE-01",
+          "assertion": "Search/filter/pagination authorize before results and counts, including prefetch.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CATALOGUE-02",
+          "assertion": "Unknown price is not zero; filter labels describe observed source/date/currency/size.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CATALOGUE-03",
+          "assertion": "Keyboard card links and independent filters preserve origin versus brand-position distinction.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-DETAIL",
+      "path": "/perfumes/:id",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Inspect exact edition/concentration, notes, accords, provenance and separately permitted evidence.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "R-CATALOGUE",
+        "R-RESULTS",
+        "R-COMPARE",
+        "R-COLLECTION"
+      ],
+      "exit_points": [
+        "R-PYRAMID",
+        "R-MATCH",
+        "R-COMPARE",
+        "R-CART",
+        "R-CATALOGUE"
+      ],
+      "child_components": [
+        "identity header",
+        "bottle media",
+        "overview/notes/accords/evidence/source tabs",
+        "note chips",
+        "find-similar",
+        "seed-query",
+        "compare",
+        "save to cart"
+      ],
+      "available_data": [
+        "Future caller-authorized selected observations; authorized media metadata and bytes are separately gated; no inferred formula."
+      ],
+      "unavailable_features": [
+        "UI unimplemented",
+        "No unreviewed normalization promotion",
+        "No invented layered notes, observed intensity, review score or live price"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-PROFILE-READ-1",
+        "IF-VOCABULARY-READ-1",
+        "IF-CAPABILITY-READ-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1",
+        "IF-PERSONAL-STATE-WRITE-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-CATALOGUE",
+        "C-APP-MEDIA",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-DETAIL-01",
+          "assertion": "Exact edition choice is explicit; a general list is not distributed into top/heart/base.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-DETAIL-02",
+          "assertion": "Missing image uses a semantic placeholder; note artwork does not prove composition.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-DETAIL-03",
+          "assertion": "Tabs expose independent structural fit, data confidence and direct pairwise evidence.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-PYRAMID",
+      "path": "/perfumes/:id/notes",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Provide a focused accessible view of reviewed layer assignments and All Listed Notes when layering is unknown.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "R-DETAIL notes tab",
+        "note section deep navigation"
+      ],
+      "exit_points": [
+        "R-DETAIL",
+        "R-CATALOGUE",
+        "R-MATCH"
+      ],
+      "child_components": [
+        "top/heart-middle/base sections",
+        "All Listed Notes section",
+        "note chip links",
+        "rights attribution",
+        "illustration placeholders",
+        "layer completeness badges"
+      ],
+      "available_data": [
+        "Only authorized notes with selected source lineage, canonical IDs and explicit completeness; illustration and actual note assertion remain distinct."
+      ],
+      "unavailable_features": [
+        "UI unimplemented",
+        "No fabricated chemical formula or scent strength",
+        "No guessing layer assignments from order, name or image"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-PROFILE-READ-1",
+        "IF-VOCABULARY-READ-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-CATALOGUE",
+        "C-APP-MEDIA",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-PYRAMID-01",
+          "assertion": "Partial layers and general notes remain separately labeled.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-PYRAMID-02",
+          "assertion": "Note-chip keyboard activation opens authorized catalogue filter or explicit query seed.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-PYRAMID-03",
+          "assertion": "Known absence needs a compatible complete closed domain; missing data never implies absence.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-MATCH",
+      "path": "/matching",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Author ephemeral Similar to a perfume (A) or Build a scent profile queries, retaining B1 Notes and B2 Accords as distinct tabs.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "global navigation",
+        "R-DETAIL Find similar",
+        "R-DETAIL seed reviewed notes",
+        "R-RESULTS edit"
+      ],
+      "exit_points": [
+        "R-RESULTS",
+        "R-DETAIL",
+        "R-CATALOGUE"
+      ],
+      "child_components": [
+        "mode selector",
+        "exact reference combobox",
+        "B1 must/prefer/exclude clauses",
+        "layer/Any Layer selector",
+        "blocked future all/any/minimum alternative controls; accepted synthetic B1 required-all remains exact",
+        "B2 accord selectors/sliders/numeric inputs",
+        "filters",
+        "add/remove/reset/clear/search/cancel",
+        "safe-link capability"
+      ],
+      "available_data": [
+        "Authorized vocabulary and profile seeds only; exact synthetic M1/B1 source capability is not a real-data UI capability."
+      ],
+      "unavailable_features": [
+        "All handlers unimplemented",
+        "Real A/B1/B2 execution blocked pending exact approvals and eligibility",
+        "B3 deferred",
+        "Private/mixed query sharing unavailable; no synthetic substitution",
+        "Historical match-all/any/minimum alternatives remain blocked pending their own exact method contract; they do not loosen accepted B1 required-all semantics or authorize a generic real-data wrapper around synthetic contracts"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-CATALOGUE-QUERY-1",
+        "IF-PROFILE-READ-1",
+        "IF-VOCABULARY-READ-1",
+        "IF-CAPABILITY-READ-1",
+        "IF-MATCH-VALIDATE-1",
+        "IF-MATCH-EXECUTE-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-CATALOGUE",
+        "C-APP-MATCH",
+        "C-DOMAIN-REAL",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-MATCH-01",
+          "assertion": "Inactive tab draft never affects scoring; Clear empties active query, Reset restores its visible seed, Remove deletes one clause.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-MATCH-02",
+          "assertion": "Sliders update local user preferences only, with keyboard and numeric alternatives; they never fabricate measured candidate intensity.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-MATCH-03",
+          "assertion": "Explicit submit validates bounds/contradictions and capability; real matching stays unavailable without its gates.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-MATCH-04",
+          "assertion": "Seeded private draft remains private; no IDs, private notes or query body enter URLs/logs/shares.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-MATCH-REQUIRED-ALL",
+          "assertion": "Accepted B1 required-all semantics remain unchanged; historical all/any/minimum alternatives and any real-data method require separate exact approved contracts. No generic future real contract relabels real inputs as synthetic.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-RESULTS",
+      "path": "/matching/results",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Present transient authorized results grouped by compatible method/domain/coverage partitions, with explicit incomplete-search limits.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "R-MATCH explicit validated submit"
+      ],
+      "exit_points": [
+        "R-MATCH",
+        "R-DETAIL",
+        "R-COMPARE",
+        "R-CART"
+      ],
+      "child_components": [
+        "query summary",
+        "partition groups",
+        "result cards",
+        "fit explanation disclosure",
+        "coverage/confidence/evidence panels",
+        "compare/save actions",
+        "cancel/retry/narrow filters"
+      ],
+      "available_data": [
+        "Future authorized result DTO for an accepted real method; exact rational ordering retained through ranking; display rounding happens afterward."
+      ],
+      "unavailable_features": [
+        "Page/execution unimplemented",
+        "No real matching activation or synthetic fallback",
+        "No persisted query history or result deep link guarantee",
+        "No cross-partition total ranking"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-CAPABILITY-READ-1",
+        "IF-MATCH-EXECUTE-1",
+        "IF-PROFILE-READ-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1",
+        "IF-PERSONAL-STATE-WRITE-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-MATCH",
+        "C-APP-CATALOGUE",
+        "C-APP-MEDIA",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-RESULTS-01",
+          "assertion": "A valid computed zero can display 0%; no valid score displays Unavailable, never 0%.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-RESULTS-02",
+          "assertion": "Valid Empty requires completed authorized eligible search; missing/held capability does not become zero matches.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-RESULTS-03",
+          "assertion": "Stale responses after query change/session change are ignored; refresh with no memory draft returns to query authoring.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-RESULTS-04",
+          "assertion": "Fit, data confidence and direct pairwise evidence have separate labels and no scientifically measured smell claim.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-COMPARE",
+      "path": "/compare",
+      "group": "DISCOVERY & MATCHING",
+      "purpose": "Compare two authorized real perfume profiles factually; show optional structural scoring only when its own method and eligibility gates pass.",
+      "roles": [
+        "authenticated application user"
+      ],
+      "entry_points": [
+        "R-DETAIL",
+        "R-RESULTS",
+        "R-CATALOGUE compare selection"
+      ],
+      "exit_points": [
+        "R-DETAIL",
+        "R-MATCH",
+        "R-CART",
+        "R-CATALOGUE"
+      ],
+      "child_components": [
+        "two profile selectors",
+        "swap columns",
+        "change candidate",
+        "notes/accords table",
+        "shared/listed-only/unknown labels",
+        "evidence panel",
+        "score explanation",
+        "save alternative"
+      ],
+      "available_data": [
+        "Future authorized profile projections and separately permissioned pairwise evidence; factual comparison does not require a valid score."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No accepted three-column expansion",
+        "No custom B query masquerading as a perfume column",
+        "No evidence-blended percentage or fuzzy spelling treated as canonical equality"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-COMPARISON-READ-1",
+        "IF-CATALOGUE-QUERY-1",
+        "IF-CAPABILITY-READ-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1",
+        "IF-PERSONAL-STATE-WRITE-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-COMPARE",
+        "C-APP-CATALOGUE",
+        "C-APP-MEDIA",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-COMPARE-01",
+          "assertion": "Exactly two distinct authorized real profiles preserve R15 and Compare_View; swapping preserves identity-specific facts; a duplicate identity must be corrected explicitly.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COMPARE-02",
+          "assertion": "Listed only is distinct from absent; highlight canonical ID/layer matches with text, not color alone.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COMPARE-03",
+          "assertion": "Missing or blocked score leaves factual comparison available when both profiles remain authorized.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-CART",
+      "path": "/my-cart",
+      "group": "PERSONAL SHOPPING & COLLECTION",
+      "purpose": "Maintain personal bookmarks, multiple saved buying sources and manually recorded wishlist/research/cart/ordered/tried/skipped states.",
+      "roles": [
+        "authenticated record owner"
+      ],
+      "entry_points": [
+        "global navigation",
+        "save from catalogue/detail/results/compare",
+        "R-COLLECTION re-buy"
+      ],
+      "exit_points": [
+        "R-DETAIL",
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "external browser destination"
+      ],
+      "child_components": [
+        "wishlist/research/to-buy/ordered/history views",
+        "item cards",
+        "duplicate warning",
+        "source add/edit/remove dialog",
+        "observed-price/source-note editor",
+        "open buying link",
+        "manual Ordered/Received forms",
+        "remove/move actions",
+        "informational budget",
+        "manual missing-perfume private proposal panel",
+        "future user-URL/screenshot intake request metadata panel",
+        "explicit own purchase-history record/edit form (optional paid price/date/volume/seller)",
+        "bounded paginated own purchase-history panel, independent from physical inventory"
+      ],
+      "available_data": [
+        "Only owner-scoped saved lists, listings and dated observed prices; exact source/variant/currency/date are retained; fields stay optional where specified.",
+        "IF-PURCHASE-RECORD-READ-1 supplies separately authorized bounded paginated caller-own history, including records with no bottle link; no collection foreign key, paid fact or relationship is inferred. Unknown paid price/date/volume/seller remain explicit unknowns.",
+        "Purchase-history optional paid price/date/volume/seller bind IF-PURCHASE-RECORD-WRITE-1; manual Ordered stamp binds IF-PURCHASE-STATUS-WRITE-1; physical bottle notes/remaining amount/lifecycle bind IF-COLLECTION-WRITE-1. No combined automatic operation is implied."
+      ],
+      "unavailable_features": [
+        "All handlers unimplemented",
+        "No checkout, payment, order placement or automatic Shopee/cart synchronization",
+        "No live seller polling, server-side URL fetching, URL previews/prefetch or automatic availability claims",
+        "R09 screenshot binary intake/OCR remains future and approval-gated; metadata request does not accept bytes",
+        "R20 missing-perfume request stays private unselected proposal; no canonical promotion or source acquisition",
+        "R12 AI assistance/R19 AI ETL remain gated P5 scope, not a matching prerequisite or implemented assistant",
+        "No automatic order, purchase-history or bottle creation; each permitted explicit intent uses its separate proposed interface"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Bind every list, purchase and bottle to the session owner; reviewer role grants no access to another user's private records.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-BUYING-SOURCES-READ-1",
+        "IF-BUYING-SOURCE-WRITE-1",
+        "IF-PURCHASE-STATUS-WRITE-1",
+        "IF-COLLECTION-WRITE-1",
+        "IF-PERSONAL-STATE-READ-1",
+        "IF-PERSONAL-STATE-WRITE-1",
+        "IF-SOURCE-INTAKE-REQUEST-1",
+        "IF-ASSET-INTAKE-REQUEST-1",
+        "IF-PURCHASE-RECORD-WRITE-1",
+        "IF-PURCHASE-RECORD-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-CART-01",
+          "assertion": "External URL activation is an explicit browser-only navigation; no application server fetch, commerce action, private query referrer or automatic state change.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-02",
+          "assertion": "Duplicate bookmark offers open existing/add source; repeat real purchases remain separate history records.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-03",
+          "assertion": "Manual Ordered stamp records the user report of an already external order only. Explicit purchase-history record/edit and explicit physical receipt/bottle recording are separate intents/interfaces; none automatically creates an order, purchase or bottle.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-04",
+          "assertion": "Unknown price is not free and informational totals disclose coverage/currency.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-05",
+          "assertion": "Personal wishlist/research/app_cart/tried/skipped state writes are separate from buying sources, actual purchases and bottle inventory.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-06",
+          "assertion": "R09/R20 private intake request accepts only bounded permitted metadata and never fetches URLs, accepts screenshot bytes, acquires sources or promotes canonical identity.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-PURCHASE-RECORD",
+          "assertion": "Explicit own purchase-history record/edit uses IF-PURCHASE-RECORD-WRITE-1, distinct from bookmark Ordered stamp and physical bottle writes; optional paid fields never overwrite inventory or create an order/purchase/bottle automatically.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-CART-PURCHASE-HISTORY-READ",
+          "assertion": "History panel uses IF-PURCHASE-RECORD-READ-1 with caller ownership before counts/cursors/pages; history without inventory linkage remains readable independently, optional paid facts stay unknown, and no bottle relationship is inferred.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-COLLECTION",
+      "path": "/collection",
+      "group": "PERSONAL SHOPPING & COLLECTION",
+      "purpose": "Manage owner bottle inventory and independent purchase history, including repeat purchases and previously owned items.",
+      "roles": [
+        "authenticated record owner"
+      ],
+      "entry_points": [
+        "global navigation",
+        "R-CART Received",
+        "R-DASHBOARD drill-down"
+      ],
+      "exit_points": [
+        "R-COLLECTION-ITEM",
+        "R-DETAIL",
+        "R-CART",
+        "R-DASHBOARD"
+      ],
+      "child_components": [
+        "current inventory/history tabs",
+        "owned/finished/sold/gifted filters",
+        "bottle cards",
+        "history rows",
+        "re-buy action",
+        "status/remaining-level dialogs",
+        "explicit own purchase-history record/edit form (optional paid price/date/volume/seller)",
+        "bounded paginated own purchase-history panel, independent from physical inventory"
+      ],
+      "available_data": [
+        "Future owner-authorized bottles and purchase records; observed remaining amount is user input, not predicted consumption.",
+        "IF-PURCHASE-RECORD-READ-1 supplies separately authorized bounded paginated caller-own history, including records with no bottle link; no collection foreign key, paid fact or relationship is inferred. Unknown paid price/date/volume/seller remain explicit unknowns.",
+        "Purchase-history optional paid price/date/volume/seller bind IF-PURCHASE-RECORD-WRITE-1; manual Ordered stamp binds IF-PURCHASE-STATUS-WRITE-1; physical bottle notes/remaining amount/lifecycle bind IF-COLLECTION-WRITE-1. No combined automatic operation is implied."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No inferred purchase or deletion of historical purchase when bottle changes",
+        "No cross-user list/count projection",
+        "No automatic order, purchase-history or bottle creation; each permitted explicit intent uses its separate proposed interface"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Bind every list, purchase and bottle to the session owner; reviewer role grants no access to another user's private records.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-COLLECTION-READ-1",
+        "IF-COLLECTION-WRITE-1",
+        "IF-PERSONAL-STATE-WRITE-1",
+        "IF-PURCHASE-RECORD-WRITE-1",
+        "IF-PURCHASE-RECORD-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-COLLECTION-01",
+          "assertion": "Two purchases yield distinct purchase records; bottle and purchase cardinality are not forced one-to-one.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-02",
+          "assertion": "Finished/sold/gifted bottle changes Currently Owned but preserves Ever Purchased history.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-03",
+          "assertion": "Tabs and filters count only owner-authorized objects.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-PURCHASE-RECORD",
+          "assertion": "Explicit own purchase-history record/edit uses IF-PURCHASE-RECORD-WRITE-1, distinct from bookmark Ordered stamp and physical bottle writes; optional paid fields never overwrite inventory or create an order/purchase/bottle automatically.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-PURCHASE-HISTORY-READ",
+          "assertion": "History panel uses IF-PURCHASE-RECORD-READ-1 with caller ownership before counts/cursors/pages; history without inventory linkage remains readable independently, optional paid facts stay unknown, and no bottle relationship is inferred.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-COLLECTION-ITEM",
+      "path": "/collection/:id",
+      "group": "PERSONAL SHOPPING & COLLECTION",
+      "purpose": "Inspect one owner bottle and associated acquisition/history; edit personal notes, remaining amount and lifecycle with explicit validation.",
+      "roles": [
+        "authenticated record owner"
+      ],
+      "entry_points": [
+        "R-COLLECTION bottle/history row",
+        "R-CART explicit receipt",
+        "R-DASHBOARD permitted drill-down"
+      ],
+      "exit_points": [
+        "R-COLLECTION",
+        "R-DETAIL",
+        "R-CART"
+      ],
+      "child_components": [
+        "bottle summary",
+        "linked purchase/history panel",
+        "optional price/date/volume/seller fields",
+        "personal notes",
+        "remaining amount input",
+        "finish/sell/gift controls",
+        "re-buy",
+        "explicit own purchase-history record/edit form (optional paid price/date/volume/seller)",
+        "bounded paginated own purchase-history panel, independent from physical inventory"
+      ],
+      "available_data": [
+        "Only authorized private bottle and purchase data, plus separately authorized catalogue links; history may exist without a current bottle.",
+        "IF-PURCHASE-RECORD-READ-1 supplies separately authorized bounded paginated caller-own history, including records with no bottle link; no collection foreign key, paid fact or relationship is inferred. Unknown paid price/date/volume/seller remain explicit unknowns.",
+        "Purchase-history optional paid price/date/volume/seller bind IF-PURCHASE-RECORD-WRITE-1; manual Ordered stamp binds IF-PURCHASE-STATUS-WRITE-1; physical bottle notes/remaining amount/lifecycle bind IF-COLLECTION-WRITE-1. No combined automatic operation is implied.",
+        "Bottle-context history requires a separately accepted explicit linkage policy and independent authorization; until that policy exists, the contextual panel is Unavailable, not Valid Empty. No collection foreign key or relationship is inferred. Independent caller-own history browsing remains proposed in R-COLLECTION, including unlinked purchases; absence of a bottle link is not absence of a past purchase."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No exposing order references/private notes through public repository, URL, analytics or reviewer role",
+        "No automatic marketplace transaction",
+        "No automatic order, purchase-history or bottle creation; each permitted explicit intent uses its separate proposed interface",
+        "Bottle-context purchase-history linkage is unavailable until its separate exact policy/schema is approved; this page does not invent a collection-to-purchase foreign key"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Bind every list, purchase and bottle to the session owner; reviewer role grants no access to another user's private records.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-COLLECTION-READ-1",
+        "IF-COLLECTION-WRITE-1",
+        "IF-PERSONAL-STATE-WRITE-1",
+        "IF-PURCHASE-RECORD-WRITE-1",
+        "IF-PURCHASE-RECORD-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-COLLECTION-ITEM-01",
+          "assertion": "Cross-user ID and nonexistent bottle have indistinguishable denial; all linked records independently authorize.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-ITEM-02",
+          "assertion": "Lifecycle edit retains history and detects stale concurrent edits.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-ITEM-03",
+          "assertion": "Optional missing price/date/volume stays unknown; repeat purchase never overwrites prior history.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-ITEM-PURCHASE-RECORD",
+          "assertion": "Explicit own purchase-history record/edit uses IF-PURCHASE-RECORD-WRITE-1, distinct from bookmark Ordered stamp and physical bottle writes; optional paid fields never overwrite inventory or create an order/purchase/bottle automatically.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-ITEM-PURCHASE-HISTORY-READ",
+          "assertion": "History panel uses IF-PURCHASE-RECORD-READ-1 with caller ownership before counts/cursors/pages; history without inventory linkage remains readable independently, optional paid facts stay unknown, and no bottle relationship is inferred.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-COLLECTION-ITEM-HISTORY-LINKAGE",
+          "assertion": "Without a separately accepted linkage policy, bottle-context history is Unavailable rather than Valid Empty; independently authorized unlinked history remains readable through the general history panel without inferred foreign keys.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-DASHBOARD",
+      "path": "/dashboard",
+      "group": "PERSONAL SHOPPING & COLLECTION",
+      "purpose": "Summarize Currently Owned and Ever Purchased separately, with evidence-aware brand/family/note breakdowns.",
+      "roles": [
+        "authenticated record owner"
+      ],
+      "entry_points": [
+        "global navigation",
+        "R-COLLECTION"
+      ],
+      "exit_points": [
+        "R-COLLECTION",
+        "R-COLLECTION-ITEM",
+        "R-DETAIL"
+      ],
+      "child_components": [
+        "owned/purchased metrics",
+        "brand-origin/family/note charts",
+        "tabular chart alternatives",
+        "coverage/date labels",
+        "filters",
+        "authorized drill-down links"
+      ],
+      "available_data": [
+        "Future aggregate of authorized owner records and authorized selected catalogue metadata; missing metadata contributes explicit coverage limits."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "R31 advanced cost-per-mL/consumption analytics remain deferred",
+        "No global sales metrics, inferred spending, mixed-currency sum or unavailable price rendered as zero"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Bind every list, purchase and bottle to the session owner; reviewer role grants no access to another user's private records.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-DASHBOARD-READ-1",
+        "IF-COLLECTION-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-PRIVATE",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-DASHBOARD-01",
+          "assertion": "Currently Owned counts current owned bottles; Ever Purchased uses retained purchase records independent of disposal.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-DASHBOARD-02",
+          "assertion": "Charts have text/table alternatives, meaningful labels and counts only after authorization.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-DASHBOARD-03",
+          "assertion": "Any optional spending subtotal states known-price coverage and currency; deferred analytics are not launched.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-SYSTEM",
+      "path": "/system",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Expose a future permission-filtered private review landing page and capability summaries, keeping operator tooling separate.",
+      "roles": [
+        "explicitly authorized application reviewer"
+      ],
+      "entry_points": [
+        "role-filtered system navigation"
+      ],
+      "exit_points": [
+        "R-SOURCES",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA",
+        "R-OPERATIONS",
+        "R-CATALOGUE"
+      ],
+      "child_components": [
+        "review task navigation",
+        "permitted queue summaries",
+        "capability notices",
+        "safe operator-status summary"
+      ],
+      "available_data": [
+        "Future authorized review projections only; historical local diagnostics are evidence, not a live admin endpoint."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No CLI runner, SQL console, role/identity management or admin database session",
+        "No unapproved hold release"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Hide navigation without explicit review permission, then independently enforce permission on server. No browser operator/admin identity or CLI invocation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-REVIEW-QUEUE-READ-1",
+        "IF-OPERATOR-STATUS-READ-1",
+        "IF-CAPABILITY-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-REVIEW",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-SYSTEM-01",
+          "assertion": "Navigation hidden without review permission; direct access independently denied before queue counts.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-SYSTEM-02",
+          "assertion": "Application reviewer never inherits operator/admin database privileges.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-SOURCES",
+      "path": "/system/sources",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Review source provenance and submit bounded future intake requests; distinguish request from acquisition/approval.",
+      "roles": [
+        "explicitly authorized source reviewer/requester"
+      ],
+      "entry_points": [
+        "R-SYSTEM",
+        "R-REVIEWS permitted source link"
+      ],
+      "exit_points": [
+        "R-SYSTEM",
+        "R-REVIEWS",
+        "R-RIGHTS-MEDIA"
+      ],
+      "child_components": [
+        "source metadata list",
+        "rights/checked-at summary",
+        "intake request form",
+        "request status",
+        "validation summary"
+      ],
+      "available_data": [
+        "Future authorized source records and review proposals; no raw restricted capture in browser unless independently permitted."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No source acquisition/import/network job",
+        "No URL as implicit license grant or scrape instruction"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Hide navigation without explicit review permission, then independently enforce permission on server. No browser operator/admin identity or CLI invocation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-REVIEW-QUEUE-READ-1",
+        "IF-SOURCE-INTAKE-REQUEST-1",
+        "IF-RIGHTS-REVIEW-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-REVIEW",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-SOURCES-01",
+          "assertion": "Submit records a review request only; does not fetch URL or start IMP-ENR-01.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-SOURCES-02",
+          "assertion": "Rights scope/date and actor are explicit; rejected request leaves canonical selection unchanged.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-REVIEWS",
+      "path": "/system/reviews",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Inspect authorized proposals/conflicts and design future explicit review decisions with audit and version checks.",
+      "roles": [
+        "explicitly authorized reviewer"
+      ],
+      "entry_points": [
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-RIGHTS-MEDIA"
+      ],
+      "exit_points": [
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-RIGHTS-MEDIA"
+      ],
+      "child_components": [
+        "review queue",
+        "proposal/current comparison",
+        "source evidence disclosure",
+        "approve/reject/hold forms",
+        "reason field",
+        "stale-version warning"
+      ],
+      "available_data": [
+        "Future permissioned review proposals and current-selection references; field and source visibility checked independently."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No approval conferred by this plan",
+        "44 holds, 43 normalization proposals and Khamrah conflict remain unchanged; PR8 blocked"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Hide navigation without explicit review permission, then independently enforce permission on server. No browser operator/admin identity or CLI invocation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-REVIEW-QUEUE-READ-1",
+        "IF-REVIEW-DECISION-WRITE-1",
+        "IF-RIGHTS-REVIEW-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-REVIEW",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-REVIEWS-01",
+          "assertion": "Review decision requires dedicated permission, current version, reason and audit; stale decision is rejected without canonical mutation.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-REVIEWS-02",
+          "assertion": "Detailed hold/conflict data appears only after object and evidence authorization.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-RIGHTS-MEDIA",
+      "path": "/system/rights-media",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Review asset metadata, exact source bindings and intended-use rights independently from image bytes.",
+      "roles": [
+        "explicitly authorized media/rights reviewer"
+      ],
+      "entry_points": [
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS"
+      ],
+      "exit_points": [
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS"
+      ],
+      "child_components": [
+        "asset/rights metadata",
+        "use-scope/private-public-derivative fields",
+        "attribution review",
+        "intake request form",
+        "revocation review",
+        "authorized preview or placeholder"
+      ],
+      "available_data": [
+        "Future authorized asset metadata and permission records; actual bytes require separate current rights resolution and delivery gate."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No image acquisition or binary download in this task",
+        "No hotlink/public URL/license-label shortcut to approved asset",
+        "No public display or derivative rights inferred from private rights"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Hide navigation without explicit review permission, then independently enforce permission on server. No browser operator/admin identity or CLI invocation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-REVIEW-QUEUE-READ-1",
+        "IF-ASSET-INTAKE-REQUEST-1",
+        "IF-RIGHTS-REVIEW-1",
+        "IF-MEDIA-RESOLVE-1",
+        "IF-MEDIA-DELIVER-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-REVIEW",
+        "C-APP-MEDIA",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-RIGHTS-MEDIA-01",
+          "assertion": "Metadata visibility does not grant byte delivery; rights checked again at delivery.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-RIGHTS-MEDIA-02",
+          "assertion": "Revoked or unknown rights suppress preview without revealing protected existence.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-RIGHTS-MEDIA-03",
+          "assertion": "Note illustration, bottle photograph, validation and actual source formula evidence remain separate.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-OPERATIONS",
+      "path": "/system/operations",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Present a future sanitized status projection and manual runbook references for authorized reviewers.",
+      "roles": [
+        "explicitly authorized operations-status viewer"
+      ],
+      "entry_points": [
+        "R-SYSTEM"
+      ],
+      "exit_points": [
+        "R-SYSTEM",
+        "R-SOURCES",
+        "R-REVIEWS"
+      ],
+      "child_components": [
+        "sanitized status",
+        "last checked-at",
+        "capability/blocked notices",
+        "manual runbook links"
+      ],
+      "available_data": [
+        "Future explicitly permitted summary only; historical receipts remain immutable documents, not automated operational controls."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No browser CLI, database admin, shell, install, deployment, role changes or credential exposure"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Hide navigation without explicit review permission, then independently enforce permission on server. No browser operator/admin identity or CLI invocation.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-OPERATOR-STATUS-READ-1",
+        "IF-CAPABILITY-READ-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-REVIEW",
+        "C-AUTHZ",
+        "C-AUTHN",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-OPERATIONS-01",
+          "assertion": "Operation page is read-only and contains no operator execution bridge.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-OPERATIONS-02",
+          "assertion": "Unavailable diagnostics do not reveal filesystem paths, secrets or raw error traces.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-SETTINGS",
+      "path": "/settings",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Edit own bounded preferences and view private-session/privacy behavior; terminate session explicitly.",
+      "roles": [
+        "authenticated application user for own settings"
+      ],
+      "entry_points": [
+        "account menu"
+      ],
+      "exit_points": [
+        "R-CATALOGUE",
+        "R-SIGNIN"
+      ],
+      "child_components": [
+        "own preferences form",
+        "privacy/cache explanation",
+        "session status",
+        "sign-out"
+      ],
+      "available_data": [
+        "Future owner-scoped settings DTO and safe own-session state only."
+      ],
+      "unavailable_features": [
+        "All UI unimplemented",
+        "No role grant, user impersonation, database-principal selection or auth-provider choice",
+        "No private offline persistence or service worker"
+      ],
+      "authorization_gate": "Authenticate; bind genuine nonadmin application principal; authorize scope/object/selected fields and current rights before restricted lookup, counts, pagination, scoring or bytes. UUID/path is not authority. Denial and nonexistent private objects have an indistinguishable safe presentation. Bind every list, purchase and bottle to the session owner; reviewer role grants no access to another user's private records.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1",
+        "IF-PRINCIPAL-LEASE-1",
+        "IF-PRIVATE-SETTINGS-1",
+        "IF-SESSION-END-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-APP-PRIVATE",
+        "C-AUTHN",
+        "C-AUTHZ",
+        "C-PRINCIPAL"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-SETTINGS-01",
+          "assertion": "Settings writes bind to session owner and reject unknown fields.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-SETTINGS-02",
+          "assertion": "Logout cancels requests and best-effort clears in-memory drafts/results; no erasure guarantee for previously viewed data.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "id": "R-SIGNIN",
+      "path": "/sign-in",
+      "group": "SYSTEM / PRIVATE ADMINISTRATION",
+      "purpose": "Provide a future authentication entry independent of private route existence, with a bounded safe return destination.",
+      "roles": [
+        "unauthenticated visitor",
+        "authenticated user returning to session flow"
+      ],
+      "entry_points": [
+        "initial access",
+        "generic protected-route response",
+        "session expiry"
+      ],
+      "exit_points": [
+        "R-CATALOGUE",
+        "authorized same-origin return destination"
+      ],
+      "child_components": [
+        "authentication form placeholder",
+        "accessible validation/status",
+        "safe return navigation",
+        "generic failure"
+      ],
+      "available_data": [
+        "No private catalogue, counts, source identity, vocabulary, collection data or prefetch. Only safe authentication UI state."
+      ],
+      "unavailable_features": [
+        "Authentication/page unimplemented",
+        "No provider/credential flow chosen",
+        "No anonymous private browsing or permission grant from successful authentication alone"
+      ],
+      "authorization_gate": "Authentication entry only; no protected data before authentication. Successful sign-in does not grant object access or choose a PostgreSQL identity from browser input.",
+      "interfaces": [
+        "IF-AUTH-SESSION-1"
+      ],
+      "dependencies": [
+        "C-UI-SHELL",
+        "C-UI-PAGES",
+        "C-TRANSPORT",
+        "C-DTO",
+        "C-AUTHN",
+        "C-AUTHZ"
+      ],
+      "acceptance_tests": [
+        {
+          "id": "UAT-SIGNIN-01",
+          "assertion": "Unauthenticated shell performs no protected suggestions/counts/prefetch.",
+          "execution": "NOT RUN"
+        },
+        {
+          "id": "UAT-SIGNIN-02",
+          "assertion": "Errors do not reveal account/private-object existence; return target is same-origin and reauthorized.",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    }
+  ],
+  "states": [
+    {
+      "name": "Idle",
+      "meaning": "No request submitted; query or page is awaiting explicit action.",
+      "presentation": "Give labels and task guidance; no invented results or default 100%.",
+      "recovery": "Edit controls or submit after validation.",
+      "accessibility": "Leave focus at current control; status may be silent until an action.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-IDLE",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Loading",
+      "meaning": "Authorized bounded operation is pending.",
+      "presentation": "Retain safe draft; label progress; skeleton is not data; no old results presented as current.",
+      "recovery": "Cancel locally or wait; ignore response after cancellation, query replacement or session change.",
+      "accessibility": "Announce short loading status once; preserve focus and avoid repeated live announcements.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-LOADING",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Ready",
+      "meaning": "Authorized operation completed with usable data under current rights/snapshot.",
+      "presentation": "Render only DTO fields the caller may see; display coverage/source/method where applicable.",
+      "recovery": "Inspect, edit, compare or explicitly submit another action.",
+      "accessibility": "Announce completion/count summary without moving focus; route navigation focuses main heading.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-READY",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Valid Empty",
+      "meaning": "Authorized successful completed operation returned a valid empty set.",
+      "presentation": "Explain no matching records and active filters; valid empty is not unknown notes, missing capability or a closed-domain emptiness claim.",
+      "recovery": "Clear or narrow filters, or add own first record through authorized flow.",
+      "accessibility": "Announce no results, retain search focus, offer labeled recovery button.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-VALID-EMPTY",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Partial / Incomplete",
+      "meaning": "Authorized subset is usable but coverage, layering, completeness or search completion is limited.",
+      "presentation": "Show known facts and explicit gaps; do not imply absent notes, full search or measured intensity.",
+      "recovery": "Inspect allowed metadata; change query/filters or await separately approved review.",
+      "accessibility": "Associate each gap label with its section; announce concise partial-result summary.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-PARTIAL",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Unknown",
+      "meaning": "Authorized field or condition has no reliable known value.",
+      "presentation": "Use Unknown/not recorded; general notes remain All Listed Notes; unknown price and no valid score are never zero.",
+      "recovery": "Inspect permitted provenance or record optional own data explicitly.",
+      "accessibility": "Expose text alternatives; do not encode uncertainty through color alone.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-UNKNOWN",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Unavailable",
+      "meaning": "Operation, method, domain, rights-safe value or media cannot be supplied.",
+      "presentation": "Show generic unavailable; give dependency reason only if independently authorized; real matching remains blocked without synthetic fallback.",
+      "recovery": "Offer permitted factual view or another supported task; no unsafe auto retry.",
+      "accessibility": "Label disabled controls and explain why without private existence leakage.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-UNAVAILABLE",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Unauthorized",
+      "meaning": "Session/scope/object/field authorization does not permit operation.",
+      "presentation": "Use the same safe presentation for denied and nonexistent private objects; no protected count, hold, source or asset detail.",
+      "recovery": "Authenticate if appropriate or return to permitted navigation; retry reauthorizes from start.",
+      "accessibility": "Generic accessible message and permitted recovery; no hidden DOM/private announcement details.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-UNAUTHORIZED",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Conflicted / Held",
+      "meaning": "Known authorized review object has a conflict or hold preventing a particular use.",
+      "presentation": "Show safe blocked capability generally; disclose hold/conflict reason only to a user allowed to know object and review evidence.",
+      "recovery": "Use factual permitted fields or submit authorized review proposal; never release hold through a display action.",
+      "accessibility": "Text label with authorized reason; offer review link only when role and object permission permit.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-HELD",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Expired / Revoked",
+      "meaning": "Session, membership, snapshot or rights are no longer current.",
+      "presentation": "For unknown/unauthorized objects use generic denial; only previously known and still authorized context may show safe expiry detail. Stop display/delivery of protected stale content.",
+      "recovery": "Reauthenticate or restart with new authorization/snapshot; no silent replay or stale membership reuse.",
+      "accessibility": "Announce safe session/content change once; focus recovery heading when current context is removed.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-EXPIRED",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Timeout",
+      "meaning": "Operation exceeded budget or completion cannot be established.",
+      "presentation": "State incomplete search/action status; do not claim valid empty, completed mutation or exhaustive ranking.",
+      "recovery": "Narrow query; explicit safe retry. For uncertain writes re-read authorized state/idempotency outcome before replay.",
+      "accessibility": "Announce timeout; preserve safe inputs and focus recovery summary when user action is needed.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-TIMEOUT",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Validation Error",
+      "meaning": "Explicit input contract rejects unknown, malformed, contradictory, unbounded or stale-version data.",
+      "presentation": "Show field-specific actionable errors without raw request payloads, SQL, stack traces or private existence.",
+      "recovery": "Correct inputs, refresh stale version, or cancel; no hidden coercion/default permission.",
+      "accessibility": "Focus linked error summary on failed submit; mark/describe invalid fields and retain safe user input.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-VALIDATION",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    },
+    {
+      "name": "Offline",
+      "meaning": "Network/service connectivity is unavailable; browser connectivity hint alone does not prove server state.",
+      "presentation": "Show unavailable private operation, never cached protected result as current; no persistent private offline data or queued writes.",
+      "recovery": "Reconnect then explicitly retry with fresh session/rights; static shell may remain only if separately safe.",
+      "accessibility": "Announce connectivity once; keep retry keyboard accessible; do not trap focus or claim a write succeeded.",
+      "acceptance_tests": [
+        {
+          "id": "UAT-STATE-OFFLINE",
+          "execution": "NOT RUN"
+        }
+      ],
+      "status": "PROPOSED"
+    }
+  ],
+  "future_feature_tests": "NOT RUN",
+  "preservation": {
+    "id": "POST27-ODP-1",
+    "sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+    "A_to_I_exact_acceptance": "NOT RECORDED"
+  },
+  "notes": [
+    "Exact synthetic M1/B1 remain synthetic-only and are not wired into real-data UI.",
+    "No accepted A-I choice recorded; IMP-ENR-01 not started.",
+    "44 holds, 43 normalization proposals and Khamrah conflict unchanged; PR8 remains blocked."
+  ]
+}
