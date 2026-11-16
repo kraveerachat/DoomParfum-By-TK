@@ -516,3 +516,9 @@ authorize imports/assetbytes/realranking/DB/Production or44hold/eligibility chan
 ## DPT-PLAN-010 independent architecture checkpoint — 2026-11-16
 
 Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: four initial P2 design findings resolved, four companion correction groups reviewed, zero open documentation findings; 13 named static verification groups. See [[DPT-PLAN-010_System_Architecture_Refinement]] and [[Architecture_Independent_Review.json]]. All new design choices remain PROPOSED; no Owner option acceptance, IMP-ENR-01 start, implementation or Production change. Original failed findings/oracles remain retained. Draft/receipt/handoff publication follows separately.
+
+## Draft publication and immutable planning receipt — 2026-11-16
+
+[PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
+
+Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.

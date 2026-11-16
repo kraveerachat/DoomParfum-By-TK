@@ -1,0 +1,251 @@
+{
+  "task": "DPT-PLAN-010",
+  "base": "168715bc9bc5fff968524074257dc106a8a63638",
+  "branch": "plan/post-pr28-architecture",
+  "PR": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/29",
+  "reviewed_source_commit": "68488586be1a3e2edf280dd3eb4a3d16dccd5d60",
+  "pre_receipt_publication_head": "938d0d1c9af89a1d857fef54ff041a55302a8a65",
+  "final_head_binding": "Containing Git commit/live PR and external handoff registry; no self-referential commit hash",
+  "files": 40,
+  "entries": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "bytes": 16912,
+      "raw_sha256": "a9c3189ae3e190209d13f631dd7fef8d96447a066b0e4b6be2607d1fc1b6909a",
+      "canonical_LF_sha256": "a9c3189ae3e190209d13f631dd7fef8d96447a066b0e4b6be2607d1fc1b6909a"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "bytes": 44422,
+      "raw_sha256": "259a0e2b5863630471d62ab27ce48920ec8860fbd6826caab276b02fab697596",
+      "canonical_LF_sha256": "259a0e2b5863630471d62ab27ce48920ec8860fbd6826caab276b02fab697596"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Site_Map_and_Screens.md",
+      "bytes": 9792,
+      "raw_sha256": "f422098e1b9c1b091ab77b0d471ca5a99d408e03258e41678fb469c8cdd8f907",
+      "canonical_LF_sha256": "f422098e1b9c1b091ab77b0d471ca5a99d408e03258e41678fb469c8cdd8f907"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/State_and_Error_Contracts.md",
+      "bytes": 24616,
+      "raw_sha256": "62f380058c4b3bef5be9db99f81fc154c8778fab155ee4220b4d8b2b21e6bf21",
+      "canonical_LF_sha256": "050ed397451b21a767f94c457779048534894078a59cf91ff8d7b3aa34e6dd56"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/UI_Element_Function_Matrix.md",
+      "bytes": 271762,
+      "raw_sha256": "2be08f8f3e3eba8ff7406aa0e59b3541256f840c7c9ebefbf4b6060de7cfc16d",
+      "canonical_LF_sha256": "2be08f8f3e3eba8ff7406aa0e59b3541256f840c7c9ebefbf4b6060de7cfc16d"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Unified_Information_Architecture.md",
+      "bytes": 60505,
+      "raw_sha256": "2d2a7ffc99e5131f2b7c7cbed39c49b89ecca357768a578c5a857630a09a650a",
+      "canonical_LF_sha256": "f94f7e7768071c9a7021b55c255299eaab2a9e5492bf694243b7588e8aa4aae3"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Alternatives_and_ADR.md",
+      "bytes": 10249,
+      "raw_sha256": "092c47f5bfcfd3c8b6b4e4ea065c5b49a8fab5ff1a37ec0919d0d67532e55839",
+      "canonical_LF_sha256": "092c47f5bfcfd3c8b6b4e4ea065c5b49a8fab5ff1a37ec0919d0d67532e55839"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Owner_Review_Packet.md",
+      "bytes": 12602,
+      "raw_sha256": "0e265149f87b0c797b9e563b7fdb9bc6a1a4379844842d2e97ffd4549ba0747f",
+      "canonical_LF_sha256": "0e265149f87b0c797b9e563b7fdb9bc6a1a4379844842d2e97ffd4549ba0747f"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Technical_Research_Python.md",
+      "bytes": 12492,
+      "raw_sha256": "9816a98930a1dd10d05372030fcbea2f7fc179b2773325c5764ebec865a4dcd6",
+      "canonical_LF_sha256": "f1604ff11b9f6aebb9887f7c59ab8d0ab39afff0fc462d20bff88fff4347d6b4"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Technical_Research_Security.md",
+      "bytes": 10452,
+      "raw_sha256": "a79ac390925a575a8600cb7395c6ed0723b336e2d21545f81c8d380bd0dbabb8",
+      "canonical_LF_sha256": "f60766700a2c6eed8c34349a826d32e5018ec8305f78d1cb8d7437b9707192a9"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Technical_Research_UX.md",
+      "bytes": 13547,
+      "raw_sha256": "76c02ced3ceab0228bff889a2e86ab65401645073beac2ce652a1e8d64fc0923",
+      "canonical_LF_sha256": "a2960dda0e1e23e1cc18457dd9940e8933f02e2ee0f1b6e1367eabc8213e6c64"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Authorization_and_Trust_Boundaries.md",
+      "bytes": 19456,
+      "raw_sha256": "3aceccf97cfa6200e1e0dd976f4c9a83d8b51877907e18178a3b5e141e525ab1",
+      "canonical_LF_sha256": "eec392fc93be0a62c3dc88505f083b3e4c1370adcda5ee27a1bbb93209d23f03"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/C4_Context_and_Container_Design.md",
+      "bytes": 16107,
+      "raw_sha256": "d8d7a36c522be701115e53ed252c5a587cef2cfbe3a870d2122dce561c3fdc7f",
+      "canonical_LF_sha256": "d8d7a36c522be701115e53ed252c5a587cef2cfbe3a870d2122dce561c3fdc7f"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Cache_Offline_and_Privacy_Policy.md",
+      "bytes": 13129,
+      "raw_sha256": "427203a7625563bdffeec555f69a4f80b88eab0c19fe1606616b3affaeb2edc1",
+      "canonical_LF_sha256": "b1126f859b04ef7697f61f74e056579bdee64219ee59317e682483e994236014"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Component_and_Dependency_Registry.md",
+      "bytes": 27814,
+      "raw_sha256": "c66477d4c8c95a02e4ec2ef73994bc29a23568227c7b7e5e6de09cfd4f7537f5",
+      "canonical_LF_sha256": "c66477d4c8c95a02e4ec2ef73994bc29a23568227c7b7e5e6de09cfd4f7537f5"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Data_and_Media_Lifecycle_Architecture.md",
+      "bytes": 16619,
+      "raw_sha256": "5d8dd2fdcaeff88c55a10efe469f5e8592cd9fa8f1b61a1813aad43e1fda2429",
+      "canonical_LF_sha256": "5e87b4becabae30b2917547db4c41a1ece28238eabda45f8a6cc854418456902"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Function_Interface_and_DTO_Contracts.md",
+      "bytes": 126537,
+      "raw_sha256": "579bbdaa4697b77d4d4b37cbe65e34ca3f0f5a1a3a97b9c2e4d87ce4bb1152ff",
+      "canonical_LF_sha256": "18dbc775e30d9cd54647903299f84ce01a2d34be6fa1f23dbb5b07659c241ecf"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Matching_Owner_Decision_Register.md",
+      "bytes": 15183,
+      "raw_sha256": "46a3f1e11c338765352b5577b1252d0f1c85eb1e8b1a7d11a784e6050bd81ec7",
+      "canonical_LF_sha256": "46a3f1e11c338765352b5577b1252d0f1c85eb1e8b1a7d11a784e6050bd81ec7"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "bytes": 9048,
+      "raw_sha256": "c9e062f40b74468de920d41fe8e6dd9f57891b7c0fe9614aa7745ea3802d9d01",
+      "canonical_LF_sha256": "c9e062f40b74468de920d41fe8e6dd9f57891b7c0fe9614aa7745ea3802d9d01"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/System_Architecture_Refinement.md",
+      "bytes": 17829,
+      "raw_sha256": "a2a0d22a02eb93bf7ba9179e254d3d55b17deb3f7df9ba14d33db813a0f334c8",
+      "canonical_LF_sha256": "a2a0d22a02eb93bf7ba9179e254d3d55b17deb3f7df9ba14d33db813a0f334c8"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "bytes": 30444,
+      "raw_sha256": "aba7edbee662fc68888ebee87effc4bae145242dc53789e1b8215c603c67d4a1",
+      "canonical_LF_sha256": "aba7edbee662fc68888ebee87effc4bae145242dc53789e1b8215c603c67d4a1"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Dependency_Based_Implementation_Roadmap.md",
+      "bytes": 12144,
+      "raw_sha256": "f9a36e0cc546750c5cfcab5db737fcdf0feddce50987ad6e04c5e486614d5593",
+      "canonical_LF_sha256": "f9a36e0cc546750c5cfcab5db737fcdf0feddce50987ad6e04c5e486614d5593"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "bytes": 26994,
+      "raw_sha256": "5d27bf0f29beac6895c22887a720a9422665dd5dfd9cf227401aadbe81a5ce96",
+      "canonical_LF_sha256": "5d27bf0f29beac6895c22887a720a9422665dd5dfd9cf227401aadbe81a5ce96"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-009_Post_PR27_Next_Wave.md",
+      "bytes": 6369,
+      "raw_sha256": "fc1ff1393037af96007818aae8b01150f699d17b3e17fa059f330ea8123a4a5e",
+      "canonical_LF_sha256": "fc1ff1393037af96007818aae8b01150f699d17b3e17fa059f330ea8123a4a5e"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-010_System_Architecture_Refinement.md",
+      "bytes": 6042,
+      "raw_sha256": "3c7d44fedcdebde941305a5c1ed63b8dae9b802a5cd98e16bec1025095c9aff3",
+      "canonical_LF_sha256": "3c7d44fedcdebde941305a5c1ed63b8dae9b802a5cd98e16bec1025095c9aff3"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "bytes": 74257,
+      "raw_sha256": "0a485fc1ba77801bb2b5e289bffad55b6f2af5ddf9a98239d5a92437add44ce1",
+      "canonical_LF_sha256": "0a485fc1ba77801bb2b5e289bffad55b6f2af5ddf9a98239d5a92437add44ce1"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "bytes": 61071,
+      "raw_sha256": "cb476f2c449536409d15cc997665ab8ad0739448a33ee45ad2a4fe82691b1792",
+      "canonical_LF_sha256": "cb476f2c449536409d15cc997665ab8ad0739448a33ee45ad2a4fe82691b1792"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "bytes": 35795,
+      "raw_sha256": "48b4e5b10a18cc832b76ff2d03fc6639814d07766a313931d9e4409e66b3d9be",
+      "canonical_LF_sha256": "48b4e5b10a18cc832b76ff2d03fc6639814d07766a313931d9e4409e66b3d9be"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Next_Wave_Owner_Decision_Form.md",
+      "bytes": 25088,
+      "raw_sha256": "28beb6f3afc8425d6c637b487bd9424e6dd3115f484e7219a396ea1a52869f55",
+      "canonical_LF_sha256": "28beb6f3afc8425d6c637b487bd9424e6dd3115f484e7219a396ea1a52869f55"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Receipts/2026-11-16_223118_DPT-PLAN-010_Architecture_Planning.md",
+      "bytes": 4464,
+      "raw_sha256": "310cd41f92493b7c776653cf5c54d14f9c10637d0a61f883ff1d55120536e4ce",
+      "canonical_LF_sha256": "310cd41f92493b7c776653cf5c54d14f9c10637d0a61f883ff1d55120536e4ce"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_File_Manifest.json",
+      "hash": "SELF OMITTED to avoid circular hash; use containing commit"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Independent_Review.json",
+      "bytes": 24245,
+      "raw_sha256": "fbd9fe5dcd16d4560b75149f3c67b0450af48025aae648970bd7e197f1237de7",
+      "canonical_LF_sha256": "b6fd90c391fbac9ee22b1a227abcc193b122877d437400d92610f40d9b713084"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Interface_Registry.json",
+      "bytes": 177433,
+      "raw_sha256": "7cd5e7b5cedff27a38c51c2edb9c3646d24bb1b03a676b389517174b37a6d9a6",
+      "canonical_LF_sha256": "4bad11aa627ede324eca7b228102392e5a54b18d1b23e46617edb9ba2ec41081"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Research_Index.json",
+      "bytes": 31113,
+      "raw_sha256": "7fba8967e461f01a7ef0d1d217a996bae33cf8ac73939701fc68f3e080515ede",
+      "canonical_LF_sha256": "7fba8967e461f01a7ef0d1d217a996bae33cf8ac73939701fc68f3e080515ede"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Routes_and_States.json",
+      "bytes": 64376,
+      "raw_sha256": "b2568075d9ef3582d2c82425078a24a0177a28dff63c07df71630d334c2844b6",
+      "canonical_LF_sha256": "43416322eebde2b4033454f31ef1d49f63666cbd7cd3c1be61a8b45113ddef6b"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Security_and_Cache_Model.json",
+      "bytes": 28759,
+      "raw_sha256": "f4a993175dc95a9c428b06d0c502a56decd50f125a228497e46d82142c52bb7b",
+      "canonical_LF_sha256": "6c64ed010724b579c69ee088ce47587167d15280b38ce2c5a8fe76c527999d08"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Source_Inventory.json",
+      "bytes": 743881,
+      "raw_sha256": "f42b245efe5fefbb3d755daf0e4556186b4dcacc099c5d945bafcf5e882e59f7",
+      "canonical_LF_sha256": "c60bfbe48369b195d7ab61b690412dccf07dce413e35cafc52b4a71b487b500c"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Static_Verification.json",
+      "bytes": 4759,
+      "raw_sha256": "19e11376a47691194d87e7068b8beefe2140c2763881d830d70f82c5151c0442",
+      "canonical_LF_sha256": "19e11376a47691194d87e7068b8beefe2140c2763881d830d70f82c5151c0442"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Unified_Model.json",
+      "bytes": 383150,
+      "raw_sha256": "3cb27385da70cdace2a254b5a9dbaba6c07a424f513170804e42c01396e94ca9",
+      "canonical_LF_sha256": "3cb27385da70cdace2a254b5a9dbaba6c07a424f513170804e42c01396e94ca9"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-010_Architecture_Verification.md",
+      "bytes": 11513,
+      "raw_sha256": "e2221b884edf09d0f5ae5dd6e3e69258af98369e9053bc9575ff0f45701e8480",
+      "canonical_LF_sha256": "e2221b884edf09d0f5ae5dd6e3e69258af98369e9053bc9575ff0f45701e8480"
+    }
+  ],
+  "scope": "MD/JSON documentation only; no implementation"
+}
