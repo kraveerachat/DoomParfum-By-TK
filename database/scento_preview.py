@@ -126,16 +126,23 @@ def _safe_path(path: Path, *, must_exist: bool = True) -> Path:
     return path
 
 
-def _read_regular(path: Path) -> bytes:
+def _read_regular(path: Path, expected_size: int) -> bytes:
     _safe_path(path)
     try:
         # O_NOFOLLOW is available on POSIX. Windows reparse checks above and
         # descriptor metadata checks below supplement the local trust boundary.
         descriptor = os.open(path,os.O_RDONLY | getattr(os,'O_BINARY',0) | getattr(os,'O_NOFOLLOW',0))
         with os.fdopen(descriptor,'rb') as handle:
-            if not stat.S_ISREG(os.fstat(handle.fileno()).st_mode):
+            info = os.fstat(handle.fileno())
+            if not stat.S_ISREG(info.st_mode):
                 raise PreviewError('UNSAFE_PATH')
-            data = handle.read()
+            if info.st_size != expected_size:
+                raise PreviewError('PIN_MISMATCH')
+            # One extra byte detects growth after fstat without an unbounded
+            # read. Pinned callers still verify the complete expected hash.
+            data = handle.read(expected_size+1)
+            if len(data) != expected_size:
+                raise PreviewError('PIN_MISMATCH')
         _safe_path(path)
         return data
     except OSError:
@@ -159,7 +166,7 @@ def load_snapshot(source: Path, revision: str = REVISION) -> Snapshot:
     root = _safe_path(source)
     if not root.is_dir():
         raise PreviewError('UNSAFE_PATH')
-    snapshot = Snapshot(revision,tuple(Artifact(pin.name,_read_regular(root/pin.name)) for pin in PINS))
+    snapshot = Snapshot(revision,tuple(Artifact(pin.name,_read_regular(root/pin.name,pin.size)) for pin in PINS))
     _verify_snapshot(snapshot)
     return snapshot
 
@@ -406,7 +413,7 @@ def publish_preview(source: Path, workspace: Path, *, execution_time: str | None
             _write_closed(candidate/'manifest.json',canonical({'payload_sha256':digest,'payload_bytes':len(data),'schema_version':SCHEMA}))
             _write_closed(candidate/'run.json',canonical({'execution_time':execution_time if execution_time is not None
                                                         else datetime.now(timezone.utc).isoformat()}))
-            if _read_regular(candidate/'payload.json') != data:
+            if _read_regular(candidate/'payload.json',len(data)) != data:
                 raise PreviewError('REPLAY_MISMATCH')
             _safe_path(root)
             candidate.rename(root/name)
@@ -430,11 +437,13 @@ def rollback_preview(source: Path, workspace: Path, bundle_name: str | None) -> 
             digest = None
             if bundle_name is not None:
                 bundle = _safe_path(root/bundle_name)
-                data = _read_regular(bundle/'payload.json')
                 expected = canonical(build_preview(source))
-                manifest = json.loads(_read_regular(bundle/'manifest.json'))
+                expected_manifest = {'payload_sha256':hashlib.sha256(expected).hexdigest(),
+                                     'payload_bytes':len(expected),'schema_version':SCHEMA}
+                data = _read_regular(bundle/'payload.json',len(expected))
+                manifest = json.loads(_read_regular(bundle/'manifest.json',len(canonical(expected_manifest))))
                 digest = hashlib.sha256(data).hexdigest()
-                if data != expected or manifest != {'payload_sha256':digest,'payload_bytes':len(data),'schema_version':SCHEMA}:
+                if data != expected or manifest != expected_manifest:
                     raise PreviewError('REPLAY_MISMATCH')
             _transition(root,bundle_name,digest)
         except BaseException as error:

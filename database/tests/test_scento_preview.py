@@ -63,6 +63,35 @@ class PreviewTests(unittest.TestCase):
             call(*args, **kwargs)
         self.assertEqual(raised.exception.code, code)
 
+    def disposable_snapshot(self, name):
+        """Private disposable copy; never change the protected source path."""
+        root=Path(self.sandbox.name)/name
+        root.mkdir()
+        for artifact in self.snapshot.artifacts:
+            (root/artifact.name).write_bytes(artifact.data)
+        return root
+
+    def record_regular_reads(self):
+        """Track real descriptor reads without reading raw values into logs."""
+        reads=[]
+        original=preview.os.fdopen
+        class TrackedFile:
+            def __init__(self,handle):
+                self.handle=handle
+            def __enter__(self):
+                self.handle.__enter__()
+                return self
+            def __exit__(self,*args):
+                return self.handle.__exit__(*args)
+            def fileno(self):
+                return self.handle.fileno()
+            def read(self,size=-1):
+                value=self.handle.read(size)
+                reads.append((size,len(value)))
+                return value
+        patcher=mock.patch.object(preview.os,'fdopen',side_effect=lambda *a,**k:TrackedFile(original(*a,**k)))
+        return reads,patcher
+
     def test_T01_exact_six_pins(self):
         self.assertEqual(len(self.snapshot.artifacts), 6)
         self.assertEqual(sum(len(item.data) for item in self.snapshot.artifacts), 905307)
@@ -398,6 +427,66 @@ class PreviewTests(unittest.TestCase):
         (root/result.bundle_name/'payload.json').write_bytes(b'{"synthetic":"forged"}')
         self.assert_rejected('PUBLICATION_FAILED',preview.rollback_preview,SOURCE,self.workspace,result.bundle_name)
         self.assertTrue(prior == (root/'active.json').read_bytes())
+
+    def test_IR001_oversized_pin_rejected_before_any_read(self):
+        root=self.disposable_snapshot('synthetic-oversize-control')
+        first=preview.PINS[0]
+        (root/first.name).write_bytes(b'X'*(first.size+1))
+        reads,tracking=self.record_regular_reads()
+        with tracking:
+            self.assert_rejected('PIN_MISMATCH',preview.load_snapshot,root)
+        self.assertEqual(reads,[])
+
+    def test_IR001_growth_after_fstat_has_exact_one_byte_probe_bound(self):
+        root=self.disposable_snapshot('synthetic-growth-control')
+        first=preview.PINS[0]
+        (root/first.name).write_bytes(b'X'*(first.size+17))
+        original_fstat=preview.os.fstat
+        def declared_expected_size(descriptor):
+            info=original_fstat(descriptor)
+            if info.st_size==first.size+17:
+                return mock.Mock(st_mode=info.st_mode,st_size=first.size)
+            return info
+        reads,tracking=self.record_regular_reads()
+        with tracking,mock.patch.object(preview.os,'fstat',side_effect=declared_expected_size):
+            self.assert_rejected('PIN_MISMATCH',preview.load_snapshot,root)
+        self.assertEqual(reads,[(first.size+1,first.size+1)])
+
+    def test_IR001_all_source_and_candidate_readbacks_have_finite_exact_bounds(self):
+        reads,tracking=self.record_regular_reads()
+        with tracking:
+            preview.publish_preview(SOURCE,self.workspace)
+        payload_size=len(preview.canonical(self.payload))
+        self.assertEqual(reads,[(pin.size+1,pin.size) for pin in preview.PINS]+[(payload_size+1,payload_size)])
+
+    def test_IR001_rollback_oversized_payload_rebuilds_before_bounded_read(self):
+        result=preview.publish_preview(SOURCE,self.workspace)
+        root=self.workspace/preview.PRIVATE_RELATIVE
+        pointer=(root/'active.json').read_bytes()
+        payload=root/result.bundle_name/'payload.json'
+        payload.write_bytes(payload.read_bytes()+b'X')
+        reads,tracking=self.record_regular_reads()
+        with tracking:
+            self.assert_rejected('PUBLICATION_FAILED',preview.rollback_preview,SOURCE,self.workspace,result.bundle_name)
+        self.assertEqual(reads,[(pin.size+1,pin.size) for pin in preview.PINS])
+        self.assertTrue(pointer==(root/'active.json').read_bytes())
+
+    def test_IR001_rollback_oversized_manifest_rejected_before_manifest_read(self):
+        result=preview.publish_preview(SOURCE,self.workspace)
+        root=self.workspace/preview.PRIVATE_RELATIVE
+        pointer=(root/'active.json').read_bytes()
+        manifest=root/result.bundle_name/'manifest.json'
+        manifest.write_bytes(manifest.read_bytes()+b'X')
+        reads,tracking=self.record_regular_reads()
+        with tracking:
+            self.assert_rejected('PUBLICATION_FAILED',preview.rollback_preview,SOURCE,self.workspace,result.bundle_name)
+        payload_size=len(preview.canonical(self.payload))
+        self.assertEqual(reads,[(pin.size+1,pin.size) for pin in preview.PINS]+[(payload_size+1,payload_size)])
+        self.assertTrue(pointer==(root/'active.json').read_bytes())
+
+    def test_IR001_canonical_payload_identity_unchanged(self):
+        self.assertEqual(len(preview.canonical(self.payload)),33953)
+        self.assertEqual(preview.payload_hash(self.payload),'16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9')
 
 
 class PreviewPropertyTests(unittest.TestCase):
