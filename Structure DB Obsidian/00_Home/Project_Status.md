@@ -12,6 +12,12 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
+
+Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+Earlier IN PROGRESS/Draft/pending statements below are dated checkpoints; this section records current planning readiness only.
+
 ## DPT-PLAN-011 post-PR30 — current planning truth, 2026-11-17
 
 Owner merged PR30 at `4f23cbc858dd818b149674342bfa504e78930088`, UTC2026-11-17T05:51:40Z / 12:51:40 Asia/Bangkok. Actual fetched origin/main equals that merge; PR30 head `f5a277124e60ff0e290d9a95651eee14397506a0` has the identical tree. [[IMP-ENR-01_Pinned_Scento_Offline_Preview]] is now MERGED for its exact private offline five-record preview only. Historical pending/Draft/before-implementation statements below are dated history. This merge does not accept canonical facts or proposed application/media policies.
