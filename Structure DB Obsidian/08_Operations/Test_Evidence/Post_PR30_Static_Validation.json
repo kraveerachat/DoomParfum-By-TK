@@ -1,0 +1,26 @@
+{
+  "task": "DPT-PLAN-011",
+  "phase": "First coherent planning draft static check",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "passed": 662,
+  "failed": 0,
+  "summary": {
+    "changed_paths": 26,
+    "markdown": 20,
+    "wikilinks": 667,
+    "Markdown_links_seen": 109,
+    "tables": 54,
+    "secret_candidates": 0,
+    "private_candidates": 0
+  },
+  "command": "python .local/post-pr30-planning/check_docs.py",
+  "initial_oracle_failure": {
+    "phase": "coordinator static check",
+    "initial_result": "661 passed / 1 failed",
+    "underlying_cause": "Checker assumed data author new_owner_answer null; all46 actual values are explicit UNANSWERED. Owner packet uses null separately. No human acceptance existed.",
+    "correction": "Require exact UNANSWERED for data rows; retain null requirement for Owner decision rows.",
+    "runtime_or_document_semantics_changed": false,
+    "original_checker_sha256": "05f89a07e99e9f7f69689c53c2fde7711e46b5d18ae8225d9581c0d8abdac7a9"
+  },
+  "qualification": "Source/checkpoint snapshot before adding these evidence files; final checks/review recorded separately. No runtime tests or DB operations."
+}

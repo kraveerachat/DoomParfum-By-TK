@@ -1,0 +1,2067 @@
+{
+  "task": "DPT-PLAN-011",
+  "lane": "A_AUTHOR_NOT_INDEPENDENT_REVIEWER",
+  "date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "base_provided_by_coordinator": "4f23cbc858dd818b149674342bfa504e78930088",
+  "scope": "documentation/static metadata only; no runtime/DB/scorer/ETL/source acquisition/media binary execution",
+  "matrix": {
+    "rows": 46,
+    "columns": 20,
+    "claim_ids": [
+      "P30-CL-001",
+      "P30-CL-002",
+      "P30-CL-003",
+      "P30-CL-004",
+      "P30-CL-005",
+      "P30-CL-006",
+      "P30-CL-007",
+      "P30-CL-008",
+      "P30-CL-009",
+      "P30-CL-010",
+      "P30-CL-011",
+      "P30-CL-012",
+      "P30-CL-013",
+      "P30-CL-014",
+      "P30-CL-015",
+      "P30-CL-016",
+      "P30-CL-017",
+      "P30-CL-018",
+      "P30-CL-019",
+      "P30-CL-020",
+      "P30-CL-021",
+      "P30-CL-022",
+      "P30-CL-023",
+      "P30-CL-024",
+      "P30-CL-025",
+      "P30-CL-026",
+      "P30-CL-027",
+      "P30-CL-028",
+      "P30-CL-029",
+      "P30-CL-030",
+      "P30-CL-031",
+      "P30-CL-032",
+      "P30-CL-033",
+      "P30-CL-034",
+      "P30-CL-035",
+      "P30-CL-036",
+      "P30-CL-037",
+      "P30-CL-038",
+      "P30-CL-039",
+      "P30-CL-040",
+      "P30-CL-041",
+      "P30-CL-042",
+      "P30-CL-043",
+      "P30-CL-044",
+      "P30-CL-045",
+      "P30-CL-046"
+    ],
+    "source_records": 5,
+    "historical_dossier": {
+      "DEFER": 43,
+      "UNKNOWN": 3,
+      "ACCEPT": 0,
+      "REJECT": 0
+    },
+    "raw_states": {
+      "PRESENT": 43,
+      "MISSING": 3
+    },
+    "new_owner_decisions": "PROPOSED / UNANSWERED",
+    "new_human_acceptances": 0
+  },
+  "slot_bindings": [
+    {
+      "claim_id": "P30-CL-001",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.external_key; no perfume field definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-002",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "name",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.name via perfume/name",
+      "normative_existing_field_definition": [
+        "perfume",
+        "name"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-003",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "house_id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.brand_id via perfume/brand_id",
+      "normative_existing_field_definition": [
+        "perfume",
+        "brand_id"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-004",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "house",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "No perfume/house definition; corroboration of house identity only",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-005",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "year",
+      "raw_state": "MISSING",
+      "existing_disposition": "UNKNOWN",
+      "historical_disposition": "UNKNOWN",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.release_year via perfume/release_year; NO value now",
+      "normative_existing_field_definition": [
+        "perfume",
+        "release_year"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-006",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "concentration",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.concentration_code via perfume/concentration_code",
+      "normative_existing_field_definition": [
+        "perfume",
+        "concentration_code"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-007",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations perfume/family string ONLY",
+      "normative_existing_field_definition": [
+        "perfume",
+        "family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-008",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "secondary_family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations perfume/secondary_family string ONLY",
+      "normative_existing_field_definition": [
+        "perfume",
+        "secondary_family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-009",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "top_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.top; potential dpt.perfume_notes layer=top",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.top"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-010",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "heart_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.heart; potential dpt.perfume_notes layer=heart",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.heart"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-011",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "base_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.base; potential dpt.perfume_notes layer=base",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.base"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-012",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.general; potential dpt.perfume_notes layer=general",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.general"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-013",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am",
+      "logical_ordinal": 644,
+      "field_locator": "url",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.source_url/locator only; no perfume/url definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-014",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.external_key; no perfume field definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-015",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "name",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.name via perfume/name",
+      "normative_existing_field_definition": [
+        "perfume",
+        "name"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-016",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "house_id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.brand_id via perfume/brand_id",
+      "normative_existing_field_definition": [
+        "perfume",
+        "brand_id"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-017",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "house",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "No perfume/house definition; corroboration of house identity only",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-018",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "year",
+      "raw_state": "MISSING",
+      "existing_disposition": "UNKNOWN",
+      "historical_disposition": "UNKNOWN",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.release_year via perfume/release_year; NO value now",
+      "normative_existing_field_definition": [
+        "perfume",
+        "release_year"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-019",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "concentration",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.perfumes.concentration_code via perfume/concentration_code",
+      "normative_existing_field_definition": [
+        "perfume",
+        "concentration_code"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-020",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations perfume/family string ONLY",
+      "normative_existing_field_definition": [
+        "perfume",
+        "family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-021",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "secondary_family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations perfume/secondary_family string ONLY",
+      "normative_existing_field_definition": [
+        "perfume",
+        "secondary_family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-022",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "top_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.top; potential dpt.perfume_notes layer=top",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.top"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-023",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "heart_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.heart; potential dpt.perfume_notes layer=heart",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.heart"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-024",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "base_notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.base; potential dpt.perfume_notes layer=base",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.base"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-025",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "notes",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "perfume/notes.general; potential dpt.perfume_notes layer=general",
+      "normative_existing_field_definition": [
+        "perfume",
+        "notes.general"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-026",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive",
+      "logical_ordinal": 645,
+      "field_locator": "url",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.source_url/locator only; no perfume/url definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-027",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.external_key; no brand/id field definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-028",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "name",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.brands.name via brand/name",
+      "normative_existing_field_definition": [
+        "brand",
+        "name"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-029",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "country",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.brands.country_code via brand/country_code only after mapping",
+      "normative_existing_field_definition": [
+        "brand",
+        "country_code"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-030",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "founded",
+      "raw_state": "MISSING",
+      "existing_disposition": "UNKNOWN",
+      "historical_disposition": "UNKNOWN",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations brand/founded integer; no brands column",
+      "normative_existing_field_definition": [
+        "brand",
+        "founded"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-031",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "type",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations brand/type string; no brands column",
+      "normative_existing_field_definition": [
+        "brand",
+        "type"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-032",
+      "source_file": "houses.csv",
+      "source_key": "afnan",
+      "logical_ordinal": 3,
+      "field_locator": "url",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.source_url/locator; NOT brands.website_url",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-033",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.external_key; no note/id field definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-034",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "name",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.notes.name via note/name",
+      "normative_existing_field_definition": [
+        "note",
+        "name"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-035",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "aliases",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "note/aliases; potential dpt.note_aliases whole-field set",
+      "normative_existing_field_definition": [
+        "note",
+        "aliases"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-036",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "material_family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/material_family string; no notes column",
+      "normative_existing_field_definition": [
+        "note",
+        "material_family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-037",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "origin",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/origin string; NOT material_origin",
+      "normative_existing_field_definition": [
+        "note",
+        "origin"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-038",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "smell",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/smell string; no notes.smell column",
+      "normative_existing_field_definition": [
+        "note",
+        "smell"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-039",
+      "source_file": "materials.csv",
+      "source_key": "mint",
+      "logical_ordinal": 257,
+      "field_locator": "url",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.source_url/locator only; no note/url definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-040",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "id",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.external_key; no note/id field definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-041",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "name",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.notes.name via note/name",
+      "normative_existing_field_definition": [
+        "note",
+        "name"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-042",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "aliases",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "note/aliases; potential dpt.note_aliases whole-field set",
+      "normative_existing_field_definition": [
+        "note",
+        "aliases"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-043",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "material_family",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/material_family string; no notes column",
+      "normative_existing_field_definition": [
+        "note",
+        "material_family"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-044",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "origin",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/origin string; NOT material_origin",
+      "normative_existing_field_definition": [
+        "note",
+        "origin"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-045",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "smell",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_observations note/smell string; no notes.smell column",
+      "normative_existing_field_definition": [
+        "note",
+        "smell"
+      ],
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    },
+    {
+      "claim_id": "P30-CL-046",
+      "source_file": "materials.csv",
+      "source_key": "bergamot",
+      "logical_ordinal": 46,
+      "field_locator": "url",
+      "raw_state": "PRESENT",
+      "existing_disposition": "DEFER",
+      "historical_disposition": "DEFER",
+      "historical_provenance": "MATCH",
+      "proposed_target": "dpt.source_records.source_url/locator only; no note/url definition",
+      "normative_existing_field_definition": "NOT_DEFINED: no direct canonical field; locator-only or corroboration; new mapping requires separate versioned allowlist/schema amendment",
+      "owner_gate_ids": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "future_task_aliases": [
+        "P30-U01",
+        "P30-U02"
+      ],
+      "new_owner_answer": "UNANSWERED"
+    }
+  ],
+  "normative_mapping_references": [
+    "database/migrations/001_identity.sql",
+    "database/migrations/002_catalogue.sql",
+    "database/migrations/003_provenance.sql",
+    "database/migrations/004_associations_media_personal.sql",
+    "database/migrations/005_contract_functions.sql",
+    "database/migrations/006_media_and_deferred_contracts.sql",
+    "database/migrations/007_security_and_field_contract.sql",
+    "database/migrations/008_coalesced_deferred_validation.sql",
+    "database/schema_contract.json",
+    "Structure DB Obsidian/03_Data/IMP_ENR_01_Field_Review_Mapping.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP_ENR_01_Independent_Data_Review.json"
+  ],
+  "existing_schema_symbols": [
+    "dpt.field_definitions",
+    "dpt.entities",
+    "dpt.brands",
+    "dpt.perfumes",
+    "dpt.notes",
+    "dpt.sources",
+    "dpt.rights_assessments",
+    "dpt.source_records",
+    "dpt.entity_source_links",
+    "dpt.source_observations",
+    "dpt.canonical_selections",
+    "dpt.data_conflicts",
+    "dpt.conflict_members",
+    "dpt.audit_events",
+    "dpt.perfume_notes",
+    "dpt.note_aliases",
+    "dpt_guard.principal_id",
+    "dpt_guard.can_write_scope",
+    "dpt_guard.observation_guard",
+    "dpt_guard.selection_guard",
+    "dpt_guard.materialize_scalar",
+    "dpt_guard.scalar_column",
+    "dpt_guard.validate_model",
+    "dpt_guard.check_active_row",
+    "dpt_guard.entity_visible",
+    "dpt_guard.record_allowed",
+    "dpt_guard.serialize_write",
+    "dpt_guard.schedule_validation",
+    "dpt_guard.validate_all_deferred"
+  ],
+  "existing_tests_inspected_not_run": [
+    "database/tests/test_scento_preview.py",
+    "database/tests/test_foundation.py",
+    "database/tests/test_scento_etl.py",
+    "database/tests/test_matching_input.py"
+  ],
+  "fresh_source_and_provenance_fingerprints": {
+    "LICENSE": {
+      "bytes": 188,
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    "README.md": {
+      "bytes": 2799,
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    "VERIFIED_SOURCE_PROVENANCE.json": {
+      "bytes": 2168,
+      "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+    },
+    "datapackage.json": {
+      "bytes": 4845,
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    },
+    "houses.csv": {
+      "bytes": 29765,
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    "materials.csv": {
+      "bytes": 87027,
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    "perfumes.csv": {
+      "bytes": 780683,
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    }
+  },
+  "fresh_three_sidecar_fingerprints": {
+    "progressive_enrichment_index_1479.json": {
+      "bytes": 1566875,
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    },
+    "membership_policy_43_PROPOSED.json": {
+      "bytes": 349385,
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    "held_conflict_exclusion.json": {
+      "bytes": 278,
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    }
+  },
+  "retained_state_not_current_DB": {
+    "held": 44,
+    "nonheld_bucket_not_approval": 1435,
+    "false_activation_flags": 1479,
+    "normalization_proposals": 43,
+    "proposal_status": "PROPOSED_NOT_APPROVED",
+    "independent_conflict_exclusions": 1
+  },
+  "existing_field_definitions_referenced": [
+    [
+      "brand",
+      "country_code"
+    ],
+    [
+      "brand",
+      "founded"
+    ],
+    [
+      "brand",
+      "name"
+    ],
+    [
+      "brand",
+      "type"
+    ],
+    [
+      "note",
+      "aliases"
+    ],
+    [
+      "note",
+      "material_family"
+    ],
+    [
+      "note",
+      "name"
+    ],
+    [
+      "note",
+      "origin"
+    ],
+    [
+      "note",
+      "smell"
+    ],
+    [
+      "perfume",
+      "brand_id"
+    ],
+    [
+      "perfume",
+      "concentration_code"
+    ],
+    [
+      "perfume",
+      "family"
+    ],
+    [
+      "perfume",
+      "name"
+    ],
+    [
+      "perfume",
+      "notes.base"
+    ],
+    [
+      "perfume",
+      "notes.general"
+    ],
+    [
+      "perfume",
+      "notes.heart"
+    ],
+    [
+      "perfume",
+      "notes.top"
+    ],
+    [
+      "perfume",
+      "release_year"
+    ],
+    [
+      "perfume",
+      "secondary_family"
+    ]
+  ],
+  "protected_checkout_fingerprints": {
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md": {
+      "bytes": 28943,
+      "checkout_sha256": "ea366ffefad100b3fe13f48e0af313b1b7969fc2f2b4a550fa3d51ab989006b9",
+      "lf_sha256": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5"
+    },
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md": {
+      "bytes": 13531,
+      "checkout_sha256": "5007580393e6c754e25e9ef120f2899eb3322763b0880784582c53058e45873c",
+      "lf_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c"
+    },
+    "Structure DB Obsidian/03_Data/IMP_ENR_01_Field_Review_Mapping.md": {
+      "bytes": 6206,
+      "checkout_sha256": "86f37205c89302ad430b7d0db9a307a78c96ea76f0d63fdea83468e77df20723",
+      "lf_sha256": "9135f61ee45118da002056f199df58c312838c7aa1dbca8fb60a208438f74d66"
+    },
+    "Structure DB Obsidian/08_Operations/Test_Evidence/IMP_ENR_01_Independent_Data_Review.json": {
+      "bytes": 30992,
+      "checkout_sha256": "63c97ae5891af7f6a096504d20ecf64548d9e5f17c13b6d700299fb8357cc3f5",
+      "lf_sha256": "5131986cb7b610bee3fe097f9b583929063c800e82c89c3d5ed2fb22198972cb"
+    },
+    "Structure DB Obsidian/08_Operations/Receipts/2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview.md": {
+      "bytes": 6473,
+      "checkout_sha256": "457fe7084c9fc43726c2f45d298dfea5de508ebb4c234eeea8323da5571123bd",
+      "lf_sha256": "cfbc82c40b611062e7a35416e3fbbd8ac70c86e8781c80d4fd67c1bcb4361b57"
+    },
+    "database/scento_preview.py": {
+      "bytes": 18842,
+      "checkout_sha256": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
+      "lf_sha256": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae"
+    },
+    "database/tests/test_scento_preview.py": {
+      "bytes": 31027,
+      "checkout_sha256": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef",
+      "lf_sha256": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef"
+    },
+    "database/schema_contract.json": {
+      "bytes": 6800,
+      "checkout_sha256": "8e71e24afad6623fd4442dfc0e5579c4de0b3ef556d0f1d23c73a3a776e20481",
+      "lf_sha256": "8e71e24afad6623fd4442dfc0e5579c4de0b3ef556d0f1d23c73a3a776e20481"
+    },
+    "database/migrations/001_identity.sql": {
+      "bytes": 6016,
+      "checkout_sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+      "lf_sha256": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a"
+    },
+    "database/migrations/002_catalogue.sql": {
+      "bytes": 7632,
+      "checkout_sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+      "lf_sha256": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d"
+    },
+    "database/migrations/003_provenance.sql": {
+      "bytes": 16044,
+      "checkout_sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "lf_sha256": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266"
+    },
+    "database/migrations/004_associations_media_personal.sql": {
+      "bytes": 33387,
+      "checkout_sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+      "lf_sha256": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6"
+    },
+    "database/migrations/005_contract_functions.sql": {
+      "bytes": 26519,
+      "checkout_sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "lf_sha256": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64"
+    },
+    "database/migrations/006_media_and_deferred_contracts.sql": {
+      "bytes": 17417,
+      "checkout_sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "lf_sha256": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d"
+    },
+    "database/migrations/007_security_and_field_contract.sql": {
+      "bytes": 52821,
+      "checkout_sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+      "lf_sha256": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595"
+    },
+    "database/migrations/008_coalesced_deferred_validation.sql": {
+      "bytes": 3515,
+      "checkout_sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+      "lf_sha256": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9"
+    }
+  },
+  "historical_private_payload_metadata_not_opened": {
+    "bytes": 33953,
+    "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9"
+  },
+  "current_DB": "NOT REVALIDATED",
+  "runtime_tests": "NOT RUN; historical 249 offline methods not rerun",
+  "future_transition_tests": "PROPOSED / NOT RUN",
+  "independent_planning_review": "COORDINATOR_GATE_PENDING",
+  "tools": [
+    "Caveman skill instructions",
+    "Context Mode ctx_execute/ctx_search",
+    "PowerShell Get-Content/rg",
+    "Python standard library static metadata helper",
+    "apply_patch"
+  ],
+  "checks": [
+    {
+      "check": "exact 46 mapping and independent dossier slots",
+      "result": "PASS"
+    },
+    {
+      "check": "historical dossier 43 DEFER / 3 UNKNOWN / 0 ACCEPT",
+      "result": "PASS"
+    },
+    {
+      "check": "five exact source keys and logical ordinals",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 3",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 4",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 5",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 6",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 7",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 8",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 9",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 10",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 11",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 12",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 13",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 14",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 15",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 16",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 17",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 18",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 19",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 20",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 21",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 22",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 23",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 24",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 25",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 26",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 27",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 28",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 29",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 30",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 31",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 32",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 33",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 34",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 35",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 36",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 37",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 38",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 39",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 40",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 41",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 42",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 43",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 44",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 45",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 46",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 47",
+      "result": "PASS"
+    },
+    {
+      "check": "mapping/dossier identity parity 48",
+      "result": "PASS"
+    },
+    {
+      "check": "eight existing migrations",
+      "result": "PASS"
+    },
+    {
+      "check": "47 logical schema tables",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint LICENSE",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint README.md",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint VERIFIED_SOURCE_PROVENANCE.json",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint datapackage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint houses.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint materials.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh pinned fingerprint perfumes.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh sidecar fingerprint progressive_enrichment_index_1479.json",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh sidecar fingerprint membership_policy_43_PROPOSED.json",
+      "result": "PASS"
+    },
+    {
+      "check": "fresh sidecar fingerprint held_conflict_exclusion.json",
+      "result": "PASS"
+    },
+    {
+      "check": "44 retained holds",
+      "result": "PASS"
+    },
+    {
+      "check": "43 retained unapproved normalization proposals",
+      "result": "PASS"
+    },
+    {
+      "check": "1479 false retained activation flags",
+      "result": "PASS"
+    },
+    {
+      "check": "one independent conflict exclusion retained",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/name",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/house_id",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/year",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/concentration",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/secondary_family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/top_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/heart_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/base_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/name",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/house_id",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/year",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/concentration",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/secondary_family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/top_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/heart_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/base_notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target perfumes.csv/notes",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target houses.csv/name",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target houses.csv/country",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target houses.csv/founded",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target houses.csv/type",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/name",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/aliases",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/material_family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/origin",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/smell",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/name",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/aliases",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/material_family",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/origin",
+      "result": "PASS"
+    },
+    {
+      "check": "existing allowlisted target materials.csv/smell",
+      "result": "PASS"
+    },
+    {
+      "check": "exact 46 readiness rows and 20 columns",
+      "result": "PASS"
+    },
+    {
+      "check": "unique stable claim IDs",
+      "result": "PASS"
+    },
+    {
+      "check": "required source_of_truth resolves to vault README",
+      "result": "PASS"
+    },
+    {
+      "check": "source_of_truth target exists",
+      "result": "PASS"
+    },
+    {
+      "check": "frozen LF contract hash",
+      "result": "PASS"
+    },
+    {
+      "check": "frozen LF POST27 packet hash",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint LICENSE",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint README.md",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint VERIFIED_SOURCE_PROVENANCE.json",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint datapackage.json",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint houses.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint materials.csv",
+      "result": "PASS"
+    },
+    {
+      "check": "after source fingerprint perfumes.csv",
+      "result": "PASS"
+    }
+  ],
+  "check_totals": {
+    "PASS": 112
+  },
+  "packet_checkout_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+  "helper_sha256": "c892700e112a65912b5c493c091c8cf2f7c6eb1ff728a16607173ad1e88b0590",
+  "qualification": "Author static checks only; human/canonical acceptance absent; Git/base preservation and integrated independent review owned by coordinator",
+  "initial_author_helper_failure": {
+    "result": "FAILED before document/evidence write",
+    "exception": "KeyError: 'path'",
+    "cause": "Preflight source_files entry shape differed from assumed path key",
+    "correction": "Read verified source directory from existing provenance sidecar path instead; no source/runtime change",
+    "retained_location": "Current lane tool execution transcript; this sanitized record"
+  }
+}

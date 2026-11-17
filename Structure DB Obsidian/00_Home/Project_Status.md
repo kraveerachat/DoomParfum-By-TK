@@ -12,6 +12,17 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## DPT-PLAN-011 post-PR30 — current planning truth, 2026-11-17
+
+Owner merged PR30 at `4f23cbc858dd818b149674342bfa504e78930088`, UTC2026-11-17T05:51:40Z / 12:51:40 Asia/Bangkok. Actual fetched origin/main equals that merge; PR30 head `f5a277124e60ff0e290d9a95651eee14397506a0` has the identical tree. [[IMP-ENR-01_Pinned_Scento_Offline_Preview]] is now MERGED for its exact private offline five-record preview only. Historical pending/Draft/before-implementation statements below are dated history. This merge does not accept canonical facts or proposed application/media policies.
+
+[[DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness]] is IN PROGRESS on isolated `plan/post-pr30-data-app-media-readiness` from that main. Owner authorizes docs/research/static checks/independent planning review/one Draft Planning PR and existing handoff synchronization only. [[Post_PR30_Data_App_Media_Readiness_Plan]] joins three disjoint lanes, the exact 46-slot data review proposal, first private read-only catalogue/detail and genuine principal/strict DTO/UI design, and retained 23-lead media rights review. [[Post_PR30_Dependency_and_Gate_Map]] has packet-local proposed units, not allocated implementation IDs. [[Post_PR30_Owner_Decision_Packet]] has 15 new decisions, all PROPOSED / UNANSWERED; framework/provider/version remain UNSELECTED. Exact packet freeze, checks/review/PR/receipt/ZIP results are recorded only after actual execution.
+
+Preserve 43 DEFER / 3 UNKNOWN / 0 ACCEPT, all44holds/43normalization proposals/Khamrah and matching eligibility. Technical literal parity is not human meaning/identity/closure approval. Factual authorized display does not need real matching eligibility, but it still needs canonical identity, selected fields, use rights, genuine scope and minimum grants. Media placeholders keep the first web slice independent of image acquisition. Existing dpt_runtime/internal reader is not accepted minimal app authority; no shared admin fetch/filter or operator-owner rewrite.
+
+Fresh preflight verified six source pins905307bytes, five provenance/audit sidecars, private preview hash16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9,26priorreceipts/eightmigrations and old ZIP6724manifest entries without changing them. Historical249offline methods NOT RERUN; all proposed runtime/security/UI/DB/media tests NOT RUN. Current DB NOT REVALIDATED; Docker NOT PROBED. PR8 OPEN/DRAFT/BLOCKED84dcc; no experiment/fix/replay/recovery. No implementation, source/image acquisition, binary media opening, role/schema/DB/Production mutation, public API/UI, real ranking, rights expansion or agent merge.
+
+
 ## IMP-ENR-01 current Owner-approved offline implementation — 2026-11-17
 
 Current verified main/base `81b281acb418af230746bb00fb923e60509e8e92` includes Owner-merged PR26/27/28/29. PR29 merged UTC2026-11-16T18:55:32Z; it is architecture documentation only. Human Owner's current master prompt **explicitly accepts A=A-PREVIEW-5, B=B-PINNED-PREVIEW, I=I-IMP-ENR-01**, exact ENR-PINNED-SCENTO-1 revision1, transform/schema versions and frozen canonical contract/packet hashes. This is new exact scoped approval, not inference from merged plans. All other A–I/ARC choices remain unaccepted proposals.

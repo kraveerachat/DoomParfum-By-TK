@@ -1,0 +1,10 @@
+{
+  "task": "DPT-PLAN-011",
+  "packet": "POST30-ODP-1",
+  "revision": 1,
+  "status": "NOT FROZEN; independent planning review pending",
+  "packet_sha256": null,
+  "owner_status": "PROPOSED / UNANSWERED",
+  "owner_answer": null,
+  "qualification": "Placeholder only; no exact approval request before completed independent review"
+}
