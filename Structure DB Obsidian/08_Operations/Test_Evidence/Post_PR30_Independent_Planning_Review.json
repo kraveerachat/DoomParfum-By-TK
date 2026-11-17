@@ -1,0 +1,601 @@
+{
+  "task": "DPT-PLAN-011",
+  "reviewer": "/root/post30_independent_review",
+  "independent": true,
+  "planning_author": false,
+  "source_commit": "53555db12f179c490ef5d4adfb7eadde62af0a58",
+  "previous_reviewed_source": "012859f3f923f33b363fe36f7abbe3123e8d734c",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "at_utc": "2026-11-17T12:10:10.170883+00:00",
+  "finding": "P30-INT-001",
+  "result": "PASS — FOCUSED CANONICAL-BINDING RE-REVIEW",
+  "finding_status": "RESOLVED AT EXACT CORRECTED SOURCE",
+  "passed_count": 81,
+  "failed_count": 0,
+  "checks": [
+    {
+      "check": "exact corrected committed HEAD",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "clean corrected working tree",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "only three expected documentation changes",
+      "observed": true,
+      "detail": [
+        "Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json"
+      ]
+    },
+    {
+      "check": "corrected checkout matches exact Git LF Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "corrected checkout matches exact Git LF Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Integrity_Correction.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "corrected checkout matches exact Git LF Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "15 decision objects exactly unchanged",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized DATA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized DATA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized DATA-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized DATA-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized DATA-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-06",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized APP-07",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized MEDIA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized MEDIA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "decision remains unanswered unauthorized SEQ-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner JSON only changes dependency canonical pin",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "dependency Git blob unchanged",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "dependency JSON canonical bytes and no CRLF",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "dependency exact canonical expected SHA",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet changes only two exact annex pins",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "all nine exact packet annex rows present",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": {
+        "pinned": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+        "Git_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": {
+        "pinned": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+        "Git_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": {
+        "pinned": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+        "Git_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": {
+        "pinned": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+        "Git_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": {
+        "pinned": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+        "Git_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": {
+        "pinned": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+        "Git_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": {
+        "pinned": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+        "Git_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": {
+        "pinned": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+        "Git_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet pin equals committed Git SHA Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "observed": true,
+      "detail": {
+        "pinned": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e",
+        "Git_sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e"
+      }
+    },
+    {
+      "check": "annex exact checkout equals committed LF bytes Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner JSON declares eight nonself annexes",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "declared UTF8LF hash kind verified Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "exact corrected packet SHA",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet checkout equals canonical Git LF",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "freeze remains honest pending placeholder",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "correction evidence preserves failed source/report",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "correction evidence hash values verified",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "correction evidence no premature operations claim",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "original 416 report immutable",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "original Markdown report immutable",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "initial independent finding preserved",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "initial 77 true 2 false correction report immutable",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "initial correction Markdown immutable",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "focused diff check",
+      "observed": true,
+      "detail": ""
+    },
+    {
+      "check": "fresh protected local source/sidecar perfumes.csv",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar houses.csv",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar materials.csv",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar LICENSE",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar README.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar datapackage.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar VERIFIED_SOURCE_PROVENANCE.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar progressive_enrichment_index_1479.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar membership_policy_43_PROPOSED.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar held_conflict_exclusion.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "fresh protected local source/sidecar PINNED_SOURCE_AUDIT_INDEX_1479.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "private payload hash only unchanged",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "all base runtime/tests/migrations/26 old receipts unchanged at corrected Git source",
+      "observed": true,
+      "detail": 121
+    },
+    {
+      "check": "stable corrected HEAD after all checks",
+      "observed": true,
+      "detail": null
+    }
+  ],
+  "initial_finding_preserved": {
+    "task": "DPT-PLAN-011",
+    "finding": "P30-INT-001",
+    "status": "OPEN — FREEZE BLOCKER",
+    "severity": "P2",
+    "discovered_by": "coordinator actual pre-freeze guard",
+    "independently_confirmed_by": "/root/post30_independent_review",
+    "source_commit": "012859f3f923f33b363fe36f7abbe3123e8d734c",
+    "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+    "defect": "Owner annex pin names a raw CRLF checkout SHA-256 while hash_kind claims exact UTF-8 LF / canonical Git bytes. The packet cannot be frozen under that binding.",
+    "observed": {
+      "owner_annex_pinned_sha256": "4db92c36526be568f075f8a88292919db8445c989a24aeb221094a366c176a18",
+      "owner_hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication",
+      "git_blob_bytes": 16354,
+      "git_blob_crlf_count": 0,
+      "git_blob_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "checkout_bytes": 16747,
+      "checkout_crlf_count": 393,
+      "checkout_sha256": "4db92c36526be568f075f8a88292919db8445c989a24aeb221094a366c176a18"
+    },
+    "reviewer_false_negative": "The original 416 checks verified the packet/Owner annex pins against raw checkout bytes. A separate canonical Git-to-checkout comparison normalized line endings, but the oracle did not connect the declared hash_kind to canonical Git bytes. Original zero-finding review therefore missed this documentation-integrity defect.",
+    "original_report_preserved": {
+      "path": ".local/post-pr30-planning/review/INDEPENDENT_PLANNING_REVIEW.json",
+      "sha256": "0e15d78ee856f24b5f80d186e5bb5374d5bb3dd421d51bbcc9e533cc2060873c",
+      "unchanged": true,
+      "qualification": "Original evidence is retained; its planning-readiness conclusion does not clear the newly open canonical-binding blocker."
+    },
+    "required_correction": "Normalize the dependency-model checkout to its existing LF Git blob; pin its canonical Git SHA-256 in Owner_Decisions; update the corresponding dependency-model and Owner_Decisions packet hashes. Preserve the initial artifacts. Commit and independently re-review every normative annex pin against exact committed Git bytes and its declared hash kind.",
+    "scope": "Documentation hash binding only. No new evidence of a runtime, DAG, decision, data/rights/budget or source-preservation semantic defect.",
+    "freeze": "NOT PERFORMED / NOT CLEARED",
+    "focused_re_review": "PENDING EXACT CORRECTION COMMIT",
+    "writes": "Reviewer ignored evidence file only; no tracked/Git/private-payload/handoff writes"
+  },
+  "original_report_sha256": "0e15d78ee856f24b5f80d186e5bb5374d5bb3dd421d51bbcc9e533cc2060873c",
+  "canonical_packet": {
+    "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+    "bytes": 39928,
+    "sha256": "e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c",
+    "Git_blob_sha1": "bf34d114890e47dbd82c426ced69717be44b8adf"
+  },
+  "all_nine_canonical_annex_bindings": [
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "Git_blob_sha1": "a6b9563c6f32826d831b432ca2632df6ba9d283e",
+      "Git_bytes": 10668,
+      "Git_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+      "checkout_bytes": 10668,
+      "checkout_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "Git_blob_sha1": "6db5a6780d84a1d8e5fae7ebcc3e6bfcad7d54b4",
+      "Git_bytes": 72352,
+      "Git_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+      "checkout_bytes": 72352,
+      "checkout_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "Git_blob_sha1": "11fc4eafbe73e210d636ce1010965a8d3a2435a0",
+      "Git_bytes": 32911,
+      "Git_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+      "checkout_bytes": 32911,
+      "checkout_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "Git_blob_sha1": "e9c6ab2ba78c933d51107ab83d754914cd48ab18",
+      "Git_bytes": 27282,
+      "Git_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+      "checkout_bytes": 27282,
+      "checkout_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "Git_blob_sha1": "10b543170dcf876d71c0600fc0b5b2b273919b8d",
+      "Git_bytes": 23842,
+      "Git_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+      "checkout_bytes": 23842,
+      "checkout_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "Git_blob_sha1": "a2cc27dceb7bca4200e333a6bfa587ea14d13238",
+      "Git_bytes": 51014,
+      "Git_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+      "checkout_bytes": 51014,
+      "checkout_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "Git_blob_sha1": "924f31bcd0d44a611aa6393560693501e98dbad4",
+      "Git_bytes": 15181,
+      "Git_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+      "checkout_bytes": 15181,
+      "checkout_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "Git_blob_sha1": "c2543c546c59ff4e317225de0243a8e0eca8c096",
+      "Git_bytes": 16354,
+      "Git_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "checkout_bytes": 16354,
+      "checkout_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "CRLF_count": 0
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "Git_blob_sha1": "291367b92f87c504dbbbdfd4e85f073bf768d125",
+      "Git_bytes": 34824,
+      "Git_sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e",
+      "checkout_bytes": 34824,
+      "checkout_sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e",
+      "CRLF_count": 0
+    }
+  ],
+  "original_review_oracle_correction": "Each declared pin is now compared directly with exact committed Git bytes and unnormalized checkout bytes. LF absence of CRLF is checked. Raw-byte equality is never substituted for canonical Git equality.",
+  "findings": [],
+  "open_findings": [],
+  "scope_qualification": "Focused documentation-integrity correction only. Original 416-check report remains immutable and retains its original false negative. This re-review does not retroactively convert it into an accurate zero-finding canonical review. Together, original scoped content review and this exact-source correction review support planning readiness only.",
+  "NOT_RUN": [
+    "No runtime suites, DB/Docker/scorer/SQL generation/authentication/API/UI/media/binary or production operations",
+    "Historical 249 offline methods NOT RERUN; current DB NOT REVALIDATED",
+    "No completed freeze, final receipt or archive verification claimed; current freeze file remains explicit placeholder",
+    "No new primary browsing needed for this hash-only correction; previous 16 official text observations remain separately recorded"
+  ],
+  "files_written": "Ignored reviewer correction helper/report only; no tracked/Git/handoff/source/private-payload writes",
+  "previous_correction_attempt_preserved": {
+    "path": ".local/post-pr30-planning/review/CORRECTION_RE_REVIEW.json",
+    "sha256": "344430eb4be96d725e8fdb8def5074b8dd1214c4852466ba531e4f3a395fb058",
+    "observed_true": 77,
+    "observed_false": 2,
+    "cause": "Git stat-only modified flag after intentional LF normalization under core.autocrlf. Reviewer independently found raw/index/HEAD bytes identical and empty raw/numstat diffs. Coordinator refreshed only index metadata; no content, HEAD or config correction. Fresh stable checks verify clean state."
+  },
+  "public_copy_provenance": {
+    "original_private_report_sha256": "be224671b6f0d5e8d1679614e44755bb53db75f9b619cf14ad3a14a2539dfddf",
+    "original_report_unchanged": true,
+    "change": "Operator root paths aliased and this provenance added; source bindings/results/counts unchanged",
+    "historical_runtime_tests_rerun": false
+  },
+  "coverage_qualification": "Original full planning review416/0 at012859 is retained separately; focused exact-correction checks reported here are not another416-check rerun. P30-INT-001 canonical pin defect resolved by this exact-checkpoint re-review. Runtime tests NOT RUN."
+}
