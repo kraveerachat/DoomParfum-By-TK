@@ -1,0 +1,393 @@
+{
+  "task": "DPT-PLAN-011",
+  "version": "post30-dependency-gates-1",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "unit_aliases_not_final_task_IDs": true,
+  "preview_AM01": "COMPLETED / OWNER-MERGED PR30; do not repeat",
+  "units": [
+    {
+      "id": "P30-U01",
+      "title": "Human field-disposition contract and scoped review",
+      "legacy_units": "AM-02",
+      "requires": [],
+      "owner_gates": [
+        "DATA-01",
+        "DATA-04"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Per-slot reviewer identity/evidence, accept/reject/defer/request-evidence process; retain 43 DEFER/3 UNKNOWN until actual new review.",
+      "rights_and_remaining_gate": "No DB operation; signed review evidence is distinct from technical parity.",
+      "verification_required": "All46slot/version/provenance/disposition controls; missing never zero/empty; no invented human ACCEPT.",
+      "rollback": "Append correction/revocation evidence; never rewrite source or old review.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U02",
+      "title": "Canonical identity, edition and field mapping contract",
+      "legacy_units": "AM-02",
+      "requires": [
+        "P30-U01"
+      ],
+      "owner_gates": [
+        "DATA-02",
+        "DATA-03",
+        "DATA-05"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Resolve exact five-record identities/editions, allowed target paths and note/alias semantics; unsupported mappings require their own versioned amendment.",
+      "rights_and_remaining_gate": "No final UUID, taxonomy, equivalence, closure or capture time inferred from source ID/ordinal.",
+      "verification_required": "Ambiguous edition/concentration/year, material origin, family taxonomy, General/layer, alias and unknown evidence negatives.",
+      "rollback": "Retain alternatives and prior decisions; do not silently merge identities.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U03",
+      "title": "Genuine application principal and least-privilege boundary",
+      "legacy_units": "AM-03",
+      "requires": [],
+      "owner_gates": [
+        "APP-01",
+        "APP-02",
+        "APP-04",
+        "APP-07"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Exact trusted auth proof/subject/initialLOGIN binding, dedicated new private scope, credential custody and minimal repository/grants contract.",
+      "rights_and_remaining_gate": "No existing role grants or operator-owned data are changed by this plan. Any role/schema amendment needs a new separately approved migration/task.",
+      "verification_required": "Forged/admin/BYPASSRLS/SETROLE/GUC/impersonation/wrongscope, direct+PUBLIC+indirectgrant, revocation/cancel/poolidentity/read-only tests.",
+      "rollback": "Disable new leases/credentials, invalidate sessions, preserve old immutable owners and scoped data.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U04",
+      "title": "Bounded canonical observation/selection transition",
+      "legacy_units": "AM-02",
+      "requires": [
+        "P30-U01",
+        "P30-U02",
+        "P30-U03"
+      ],
+      "owner_gates": [
+        "DATA-01",
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Only separately approved reviewed claims in the explicitly authorized new application scope; per-field selected observation/materialization and current action rights.",
+      "rights_and_remaining_gate": "Needs accepted writer/curator authority and capture/reviewer evidence; no generic map, hold release, eligibility or operator-owner reassignment.",
+      "verification_required": "Cross-row/FK/scope/provenance/immutable observation/whole-list/conflict membership/rights-time/deferred-constraint/replay/rollback/concurrency tests.",
+      "rollback": "Preserve raw claims and audit; revoke/replace selections through reviewed correction; no backdated timestamps or overwritten evidence.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U05",
+      "title": "Minimal authorized read-only catalogue repository",
+      "legacy_units": "AM-04",
+      "requires": [
+        "P30-U03",
+        "P30-U04"
+      ],
+      "owner_gates": [
+        "DATA-03",
+        "APP-04",
+        "APP-05"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Catalogue/detail projection from accessible reviewed selected fields and rights; no arbitrary db/user/callback and no exposure of internal matching DTO.",
+      "rights_and_remaining_gate": "Requires a separately accepted minimal grant/repository contract; existing dpt_runtime/read_profile is not minimal application authority.",
+      "verification_required": "Authorize before lookup/count/filter/page; hidden/nonexistent uniformity, selected-field/rights/provenance/held-policy and minimalgrant tests.",
+      "rollback": "Disable repository capability; retain source/selection history and no stale privileged fallback.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U06",
+      "title": "Strict read-only application service",
+      "legacy_units": "AM-04",
+      "requires": [
+        "P30-U05"
+      ],
+      "owner_gates": [
+        "APP-01",
+        "APP-02",
+        "APP-04",
+        "APP-05",
+        "APP-06",
+        "APP-07"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Versioned request/response schemas, exact proposed resource budgets after Owner acceptance, safe errors, final recheck and bounded cancellation.",
+      "rights_and_remaining_gate": "Exact framework/provider/version/driver/session/transport contracts remain prerequisites, not chosen by research-only APP02 approval.",
+      "verification_required": "Malformed/coercion/unknownkey/body/cursor/nesting/response caps, identity-pool isolation, rights-change/finaldelivery, timeout/cancel and no-store tests.",
+      "rollback": "Disable private service; invalidate sessions/inflight responses, no browser cache revival or DB rewrite.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U07",
+      "title": "Accessible private shell and catalogue/detail views",
+      "legacy_units": "AM-05/AM-06",
+      "requires": [
+        "P30-U06"
+      ],
+      "owner_gates": [
+        "APP-01",
+        "APP-03",
+        "APP-04",
+        "APP-05",
+        "APP-06",
+        "APP-07"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Minimal signin/catalogue/detail/session-settings interactions, provenance-aware safe fields and media placeholders; future private/matching routes retained.",
+      "rights_and_remaining_gate": "Owned-mock presentation subtask can run in parallel after its separate exact UI approval; live data activation still requires U06.",
+      "verification_required": "Element/handler/IF/state consistency, keyboard/focus/status, staleasync/late-response/logout, no private payload/credentials in bundles or persisted cache.",
+      "rollback": "Disable UI/data binding, clear managed view state; no offline private-data fallback.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U08",
+      "title": "Separately licensed original PNG intake",
+      "legacy_units": "AM-07",
+      "requires": [
+        "P30-U02",
+        "P30-U03",
+        "P30-U04"
+      ],
+      "owner_gates": [
+        "MEDIA-01",
+        "MEDIA-02"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Exact original approved asset/version/method/use, rights-holder proof, authorized scope and subject binding; quarantine unsupported bytes.",
+      "rights_and_remaining_gate": "External per-asset acquisition/store/backup/retention rights AND exact operational approval remain mandatory; metadata review is independent and already allowed.",
+      "verification_required": "Existing original-only PNG limits, same-byte hash/source/permission lineage/scope, attribution, malformed/unsupported chunks and revocation controls.",
+      "rollback": "Quarantine/withdraw project use without deleting permitted provenance; no conversion/strip/resize workaround or rights invention.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U09",
+      "title": "Separately authorized private original-media delivery",
+      "legacy_units": "AM-07",
+      "requires": [
+        "P30-U06",
+        "P30-U07",
+        "P30-U08"
+      ],
+      "owner_gates": [
+        "APP-04",
+        "APP-06",
+        "APP-07",
+        "MEDIA-02"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Current object/field/source/asset display rights, exact validated original snapshot, minimal attribution and private no-store delivery.",
+      "rights_and_remaining_gate": "Private display permission and delivery contract are additional to acquisition; no public hotlink/CDN/derivative/redistribution authority.",
+      "verification_required": "Unauthorizedasset uniformity, expired/revoked ancestor, changedbinding, boundedstream, cancel/latepublish/cache/restore-denial tests.",
+      "rollback": "Stop project delivery and descendants, clear managed buffers; cannot retract already delivered lawful bytes.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U10",
+      "title": "Real matching input readiness contract",
+      "legacy_units": "AM-08",
+      "requires": [
+        "P30-U02",
+        "P30-U04"
+      ],
+      "owner_gates": [
+        "DATA-02",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Exact canonical vocabulary/domain/normalization, selected fields/use rights, completeness where absence is used, no unresolved held/conflicting input, explicit eligibility.",
+      "rights_and_remaining_gate": "Separate REAL-EXACT-CONTRACT and REAL-ELIGIBILITY approvals; factual catalogue display does not wait for this unit.",
+      "verification_required": "Unknown vs complete-empty/exclusion, repeatednotes, Khamrah alternatives, selected-field/source-rights/version/eligibility and real/synthetic partition negatives.",
+      "rollback": "Disable eligibility/capability through approved audited transition; preserve all original claims and fixed synthetic code.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U11",
+      "title": "Real-domain adapter and one separately accepted method",
+      "legacy_units": "AM-08",
+      "requires": [
+        "P30-U05",
+        "P30-U10"
+      ],
+      "owner_gates": [
+        "APP-04",
+        "APP-06",
+        "DATA-03",
+        "DATA-04",
+        "DATA-05"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "One exact real method/config/schema/partition/explanation contract, not a wrapper that relabels real data as synthetic.",
+      "rights_and_remaining_gate": "Independent real method/formula approval needed; Full Mode A/B2 and real accord-strength scoring not unlocked here.",
+      "verification_required": "New real goldens/properties plus unchanged math regression, rational sort/ties, permissions/revocation and no hidden defaults/fallback.",
+      "rollback": "Disable method/capability and invalidate result contexts; preserve accepted M1/B1 source and evidence.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U12",
+      "title": "Separate personal Cart, purchase, Collection and later Dashboard units",
+      "legacy_units": "AM-09/AM-10",
+      "requires": [
+        "P30-U06",
+        "P30-U07"
+      ],
+      "owner_gates": [
+        "APP-04",
+        "APP-07"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Future individual tasks for own interest/cart, buying sources, manual Ordered stamp, purchase history, physical bottles, then private dashboard.",
+      "rights_and_remaining_gate": "Separate exact PRIVATE-WRITE-CONTRACTS/units/money/date/idempotency/retention decisions; no commerce or Shopee sync.",
+      "verification_required": "Cross-user/FK/privateexistence, replay/lostupdate, unknownprice, historyretention and authorizedaggregate/denominator tests per separate task.",
+      "rollback": "Stop affected writes/aggregates, preserve immutable source and purchase history; inventory lifecycle never erases EverPurchased.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    },
+    {
+      "id": "P30-U13",
+      "title": "Selected private runtime deployment and recovery",
+      "legacy_units": "AM-11",
+      "requires": [
+        "P30-U06",
+        "P30-U07"
+      ],
+      "owner_gates": [
+        "APP-02",
+        "APP-04",
+        "APP-07",
+        "SEQ-01"
+      ],
+      "status": "PROPOSED / IMPLEMENTATION BLOCKED",
+      "formal_task_ID": "NOT ALLOCATED",
+      "contract_required": "Separate exact local/private host/provider/secrets/backup/restore scope after accepted implemented slice; no requirement to wait for real matching or media.",
+      "rights_and_remaining_gate": "External OPS-EXACT-CONTRACT and explicit operations authority required; Production/cloud remain separately gated. PR8 remains blocked without new causal evidence.",
+      "verification_required": "Fresh accepted persistence/restore/inventory/provenance/currentrights/session isolation tests; historical successful replay is not fresh proof.",
+      "rollback": "Follow separately approved recoverable rollback; no destructive reset, oldguard weakening or restoration of revoked access.",
+      "tests_status": "SPECIFIED / NOT RUN",
+      "implementation_authorized": false
+    }
+  ],
+  "edges": [
+    {
+      "from": "P30-U01",
+      "to": "P30-U02"
+    },
+    {
+      "from": "P30-U01",
+      "to": "P30-U04"
+    },
+    {
+      "from": "P30-U02",
+      "to": "P30-U04"
+    },
+    {
+      "from": "P30-U03",
+      "to": "P30-U04"
+    },
+    {
+      "from": "P30-U03",
+      "to": "P30-U05"
+    },
+    {
+      "from": "P30-U04",
+      "to": "P30-U05"
+    },
+    {
+      "from": "P30-U05",
+      "to": "P30-U06"
+    },
+    {
+      "from": "P30-U06",
+      "to": "P30-U07"
+    },
+    {
+      "from": "P30-U02",
+      "to": "P30-U08"
+    },
+    {
+      "from": "P30-U03",
+      "to": "P30-U08"
+    },
+    {
+      "from": "P30-U04",
+      "to": "P30-U08"
+    },
+    {
+      "from": "P30-U06",
+      "to": "P30-U09"
+    },
+    {
+      "from": "P30-U07",
+      "to": "P30-U09"
+    },
+    {
+      "from": "P30-U08",
+      "to": "P30-U09"
+    },
+    {
+      "from": "P30-U02",
+      "to": "P30-U10"
+    },
+    {
+      "from": "P30-U04",
+      "to": "P30-U10"
+    },
+    {
+      "from": "P30-U05",
+      "to": "P30-U11"
+    },
+    {
+      "from": "P30-U10",
+      "to": "P30-U11"
+    },
+    {
+      "from": "P30-U06",
+      "to": "P30-U12"
+    },
+    {
+      "from": "P30-U07",
+      "to": "P30-U12"
+    },
+    {
+      "from": "P30-U06",
+      "to": "P30-U13"
+    },
+    {
+      "from": "P30-U07",
+      "to": "P30-U13"
+    }
+  ],
+  "all_new_owner_decisions": "PROPOSED / UNANSWERED",
+  "all_runtime_tests": "NOT RUN",
+  "Production_mutation": false
+}

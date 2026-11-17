@@ -1,0 +1,72 @@
+{
+  "task": "DPT-PLAN-011",
+  "packet": "POST30-ODP-1",
+  "revision": 1,
+  "status": "FROZEN FOR OWNER REVIEW; NOT OWNER ACCEPTED",
+  "frozen_at_utc": "2026-11-17T12:10:31.540106+00:00",
+  "date_timezone": "Asia/Bangkok",
+  "packet_path": "Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+  "packet_sha256": "e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c",
+  "hash_kind": "Canonical Git UTF-8 LF bytes at exact reviewed checkpoint",
+  "reviewed_planning_checkpoint": "53555db12f179c490ef5d4adfb7eadde62af0a58",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "normative_annexes": [
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "hash_kind": "exact UTF-8 LF author bytes; Git canonical bytes checked before publication"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e"
+    }
+  ],
+  "independent_review_original_sha256": "be224671b6f0d5e8d1679614e44755bb53db75f9b619cf14ad3a14a2539dfddf",
+  "independent_review_public_sha256": "0d9fc64181654f5d98c595f46e210045975fc1bdad5b1dffd161a1b820b1314d",
+  "independent_review_counts": {
+    "initial_full_static": 416,
+    "corrected_focused_passed": 81,
+    "failed": 0,
+    "open_findings": 0
+  },
+  "owner_status": "PROPOSED / UNANSWERED",
+  "owner_answer": null,
+  "new_decisions": 15,
+  "implementation_authorized": false,
+  "qualification": "Integrity freeze after completed independent planning review and canonical-binding correction re-review only; no human claim acceptance, source/media grant, runtime/provisioning or Production approval. Material change requires revised packet/hash and review."
+}

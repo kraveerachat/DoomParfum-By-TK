@@ -218,3 +218,17 @@ Main `168715bc9bc5fff968524074257dc106a8a63638` includes Owner-merged PR28; all 
 - [[IMP_ENR_01_Field_Review_Mapping]] —46sanitized locator/state/outcome rows.
 - [[IMP_ENR_01_Implementation_Boundary]] —actualfunctions, scope and limits.
 - [[IMP_ENR_01_Implementation_Review.json]], [[IMP_ENR_01_Offline_Regression.json]], [[IMP_ENR_01_Private_Publication.json]] —exact independent/regression/publication evidence.
+
+## DPT-PLAN-011 post-PR30 planning navigation
+
+Owner-merged PR30/main `4f23cbc858dd818b149674342bfa504e78930088`; [[DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness]] coordinates the next docs-only planning task. Earlier dated PR30 Draft/planning statements remain history.
+
+- [[Post_PR30_Data_App_Media_Readiness_Plan]] — integrated scope, requirements and acceptance.
+- [[Post_PR30_Canonical_Field_Review_Packet]] — all46slots/20columns, human dispositions remain pending.
+- [[Post_PR30_First_Readonly_Web_Slice_ADR]] and [[Post_PR30_Principal_and_Authorization_Plan]] — stack alternatives, genuine principal, least privilege and proposed transport.
+- [[Post_PR30_Element_Function_Slice_Matrix]] — catalogue/detail and safe private interactions.
+- [[Post_PR30_Media_Rights_Readiness]] —23retainedleads, conditional rights and proposed original-only path.
+- [[Post_PR30_Dependency_and_Gate_Map]] and [[Post_PR30_Dependency_Model.json]] —13packet-local units/22prerequisite edges; no global implementation IDs allocated.
+- [[Post_PR30_Owner_Decision_Packet]] — POST30-ODP-1,15PROPOSED/UNANSWERED decisions; no implementation authority.
+
+Historical runtime tests remain historical; current planning static/review/publication evidence follows actual checkpoints. No source/asset/DB/Production change or agent merge.

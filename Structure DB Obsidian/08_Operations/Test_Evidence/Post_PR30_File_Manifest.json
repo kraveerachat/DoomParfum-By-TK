@@ -1,0 +1,208 @@
+{
+  "task": "DPT-PLAN-011",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "branch": "plan/post-pr30-data-app-media-readiness",
+  "PR": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/31",
+  "reviewed_planning_checkpoint": "53555db12f179c490ef5d4adfb7eadde62af0a58",
+  "pre_receipt_publication_head": "5c576366ecf3041570d765934ee401d76c0bcece",
+  "files": 33,
+  "entries": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "bytes": 18997,
+      "raw_sha256": "d6892dabb5a16714817a4d1f27644b360361cd4faecf2bf58accd93eae8c194d",
+      "canonical_LF_sha256": "d6892dabb5a16714817a4d1f27644b360361cd4faecf2bf58accd93eae8c194d"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "bytes": 55226,
+      "raw_sha256": "161c84432059e73f23f20a481d8bdb2b56967148ee76f8da4567cd7b10722909",
+      "canonical_LF_sha256": "161c84432059e73f23f20a481d8bdb2b56967148ee76f8da4567cd7b10722909"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "bytes": 72352,
+      "raw_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+      "canonical_LF_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "bytes": 51014,
+      "raw_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+      "canonical_LF_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "bytes": 10988,
+      "raw_sha256": "1b68ce8d02a287eda820df3ad469576d8a590f2a26fbdca1fccf548ee706bdc5",
+      "canonical_LF_sha256": "1b68ce8d02a287eda820df3ad469576d8a590f2a26fbdca1fccf548ee706bdc5"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Source_Registry.md",
+      "bytes": 11787,
+      "raw_sha256": "1a86d840bdeee6b546078d85ec9124bbe625f2b5d951af691921aebc54bb8c64",
+      "canonical_LF_sha256": "1a86d840bdeee6b546078d85ec9124bbe625f2b5d951af691921aebc54bb8c64"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "bytes": 23842,
+      "raw_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+      "canonical_LF_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "bytes": 32911,
+      "raw_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+      "canonical_LF_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "bytes": 39928,
+      "raw_sha256": "e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c",
+      "canonical_LF_sha256": "e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "bytes": 27282,
+      "raw_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+      "canonical_LF_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "bytes": 10960,
+      "raw_sha256": "2fbd556beeecca5948790ecb0dec559b9444d16818097cbe90f42a5fd1341bc9",
+      "canonical_LF_sha256": "2fbd556beeecca5948790ecb0dec559b9444d16818097cbe90f42a5fd1341bc9"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "bytes": 35818,
+      "raw_sha256": "717b1fd5e42992fc9a1a269cdb13c6e15a4323077a87ed7eb97564f6d2ef144c",
+      "canonical_LF_sha256": "717b1fd5e42992fc9a1a269cdb13c6e15a4323077a87ed7eb97564f6d2ef144c"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "bytes": 10668,
+      "raw_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+      "canonical_LF_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "bytes": 15181,
+      "raw_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+      "canonical_LF_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "bytes": 31174,
+      "raw_sha256": "982cf361a08bfc0d2719bd0979ba7b158cd02ef97d9d6d3337d9b093653554a7",
+      "canonical_LF_sha256": "982cf361a08bfc0d2719bd0979ba7b158cd02ef97d9d6d3337d9b093653554a7"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness.md",
+      "bytes": 8218,
+      "raw_sha256": "89dc4de52e0218bd4e2dd66962dab0f4b85375990856673f0f88f660479166db",
+      "canonical_LF_sha256": "89dc4de52e0218bd4e2dd66962dab0f4b85375990856673f0f88f660479166db"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+      "bytes": 16033,
+      "raw_sha256": "2592cf006d5388b9285247f5dbb3ed84f5f201b55f641d9955932308f4dbe5c2",
+      "canonical_LF_sha256": "2592cf006d5388b9285247f5dbb3ed84f5f201b55f641d9955932308f4dbe5c2"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "bytes": 88413,
+      "raw_sha256": "fa366b795df009d0c4770b57aab673b3aa26c1e467c416c810da8734849ec383",
+      "canonical_LF_sha256": "fa366b795df009d0c4770b57aab673b3aa26c1e467c416c810da8734849ec383"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "bytes": 74494,
+      "raw_sha256": "16c9442c4cbf3df1c3b632741a4624a7545705447864264836c4e74365c5ab70",
+      "canonical_LF_sha256": "16c9442c4cbf3df1c3b632741a4624a7545705447864264836c4e74365c5ab70"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "bytes": 42652,
+      "raw_sha256": "44ff2b942dffd68aa4f03de4a50c8c01be8dac782d6f2142724bd19e3759e13c",
+      "canonical_LF_sha256": "44ff2b942dffd68aa4f03de4a50c8c01be8dac782d6f2142724bd19e3759e13c"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Receipts/2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning.md",
+      "bytes": 10012,
+      "raw_sha256": "ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21",
+      "canonical_LF_sha256": "ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Application_Research.json",
+      "bytes": 33414,
+      "raw_sha256": "936d2961939830148d0987ca3f1ab238bf0603791e0a13d2a989a22e57990b58",
+      "canonical_LF_sha256": "936d2961939830148d0987ca3f1ab238bf0603791e0a13d2a989a22e57990b58"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Data_Readiness.json",
+      "bytes": 58360,
+      "raw_sha256": "49d90625706f9727625ffd3562295a540b9496f84e31aa916bd45557657e867d",
+      "canonical_LF_sha256": "49d90625706f9727625ffd3562295a540b9496f84e31aa916bd45557657e867d"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "bytes": 16354,
+      "raw_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "canonical_LF_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_File_Manifest.json",
+      "self_hash": "OMITTED; containing commit/external checks bind this manifest"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Independent_Planning_Review.json",
+      "bytes": 23862,
+      "raw_sha256": "0d9fc64181654f5d98c595f46e210045975fc1bdad5b1dffd161a1b820b1314d",
+      "canonical_LF_sha256": "0d9fc64181654f5d98c595f46e210045975fc1bdad5b1dffd161a1b820b1314d"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Initial_Planning_Review.json",
+      "bytes": 86678,
+      "raw_sha256": "550b6284951508acff6f45edc1203d3367ee63c945c50e894e3f13a32c269057",
+      "canonical_LF_sha256": "550b6284951508acff6f45edc1203d3367ee63c945c50e894e3f13a32c269057"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Integrity_Correction.json",
+      "bytes": 1572,
+      "raw_sha256": "722236e79ada26ee4aa2a1be0e9a01ac6f93fbafd6a1f3bed27d91c22702391a",
+      "canonical_LF_sha256": "722236e79ada26ee4aa2a1be0e9a01ac6f93fbafd6a1f3bed27d91c22702391a"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Media_Research.json",
+      "bytes": 122166,
+      "raw_sha256": "c4bb761c6e4d5fdac6510fe0869e6bd4492f050dda7247367b22d32e2d6307b1",
+      "canonical_LF_sha256": "c4bb761c6e4d5fdac6510fe0869e6bd4492f050dda7247367b22d32e2d6307b1"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "bytes": 34824,
+      "raw_sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e",
+      "canonical_LF_sha256": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Packet_Freeze.json",
+      "bytes": 3905,
+      "raw_sha256": "5b84eb97cbe22295f6ed91a617eef0398d76f2f827a404d0729d7a2136c7084d",
+      "canonical_LF_sha256": "5b84eb97cbe22295f6ed91a617eef0398d76f2f827a404d0729d7a2136c7084d"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Preflight.json",
+      "bytes": 5022,
+      "raw_sha256": "0fa3a6a2458de3354df41729da68ed3b44f0826c4eddbf9e77828c90d582a4da",
+      "canonical_LF_sha256": "31ff0f89006ee14c10605479646b561497c9f3f75a5913e8227d3a4722648464"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Static_Validation.json",
+      "bytes": 2602,
+      "raw_sha256": "de9d798c277506a71b2c1738eb1d67097eb84be0df57d23c3b14b33bc2410544",
+      "canonical_LF_sha256": "de9d798c277506a71b2c1738eb1d67097eb84be0df57d23c3b14b33bc2410544"
+    }
+  ],
+  "qualification": "Complete actual delta; manifest self-hash/size omitted to avoid self-reference. Final HEAD and ZIP hash in live PR/external verified registry."
+}

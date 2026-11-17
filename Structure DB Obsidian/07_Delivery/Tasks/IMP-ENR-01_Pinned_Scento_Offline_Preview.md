@@ -2,7 +2,7 @@
 id: IMP-ENR-01
 project: DoomParfum By TK
 type: implementation_task
-status: READY FOR REVIEW
+status: MERGED
 owner: human-owner
 updated: 2026-11-17
 planning_pr: [28, 29]
@@ -93,3 +93,9 @@ Documentation/diff/private-data validation, Draft PR publication, final metadata
 ## Draft PR30 and sole implementation receipt — 2026-11-17
 
 [PR30](https://github.com/kraveerachat/DoomParfum-By-TK/pull/30) OPEN/DRAFT, pre-receipt publication9003d08889785fd7f47e3297abacf8531a5ba1a2, reviewed/tested runtime4fdbd29b3f345fcbce3eb08862748672657ef22c. Source/data agent checks complete; Human/canonical acceptance and merge remain PENDING. Sole immutable receipt [[2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview]], all25old receipts unchanged. [[IMP_ENR_01_File_Manifest.json]] lists exact final paths. Final metadata parity/ZIP delivery proofs live outside the frozen ZIP and in PR description; this checkpoint does not claim future archive verification. No source/rights/hold/eligibility/Production expansion. Human Owner alone merges.
+
+## DPT-PLAN-011 post-PR30 verified Owner merge event — 2026-11-17
+
+PR30 is MERGED by Human Owner at4f23cbc858dd818b149674342bfa504e78930088, UTC2026-11-17T05:51:40Z / 12:51:40Asia/Bangkok. Merge tree equals finalf5a277124e60ff0e290d9a95651eee14397506a0. Existing reviewed runtime, tests, contract/schema/transform,46slotmapping,privatepayload,independentreports and sole cfbc82c4 receipt remain unchanged. Earlier Draft/pending entries are dated history. Historical249tests are NOT RERUN in DPT-PLAN-011.
+
+[[DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness]] is a new docs-only planning task, not repeated preview implementation. Dossier43DEFER/3UNKNOWN/0ACCEPT,44holds/43normalization proposals/Khamrah and matching eligibility remain unchanged. No human canonical acceptance, new source/image right or app/API/UI/realmatching/DB/Production authority follows from merge. Original receipt is immutable and not amended.

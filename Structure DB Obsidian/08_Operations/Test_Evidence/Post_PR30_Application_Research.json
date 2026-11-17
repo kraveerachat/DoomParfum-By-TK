@@ -1,0 +1,736 @@
+{
+  "schema": "post30-application-research-1",
+  "task": "DPT-PLAN-011",
+  "lane": "B",
+  "status": "PROPOSED / UNANSWERED",
+  "baseline": "4f23cbc858dd818b149674342bfa504e78930088",
+  "retrieved_local_date": "2026-11-17",
+  "timezone": "Asia/Bangkok",
+  "captured_at_utc": "2026-11-17T06:22:46.158194+00:00",
+  "tools_used": [
+    "PowerShell/read-only Git/Python standard library",
+    "Context Mode ctx_execute/ctx_index/ctx_search",
+    "web primary official documentation"
+  ],
+  "context_mode_note": "Smoke test succeeded; initial ctx_search with unsupported limit rejected; corrected queries schema succeeded. Full vault indexed for bounded retrieval.",
+  "runtime_observed": {
+    "python": "3.11.9",
+    "node": "v24.22.1",
+    "package_installation": "NONE",
+    "framework_provider_driver_ui_versions": "UNSELECTED",
+    "compatibility": "Declared lower bounds observed only; no package/driver/build/auth/cancellation tests"
+  },
+  "registry_counts": {
+    "components": 30,
+    "component_edges": 53,
+    "interfaces": 29,
+    "interface_registry": 29,
+    "elements": 110,
+    "routes": 17
+  },
+  "historical_data_outcomes": {
+    "DEFER": 43,
+    "UNKNOWN": 3,
+    "ACCEPT": 0,
+    "not_changed": true
+  },
+  "source_manifest_checkout": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 21204,
+      "sha256_checkout_bytes": "25247fd3e0dfe54b1ae30bc581d4b292ef7789023e7cec8a423788bd68653bd5",
+      "sha256_canonical_git_baseline": "b683c5e59ee9ce6f92d70f73df9c758e2e27736124c278b942324d4d430688ae",
+      "git_baseline_bytes": 20990,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "DEVELOPMENT_WORKFLOW.md",
+      "bytes": 61940,
+      "sha256_checkout_bytes": "721fc6658a0bb500d9478b4cd10170d0f03b9faf20a7a8d412f16c052288bd03",
+      "sha256_canonical_git_baseline": "f5aeeb7046f216b86c82f1caf83f88c3d072758ca208d715a978eb66aba261f1",
+      "git_baseline_bytes": 60982,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "README.md",
+      "bytes": 49342,
+      "sha256_checkout_bytes": "0ba50657c74ddbbdfc6d40f3faa73c89cc94fc70e8d05fc4b7f32b8286f8d22e",
+      "sha256_canonical_git_baseline": "dfb35dd4269f0cccd4df53e36f97cf4ff92d1da2cefb865993124f5a0ab93cc0",
+      "git_baseline_bytes": 48885,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/README.md",
+      "bytes": 12545,
+      "sha256_checkout_bytes": "04bc6641b20b34ed9b8e2cbf3c3b96aa482de5118f2e8626a0aeae6a49dffbbe",
+      "sha256_canonical_git_baseline": "6a027877e9ef0c634efdb87cb8e43f066913d90e2df0ae0f97d51f4501f38ed5",
+      "git_baseline_bytes": 12417,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "bytes": 51663,
+      "sha256_checkout_bytes": "fafec493411444ebc22a1c2733a620e06897b9677d66ec461b7d69d6759ffd1f",
+      "sha256_canonical_git_baseline": "f2704907c88fddfd1e3e5788a007b4e66eb6288d051a9b040c2699c82ab4634b",
+      "git_baseline_bytes": 49028,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/matching_input.py",
+      "bytes": 17706,
+      "sha256_checkout_bytes": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+      "sha256_canonical_git_baseline": "e4b4b761e1bcaa64a1ed0c19372545d232ddf5e7626e58666d4ea76edd97ab1b",
+      "git_baseline_bytes": 17706,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/schema_contract.json",
+      "bytes": 6800,
+      "sha256_checkout_bytes": "8e71e24afad6623fd4442dfc0e5579c4de0b3ef556d0f1d23c73a3a776e20481",
+      "sha256_canonical_git_baseline": "8e71e24afad6623fd4442dfc0e5579c4de0b3ef556d0f1d23c73a3a776e20481",
+      "git_baseline_bytes": 6800,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/001_identity.sql",
+      "bytes": 6016,
+      "sha256_checkout_bytes": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+      "sha256_canonical_git_baseline": "1355ce3fbfdb119cd05975e2c0c525b8938864c78cd947312e43682ae41bb02a",
+      "git_baseline_bytes": 6016,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/002_catalogue.sql",
+      "bytes": 7632,
+      "sha256_checkout_bytes": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+      "sha256_canonical_git_baseline": "844083aa75e0e5a7e142d690c10b64751e6a106f8b393cc6b242c7eb16fb350d",
+      "git_baseline_bytes": 7632,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/003_provenance.sql",
+      "bytes": 16044,
+      "sha256_checkout_bytes": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "sha256_canonical_git_baseline": "12edaa60677d74f0b4a579e3fef353cbdc46f1b79563e45a9149d565666ca266",
+      "git_baseline_bytes": 16044,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/004_associations_media_personal.sql",
+      "bytes": 33387,
+      "sha256_checkout_bytes": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+      "sha256_canonical_git_baseline": "23e389ec2274249c1c7d283237c63f45b655faf13e2c0e6d0ae679980bdf90f6",
+      "git_baseline_bytes": 33387,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/005_contract_functions.sql",
+      "bytes": 26519,
+      "sha256_checkout_bytes": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "sha256_canonical_git_baseline": "3cd97a3fa8943bbdd4649f89a3def036c8b20390d9e2e22c08ee5075c59b7f64",
+      "git_baseline_bytes": 26519,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/006_media_and_deferred_contracts.sql",
+      "bytes": 17417,
+      "sha256_checkout_bytes": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "sha256_canonical_git_baseline": "008e4e9ecd18ec376141c9c0d73a2908dcff09da9c897947cce4dce8ca30a67d",
+      "git_baseline_bytes": 17417,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/007_security_and_field_contract.sql",
+      "bytes": 52821,
+      "sha256_checkout_bytes": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+      "sha256_canonical_git_baseline": "9e47ecc3ee9f80e488985d6f7a493eff49a6bdfbcc7e3122a03265b543328595",
+      "git_baseline_bytes": 52821,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "database/migrations/008_coalesced_deferred_validation.sql",
+      "bytes": 3515,
+      "sha256_checkout_bytes": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+      "sha256_canonical_git_baseline": "c93190673a02f1790fb574ae9aeae74abd4490f42576057a69730657a08e1ef9",
+      "git_baseline_bytes": 3515,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/System_Architecture_Refinement.md",
+      "bytes": 17952,
+      "sha256_checkout_bytes": "f9f91f627eb8a5019a50358559e09c146399cd823c9c8ec6fa0abd9c6480e1d5",
+      "sha256_canonical_git_baseline": "a2a0d22a02eb93bf7ba9179e254d3d55b17deb3f7df9ba14d33db813a0f334c8",
+      "git_baseline_bytes": 17829,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Owner_Review_Packet.md",
+      "bytes": 12690,
+      "sha256_checkout_bytes": "7ecbd280e184d570123baee79f3903f3f7d1373f1ea74d4f3c15ca172c6a4821",
+      "sha256_canonical_git_baseline": "0e265149f87b0c797b9e563b7fdb9bc6a1a4379844842d2e97ffd4549ba0747f",
+      "git_baseline_bytes": 12602,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Component_and_Dependency_Registry.md",
+      "bytes": 28347,
+      "sha256_checkout_bytes": "3d06a8553d2d71643645f51b85035e57fc90887ab4b91d52ed420104a5ad3ff0",
+      "sha256_canonical_git_baseline": "c66477d4c8c95a02e4ec2ef73994bc29a23568227c7b7e5e6de09cfd4f7537f5",
+      "git_baseline_bytes": 27814,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Function_Interface_and_DTO_Contracts.md",
+      "bytes": 126537,
+      "sha256_checkout_bytes": "579bbdaa4697b77d4d4b37cbe65e34ca3f0f5a1a3a97b9c2e4d87ce4bb1152ff",
+      "sha256_canonical_git_baseline": "18dbc775e30d9cd54647903299f84ce01a2d34be6fa1f23dbb5b07659c241ecf",
+      "git_baseline_bytes": 125580,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Authorization_and_Trust_Boundaries.md",
+      "bytes": 19456,
+      "sha256_checkout_bytes": "3aceccf97cfa6200e1e0dd976f4c9a83d8b51877907e18178a3b5e141e525ab1",
+      "sha256_canonical_git_baseline": "eec392fc93be0a62c3dc88505f083b3e4c1370adcda5ee27a1bbb93209d23f03",
+      "git_baseline_bytes": 19343,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Data_and_Media_Lifecycle_Architecture.md",
+      "bytes": 16619,
+      "sha256_checkout_bytes": "5d8dd2fdcaeff88c55a10efe469f5e8592cd9fa8f1b61a1813aad43e1fda2429",
+      "sha256_canonical_git_baseline": "5e87b4becabae30b2917547db4c41a1ece28238eabda45f8a6cc854418456902",
+      "git_baseline_bytes": 16486,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Architecture_Alternatives_and_ADR.md",
+      "bytes": 10319,
+      "sha256_checkout_bytes": "ea926ba7a20c67033722cef87c6f46ea1b1a2a8ffa8b0336493b66b8257390a6",
+      "sha256_canonical_git_baseline": "092c47f5bfcfd3c8b6b4e4ea065c5b49a8fab5ff1a37ec0919d0d67532e55839",
+      "git_baseline_bytes": 10249,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+      "bytes": 13531,
+      "sha256_checkout_bytes": "5007580393e6c754e25e9ef120f2899eb3322763b0880784582c53058e45873c",
+      "sha256_canonical_git_baseline": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "git_baseline_bytes": 13421,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Application_Integration_and_Security.md",
+      "bytes": 20445,
+      "sha256_checkout_bytes": "ec84c2417ea7d729d2ed25fa6adad41cf9636f5682fe41419ba8693a90c91da6",
+      "sha256_canonical_git_baseline": "d8299205b19fdc088eabb4cca7750db2d72abd7dccc6f97a661ae3059fe17b35",
+      "git_baseline_bytes": 20311,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/IMP_ENR_01_Architecture_Compatibility.md",
+      "bytes": 28401,
+      "sha256_checkout_bytes": "2ea3ddbac6a29de1e8c9538d1392c2e10b16a35396883bb46da1e671576df9d4",
+      "sha256_canonical_git_baseline": "cd7e847c41e6ca9bc0f6f9598bc93fe82335bd9b7e72a2daba3d65d94416ec51",
+      "git_baseline_bytes": 28277,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/UI_Element_Function_Matrix.md",
+      "bytes": 275097,
+      "sha256_checkout_bytes": "2bb745e335ef5ea03fdb0a72e2f2db4a3457f4f8cef9b8505981bf20a19e8b57",
+      "sha256_canonical_git_baseline": "2be08f8f3e3eba8ff7406aa0e59b3541256f840c7c9ebefbf4b6060de7cfc16d",
+      "git_baseline_bytes": 271762,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Dependency_Based_Implementation_Roadmap.md",
+      "bytes": 12226,
+      "sha256_checkout_bytes": "c619ab32f143b27d4db72c1b29181805637e5568237d3fb9f2b8890ab39c9176",
+      "sha256_canonical_git_baseline": "f9a36e0cc546750c5cfcab5db737fcdf0feddce50987ad6e04c5e486614d5593",
+      "git_baseline_bytes": 12144,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+      "bytes": 28943,
+      "sha256_checkout_bytes": "ea366ffefad100b3fe13f48e0af313b1b7969fc2f2b4a550fa3d51ab989006b9",
+      "sha256_canonical_git_baseline": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+      "git_baseline_bytes": 28613,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/IMP_ENR_01_Field_Review_Mapping.md",
+      "bytes": 6206,
+      "sha256_checkout_bytes": "86f37205c89302ad430b7d0db9a307a78c96ea76f0d63fdea83468e77df20723",
+      "sha256_canonical_git_baseline": "9135f61ee45118da002056f199df58c312838c7aa1dbca8fb60a208438f74d66",
+      "git_baseline_bytes": 6137,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/IMP_ENR_01_Independent_Data_Review.md",
+      "bytes": 9973,
+      "sha256_checkout_bytes": "3b9cf17c2fb54e40c4e5a60267a1a9e350c0c05808c284f720065d9f571f7be1",
+      "sha256_canonical_git_baseline": "061bc277159cbf095197c0481ec84bf8908dc7fe5004ffd881526e98c5d0a907",
+      "git_baseline_bytes": 9915,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Source_Registry.md",
+      "bytes": 11787,
+      "sha256_checkout_bytes": "1a86d840bdeee6b546078d85ec9124bbe625f2b5d951af691921aebc54bb8c64",
+      "sha256_canonical_git_baseline": "69902adc9afe6c78c0cb7c33ff45a36ea1d3ff662f54ec1f984568a7d171a2c6",
+      "git_baseline_bytes": 10285,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "bytes": 10988,
+      "sha256_checkout_bytes": "1b68ce8d02a287eda820df3ad469576d8a590f2a26fbdca1fccf548ee706bdc5",
+      "sha256_canonical_git_baseline": "ec64f5911c56ad7253faddc5892a42085629953df1593b573a1c0a019aa547a3",
+      "git_baseline_bytes": 9486,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Unified_Model.json",
+      "bytes": 390370,
+      "sha256_checkout_bytes": "b497c98d9aa07b973a7578bc5afeaa56556a678a6093ef6ed2036a41966b84b4",
+      "sha256_canonical_git_baseline": "3cb27385da70cdace2a254b5a9dbaba6c07a424f513170804e42c01396e94ca9",
+      "git_baseline_bytes": 383150,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Architecture_Interface_Registry.json",
+      "bytes": 177433,
+      "sha256_checkout_bytes": "7cd5e7b5cedff27a38c51c2edb9c3646d24bb1b03a676b389517174b37a6d9a6",
+      "sha256_canonical_git_baseline": "4bad11aa627ede324eca7b228102392e5a54b18d1b23e46617edb9ba2ec41081",
+      "git_baseline_bytes": 174861,
+      "checkout_hash_meaning": "Observed working-copy bytes at lane capture; may contain coordinator additive planning updates or CRLF. Historical baseline uses explicit canonical Git hash."
+    }
+  ],
+  "primary_sources": [
+    {
+      "id": "PG16-RLS",
+      "url": "https://www.postgresql.org/docs/16/ddl-rowsecurity.html",
+      "document_version_observed": "PostgreSQL manual16; site banner16.16",
+      "finding": "RLS superuser/BYPASSRLS/owner limits",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "PG16-IDENTITY",
+      "url": "https://www.postgresql.org/docs/16/functions-info.html",
+      "document_version_observed": "PostgreSQL manual16",
+      "finding": "Session/current identity and superuser session authorization differ",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "PG16-TIMEOUT",
+      "url": "https://www.postgresql.org/docs/16/runtime-config-client.html",
+      "document_version_observed": "PostgreSQL manual16",
+      "finding": "Statement, lock and idle transaction timeouts differ",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "FASTAPI-RELEASE",
+      "url": "https://fastapi.tiangolo.com/release-notes/",
+      "document_version_observed": "Observed0.163.1 dated2026-11-15",
+      "finding": "0.162.7 records cancellation cleanup correction",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "FASTAPI-METADATA",
+      "url": "https://github.com/fastapi/fastapi/blob/0.163.1/pyproject.toml",
+      "document_version_observed": "tag0.163.1",
+      "finding": "requires-python>=3.11; no installed dependency/runtime test",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "FASTAPI-PIN",
+      "url": "https://fastapi.tiangolo.com/deployment/versions/",
+      "document_version_observed": "living documentation; no printed release version",
+      "finding": "Pin known-working version and test upgrades",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "FASTAPI-TEMPLATE",
+      "url": "https://fastapi.tiangolo.com/advanced/templates/",
+      "document_version_observed": "living documentation; no printed release version",
+      "finding": "Template integration candidate, not stack selection",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "NEXT-INSTALL",
+      "url": "https://nextjs.org/docs/app/getting-started/installation",
+      "document_version_observed": "visible16.4.6",
+      "finding": "Node>=20.9; Windows/macOS/Linux listed; no installed app proof",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "NEXT-AUTH",
+      "url": "https://nextjs.org/docs/app/guides/authentication",
+      "document_version_observed": "visible16.4.6",
+      "finding": "Authentication/session/authorization separation and DTO/data-access boundary",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "ASVS",
+      "url": "https://asvs.owasp.org/",
+      "document_version_observed": "stable5.0.0 published2025-05-30",
+      "finding": "Versioned security verification requirements; no compliance claim",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "PY311-CANCEL",
+      "url": "https://docs.python.org/3.11/library/asyncio-task.html",
+      "document_version_observed": "documentation3.11.18",
+      "finding": "Cancellation cleanup/finally guidance; local runtime3.11.9 differs",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "OIDC-CORE",
+      "url": "https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation",
+      "document_version_observed": "OpenID Connect Core1.0 incorporating errata set2,2023-12-15",
+      "finding": "ID token validation protocol reference; provider/configuration remains UNSELECTED",
+      "retrieved_local_date": "2026-11-17"
+    },
+    {
+      "id": "PKCE",
+      "url": "https://www.rfc-editor.org/rfc/rfc7636",
+      "document_version_observed": "RFC7636,September2015",
+      "finding": "Proof Key for Code Exchange protocol reference; no implementation performed",
+      "retrieved_local_date": "2026-11-17"
+    }
+  ],
+  "matrix_bindings": [
+    {
+      "element_id": "EL-NAV-01",
+      "handler": "H-EL-NAV-01",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-NAV-02",
+      "handler": "H-EL-NAV-02",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-NAV-17",
+      "handler": "H-EL-NAV-17",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D01",
+      "handler": "H-EL-D01",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D02",
+      "handler": "H-EL-D02",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D03",
+      "handler": "H-EL-D03",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D04",
+      "handler": "H-EL-D04",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D05",
+      "handler": "H-EL-D05",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D06",
+      "handler": "H-EL-D06",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D07",
+      "handler": "H-EL-D07",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D08",
+      "handler": "H-EL-D08",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "operation": "IF-PROFILE-READ-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D09",
+      "handler": "H-EL-D09",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "operation": "IF-PROFILE-READ-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "PROPOSED NARROW SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D10",
+      "handler": "H-EL-D10",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "operation": "IF-PROFILE-READ-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "PROPOSED NARROW SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D11",
+      "handler": "H-EL-D11",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "operation": "IF-CAPABILITY-READ-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D12",
+      "handler": "H-EL-D12",
+      "input_schema": "IF-CAPABILITY-READ-1.input.v1",
+      "output_schema": "IF-CAPABILITY-READ-1.output.v1",
+      "operation": "IF-CAPABILITY-READ-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D13",
+      "handler": "H-EL-D13",
+      "input_schema": "IF-PERSONAL-STATE-WRITE-1.input.v1",
+      "output_schema": "IF-PERSONAL-STATE-WRITE-1.output.v1",
+      "operation": "IF-PERSONAL-STATE-WRITE-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D18",
+      "handler": "H-EL-D18",
+      "input_schema": "IF-PROFILE-READ-1.input.v1",
+      "output_schema": "IF-PROFILE-READ-1.output.v1",
+      "operation": "IF-PROFILE-READ-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "PROPOSED NARROW SLICE / BLOCKED upstream"
+    },
+    {
+      "element_id": "EL-D19",
+      "handler": "H-EL-D19",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D20",
+      "handler": "H-EL-D20",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-D21",
+      "handler": "H-EL-D21",
+      "input_schema": "IF-CATALOGUE-QUERY-1.input.v1",
+      "output_schema": "IF-CATALOGUE-QUERY-1.output.v1",
+      "operation": "IF-CATALOGUE-QUERY-1",
+      "route_ids": [
+        "R-CATALOGUE"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-S15",
+      "handler": "H-EL-S15",
+      "input_schema": "IF-PRIVATE-SETTINGS-1.input.v1",
+      "output_schema": "IF-PRIVATE-SETTINGS-1.output.v1",
+      "operation": "IF-PRIVATE-SETTINGS-1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    },
+    {
+      "element_id": "EL-S16",
+      "handler": "H-EL-S16",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED UI acceptance"
+    },
+    {
+      "element_id": "EL-S17",
+      "handler": "H-EL-S17",
+      "input_schema": "IF-SESSION-END-1.input.v1",
+      "output_schema": "IF-SESSION-END-1.output.v1",
+      "operation": "IF-SESSION-END-1",
+      "route_ids": [
+        "R-SETTINGS"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED exact session contract"
+    },
+    {
+      "element_id": "EL-S18",
+      "handler": "H-EL-S18",
+      "input_schema": "IF-AUTH-SESSION-1.input.v1",
+      "output_schema": "IF-AUTH-SESSION-1.output.v1",
+      "operation": "IF-AUTH-SESSION-1",
+      "route_ids": [
+        "R-SIGNIN"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED exact provider/proof contract"
+    },
+    {
+      "element_id": "EL-UI-01",
+      "handler": "H-EL-UI-01",
+      "input_schema": "LocalViewState.v1",
+      "output_schema": "LocalViewState.v1",
+      "operation": "UI-LOCAL-STATE-1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL",
+        "R-SETTINGS",
+        "R-SIGNIN"
+      ],
+      "status": "PROPOSED SLICE / BLOCKED UI acceptance"
+    },
+    {
+      "element_id": "EL-MEDIA-01",
+      "handler": "H-EL-MEDIA-01",
+      "input_schema": "IF-MEDIA-DELIVER-1.input.v1",
+      "output_schema": "IF-MEDIA-DELIVER-1.output.v1",
+      "operation": "IF-MEDIA-DELIVER-1",
+      "route_ids": [
+        "R-CATALOGUE",
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED MEDIA; STATIC PLACEHOLDER ONLY"
+    },
+    {
+      "element_id": "EL-MEDIA-02",
+      "handler": "H-EL-MEDIA-02",
+      "input_schema": "IF-MEDIA-RESOLVE-1.input.v1",
+      "output_schema": "IF-MEDIA-RESOLVE-1.output.v1",
+      "operation": "IF-MEDIA-RESOLVE-1",
+      "route_ids": [
+        "R-DETAIL"
+      ],
+      "status": "BLOCKED / ROADMAP"
+    }
+  ],
+  "runtime_feature_security_accessibility_tests": "SPECIFIED / NOT RUN",
+  "live_database": "NOT REVALIDATED",
+  "source_acquisition": "NONE",
+  "image_bytes": "NONE",
+  "credentials_private_data_to_third_parties": "NONE",
+  "production_mutation": false,
+  "independent_review": "COORDINATOR-OWNED / NOT CLAIMED BY AUTHOR",
+  "author_static_validation": {
+    "at_utc": "2026-11-17T06:25:14.363394+00:00",
+    "matrix_exact_bindings": 27,
+    "requested_matrix_columns": 19,
+    "registry_component_references": "VERIFIED",
+    "frontmatter_required_keys": "VERIFIED",
+    "git_diff_check": "Exit0, no whitespace errors; shared current working tree; CRLF conversion warnings observed",
+    "pending_wikilinks_at_initial_check": [
+      "Post_PR30_Owner_Decision_Packet (coordinator-owned draft not yet written at check)"
+    ],
+    "runtime_security_a11y": "NOT RUN",
+    "independent_review": "NOT CLAIMED; coordinator-owned"
+  }
+}

@@ -1,0 +1,2726 @@
+{
+  "task": "DPT-PLAN-011",
+  "reviewer": "/root/post30_independent_review",
+  "recorded_at_utc": "2026-11-17T06:36:49.600637+00:00",
+  "source_commit": "012859f3f923f33b363fe36f7abbe3123e8d734c",
+  "base_commit": "4f23cbc858dd818b149674342bfa504e78930088",
+  "branch": "plan/post-pr30-data-app-media-readiness",
+  "independence": {
+    "independent_agent": true,
+    "author_of_planning_outputs": false,
+    "tracked_writes": 0,
+    "git_mutations": 0,
+    "handoff_packaging_author": false,
+    "owned_paths": "ignored .local/post-pr30-planning/review only"
+  },
+  "result": "PASS — EXACT-SOURCE PLANNING REVIEW ONLY",
+  "passed_count": 416,
+  "failed_count": 0,
+  "check_count_basis": "Reviewer-owned static assertions; not runtime tests.16 independent official-text research observations and12 manual review groups are separate, not added to416.",
+  "checks": [
+    {
+      "check": "exact formal source commit",
+      "observed": true,
+      "detail": "012859f3f923f33b363fe36f7abbe3123e8d734c"
+    },
+    {
+      "check": "formal working tree clean",
+      "observed": true,
+      "detail": ""
+    },
+    {
+      "check": "exact 28 documentation/evidence paths only",
+      "observed": true,
+      "detail": 28
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/00_Home/Project_Index.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/00_Home/Project_Index.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/00_Home/Project_Index.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/00_Home/Project_Status.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/00_Home/Project_Status.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/00_Home/Project_Status.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/03_Data/Source_Registry.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/03_Data/Source_Registry.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/03_Data/Source_Registry.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Backlog.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Backlog.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Backlog.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Change_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/08_Operations/Change_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/08_Operations/Change_Log.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "frontmatter required Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "added wiki targets resolve Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Application_Research.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Data_Readiness.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Media_Research.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Packet_Freeze.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Preflight.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "committed bytes bound Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Static_Validation.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "formal git diff check",
+      "observed": true,
+      "detail": ""
+    },
+    {
+      "check": "base has 355 tracked files",
+      "observed": true,
+      "detail": 355
+    },
+    {
+      "check": "base source and all historical bodies preserved",
+      "observed": true,
+      "detail": []
+    },
+    {
+      "check": "26 old receipts unchanged",
+      "observed": true,
+      "detail": 26
+    },
+    {
+      "check": "eight migrations unchanged",
+      "observed": true,
+      "detail": 8
+    },
+    {
+      "check": "no runtime or tests changed",
+      "observed": true,
+      "detail": [
+        "Structure DB Obsidian/00_Home/Project_Index.md",
+        "Structure DB Obsidian/00_Home/Project_Status.md",
+        "Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+        "Structure DB Obsidian/03_Data/Source_Registry.md",
+        "Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+        "Structure DB Obsidian/07_Delivery/Backlog.md",
+        "Structure DB Obsidian/07_Delivery/Roadmap.md",
+        "Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+        "Structure DB Obsidian/08_Operations/Change_Log.md",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md"
+      ]
+    },
+    {
+      "check": "preserved local pin perfumes.csv",
+      "observed": true,
+      "detail": {
+        "bytes": 780683,
+        "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+      }
+    },
+    {
+      "check": "preserved local pin houses.csv",
+      "observed": true,
+      "detail": {
+        "bytes": 29765,
+        "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+      }
+    },
+    {
+      "check": "preserved local pin materials.csv",
+      "observed": true,
+      "detail": {
+        "bytes": 87027,
+        "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+      }
+    },
+    {
+      "check": "preserved local pin LICENSE",
+      "observed": true,
+      "detail": {
+        "bytes": 188,
+        "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+      }
+    },
+    {
+      "check": "preserved local pin README.md",
+      "observed": true,
+      "detail": {
+        "bytes": 2799,
+        "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+      }
+    },
+    {
+      "check": "preserved local pin datapackage.json",
+      "observed": true,
+      "detail": {
+        "bytes": 4845,
+        "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+      }
+    },
+    {
+      "check": "preserved local pin VERIFIED_SOURCE_PROVENANCE.json",
+      "observed": true,
+      "detail": {
+        "bytes": 2168,
+        "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+      }
+    },
+    {
+      "check": "preserved local pin progressive_enrichment_index_1479.json",
+      "observed": true,
+      "detail": {
+        "bytes": 1566875,
+        "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+      }
+    },
+    {
+      "check": "preserved local pin membership_policy_43_PROPOSED.json",
+      "observed": true,
+      "detail": {
+        "bytes": 349385,
+        "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+      }
+    },
+    {
+      "check": "preserved local pin held_conflict_exclusion.json",
+      "observed": true,
+      "detail": {
+        "bytes": 278,
+        "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+      }
+    },
+    {
+      "check": "preserved local pin PINNED_SOURCE_AUDIT_INDEX_1479.json",
+      "observed": true,
+      "detail": {
+        "bytes": 2757650,
+        "sha256": "f86f944d2ec7cc5f849e997283e6fb2723a89f1147b1c831718765b409612908"
+      }
+    },
+    {
+      "check": "private preview bytes unchanged",
+      "observed": true,
+      "detail": {
+        "bytes": 33953,
+        "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9"
+      }
+    },
+    {
+      "check": "44 retained holds and 1479 false activation flags",
+      "observed": true,
+      "detail": {
+        "SOURCE_PROMOTABLE_UNDER_MERGED_RULES_NOT_NEW_APPROVAL": 1435,
+        "PRESERVED_HELD_SOURCE_PROFILE": 44
+      }
+    },
+    {
+      "check": "43 unchanged PROPOSED_NOT_APPROVED normalizations",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "one retained independent Khamrah exclusion",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "46-by-20 data matrix",
+      "observed": true,
+      "detail": [
+        46,
+        [
+          20
+        ]
+      ]
+    },
+    {
+      "check": "46 exact provenance identities/order and historical disposition",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "43 DEFER 3 UNKNOWN zero ACCEPT",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "43 PRESENT 3 MISSING",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "46 stable unique claim IDs",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 1 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 1 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 2 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 2 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 3 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 3 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 4 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 4 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 5 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 5 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 6 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 6 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 7 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 7 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 8 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 8 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 9 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 9 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 10 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 10 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 11 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 11 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 12 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 12 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 13 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 13 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 14 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 14 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 15 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 15 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 16 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 16 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 17 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 17 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 18 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 18 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 19 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 19 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 20 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 20 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 21 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 21 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 22 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 22 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 23 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 23 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 24 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 24 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 25 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 25 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 26 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 26 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 27 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 27 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 28 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 28 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 29 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 29 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 30 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 30 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 31 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 31 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 32 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 32 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 33 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 33 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 34 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 34 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 35 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 35 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 36 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 36 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 37 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 37 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 38 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 38 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 39 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 39 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 40 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 40 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 41 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 41 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 42 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 42 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 43 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 43 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 44 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 44 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 45 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 45 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 46 exact tuple and outcome",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "data row 46 proposed human gate and bounded operation",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-001",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-002",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-003",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-004",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-005",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-006",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-007",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-008",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-009",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-010",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-011",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-012",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-013",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-014",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-015",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-016",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-017",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-018",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-019",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-020",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-021",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-022",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-023",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-024",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-025",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-026",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-027",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-028",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-029",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-030",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-031",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-032",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-033",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-034",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-035",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-036",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-037",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-038",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-039",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-040",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-041",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-042",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-043",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-044",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-045",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "raw slot P30-CL-046",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field brand/country_code",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field brand/founded",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field brand/name",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field brand/type",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field note/aliases",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field note/material_family",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field note/name",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field note/origin",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field note/smell",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/brand_id",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/concentration_code",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/family",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/name",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/notes.base",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/notes.general",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/notes.heart",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/notes.top",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/release_year",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "seeded exact field perfume/secondary_family",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "23-by-18 media matrix",
+      "observed": true,
+      "detail": [
+        23,
+        [
+          18
+        ]
+      ]
+    },
+    {
+      "check": "23 unique media lead identities",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "17 note 6 bottle",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "four conditional and two exact proposed PNGs",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-001",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-002",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-003",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-004",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-005",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-006",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-007",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-008",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-009",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-010",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-011",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-012",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-013",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-014",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant NOTECAND-015",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant BOTTLE-CAND-001",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant BOTTLE-CAND-002",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant BOTTLE-CAND-003",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant BOTTLE-CAND-004",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant BOTTLE-CAND-005",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant B1-MEDIA-021",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant B1-MEDIA-022",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media no invented grant B1-MEDIA-023",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-001",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-002",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-003",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-004",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-005",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-006",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-007",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-008",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-009",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-010",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-011",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-012",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-013",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-014",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained NOTECAND-015",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained BOTTLE-CAND-001",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained BOTTLE-CAND-002",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained BOTTLE-CAND-003",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained BOTTLE-CAND-004",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained BOTTLE-CAND-005",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained B1-MEDIA-021",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained B1-MEDIA-022",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "media historical identity/license/metadata retained B1-MEDIA-023",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "PR29 30 components 29 IF 110 elements 17 routes",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "27-by-19 UI overlay matrix",
+      "observed": true,
+      "detail": [
+        27,
+        [
+          19
+        ]
+      ]
+    },
+    {
+      "check": "27 unique overlay element references",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-NAV-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-NAV-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-NAV-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-NAV-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-NAV-17",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-NAV-17",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D06",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D06",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D07",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D07",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D08",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D08",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D09",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D09",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D10",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D10",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D11",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D11",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D12",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D12",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D13",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D13",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D18",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D18",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D19",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D19",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D20",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D20",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-D21",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-D21",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-S15",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-S15",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-S16",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-S16",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-S17",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-S17",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-S18",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-S18",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-UI-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-UI-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-MEDIA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-MEDIA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay exact original contract EL-MEDIA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "overlay markdown binding and blocked status EL-MEDIA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "all overlay component references exist",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "13 units 22 unique edges",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "requires matches edges",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "dependency graph acyclic",
+      "observed": true,
+      "detail": [
+        "P30-U01",
+        "P30-U03",
+        "P30-U02",
+        "P30-U04",
+        "P30-U05",
+        "P30-U08",
+        "P30-U10",
+        "P30-U06",
+        "P30-U11",
+        "P30-U07",
+        "P30-U09",
+        "P30-U12",
+        "P30-U13"
+      ]
+    },
+    {
+      "check": "all units remain proposed blocked unauthorized unallocated",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "factual UI not gated by matching/media",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "15 exact unique new Owner decision IDs",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row DATA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice DATA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row DATA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice DATA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row DATA-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice DATA-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row DATA-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice DATA-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row DATA-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice DATA-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-03",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-04",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-05",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-06",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-06",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row APP-07",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice APP-07",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row MEDIA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice MEDIA-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row MEDIA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice MEDIA-02",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "unanswered unauthorized Owner row SEQ-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "complete exact scoped choice SEQ-01",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner normative annex hash Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "packet table exact normative hash Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "observed": true,
+      "detail": null
+    },
+    {
+      "check": "Owner distinguishes partial design replies from operational approval",
+      "observed": true,
+      "detail": null
+    }
+  ],
+  "manual_review_groups": [
+    {
+      "group": "Authority and status",
+      "result": "NO ISSUE",
+      "observation": "Master authorizes docs/research/static checks/independent review/one Draft only. New data/application/media/sequence decisions all PROPOSED/UNANSWERED; no operational unlock, human ACCEPT, final framework or implementation inferred."
+    },
+    {
+      "group": "Exact data and provenance",
+      "result": "NO ISSUE",
+      "observation": "46 × 20 rows match retained 46-slot mapping/dossier and actual pinned source key/ordinal/raw-state. 43 DEFER/3 UNKNOWN/0 ACCEPT retained. Raw payload has separate UNKNOWN semantics and was freshly hashed only."
+    },
+    {
+      "group": "Canonical targets and transitions",
+      "result": "NO ISSUE",
+      "observation": "All19 seeded entity/path definitions checked against actual eight migrations. Source identity, UUID/edition, family strings versus taxonomy objects, origin versus enum, URL versus official website, General versus pyramid, whole-list/alias review and missing semantics remain separate. M0-M6 proposals name actual owners/guards and block unsupported mappings, writes and forged human review."
+    },
+    {
+      "group": "Principal and least privilege",
+      "result": "NO ISSUE",
+      "observation": "Actual005/007 sources confirm session_user mapping, RLS and broad runtime SELECT/guard EXECUTE. Plan explicitly does not accept existing runtime membership as minimal app authority. New initial per-subject nonadmin LOGIN/new private scope/grant/repository/proof contract remain blocked; no admin fetch/filter, mutableGUC/role-only identity or old owner rewrite."
+    },
+    {
+      "group": "Projection and object privacy",
+      "result": "NO ISSUE",
+      "observation": "Reviewed selected field/object/action/use authorization precedes search/sort/page/count/exposure. Hidden/nonexistent/malformed/denied private IDs share safe unavailable. Authorized unknown/incomplete states never prove absence. Existing entity-visible RLS is not bypassed to recover partial fields."
+    },
+    {
+      "group": "Transport and sessions",
+      "result": "NO ISSUE",
+      "observation": "Closed versioned read DTOs, eight allowed paths, numeric/string/collection/body/response/cursor/deadline/session/rate limits explicit and PROPOSED. Internal2 MiB adapter bound is not substituted for HTTP budget. No raw/internal DTO, source UUID/locator/path or score leaks."
+    },
+    {
+      "group": "Pool cancellation revocation and cache",
+      "result": "NO ISSUE",
+      "observation": "Genuine initial-login partitions, cleanup/discard on uncertainty, final session/scope/selection/rights recheck, proposed100 ms controlled publication bound and1000 ms cleanup are future tests, not runtime guarantees. No private persistence/prefetch/offline/CDN fallback or claim of retracting delivered bytes."
+    },
+    {
+      "group": "Architecture and UI",
+      "result": "NO ISSUE",
+      "observation": "Retained30 components/29 interfaces/110 elements/17 routes preserved. All27 overlay EL/H/IF/input/output/route/component bindings valid;27 × 19matrix includes loading/unknown/error/a11y/cache/tests and marks all proposed/retained unavailable behavior BLOCKED. Roadmap keeps personalCart/buyingsources/manualOrdered/history/Collection/Dashboard."
+    },
+    {
+      "group": "Media rights",
+      "result": "NO ISSUE",
+      "observation": "23 × 18matrix retains17 note+6 bottle leads and prior exact metadata. Four conditional dossiers and021/022 original PNG proposal remain uncertain; zero new grants/intakes/bindings/bytes. General CC/PD instruments do not clear a specific asset. Original-only PNG validation, source/permission/hash/subject lineage and later private display are separately gated."
+    },
+    {
+      "group": "Dependency graph",
+      "result": "NO ISSUE",
+      "observation": "13 packet-local units and22 unique prerequisite edges exactly match requires arrays; acyclic. Completedpreview not repeated. Factual read/UI is not gated on media or realmatching; those are distinct future branches. Global implementationIDs not allocated."
+    },
+    {
+      "group": "Exact Owner packet",
+      "result": "NO ISSUE",
+      "observation": "15 exact unique DATA01..05/APP01..07/MEDIA01..02/SEQ01 choices include recommendation/alternatives/rationale/benefit/risk/dependencies/evidence/unknowns/cost/wording/futureunits/tests. All answers empty and operationsNONE. Nine packet normative hash rows match bytes. Freeze placeholder explicitly pending this review; no approval request for unfrozen bytes."
+    },
+    {
+      "group": "Preservation and historical evidence",
+      "result": "NO ISSUE",
+      "observation": "All355 base historical bodies preserved;26 oldreceipts/eight migrations/runtime/tests unchanged. Six pins+five audit/provenance sidecars and private 33,953-byteSHA16d1 freshly verified. Retained44 holds/43 PROPOSED normalizations/Khamrah exclusion/1479 false activation checked.249 offline methods remain historical NOT RERUN; liveDB NOT REVALIDATED."
+    }
+  ],
+  "initial_findings": [],
+  "findings": [],
+  "open_findings": [],
+  "reviewed_document_count": 28,
+  "document_hashes": [
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "git_blob_sha1": "0a17c3ae59796498f8323b301d728b72c446348f",
+      "canonical_git_bytes": 18997,
+      "canonical_git_sha256": "d6892dabb5a16714817a4d1f27644b360361cd4faecf2bf58accd93eae8c194d",
+      "checkout_sha256": "d6892dabb5a16714817a4d1f27644b360361cd4faecf2bf58accd93eae8c194d"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "git_blob_sha1": "1505e532121cd87fdbef84f1fce9caf9657c4486",
+      "canonical_git_bytes": 51663,
+      "canonical_git_sha256": "fafec493411444ebc22a1c2733a620e06897b9677d66ec461b7d69d6759ffd1f",
+      "checkout_sha256": "fafec493411444ebc22a1c2733a620e06897b9677d66ec461b7d69d6759ffd1f"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Canonical_Field_Review_Packet.md",
+      "git_blob_sha1": "6db5a6780d84a1d8e5fae7ebcc3e6bfcad7d54b4",
+      "canonical_git_bytes": 72352,
+      "canonical_git_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d",
+      "checkout_sha256": "1e2387d6b9641810e07d56b0bc2830ef01641fe3817cb311f6a3469fbfd3e26d"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md",
+      "git_blob_sha1": "a2cc27dceb7bca4200e333a6bfa587ea14d13238",
+      "canonical_git_bytes": 51014,
+      "canonical_git_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369",
+      "checkout_sha256": "86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+      "git_blob_sha1": "e15aef47b5164846027c04fbe99daaf10a69d737",
+      "canonical_git_bytes": 10988,
+      "canonical_git_sha256": "1b68ce8d02a287eda820df3ad469576d8a590f2a26fbdca1fccf548ee706bdc5",
+      "checkout_sha256": "1b68ce8d02a287eda820df3ad469576d8a590f2a26fbdca1fccf548ee706bdc5"
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Source_Registry.md",
+      "git_blob_sha1": "3735e3ae6a37ec8d5e12817039eecae3cbbe5a86",
+      "canonical_git_bytes": 11787,
+      "canonical_git_sha256": "1a86d840bdeee6b546078d85ec9124bbe625f2b5d951af691921aebc54bb8c64",
+      "checkout_sha256": "1a86d840bdeee6b546078d85ec9124bbe625f2b5d951af691921aebc54bb8c64"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md",
+      "git_blob_sha1": "10b543170dcf876d71c0600fc0b5b2b273919b8d",
+      "canonical_git_bytes": 23842,
+      "canonical_git_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d",
+      "checkout_sha256": "3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_First_Readonly_Web_Slice_ADR.md",
+      "git_blob_sha1": "11fc4eafbe73e210d636ce1010965a8d3a2435a0",
+      "canonical_git_bytes": 32911,
+      "canonical_git_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5",
+      "checkout_sha256": "5f5efb9ef3293b932957be6c9e48ab5f91c389fa6d0c2a5673cf16caca6b10e5"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Owner_Decision_Packet.md",
+      "git_blob_sha1": "09eeb949f2253e76ae1585cf1ae5ad268c99cb4d",
+      "canonical_git_bytes": 39928,
+      "canonical_git_sha256": "ca1e53f3a8e5e9343b1120f15455469ad1082d062c70e84a380549946798bc28",
+      "checkout_sha256": "ca1e53f3a8e5e9343b1120f15455469ad1082d062c70e84a380549946798bc28"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR30_Principal_and_Authorization_Plan.md",
+      "git_blob_sha1": "e9c6ab2ba78c933d51107ab83d754914cd48ab18",
+      "canonical_git_bytes": 27282,
+      "canonical_git_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740",
+      "checkout_sha256": "1e314aa01343fbd555b0c9a605f32d633176d39cc375670f73f579ac19aff740"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+      "git_blob_sha1": "22b8f475e7057ba8107f726ac421d1fe22f94fff",
+      "canonical_git_bytes": 10960,
+      "canonical_git_sha256": "2fbd556beeecca5948790ecb0dec559b9444d16818097cbe90f42a5fd1341bc9",
+      "checkout_sha256": "2fbd556beeecca5948790ecb0dec559b9444d16818097cbe90f42a5fd1341bc9"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "git_blob_sha1": "a80aba9b48a6896b26bd797e9fad2ce10e49b280",
+      "canonical_git_bytes": 34726,
+      "canonical_git_sha256": "7b0b5e9d44329846b81cb9c044da5708b4d28ff80b0e12e3460a07cefc8d16e3",
+      "checkout_sha256": "7b0b5e9d44329846b81cb9c044da5708b4d28ff80b0e12e3460a07cefc8d16e3"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Post_PR30_Data_App_Media_Readiness_Plan.md",
+      "git_blob_sha1": "a6b9563c6f32826d831b432ca2632df6ba9d283e",
+      "canonical_git_bytes": 10668,
+      "canonical_git_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168",
+      "checkout_sha256": "93c6b287bc1525e1866cdd818c3072e1f7471b95aa796598d999f9aa1c4de168"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md",
+      "git_blob_sha1": "924f31bcd0d44a611aa6393560693501e98dbad4",
+      "canonical_git_bytes": 15181,
+      "canonical_git_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53",
+      "checkout_sha256": "caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Roadmap.md",
+      "git_blob_sha1": "5473b4b2bacff6b3e16bf6d29ee7d46c44ce02ec",
+      "canonical_git_bytes": 31174,
+      "canonical_git_sha256": "982cf361a08bfc0d2719bd0979ba7b158cd02ef97d9d6d3337d9b093653554a7",
+      "checkout_sha256": "982cf361a08bfc0d2719bd0979ba7b158cd02ef97d9d6d3337d9b093653554a7"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness.md",
+      "git_blob_sha1": "f412387eb0d33b14f891cb753c2231a0361c5c5f",
+      "canonical_git_bytes": 4774,
+      "canonical_git_sha256": "4fe77b5fb8545ba7431bb0b7e75328fc094bfd1c1819f8ef5628dc73577783ec",
+      "checkout_sha256": "4fe77b5fb8545ba7431bb0b7e75328fc094bfd1c1819f8ef5628dc73577783ec"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+      "git_blob_sha1": "aea22230d2a5a0f50e30a63e6a816e75d856c076",
+      "canonical_git_bytes": 16033,
+      "canonical_git_sha256": "2592cf006d5388b9285247f5dbb3ed84f5f201b55f641d9955932308f4dbe5c2",
+      "checkout_sha256": "2592cf006d5388b9285247f5dbb3ed84f5f201b55f641d9955932308f4dbe5c2"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "git_blob_sha1": "99a4dac879c882cbaca2f2ea62c7ab97d03152fd",
+      "canonical_git_bytes": 84979,
+      "canonical_git_sha256": "f5f72d43e80a0a2904a3436e80491c14c013b9ddae731893cf13d403b3a09122",
+      "checkout_sha256": "f5f72d43e80a0a2904a3436e80491c14c013b9ddae731893cf13d403b3a09122"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "git_blob_sha1": "cba47da5495315585a4956d5b2b06c215ccc40b9",
+      "canonical_git_bytes": 71060,
+      "canonical_git_sha256": "fa5d54c465b6794298cb6befa5e89a372bba151c3da8e7b5855ffb5248329a9e",
+      "checkout_sha256": "fa5d54c465b6794298cb6befa5e89a372bba151c3da8e7b5855ffb5248329a9e"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "git_blob_sha1": "6034227a27366f57e7b5264aa5fbfc9560dc675e",
+      "canonical_git_bytes": 40310,
+      "canonical_git_sha256": "8233fbbfc182ab4f8d17ba52dd9598d2364459e21d704b9b73019ce88190a663",
+      "checkout_sha256": "8233fbbfc182ab4f8d17ba52dd9598d2364459e21d704b9b73019ce88190a663"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Application_Research.json",
+      "git_blob_sha1": "bb273795c72671e8c7e4d80d50d3d8d8592b297c",
+      "canonical_git_bytes": 33414,
+      "canonical_git_sha256": "936d2961939830148d0987ca3f1ab238bf0603791e0a13d2a989a22e57990b58",
+      "checkout_sha256": "936d2961939830148d0987ca3f1ab238bf0603791e0a13d2a989a22e57990b58"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Data_Readiness.json",
+      "git_blob_sha1": "953acd3ed1dbf1303d88561735c37c84b3a18af7",
+      "canonical_git_bytes": 58360,
+      "canonical_git_sha256": "49d90625706f9727625ffd3562295a540b9496f84e31aa916bd45557657e867d",
+      "checkout_sha256": "49d90625706f9727625ffd3562295a540b9496f84e31aa916bd45557657e867d"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json",
+      "git_blob_sha1": "c2543c546c59ff4e317225de0243a8e0eca8c096",
+      "canonical_git_bytes": 16354,
+      "canonical_git_sha256": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+      "checkout_sha256": "4db92c36526be568f075f8a88292919db8445c989a24aeb221094a366c176a18"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Media_Research.json",
+      "git_blob_sha1": "0593db4efe7a74b8e1833dca2bee914078a2c2a4",
+      "canonical_git_bytes": 122166,
+      "canonical_git_sha256": "c4bb761c6e4d5fdac6510fe0869e6bd4492f050dda7247367b22d32e2d6307b1",
+      "checkout_sha256": "c4bb761c6e4d5fdac6510fe0869e6bd4492f050dda7247367b22d32e2d6307b1"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json",
+      "git_blob_sha1": "b582a823f932f24d31032184c915585e7fb3e6ba",
+      "canonical_git_bytes": 34824,
+      "canonical_git_sha256": "4f791ea09f6494f94b41db9981add711da6ca036dc02cda27acfdd7b5ee59593",
+      "checkout_sha256": "4f791ea09f6494f94b41db9981add711da6ca036dc02cda27acfdd7b5ee59593"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Packet_Freeze.json",
+      "git_blob_sha1": "ff2dfebe74e1934feb3c3f68e67b85443e4f7766",
+      "canonical_git_bytes": 331,
+      "canonical_git_sha256": "1983fefa94da30614fc22c5c6a2e95fdbac8baa95c2f40d797bd96f3f5791bc0",
+      "checkout_sha256": "99ebc931985d72cab758fecb92423269db0fcf809a9e319f9c9ba6979cbaf03a"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Preflight.json",
+      "git_blob_sha1": "164d4d8070a48cd1868ae586a8b67cbabe045985",
+      "canonical_git_bytes": 4865,
+      "canonical_git_sha256": "31ff0f89006ee14c10605479646b561497c9f3f75a5913e8227d3a4722648464",
+      "checkout_sha256": "0fa3a6a2458de3354df41729da68ed3b44f0826c4eddbf9e77828c90d582a4da"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Static_Validation.json",
+      "git_blob_sha1": "74b870889da3f0e94805ccbb6e12fdf3b78ecb21",
+      "canonical_git_bytes": 1159,
+      "canonical_git_sha256": "020ad8f663e165aeef34c30ab7090fe563b99736960ef54225a13083ce0efd2d",
+      "checkout_sha256": "732a13f994098af0d7b242afa23f8ede18a9eff21d28f7b0b1d99cf5772b3eb1"
+    }
+  ],
+  "protected_base_file_count": 355,
+  "base_modified_paths": [
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/03_Data/Rights_and_Attribution.md",
+    "Structure DB Obsidian/03_Data/Source_Registry.md",
+    "Structure DB Obsidian/06_Engineering/Proposed_System_Architecture.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Roadmap.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/IMP-ENR-01_Pinned_Scento_Offline_Preview.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md"
+  ],
+  "local_pin_fingerprints": [
+    {
+      "file": "perfumes.csv",
+      "bytes": 780683,
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    },
+    {
+      "file": "houses.csv",
+      "bytes": 29765,
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    {
+      "file": "materials.csv",
+      "bytes": 87027,
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 188,
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2799,
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    {
+      "file": "datapackage.json",
+      "bytes": 4845,
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    },
+    {
+      "file": "VERIFIED_SOURCE_PROVENANCE.json",
+      "bytes": 2168,
+      "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+    },
+    {
+      "file": "progressive_enrichment_index_1479.json",
+      "bytes": 1566875,
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    },
+    {
+      "file": "membership_policy_43_PROPOSED.json",
+      "bytes": 349385,
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    {
+      "file": "held_conflict_exclusion.json",
+      "bytes": 278,
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    },
+    {
+      "file": "PINNED_SOURCE_AUDIT_INDEX_1479.json",
+      "bytes": 2757650,
+      "sha256": "f86f944d2ec7cc5f849e997283e6fb2723a89f1147b1c831718765b409612908"
+    }
+  ],
+  "private_preview": {
+    "method": "fresh SHA256 and byte length only; not parsed/copied/published",
+    "bytes": 33953,
+    "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9"
+  },
+  "primary_research": {
+    "reviewer": "/root/post30_independent_review",
+    "task": "DPT-PLAN-011",
+    "retrieved_date": "2026-11-17",
+    "timezone": "Asia/Bangkok",
+    "method": "Independent read-only web open/find against official text documentation; no installation, dataset/product-page acquisition, binary media, authentication or paid service",
+    "sources": [
+      {
+        "url": "https://fastapi.tiangolo.com/release-notes/",
+        "observed": "Release 0.163.1 dated 2026-11-15; 0.162.7 dated 2026-11-13 records cancellation cleanup fix for async yield dependencies",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://github.com/fastapi/fastapi/blob/0.163.1/pyproject.toml",
+        "observed": "Tagged 0.163.1 project metadata requires Python >=3.11",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://fastapi.tiangolo.com/deployment/versions/",
+        "observed": "Living version guidance recommends testing and pinning an application version known to work; sample versions do not choose the project stack",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://fastapi.tiangolo.com/advanced/templates/",
+        "observed": "Official template integration documentation exists; no proof of an installed or tested local application",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://nextjs.org/docs/app/getting-started/installation",
+        "observed": "Visible v16.4.6; Node minimum 20.9; macOS, Windows including WSL, and Linux listed",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://nextjs.org/docs/app/guides/authentication",
+        "observed": "Visible v16.4.6; separates authentication/session/authorization; recommends data-access authorization and minimal DTOs; route proxy alone insufficient",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://www.postgresql.org/docs/16/ddl-rowsecurity.html",
+        "observed": "Major16 manual, banner16.16; superuser/BYPASSRLS bypass; table owner normally bypasses unless FORCE; referential checks/races need care",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://www.postgresql.org/docs/16/functions-info.html",
+        "observed": "session_user can be changed by superuser session authorization; current_user changes with role/security-definer; equality alone is insufficient initial-login proof",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://www.postgresql.org/docs/16/runtime-config-client.html",
+        "observed": "Statement, lock and idle transaction limits have distinct scopes; per-statement timeout does not establish an entire HTTP deadline",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://asvs.owasp.org/",
+        "observed": "Stable ASVS5.0.0, published 2025-05-30; verification framework, not project certification",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://docs.python.org/3.11/library/asyncio-task.html",
+        "observed": "Visible Python3.11.18 docs; cancellation cleanup with finally and normal propagation after cleanup; local3.11.9 not proven compatible by this page",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://openid.net/specs/openid-connect-core-1_0.html#IDTokenValidation",
+        "observed": "Core1.0 errata set2 dated2023-12-15; code-flow/ID-token validation protocol; does not pick provider/configuration or establish runtime conformance",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc7636",
+        "observed": "RFC7636 September2015; S256 transformation and downgrade restrictions; opened URL redirects to official info wrapper containing text",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by/4.0/legalcode.en",
+        "observed": "CC BY4 legal instrument distinguishes authorized licensor, conditional irrevocable rights, attribution, other rights and termination; no individual asset clearance established",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://creativecommons.org/licenses/by-sa/4.0/legalcode.en",
+        "observed": "CC BY-SA4 legal instrument distinguishes adaptation/share conditions and conditional grant from project authority; no individual asset clearance established",
+        "result": "CONSISTENT"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/Template:PD-self",
+        "observed": "General PD-self instrument read only, not an asset file/version/rightsholder verification",
+        "result": "CONSISTENT"
+      }
+    ],
+    "material_claim_findings": [],
+    "limitations": [
+      "Living documentation observed on retrieval date; no downloaded documentation snapshot or source checkout",
+      "No dependency installation, security certification, protocol conformance or runtime compatibility test",
+      "No live PostgreSQL version, authentication configuration, role/ACL/session/RLS/right state verified",
+      "Proposed numeric budgets/session lifetimes remain project decisions, not standard-mandated values",
+      "License instruments are reviewed only for planning consistency, not a legal opinion or proof of a particular asset grant"
+    ]
+  },
+  "github_metadata": {
+    "method": "Connected GitHub get_pr_info read only",
+    "retrieved_date": "2026-11-17",
+    "snapshots": [
+      {
+        "number": 30,
+        "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/30",
+        "state": "closed",
+        "draft": false,
+        "merged": true,
+        "head_sha": "f5a277124e60ff0e290d9a95651eee14397506a0",
+        "merge_commit_sha": "4f23cbc858dd818b149674342bfa504e78930088",
+        "merged_at": "2026-11-17T05:51:40Z",
+        "updated_at": "2026-11-17T05:51:41Z"
+      },
+      {
+        "number": 8,
+        "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/8",
+        "state": "open",
+        "draft": true,
+        "merged": false,
+        "head_sha": "84dccb117971ab65e0bf39fa3d1d84a12d344f8d",
+        "merge_commit_sha": null,
+        "merged_at": null,
+        "updated_at": "2026-11-13T19:18:35Z"
+      }
+    ]
+  },
+  "merge_tree_parity": {
+    "merge": "4f23cbc858dd818b149674342bfa504e78930088",
+    "PR30_head": "f5a277124e60ff0e290d9a95651eee14397506a0",
+    "both_tree_SHA1": "7216296cf67aa7b13cc91a98e18fc23f7ad9c39c",
+    "local_origin_main": "4f23cbc858dd818b149674342bfa504e78930088"
+  },
+  "reviewer_checker_errors_preserved": [
+    {
+      "error": "Initial table selector expected backticks around source-file cell and matched zero rows",
+      "resolution": "Use heading-delimited markdown table parser; exact 46 rows then inspected"
+    },
+    {
+      "error": "git check-ignore invoked from linked worktree against ignored root review path; exit128 outside repository",
+      "resolution": "Repeated from root; .local/post-pr30-planning/review confirmed ignored"
+    },
+    {
+      "error": "Attempted optional .local/post-pr30-planning listing under linked worktree; path absent",
+      "resolution": "Read helper directory from actual root only"
+    },
+    {
+      "error": "First full helper run assumed source_files had path; KeyError path before report creation",
+      "resolution": "Resolve source_files file relative to source_root, while sidecars retain absolute paths"
+    },
+    {
+      "error": "First completed checker compared Git LF blob bytes with checkout CRLF bytes and required old content at prefix; 209 true/3 false retained in checks-initial-line-ending-oracle.json. Second run gave 211 true/1 false for legitimate Project_Status insertion and task frontmatter status update.",
+      "resolution": "Compare canonical LF; preserve historical body by exact substring independently of frontmatter/current-status insertion. Actual diffs inspected; no historical prose rewrite found."
+    },
+    {
+      "error": "Unquoted PowerShell revision^{tree} arguments interpreted braces and generated fatal ambiguous revision encodedCommand output",
+      "resolution": "Repeated using Python subprocess argv literal; both exact tree hashes equal7216296cf67aa7b13cc91a98e18fc23f7ad9c39c; no Git mutation"
+    },
+    {
+      "error": "ContextMode indexed outside-project attachment denied and worktree search returned no hits",
+      "resolution": "Attachment read through bounded native tool; long worktree analysis used ContextMode execute with explicit paths"
+    },
+    {
+      "error": "Initial finalize-review prose joined some count words without spaces",
+      "resolution": "Readability corrected before report delivery; source bindings, 416 checks and zero findings unchanged"
+    }
+  ],
+  "tools_used": [
+    "Caveman skill read",
+    "PowerShell/Git read-only",
+    "ContextMode ctx_execute/ctx_index/ctx_search",
+    "reviewer-owned Python standard-library static helper",
+    "web official text open/find",
+    "connected GitHub get_pr_info read-only"
+  ],
+  "NOT_RUN": [
+    "249 historical offline runtime methods NOT RERUN",
+    "No DB, Docker, scorer, ETL, import, SQL generation, live RLS, role, authentication, provider, session, pool, transport, UI, accessibility or performance tests",
+    "No source/product-page acquisition, binary media opening/download, credential/user/role creation, package/tool installation or production mutation",
+    "Packet freeze/final receipt and D1–D9/new ZIP publication are not yet created or reviewed at this checkpoint; PR31 is independently verified OPEN/DRAFT at the exact reviewed SHA."
+  ],
+  "residual_gates": [
+    "Planning readiness only; Human Owner still reviews/merges and answers exact frozen packet rows",
+    "Canonical facts require per-claim human disposition/identity/mapping/selection/use evidence",
+    "Runtime requires exact provider/framework/version/driver/proof/minimum ACL/epoch/audit contract and separate task/operation approval",
+    "Media needs exact file-level rights/method/bytes/technical evidence and separate intake/display approval",
+    "Real matching/personal writes/deployment remain future exact contracts",
+    "Any material planning change requires affected exact-source re-review; metadata-only freeze/receipt/PR/delivery needs parity verification"
+  ],
+  "scope_qualification": "No substantive documentation defect found at exact committed source. This is not human data acceptance, external-rights clearance, runtime/security certification, implementation authority, final delivery verification or permission to merge.",
+  "helper_sha256": "a7922fc4d525a3c720b70a14a0af63d8a98ff72e044791cf43d46b9670b00b2d",
+  "planning_PR_independently_observed": {
+    "number": 31,
+    "url": "https://github.com/kraveerachat/DoomParfum-By-TK/pull/31",
+    "state": "open",
+    "draft": true,
+    "merged": false,
+    "head_sha": "012859f3f923f33b363fe36f7abbe3123e8d734c",
+    "base_sha": "4f23cbc858dd818b149674342bfa504e78930088",
+    "updated_at": "2026-11-17T06:36:45Z"
+  },
+  "public_copy_provenance": {
+    "original_private_report_sha256": "0e15d78ee856f24b5f80d186e5bb5374d5bb3dd421d51bbcc9e533cc2060873c",
+    "original_report_unchanged": true,
+    "change": "Operator paths aliased and provenance added; original416/0 result preserved as historical source012 review; canonical binding false negative is superseded by P30-INT-001 correction/re-review"
+  }
+}

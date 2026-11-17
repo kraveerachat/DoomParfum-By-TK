@@ -1,0 +1,28 @@
+{
+  "task": "DPT-PLAN-011",
+  "finding": "P30-INT-001",
+  "at_utc": "2026-11-17T06:42:08.342532+00:00",
+  "status": "CORRECTED; independent exact-checkpoint re-review pending",
+  "detected_by": "Coordinator pre-freeze canonical Git-byte guard",
+  "initial_independent_review_preserved": {
+    "source": "012859f3f923f33b363fe36f7abbe3123e8d734c",
+    "checks": 416,
+    "failed": 0,
+    "report_sha256": "0e15d78ee856f24b5f80d186e5bb5374d5bb3dd421d51bbcc9e533cc2060873c"
+  },
+  "cause": "New dependency JSON was written with Windows default CRLF; pre-freeze packet pin hashed checkout bytes while declaring canonical UTF8LF. Git stores LF. Guard stopped before any freeze/receipt/public-review-copy writes.",
+  "correction": {
+    "dependency_JSON_raw_before": "4db92c36526be568f075f8a88292919db8445c989a24aeb221094a366c176a18",
+    "dependency_JSON_canonical": "aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc",
+    "dependency_semantic_or_Git_blob_change": false,
+    "Owner_Decisions_JSON_before": "4f791ea09f6494f94b41db9981add711da6ca036dc02cda27acfdd7b5ee59593",
+    "Owner_Decisions_JSON_after": "6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e",
+    "Owner_decisions_equal": true,
+    "other_annexes_changed": false,
+    "packet_sha256_after": "e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c"
+  },
+  "scope": "Hash/line-ending binding correction only; all15choices,46slots,23leads,budgets,DAG/runtime/source/rights unchanged",
+  "packet_frozen": false,
+  "receipt_created": false,
+  "runtime_tests": "NOT RUN"
+}

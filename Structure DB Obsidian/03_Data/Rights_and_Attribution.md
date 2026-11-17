@@ -124,3 +124,11 @@ Track flags per source/field/asset: `discover, automated_access, cache, store, d
 ## IMP-ENR-01 verified offline boundary — 2026-11-17
 
 Standalone pinned preview is implemented without reusing ETL token/canonical-expansion helpers: [[IMP_ENR_01_Implementation_Boundary]], [[IMP_ENR_01_Field_Review_Mapping]], [[IMP-ENR-01_Pinned_Scento_Offline_Preview]]. ExactA/B/I scope only; source immutable and claims remain unselected/unmapped/closureUNKNOWN. Sixpins905307bytes/5records/46slots; no source URLs followed or linked/image rights inherited. Scento attribution/license and transformation notice retained. No new SQL field definition, database row, canonical acceptance, normalization,43proposal/44hold/Khamrah/eligibility change, real ranking, app/auth/API/UI, acquisition or Production mutation. Current DB/Docker not probed; old counts are historical.
+
+## DPT-PLAN-011 post-PR30 rights boundary — 2026-11-17
+
+Owner-merged PR30 is the exact pinned five-record offline preview, not new field/publication/linked-page/image rights. [[Post_PR30_Canonical_Field_Review_Packet]] retains46unselectedclaims and43DEFER/3UNKNOWN/0ACCEPT; proposed selected-field/action/audience rights need explicit source/field/identity/scope evidence and later authorized transitions. Existing license attribution and private source provenance remain preserved. Source key/URL, complete-looking lists or a public catalogue identity supply no canonical fact, closure or private-record disclosure permission.
+
+[[Post_PR30_Media_Rights_Readiness]] retains23leads(17note/6bottle),fourconditionaldossiers and exact021/022PNGproposal. Fresh general-license text research is not per-asset authority or byte verification. Acquisition, store, backup/retention, private display, transform and redistribution are separate operations; unknown/denied blocks that action. No images opened/downloaded, contact sent, source acquired or rights grant changed. First private web slice uses placeholders; no unapproved source acquisition is needed for this planning task.
+
+DATA-03/MEDIA-01/MEDIA-02 in [[Post_PR30_Owner_Decision_Packet]] are PROPOSED/UNANSWERED. Owner project approval cannot fabricate external rights; a license cannot substitute for an exact authorized task. Canonical/normalization/44hold/eligibility changes, DB/Production operations and public API/UI remain separately gated.

@@ -1,0 +1,59 @@
+{
+  "task": "DPT-PLAN-011",
+  "initial_snapshot": {
+    "task": "DPT-PLAN-011",
+    "phase": "First coherent planning draft static check",
+    "base": "4f23cbc858dd818b149674342bfa504e78930088",
+    "passed": 662,
+    "failed": 0,
+    "summary": {
+      "changed_paths": 26,
+      "markdown": 20,
+      "wikilinks": 667,
+      "Markdown_links_seen": 109,
+      "tables": 54,
+      "secret_candidates": 0,
+      "private_candidates": 0
+    },
+    "command": "python .local/post-pr30-planning/check_docs.py",
+    "initial_oracle_failure": {
+      "phase": "coordinator static check",
+      "initial_result": "661 passed / 1 failed",
+      "underlying_cause": "Checker assumed data author new_owner_answer null; all46 actual values are explicit UNANSWERED. Owner packet uses null separately. No human acceptance existed.",
+      "correction": "Require exact UNANSWERED for data rows; retain null requirement for Owner decision rows.",
+      "runtime_or_document_semantics_changed": false,
+      "original_checker_sha256": "05f89a07e99e9f7f69689c53c2fde7711e46b5d18ae8225d9581c0d8abdac7a9"
+    },
+    "qualification": "Source/checkpoint snapshot before adding these evidence files; final checks/review recorded separately. No runtime tests or DB operations."
+  },
+  "latest_prepublication_snapshot": {
+    "at_utc": "2026-11-17T12:13:44.412474+00:00",
+    "base": "4f23cbc858dd818b149674342bfa504e78930088",
+    "HEAD": "5c576366ecf3041570d765934ee401d76c0bcece",
+    "passed": 694,
+    "failed": 0,
+    "summary": {
+      "changed_paths": 33,
+      "markdown": 21,
+      "wikilinks": 699,
+      "Markdown_links_seen": 120,
+      "tables": 54,
+      "secret_candidates": 0,
+      "private_candidates": 0
+    },
+    "versions": {
+      "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+      "PyYAML": "6.0.3"
+    },
+    "limits": [
+      "Static docs/AST/hash checks only; not DB/app/rights runtime acceptance",
+      "Bounded signature/private-key scan, not specialist legal or exhaustive secret scanner",
+      "External URLs/Mermaid rendering NOT RUN"
+    ]
+  },
+  "reviewed_planning_checkpoint": "53555db12f179c490ef5d4adfb7eadde62af0a58",
+  "command": "python .local/post-pr30-planning/check_docs.py",
+  "preserved_integrity_correction": "Post_PR30_Integrity_Correction.json",
+  "new_receipt": "2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning.md",
+  "qualification": "Current33-path planning workspace snapshot before metadata commit; final exact-HEAD parity/archive checks are separate external proofs. Runtime249NOTRERUN; DBNOTREVALIDATED."
+}

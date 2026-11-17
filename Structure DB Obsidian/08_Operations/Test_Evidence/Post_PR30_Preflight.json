@@ -1,0 +1,157 @@
+{
+  "task": "DPT-PLAN-011",
+  "at_utc": "2026-11-17T06:08:52.084957+00:00",
+  "date_timezone": "Asia/Bangkok",
+  "base": "4f23cbc858dd818b149674342bfa504e78930088",
+  "branch": "plan/post-pr30-data-app-media-readiness",
+  "PR30": {
+    "head": "f5a277124e60ff0e290d9a95651eee14397506a0",
+    "merge": "4f23cbc858dd818b149674342bfa504e78930088",
+    "merged_at_utc": "2026-11-17T05:51:40Z",
+    "merged_at_Bangkok": "2026-11-17T12:51:40+07:00",
+    "merge_tree_equals_reviewed_PR_head": true
+  },
+  "task_ID_collision_search": "No occurrence in merged origin/main before task creation; GitHub matching PR search empty",
+  "missing_optional_indexes": [
+    "Task_Register.md",
+    "Task_Index.md"
+  ],
+  "index_fallback": "Existing Tasks directory, Project_Index and Backlog",
+  "master_prompt_sha256": "0ac7ecc5b0098fe613703e7cf7e9f1e5c6b916e49a7852781805d3a3c354f605",
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "source_files": [
+    {
+      "file": "perfumes.csv",
+      "bytes": 780683,
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    },
+    {
+      "file": "houses.csv",
+      "bytes": 29765,
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    {
+      "file": "materials.csv",
+      "bytes": 87027,
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 188,
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2799,
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    {
+      "file": "datapackage.json",
+      "bytes": 4845,
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    }
+  ],
+  "combined_source_bytes": 905307,
+  "source_counts_historical_not_DB": {
+    "perfumes.csv": {
+      "records": 1479,
+      "header": [
+        "id",
+        "name",
+        "house_id",
+        "house",
+        "year",
+        "perfumers",
+        "concentration",
+        "family",
+        "secondary_family",
+        "character",
+        "seasons",
+        "times_of_day",
+        "top_notes",
+        "heart_notes",
+        "base_notes",
+        "notes",
+        "description",
+        "popularity_rank",
+        "url"
+      ]
+    },
+    "houses.csv": {
+      "records": 160,
+      "header": [
+        "id",
+        "name",
+        "country",
+        "founded",
+        "type",
+        "portrait",
+        "perfume_count",
+        "url"
+      ]
+    },
+    "materials.csv": {
+      "records": 420,
+      "header": [
+        "id",
+        "name",
+        "aliases",
+        "material_family",
+        "origin",
+        "smell",
+        "url"
+      ]
+    }
+  },
+  "prior_receipts": 26,
+  "migrations": 8,
+  "frozen_document_hashes": {
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+    "Structure DB Obsidian/06_Engineering/Architecture_Owner_Review_Packet.md": "0e265149f87b0c797b9e563b7fdb9bc6a1a4379844842d2e97ffd4549ba0747f"
+  },
+  "holds": 44,
+  "normalization_proposals": 43,
+  "Khamrah_conflicts": 1,
+  "new_decisions": "PROPOSED / UNANSWERED",
+  "current_DB": "NOT REVALIDATED",
+  "runtime_tests": "NOT RUN; PR30 249 methods are historical evidence only",
+  "DB_or_Docker_calls": 0,
+  "source_or_media_acquisition": 0,
+  "Production_mutation": false,
+  "private_preview": {
+    "bytes": 33953,
+    "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9",
+    "review_slots": 46,
+    "raw_payload_copied": false
+  },
+  "sidecars": [
+    {
+      "file": "VERIFIED_SOURCE_PROVENANCE.json",
+      "bytes": 2168,
+      "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+    },
+    {
+      "file": "progressive_enrichment_index_1479.json",
+      "bytes": 1566875,
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    },
+    {
+      "file": "membership_policy_43_PROPOSED.json",
+      "bytes": 349385,
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    {
+      "file": "held_conflict_exclusion.json",
+      "bytes": 278,
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    },
+    {
+      "file": "PINNED_SOURCE_AUDIT_INDEX_1479.json",
+      "bytes": 2757650,
+      "sha256": "f86f944d2ec7cc5f849e997283e6fb2723a89f1147b1c831718765b409612908"
+    }
+  ],
+  "protected_base_file_count": 355,
+  "qualification": "Sanitized source/hash/metadata preflight only; no raw values/private payload/credentials or liveDB validation."
+}

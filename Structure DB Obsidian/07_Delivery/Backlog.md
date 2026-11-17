@@ -362,3 +362,17 @@ Exact corrected source 4fdbd29b3f345fcbce3eb08862748672657ef22c: independent imp
 ## Draft PR30 and sole implementation receipt — 2026-11-17
 
 [PR30](https://github.com/kraveerachat/DoomParfum-By-TK/pull/30) OPEN/DRAFT, pre-receipt publication9003d08889785fd7f47e3297abacf8531a5ba1a2, reviewed/tested runtime4fdbd29b3f345fcbce3eb08862748672657ef22c. Source/data agent checks complete; Human/canonical acceptance and merge remain PENDING. Sole immutable receipt [[2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview]], all25old receipts unchanged. [[IMP_ENR_01_File_Manifest.json]] lists exact final paths. Final metadata parity/ZIP delivery proofs live outside the frozen ZIP and in PR description; this checkpoint does not claim future archive verification. No source/rights/hold/eligibility/Production expansion. Human Owner alone merges.
+
+## DPT-PLAN-011 post-PR30 allocation and gate register
+
+| Task / unit | Type | Branch / base | Current state | Next gate |
+|---|---|---|---|---|
+| IMP-ENR-01 / PR30 | Completed bounded implementation | Owner merge4f23cbc858dd818b149674342bfa504e78930088 | MERGED; no canonical acceptance implied | Human per-claim meaning/identity/rights disposition |
+| DPT-PLAN-011 | Integrated planning | plan/post-pr30-data-app-media-readiness / same main | IN PROGRESS; one future Draft Planning PR | Exact static/independent planning review before receipt |
+| P30-U01..P30-U13 | Packet-local future unit aliases, NOT global allocations | No implementation branches | PROPOSED / IMPLEMENTATION BLOCKED | [[Post_PR30_Dependency_and_Gate_Map]] and15newOwnerdecisions plus exact contracts/source rights |
+
+Dedicated Task_Register/Task_Index files NOT FOUND; existing Tasks directory, this Backlog and Project_Index are the current allocation sources. DPT-PLAN-011 collision checks were empty before creation. Future global task IDs must be rechecked/allocated only when the exact scope is accepted; do not recreate an existing task. No hold/normalization/eligibility/rights transition or PR8 experiment is authorized.
+
+## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
+
+Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
