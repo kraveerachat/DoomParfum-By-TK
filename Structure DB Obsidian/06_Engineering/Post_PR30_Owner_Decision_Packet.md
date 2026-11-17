@@ -30,8 +30,8 @@ These annex hashes bind the current proposal, not implemented behavior. If an an
 | `Structure DB Obsidian/05_UX/Post_PR30_Element_Function_Slice_Matrix.md` | `3eb99579e95945fcb939eedb34eec8af8022e3aaf3ac4b7d1a5df14bafc8bf7d` |
 | `Structure DB Obsidian/03_Data/Post_PR30_Media_Rights_Readiness.md` | `86ccdfe9a584d6d16231140cce012c5ff352acbb3c3b6667b14274a6b48be369` |
 | `Structure DB Obsidian/07_Delivery/Post_PR30_Dependency_and_Gate_Map.md` | `caa01efcf375a2744119bd1aac94679fd22d1dc07970bbbea48f4bf2e9ccfd53` |
-| `Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json` | `4db92c36526be568f075f8a88292919db8445c989a24aeb221094a366c176a18` |
-| `Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json` | `4f791ea09f6494f94b41db9981add711da6ca036dc02cda27acfdd7b5ee59593` |
+| `Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json` | `aee98a7bb87f0c129cbd3ef0815b88f1648a746e07c73c0859bfadff6edef7dc` |
+| `Structure DB Obsidian/08_Operations/Test_Evidence/Post_PR30_Owner_Decisions.json` | `6ec5049e037d6aaedd04feab3cf8df7e6f83203d929af4250edf957c2ec1c92e` |
 
 The strict transport proposal is POST30-READ-1 / POST30-READ-BUDGET-1 in the pinned ADR/principal annexes. Proposed values include8192B read body,65536B catalogue/131072B detail/512B error, page1–20, cursor1024ASCII/60s, nesting8/nodes8192, layer64/all256note members,5000ms total deadline,500ms acquisition,3000ms statement/1000ms lock/2000ms idle/1000ms cancellation,2reads/session/8global and30reads/60s/session. These are new unaccepted design values, not inherited internal2MiB controls or existing runtime guarantees. The annexes include all remaining string/session/time/header/count bounds and unresolved exact provider/HTTP/grant choices. APP-04/06 acceptance must bind those full annexes, not this abbreviated list.
 
