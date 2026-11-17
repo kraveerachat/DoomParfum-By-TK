@@ -1,0 +1,108 @@
+{
+  "task": "IMP-ENR-01",
+  "finding": "IR-001",
+  "reviewed_base": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "status": "CORRECTION_GREEN_FROZEN_PENDING_INDEPENDENT_RECHECK",
+  "initial_finding": "Unbounded descriptor reads consumed oversized source/rollback bytes before exact size validation.",
+  "changes": [
+    "_read_regular requires exact expected_size; checks regular-file fstat and exact st_size before reading",
+    "Reads at most expected_size+1; postread exact length rejects growth or truncation",
+    "Pinned source callers pass immutable pin.size; existing complete hash verification remains",
+    "Candidate readback passes canonical payload length",
+    "Rollback constructs expected canonical payload before historical payload read and bounds manifest by canonical expected-manifest length"
+  ],
+  "added_methods": 6,
+  "behavioral_RED": {
+    "phase": "IR001_BEHAVIORAL_RED",
+    "invocation": [
+      "python",
+      "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\imp-enr-01\\implementation\\run_focused.py",
+      "IR001_BEHAVIORAL_RED"
+    ],
+    "runner": "unittest.TextTestRunner(verbosity=2); loadTestsFromName(test_scento_preview)",
+    "python": "3.11.9",
+    "methods_executed": 55,
+    "passed": 50,
+    "failures": 5,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 4.376600299961865,
+    "source_files": {
+      "database\\scento_preview.py": {
+        "sha256": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+        "bytes": 18246
+      },
+      "database\\tests\\test_scento_preview.py": {
+        "sha256": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef",
+        "bytes": 31027
+      }
+    },
+    "failed_methods": [
+      "test_scento_preview.PreviewTests.test_IR001_all_source_and_candidate_readbacks_have_finite_exact_bounds",
+      "test_scento_preview.PreviewTests.test_IR001_growth_after_fstat_has_exact_one_byte_probe_bound",
+      "test_scento_preview.PreviewTests.test_IR001_oversized_pin_rejected_before_any_read",
+      "test_scento_preview.PreviewTests.test_IR001_rollback_oversized_manifest_rejected_before_manifest_read",
+      "test_scento_preview.PreviewTests.test_IR001_rollback_oversized_payload_rebuilds_before_bounded_read"
+    ],
+    "limitations": [
+      "No DB/Docker/network/scorer execution",
+      "Only focused preview tests; parent owns full regression and protected sidecar checks"
+    ]
+  },
+  "GREEN": {
+    "phase": "IR001_GREEN",
+    "invocation": [
+      "python",
+      "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\imp-enr-01\\implementation\\run_focused.py",
+      "IR001_GREEN"
+    ],
+    "runner": "unittest.TextTestRunner(verbosity=2); loadTestsFromName(test_scento_preview)",
+    "python": "3.11.9",
+    "methods_executed": 55,
+    "passed": 55,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 4.23880430002464,
+    "source_files": {
+      "database\\scento_preview.py": {
+        "sha256": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
+        "bytes": 18842
+      },
+      "database\\tests\\test_scento_preview.py": {
+        "sha256": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef",
+        "bytes": 31027
+      }
+    },
+    "failed_methods": [],
+    "limitations": [
+      "No DB/Docker/network/scorer execution",
+      "Only focused preview tests; parent owns full regression and protected sidecar checks"
+    ]
+  },
+  "property_cases": 512,
+  "payload_identity": {
+    "bytes": 33953,
+    "sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9",
+    "asserted_in": "test_IR001_canonical_payload_identity_unchanged"
+  },
+  "evidence_files": {
+    "IR001_BEHAVIORAL_RED.json": "7746dfe2de4ba9e4770ad78de2d7b09870afc0433e6dc71fd0978b930ff7a7be",
+    "IR001_BEHAVIORAL_RED.log": "b9bd39fc3a076c2fea8eb9eece2db186dfff56d9c036ab2fc7f923b8e3afdcd8",
+    "IR001_BEHAVIORAL_RED_scento_preview.py": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+    "IR001_BEHAVIORAL_RED_test_scento_preview.py": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef",
+    "IR001_GREEN.json": "5022b0f9aac94957a804306957e7cceba70cd231947620ecd0c2f6aca0c2fe97",
+    "IR001_GREEN.log": "c627eaa69332fac5e695a30a4cb7aafe30be54b82b5801838ebb5a2c2b7b1b62",
+    "IR001_GREEN_scento_preview.py": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
+    "IR001_GREEN_test_scento_preview.py": "d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef"
+  },
+  "preservation": "Original RED_INITIAL, GREEN_FINAL 49 methods, initial frozen summary and every intermediate report remain unchanged. Real pinned files/sidecars never modified; corruption controls use private disposable copies.",
+  "not_claimed": [
+    "Independent finding closure",
+    "New committed SHA",
+    "Full regression",
+    "Draft PR/final readiness",
+    "Current database or rights acceptance"
+  ],
+  "next_action": "Coordinator commits exact corrected files, reruns194 historical offline methods plus55 preview methods, and independent implementation reviewer rechecks IR-001 at new exact commit."
+}

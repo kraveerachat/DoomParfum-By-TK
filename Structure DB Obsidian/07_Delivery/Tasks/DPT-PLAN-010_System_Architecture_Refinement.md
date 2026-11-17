@@ -2,9 +2,9 @@
 id: DPT-PLAN-010
 project: DoomParfum By TK
 type: planning_amendment_task
-status: READY FOR OWNER REVIEW
+status: MERGED
 owner: human-owner
-updated: 2026-11-16
+updated: 2026-11-17
 tags: [doomparfum, architecture, research, ui, security]
 source_of_truth: "../../../README.md"
 ---
@@ -48,3 +48,7 @@ Source/AST/migrations/accepted synthetic contracts and all 24 prior receipts rem
 [PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
 
 Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.
+
+## Owner merge event — 2026-11-17 reconciliation
+
+PR29 verified Owner-merged UTC2026-11-16T18:55:32Z at `81b281acb418af230746bb00fb923e60509e8e92`, publicationhead `ea8fb8b035bf3b2961a7814f5a212143e80dd5fe`. Original immutable planning receipt unchanged. Merge accepts architecture documentation only; later exact A/B/I authority for IMP-ENR-01 is separately recorded in [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], not inferred here. Other ARC choices remain proposed.

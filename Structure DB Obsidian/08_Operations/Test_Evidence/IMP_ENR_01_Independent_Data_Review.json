@@ -1,0 +1,858 @@
+{
+  "active_pointer_published_in_input_metadata": false,
+  "actual_selected_list_semantics": {
+    "absent_concentration_alias_test_data": "SYNTHETIC_FIXTURES_REQUIRED",
+    "alias_equivalence": "UNVERIFIED",
+    "general_equals_layer_concatenation_in_pinned_records": true,
+    "general_occurrences": [
+      12,
+      11
+    ],
+    "layer_occurrences": [
+      12,
+      11
+    ],
+    "literal_cross_material_alias_overlap": 0,
+    "material_alias_occurrences": [
+      10,
+      24
+    ],
+    "repeat_test_data": "SYNTHETIC_FIXTURES_REQUIRED",
+    "required_interpretation": "Preserve each original field separately; equality is not permission to derive/reassign layers or completeness",
+    "selected_within_field_repetitions": 0
+  },
+  "assigned_before_implementation": true,
+  "canonical_acceptance": "PENDING",
+  "canonical_serialization_verified": true,
+  "combined_pinned_bytes": 905307,
+  "contracts": {
+    "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md": {
+      "canonical_git_bytes_validation": "COORDINATOR_GIT_CHECK_REQUIRED",
+      "canonical_lf_sha256": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+      "checkout_sha256": "ea366ffefad100b3fe13f48e0af313b1b7969fc2f2b4a550fa3d51ab989006b9",
+      "frozen_expected": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+      "line_endings": "CRLF"
+    },
+    "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md": {
+      "canonical_git_bytes_validation": "COORDINATOR_GIT_CHECK_REQUIRED",
+      "canonical_lf_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "checkout_sha256": "5007580393e6c754e25e9ef120f2899eb3322763b0880784582c53058e45873c",
+      "frozen_expected": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "line_endings": "CRLF"
+    }
+  },
+  "csv_populations_historical_not_db": {
+    "houses.csv": 160,
+    "materials.csv": 420,
+    "perfumes.csv": 1479
+  },
+  "dossier_outcomes": {
+    "ACCEPT": 0,
+    "DEFER": 43,
+    "REJECT": 0,
+    "UNKNOWN": 3
+  },
+  "execution": {
+    "database_calls": 0,
+    "git_calls_by_this_role": 0,
+    "network_calls": 0,
+    "private_comparator": "data/verify_candidate_independently.py",
+    "python": "3.11.9",
+    "scorer_calls": 0,
+    "source_writes": 0,
+    "tool": "Context Mode ctx_execute; Python standard library"
+  },
+  "final_readiness_qualification": "Independent agent data comparison complete for exact payload/source-file hash only; independent implementation review, final source rebind if changed, publication and Owner approval are coordinator gates.",
+  "final_receipt_created": false,
+  "findings": [],
+  "fresh_pinned_buffer_field_comparisons": 46,
+  "fresh_rebind_verification": {
+    "all_six_raw_files_rehashed_before_parse": true,
+    "fresh_selected_slot_comparisons": 46,
+    "fresh_strict_csv_populations": [
+      1479,
+      160,
+      420
+    ],
+    "human_canonical_acceptance": "PENDING",
+    "negative_controls_reexecuted": 18,
+    "payload_hash_unchanged": true,
+    "same_verified_csv_buffers_parsed": true
+  },
+  "git_commit_independently_resolved_by_this_role": false,
+  "human_owner_acceptance": "PENDING",
+  "implementation_file_sha256_at_review": "ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae",
+  "independent_agent_not_owner_human": true,
+  "initial_preflight_preserved": {
+    "json_sha256": "a4cb48a87576254794eca95ee25f97d2373be7012cfbceef236fda8437097df2",
+    "md_sha256": "f8b2cdd3f8aa0321df079eb610b666c9f02e9c876342c2ed53233d07e03a6c81",
+    "private_initial_report": "data/PREFLIGHT.json"
+  },
+  "literal_matched_slots": 46,
+  "literal_representation_result": "MATCH_ALL_46",
+  "negative_control_count": 18,
+  "negative_controls": {
+    "alias_whitespace_normalized": {
+      "classification": "EXACT_ORDERED_OCCURRENCES",
+      "result": "REJECTED"
+    },
+    "canonical_selection": {
+      "classification": "UNSELECTED_UNKNOWN",
+      "result": "REJECTED"
+    },
+    "closure_asserted": {
+      "classification": "UNSELECTED_UNKNOWN",
+      "result": "REJECTED"
+    },
+    "duplicate_field": {
+      "classification": "EXACT_FIELD_ORDER",
+      "result": "REJECTED"
+    },
+    "forbidden_field": {
+      "classification": "EXACT_FIELD_ORDER",
+      "result": "REJECTED"
+    },
+    "key_changed": {
+      "classification": "EXACT_ORDERED_RECORDS",
+      "result": "REJECTED"
+    },
+    "linked_rights_inherited": {
+      "classification": "RIGHTS_NOTICE",
+      "result": "REJECTED"
+    },
+    "list_order_reversed": {
+      "classification": "EXACT_ORDERED_OCCURRENCES",
+      "result": "REJECTED"
+    },
+    "literal_changed": {
+      "classification": "EXACT_RAW_LITERAL",
+      "result": "REJECTED"
+    },
+    "matching_enabled": {
+      "classification": "NO_PROMOTION",
+      "result": "REJECTED"
+    },
+    "missing_to_zero": {
+      "classification": "EXACT_RAW_LITERAL",
+      "result": "REJECTED"
+    },
+    "occurrence_dropped": {
+      "classification": "EXACT_ORDERED_OCCURRENCES",
+      "result": "REJECTED"
+    },
+    "ordinal_changed": {
+      "classification": "EXACT_ORDERED_RECORDS",
+      "result": "REJECTED"
+    },
+    "provenance_hash_changed": {
+      "classification": "FIELD_PROVENANCE_STATE",
+      "result": "REJECTED"
+    },
+    "reviewed_at_invented": {
+      "classification": "UNSELECTED_UNKNOWN",
+      "result": "REJECTED"
+    },
+    "reviewer_auto_approval": {
+      "classification": "UNSELECTED_UNKNOWN",
+      "result": "REJECTED"
+    },
+    "sixth_record": {
+      "classification": "FIVE_RECORDS",
+      "result": "REJECTED"
+    },
+    "source_revision_changed": {
+      "classification": "VERSIONS",
+      "result": "REJECTED"
+    }
+  },
+  "phase": "AGENT_DATA_REVIEW_COMPLETE",
+  "previous_review_checkpoint": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "previous_review_preserved": {
+    "checkpoint": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+    "implementation_file_sha256": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+    "json_sha256": "a8177f972c5e7ba76a99b18453dee6522e4bccc7fb1b9c343df273edf0581a55",
+    "md_sha256": "113dc8a4b79bb9217811b1944c512830b692b3e9633bc071eb94aeb4e1b87c9b",
+    "private_snapshot_files": [
+      "data/REVIEW_892b725_PUBLIC.json",
+      "data/REVIEW_892b725_PUBLIC.md",
+      "data/REVIEW_892b725_verify_candidate_independently.py",
+      "data/REVIEW_892b725_CANDIDATE_DATA_REVIEW.json"
+    ]
+  },
+  "private_baseline_path": "data/PINNED_FIELD_BASELINE_PRIVATE.json",
+  "private_baseline_sha256": "c1118322d9d40de4d52a263531c4e726f6d8f823fb2eff22d2590d215d3bbda9",
+  "private_payload_bytes": 33953,
+  "private_payload_sha256": "16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9",
+  "rebind_reason": "Coordinator safety correction changes source read bounds; independent data review confirms exact same payload and all pinned literals; behavior security remains implementation reviewer scope.",
+  "retained_sidecar_states": {
+    "activation_false": 1479,
+    "held": 44,
+    "independent_conflict_exclusions": 1,
+    "nonheld_bucket_not_new_approval": 1435,
+    "normalization_proposals": 43,
+    "proposal_status": "PROPOSED_NOT_APPROVED",
+    "selected_perfume_completeness": "UNKNOWN",
+    "selected_perfume_held": false,
+    "source_records": 1479
+  },
+  "reviewer": "/root/enr_independent_data_review",
+  "scope_qualification": "Agent comparison of private candidate literals/provenance/states, not implementation security approval, DB reviewer approval, rights expansion, canonical selection or current DB validation.",
+  "sidecar_pins": {
+    "held_conflict_exclusion.json": {
+      "bytes": 278,
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    },
+    "membership_policy_43_PROPOSED.json": {
+      "bytes": 349385,
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    "progressive_enrichment_index_1479.json": {
+      "bytes": 1566875,
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    }
+  },
+  "slot_results": [
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "name",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "house_id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "house",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "UNKNOWN",
+      "field_locator": "year",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "concentration",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "secondary_family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "top_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "heart_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "base_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 644,
+      "dossier_outcome": "DEFER",
+      "field_locator": "url",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "name",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "house_id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "house",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "UNKNOWN",
+      "field_locator": "year",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "concentration",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "secondary_family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "top_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "heart_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "base_notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "notes",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 645,
+      "dossier_outcome": "DEFER",
+      "field_locator": "url",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "perfumes.csv",
+      "source_key": "afnan-9-am-dive"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "DEFER",
+      "field_locator": "id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "DEFER",
+      "field_locator": "name",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "DEFER",
+      "field_locator": "country",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "UNKNOWN",
+      "field_locator": "founded",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "DEFER",
+      "field_locator": "type",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 3,
+      "dossier_outcome": "DEFER",
+      "field_locator": "url",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "houses.csv",
+      "source_key": "afnan"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "name",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "aliases",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "material_family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "origin",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "smell",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 257,
+      "dossier_outcome": "DEFER",
+      "field_locator": "url",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "mint"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "id",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "name",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "aliases",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "MATCH",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "material_family",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "origin",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "smell",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    },
+    {
+      "candidate_state_semantics": "CONTRACT_CONSISTENT",
+      "canonical_acceptance": "PENDING",
+      "data_ordinal": 46,
+      "dossier_outcome": "DEFER",
+      "field_locator": "url",
+      "literal_accuracy": "MATCH",
+      "missing_state_accuracy": "MATCH",
+      "ordered_occurrence_accuracy": "NOT_APPLICABLE",
+      "provenance_accuracy": "MATCH",
+      "source_file": "materials.csv",
+      "source_key": "bergamot"
+    }
+  ],
+  "source_commit_provided_by_coordinator": "4fdbd29b3f345fcbce3eb08862748672657ef22c",
+  "source_pins": {
+    "LICENSE": {
+      "bytes": 188,
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    "README.md": {
+      "bytes": 2799,
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    "VERIFIED_SOURCE_PROVENANCE.json": {
+      "bytes": 2168,
+      "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+    },
+    "datapackage.json": {
+      "bytes": 4845,
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    },
+    "houses.csv": {
+      "bytes": 29765,
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    "materials.csv": {
+      "bytes": 87027,
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    "perfumes.csv": {
+      "bytes": 780683,
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    }
+  },
+  "source_provenance_and_three_sidecars_unchanged": true,
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "source_rights_review": {
+    "canonical_approval": "PENDING",
+    "dataset": "Scento Perfume Database",
+    "image_rights": "NOT_GRANTED",
+    "license_assertion": "CC-BY-4.0",
+    "linked_content_rights": "NOT_GRANTED",
+    "permitted_scope": "Owner-approved private offline unselected candidate review only",
+    "public_redistribution": "NOT_AUTHORIZED_BY_THIS_TASK",
+    "source_attribution": "Scento — https://www.scento.com/perfume-database"
+  },
+  "task": "IMP-ENR-01"
+}

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - operations
@@ -708,3 +708,45 @@ Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: fou
 [PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
 
 Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.
+
+## IMP-ENR-01 exact Owner authority and preimplementation gate — 2026-11-17
+
+Current user-provided master prompt explicitly accepts POST27-ODP-1 **A-PREVIEW-5 / B-PINNED-PREVIEW / I-IMP-ENR-01**, ENR-PINNED-SCENTO-1 revision1, frozen data-note canonical SHA256 `053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5`, packet SHA256 `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`, transform `enr-pinned-scento-preview-1` and schema `enr-pinned-scento-preview-schema-1`. Only exact five-record/46-field local unselected preview is authorized. Frozen proposal files remain unchanged; this dated decision supersedes only their earlier A/B/I unanswered state. No separate unseen chat statement, human reviewer identity, other policy/ARC acceptance or new source rights are fabricated.
+
+Merged PR28/29 and actual main81b281 satisfy Planning Gate. Fresh independent `/root/enr_architecture_compatibility` review permits bounded TDD; named `/root/enr_independent_data_review` role was assigned before implementation under the current delegated review instruction. Human/canonical acceptance remains pending. Six source pins/sidecars and25prior receipts/eight migrations verified. Current DB/Docker not probed; no service start. Existing tools only; no install/configuration.
+
+Task/branch/source/tests/results: [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], [[IMP_ENR_01_Preflight.json]], [[IMP_ENR_01_Architecture_Compatibility]]. No runtime PASS or final implementation readiness at this checkpoint. PR8 blocked;43proposals/44holds/Khamrah/rights/eligibility untouched; no API/UI/DB/acquisition/real matching/Production or merge.
+
+## Source checkpoint S2 — initial focused implementation, independent reviews pending
+
+Initial tests were written before the module existed. Actual RED was one unittest loader `ModuleNotFoundError`; it was not 40 executed behavioral failures. Initial test-file SHA256 `f8b053a5030cd414299c4867ba929a12de23cf75699e00a419309a0c86a7ff59` and missing-module source state are preserved privately. The actual invocation was an inline PowerShell Python here-string piped to `python -`; an equivalent CLI label in the original report is explicitly corrected by a separate clarification, without rewriting initial evidence.
+
+First GREEN40 methods was followed by additional coverage/cleanup refinements, then49/49 focused methods passed,0failures/errors/skips,Python3.11.9. Three property methods contain512deterministic iterations, counted separately. Supplemental tests are later refinements, not invented initial RED evidence. [[IMP_ENR_01_Focused_Tests.json]] mapsT01–T30 and binds exact tested files. Full offline regression and independent implementation/data review remain pending; no final receipt or readiness claim.
+
+New source is only `database/scento_preview.py` and its dedicated test file. It reads six pinned snapshots, strictly parses verified bytes, preserves exact5records/46slots and raw ordered evidence, serializes deterministic private payload and uses a tested local active-pointer publication/rollback. Existing ETL/scorers/adapter/guards/migrations are not changed or imported by the preview module. No actual worktree preview bundle is published at this checkpoint; test publications used disposable private fixtures. Human/canonical acceptance remains pending.
+
+## IR-ENR-IMPL-001 — read-bound correction, independent closure pending
+
+Independent exact-source review of `892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3` found one blocking P2/MEDIUM defect: `_read_regular` read the whole regular file before pinned-size validation; rollback readbacks were also unbounded. Bounded reviewer probes used only a one-byte oversized disposable source/payload, not a large/OOM experiment. Original49-method source/reports and finding remain preserved in [[IMP_ENR_01_Implementation_Initial_Review.json]]. No other blocking defect was identified in that initial review; actual Windows sharing-denial preserved prior pointer. Actual symlink/junction creation controls were unavailable and remain NOT RUN, distinct from mock reparse checks.
+
+Author added six read-bound controls and captured actual behavioral RED on unchanged old module:55methods,50passed,5failures,0errors. The five failures prove the missing bounds, rather than treating an implementation claim as verification. The small correction checks exact descriptor size and reads at most expected_size+1, retaining post-read length/hash checks. Source bounds derive from unchanged six pins; candidate/rollback payload/manifest bounds derive from their expected canonical bytes. No arbitrary new source/transport policy or payload semantics is selected.
+
+Corrected focused GREEN55/55,0failures/errors/skips,512property iterations. Golden private payload still33953bytes SHA256 `16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9`. Module SHA256 `ba48c82266dfb3f18f66fbc585c1e6e8b0e080c83aeb99bacbc68f77d0aba8ae`; tests `d0768a20d8c0db86d94da0c753caed7c553614533a18e44cb84acd295cbd84ef`. Short file-prefix IR001 refers to this same IR-ENR-IMPL-001, not a second finding. [[IMP_ENR_01_Read_Bounds_Correction.json]] records exact RED/GREEN commands and source bindings. **Independent new-commit re-review is still required; the author does not close the finding.**
+
+Initial combined offline run at892b725 passed243/243 (existing194 + preview49),0failures/errors/skips,all6DB/Docker/ETL-SQL/network guard counts0,protected inputs unchanged. Its first runner attempt failed during discovery before executing tests because a reused TestLoader retained the wrong top-level directory; original helper/error retained, corrected only by a fresh loader per discovery root. That setup failure is not a source regression and is not counted as an executed test. Corrected-source full regression follows separately.
+
+Independent data reviewer matched initial actual candidate46/46,18/18corrupted private controls rejected,0data findings. Semantic dossier remains43DEFER/3UNKNOWN and human/canonical acceptance PENDING; payload review_outcome stays UNKNOWN. Final source rebind follows this safety correction. No raw private candidate/complete source rows/logs enter Git or newly added handoff evidence.
+
+## Completed agent-side verification — exact corrected source4fdbd29, 2026-11-17
+
+Independent implementation review closed IR-ENR-IMPL-001 by exact-commit retest:55/55methods,512separate property iterations and8separate bounded-read controls; zero open implementation findings. Original unbounded-read defect, initial49test result, behavioralRED55/5failures and correctedGREEN are retained. Parent full offline regression executed249/249(existing194+preview55),0failures/errors/skips,5.488856700016186s; Docker/SQL/DBguard/ETL-SQL-generation/network/DNS calls all0; sixsource/provenance/sidecar fingerprints unchanged. Commands/source bindings: [[IMP_ENR_01_Offline_Regression.json]]. Reviewer counts are separate executions, not extra methods added to249.
+
+Independent data review freshly rebound to4fdbd29:46/46literal/provenance/state/ordering matches; same18negative controls rerun and rejected, not36different controls. No data findings; semantic dossier43DEFER/3UNKNOWN and Human/canonical acceptancePENDING. [[IMP_ENR_01_Independent_Data_Review]] has correct frontmatter after one metadata-only source_of_truth fix; initial448pass/2frontmatter-failure entries (one underlying missingkey) and before/after bytes retained. Data JSON/source/payload unchanged by that header correction.
+
+Actual private local publication completed only after both review gates. One active immutable bundle,33953bytes/hash16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9,5records/46unique claim identities/3missing,allUNSELECTED/UNMAPPED/reviewed_atnull. Source/provenance/sidecars unchanged; runtime network/DNS/URL/subprocess/shell counters0; lock removed. Payload/localpointer paths and sanitized evidence: [[IMP_ENR_01_Private_Publication.json]]. Raw payload is ignored/private and excluded from new Git/ZIP evidence. No current DB, real ranking or canonical acceptance follows.
+
+Documentation/diff/private-data validation, Draft PR publication, final metadata parity, one implementation receipt and fresh latest handoff verification complete delivery separately. Human Owner alone reviews/merges; no automatic merge or Production mutation.
+
+## Draft PR30 and sole implementation receipt — 2026-11-17
+
+[PR30](https://github.com/kraveerachat/DoomParfum-By-TK/pull/30) OPEN/DRAFT, pre-receipt publication9003d08889785fd7f47e3297abacf8531a5ba1a2, reviewed/tested runtime4fdbd29b3f345fcbce3eb08862748672657ef22c. Source/data agent checks complete; Human/canonical acceptance and merge remain PENDING. Sole immutable receipt [[2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview]], all25old receipts unchanged. [[IMP_ENR_01_File_Manifest.json]] lists exact final paths. Final metadata parity/ZIP delivery proofs live outside the frozen ZIP and in PR description; this checkpoint does not claim future archive verification. No source/rights/hold/eligibility/Production expansion. Human Owner alone merges.

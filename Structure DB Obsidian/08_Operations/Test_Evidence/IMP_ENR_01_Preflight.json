@@ -1,0 +1,180 @@
+{
+  "task": "IMP-ENR-01",
+  "at_utc": "2026-11-16T19:32:43.335218+00:00",
+  "base": "81b281acb418af230746bb00fb923e60509e8e92",
+  "branch": "codex/imp-enr-01-offline-preview",
+  "authority": {
+    "source": "Current user-provided IMP-ENR-01 master prompt in this chat",
+    "received_client_date": "2026-11-17",
+    "client_timezone": "Asia/Bangkok",
+    "request_sha256": "deefcaa5c16b2cfa3c6ea068d746e93464a0dfe6ed7eaa73387de6cd112143a8",
+    "packet": "POST27-ODP-1",
+    "choices": {
+      "A": "A-PREVIEW-5",
+      "B": "B-PINNED-PREVIEW",
+      "I": "I-IMP-ENR-01"
+    },
+    "contract": "ENR-PINNED-SCENTO-1",
+    "contract_revision": 1,
+    "transform": "enr-pinned-scento-preview-1",
+    "schema": "enr-pinned-scento-preview-schema-1",
+    "other_owner_choices": "NOT ACCEPTED",
+    "human_reviewer_identity": "NOT SUPPLIED; no identity fabricated"
+  },
+  "contracts": [
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Post_PR27_Owner_Decision_Packet.md",
+      "canonical_sha256": "0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c",
+      "checkout_raw_sha256": "5007580393e6c754e25e9ef120f2899eb3322763b0880784582c53058e45873c",
+      "CRLF_only": true
+    },
+    {
+      "path": "Structure DB Obsidian/03_Data/Post_PR27_Data_Readiness_and_Pilot.md",
+      "canonical_sha256": "053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5",
+      "checkout_raw_sha256": "ea366ffefad100b3fe13f48e0af313b1b7969fc2f2b4a550fa3d51ab989006b9",
+      "CRLF_only": true
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/M1_Notes_Layered_Typed_Contract.md",
+      "canonical_sha256": "a57f4c56e1068a3d86a99e562b31e5c3923e2d369cb4e812c1dd5f5550a5ada3",
+      "checkout_raw_sha256": "1fbcceec91929177be9e0a82e89119c0bdc1299d78379e2460392b02d2153f41",
+      "CRLF_only": true
+    },
+    {
+      "path": "Structure DB Obsidian/04_Matching/B1_Positive_Domain_Typed_Contract.md",
+      "canonical_sha256": "77bfca59dab449313eb02def8c30ff355e341a2b88397dbc412a09af970a5977",
+      "checkout_raw_sha256": "6fc611eb17419249c82eb46ba5f19e384cc5e12abaf194c31ffb7772364e8503",
+      "CRLF_only": true
+    }
+  ],
+  "source_files": [
+    {
+      "file": "perfumes.csv",
+      "bytes": 780683,
+      "sha256": "726a1a2af8aef42d801b424b086415b50f6ca33dd2189d6fbd2bcbcb442bf8e5"
+    },
+    {
+      "file": "houses.csv",
+      "bytes": 29765,
+      "sha256": "f076db1629fc1c07fe417811a55891bbfe70991319bf5c520766253f80cc9c18"
+    },
+    {
+      "file": "materials.csv",
+      "bytes": 87027,
+      "sha256": "9b342c803f0b370e96106a4dff0ae56f1f5340bdc82c6e32d180473a9f31764c"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 188,
+      "sha256": "7be5a0aac3f6a1803ae0a950624941a74b4a17c54ab3c9272ef8f61ebb8efc84"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2799,
+      "sha256": "c925d4b50cefde8038706125e9296d07270ca98bd6bcafd079ced9a77cf5c688"
+    },
+    {
+      "file": "datapackage.json",
+      "bytes": 4845,
+      "sha256": "c4f072d7486a9f64b24502b7b53862e9fad61a2d79943d0ae6525d97f3f30bc2"
+    }
+  ],
+  "combined_bytes": 905307,
+  "source_revision": "086769ecf1add770ea6646bd4d88d39f0e7cddeb",
+  "source_counts": {
+    "perfumes.csv": {
+      "records": 1479,
+      "header": [
+        "id",
+        "name",
+        "house_id",
+        "house",
+        "year",
+        "perfumers",
+        "concentration",
+        "family",
+        "secondary_family",
+        "character",
+        "seasons",
+        "times_of_day",
+        "top_notes",
+        "heart_notes",
+        "base_notes",
+        "notes",
+        "description",
+        "popularity_rank",
+        "url"
+      ]
+    },
+    "houses.csv": {
+      "records": 160,
+      "header": [
+        "id",
+        "name",
+        "country",
+        "founded",
+        "type",
+        "portrait",
+        "perfume_count",
+        "url"
+      ]
+    },
+    "materials.csv": {
+      "records": 420,
+      "header": [
+        "id",
+        "name",
+        "aliases",
+        "material_family",
+        "origin",
+        "smell",
+        "url"
+      ]
+    }
+  },
+  "sidecar_fingerprints": [
+    {
+      "path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum Local Data\\Master Handoff\\DoomParfum_Master_Handoff_2026-11-11\\09_LOCAL_LICENSED_SOURCE\\scento_pinned\\VERIFIED_SOURCE_PROVENANCE.json",
+      "bytes": 2168,
+      "sha256": "e6b41a99cf2363ace1c297efd83b5f2f5ad241cfd9332ec73117fcef2fc2945c"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum Local Data\\Master Handoff\\DoomParfum_Master_Handoff_2026-11-11\\08_OUTPUTS_APPROVED\\post_PR4\\research\\audit_003\\progressive_enrichment_index_1479.json",
+      "bytes": 1566875,
+      "sha256": "a24e8746399e63586c61fe1e62dbf0418cb8bc7bddd2f821b047d69dc479e493"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum Local Data\\Master Handoff\\DoomParfum_Master_Handoff_2026-11-11\\08_OUTPUTS_APPROVED\\post_PR4\\research\\audit_003\\membership_policy_43_PROPOSED.json",
+      "bytes": 349385,
+      "sha256": "74b09992e5057cab333c91cddff485500c423b41644ee6d930b0b2b2de725568"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum Local Data\\Master Handoff\\DoomParfum_Master_Handoff_2026-11-11\\08_OUTPUTS_APPROVED\\post_PR4\\research\\audit_003\\held_conflict_exclusion.json",
+      "bytes": 278,
+      "sha256": "d257c76cd10a185b75475d49f4da6748b6a08179a83322454d4f315014f44a31"
+    },
+    {
+      "path": "C:\\Users\\User\\Documents\\ChatGPT\\DoomParfum By TK\\.local\\post1821-D\\PINNED_SOURCE_AUDIT_INDEX_1479.json",
+      "bytes": 2757650,
+      "sha256": "f86f944d2ec7cc5f849e997283e6fb2723a89f1147b1c831718765b409612908"
+    }
+  ],
+  "prior_receipts": 25,
+  "migrations": 8,
+  "held": 44,
+  "normalization_proposals": 43,
+  "independent_conflict_count": 1,
+  "architecture_gate": "SATISFIED_FOR_BOUNDED_TDD_START",
+  "architecture_evidence_sha256": "338720a1aa550811a635d9f353a74e22b1ce7d1df67ec2c039c459434076ac3b",
+  "architecture_reviewer": "/root/enr_architecture_compatibility",
+  "data_reviewer": "/root/enr_independent_data_review",
+  "reviewer_assignment": "Delegated agent assignment before implementation under current Owner prompt; later human/canonical acceptance pending",
+  "current_DB": "NOT QUERIED / NOT REVALIDATED",
+  "Docker": "NOT STARTED / NOT PROBED",
+  "source_network_calls": 0,
+  "Production_mutation": false,
+  "missing_optional_documents": {
+    "Task_Register.md": "NOT FOUND; existing Backlog/Tasks/Project_Index used",
+    "dedicated Test_Evidence index": "NOT FOUND; Project_Index and task evidence ledger used"
+  }
+}

@@ -127,3 +127,7 @@ a public entity. Shared access needs active explicit membership; personal purcha
 private. Publication requires a reviewed new sanitized public copy, never in-place scope widening.
 Rights and application authorization both apply. Enforcement/test specification:
 [[Security_and_Privacy]], [[P1_Pilot_Implementation_Plan]]. No runtime checks ran in the planning PR; the current local DB subset is above.
+
+## IMP-ENR-01 verified offline boundary — 2026-11-17
+
+Standalone pinned preview is implemented without reusing ETL token/canonical-expansion helpers: [[IMP_ENR_01_Implementation_Boundary]], [[IMP_ENR_01_Field_Review_Mapping]], [[IMP-ENR-01_Pinned_Scento_Offline_Preview]]. ExactA/B/I scope only; source immutable and claims remain unselected/unmapped/closureUNKNOWN. Sixpins905307bytes/5records/46slots; no source URLs followed or linked/image rights inherited. Scento attribution/license and transformation notice retained. No new SQL field definition, database row, canonical acceptance, normalization,43proposal/44hold/Khamrah/eligibility change, real ranking, app/auth/API/UI, acquisition or Production mutation. Current DB/Docker not probed; old counts are historical.

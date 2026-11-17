@@ -1,0 +1,88 @@
+{
+  "task": "IMP-ENR-01",
+  "review_type": "Independent exact-source implementation review, initial findings retained",
+  "reviewer": "/root/enr_implementation_review",
+  "independence": "Reviewer did not implement the module/tests or the architecture/data review. No implementation/test/tracked-document/Git edits by this reviewer.",
+  "source_commit": "892b7250a4ffa5ac2d9f45335bc3a140c8cecbc3",
+  "base": "81b281acb418af230746bb00fb923e60509e8e92",
+  "branch": "codex/imp-enr-01-offline-preview",
+  "source_bindings": {
+    "database/scento_preview.py": "302ff01ba439b2606b65c8bb8d63fa05b6bf834da53583b84ba08411b3a7bbfb",
+    "database/tests/test_scento_preview.py": "cbb23801466e4e2f7e9f26497b3721ed77cb31033436c6cfc9cc7ffc2118607b"
+  },
+  "decision": "CHANGES_REQUIRED",
+  "blocking_findings": 1,
+  "findings": [
+    {
+      "id": "IR-ENR-IMPL-001",
+      "severity": "P2 / MEDIUM",
+      "blocking_for_task_readiness": true,
+      "title": "Bound file reads before rejecting oversized source or rollback data",
+      "affected_source": "database/scento_preview.py",
+      "line": 138,
+      "related_lines": [129, 162, 433, 435],
+      "reasoning": "_read_regular checks regular-file mode but calls handle.read() with no byte limit and no descriptor-size check. load_snapshot reads all six files before _verify_snapshot checks their exact lengths. A wrong or grown regular file can therefore allocate arbitrarily more memory than the fixed 905307-byte snapshot before PIN_MISMATCH. Rollback also fully reads caller-selected historical payload/manifest files before comparing them with deterministic expected bytes, so an altered oversized bundle has the same issue. Existing tests reject wrong lengths after allocation and do not cover the read bound.",
+      "reproduction": "IR-P01 uses an owned disposable six-file source, with first file exactly780684bytes and all remaining expected lengths, and a pass-through os.fdopen observer. Every handle.read call received -1. Total905308bytes were read before PIN_MISMATCH. IR-P02 replaces an owned disposable bundle payload with33954bytes when the deterministic payload is33953bytes; rollback read(-1) returned33954 before PUBLICATION_FAILED. Neither probe used a large allocation or changed protected source.",
+      "recommended_correction": "Require explicit finite limits for regular-file reads. Validate descriptor file size before allocation, use a bounded read such as limit+1 to catch growth after the size check, and retain exact post-read length/hash validation. Source limits come from immutable PINS. Bound candidate readback, rollback payload and rollback manifest using deterministic expected lengths or another justified fixed finite bound. Add negative read-spy/oversize/growth tests preserving the previous pointer and source bytes. Avoid relying solely on path.stat before reopening.",
+      "actual_disposition": "OPEN. Coordinator notified and author preparing correction. This reviewer has not inspected or accepted a correction.",
+      "retest_evidence": "NOT RUN: requires a new exact source/test commit and independent re-review. Initial failure evidence retained."
+    }
+  ],
+  "checks": {
+    "owner_approval_binding": "VERIFIED: current supplied master prompt accepts only exact POST27 A/B/I; task and Decision_Log bind that request without inventing an unseen prior approval or human reviewer identity.",
+    "contract_preservation": "VERIFIED: canonical Git hashes exactly053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5 and0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c; unchanged from base; checkout differs onlyCRLF.",
+    "source_pins": "VERIFIED: actual focused run reads all six exact pins; source revision, artifact ordering/name/count and exact bytes revalidated by transform. Read-bound defect remains OPEN.",
+    "five_records_and_allowlist": "VERIFIED SOURCE/RUNTIME: exact key+logical ordinal; no sixth selection or linked expansion; fields13+13+6+7+7=46. Standalone synthetic helpers cannot be passed as publisher payload or expected-pin overrides.",
+    "parser": "VERIFIED SOURCE/FOCUSED: exact header, strict UTF8/CSV quotes/NUL/shape/duplicateID/count rejection, logical multiline records and literal fields. Synthetic count override is unavailable through publisher.",
+    "raw_states": "VERIFIED SOURCE/FOCUSED: raw literal retained separately; missing isNone/MISSING; strings remain uninterpreted; list occurrence order/repeats/empty tokens preserved; Top/Heart/Base/General and Aliases stay distinct; closureUNKNOWN, selectionUNSELECTED, mappingUNMAPPED, reviewUNKNOWN/reviewed_atNone.",
+    "identity": "VERIFIED SOURCE: field identity binds revision/fileSHA/ordinal/key/field/transform/schema. uuid4 identifiers name publication candidates/bundles/failure reports only; they do not create canonical entity IDs. canonical_id remainsNone.",
+    "determinism": "VERIFIED FOCUSED: canonical UTF8, sorted object keys, fixed separators, fixed manifest/field/occurrence array order, no volatile execution time in payload, exact replay digest. Execution metadata separate.",
+    "publication": "VERIFIED WITH LIMITS: exclusive local lock; fsync files; same destination-volume candidate; historical bundles retained; pointer os.replace last. Injected interruption/partial write/rename-transition failures preserve previous pointer. Actual Windows no-FILE_SHARE_DELETE denial produced PUBLICATION_FAILED and byte-identical prior pointer. Oversized rollback read remains OPEN.",
+    "cleanup_and_locks": "VERIFIED SOURCE/FOCUSED: postcommit lock-cleanup failure reports committed success and retains lock; next attempt fails closed. Stale locks require manual inspection; no auto-steal. Crash/power-loss directory durability is not claimed.",
+    "paths_and_reparse": "VERIFIED SOURCE/FOCUSED: absolute paths, no traversal/UNC, existing ancestor symlink/reparse checks, descriptor regular mode and POSIX O_NOFOLLOW where available. Actual Windows symlink/junction creation was not available in reviewer environment; actual reparse rejection NOT RUN. Mock reparse coverage is not represented as platform proof. Concurrent hostile directory-ancestor replacement is expressly outside the local trust assumption.",
+    "rights": "VERIFIED SOURCE: pinnedCCBY4.0 attribution/license link/transformation notice retained; private local review audience, no linked-content or image rights grants. New legal/current live source rights audit NOT RUN.",
+    "dependencies": "VERIFIED SOURCE/AST/FOCUSED: stdlib imports only; no local/ETL/matching_input/scorer/driver/network/SQL/Docker/app bridge. No URLs followed. Existing architecture proposals are not activated.",
+    "source_immutability": "VERIFIED: reviewer before/after hashes identical for all7local source-directory artifacts and3protected audit sidecars across focused tests/probes. No protected source writes.",
+    "history_and_scoring_preservation": "VERIFIED canonical Git blobs:25receipts,8migrations,38matching_math files unchanged from base. No existing scorer behavior or protected guard edited.",
+    "test_quality": "49focused methods independently executed with0failures/errors/skips;3property methods contain512iterations, not512methods. Tests contain substantive parser/raw/order/publication negatives but lacked bounded-read cases. T27fixed-path/no-stdout test alone does not prove a whole-Git raw-data/secret scan. T21mock reparse tests alone do not prove actual Windows junction behavior.",
+    "tdd": "RETAINED EVIDENCE INSPECTED: initial module absent,1unittestloadererror and0behavioral tests; original40test-source checkpoint retained. Invocation clarification correctly states actual PowerShell here-string|python- and equivalent CLI label. Later49tests are not misrepresented as initialRED.",
+    "documentation": "Current task correctly INPROGRESS with independent/final readiness pending. Frozen historical PROPOSED text retained with separate dated A/B/I authority. Final independent review/regression/DraftPR/receipt/packaging reconciliation is coordinator-owned and remains pending at this initial checkpoint."
+  },
+  "reviewer_execution": {
+    "command": "python .local/imp-enr-01/implementation_review/reviewer_probes.py",
+    "runner": "unittest.TextTestRunner; explicit test_scento_preview module only",
+    "python": "3.11.9",
+    "git": "2.53.0.windows.2",
+    "focused_methods": 49,
+    "focused_failures": 0,
+    "focused_errors": 0,
+    "focused_skipped": 0,
+    "focused_seconds": 3.429677200037986,
+    "property_iterations_separate": 512,
+    "probe_ids": ["IR-P01", "IR-P02", "IR-P03", "IR-P04", "IR-P05", "IR-P06"],
+    "source_and_sidecars_unchanged": true,
+    "git_diff_check_exit": 0,
+    "worktree_note": "Clean immediately after source probes. Later metadata snapshot showed only separate data-review JSON/MD modifications by another assigned role; those are not reviewer writes. Later author corrections are excluded from this initial exact892 review."
+  },
+  "not_run": [
+    "Fresh194-method broad offline regression: coordinator-owned, not rerun by this reviewer",
+    "Actual Windows source/output symlink or junction rejection: creation unavailable, NOTRUN",
+    "POSIX FIFO/device/platform probes: NOTRUN on this Windows host",
+    "Hostile concurrent ancestor replacement: explicitly outside advertised trust boundary",
+    "Full current database/SQL/RLS/auth/roles/Docker/live source-rights/image/scorer acceptance",
+    "Whole-repository secret/private-data scan and publication audit: coordinator-owned",
+    "Independent46-slot data review: separate agent role, not claimed by this reviewer",
+    "RemotePR state/fetch/push/DraftPR/receipt/handoffZIP and HumanOwner acceptance"
+  ],
+  "evidence": ["reviewer_probes.py", "PROBE_RESULTS.json", "FOCUSED_REVIEW_RUN.log", "review_metadata.py", "METADATA_RESULTS.json", "junction_probe.py", "JUNCTION_RESULTS.json"],
+  "tools": {
+    "used": ["CavemanSKILL", "ContextMode ctx_doctor/ctx_index/ctx_search", "PowerShell", "Git readonly", "Python stdlib/unittest/mock", "Win32CreateFileW viactypes", "apply_patch forignoredreviewhelpers/reports only"],
+    "context_mode": "2.2.0 healthchecks passed withD4olddataWARN; no upgrade/config/install. One search call withunsupportedlimit rejected; corrected queries used.",
+    "requested_but_not_used": [],
+    "installed_or_configured": [],
+    "git_write": false,
+    "tracked_or_obsidian_write": false,
+    "production_mutation": false
+  },
+  "next_action": "Author adds bounded-read negative controls and correction on same branch; coordinator supplies exact correctedcommit. Reviewer independently checks source delta, reruns original failure probes under finite bounds and relevant focused controls, then writes a separate followup review without changing this initial report. No readiness, final receipt or merge approval is given."
+}

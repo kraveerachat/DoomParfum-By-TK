@@ -111,3 +111,7 @@ Pending/expired/revoked/unknown permission blocks use, not merely a UI warning.
 
 Constraints and new negative tests: [[Data_Dictionary_Draft]], [[Security_and_Privacy]],
 [[P1_Pilot_Implementation_Plan]]. All SQL/policies/pipeline implementation remains NOT STARTED.
+
+## IMP-ENR-01 verified offline boundary — 2026-11-17
+
+Standalone pinned preview is implemented without reusing ETL token/canonical-expansion helpers: [[IMP_ENR_01_Implementation_Boundary]], [[IMP_ENR_01_Field_Review_Mapping]], [[IMP-ENR-01_Pinned_Scento_Offline_Preview]]. ExactA/B/I scope only; source immutable and claims remain unselected/unmapped/closureUNKNOWN. Sixpins905307bytes/5records/46slots; no source URLs followed or linked/image rights inherited. Scento attribution/license and transformation notice retained. No new SQL field definition, database row, canonical acceptance, normalization,43proposal/44hold/Khamrah/eligibility change, real ranking, app/auth/API/UI, acquisition or Production mutation. Current DB/Docker not probed; old counts are historical.

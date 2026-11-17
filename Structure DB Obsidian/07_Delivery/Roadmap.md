@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - delivery
@@ -332,3 +332,19 @@ Verified main `168715bc9bc5fff968524074257dc106a8a63638` contains Owner-merged P
 Current code remains approved Python/operator/SQL tooling plus fixed-fixture synthetic M1/B1. Real records must never be relabelled as synthetic. Genuine nonadmin initial LOGIN, object/field/use rights and current snapshots precede restricted lookup/count/page/scoring/bytes; no admin fetch/filter or browser identity claim. Fit, confidence and direct evidence remain separate. Unknown is not zero; incomplete is not absent. No new live DB/source/media/runtime proof is inferred from historical tests or diagrams.
 
 All 24 prior receipts, eight migrations, accepted contracts, 43 proposals, 44 holds and Khamrah evidence are protected. PR8 remains OPEN/DRAFT/BLOCKED at `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`; no temporal/replay experiment or speculative fix. No acquisition, image bytes, normalization, hold/eligibility change, API/UI/auth/cache/service-worker/framework implementation, installation/configuration, database operation, cloud, Production mutation or agent merge. [[DPT-PLAN-010_Architecture_Verification]] records actual research/static/independent evidence and future NOT RUN tests separately.
+
+## IMP-ENR-01 exact Owner authority and preimplementation gate — 2026-11-17
+
+Current user-provided master prompt explicitly accepts POST27-ODP-1 **A-PREVIEW-5 / B-PINNED-PREVIEW / I-IMP-ENR-01**, ENR-PINNED-SCENTO-1 revision1, frozen data-note canonical SHA256 `053a7583d33beaa103e4cb94781991504aa6eee4b380fefe7cc1d2095f2c71d5`, packet SHA256 `0ccf48fa57401635a3f1b5898f4547978ebdc408e522cd3cc52138f3f341b18c`, transform `enr-pinned-scento-preview-1` and schema `enr-pinned-scento-preview-schema-1`. Only exact five-record/46-field local unselected preview is authorized. Frozen proposal files remain unchanged; this dated decision supersedes only their earlier A/B/I unanswered state. No separate unseen chat statement, human reviewer identity, other policy/ARC acceptance or new source rights are fabricated.
+
+Merged PR28/29 and actual main81b281 satisfy Planning Gate. Fresh independent `/root/enr_architecture_compatibility` review permits bounded TDD; named `/root/enr_independent_data_review` role was assigned before implementation under the current delegated review instruction. Human/canonical acceptance remains pending. Six source pins/sidecars and25prior receipts/eight migrations verified. Current DB/Docker not probed; no service start. Existing tools only; no install/configuration.
+
+Task/branch/source/tests/results: [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], [[IMP_ENR_01_Preflight.json]], [[IMP_ENR_01_Architecture_Compatibility]]. No runtime PASS or final implementation readiness at this checkpoint. PR8 blocked;43proposals/44holds/Khamrah/rights/eligibility untouched; no API/UI/DB/acquisition/real matching/Production or merge.
+
+## IMP-ENR-01 current delivery checkpoint — 2026-11-17
+
+Exact corrected source 4fdbd29b3f345fcbce3eb08862748672657ef22c: independent implementation finding resolved,249offline methods passed,46data slots match with43DEFER/3UNKNOWNsemantic outcomes. One actual ignored private preview is active; no canonical/DB/rights/hold/eligibility/app activation. See [[IMP-ENR-01_Pinned_Scento_Offline_Preview]], [[IMP_ENR_01_Implementation_Boundary]] and exact review/regression evidence. Draft PR/sole receipt/handoff publication follow as delivery steps; Human Owner alone reviews/merges. A/B/I approved only for boundedpreview; other choices remain proposed.
+
+## Draft PR30 and sole implementation receipt — 2026-11-17
+
+[PR30](https://github.com/kraveerachat/DoomParfum-By-TK/pull/30) OPEN/DRAFT, pre-receipt publication9003d08889785fd7f47e3297abacf8531a5ba1a2, reviewed/tested runtime4fdbd29b3f345fcbce3eb08862748672657ef22c. Source/data agent checks complete; Human/canonical acceptance and merge remain PENDING. Sole immutable receipt [[2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview]], all25old receipts unchanged. [[IMP_ENR_01_File_Manifest.json]] lists exact final paths. Final metadata parity/ZIP delivery proofs live outside the frozen ZIP and in PR description; this checkpoint does not claim future archive verification. No source/rights/hold/eligibility/Production expansion. Human Owner alone merges.

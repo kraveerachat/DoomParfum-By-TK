@@ -4,13 +4,21 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-16
+updated: 2026-11-17
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## IMP-ENR-01 current Owner-approved offline implementation — 2026-11-17
+
+Current verified main/base `81b281acb418af230746bb00fb923e60509e8e92` includes Owner-merged PR26/27/28/29. PR29 merged UTC2026-11-16T18:55:32Z; it is architecture documentation only. Human Owner's current master prompt **explicitly accepts A=A-PREVIEW-5, B=B-PINNED-PREVIEW, I=I-IMP-ENR-01**, exact ENR-PINNED-SCENTO-1 revision1, transform/schema versions and frozen canonical contract/packet hashes. This is new exact scoped approval, not inference from merged plans. All other A–I/ARC choices remain unaccepted proposals.
+
+[[IMP-ENR-01_Pinned_Scento_Offline_Preview]] is IN PROGRESS on `codex/imp-enr-01-offline-preview`. Source six pins905307bytes and CSV1479/160/420 verified locally; those are source counts, not canonical DB counts. Fresh independent compatibility gate permits bounded TDD start, with 16 relationships/12 columns and no blocking architecture conflict. Independent data agent `/root/enr_independent_data_review` assigned before implementation; no human identity invented. See [[IMP_ENR_01_Preflight.json]] and [[IMP_ENR_01_Architecture_Compatibility]].
+
+Exactly five records/46 unselected fields; no live DB, source/asset acquisition, URL/API fetch, canonical/normalization promotion,44-hold release, eligibility, synthetic bridge, real ranking, API/UI/auth, cloud or Production mutation. Eight migrations,25 prior receipts,43 proposals and Khamrah protected. PR8 remains OPEN/DRAFT/BLOCKED84dcc; no experiment. Focused RED/GREEN, regression and both post-implementation reviews remain pending. Earlier contradictory task/PR/approval snapshots below are dated history, not current state.
 
 ## Post-PR28 architecture refinement checkpoint — 2026-11-16
 
@@ -522,3 +530,17 @@ Source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60` independently re-reviewed: fou
 [PR29](https://github.com/kraveerachat/DoomParfum-By-TK/pull/29) is OPEN/DRAFT; base `168715bc9bc5fff968524074257dc106a8a63638`, pre-receipt publication `938d0d1c9af89a1d857fef54ff041a55302a8a65`, independently reviewed source `68488586be1a3e2edf280dd3eb4a3d16dccd5d60`. One planning-readiness receipt: [[2026-11-16_223118_DPT-PLAN-010_Architecture_Planning]]. Old24 receipts/eight migrations/source/contracts remain unchanged. This records planning readiness only, not Owner acceptance or implementation. Final publication HEAD is in the live PR description/external handoff registry; the receipt will not be rewritten.
 
 Exact changed paths: [[Architecture_File_Manifest.json]]. Fresh final metadata verification and candidate ZIP validation follow; ZIP readiness is not claimed in this checkpoint. All new Owner ARC/A–I choices remain PROPOSED; IMP-ENR-01 not started. PR8 blocked;44 holds/rights/eligibility unchanged; no Production mutation.
+
+## Completed agent-side verification — exact corrected source4fdbd29, 2026-11-17
+
+Independent implementation review closed IR-ENR-IMPL-001 by exact-commit retest:55/55methods,512separate property iterations and8separate bounded-read controls; zero open implementation findings. Original unbounded-read defect, initial49test result, behavioralRED55/5failures and correctedGREEN are retained. Parent full offline regression executed249/249(existing194+preview55),0failures/errors/skips,5.488856700016186s; Docker/SQL/DBguard/ETL-SQL-generation/network/DNS calls all0; sixsource/provenance/sidecar fingerprints unchanged. Commands/source bindings: [[IMP_ENR_01_Offline_Regression.json]]. Reviewer counts are separate executions, not extra methods added to249.
+
+Independent data review freshly rebound to4fdbd29:46/46literal/provenance/state/ordering matches; same18negative controls rerun and rejected, not36different controls. No data findings; semantic dossier43DEFER/3UNKNOWN and Human/canonical acceptancePENDING. [[IMP_ENR_01_Independent_Data_Review]] has correct frontmatter after one metadata-only source_of_truth fix; initial448pass/2frontmatter-failure entries (one underlying missingkey) and before/after bytes retained. Data JSON/source/payload unchanged by that header correction.
+
+Actual private local publication completed only after both review gates. One active immutable bundle,33953bytes/hash16d1d1af8a875d342756b4431da0844eef65787d81de130372250d9a0a387cf9,5records/46unique claim identities/3missing,allUNSELECTED/UNMAPPED/reviewed_atnull. Source/provenance/sidecars unchanged; runtime network/DNS/URL/subprocess/shell counters0; lock removed. Payload/localpointer paths and sanitized evidence: [[IMP_ENR_01_Private_Publication.json]]. Raw payload is ignored/private and excluded from new Git/ZIP evidence. No current DB, real ranking or canonical acceptance follows.
+
+Documentation/diff/private-data validation, Draft PR publication, final metadata parity, one implementation receipt and fresh latest handoff verification complete delivery separately. Human Owner alone reviews/merges; no automatic merge or Production mutation.
+
+## Draft PR30 and sole implementation receipt — 2026-11-17
+
+[PR30](https://github.com/kraveerachat/DoomParfum-By-TK/pull/30) OPEN/DRAFT, pre-receipt publication9003d08889785fd7f47e3297abacf8531a5ba1a2, reviewed/tested runtime4fdbd29b3f345fcbce3eb08862748672657ef22c. Source/data agent checks complete; Human/canonical acceptance and merge remain PENDING. Sole immutable receipt [[2026-11-17_040641_IMP-ENR-01_Pinned_Scento_Offline_Preview]], all25old receipts unchanged. [[IMP_ENR_01_File_Manifest.json]] lists exact final paths. Final metadata parity/ZIP delivery proofs live outside the frozen ZIP and in PR description; this checkpoint does not claim future archive verification. No source/rights/hold/eligibility/Production expansion. Human Owner alone merges.

@@ -120,3 +120,7 @@ children for re-review, rather than letting an old parent-binding pointer silent
 
 ## DPT-PLAN-002 rights assessment extension — 2026-11-11 (PROPOSED)
 Track flags per source/field/asset: `discover, automated_access, cache, store, display, redistribute, transform, commercial_use, AI_use, retain, share`, with exact grant/Terms revision, checked date, licence, territory, expiry/revoke/delete obligations. Unknown=>NO-GO for that action. Brand official storefront pages, search previews and reviews do NOT authorize automated copy or image use. Fragrantica ToS effective 2026-01-14 §§5.3/5.7 specifically blocks unauthorized automated extraction and AI/dataset reuse; no adapter. See [[Source_Permission_Matrix_DPT_PLAN_002]]. No changes to existing pinned Scento local licence approval.
+
+## IMP-ENR-01 verified offline boundary — 2026-11-17
+
+Standalone pinned preview is implemented without reusing ETL token/canonical-expansion helpers: [[IMP_ENR_01_Implementation_Boundary]], [[IMP_ENR_01_Field_Review_Mapping]], [[IMP-ENR-01_Pinned_Scento_Offline_Preview]]. ExactA/B/I scope only; source immutable and claims remain unselected/unmapped/closureUNKNOWN. Sixpins905307bytes/5records/46slots; no source URLs followed or linked/image rights inherited. Scento attribution/license and transformation notice retained. No new SQL field definition, database row, canonical acceptance, normalization,43proposal/44hold/Khamrah/eligibility change, real ranking, app/auth/API/UI, acquisition or Production mutation. Current DB/Docker not probed; old counts are historical.
