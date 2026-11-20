@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -978,3 +978,11 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## 2026-11-20 — DPT-GOV-WORKFLOW-001 / S1 — task-to-PR routing governance
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GOV-WORKFLOW-001/S1 | Claude Code (docs/governance) | PR_NOT_CREATED | NA | `AGENTS.md`, `DEVELOPMENT_WORKFLOW.md`, task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, Project_Index | `validate_docs.py`, `git diff --check`, scope and secret scans: see task note | PARTIAL: local checkpoint, publication BLOCKED | S1 checkpoint (reported in session report) |
+
+TOOL DECISION/EXECUTION: native file tools, Git, read-only `gh` queries (visibility, PR list), and the repository's `database/validate_docs.py`. No tool installed or configured. The Owner's `gh` login was not used for any remote write (credential boundary). The run also verified, read-only, that DPT-DOC-RECOVERY-001 commit `987279a98cf1a48ee657f0b9f4f78581063c9e01` is local only, with no remote branch and no PR. Details: [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].

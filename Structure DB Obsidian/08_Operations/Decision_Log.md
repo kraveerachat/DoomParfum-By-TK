@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -396,3 +396,7 @@ Original full planning review416/0 at012859 is preserved in [[Post_PR30_Initial_
 POST30-ODP-1 revision1 is now integrity-frozen after that review, canonical packet SHA256 `e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c`; [[Post_PR30_Packet_Freeze.json]] binds all9normative annexes. Every one of15newdecisions remains PROPOSED/UNANSWERED, not accepted. Framework/provider/version and exact operational/security/source/media contracts remain unselected/gated. No human ACCEPT or runtime operation follows from freeze.
 
 Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is OPEN/DRAFT, base `4f23cbc858dd818b149674342bfa504e78930088`. Initial published source is the reviewed checkpoint above; later metadata-only commits are recorded in the current PR/handoff registry. Agent-side planning review is complete; one immutable readiness receipt and final metadata/archive verification follow actual checks. No future ZIP PASS is claimed here. Historical249methods NOT RERUN, currentDB NOT REVALIDATED,44holds/43proposals/Khamrah/rights/eligibility unchanged; PR8blocked. Human Owner alone answers decisions and merges.
+
+## DPT-GOV-WORKFLOW-001 — proposed governance amendment, 2026-11-20
+
+**PROPOSED, not an Owner decision.** The agent proposes the task-intake classification (A continuation / B new task / C planning amendment / D read-only review), the PR reuse and non-reuse rules, the required session fields and locations, the read-only reviewer exception, the public-repository evidence rules and the credential boundary for remote writes. All are drafted in `AGENTS.md` §2.1/§8.1 and `DEVELOPMENT_WORKFLOW.md` §3.6/§4.3–§4.5/§5.6/§5.7/§6.2.1. They become governance only when the Human Owner merges the Planning PR. The Two-Gate workflow and every existing rule are unchanged. No DPT-GATE-012 item (Q-F, Q-H, BatchA, U01 implementation) is decided. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].

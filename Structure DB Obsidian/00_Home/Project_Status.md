@@ -4,13 +4,21 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## DPT-GOV-WORKFLOW-001 governance amendment — current truth, 2026-11-20
+
+Verified `origin/main` is `183f1d857d83b64819762a2237c908fb95e36cb4`: the Owner merged [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) on 2026-11-17, so the PR31 "OPEN/DRAFT" statements below are dated history. The only open PR is PR8 (OPEN/DRAFT/BLOCKED). The repository is PUBLIC.
+
+[[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] proposes task-intake and PR-routing rules plus mandatory session recording (AGENTS.md §2.1/§8.1; DEVELOPMENT_WORKFLOW.md 1.1.0). State: ACCEPTANCE PENDING on local branch `plan/agent-workflow-pr-routing`, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED (credential boundary). Nothing is in effect until the Owner merges it.
+
+DPT-DOC-RECOVERY-001 (DPT-GATE-012 / U01 history) is local commit `987279a98cf1a48ee657f0b9f4f78581063c9e01` on `docs/dpt-gate-012-security-history`: NOT PUSHED, no PR. DPT-GATE-012 approvals, U01 implementation and runtime tests remain NOT AUTHORIZED.
 
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
