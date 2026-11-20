@@ -31,19 +31,19 @@ implementation_pr: null
 ## 2. Current status (verified 2026-11-20, Asia/Bangkok)
 
 ```text
-LATEST CANDIDATE:        PROPOSED r11 (325441 B, sha256 1fdc33f97737a2c2066f88fc07422d2ed60e68ed9c0621b778e365bd1ce0d9c3)
-LATEST REVIEW:           r11 review — CONDITIONAL, NOT READY (0 HIGH / 2 MEDIUM / 7 LOW open) — ADVISORY ONLY
+LATEST CANDIDATE:        PROPOSED r12 (383873 B, sha256 f475d17c5acdc75949550fc7a48cb4bfa5317c9212ce5d5d190b9e8df00cebc7) — authored 2026-11-20 (S4)
+LATEST COMPLETED REVIEW: r11 review — CONDITIONAL, NOT READY (0 HIGH / 2 MEDIUM / 7 LOW) — ADVISORY ONLY
+r12 INDEPENDENT REVIEW:               PENDING (not commissioned; must be a different model family or a human, on a non-agent machine and account)
 G-IND (independent READY):            NOT SATISFIED (never satisfied for any revision)
 Q-F (review provenance acceptance):   PENDING
 BatchA / Q-H / Planning PR for U01:   NOT GIVEN / NOT AUTHORIZED / NOT CREATED
 BatchB / implementation:              NOT GIVEN / NOT AUTHORIZED
 OP-1 / OP-2 / RE / consumer verifier: UNAVAILABLE (design only; nothing established)
-OPR-1 credential separation:          NOT IMPLEMENTED (observed 2026-11-20)
-ACCEPTANCE SPECIFICATIONS RUN:        0 of 162 (all NOT RUN)
-r12:                                  NOT STARTED
+OPR-1 credential separation:          NOT IMPLEMENTED (re-observed 2026-11-20 S4)
+ACCEPTANCE SPECIFICATIONS RUN:        0 of 166 (r12 inventory; all NOT RUN)
 ```
 
-r11 must not be treated as READY. R11-IR-01 and R11-IR-02 are **OPEN** and are not resolved by anything in this note.
+r11 must not be treated as READY, and r12 is not reviewed. R11-IR-01 to R11-IR-09 are **ADDRESSED IN PROPOSED TEXT (r12)**; none is independently reviewed, resolved in design or runtime verified (§7.1).
 
 ## 3. Historical timeline (summary)
 
@@ -60,6 +60,7 @@ r11 must not be treated as READY. R11-IR-01 and R11-IR-02 are **OPEN** and are n
 | r9 | 2026-11-19 | `f42e8e52-…` | `f4126736-b419-42ab-be4d-412cf2ae0ffa` | CONDITIONAL 0 / 3 / 3 | 115 | 0 |
 | r10 | 2026-11-19 | `f4126736-…` | `84b008e3-b4f4-4728-9b69-6de6b25b4767` | CONDITIONAL 0 / 4 / 6 | 147 | 0 |
 | r11 | 2026-11-20 | `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | `6d422490-cc14-4dba-84e9-361d29ffc278` (advisory) | CONDITIONAL 0 / 2 / 7 | 162 | 0 |
+| r12 | 2026-11-20 | `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` | PENDING (not commissioned) | — | 166 | 0 |
 
 Every review from r7 onward was an AI agent under the same Windows account and harness as the authors, and r8 review → r11 review all used the same model (`claude-opus-5-5`). Reviews are therefore session-independent only. None satisfies G-IND.
 
@@ -206,6 +207,19 @@ Evidence class labels refer to [[DPT-GATE-012_U01_Security_History_and_Recovery_
 10. **Files:** 325441 B `1fdc33f97737a2c2066f88fc07422d2ed60e68ed9c0621b778e365bd1ce0d9c3`; Gate r11 21550 B `fdd037f7b50f075c74452dfb67be0671004f615a765075d4aff20082363093c3`; README r11 22437 B `2354036b13222647e730eff8f7482a0c14083d64589e214390b26fa58a62734e`; r11 review 76768 B `6bdef91eb4f0d3a1b3eeeb6bf292065079d6c230ab5273bff017bdbf2af7cf80`.
 11. **Git/PR:** none for r11; this recovery PR is documentation only. **12. Remaining:** r12 (§10).
 
+### r12 — 2026-11-20
+
+1. **Purpose:** address R11-IR-01…09 as directed by the r11 review §8 and [[DPT-GATE-012_U01_r12_Authoring_Handoff]]; r11 bytes frozen; no unrelated edits.
+2. **Design changes:** readiness currency value (RCV), conveyed with every fresh head from an Owner-held register (RCR), checked by OS tools before any U01 code runs (VPC-0); mandatory notice of revocations and new acceptances; VPC also hashes the interpreter and `ssh-keygen`. Statement byte domain (SB) and exact per-kind byte grammars (SG-<KIND>), matched before signing with trusted tools only (OVC-15); an OP-1 writer for `issued_at` and `statement_id` (OVC-19); pre-signing CJ gate PF-2 on a READY host after bootstrap; verifier rule B33 (`issued_at` bound); envelope provenance rows; fact E12 (OP-1 clock). TT-1 closure (program pin, `ssh-sk-helper`, no system Git config, no network Git in a key-capable principal, session preamble P0, environment baseline, signer subject compared); OVC guard G and strict mode; B31/B32 "unrevoked", B34, B35, complete field classification, V8 before V7; `OP2_READINESS` moved before Γ (single gate order); OPR-2 mandatory for ratification; `REVIEWER_ANCHOR.independence` (`OWNER_SELF`); reviewer toolset TT-R and exact HV derivation HVD; named CL-5/CL-6 negatives; complete change register; source normalisation stated.
+3. **Security architecture:** unchanged trust roots, all DEFINED IN DESIGN and UNAVAILABLE. Two new invariants stated: no revocation path relies only on the revoked code; no signed value (envelope included) comes from an agent record without byte-level validation before signing.
+4. **Findings addressed:** R11-IR-01…09, all as FIX in proposed text (no LOW accepted with reasons). Optional Q-R12 simplifications not adopted (reasons in contract §0.5).
+5. **Independently reviewed:** **NO.** r12 review PENDING.
+6. **Open:** every R11 finding remains open until an independent review disposes of it (§7.1). New residuals disclosed by the author: bootstrap statements have one byte gate; procedural complexity; OP-1 clock dependence; PowerShell 5.1 behaviour of the new OVC forms NEEDS VALIDATION.
+7. **Executed:** author static checks (12 groups, all as stated in README r12 §8: 120 asserted edits; 166 IDs / 34 groups, all r10 and r11 IDs retained, 4 new, 11 changed; 0 undefined references; complete change register; stale-text scan clean; grammar self-test 14/14 positives, 16/16 negatives in a non-.NET engine; removed-line audit). **8. Not executed:** all 166 specs; any OVC, preamble or grammar on Windows PowerShell 5.1.
+9. **Owner decisions:** r12 commissioned by the Owner's assignment of 2026-11-20 through the agent chat channel (reported, provisional; not independently verified). No other decision.
+10. **Files** (outside the repository): contract r12 383873 B `f475d17c5acdc75949550fc7a48cb4bfa5317c9212ce5d5d190b9e8df00cebc7`; Gate r12 21236 B `6f1e639a7ba13939d8ae98218d4defb1fb97fac98958e6ff60a4faf1fa6ce679`; README r12 16067 B `573ac58c670358e40a4ef1959a25ddf47f7c0f35f5fa1824e3995be3ef2d5f97`. Author build and check scripts are preserved privately with their hashes (README r12 §6).
+11. **Git/PR:** r12 bytes are not committed. This sanitized record is on branch `docs/dpt-gate-012-security-history`, for the single U01 documentation Draft PR. **12. Remaining:** independent r12 review; Owner Q-F (§10).
+
 ## 5. Session register
 
 | Session | Role(s) | Model / agent | Date | Evidence |
@@ -219,6 +233,7 @@ Evidence class labels refer to [[DPT-GATE-012_U01_Security_History_and_Recovery_
 | `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | r11 author | Claude Code, `claude-opus-5-5` | 2026-11-20 (Bangkok) | README r11 |
 | `6d422490-cc14-4dba-84e9-361d29ffc278` | r11 reviewer (advisory); DPT-DOC-RECOVERY-001 recorder | Claude Code, `claude-opus-5-5` | 2026-11-20 | r11 review §2; this note |
 | `33a50b45-1ffc-4ed1-bd5e-ce239efff4c9` | DPT-DOC-RECOVERY-001 S2/S3 coordinator; r12 handoff preparer (excluded from r12 authoring and review) | Claude Code, `claude-opus-5-5` | 2026-11-20 | §11, §12 of this note |
+| `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` | r12 author; S4 documentation coordinator (excluded from r12 review) | Claude Code, `claude-opus-5-5` | 2026-11-20 | README r12; §14 of this note |
 
 All sessions above ran on one host and one Windows account with shared harness plugins and hooks. No human or different-model review has occurred.
 
@@ -233,6 +248,7 @@ All sessions above ran on one host and one Windows account with shared harness p
 | r9 | `f4126736-…` | CONDITIONAL | 0 / 3 / 3 | session level | NO | present |
 | r10 | `84b008e3-…` | CONDITIONAL | 0 / 4 / 6 | session level | NO | present |
 | r11 | `6d422490-…` | CONDITIONAL (advisory) | 0 / 2 / 7 | session level | NO | present |
+| r12 | not commissioned | **PENDING** | — | — | — | — |
 
 ## 7. Findings register (latest state)
 
@@ -244,17 +260,34 @@ All sessions above ran on one host and one Windows account with shared harness p
 | R8-IR-01…07 | r8 review | R8-IR-02 PARTIALLY RESOLVED, others RESOLVED IN DESIGN (r9 review) | NO |
 | R9-IR-01…06 | r9 review | 01/02/03 PARTIALLY RESOLVED; 04/05/06 RESOLVED IN DESIGN (r10 review) | NO |
 | R10-IR-01…10 | r10 review | 03/04 PARTIALLY RESOLVED; others RESOLVED IN DESIGN or RESOLVED (r11 review, advisory) | NO |
-| **R11-IR-01, R11-IR-02 (MEDIUM)** | r11 review | **OPEN** | NO |
-| R11-IR-03…R11-IR-09 (LOW) | r11 review | OPEN | NO |
-| Residuals needing Owner acknowledgement | r9–r11 | R7-IR-08 availability; SHA-1 object identity; pre-OP-1 governance channel — NOT ACKNOWLEDGED | — |
+| **R11-IR-01, R11-IR-02 (MEDIUM)** | r11 review | **OPEN** — addressed in r12 proposed text (author), not independently reviewed | NO |
+| R11-IR-03…R11-IR-09 (LOW) | r11 review | OPEN — addressed (FIX) in r12 proposed text (author), not independently reviewed | NO |
+| Residuals needing Owner acknowledgement | r9–r11 | R7-IR-08 availability; SHA-1 object identity; pre-OP-1 governance channel — NOT ACKNOWLEDGED (r12 adds none) | — |
 
 "RESOLVED IN DESIGN" is a reviewer's design judgement, never runtime evidence.
+
+### 7.1 R11 finding status by evidence class (2026-11-20, S4)
+
+| Finding | Sev. | ADDRESSED IN PROPOSED TEXT | INDEPENDENTLY REVIEWED | RESOLVED IN DESIGN | RUNTIME VERIFIED | OPEN |
+|---|---|---|---|---|---|---|
+| R11-IR-01 verifier revocation and supersession | MEDIUM | YES (r12) | NO | NO | NO | **YES** |
+| R11-IR-02 statement bytes, envelope provenance, `issued_at` | MEDIUM | YES (r12) | NO | NO | NO | **YES** |
+| R11-IR-03 TT-1 closure depth | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-04 OVC forms that can pass without comparing | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-05 binding precision | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-06 gate-order contradiction | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-07 Owner options removing custody and independence | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-08 reviewer tooling precision | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-09 evidence-accuracy nits | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+
+A finding leaves OPEN only through an independent review that states its disposition. RUNTIME VERIFIED needs executed acceptance evidence from an authorized implementation.
 
 ## 8. Test and evidence ledger
 
 | Item | Executed by | Result | Evidence available |
 |---|---|---|---|
-| U01 acceptance specifications (r8 75 → r11 162) | nobody | NOT RUN | — |
+| U01 acceptance specifications (r8 75 → r11 162 → r12 166) | nobody | NOT RUN | — |
+| r12 author static document checks (12 groups) and grammar self-test | r12 author `1a47f0e2` | as stated in README r12 §8 (all checks pass as stated; grammar test in Python `re`, not .NET) | README r12; private author tools |
 | U01 validator / verifier | — | DOES NOT EXIST | — |
 | r6 fixture probes (disposable repos, ephemeral keys) | r6 author | author-reported PASS | no logs (MISSING) |
 | r7 primitive probe set (152 commands) | r7 author | 52 PASS / 2 EXECUTED FAIL / 3 HARNESS FAILURE | JSONs MISSING |
@@ -267,7 +300,9 @@ All sessions above ran on one host and one Windows account with shared harness p
 
 | Decision | State |
 |---|---|
-| Any approval of any revision r1–r11 | **NONE VERIFIED** |
+| Any approval of any revision r1–r12 | **NONE VERIFIED** |
+| Commissioning of r12 and its author | Owner assignment of 2026-11-20, **reported** through the agent chat channel (provisional, PG-2); not independently verified |
+| r12 reviewer | NOT DESIGNATED |
 | Q-F (review provenance) | PENDING |
 | BatchA (incl. three acknowledgements) and Q-H rows | NOT GIVEN |
 | BatchB, OP-1 (E1–E10), OP-2 (F1–F12), OP-2-TOOL, Q-A1…Q-A7, Q-B…Q-G, DATA-01, DATA-04, D3/SEQ-01, CONTRACT, TASK-ID | PENDING |
@@ -278,11 +313,11 @@ Recommended defaults inside the contracts (for example OP1-A/OP2-A on a dedicate
 
 ## 10. Blockers and next actions
 
-**Blockers:** G-IND never satisfied; R11-IR-01/02 open; OPR-1 not implemented; OP-1, OP-2, RE and consumer verifier unavailable; no Owner-custody record of expected hashes (OPR-2); W-01 (no U01 Planning PR).
+**Blockers:** G-IND never satisfied; R11-IR-01/02 open (addressed in r12 text only); r12 not reviewed; OPR-1 not implemented; OP-1, OP-2, RE and consumer verifier unavailable; no Owner-custody record of expected hashes (OPR-2); W-01 (no U01 Planning PR); `AGENT_CREDENTIAL_REQUIRED` for publication.
 
 **Next actions (Owner):**
-1. Decide whether to commission r12, scoped to R11-IR-01/02 (mandatory) and R11-IR-03…09, with an r11 → r12 delta register; r11 bytes stay frozen.
-2. Commission the r12 review from a different model family or a human reviewer, on an account and machine agents do not use.
+1. ~~Decide whether to commission r12.~~ Done on 2026-11-20 through the agent channel (reported); r12 authored (S4, §14).
+2. Commission the r12 review from a different model family or a human reviewer, on an account and machine agents do not use, giving the reviewer the r12 hashes (§4 r12 item 10) through a channel other than the agent chat.
 3. Consider OPR-1 (separate, restricted agent GitHub identity), OPR-2 (Owner-custody hash record) and OPR-3 (backups of r9–r11 and reviews outside the agent account).
 4. Review and, if appropriate, merge this documentation-only PR. Merging it approves nothing in §9.
 
@@ -348,3 +383,30 @@ Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFL
 | File | Session | SHA-256 | Kind |
 |---|---|---|---|
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` | S3 | `e1c871388ce06ac0c9d1c26c86a836447ffa47dd38e73a235c40b162705e581e` | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` | S4 | `64fc19c2600c32c432a8dbb0a873d5dacfa9f59a7058d006072d8e80d361b449` (10371 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\`; a separate private-only supplement holds the GitHub security-posture observations and is not published |
+
+## 14. Session 2026-11-20 S4 — r12 authoring, main U01 Draft PR preparation, agent identity check
+
+- **Task / session:** DPT-GATE-012 / U01, S4, Claude Code session `1a47f0e2-6a8c-4c87-806e-141bb1ba7523`, `claude-opus-5-5`. Roles: r12 author and documentation coordinator. Not independent of earlier sessions (same model, host and account); must not review r12.
+- **Intake class:** A (continuation of the same U01 documentation workstream, same branch and same future Draft PR). Owner prompt: DPT-GATE-012 / U01 "main U01 security workstream Draft PR, dedicated agent GitHub publishing, r12 remediation".
+- **Branch / PR:** `docs/dpt-gate-012-security-history`, starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`, 3 ahead of `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (local ref; GitHub `main` read-only confirmed at the same SHA). Remote branch: NOT PUSHED. PR: **NOT CREATED** (no U01 or GOV-WORKFLOW PR exists on GitHub; the only open PR is PR8).
+
+**Work performed**
+1. Verified the repository identity, default branch, `main` SHA, open PRs, local worktrees and branches, read-only on GitHub. No duplicate PR exists.
+2. **Agent identity (Owner Option A):** no dedicated GitHub App or agent identity is provisioned; the only GitHub credential available to the agent account is the Owner's own. Publication status: `AGENT_CREDENTIAL_REQUIRED`. The Owner one-time setup checklist is in the S4 report §4. The repository-protection observations are recorded only in the private supplement.
+3. Re-hashed the r10/r11 inputs (8/8 match before and after authoring).
+4. **Authored r12** (contract, Gate Package, README) in a new folder outside the repository, from the exact r11 bytes, by 120 asserted scripted edits. See §4 r12 and §7.1.
+5. Re-fetched the five public sources S32–S36 (R11-IR-09): S33–S36 reproduce the r11 values after removing the final LF; S32 has changed.
+6. Prepared the main U01 Draft PR body (broader scope; Draft; not READY), stored locally for publication once an agent identity exists.
+
+**Exact files changed (vault):** this note; [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (§10 appended); [[DPT-GATE-012_U01_r12_Authoring_Handoff]] (status appendix only; handoff body unchanged); `08_Operations/Agent_Run_Log.md`; `08_Operations/Change_Log.md`; `08_Operations/Decision_Log.md`; `00_Home/Project_Status.md`; `00_Home/Project_Index.md`; `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` (new).
+
+**Security status:** r11 CONDITIONAL — NOT READY; r12 PROPOSED, review PENDING; R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only (§7.1); 0 of 166 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE.
+
+**Tests:** listed in the S4 report. No U01, runtime or security test was run.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED`; G-IND; Owner setup of the agent identity and `main` protection; OPR-1/2/3.
+
+**Next action:** the Owner completes the S4 report §4 checklist; then a class-A session pushes this branch with the agent identity, opens the single Draft PR from the prepared body, and records its number and URL here. In parallel, the Owner commissions the independent r12 review.
+
+**Checkpoint SHA:** the S4 commit that adds this section (recorded in the S4 report's private copy and by the next session).

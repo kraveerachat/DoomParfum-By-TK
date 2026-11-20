@@ -408,3 +408,11 @@ Recorded by `DPT-DOC-RECOVERY-001`. No decision ID is allocated, and nothing her
 **PROPOSED / PENDING (unchanged):** approval of any revision r1–r11; Q-F; BatchA with acknowledgements of the R7-IR-08 availability, SHA-1 object-identity and pre-OP-1 governance-channel residuals; Q-H rows; Planning PR for U01 (W-01); BatchB; OP-1 (E1–E10), OP-2 (F1–F12), OP-2-TOOL; Q-A1…Q-A7, Q-B…Q-G; DATA-01, DATA-04, D3/SEQ-01, CONTRACT, TASK-ID. Contract recommendations (OP1-A/OP2-A dedicated machine, `sk-ssh-ed25519`, validity windows, MANUAL preparation) and the r11 review's recommendations (narrow r12; different-model or human reviewer; OPR-1/OPR-2/OPR-3) are proposals only.
 
 **Gate state:** latest candidate r11; latest review CONDITIONAL, advisory; G-IND NOT SATISFIED; R11-IR-01 and R11-IR-02 OPEN; r12 NOT STARTED; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]].
+
+## DPT-GATE-012 / U01 decision state — 2026-11-20 S4
+
+No decision ID is allocated, and nothing here is an Owner decision.
+
+- **Owner directions reported through the agent chat channel, not independently verified:** commission r12 and prepare it in a new session; keep one main Draft PR for the U01 documentation workstream; Option A, a dedicated GitHub App or agent identity for publication; keep DPT-GOV-WORKFLOW-001 as a separate PR.
+- **PROPOSED / PENDING (unchanged):** approval of any revision r1–r12; the r12 reviewer; Q-F; BatchA and its acknowledgements; Q-H; BatchB; OP-1 (E1–E12 in r12); OP-2; Q-A1…Q-A8; CONTRACT.
+- **Gate state:** latest candidate r12 (PROPOSED, not reviewed); latest completed review r11, CONDITIONAL and advisory; G-IND NOT SATISFIED; R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §7.1.

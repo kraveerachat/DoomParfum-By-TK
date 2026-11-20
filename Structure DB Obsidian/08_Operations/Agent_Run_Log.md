@@ -1013,3 +1013,11 @@ Starting SHA `987279a98cf1a48ee657f0b9f4f78581063c9e01`. No push, PR, signing, k
 ### 2026-11-20 — DPT-GATE-012 (DPT-DOC-RECOVERY-001) / S3 — publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
 
 Claude Code `33a50b45` (docs coordinator; not independent). Class A. Starting SHA `3c97dca83abe508dc070d64bf3e71d10847293d0`. The Owner directed agent-managed publication, but the only credential is the Owner's own broad-scope login, which the standing instruction forbids for agent use. No push or PR. First execution report written. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §12).
+
+### 2026-11-20 — DPT-GATE-012 / U01 / S4 — r12 authored; main U01 Draft PR prepared; publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 / U01 / S4 | Claude Code `1a47f0e2` (r12 author and docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index (§10), r12 handoff (status appendix), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, Project_Index, S4 report | 8/8 input hashes match before and after; r12 static checks as in README r12 §8; `validate_docs.py` per the S4 report; 0 of 166 specs run | r12 PROPOSED (review PENDING); PR not created | S4 commit (recorded in the S4 report private copy) |
+
+Class A. Starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only. The r12 bytes stay outside the repository.

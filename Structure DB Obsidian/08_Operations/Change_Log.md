@@ -786,3 +786,7 @@ No code, test, migration, database, evidence JSON, receipt, contract or review f
 ## 2026-11-20 — DPT-GATE-012 / S2 — r12 authoring handoff prepared
 
 Added [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: a sanitized brief for a future r12 that targets R11-IR-01/02 (mandatory) and R11-IR-03…09 (fix or accept with reasons), keeps r11 frozen, and requires a different-model or human reviewer on a non-agent machine and account. Appended an S2 session to [[DPT-GATE-012_U01_Security_Gate]] and an input re-verification (8/8 hashes match) to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. r12 NOT STARTED; no Owner decision; no security status changed. LOCAL_COMMITTED / NOT_PUSHED / PR_NOT_CREATED.
+
+## 2026-11-20 — DPT-GATE-012 / U01 / S4 — r12 recorded
+
+Recorded the r12 revision (authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §3 timeline, §4 r12 record, §5–§9 registers, §7.1 finding-status matrix, §10 blockers, §13 report index, §14 S4 session), appended §10 to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] and a status appendix to [[DPT-GATE-012_U01_r12_Authoring_Handoff]], added the S4 execution report under `08_Operations/Reports/DPT-GATE-012-U01/`, and updated `00_Home/Project_Status.md` and `00_Home/Project_Index.md`. No code, test, database, evidence JSON, receipt, contract or review file is committed.

@@ -141,3 +141,11 @@ Merging documentation never advances any state below DOCUMENTATION_MERGED.
 ## 13. Publication omissions
 
 Not included here, deliberately: the raw review and contract text, attack walk-throughs, host and account facts, credential details, and local paths. The exact correction wording is available to the r12 author in the r11 review (hash above).
+
+## 14. Status appendix, 2026-11-20 S4 (the handoff body above is unchanged)
+
+- The Owner's assignment of 2026-11-20 commissioned r12 through the agent channel (reported; provisional, PG-2) and directed a new session to prepare it.
+- **r12 authored** by Claude Code session `1a47f0e2-6a8c-4c87-806e-141bb1ba7523`. That session is none of the excluded sessions in §1 and §10, but it shares the model, host and account. It must not review r12.
+- Inputs re-hashed before and after authoring: 8/8 match §2.
+- r12 addresses R11-IR-01 and R11-IR-02 and fixes R11-IR-03…09 in proposed text. The r11 → r12 delta register, the spec inventory (166 IDs, 34 groups, every r10 and r11 ID retained, 4 new, 11 changed) and the static checks are in README r12 §8. Every acceptance row stays NOT RUN.
+- Remaining from §10–§12: the independent r12 review, Q-F, and every Owner decision listed in §11. Record: [[DPT-GATE-012_U01_Security_Gate]] §4 r12 and §14.

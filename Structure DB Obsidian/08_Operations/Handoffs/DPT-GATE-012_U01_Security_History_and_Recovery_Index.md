@@ -146,3 +146,18 @@ The repository is public. The following were deliberately **not** committed:
 ## 9. Re-verification, 2026-11-20 S2
 
 Claude Code session `33a50b45` re-hashed inventory rows 1–8 (r11 review, contract r11, Gate Package r11, README r11, r10 review, contract r10, Gate Package r10, README r10) with `sha256sum` and `stat`. **8/8 match** the recorded bytes and SHA-256. No new MISSING or HASH_MISMATCH result. Rows 9–34 were not re-hashed in this session. No r12 artifact exists. Next step: [[DPT-GATE-012_U01_r12_Authoring_Handoff]].
+
+## 10. r12 artifacts, 2026-11-20 S4
+
+Claude Code session `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` (r12 author) re-hashed inventory rows 1–8 with `sha256sum` before and after authoring: **8/8 match** both times. It then created the r12 set. Locations are relative to the Owner's download folder (§7).
+
+| # | Artifact | Location | Bytes | SHA-256 | Class |
+|---|---|---|---:|---|---|
+| R12-1 | Contract r12 (PROPOSED; not reviewed) | `DPT-GATE-012-U01-r12/` | 383873 | `f475d17c5acdc75949550fc7a48cb4bfa5317c9212ce5d5d190b9e8df00cebc7` | AUTHOR_OUTPUT (same session wrote and hashed it) |
+| R12-2 | Gate Package r12 | `DPT-GATE-012-U01-r12/` | 21236 | `6f1e639a7ba13939d8ae98218d4defb1fb97fac98958e6ff60a4faf1fa6ce679` | AUTHOR_OUTPUT |
+| R12-3 | README r12 | `DPT-GATE-012-U01-r12/` | 16067 | `573ac58c670358e40a4ef1959a25ddf47f7c0f35f5fa1824e3995be3ef2d5f97` | AUTHOR_OUTPUT |
+| R12-4 | Author build and check scripts, edit log, check results (14 files) | `DPT-GATE-012-U01/r12-author-tools/` | — | listed in README r12 §6 | AUTHOR_TOOLING (never U01 code) |
+
+- The r12 bytes are not committed; only this sanitized record is (§7).
+- These hashes travel through the agent channel. The reviewer must obtain the expected values through a channel other than the agent chat, ideally the OCD (OPR-2).
+- No r12 review exists. Continuation rules (§8) apply unchanged: r13 or a reconciled r12 review is added to this branch and its single Draft PR.
