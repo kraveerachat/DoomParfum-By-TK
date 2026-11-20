@@ -416,3 +416,14 @@ No decision ID is allocated, and nothing here is an Owner decision.
 - **Owner directions reported through the agent chat channel, not independently verified:** commission r12 and prepare it in a new session; keep one main Draft PR for the U01 documentation workstream; Option A, a dedicated GitHub App or agent identity for publication; keep DPT-GOV-WORKFLOW-001 as a separate PR.
 - **PROPOSED / PENDING (unchanged):** approval of any revision r1–r12; the r12 reviewer; Q-F; BatchA and its acknowledgements; Q-H; BatchB; OP-1 (E1–E12 in r12); OP-2; Q-A1…Q-A8; CONTRACT.
 - **Gate state:** latest candidate r12 (PROPOSED, not reviewed); latest completed review r11, CONDITIONAL and advisory; G-IND NOT SATISFIED; R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §7.1.
+
+## DPT-GATE-012 / U01 — Owner publication decision — 2026-11-21 S7
+
+Owner decisions given in the agent chat on 2026-11-21 (the channel is not independently authenticated):
+
+- **Hybrid GitHub workflow.** Agents use a dedicated, restricted GitHub identity when one is available. The Owner's own login may be used only through explicit, case-by-case exceptions limited by repository, branches, operations, duration and prohibitions. An exception is never permanent.
+- **One-time publication exception (used in S7).** Owner login, repository `kraveerachat/DoomParfum-By-TK`, branches `docs/dpt-gate-012-security-history` and `plan/agent-workflow-pr-routing` only. Allowed: push both branches; one Draft PR each to `main` (results: [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), [#33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)); documentation checkpoints to the same branches; verification. Prohibited: direct push to `main`, merge, auto-merge, force-push, branch deletion, settings, ruleset or credential changes, production or security-gate operations, unrelated writes. It expires when both PRs and checkpoints are complete, and it does not authorize future sessions or identities.
+- **Proceed despite the missing "Restrict updates" rule** (explicit Owner confirmation). The rule is recorded as an **OPEN governance/security configuration item**, to be resolved before granting any write-capable agent identity and before the final merge. Owner-only merge enforcement is not complete.
+- **Residual risk accepted by the Owner:** an administrative Owner credential was used, with its limits enforced by agent procedure rather than technically. The PRs are Owner-authored, which is not security attestation (PG-1). No independent trust root is established.
+
+Unchanged: r12 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §16.

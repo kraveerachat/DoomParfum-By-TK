@@ -41,6 +41,8 @@ BatchB / implementation:              NOT GIVEN / NOT AUTHORIZED
 OP-1 / OP-2 / RE / consumer verifier: UNAVAILABLE (design only; nothing established)
 OPR-1 credential separation:          NOT IMPLEMENTED (re-observed 2026-11-20 S4)
 ACCEPTANCE SPECIFICATIONS RUN:        0 of 166 (r12 inventory; all NOT RUN)
+DOCUMENTATION DRAFT PR:               #32 OPEN, Draft (2026-11-21, S7); a documentation PR, not the U01 Planning PR
+OWNER-ONLY MERGE ENFORCEMENT:         OPEN ("Restrict updates" not configured; see §16)
 ```
 
 r11 must not be treated as READY, and r12 is not reviewed. R11-IR-01 to R11-IR-09 are **ADDRESSED IN PROPOSED TEXT (r12)**; none is independently reviewed, resolved in design or runtime verified (§7.1).
@@ -385,6 +387,7 @@ Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFL
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` | S3 | `e1c871388ce06ac0c9d1c26c86a836447ffa47dd38e73a235c40b162705e581e` | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` |
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` | S4 | `64fc19c2600c32c432a8dbb0a873d5dacfa9f59a7058d006072d8e80d361b449` (10371 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\`; a separate private-only supplement holds the GitHub security-posture observations and is not published |
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S5_Verification_Report.md` | S5 | `979411390f5e3a7dec2242878491426a4a8d378a1fde50b93c3128a635b3116c` (7723 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` (parity verified); a separate private-only S5 supplement is not published |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-21_DPT-GATE-012-U01_S7_Publication_Report.md` | S7 | `71c6f64cccb5096ec82bceff622539ebdc9cb4aaeccc44b3a744465e9f2d166b` (6253 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` (parity verified) |
 
 ## 14. Session 2026-11-20 S4 — r12 authoring, main U01 Draft PR preparation, agent identity check
 
@@ -445,3 +448,32 @@ Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFL
 **Report:** [[2026-11-20_DPT-GATE-012-U01_S5_Verification_Report]] (§13).
 
 **Checkpoint SHA:** the S5 commit that adds this section (recorded by the next session).
+
+## 16. Session 2026-11-21 S7 — Draft PR publication (PR #32)
+
+- **Task / session:** DPT-GATE-012 / U01, S7, Claude Code session `8ee88547-2155-474e-a223-97e0c30994c5`, `claude-opus-5-5`. Role: documentation coordinator and publisher. Not independent; must not review r12.
+- **Intake class:** A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9` (the S5 checkpoint, confirmed as §15's commit), 0 behind `main` `183f1d857d83b64819762a2237c908fb95e36cb4`. Between S5 and S7 there were two read-only pre-checks; publication was blocked by missing protection, and nothing was committed.
+- **Owner decision used:** a Hybrid GitHub workflow plus a **one-time publication exception** using the Owner's login, limited to this branch and `plan/agent-workflow-pr-routing` (push; one Draft PR each; documentation checkpoints; verification). The Owner explicitly confirmed proceeding although "Restrict updates" is missing. Scope, prohibitions and residual risk: S7 report §2 and the Decision Log. Not a standing authorization.
+
+**Publication (verified on GitHub)**
+
+| Field | Value |
+|---|---|
+| PR | [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), "docs(security): DPT-GATE-012 U01 security history and r12 continuation" |
+| State | OPEN, **Draft**, base `main`, auto-merge none, merge BLOCKED (review required) |
+| Head at creation | `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9` |
+| Created | 2026-11-20T18:15:40Z (2026-11-21 01:15:40 Asia/Bangkok) |
+| Author | the Owner account (one-time exception; not Owner security attestation, PG-1) |
+| Companion | governance Draft PR [#33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (DPT-GOV-WORKFLOW-001), separate |
+
+**Protection on `main`:** PR with 1 approval, stale-approval dismissal, force-push block and deletion restriction are in effect; no agent bypass of the PR rule; auto-merge disabled. **OPEN configuration item:** "Restrict updates" (Owner-only merge enforcement) is not configured. Resolve it before granting any write-capable agent identity and before the final merge. Owner-only merge enforcement is NOT complete.
+
+**Tests:** see the S7 report §5. `database/validate_docs.py` on this checkpoint: 54 errors (52 with `--task IMP-P1-02`), the same error set as the starting HEAD, 0 new. **Not executed:** U01 acceptance specifications (0 of 166), runtime or security tests, independent review.
+
+**Status:** unchanged. r12 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED.
+
+**Next action:** the Owner commissions the independent r12 review (S7 report §7). Its result, and any r13, are recorded on this branch and PR #32.
+
+**Report:** [[2026-11-21_DPT-GATE-012-U01_S7_Publication_Report]] (§13).
+
+**Checkpoint SHA:** the S7 commit that adds this section. It is pushed to `origin/docs/dpt-gate-012-security-history` and appears in PR #32's commit list.

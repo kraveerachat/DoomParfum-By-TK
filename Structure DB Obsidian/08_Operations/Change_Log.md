@@ -790,3 +790,7 @@ Added [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: a sanitized brief for a future
 ## 2026-11-20 — DPT-GATE-012 / U01 / S4 — r12 recorded
 
 Recorded the r12 revision (authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §3 timeline, §4 r12 record, §5–§9 registers, §7.1 finding-status matrix, §10 blockers, §13 report index, §14 S4 session), appended §10 to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] and a status appendix to [[DPT-GATE-012_U01_r12_Authoring_Handoff]], added the S4 execution report under `08_Operations/Reports/DPT-GATE-012-U01/`, and updated `00_Home/Project_Status.md` and `00_Home/Project_Index.md`. No code, test, database, evidence JSON, receipt, contract or review file is committed.
+
+## 2026-11-21 — DPT-GATE-012 / U01 / S7 — Draft PR #32 published
+
+Pushed `docs/dpt-gate-012-security-history` (head `3c50d0e`) and opened the single U01 documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) to `main`, under a one-time Owner-login publication exception. Recorded the publication in [[DPT-GATE-012_U01_Security_Gate]] §2, §13 and §16, the Decision Log, Project_Status, and [[2026-11-21_DPT-GATE-012-U01_S7_Publication_Report]] (with an identical private copy). r12 and all security statuses are unchanged. Open configuration item: "Restrict updates" is not configured.

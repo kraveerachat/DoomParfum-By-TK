@@ -1029,3 +1029,11 @@ Class A. Starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`. No push, PR, s
 | 2026-11-20 | DPT-GATE-012 / U01 / S5 | Claude Code `8ee88547` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note (§13 row, §15), Agent_Run_Log, S5 report | r11/r12 re-hash 7/7 match; r12 author checker reproduced; report parity verified; `git diff --check` clean | Verified; no push or PR (no agent identity) | the S5 commit (recorded by the next session) |
 
 Class A. Starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`. r12 not re-authored or changed. S2/S3/S4 checkpoint SHAs reconciled in [[DPT-GATE-012_U01_Security_Gate]] §15. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only.
+
+### 2026-11-21 — DPT-GATE-012 / U01 / S7 — Draft PR #32 published (one-time Owner-login exception)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-21 | DPT-GATE-012 / U01 / S7 | Claude Code `8ee88547` (docs coordinator and publisher; not independent) | NA (documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32)) | NA | U01 task note (§2, §13, §16), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S7 report | protection on `main` verified read-only; PR #32 OPEN/Draft verified; diff and sensitive checks clean; validate_docs baseline unchanged | Published; security status unchanged | the S7 commit (pushed to the PR branch) |
+
+Class A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9`. Branch pushed without force; no push to `main`, merge, auto-merge, settings or ruleset change; no review, runtime test or U01 code. Open item: "Restrict updates" not configured. See [[DPT-GATE-012_U01_Security_Gate]] §16.
