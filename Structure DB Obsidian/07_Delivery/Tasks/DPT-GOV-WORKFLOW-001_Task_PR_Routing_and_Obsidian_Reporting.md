@@ -115,7 +115,8 @@ This task did not modify the recovery branch. The two branches append to the sam
 
 | Session | Purpose | State | Result | Checkpoint SHA | Evidence |
 |---|---|---|---|---|---|
-| S1 | Audit, amend governance, record, local checkpoint | CLOSED | PARTIAL (publication BLOCKED) | this commit | Ledger below |
+| S1 | Audit, amend governance, record, local checkpoint | CLOSED | PARTIAL (publication BLOCKED) | `2903c96537c5eca2c68568b3911a899235b38aea` | Ledger below |
+| S2 | Publication-readiness re-verification, integration simulation, sanitization correction | CLOSED | PARTIAL (publication BLOCKED) | S2 checkpoint commit | Session S2 below |
 
 ### Session S1 — governance amendment and recovery status check
 
@@ -136,7 +137,7 @@ This task did not modify the recovery branch. The two branches append to the sam
 
 **Findings:** see the gap analysis. The pre-existing documentation-check baseline is recorded below.
 
-**Security / privacy:** the repository is PUBLIC. No credentials, tokens, private keys, e-mail addresses, absolute user paths or exploit details are in the change. The Owner's `gh` login (scopes `repo`, `workflow`, `gist`, `read:org`) was used only for read-only queries (visibility, PR list). It was not used to push or to create a PR.
+**Security / privacy:** the repository is PUBLIC. No credentials, tokens, private keys, e-mail addresses, absolute user paths or exploit details are in the change. The Owner's own broad-scope `gh` login was used only for read-only queries (visibility, PR list). Its scope details are omitted under the publication policy of the DPT-GATE-012 recovery index §7, which is on branch `docs/dpt-gate-012-security-history` (corrected in S2). It was not used to push or to create a PR.
 
 **Tests not executed:** independent review; Markdown rendering; external URL checks; any runtime, database or security test (not applicable to a docs-only change).
 
@@ -157,6 +158,10 @@ All checks ran locally on 2026-11-20, on the S1 working tree before commit.
 | Markdown rendering, external URLs | NOT RUN |
 | Independent review | NOT RUN (pending) |
 | Runtime / DB / security tests | NOT APPLICABLE (docs-only) |
+| **S2** `validate_docs.py --task IMP-P1-02` (re-run, not assumed) | **PRE-EXISTING FAILURE.** Exit 1, 52 errors (Agent_Run_Log 14, Change_Log 14, Status 11, Decision_Log 8, Index 5), each target present on `origin/main`; **0 introduced**; secret candidates 0; historical evidence/receipts unchanged |
+| **S2** `git diff --check` | PASS |
+| **S2** Integration simulation `git merge-tree` with `987279a` | CONFLICT ×5 (expected, append-only; resolution recorded in S2) |
+| **S2** Sensitive-fact re-scan of S1 diff | 1 LOW finding (S2-F1), corrected |
 
 ## Issues / Risks / Known Limitations
 
@@ -164,9 +169,33 @@ All checks ran locally on 2026-11-20, on the S1 working tree before commit.
 - Self-authored governance text has had no independent review yet.
 - The append-order conflict with the recovery branch is expected and trivial (see above).
 
+### Session S2 — publication readiness and integration check
+
+- State: CLOSED (local checkpoint)
+- Task ID / Session ID: DPT-GOV-WORKFLOW-001 / S2, Claude Code session `33a50b45` (same session as S1, after the Owner's continuation prompt DPT-GATE-012-U01-CONTINUATION)
+- Agent / Role: Claude Code, documentation and governance agent; author of S1, so this is a self-check and not an independent review
+- Date: 2026-11-20
+- Intake class: A (continuation of this task; same branch, same future PR)
+- Branch / PR: `plan/agent-workflow-pr-routing` / PR_NOT_CREATED (verified on GitHub: no PR for this head)
+- Starting SHA: `2903c96537c5eca2c68568b3911a899235b38aea`
+
+**Work performed:**
+1. Re-fetched origin: `origin/main` is still `183f1d857d83b64819762a2237c908fb95e36cb4`, and the branch is 1 ahead / 0 behind. The remote branch does not exist. The only open PR is PR8. The credential situation is unchanged (only the Owner's own broad-scope login, through the system credential manager), so the branch is still LOCAL_COMMITTED / NOT_PUSHED / PR_NOT_CREATED / OWNER_ACTION_REQUIRED.
+2. Re-checked S1 integrity. The diff is docs-only (8 paths). The only deletions are 7 metadata lines plus 3 renamed §4.4 template fields, and each rename keeps the original field text (`Started:` → `Started (date):`, `Branch:` → `Branch / PR (verified state):`, `Defects discovered / Fixes applied` → `Findings / Defects discovered / Fixes applied`). No accepted rule was removed.
+3. **Correction (finding S2-F1, LOW, self-found):** the S1 security line listed the login's credential scopes. That is not a secret, but the DPT-GATE-012 recovery publication policy treats credential scopes as environment facts to omit. S2 replaces them with "broad-scope". The S1 commit itself is kept; the correction is a new commit, not a rewrite.
+4. Ran an integration simulation with `git merge-tree --write-tree --merge-base=origin/main 987279a 2903c96`. Result: content conflicts in exactly the 5 shared notes (Project_Index, Project_Status, Agent_Run_Log, Change_Log, Decision_Log), one hunk each. Every hunk is an insertion against an insertion at the same position; the frontmatter `updated:` lines merge cleanly. Resolution: keep both sections. Put the recovery (DPT-GATE-012) section first and the DPT-GOV-WORKFLOW-001 section second in the logs and Index (chronological), and in Project_Status keep both sections at the top with the later-merged task's section above. Delete nothing. No merge was committed: per the Owner's instruction, reconciliation happens after the first PR is merged.
+
+**Exact files changed:** this note; `Structure DB Obsidian/08_Operations/Agent_Run_Log.md`.
+
+**Decisions made:** none. **Tests:** see the S2 rows of the ledger. **Not executed:** independent review (still required); Markdown rendering.
+
+**Security / privacy:** S2-F1 corrected. No other environment facts are in the change.
+
+**Remaining / next action:** Owner publication; independent review; after the first of the two PRs merges, a class-A session on the second branch merges the updated `main` (no rebase, no force-push) using the resolution above.
+
 ## Latest Git Checkpoint / SHA
 
-The S1 checkpoint commit on `plan/agent-workflow-pr-routing`. A commit cannot contain its own SHA; the value is reported in the session final report and is to be recorded by the next session.
+S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: the commit that adds this text (a commit cannot contain its own SHA; the next session records it).
 
 ## Handoff / Next Action
 
