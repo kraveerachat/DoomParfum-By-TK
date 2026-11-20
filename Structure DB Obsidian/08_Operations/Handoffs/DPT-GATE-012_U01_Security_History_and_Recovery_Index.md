@@ -142,3 +142,7 @@ The repository is public. The following were deliberately **not** committed:
 4. Do not create the immutable final receipt until the Owner accepts the gate (G-IND, Q-F and the Owner batches). This PR contains no receipt.
 5. Before writing, re-verify `origin/main`, the branch head and every artifact hash; record new MISSING or HASH_MISMATCH results instead of repairing them.
 6. Keep raw security reports out of the repository unless the Owner approves a redacted copy.
+
+## 9. Re-verification, 2026-11-20 S2
+
+Claude Code session `33a50b45` re-hashed inventory rows 1–8 (r11 review, contract r11, Gate Package r11, README r11, r10 review, contract r10, Gate Package r10, README r10) with `sha256sum` and `stat`. **8/8 match** the recorded bytes and SHA-256. No new MISSING or HASH_MISMATCH result. Rows 9–34 were not re-hashed in this session. No r12 artifact exists. Next step: [[DPT-GATE-012_U01_r12_Authoring_Handoff]].

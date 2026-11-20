@@ -782,3 +782,7 @@ Documentation only, branch `docs/dpt-gate-012-security-history` from `183f1d857d
 | Navigation link | `00_Home/Project_Index.md` |
 
 No code, test, migration, database, evidence JSON, receipt, contract or review file changed. The contracts and reviews themselves stay outside the repository (index §7).
+
+## 2026-11-20 — DPT-GATE-012 / S2 — r12 authoring handoff prepared
+
+Added [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: a sanitized brief for a future r12 that targets R11-IR-01/02 (mandatory) and R11-IR-03…09 (fix or accept with reasons), keeps r11 frozen, and requires a different-model or human reviewer on a non-agent machine and account. Appended an S2 session to [[DPT-GATE-012_U01_Security_Gate]] and an input re-verification (8/8 hashes match) to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. r12 NOT STARTED; no Owner decision; no security status changed. LOCAL_COMMITTED / NOT_PUSHED / PR_NOT_CREATED.

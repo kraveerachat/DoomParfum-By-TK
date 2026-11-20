@@ -237,3 +237,4 @@ Historical runtime tests remain historical; current planning static/review/publi
 
 - [[DPT-GATE-012_U01_Security_Gate]] — canonical status, r1–r11 history and registers for the proposed P30-U01 field-review security contract; nothing approved or implemented.
 - [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] — artifact inventory, evidence classes, publication omissions and continuation rules.
+- [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: sanitized r12 authoring brief (inputs, R11-IR-01/02 remediation, LOW dispositions, invariants, review conditions); r12 NOT STARTED.

@@ -1001,3 +1001,11 @@ Session `6d422490-cc14-4dba-84e9-361d29ffc278` (Claude Code, `claude-opus-5-5`),
 Work: read r3–r11 contracts, Gate Packages, READMEs, reviews, requests and handoff in full; hashed 27 present artifacts (12 VERIFIED_ORIGINAL, 15 HASH_VERIFIED_COPY_CUSTODY_UNVERIFIED, 0 mismatch) and recorded 7 MISSING rows; created the task note and recovery index; appended this log, Change_Log and Decision_Log; inserted a current section in Project_Status; added a Project_Index link. Read-only GitHub queries: PR31 MERGED 2026-11-17T14:02:10Z at `183f1d8`; PR8 the only open PR.
 
 Not done: no raw security report committed; no credential, key or token read; no signing; no runtime or security test; no U01 code; no receipt; no merge. Push and PR creation depend on the credential boundary recorded in the PR handoff.
+
+### 2026-11-20 — DPT-GATE-012 / S2 — publication readiness and r12 handoff
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 (DPT-DOC-RECOVERY-001)/S2 | Claude Code `33a50b45` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index, new r12 handoff, Agent_Run_Log, Change_Log, Project_Index | 8/8 input hashes match; `validate_docs.py` re-run; `git diff --check`; merge-tree simulation; sensitive-data scan | PARTIAL: local checkpoint, publication BLOCKED (credential boundary) | S2 checkpoint (recorded next session) |
+
+Starting SHA `987279a98cf1a48ee657f0b9f4f78581063c9e01`. No push, PR, signing, key use, review or U01 test. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §11).

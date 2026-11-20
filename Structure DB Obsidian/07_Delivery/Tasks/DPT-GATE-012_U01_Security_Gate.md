@@ -286,3 +286,29 @@ Recommended defaults inside the contracts (for example OP1-A/OP2-A on a dedicate
 4. Review and, if appropriate, merge this documentation-only PR. Merging it approves nothing in §9.
 
 Future r12/r13 history continues on branch `docs/dpt-gate-012-security-history` and its single PR (see [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] §8). No final receipt exists or may be created while acceptance is pending.
+
+## 11. Session 2026-11-20 S2 — publication readiness and r12 handoff preparation
+
+- **Task / session:** DPT-GATE-012 (documentation workstream; recovery task DPT-DOC-RECOVERY-001) / S2, Claude Code session `33a50b45`, `claude-opus-5-5`. Role: documentation coordinator. This session is not a reviewer or author of any revision, and is not independent of the earlier sessions (same model, host and account).
+- **Intake class:** A (continuation; same branch, same future PR). Owner prompt: DPT-GATE-012-U01-CONTINUATION.
+- **Branch / PR:** `docs/dpt-gate-012-security-history`. PR: **PR_NOT_CREATED** (verified on GitHub: none for this head). Remote branch: **NOT_PUSHED**.
+- **Starting SHA:** `987279a98cf1a48ee657f0b9f4f78581063c9e01` (parent = current `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`).
+
+**Work performed**
+1. Re-verified Git and GitHub: `origin/main` unchanged; the branch is 1 ahead / 0 behind; the 987279a diff is exactly the 7 recorded vault paths and is docs-only; `git diff --check` is clean; the sensitive-data scan of added lines found 0 matches. The only open PR is PR8.
+2. **Credential boundary unchanged:** the only GitHub credential is the Owner's own broad-scope login (system credential manager). No push or PR creation was attempted, and remote write is OWNER_ACTION_REQUIRED.
+3. Re-hashed the r10/r11 inputs (8 files): all match the recorded sizes and SHA-256. No r12 folder exists.
+4. Ran an integration simulation against the DPT-GOV-WORKFLOW-001 branch (`git merge-tree`): one append-only conflict hunk in each of the 5 shared notes, resolvable by keeping both sections. No merge was committed.
+5. Prepared [[DPT-GATE-012_U01_r12_Authoring_Handoff]] (design-level, sanitized), with inputs, mandatory R11-IR-01/02 remediation, LOW dispositions, frozen requirements, invariants, expected specifications, static validation, the NOT RUN list, review conditions, pending Owner decisions and completion criteria.
+
+**Exact files changed:** this note; the new handoff note above; [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (re-verification appendix); `08_Operations/Agent_Run_Log.md`; `08_Operations/Change_Log.md`.
+
+**Security status (unchanged; nothing re-reviewed):** r11 CONDITIONAL — NOT READY; R11-IR-01 and R11-IR-02 MEDIUM OPEN; R11-IR-03…09 LOW OPEN; 0 of 162 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE; r12 NOT STARTED (handoff prepared, not commissioned).
+
+**Tests:** `validate_docs.py` and the static checks are recorded in the Agent_Run_Log S2 entry. No U01 or runtime test was run.
+
+**Blockers:** the credential boundary (publication); G-IND; the R11 MEDIUM findings; OPR-1/2/3 not implemented; no environment that meets OP-1/OP-2.
+
+**Next action:** the Owner publishes this branch as a Draft PR and decides whether to commission the r12 author and the r12 reviewer (handoff §10–§11).
+
+**Checkpoint SHA:** the S2 commit that adds this section (recorded by the next session).
