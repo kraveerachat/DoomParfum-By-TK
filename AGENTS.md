@@ -58,6 +58,21 @@ PRODUCT IDEA / REQUEST
 > **One-time Initial Empty-Repository Bootstrap Exception (2026-11-10):**
 > The initial documentation baseline was pushed directly to the empty remote `main` branch under explicit, one-time Human Owner authorization. All subsequent tasks, planning changes, and implementation work strictly follow the mandatory Two-Gate PR workflow above. Never weaken normal subsequent gates.
 
+### 2.1 New task intake and PR routing
+
+Every new meaningful prompt goes through intake **before** any branch, commit, or PR is created. The full procedure is in `DEVELOPMENT_WORKFLOW.md` §3.6; this summary does not replace it.
+
+1. **Identify** the project, task ID, objective, scope, and the major workstream the request belongs to.
+2. **Inspect** the repository, the approved plans, the Obsidian task status, the relevant branches/worktrees, and the actual GitHub PRs. A local branch, a local commit, or a drafted PR body is **not** evidence that a PR exists.
+3. **Classify** the request as exactly one of:
+   - **A. Continuation of an existing reviewable task**: same task ID, same branch, same open/Draft PR, new session checkpoint.
+   - **B. New reviewable task**: new task ID, canonical task note, new branch from verified latest `main`, new Draft PR.
+   - **C. Scope change requiring a planning amendment**: stop the out-of-scope work and open a docs-only Planning Amendment PR (`DEVELOPMENT_WORKFLOW.md` §3.4).
+   - **D. Read-only review or audit**: no branch or PR. Writes are allowed only where the assignment permits them (§8.1).
+4. **Route** the work accordingly and state the classification in the `TOOL DECISION` or the session record.
+
+A new session, a cleared context, a new review revision number, newly received findings, an in-scope bug fix, or another test run do **not** create a new PR. Work that needs a separate governance gate, a separate implementation phase, or an independently reviewable scope does **not** reuse an existing PR just because it belongs to the same initiative. Never create a duplicate PR for the same reviewable task, and never combine unrelated tasks in one PR.
+
 ## 3. **Mandatory tool transparency for every user task**
 
 **Always identify what tool(s), skills, MCP servers, CLI programs, and external repositories will be used.** This applies equally to ordinary-language instructions and explicit `/slash`, `$skill`, or MCP requests.
@@ -196,6 +211,14 @@ Example: User says `/craft dashboard`, `$impeccable init`, `/clone-website <url>
 - Each PR's review description identifies scope, exact files, tests, risks, linked canonical notes, tool-use changes, and remaining work. Never create a self-approving workflow or use automated merge.
 - Before handing off to a new agent/chat, provide branch, SHA, PR status, approved plan, completed work and evidence, tool availability, installed paths, open blockers, current Obsidian state, and the next exact action.
 - If tool inventory/log notes are not yet present, include their creation in the **initial governance/Obsidian Planning PR**; do not pretend those files already exist.
+
+### 8.1 Session records, read-only reviews, public evidence, and publication
+
+- **Mandatory Obsidian record:** every meaningful session records the fields in `DEVELOPMENT_WORKFLOW.md` §4.4 in the task's **existing** canonical note under `Structure DB Obsidian/07_Delivery/Tasks/`, plus the operational logs that apply (§4.5 there). Do not create a second canonical note for the same task, and do not create notes for trivial commands or ordinary chat. A task is not complete while its canonical documentation is stale.
+- **Read-only independent reviews:** a reviewer whose assignment forbids modifying the project does not write to the repository or the vault. The reviewer delivers the report separately, with its hash, revision, findings, verification status, and provenance limits, and marks Obsidian synchronization as pending. A separately authorized documentation session reconciles the report later and never edits or overwrites it. A review report is never security approval or gate approval; only a verified Owner decision is.
+- **Public repository:** check repository visibility before committing evidence. In a public repository, never commit secrets, private keys, tokens, credentials, sensitive system paths, or exploit details that should stay confidential. For sensitive material, commit only a sanitized summary with its hash and provenance, record whether the original is retained privately, and keep the raw evidence outside the repository. Matching hashes do not prove independent custody. Do not silently delete or rewrite existing records.
+- **Dual execution report:** every meaningful session also produces one Markdown execution report. A private copy goes in the Owner's `Downloads\<TOPIC_ID>\Responses\` folder, and a public-safe or sanitized copy goes in `Structure DB Obsidian/08_Operations/Reports/<TOPIC_ID>/`, indexed from the canonical task note (`DEVELOPMENT_WORKFLOW.md` §4.7). The report is not the task note, the project status or the receipt.
+- **Publication and credentials:** within an approved task the agent, not the Owner, creates the branch, commits, pushes, and opens or updates the Draft PR; the Owner reviews and merges. Push and create or update PRs only with a credential the Owner has authorized for agent use and that is appropriately scoped: the agent publishing identity in `DEVELOPMENT_WORKFLOW.md` §5.6. Having a credential available in the environment is not authorization. If publication is blocked, keep the local commit, record the exact blocker, and report `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`, plus `AGENT_CREDENTIAL_REQUIRED` when the agent identity is missing. A local commit is never reported as a PR.
 
 ## 9. Default recommendation map
 

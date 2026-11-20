@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: index
 status: draft
 owner: project
-updated: 2026-11-16
+updated: 2026-11-20
 tags:
   - doomparfum
   - moc
@@ -232,3 +232,7 @@ Owner-merged PR30/main `4f23cbc858dd818b149674342bfa504e78930088`; [[DPT-PLAN-01
 - [[Post_PR30_Owner_Decision_Packet]] — POST30-ODP-1,15PROPOSED/UNANSWERED decisions; no implementation authority.
 
 Historical runtime tests remain historical; current planning static/review/publication evidence follows actual checkpoints. No source/asset/DB/Production change or agent merge.
+
+## Governance — task intake and PR routing
+
+- [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]]: proposed task-intake classification, PR routing, mandatory session recording, read-only review exception and publication rules. ACCEPTANCE PENDING; not merged.

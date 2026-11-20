@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -768,3 +768,15 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## 2026-11-20 — DPT-GOV-WORKFLOW-001 — task intake, PR routing and session-recording rules (proposed)
+
+Docs-only governance amendment on `plan/agent-workflow-pr-routing` from `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`. `AGENTS.md` gains §2.1 (intake/routing summary) and §8.1 (session records, read-only reviews, public evidence, publication). `DEVELOPMENT_WORKFLOW.md` 1.1.0 gains §3.6 (intake classes A–D and routing), §5.6 (checkpoint publication and credential boundary), §5.7 (public-repository evidence) and §6.2.1 (read-only review exception), and extends §4.3–§4.5 (activity coverage, session fields, record locations). No existing rule was removed. The changes take effect only after the Owner merges them. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+### 2026-11-20 — DPT-GOV-WORKFLOW-001 / S3 — dual execution reports and agent-managed publication (proposed)
+
+Same branch and PR scope. `DEVELOPMENT_WORKFLOW.md` gains §4.7 (each meaningful session keeps one execution report as a private Downloads copy and a vault copy under `08_Operations/Reports/<TOPIC_ID>/`; SHA-256 parity for public-safe reports, sanitized copies for sensitive ones, never overwritten, indexed from the task note). §5.6 now states the agent/Owner responsibility split and the agent publishing identity requirements, and reports `AGENT_CREDENTIAL_REQUIRED` when that identity is missing. §4.4, §4.5 and the §1 tree reference the new report location. `AGENTS.md` §8.1 and the vault README tree are updated to match. Additive; no accepted rule removed. Still LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+## 2026-11-21 — DPT-GOV-WORKFLOW-001 / S4 — Draft Planning PR33 published
+
+Pushed `plan/agent-workflow-pr-routing` (head `f5f2597`) and opened Draft Planning [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) to `main` under a one-time Owner-login exception, separate from the U01 documentation Draft [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32). Recorded it in [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]], Project_Status, the Decision Log and [[2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report]] (with an identical private copy). No governance text changed.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -396,3 +396,21 @@ Original full planning review416/0 at012859 is preserved in [[Post_PR30_Initial_
 POST30-ODP-1 revision1 is now integrity-frozen after that review, canonical packet SHA256 `e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c`; [[Post_PR30_Packet_Freeze.json]] binds all9normative annexes. Every one of15newdecisions remains PROPOSED/UNANSWERED, not accepted. Framework/provider/version and exact operational/security/source/media contracts remain unselected/gated. No human ACCEPT or runtime operation follows from freeze.
 
 Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is OPEN/DRAFT, base `4f23cbc858dd818b149674342bfa504e78930088`. Initial published source is the reviewed checkpoint above; later metadata-only commits are recorded in the current PR/handoff registry. Agent-side planning review is complete; one immutable readiness receipt and final metadata/archive verification follow actual checks. No future ZIP PASS is claimed here. Historical249methods NOT RERUN, currentDB NOT REVALIDATED,44holds/43proposals/Khamrah/rights/eligibility unchanged; PR8blocked. Human Owner alone answers decisions and merges.
+
+## DPT-GOV-WORKFLOW-001 — proposed governance amendment, 2026-11-20
+
+**PROPOSED, not an Owner decision.** The agent proposes the task-intake classification (A continuation / B new task / C planning amendment / D read-only review), the PR reuse and non-reuse rules, the required session fields and locations, the read-only reviewer exception, the public-repository evidence rules and the credential boundary for remote writes. All are drafted in `AGENTS.md` §2.1/§8.1 and `DEVELOPMENT_WORKFLOW.md` §3.6/§4.3–§4.5/§5.6/§5.7/§6.2.1. They become governance only when the Human Owner merges the Planning PR. The Two-Gate workflow and every existing rule are unchanged. No DPT-GATE-012 item (Q-F, Q-H, BatchA, U01 implementation) is decided. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+### DPT-GOV-WORKFLOW-001 — S3 addition, 2026-11-20
+
+**Owner directive received in the session; proposed governance text, not yet in effect.** The Owner directed, in the 2026-11-20 S3 session prompt, that agents publish their own task branches and Draft PRs and that every meaningful session keep a dual Markdown execution report. The agent drafted these as `DEVELOPMENT_WORKFLOW.md` §4.7 (dual execution reports) and §5.6 (responsibility split, agent publishing identity, `AGENT_CREDENTIAL_REQUIRED`), with summaries in `AGENTS.md` §8.1. The rules take effect when the Owner merges this Planning PR. Still open, for the Owner: which agent publishing identity to provision (GitHub App or dedicated machine user) and the repository rules on `main`. Nothing about DPT-GATE-012 is decided. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+## DPT-GOV-WORKFLOW-001 — Owner GitHub publishing policy — 2026-11-21 S4
+
+Owner decisions given in the agent chat on 2026-11-21 (the channel is not independently authenticated):
+
+- **Hybrid GitHub workflow.** The default is a dedicated, appropriately restricted agent GitHub identity whenever one is available. As an exception, the Owner may authorize specific operations through the Owner's own login, case by case. Each exception is limited by repository, branches, allowed operations, duration or session, and prohibited operations, and it is never permanent.
+- **First exception (used in S4 here and in DPT-GATE-012 / U01 S7):** Owner login; this branch and `docs/dpt-gate-012-security-history`; push, one Draft PR each to `main` ([PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33), [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32)), documentation checkpoints, verification. Prohibited: push to `main`, merge, auto-merge, force-push, branch deletion, settings, ruleset or credential changes, production or security-gate operations, unrelated writes. It expires when both PRs and checkpoints are complete.
+- **Proceed despite the missing "Restrict updates" rule** (explicit Owner confirmation). It is an **OPEN configuration item**: resolve it before granting any write-capable agent identity and before the final merge.
+- **Residual risk:** an administrative Owner credential was used, with its limits enforced by agent procedure rather than technically. Owner-account authorship is not security attestation.
+- **Effect on this PR:** DW §5.6 already treats Owner-run publication as an exception. Explicit Hybrid wording is an Owner review point; it is not changed here.
