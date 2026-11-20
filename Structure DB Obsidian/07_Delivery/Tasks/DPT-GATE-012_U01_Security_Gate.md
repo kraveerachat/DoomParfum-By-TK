@@ -218,6 +218,7 @@ Evidence class labels refer to [[DPT-GATE-012_U01_Security_History_and_Recovery_
 | `84b008e3-b4f4-4728-9b69-6de6b25b4767` | r10 reviewer (created by `/clear` after r10 author) | Claude Code, `claude-opus-5-5` | 2026-11-20 (Bangkok) | r10 review §2 |
 | `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | r11 author | Claude Code, `claude-opus-5-5` | 2026-11-20 (Bangkok) | README r11 |
 | `6d422490-cc14-4dba-84e9-361d29ffc278` | r11 reviewer (advisory); DPT-DOC-RECOVERY-001 recorder | Claude Code, `claude-opus-5-5` | 2026-11-20 | r11 review §2; this note |
+| `33a50b45-1ffc-4ed1-bd5e-ce239efff4c9` | DPT-DOC-RECOVERY-001 S2/S3 coordinator; r12 handoff preparer (excluded from r12 authoring and review) | Claude Code, `claude-opus-5-5` | 2026-11-20 | §11, §12 of this note |
 
 All sessions above ran on one host and one Windows account with shared harness plugins and hooks. No human or different-model review has occurred.
 
@@ -312,3 +313,38 @@ Future r12/r13 history continues on branch `docs/dpt-gate-012-security-history` 
 **Next action:** the Owner publishes this branch as a Draft PR and decides whether to commission the r12 author and the r12 reviewer (handoff §10–§11).
 
 **Checkpoint SHA:** the S2 commit that adds this section (recorded by the next session).
+
+## 12. Session 2026-11-20 S3 — agent-managed publication attempt (blocked) and first execution report
+
+- **Task ID / Session ID:** DPT-DOC-RECOVERY-001 (DPT-GATE-012 documentation) / S3, Claude Code session `33a50b45`.
+- **Agent / Role:** documentation coordinator; same session as S2, so not independent.
+- **Intake class:** A (continuation; same branch and the same PR once it exists).
+- **Applicable plan:** recovery scope as recorded in §1; the Owner directive of 2026-11-20 on agent-managed publication.
+- **Branch / PR (verified state):** `docs/dpt-gate-012-security-history`, starting SHA `3c97dca83abe508dc070d64bf3e71d10847293d0`, 2 ahead / 0 behind `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`; remote branch absent; no PR.
+
+**Work performed**
+1. Re-verified the branch, the worktree (clean) and the GitHub state. The only open PR is PR8, and no PR exists for this branch.
+2. **Publication not attempted.** The Owner directed that agents push and open Draft PRs with an appropriately authorized agent identity. The only GitHub credential available is still the Owner's own broad-scope login. The Owner's standing instruction for this workstream forbids using it from an agent session, and this directive does not revoke that. The status is therefore `AGENT_CREDENTIAL_REQUIRED`. The prerequisite (a dedicated, repository-scoped agent identity that cannot update `main`) is drafted in the DPT-GOV-WORKFLOW-001 Planning PR, `DEVELOPMENT_WORKFLOW.md` §5.6 on that branch. It is the same measure as OPR-1 in §10 of this note.
+3. Wrote this workstream's first execution report under the proposed dual-report rule (§13).
+
+**Exact files changed:** this note; `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` (new); `08_Operations/Agent_Run_Log.md`.
+
+**Decisions made:** none. **Findings:** none new.
+
+**Security status (unchanged; nothing re-reviewed):** r11 CONDITIONAL — NOT READY; R11-IR-01 and R11-IR-02 MEDIUM OPEN; R11-IR-03…09 LOW OPEN; 0 of 162 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE; r12 NOT STARTED. The handoff is not recreated.
+
+**Tests:** recorded in the S3 report. **Not executed:** independent review of this documentation; Markdown rendering; any U01 or runtime test.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED` (publication); G-IND; the R11 MEDIUM findings; OPR-1/2/3; OP-1/OP-2.
+
+**Next action:** once an agent publishing identity exists, a class-A session pushes this branch, opens its Draft PR, and records the PR number, URL and SHAs here. Alternatively, the Owner explicitly authorizes a one-time use of the Owner login.
+
+**Checkpoint SHA:** the S3 commit that adds this section (recorded by the next session).
+
+## 13. Reports
+
+Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFLOW-001 `DEVELOPMENT_WORKFLOW.md` §4.7). Applied from S3 onward. Earlier sessions and the raw contract and review files are not republished.
+
+| File | Session | SHA-256 | Kind |
+|---|---|---|---|
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` | S3 | `e1c871388ce06ac0c9d1c26c86a836447ffa47dd38e73a235c40b162705e581e` | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` |

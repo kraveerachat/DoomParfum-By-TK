@@ -1009,3 +1009,7 @@ Not done: no raw security report committed; no credential, key or token read; no
 | 2026-11-20 | DPT-GATE-012 (DPT-DOC-RECOVERY-001)/S2 | Claude Code `33a50b45` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index, new r12 handoff, Agent_Run_Log, Change_Log, Project_Index | 8/8 input hashes match; `validate_docs.py` re-run; `git diff --check`; merge-tree simulation; sensitive-data scan | PARTIAL: local checkpoint, publication BLOCKED (credential boundary) | S2 checkpoint (recorded next session) |
 
 Starting SHA `987279a98cf1a48ee657f0b9f4f78581063c9e01`. No push, PR, signing, key use, review or U01 test. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §11).
+
+### 2026-11-20 — DPT-GATE-012 (DPT-DOC-RECOVERY-001) / S3 — publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+Claude Code `33a50b45` (docs coordinator; not independent). Class A. Starting SHA `3c97dca83abe508dc070d64bf3e71d10847293d0`. The Owner directed agent-managed publication, but the only credential is the Owner's own broad-scope login, which the standing instruction forbids for agent use. No push or PR. First execution report written. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §12).
