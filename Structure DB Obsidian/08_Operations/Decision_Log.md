@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -396,3 +396,15 @@ Original full planning review416/0 at012859 is preserved in [[Post_PR30_Initial_
 POST30-ODP-1 revision1 is now integrity-frozen after that review, canonical packet SHA256 `e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c`; [[Post_PR30_Packet_Freeze.json]] binds all9normative annexes. Every one of15newdecisions remains PROPOSED/UNANSWERED, not accepted. Framework/provider/version and exact operational/security/source/media contracts remain unselected/gated. No human ACCEPT or runtime operation follows from freeze.
 
 Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is OPEN/DRAFT, base `4f23cbc858dd818b149674342bfa504e78930088`. Initial published source is the reviewed checkpoint above; later metadata-only commits are recorded in the current PR/handoff registry. Agent-side planning review is complete; one immutable readiness receipt and final metadata/archive verification follow actual checks. No future ZIP PASS is claimed here. Historical249methods NOT RERUN, currentDB NOT REVALIDATED,44holds/43proposals/Khamrah/rights/eligibility unchanged; PR8blocked. Human Owner alone answers decisions and merges.
+
+## DPT-GATE-012 / U01 decision state, recovered — 2026-11-20
+
+Recorded by `DPT-DOC-RECOVERY-001`. No decision ID is allocated, and nothing here is an Owner decision.
+
+**VERIFIED OWNER EVENTS relevant to U01:** none. The only verified event in this history is the GitHub merge of PR31 (2026-11-17T14:02:10Z at `183f1d857d83b64819762a2237c908fb95e36cb4`), which approved the POST30-ODP-1 planning packet for review only and decided nothing about U01.
+
+**Owner directions reported by agents, not independently verified:** "Owner items 1–5" applied in r3 (reported by the r3 author); the r10 output folder and the instruction to proceed without the frozen r8/r7 copies (reported by the r10 author); the review and recovery assignments for r7–r11. Under r11 PG-1, a chat or GitHub action is not proof of an Owner decision.
+
+**PROPOSED / PENDING (unchanged):** approval of any revision r1–r11; Q-F; BatchA with acknowledgements of the R7-IR-08 availability, SHA-1 object-identity and pre-OP-1 governance-channel residuals; Q-H rows; Planning PR for U01 (W-01); BatchB; OP-1 (E1–E10), OP-2 (F1–F12), OP-2-TOOL; Q-A1…Q-A7, Q-B…Q-G; DATA-01, DATA-04, D3/SEQ-01, CONTRACT, TASK-ID. Contract recommendations (OP1-A/OP2-A dedicated machine, `sk-ssh-ed25519`, validity windows, MANUAL preparation) and the r11 review's recommendations (narrow r12; different-model or human reviewer; OPR-1/OPR-2/OPR-3) are proposals only.
+
+**Gate state:** latest candidate r11; latest review CONDITIONAL, advisory; G-IND NOT SATISFIED; R11-IR-01 and R11-IR-02 OPEN; r12 NOT STARTED; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]].

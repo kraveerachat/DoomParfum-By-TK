@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -768,3 +768,17 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## DPT-DOC-RECOVERY-001 — DPT-GATE-012 security history recovered — 2026-11-20
+
+Documentation only, branch `docs/dpt-gate-012-security-history` from `183f1d857d83b64819762a2237c908fb95e36cb4`.
+
+| Change | Path |
+|---|---|
+| New canonical task record for the U01 security gate: identity, status, r1–r11 timeline (12 items per revision), session, review and finding registers, test/evidence ledger, Owner decisions, blockers | `07_Delivery/Tasks/DPT-GATE-012_U01_Security_Gate.md` |
+| New recovery index and continuity handoff: evidence classes, 34-row artifact inventory with sizes and SHA-256, reviewer limitations, coverage, publication omissions, continuation rules | `08_Operations/Handoffs/DPT-GATE-012_U01_Security_History_and_Recovery_Index.md` |
+| Appended dated sections | `08_Operations/Agent_Run_Log.md`, `08_Operations/Change_Log.md`, `08_Operations/Decision_Log.md` |
+| Inserted current-status section at top; `updated` field | `00_Home/Project_Status.md` |
+| Navigation link | `00_Home/Project_Index.md` |
+
+No code, test, migration, database, evidence JSON, receipt, contract or review file changed. The contracts and reviews themselves stay outside the repository (index §7).

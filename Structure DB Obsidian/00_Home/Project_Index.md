@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: index
 status: draft
 owner: project
-updated: 2026-11-16
+updated: 2026-11-20
 tags:
   - doomparfum
   - moc
@@ -232,3 +232,8 @@ Owner-merged PR30/main `4f23cbc858dd818b149674342bfa504e78930088`; [[DPT-PLAN-01
 - [[Post_PR30_Owner_Decision_Packet]] — POST30-ODP-1,15PROPOSED/UNANSWERED decisions; no implementation authority.
 
 Historical runtime tests remain historical; current planning static/review/publication evidence follows actual checkpoints. No source/asset/DB/Production change or agent merge.
+
+## DPT-GATE-012 / U01 security gate navigation
+
+- [[DPT-GATE-012_U01_Security_Gate]] — canonical status, r1–r11 history and registers for the proposed P30-U01 field-review security contract; nothing approved or implemented.
+- [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] — artifact inventory, evidence classes, publication omissions and continuation rules.

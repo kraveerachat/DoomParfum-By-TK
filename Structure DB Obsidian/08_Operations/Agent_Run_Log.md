@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -978,3 +978,26 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## DPT-GATE-012 / U01 security-contract sessions, recovered — 2026-11-20
+
+Recovered by `DPT-DOC-RECOVERY-001` from the contract, README and review headers; details in [[DPT-GATE-012_U01_Security_Gate]] §5 and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. These sessions wrote only to Owner-workstation staging folders outside the repository; none created a branch, commit, PR, key, signature or Obsidian entry. All ran on one host and Windows account with shared harness plugins and hooks.
+
+| Session | Date (Bangkok) | Role | Outcome | Tests |
+|---|---|---|---|---|
+| UNVERIFIED | ≤ 2026-11-18 | r1–r6 author(s) | r1/r2 MISSING; r3–r6 PROPOSED; independent review NOT RUN (r5: two attempts blocked by a context-injection hook) | r6 author-reported fixture probes only |
+| `b62e346b-00fe-4520-a926-25107e5ef706` (directory; agent identity disputed) | 2026-11-18 | r7 and r8 author; consolidated handoff | r7, r8 PROPOSED | r7 author-reported 52 PASS / 2 EXECUTED FAIL / 3 HARNESS FAILURE probes (evidence MISSING); r8 static 21/21 + 25/25 |
+| `6bfdc7e4-570c-4c0e-91ff-334dca7e3976` | 2026-11-18 | r7 reviewer | BLOCKED, 1 HIGH / 2 MEDIUM / 5 LOW | reviewer harness reproductions (harness MISSING) |
+| `f42e8e52-86fc-4ac0-a0c2-43796e4d448f` | 2026-11-18/19 | r8 reviewer; r9 author | r8 review CONDITIONAL 0/2/5 (file MISSING); r9 PROPOSED | r9 static 100/100; 0/115 specs |
+| `f4126736-b419-42ab-be4d-412cf2ae0ffa` | 2026-11-19 | r9 reviewer; r10 author | r9 review CONDITIONAL 0/3/3; r10 PROPOSED | r10 static 109/109; 0/147 specs |
+| `84b008e3-b4f4-4728-9b69-6de6b25b4767` | 2026-11-20 | r10 reviewer | CONDITIONAL 0/4/6 | 0/147 specs |
+| `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | 2026-11-20 | r11 author | r11 PROPOSED | r11 static 85/85; 0/162 specs |
+| `6d422490-cc14-4dba-84e9-361d29ffc278` | 2026-11-20 | r11 reviewer (advisory, does not satisfy G-IND) | CONDITIONAL 0/2/7 | read-only standard-tool probes; 0/162 specs |
+
+## DPT-DOC-RECOVERY-001 documentation recovery — 2026-11-20
+
+Session `6d422490-cc14-4dba-84e9-361d29ffc278` (Claude Code, `claude-opus-5-5`), the same session that wrote the advisory r11 review. Scope: documentation only. Isolated worktree `.local/worktrees/dpt-gate-012-security-history`, new branch `docs/dpt-gate-012-security-history` from fetched `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`; existing checkouts and branches untouched.
+
+Work: read r3–r11 contracts, Gate Packages, READMEs, reviews, requests and handoff in full; hashed 27 present artifacts (12 VERIFIED_ORIGINAL, 15 HASH_VERIFIED_COPY_CUSTODY_UNVERIFIED, 0 mismatch) and recorded 7 MISSING rows; created the task note and recovery index; appended this log, Change_Log and Decision_Log; inserted a current section in Project_Status; added a Project_Index link. Read-only GitHub queries: PR31 MERGED 2026-11-17T14:02:10Z at `183f1d8`; PR8 the only open PR.
+
+Not done: no raw security report committed; no credential, key or token read; no signing; no runtime or security test; no U01 code; no receipt; no merge. Push and PR creation depend on the credential boundary recorded in the PR handoff.

@@ -4,13 +4,19 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## DPT-GATE-012 / U01 security gate and PR31 merge — current truth, 2026-11-20
+
+Owner merged [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) at `183f1d857d83b64819762a2237c908fb95e36cb4` on 2026-11-17T14:02:10Z (21:02:10 Asia/Bangkok), verified read-only on GitHub; the PR31 "OPEN/DRAFT" statements below are dated history. POST30-ODP-1 decisions remain PROPOSED/UNANSWERED.
+
+P30-U01 field-review security contract ([[DPT-GATE-012_U01_Security_Gate]]): latest candidate PROPOSED r11; latest review CONDITIONAL — NOT READY, 0 HIGH / 2 MEDIUM / 7 LOW, advisory only. G-IND NOT SATISFIED, Q-F PENDING, BatchA and Q-H NOT AUTHORIZED, implementation NOT AUTHORIZED, 0 of 162 acceptance specifications run, OP-1 / OP-2 / reviewer and verifier environments UNAVAILABLE, r12 NOT STARTED. History and artifact inventory: [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. PR8 remains OPEN/DRAFT/BLOCKED.
 
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
