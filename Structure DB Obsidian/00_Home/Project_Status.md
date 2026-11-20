@@ -4,13 +4,21 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## DPT-GATE-012 / U01 security gate and PR31 merge — current truth, 2026-11-20
+
+Owner merged [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) at `183f1d857d83b64819762a2237c908fb95e36cb4` on 2026-11-17T14:02:10Z (21:02:10 Asia/Bangkok), verified read-only on GitHub; the PR31 "OPEN/DRAFT" statements below are dated history. POST30-ODP-1 decisions remain PROPOSED/UNANSWERED.
+
+P30-U01 field-review security contract ([[DPT-GATE-012_U01_Security_Gate]]): latest candidate PROPOSED **r12** (authored 2026-11-20, S4; addresses R11-IR-01…09 in proposed text only; independent r12 review PENDING). Latest completed review: r11, CONDITIONAL — NOT READY, 0 HIGH / 2 MEDIUM / 7 LOW, advisory only. G-IND NOT SATISFIED, Q-F PENDING, BatchA and Q-H NOT AUTHORIZED, implementation NOT AUTHORIZED, 0 of 166 acceptance specifications run, OP-1 / OP-2 / reviewer and verifier environments UNAVAILABLE. History and artifact inventory: [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. PR8 remains OPEN/DRAFT/BLOCKED.
+
+**2026-11-21 (S7):** the U01 documentation workstream is published as Draft [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), and DPT-GOV-WORKFLOW-001 as a separate Draft [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33). Both are OPEN, Draft and unmerged, and were opened under a one-time Owner-login exception (Decision Log 2026-11-21). OPEN configuration item: "Restrict updates" (Owner-only merge enforcement) is not configured. Security status is unchanged; the independent r12 review is the next step.
 
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 

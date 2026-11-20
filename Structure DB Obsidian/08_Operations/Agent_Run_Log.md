@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-17
+updated: 2026-11-20
 tags:
   - doomparfum
   - operations
@@ -978,3 +978,62 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## DPT-GATE-012 / U01 security-contract sessions, recovered — 2026-11-20
+
+Recovered by `DPT-DOC-RECOVERY-001` from the contract, README and review headers; details in [[DPT-GATE-012_U01_Security_Gate]] §5 and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. These sessions wrote only to Owner-workstation staging folders outside the repository; none created a branch, commit, PR, key, signature or Obsidian entry. All ran on one host and Windows account with shared harness plugins and hooks.
+
+| Session | Date (Bangkok) | Role | Outcome | Tests |
+|---|---|---|---|---|
+| UNVERIFIED | ≤ 2026-11-18 | r1–r6 author(s) | r1/r2 MISSING; r3–r6 PROPOSED; independent review NOT RUN (r5: two attempts blocked by a context-injection hook) | r6 author-reported fixture probes only |
+| `b62e346b-00fe-4520-a926-25107e5ef706` (directory; agent identity disputed) | 2026-11-18 | r7 and r8 author; consolidated handoff | r7, r8 PROPOSED | r7 author-reported 52 PASS / 2 EXECUTED FAIL / 3 HARNESS FAILURE probes (evidence MISSING); r8 static 21/21 + 25/25 |
+| `6bfdc7e4-570c-4c0e-91ff-334dca7e3976` | 2026-11-18 | r7 reviewer | BLOCKED, 1 HIGH / 2 MEDIUM / 5 LOW | reviewer harness reproductions (harness MISSING) |
+| `f42e8e52-86fc-4ac0-a0c2-43796e4d448f` | 2026-11-18/19 | r8 reviewer; r9 author | r8 review CONDITIONAL 0/2/5 (file MISSING); r9 PROPOSED | r9 static 100/100; 0/115 specs |
+| `f4126736-b419-42ab-be4d-412cf2ae0ffa` | 2026-11-19 | r9 reviewer; r10 author | r9 review CONDITIONAL 0/3/3; r10 PROPOSED | r10 static 109/109; 0/147 specs |
+| `84b008e3-b4f4-4728-9b69-6de6b25b4767` | 2026-11-20 | r10 reviewer | CONDITIONAL 0/4/6 | 0/147 specs |
+| `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | 2026-11-20 | r11 author | r11 PROPOSED | r11 static 85/85; 0/162 specs |
+| `6d422490-cc14-4dba-84e9-361d29ffc278` | 2026-11-20 | r11 reviewer (advisory, does not satisfy G-IND) | CONDITIONAL 0/2/7 | read-only standard-tool probes; 0/162 specs |
+
+## DPT-DOC-RECOVERY-001 documentation recovery — 2026-11-20
+
+Session `6d422490-cc14-4dba-84e9-361d29ffc278` (Claude Code, `claude-opus-5-5`), the same session that wrote the advisory r11 review. Scope: documentation only. Isolated worktree `.local/worktrees/dpt-gate-012-security-history`, new branch `docs/dpt-gate-012-security-history` from fetched `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`; existing checkouts and branches untouched.
+
+Work: read r3–r11 contracts, Gate Packages, READMEs, reviews, requests and handoff in full; hashed 27 present artifacts (12 VERIFIED_ORIGINAL, 15 HASH_VERIFIED_COPY_CUSTODY_UNVERIFIED, 0 mismatch) and recorded 7 MISSING rows; created the task note and recovery index; appended this log, Change_Log and Decision_Log; inserted a current section in Project_Status; added a Project_Index link. Read-only GitHub queries: PR31 MERGED 2026-11-17T14:02:10Z at `183f1d8`; PR8 the only open PR.
+
+Not done: no raw security report committed; no credential, key or token read; no signing; no runtime or security test; no U01 code; no receipt; no merge. Push and PR creation depend on the credential boundary recorded in the PR handoff.
+
+### 2026-11-20 — DPT-GATE-012 / S2 — publication readiness and r12 handoff
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 (DPT-DOC-RECOVERY-001)/S2 | Claude Code `33a50b45` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index, new r12 handoff, Agent_Run_Log, Change_Log, Project_Index | 8/8 input hashes match; `validate_docs.py` re-run; `git diff --check`; merge-tree simulation; sensitive-data scan | PARTIAL: local checkpoint, publication BLOCKED (credential boundary) | S2 checkpoint (recorded next session) |
+
+Starting SHA `987279a98cf1a48ee657f0b9f4f78581063c9e01`. No push, PR, signing, key use, review or U01 test. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §11).
+
+### 2026-11-20 — DPT-GATE-012 (DPT-DOC-RECOVERY-001) / S3 — publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+Claude Code `33a50b45` (docs coordinator; not independent). Class A. Starting SHA `3c97dca83abe508dc070d64bf3e71d10847293d0`. The Owner directed agent-managed publication, but the only credential is the Owner's own broad-scope login, which the standing instruction forbids for agent use. No push or PR. First execution report written. Security status unchanged (see [[DPT-GATE-012_U01_Security_Gate]] §12).
+
+### 2026-11-20 — DPT-GATE-012 / U01 / S4 — r12 authored; main U01 Draft PR prepared; publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 / U01 / S4 | Claude Code `1a47f0e2` (r12 author and docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index (§10), r12 handoff (status appendix), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, Project_Index, S4 report | 8/8 input hashes match before and after; r12 static checks as in README r12 §8; `validate_docs.py` per the S4 report; 0 of 166 specs run | r12 PROPOSED (review PENDING); PR not created | S4 commit (recorded in the S4 report private copy) |
+
+Class A. Starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only. The r12 bytes stay outside the repository.
+
+### 2026-11-20 — DPT-GATE-012 / U01 / S5 — state re-verification; publication still blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 / U01 / S5 | Claude Code `8ee88547` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note (§13 row, §15), Agent_Run_Log, S5 report | r11/r12 re-hash 7/7 match; r12 author checker reproduced; report parity verified; `git diff --check` clean | Verified; no push or PR (no agent identity) | the S5 commit (recorded by the next session) |
+
+Class A. Starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`. r12 not re-authored or changed. S2/S3/S4 checkpoint SHAs reconciled in [[DPT-GATE-012_U01_Security_Gate]] §15. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only.
+
+### 2026-11-21 — DPT-GATE-012 / U01 / S7 — Draft PR #32 published (one-time Owner-login exception)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-21 | DPT-GATE-012 / U01 / S7 | Claude Code `8ee88547` (docs coordinator and publisher; not independent) | NA (documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32)) | NA | U01 task note (§2, §13, §16), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S7 report | protection on `main` verified read-only; PR #32 OPEN/Draft verified; diff and sensitive checks clean; validate_docs baseline unchanged | Published; security status unchanged | the S7 commit (pushed to the PR branch) |
+
+Class A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9`. Branch pushed without force; no push to `main`, merge, auto-merge, settings or ruleset change; no review, runtime test or U01 code. Open item: "Restrict updates" not configured. See [[DPT-GATE-012_U01_Security_Gate]] §16.
