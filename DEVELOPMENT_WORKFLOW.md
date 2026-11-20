@@ -108,6 +108,7 @@ DoomParfum By TK/
 │   ├── 08_Operations/Change_Log.md
 │   ├── 08_Operations/Agent_Run_Log.md
 │   ├── 08_Operations/Receipts/                # NEW WHEN BOOTSTRAPPED: immutable final receipts
+│   ├── 08_Operations/Reports/<TOPIC_ID>/      # per-session execution reports (§4.7)
 │   ├── 08_Operations/Handoffs/                # NEW WHEN BOOTSTRAPPED: continuity packs
 │   ├── 09_References/...
 │   └── 90_Templates/...
@@ -364,6 +365,7 @@ Starting SHA:
 #### Known limitations / Remaining work
 #### Current task status / Next recommended action
 #### Git checkpoint SHA / Next session / Handoff
+#### Execution report (file, SHA-256, public-safe or sanitized; §4.7)
 ```
 
 End-of-session note ต้องสอดคล้องกับ evidence จริง; failure ต้องระบุ `introduced / pre-existing / environmental / blocked by dependency / not tested`.
@@ -398,6 +400,7 @@ POST-MERGE (if required)
 |---|---|
 | `07_Delivery/Tasks/<TASK_ID>_<slug>.md` | Always: the session record (§4.4), appended to the one canonical task note |
 | `08_Operations/Agent_Run_Log.md` and/or `Change_Log.md` | Always: one dated entry linking the task note (§7.2) |
+| `08_Operations/Reports/<TOPIC_ID>/` | Always: the session's execution report, public-safe or sanitized (§4.7) |
 | `08_Operations/Decision_Log.md` | A decision was proposed, changed, or verified as an Owner decision |
 | `08_Operations/Handoffs/` | The work is handed to another agent or chat, or a major topic ends (§10) |
 | `00_Home/Project_Status.md` | The task's state, PR state, or the project's current truth changed |
@@ -432,6 +435,27 @@ KNOWN_LIMITATIONS / DEFERRED_WORK
 OBSIDIAN_FILES_UPDATED
 REVIEW_READINESS / NEXT_OWNER_ACTION
 ```
+
+### 4.7 Dual execution reports (one per meaningful session)
+
+Every meaningful session (§4.3) produces one Markdown **execution report**: the agent's complete end-of-session report to the Owner. It contains the TOOL DECISION and TOOL EXECUTION REPORT, the work performed, the exact checks and their results, failures, limitations, Git SHAs and the verified PR state. It is a separate record from the others:
+
+| Record | Holds | Location |
+|---|---|---|
+| Execution report | One session, complete | Private copy: `Downloads\<TOPIC_ID>\Responses\` on the Owner's machine, outside the repository. Vault copy: `Structure DB Obsidian/08_Operations/Reports/<TOPIC_ID>/` |
+| Canonical task note | The task summary, its session register, and an index of its reports | `07_Delivery/Tasks/` (§4.2, §4.4) |
+| Project status | Project-wide current truth | `00_Home/Project_Status.md` |
+| Immutable receipt | One per reviewable task, at acceptance | `08_Operations/Receipts/` (§4.6) |
+
+1. `<TOPIC_ID>` names the major workstream, for example `DPT-GATE-012-U01` or `DPT-GOV-WORKFLOW-001`. Reuse an existing topic folder; do not create a parallel one.
+2. File name: `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Report.md`, for example `2026-11-20_DPT-GOV-WORKFLOW-001_S3_Report.md`. Once committed, a report is never overwritten or edited. A correction goes in a later report that names the report it corrects.
+3. **Public-safe report:** both copies have identical bytes, including the vault frontmatter. Record the SHA-256 in the task note only after verifying that both copies produce it.
+4. **Report with sensitive content** (secrets, credential or host facts, exploit detail, a raw security review): the raw report stays only in approved private storage. The vault receives a separately written sanitized report that gives the raw report's SHA-256 and says it is sanitized. Never describe the two as identical.
+5. Commit the vault copy on the task's own branch and PR, in the same checkpoint as the session record. A report cannot contain the SHA of the commit that adds it, so the next session or the PR records that SHA.
+6. List every report in a **Reports** index in the canonical task note, giving the file, session, SHA-256, and whether it is public-safe or sanitized.
+7. Claim that the copies are synchronized only after checking both files, their hashes, and the Git state.
+8. A read-only reviewer (§6.2.1) writes only the private copy. An authorized documentation session adds the vault copy later.
+9. The rule applies from its adoption onward. Do not publish earlier raw reports to satisfy it.
 
 ---
 
@@ -547,9 +571,19 @@ The vault is part of this repository, so a meaningful documentation checkpoint b
 9. Create or update the task's Draft PR (§3.6 decides which PR).
 10. Record the actual commit SHA and the verified PR state.
 
-**Credential boundary:** push and create or update PRs only with a credential the Owner has authorized for agent use and that is appropriately scoped. Having a credential in the environment, including the Owner's own broad-scope login, is not authorization.
+**Responsibilities:** the agent carries out steps 1–10, including the branch, commit, push, Draft PR and report, so the Owner does not create branches, commit, push or open Draft PRs in the normal workflow. The Owner reviews, requests corrections, makes the decisions that need Owner authority, and merges. The agent never merges, approves its own work, or enables auto-merge.
 
-**If remote publication is blocked:** keep the local commit, record the exact blocker in the task note, report `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`, and give the Owner the precise next commands. Never present a local commit as a PR. Only the Human Owner approves and merges PRs; never enable auto-merge.
+**Credential boundary:** push and create or update PRs only with a credential the Owner has authorized for agent use and that is appropriately scoped. Having a credential in the environment, including the Owner's own broad-scope login, is not authorization. Permission to publish a branch or open a Draft PR is never permission to approve a gate, sign an Owner statement, merge, or bypass repository protection.
+
+**Agent publishing identity** (the prerequisite for agent-managed PRs):
+
+- **Identity:** a dedicated identity distinct from the Owner. Preferred: a GitHub App installed only on this repository. Alternative: a dedicated machine-user account that is a collaborator only on this repository, with the Write role and a token limited to this repository.
+- **Permissions:** Contents read and write, Pull requests read and write, Metadata read. No Administration, Actions, Workflows, Secrets, Environments, Pages or account-level permission.
+- **Secret handling:** the token or key has an expiry and is stored outside the repository. It is never printed or committed. The agent session is configured to use it instead of the Owner's login. On the same operating-system account the Owner's stored login stays technically reachable; the rule above still forbids using it, and full separation needs a separate OS account or machine.
+- **Repository rules on `main`:** a pull request is required; force pushes and deletion are blocked; updating `main`, including merging, is restricted to the Owner; the agent identity is never a bypass actor; auto-merge stays disabled.
+- **Verification:** push a test branch and open and close a Draft PR with the agent identity. Confirm from the ruleset settings that the agent identity cannot update `main`; do not test this by attempting a merge. Record the identity, permissions, expiry and result in `08_Operations/Agent_Tool_Registry.md`, without the token.
+
+**If remote publication is blocked:** keep the local commit, record the exact blocker in the task note, and report `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`. Also report `AGENT_CREDENTIAL_REQUIRED` when the blocker is the missing agent publishing identity. The Owner may publish that checkpoint or explicitly authorize a one-time use, but that is an exception, not the standard workflow. Never present a local commit as a PR.
 
 ### 5.7 Public repository evidence handling
 
