@@ -384,6 +384,7 @@ Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFL
 |---|---|---|---|
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` | S3 | `e1c871388ce06ac0c9d1c26c86a836447ffa47dd38e73a235c40b162705e581e` | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` |
 | `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` | S4 | `64fc19c2600c32c432a8dbb0a873d5dacfa9f59a7058d006072d8e80d361b449` (10371 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\`; a separate private-only supplement holds the GitHub security-posture observations and is not published |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S5_Verification_Report.md` | S5 | `979411390f5e3a7dec2242878491426a4a8d378a1fde50b93c3128a635b3116c` (7723 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` (parity verified); a separate private-only S5 supplement is not published |
 
 ## 14. Session 2026-11-20 S4 — r12 authoring, main U01 Draft PR preparation, agent identity check
 
@@ -410,3 +411,37 @@ Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFL
 **Next action:** the Owner completes the S4 report §4 checklist; then a class-A session pushes this branch with the agent identity, opens the single Draft PR from the prepared body, and records its number and URL here. In parallel, the Owner commissions the independent r12 review.
 
 **Checkpoint SHA:** the S4 commit that adds this section (recorded in the S4 report's private copy and by the next session).
+
+## 15. Session 2026-11-20 S5 — state re-verification; publication still blocked
+
+- **Task / session:** DPT-GATE-012 / U01, S5, Claude Code session `8ee88547-2155-474e-a223-97e0c30994c5`, `claude-opus-5-5`. Role: documentation coordinator. Not independent of earlier sessions (same model, host and account); must not review r12.
+- **Intake class:** A. The Owner re-issued the S4 brief, which cited HEAD `4e1885c`; the verified HEAD was `fbf68d8`. r12 already existed (S4), so S5 did **not** re-author or alter it. A different second r12 would break the revision chain.
+- **Branch / PR:** `docs/dpt-gate-012-security-history`, starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`, 4 ahead / 0 behind `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (fetched). Remote branch: NOT PUSHED. PR: **NOT CREATED** (no DPT-GATE-012 or DPT-GOV-WORKFLOW-001 PR in any state; only PR8 is open).
+
+**Checkpoint SHA reconciliation** (resolved with `git log -S` on each section heading; the historical sections are not edited):
+
+| Session | Section | Commit |
+|---|---|---|
+| S2 | §11 | `3c97dca83abe508dc070d64bf3e71d10847293d0` |
+| S3 | §12 | `4e1885c20c5ce76f3583f9c56ba404f338868f81` |
+| S4 | §14 | `fbf68d8c075a1e5c3bd611edf9288313487d79de` |
+
+**Work performed**
+1. Re-verified the repository, `main`, open PRs, remote heads and worktrees, read-only. No duplicate PR.
+2. **Agent identity (Option A):** still not available to the agent. Publication remains `AGENT_CREDENTIAL_REQUIRED`. The setup checklist is unchanged (S4 report §4). The posture observations are in the private S5 supplement only.
+3. Re-hashed the r11 contract, Gate Package, README and independent review, and the r12 contract, Gate Package and README: **7/7 match** (sizes and SHA-256 as in §4).
+4. Re-ran the r12 author static checker: it reproduces S4 (166 IDs / 34 groups; r10 and r11 IDs retained; 4 new and 11 changed rows; 0 undefined references; grammar self-test 14/16 as expected). These are author self-checks, not an independent review.
+5. Did not arrange an independent review: every reviewer the agent can start runs on the same model family and account (fails G-IND). The Owner commissions it from Gate Package r12 §8–§9.
+6. Updated the prepared PR body (outside Git): file inventory, commit list and S5 checks.
+
+**Tests:** re-hash 7/7; author checker reproduced; report parity S3/S4/S5 verified; `git diff --check` clean on the S5 changes; sensitive-data scan of the added vault lines 0 matches (the repository name is public and was not counted); `database/validate_docs.py` exit 1 with 54 errors (52 with `--task IMP-P1-02`), the same error set as the unchanged HEAD in a throwaway worktree, 0 new and 0 fixed. **Not executed:** U01 acceptance specifications (0 of 166), runtime or security tests, independent review.
+
+**Status:** unchanged. R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED`; G-IND; Owner setup of the agent identity and `main` protection; OPR-1/2/3.
+
+**Next action:** the Owner completes the S4 report §4 checklist (A–D); a class-A session then runs §4.E, pushes this branch, creates the single Draft PR from the prepared body, and records its actual number and URL here. In parallel, the Owner commissions the independent r12 review.
+
+**Report:** [[2026-11-20_DPT-GATE-012-U01_S5_Verification_Report]] (§13).
+
+**Checkpoint SHA:** the S5 commit that adds this section (recorded by the next session).

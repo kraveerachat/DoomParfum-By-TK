@@ -1021,3 +1021,11 @@ Claude Code `33a50b45` (docs coordinator; not independent). Class A. Starting SH
 | 2026-11-20 | DPT-GATE-012 / U01 / S4 | Claude Code `1a47f0e2` (r12 author and docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note, recovery index (§10), r12 handoff (status appendix), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, Project_Index, S4 report | 8/8 input hashes match before and after; r12 static checks as in README r12 §8; `validate_docs.py` per the S4 report; 0 of 166 specs run | r12 PROPOSED (review PENDING); PR not created | S4 commit (recorded in the S4 report private copy) |
 
 Class A. Starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only. The r12 bytes stay outside the repository.
+
+### 2026-11-20 — DPT-GATE-012 / U01 / S5 — state re-verification; publication still blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GATE-012 / U01 / S5 | Claude Code `8ee88547` (docs coordinator; not independent) | PR_NOT_CREATED | NA | U01 task note (§13 row, §15), Agent_Run_Log, S5 report | r11/r12 re-hash 7/7 match; r12 author checker reproduced; report parity verified; `git diff --check` clean | Verified; no push or PR (no agent identity) | the S5 commit (recorded by the next session) |
+
+Class A. Starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`. r12 not re-authored or changed. S2/S3/S4 checkpoint SHAs reconciled in [[DPT-GATE-012_U01_Security_Gate]] §15. No push, PR, signing, key use, review, runtime test or U01 code. Read-only GitHub verification only.
