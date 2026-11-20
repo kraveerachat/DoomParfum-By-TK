@@ -17,8 +17,8 @@ source_of_truth: "../../../README.md"
 - Owner / Agent: Human Owner / Claude Code (documentation and governance agent)
 - Branch: `plan/agent-workflow-pr-routing`, isolated worktree `.local/worktrees/agent-workflow-pr-routing`
 - Base: verified `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (PR31 merge)
-- PR / Target branch: **PR_NOT_CREATED** → `main`. The branch is LOCAL_ONLY / NOT_PUSHED, and publication is `AGENT_CREDENTIAL_REQUIRED` (see Blockers and Session S3).
-- Current state: ACCEPTANCE PENDING. The agent-side docs checkpoint (S3: dual execution reports and agent publishing identity) is complete. Publication, independent review and Owner merge are pending.
+- PR / Target branch: **Draft [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)** → `main` (OPEN, Draft, created 2026-11-21 S4 under a one-time Owner-login exception; see Session S4). Before S4: PR_NOT_CREATED / NOT_PUSHED.
+- Current state: ACCEPTANCE PENDING. The branch is published as a Draft Planning PR. Independent review and Owner merge are pending. Open configuration item: "Restrict updates" is not configured.
 - Production mutation allowed: NO. Application code change: NO.
 
 ## Goal / Why
@@ -124,7 +124,8 @@ This task did not modify the recovery branch. The two branches append to the sam
 |---|---|---|---|---|---|
 | S1 | Audit, amend governance, record, local checkpoint | CLOSED | PARTIAL (publication BLOCKED) | `2903c96537c5eca2c68568b3911a899235b38aea` | Ledger below |
 | S2 | Publication-readiness re-verification, integration simulation, sanitization correction | CLOSED | PARTIAL (publication BLOCKED) | `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46` | Session S2 below |
-| S3 | Owner directive: dual execution reports, agent-managed publication, agent identity | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | S3 checkpoint commit | Session S3 below; Reports index |
+| S3 | Owner directive: dual execution reports, agent-managed publication, agent identity | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | `f5f2597af1ff729f83f05bef053227970f8b0bfb` | Session S3 below; Reports index |
+| S4 | Publication under a one-time Owner-login exception; Draft PR33 | CLOSED | PUBLISHED (Draft) | S4 checkpoint commit (pushed to the PR33 branch) | Session S4 below; Reports index |
 
 ## Reports
 
@@ -133,6 +134,7 @@ Execution reports for this task (DW §4.7). S1 and S2 predate the rule and have 
 | File | Session | SHA-256 | Kind |
 |---|---|---|---|
 | `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-20_DPT-GOV-WORKFLOW-001_S3_Report.md` | S3 | `fe14722af37ed02b71c014fa9fc0ae15f6cce505ddfd7aed14cbc8869f552cad` | public-safe; identical private copy in `Downloads\DPT-GOV-WORKFLOW-001\Responses\` |
+| `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report.md` | S4 | `bc5ccf02033169a158675e39e12f4a8487e19601096b597a72e28f83d0979cb6` (4224 B) | public-safe; identical private copy in `Downloads\DPT-GOV-WORKFLOW-001\Responses\` (parity verified) |
 
 ### Session S1 — governance amendment and recovery status check
 
@@ -253,12 +255,31 @@ No push or `gh pr create` was attempted. The least-privilege prerequisite is now
 
 **Execution report:** see Reports above.
 
+### Session S4 — Draft Planning PR publication (PR33)
+
+- State: CLOSED
+- Task ID / Session ID: DPT-GOV-WORKFLOW-001 / S4, Claude Code session `8ee88547-2155-474e-a223-97e0c30994c5` (published together with DPT-GATE-012 / U01 S7)
+- Agent / Role: Claude Code, publisher; not an independent reviewer of this change
+- Date: 2026-11-21. Intake class: A
+- Branch / PR: `plan/agent-workflow-pr-routing` / [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)
+- Starting SHA: `f5f2597af1ff729f83f05bef053227970f8b0bfb` (the S3 checkpoint)
+
+**Owner decisions used:** the Hybrid GitHub workflow (a dedicated restricted agent identity by default; the Owner login only through explicit, bounded exceptions); a one-time publication exception for this branch and `docs/dpt-gate-012-security-history` (push, one Draft PR each, documentation checkpoints, verification; no merge, auto-merge, force-push, push to `main`, deletion, settings, ruleset or credential change); and an explicit confirmation to proceed although "Restrict updates" is not configured. That rule is recorded as an OPEN configuration item. Details: [[2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report]] §2 and the Decision Log.
+
+**Publication (verified on GitHub):** PR33 is OPEN and **Draft**, base `main`, head at creation `f5f2597af1ff729f83f05bef053227970f8b0bfb`, created 2026-11-20T18:15:42Z (2026-11-21 01:15:42 Asia/Bangkok), Owner-account author, auto-merge none, merge BLOCKED until review. Companion PR: [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) (U01), kept separate.
+
+**Exact files changed (S4):** this note; `08_Operations/Agent_Run_Log.md`; `Change_Log.md`; `Decision_Log.md`; `00_Home/Project_Status.md`; the S4 report (new). The governance text (AGENTS.md, DEVELOPMENT_WORKFLOW.md) is unchanged.
+
+**Owner review point:** whether DW §5.6 should name the Hybrid policy and its exception fields explicitly. S4 does not change it.
+
+**Tests:** `git diff --check` clean; sensitive scan of the added lines and the PR body 0 matches; `database/validate_docs.py --task IMP-P1-02` 52 errors, the same set as the starting HEAD (0 new). **Not executed:** independent review; Markdown rendering.
+
 ## Latest Git Checkpoint / SHA
 
-S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. S3: the commit that adds this text (a commit cannot contain its own SHA; the next session records it).
+S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. S3: `f5f2597af1ff729f83f05bef053227970f8b0bfb`. S4: the commit that adds this text, pushed to `origin/plan/agent-workflow-pr-routing` and visible in PR33's commit list.
 
 ## Handoff / Next Action
 
-1. Owner: provision the agent publishing identity (DW §5.6), or explicitly authorize a one-time use of the Owner login. Then a class-A agent session pushes and opens the Draft Planning PR.
-2. Independent reviewer: review AGENTS.md §2.1/§8.1 and DW §3.6/§4.3–§4.5/§5.6/§5.7/§6.2.1 for clarity and contradiction.
-3. Next session (class A): record the actual PR number/URL and the S1 checkpoint SHA here, and apply any review corrections on the same branch/PR.
+1. Independent reviewer: review AGENTS.md §2.1/§8.1 and DW §3.6/§4.3–§4.7/§5.6/§5.7/§6.2.1 for clarity and contradiction.
+2. Owner: review PR33, including the Hybrid policy wording in §5.6, and configure "Restrict updates" before granting any write-capable agent identity and before the final merge.
+3. Next session (class A): apply any review corrections on this same branch and PR33. Future publication uses a dedicated agent identity, or a new explicit Owner exception.

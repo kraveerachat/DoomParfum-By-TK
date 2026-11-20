@@ -994,3 +994,11 @@ Claude Code (docs/governance; same session as S1, so this is a self-check). Star
 ### 2026-11-20 — DPT-GOV-WORKFLOW-001 / S3 — dual execution reports; publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
 
 Claude Code `33a50b45` (docs/governance; same session as S1/S2, not independent). Intake class A for both DPT-GOV-WORKFLOW-001 and DPT-DOC-RECOVERY-001. Starting SHA `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. The Owner directed agent-managed publication. The only GitHub credential is still the Owner's own broad-scope login, and both the Owner's standing instruction and this PR's credential boundary forbid using it, so no push or PR was attempted. The governance amendment was extended (DW §4.7 and §5.6; AGENTS §8.1), and the first dual execution report was written. Checks: see [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] (S3 ledger rows).
+
+### 2026-11-21 — DPT-GOV-WORKFLOW-001 / S4 — Draft Planning PR33 published (one-time Owner-login exception)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-21 | DPT-GOV-WORKFLOW-001 / S4 | Claude Code `8ee88547` (publisher; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft) | NA | task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S4 report | PR33 OPEN/Draft verified on GitHub; diff and sensitive checks clean; validate_docs baseline unchanged | Published; governance text unchanged | the S4 commit (pushed to the PR branch) |
+
+Class A. Starting SHA `f5f2597af1ff729f83f05bef053227970f8b0bfb`. Pushed without force; no push to `main`, merge, auto-merge, settings or ruleset change. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S4.

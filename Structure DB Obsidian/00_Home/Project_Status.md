@@ -18,6 +18,8 @@ Verified `origin/main` is `183f1d857d83b64819762a2237c908fb95e36cb4`: the Owner 
 
 [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] proposes task-intake and PR-routing rules plus mandatory session recording (AGENTS.md §2.1/§8.1; DEVELOPMENT_WORKFLOW.md 1.1.0). State: ACCEPTANCE PENDING on local branch `plan/agent-workflow-pr-routing`, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED (credential boundary). Nothing is in effect until the Owner merges it. S3 (2026-11-20) adds the dual execution-report rule and the agent publishing identity. Publication is `AGENT_CREDENTIAL_REQUIRED`: no agent identity exists yet, and the Owner's own login may not be used.
 
+**2026-11-21 (S4):** published as Draft [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (OPEN, Draft, unmerged) under a one-time Owner-login exception. The Owner selected a Hybrid GitHub workflow (Decision Log 2026-11-21). The U01 documentation workstream is the separate Draft [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32). OPEN configuration item: "Restrict updates" is not configured.
+
 DPT-DOC-RECOVERY-001 (DPT-GATE-012 / U01 history and r12 handoff) is local commits `987279a98cf1a48ee657f0b9f4f78581063c9e01` and `3c97dca83abe508dc070d64bf3e71d10847293d0` on `docs/dpt-gate-012-security-history`, plus its S3 record: NOT PUSHED, no PR. DPT-GATE-012 approvals, U01 implementation and runtime tests remain NOT AUTHORIZED.
 
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
