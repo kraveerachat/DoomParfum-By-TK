@@ -1086,3 +1086,11 @@ Class A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9`. Branch pushed 
 | 2026-11-22 | DPT-GATE-012 / U01 / S8 | Claude Code `57690f5c` (r14 author; not independent) | NA (documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), unchanged) | NA | U01 task note (§2, §13, §17), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S8 report (sanitized), S8 summary | r13 inputs and review 8/8 hash match before/after; author checks 48/48, cross-document 35/35, audit 0 unmapped, model 43/43; 0 of 169 specs run; PowerShell/.NET/signatures NOT RUN | r14 PROPOSED (CONDITIONAL — NOT READY); independent r14 review PENDING | NOT CREATED (local only, not pushed) |
 
 Class A. Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5`. r14 bytes are kept in an Owner-approved private vault outside the repository; only hashes are recorded here. No Git write, PR update, review, runtime test or U01 code. See [[DPT-GATE-012_U01_Security_Gate]] §17.
+
+### 2026-11-22 — DPT-GATE-012 / U01 / S9 — closeout Stage 2: documentation snapshot, merge of main, reconciliation
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | DPT-GATE-012 / U01 / S9 | Claude Code `57690f5c` (documentation recorder; r14 author, not independent) | NA (documentation Draft [PR #32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32); GitHub head `33d92b5`) | NA | S8 checkpoint (7 files, unchanged); merge of `main`; U01 task note, Recovery Index, new Security Resumption Handoff, Project_Status, Project_Index, Agent_Run_Log, Change_Log, Decision_Log, S9 report, S9 summary | artifact re-hash (r14 4/4, r12–r13 8/8); conflict-retention audit; validate_docs compared with the parents; `git diff --check`; sensitive scan | Local checkpoint, NOT PUSHED | `8c62403802eae6619af1a79a83ff297bbaaf1e42` (S8), `6a8d72c82195d0dc8d2936f38c842a0256743a06` (merge), S9 records (recorded by the next session) |
+
+Class A. Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5`; `main` `0daafbb863b63e0d36cfccd0903d070ecdc63340` (PR33 merge, verified). No push, PR update, review, merge, ruleset change, runtime test, r15 or U01 code. See [[DPT-GATE-012_U01_Security_Gate]] §18.

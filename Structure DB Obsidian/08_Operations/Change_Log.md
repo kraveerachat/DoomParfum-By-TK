@@ -818,3 +818,7 @@ Pushed `docs/dpt-gate-012-security-history` (head `3c50d0e`) and opened the sing
 ## 2026-11-22 — DPT-GATE-012 / U01 / S8 — proposed r14 recorded (local only)
 
 Recorded the r13 review result and the PROPOSED r14 candidate (contract `9a97aa61…62e3`, authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §13 report index, §17 session), with the sanitized [[2026-11-22_DPT-GATE-012-U01_S8_r14_Report]] and the session summary [[2026-11-22_DPT-GATE-012-U01_S8_r14_Summary]] (new folder `08_Operations/Summaries/DPT-GATE-012-U01/`). Not committed or pushed; Draft PR #32 unchanged. Security status unchanged: CONDITIONAL — NOT READY; G-IND NOT SATISFIED.
+
+## 2026-11-22 — DPT-GATE-012 / U01 / S9 — documentation snapshot and reconciliation (local)
+
+Committed the S8 r14 records unchanged (`8c62403`) and merged `main` (`0daafbb`, the PR33 merge) into the U01 documentation branch additively (`6a8d72c`; five append-only conflicts resolved with both histories kept). Reconciled [[DPT-GATE-012_U01_Security_Gate]] (§2–§10, §13, new §7.2 and §18) and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (§11) for the r12 review, r13 and PROPOSED r14, correcting by an additive record the earlier statement that no r12 review existed. Added [[DPT-GATE-012_U01_Security_Resumption_Handoff]] and [[2026-11-22_DPT-GATE-012-U01_S9_Report]]. Nothing approved; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 run. Local commits only, not pushed.

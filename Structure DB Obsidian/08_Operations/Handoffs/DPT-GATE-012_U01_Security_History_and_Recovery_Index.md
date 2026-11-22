@@ -161,3 +161,26 @@ Claude Code session `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` (r12 author) re-hashe
 - The r12 bytes are not committed; only this sanitized record is (§7).
 - These hashes travel through the agent channel. The reviewer must obtain the expected values through a channel other than the agent chat, ideally the OCD (OPR-2).
 - No r12 review exists. Continuation rules (§8) apply unchanged: r13 or a reconciled r12 review is added to this branch and its single Draft PR.
+
+## 11. r12 review, r13 and r14 artifacts, 2026-11-22 S9
+
+Claude Code session `57690f5c-ef81-4fad-9ef8-281022bc87f4` (the r14 author; S9 recorder) re-hashed these files with SHA-256 and byte counts on 2026-11-22. **Correction:** §10 says "No r12 review exists"; that was the state when §10 was written (2026-11-20). An r12 independent static review dated 2026-11-21 exists and is listed below; it is the review r13 answers. Locations for r12 and r13 are relative to the Owner's download folder (historical inputs, §7); r14 is in the Owner-approved private vault (path not published).
+
+| # | Artifact | Location | Bytes | SHA-256 | Class |
+|---|---|---|---:|---|---|
+| R12-5 | r12 independent static review (ChatGPT, 2026-11-21; advisory) | download folder (top level) | 16972 | `0a4f87847b018f93ba1e9f9c82281b44db0ba1d5cac5b7993c81f421327ee3bc` | HASH_VERIFIED_COPY_CUSTODY_UNVERIFIED (received as a chat attachment; reference: r14 author input record) |
+| R13-1 | Contract r13 | `DPT-GATE-012-U01-r13/` | 408158 | `8a50135d1653ab115047ba1fc2fc21bbc94a290d03235db922435874097ba77a` | VERIFIED_ORIGINAL (author's recorded location; reference: S8 and the Owner's closeout prompt) |
+| R13-2 | Gate Package r13 | `DPT-GATE-012-U01-r13/` | 22740 | `176fcafc5605091b2ab3bf9d9bc8b0a97e6366ac9d801f18ac4709f44d45c0c8` | VERIFIED_ORIGINAL |
+| R13-3 | README r13 | `DPT-GATE-012-U01-r13/` | 23245 | `614b1069a51bd9b7e2befa49cc4b940548d3db186330159249fe234e1b9b6436` | VERIFIED_ORIGINAL |
+| R13-4 | Verification Handoff r13 | `DPT-GATE-012-U01-r13/` | 8403 | `012782a2b8769fb23f56c0cc9bdd4e112721a176ce1ec68b158d59c79248d065` | VERIFIED_ORIGINAL |
+| R13-5 | r13 independent static review (ChatGPT, 2026-11-21; advisory) | download folder (top level, and a second identical copy in the r14 handoff folder) | 15989 | `b170e32f076d75afe36ed029dd000e469c197616483affb0facae2c51114dcbc` | HASH_VERIFIED_COPY_CUSTODY_UNVERIFIED (both copies) |
+| R14-1 | Contract r14 (PROPOSED; not reviewed) | private vault | 418450 | `9a97aa61587d9ba419ad6a6c08bfbadb2607de3ab7621b911ac0714ea36262e3` | AUTHOR_OUTPUT (same session wrote and hashed it) |
+| R14-2 | Gate Package r14 | private vault | 27825 | `1f633dffa86693e229395782ab8b075543dc14552f0aa39cf0ecc62a9f3a6c92` | AUTHOR_OUTPUT |
+| R14-3 | README r14 | private vault | 23034 | `a5a0d14b005e8cd1e4b99293acd97db0ef18734ba7483ce54c967b957ced9c7b` | AUTHOR_OUTPUT |
+| R14-4 | Verification Handoff r14 | private vault | 11989 | `8f5b00d0fd5a82bdd11edef43dea19a7d8369820787f22ec622dd56ad2a9a888` | AUTHOR_OUTPUT |
+| R14-5 | S8 private author report | private vault | 6343 | `21950b6f48ada6b45d8f0056aa405ed8685901627066331aca55488a8da9e705` | AUTHOR_OUTPUT; `PRIVATE_EVIDENCE_NOT_PUBLISHED` |
+| R14-6 | r14 author build and check tools | private vault | — | input hashes in the tools' own record | AUTHOR_TOOLING (never U01 code) |
+
+- Result: 12 of 12 hashed files match their recorded values (R12-5, R13-1 to R13-5 with both review copies, R14-1 to R14-4, and contract r12 `f475d17c…cebc7` from §10); R14-5 is hashed here for the first time. No MISSING or HASH_MISMATCH result.
+- None of these bytes is committed. A hash match proves byte identity only; custody and reviewer independence are not established (§4).
+- Resumption: [[DPT-GATE-012_U01_Security_Resumption_Handoff]]. Continuation rules (§8) apply unchanged.

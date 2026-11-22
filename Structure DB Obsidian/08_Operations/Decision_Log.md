@@ -476,3 +476,13 @@ Owner decision given in the agent chat on 2026-11-22 (the channel is not indepen
 - **Open governance item:** the unmerged DPT-GOV-WORKFLOW-001 amendment (Draft PR #33) still names `Downloads\<TOPIC_ID>\Responses\` for private reports; the Owner decides how to align it.
 
 Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA, BatchB and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §17.
+
+## DPT-GATE-012 / U01 — documentation closeout scope — 2026-11-22 S9
+
+**Owner instruction given in the agent chat on 2026-11-22 (the channel is not independently authenticated; provisional under PG-2):**
+
+- [PR #32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) is completed as a **SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED**: its criterion is an accurate, public-safe record of the U01 history and continuation plan, not security approval. Merging it confirms only the documentation snapshot.
+- Status to record: latest candidate PROPOSED r14, NOT APPROVED; R13-IR-01/02/03 addressed in proposed text, independent disposition pending; R14-AR-01 author-identified LOW, proposed correction, independent disposition pending; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 acceptance specifications executed; no security implementation authorization.
+- Integrate the merged `main` by a non-destructive merge that keeps both histories; no rebase, reset or force-push; no r15, runtime test, Docker or database operation for the closeout.
+
+**Not decided here:** the r14 reviewer, Q-F, every later gate, the PR8 disposition and the overall handoff PR. See [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §5.
