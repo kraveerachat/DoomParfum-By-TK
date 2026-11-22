@@ -427,3 +427,13 @@ Owner decisions given in the agent chat on 2026-11-21 (the channel is not indepe
 - **Residual risk accepted by the Owner:** an administrative Owner credential was used, with its limits enforced by agent procedure rather than technically. The PRs are Owner-authored, which is not security attestation (PG-1). No independent trust root is established.
 
 Unchanged: r12 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §16.
+
+## DPT-GATE-012 / U01 — Owner private-storage decision — 2026-11-22 S8
+
+Owner decision given in the agent chat on 2026-11-22 (the channel is not independently authenticated; provisional under PG-2):
+
+- **Private vault.** Full private U01 contracts, author tooling and complete author reports go to a new, dedicated private Obsidian vault outside every Git repository (path deliberately not published). The public project vault receives only separately written, sanitized summaries that cite hashes.
+- **No new Downloads copies.** From r14 onward, no new persistent copy or handoff folder is created in the download folder; existing Downloads files are read only as historical inputs.
+- **Open governance item:** the unmerged DPT-GOV-WORKFLOW-001 amendment (Draft PR #33) still names `Downloads\<TOPIC_ID>\Responses\` for private reports; the Owner decides how to align it.
+
+Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA, BatchB and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §17.

@@ -1037,3 +1037,11 @@ Class A. Starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`. r12 not re-aut
 | 2026-11-21 | DPT-GATE-012 / U01 / S7 | Claude Code `8ee88547` (docs coordinator and publisher; not independent) | NA (documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32)) | NA | U01 task note (§2, §13, §16), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S7 report | protection on `main` verified read-only; PR #32 OPEN/Draft verified; diff and sensitive checks clean; validate_docs baseline unchanged | Published; security status unchanged | the S7 commit (pushed to the PR branch) |
 
 Class A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9`. Branch pushed without force; no push to `main`, merge, auto-merge, settings or ruleset change; no review, runtime test or U01 code. Open item: "Restrict updates" not configured. See [[DPT-GATE-012_U01_Security_Gate]] §16.
+
+### 2026-11-22 — DPT-GATE-012 / U01 / S8 — proposed r14 targeted repair (static authoring; private vault)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | DPT-GATE-012 / U01 / S8 | Claude Code `57690f5c` (r14 author; not independent) | NA (documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), unchanged) | NA | U01 task note (§2, §13, §17), Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S8 report (sanitized), S8 summary | r13 inputs and review 8/8 hash match before/after; author checks 48/48, cross-document 35/35, audit 0 unmapped, model 43/43; 0 of 169 specs run; PowerShell/.NET/signatures NOT RUN | r14 PROPOSED (CONDITIONAL — NOT READY); independent r14 review PENDING | NOT CREATED (local only, not pushed) |
+
+Class A. Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5`. r14 bytes are kept in an Owner-approved private vault outside the repository; only hashes are recorded here. No Git write, PR update, review, runtime test or U01 code. See [[DPT-GATE-012_U01_Security_Gate]] §17.

@@ -794,3 +794,7 @@ Recorded the r12 revision (authored outside the repository; not reviewed) in [[D
 ## 2026-11-21 — DPT-GATE-012 / U01 / S7 — Draft PR #32 published
 
 Pushed `docs/dpt-gate-012-security-history` (head `3c50d0e`) and opened the single U01 documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) to `main`, under a one-time Owner-login publication exception. Recorded the publication in [[DPT-GATE-012_U01_Security_Gate]] §2, §13 and §16, the Decision Log, Project_Status, and [[2026-11-21_DPT-GATE-012-U01_S7_Publication_Report]] (with an identical private copy). r12 and all security statuses are unchanged. Open configuration item: "Restrict updates" is not configured.
+
+## 2026-11-22 — DPT-GATE-012 / U01 / S8 — proposed r14 recorded (local only)
+
+Recorded the r13 review result and the PROPOSED r14 candidate (contract `9a97aa61…62e3`, authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §13 report index, §17 session), with the sanitized [[2026-11-22_DPT-GATE-012-U01_S8_r14_Report]] and the session summary [[2026-11-22_DPT-GATE-012-U01_S8_r14_Summary]] (new folder `08_Operations/Summaries/DPT-GATE-012-U01/`). Not committed or pushed; Draft PR #32 unchanged. Security status unchanged: CONDITIONAL — NOT READY; G-IND NOT SATISFIED.
