@@ -780,3 +780,7 @@ Same branch and PR scope. `DEVELOPMENT_WORKFLOW.md` gains §4.7 (each meaningful
 ## 2026-11-21 — DPT-GOV-WORKFLOW-001 / S4 — Draft Planning PR33 published
 
 Pushed `plan/agent-workflow-pr-routing` (head `f5f2597`) and opened Draft Planning [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) to `main` under a one-time Owner-login exception, separate from the U01 documentation Draft [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32). Recorded it in [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]], Project_Status, the Decision Log and [[2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report]] (with an identical private copy). No governance text changed.
+
+## 2026-11-22 — DPT-GOV-WORKFLOW-001 / S5 — Owner reporting model (proposed, local)
+
+Same branch and PR scope. `DEVELOPMENT_WORKFLOW.md` §4.7 is rewritten as "Session records": per meaningful writable session, one full execution report (`08_Operations/Reports/<TOPIC_ID>/`), one short summary (`08_Operations/Summaries/<TOPIC_ID>/`, new) and an update of the canonical task overview, all public-safe or sanitized; sensitive originals only in a separately Owner-approved private vault (custody and backup in the private OCD record, PENDING until verified); no new Downloads copies. The S3 dual-report rule is withdrawn by name. Also DW §2, §4.4, §4.5, §5.7; AGENTS §8.1, §9; the vault README tree. Local commit only, not pushed ([[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S5).

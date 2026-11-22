@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: governance
 status: acceptance-pending
 owner: human-owner
-updated: 2026-11-20
+updated: 2026-11-22
 tags: [doomparfum, governance, workflow, obsidian, github]
 source_of_truth: "../../../README.md"
 ---
@@ -18,7 +18,8 @@ source_of_truth: "../../../README.md"
 - Branch: `plan/agent-workflow-pr-routing`, isolated worktree `.local/worktrees/agent-workflow-pr-routing`
 - Base: verified `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (PR31 merge)
 - PR / Target branch: **Draft [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)** → `main` (OPEN, Draft, created 2026-11-21 S4 under a one-time Owner-login exception; see Session S4). Before S4: PR_NOT_CREATED / NOT_PUSHED.
-- Current state: ACCEPTANCE PENDING. The branch is published as a Draft Planning PR. Independent review and Owner merge are pending. Open configuration item: "Restrict updates" is not configured.
+- Current state: ACCEPTANCE PENDING. The branch is published as a Draft Planning PR. Independent review and Owner merge are pending. Open configuration item: "Restrict updates" is not configured (re-verified 2026-11-22, S5).
+- S5 (2026-11-22): the Owner reporting model replaces the Downloads dual-report rule. The S5 checkpoint is a **local commit only** (`AGENT_CREDENTIAL_REQUIRED`, `NOT_PUSHED`); PR33 on GitHub stays at `582d1e6` until it is published.
 - Production mutation allowed: NO. Application code change: NO.
 
 ## Goal / Why
@@ -31,6 +32,7 @@ The Owner wants every meaningful agent activity recorded in Obsidian and tied to
 - `DEVELOPMENT_WORKFLOW.md`: new §3.6, §5.6, §5.7 and §6.2.1; extensions to §4.3, §4.4 and §4.5; frontmatter version 1.1.0.
 - This note, plus dated entries in Agent_Run_Log, Change_Log, Decision_Log, Project_Status and Project_Index.
 - S3 (Owner directive, 2026-11-20): dual execution reports (DW §4.7 new; §4.4, §4.5 and the §1 tree; vault README tree; AGENTS §8.1), the agent/Owner responsibility split, and the agent publishing identity (DW §5.6; AGENTS §8.1), plus this task's first execution report under `08_Operations/Reports/DPT-GOV-WORKFLOW-001/`.
+- S5 (Owner instruction, 2026-11-22): the reporting model replaces the S3 dual-report rule (DW §4.7 rewritten; §4.4, §4.5, §5.7, §2; AGENTS §8.1, §9; vault README tree), plus the S5 report and summary.
 
 ## Out of Scope
 
@@ -85,6 +87,10 @@ The Owner wants every meaningful agent activity recorded in Obsidian and tied to
 | `DEVELOPMENT_WORKFLOW.md` | §5.6 (S3) | Responsibility split (agent publishes, Owner reviews and merges); publishing is not approval; agent publishing identity requirements; `AGENT_CREDENTIAL_REQUIRED`; Owner-run publication reworded as an exception |
 | `AGENTS.md` | §8.1 (S3) | New "Dual execution report" bullet; the publication bullet now states the responsibility split and points to the agent identity in DW §5.6 |
 | `Structure DB Obsidian/README.md` | folder tree (S3) | `Reports/<TOPIC_ID>/` line |
+| `DEVELOPMENT_WORKFLOW.md` | §4.7 (rewritten, S5) | Session records: full report, summary and task overview per meaningful writable session in the vault; private vault for sensitive originals; `PRIVATE_RETENTION_NOT_CONFIGURED`; OCD custody, PENDING until verified; Downloads as historical input only. Replaces the S3 dual-report text, which it names. |
+| `DEVELOPMENT_WORKFLOW.md` | §2, §4.4, §4.5, §5.7 (S5) | Routing-by-complexity paragraph; report/summary field; `Summaries/<TOPIC_ID>/` row; private-vault bullets |
+| `AGENTS.md` | §8.1, §9 (S5) | "Session records" bullet replaces "Dual execution report"; one recommendation-map row |
+| `Structure DB Obsidian/README.md` | folder tree (S5) | `Summaries/<TOPIC_ID>/` line |
 
 No existing accepted sentence was deleted or reworded. S3 rewords only two sentences that this unmerged PR added in S1 (the "give the Owner the exact next commands" fallback in AGENTS §8.1 and DW §5.6). The Owner directive of 2026-11-20 makes Owner-run publication an exception, not the normal path. AGENTS.md states each new rule briefly and defers to DEVELOPMENT_WORKFLOW.md for detail, so the two files cannot diverge on substance.
 
@@ -100,7 +106,9 @@ No existing accepted sentence was deleted or reworded. S3 rewords only two sente
 - [x] Public-repository rules are preserved and extended; only the Human Owner merges.
 - [x] No application files changed; no secrets committed (see the Test / Evidence Ledger).
 - [x] S3: dual execution-report rule and agent publishing identity are defined, additively, without duplicating existing rules.
-- [ ] Draft Planning PR published (blocked: `AGENT_CREDENTIAL_REQUIRED`).
+- [x] Draft Planning PR published (S4: PR33, under a one-time Owner-login exception).
+- [x] S5: the Owner reporting model replaces the Downloads dual-report rule, without changing accepted text on `main`.
+- [ ] S5 checkpoint published to PR33 (blocked: `AGENT_CREDENTIAL_REQUIRED`).
 - [ ] Independent review of the amendment.
 - [ ] Human Owner review and merge.
 
@@ -125,16 +133,19 @@ This task did not modify the recovery branch. The two branches append to the sam
 | S1 | Audit, amend governance, record, local checkpoint | CLOSED | PARTIAL (publication BLOCKED) | `2903c96537c5eca2c68568b3911a899235b38aea` | Ledger below |
 | S2 | Publication-readiness re-verification, integration simulation, sanitization correction | CLOSED | PARTIAL (publication BLOCKED) | `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46` | Session S2 below |
 | S3 | Owner directive: dual execution reports, agent-managed publication, agent identity | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | `f5f2597af1ff729f83f05bef053227970f8b0bfb` | Session S3 below; Reports index |
-| S4 | Publication under a one-time Owner-login exception; Draft PR33 | CLOSED | PUBLISHED (Draft) | S4 checkpoint commit (pushed to the PR33 branch) | Session S4 below; Reports index |
+| S4 | Publication under a one-time Owner-login exception; Draft PR33 | CLOSED | PUBLISHED (Draft) | `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa` (verified 2026-11-22 as PR33 head) | Session S4 below; Reports index |
+| S5 | Owner reporting model replaces the Downloads dual-report rule (closeout Stage 1) | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | local S5 commit, NOT PUSHED (recorded by the next session) | Session S5 below; Reports index |
 
 ## Reports
 
-Execution reports for this task (DW §4.7). S1 and S2 predate the rule and have no separate report; their records are the session sections below.
+Execution reports and summaries for this task (DW §4.7). S1 and S2 predate the rule and have no separate report; their records are the session sections below. S3 and S4 followed the withdrawn dual-report rule; their Downloads copies stay as historical records.
 
 | File | Session | SHA-256 | Kind |
 |---|---|---|---|
 | `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-20_DPT-GOV-WORKFLOW-001_S3_Report.md` | S3 | `fe14722af37ed02b71c014fa9fc0ae15f6cce505ddfd7aed14cbc8869f552cad` | public-safe; identical private copy in `Downloads\DPT-GOV-WORKFLOW-001\Responses\` |
 | `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report.md` | S4 | `bc5ccf02033169a158675e39e12f4a8487e19601096b597a72e28f83d0979cb6` (4224 B) | public-safe; identical private copy in `Downloads\DPT-GOV-WORKFLOW-001\Responses\` (parity verified) |
+| `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S5_Report.md` | S5 | `bee3b8134bae8e88b67a06342f946cd8ac4e5b0a2ed4db16ea756c14316e80b0` (6645 B) | PUBLIC_SAFE full report; no private copy (DW §4.7 as amended) |
+| `08_Operations/Summaries/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S5_Summary.md` | S5 | `ee373a0dceca0f3f435af78b2d968880b672adf42742e871805e75373c54e025` (1367 B) | PUBLIC_SAFE session summary |
 
 ### Session S1 — governance amendment and recovery status check
 
@@ -274,12 +285,42 @@ No push or `gh pr create` was attempted. The least-privilege prerequisite is now
 
 **Tests:** `git diff --check` clean; sensitive scan of the added lines and the PR body 0 matches; `database/validate_docs.py --task IMP-P1-02` 52 errors, the same set as the starting HEAD (0 new). **Not executed:** independent review; Markdown rendering.
 
+### Session S5 — Owner reporting model replaces the Downloads dual-report rule
+
+- State: CLOSED (local checkpoint; publication BLOCKED)
+- Task ID / Session ID: DPT-GOV-WORKFLOW-001 / S5, Claude Code session `57690f5c-ef81-4fad-9ef8-281022bc87f4`
+- Agent / Role: Claude Code, governance author of this change; not an independent reviewer
+- Date: 2026-11-22. Intake class: A (closeout Stage 1; same task, branch and Draft PR33)
+- Applicable plan: this task's scope (DW §4.7 and the AGENTS §8.1 bullet were added by this unmerged PR in S3)
+- Branch / PR (verified): `plan/agent-workflow-pr-routing` = `origin/plan/agent-workflow-pr-routing` = PR33 head `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa`; PR33 OPEN, Draft; `main` `183f1d857d83b64819762a2237c908fb95e36cb4`; no PR34
+- Starting SHA: `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa` (clean worktree)
+- Do-not-touch: the U01 worktree and its uncommitted S8 notes (not touched); application code; runtime; Docker; database
+
+**Owner decision used (agent chat, 2026-11-22; provisional):** the reporting model in DW §4.7 as rewritten here (full report, summary and task-overview update per meaningful writable session in the vault; sensitive originals only in a separately approved private vault; no new Downloads copies; vault custody and backup in the private OCD record, PENDING until verified; one receipt per completed task), and Claude Code / Codex routing by complexity.
+
+**Work performed / exact files:** `DEVELOPMENT_WORKFLOW.md` §4.7 rewritten (the withdrawn rule is named), §4.5 summary row, §4.4 report/summary field, §5.7 private-vault bullets, §2 routing paragraph; `AGENTS.md` §8.1 "Session records" bullet (replaces "Dual execution report"), §9 one row; `Structure DB Obsidian/README.md` tree line; this note; `08_Operations/Agent_Run_Log.md`; `Change_Log.md`; `Decision_Log.md`; `00_Home/Project_Status.md`; the S5 report and summary (new; new folder `08_Operations/Summaries/DPT-GOV-WORKFLOW-001/`).
+
+**Verified state (read-only GET):** repository public; auto-merge disabled; effective `main` rules are PR-required, non-fast-forward and deletion protection. **Owner-only update ("Restrict updates") is still not configured**, so Owner-only merge enforcement remains OPEN. Only the Owner's own GitHub login is present; no dedicated agent identity.
+
+**Tests & evidence:** `database/validate_docs.py --task IMP-P1-02` in throwaway detached worktrees: HEAD `582d1e6` 52 errors; S5 tree 52 errors. Without `--task`: 54 and 54. The error sets are identical (0 new, 0 fixed; all pre-existing). `git diff --check` clean. Sensitive scan of the added lines (private paths, tokens, keys, account e-mail, ruleset IDs): 0 matches (4 hits on the generic phrase "private-vault", not a path).
+
+**Tests not executed:** independent documentation review (no reviewer outside the authoring account is available to the agent); Markdown rendering; any runtime, database, Docker, PowerShell or security test.
+
+**Result:** PARTIAL — local checkpoint; `AGENT_CREDENTIAL_REQUIRED` / `LOCAL_ONLY` / `NOT_PUSHED`. The Owner-login exception of 2026-11-21 has expired and was not used.
+
+**Security / privacy:** no private vault path, credential, host or ruleset identifier is published.
+
+**Next action:** the Owner provides a dedicated agent identity or authorizes a new one-time publication of this checkpoint; configures Owner-only updates on `main`; optionally commissions an independent docs review; reviews and merges PR33. Closeout Stage 2 (PR32) starts only after that merge is verified.
+
+**Execution report and summary:** see Reports above (S5 rows; both PUBLIC_SAFE).
+
 ## Latest Git Checkpoint / SHA
 
-S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. S3: `f5f2597af1ff729f83f05bef053227970f8b0bfb`. S4: the commit that adds this text, pushed to `origin/plan/agent-workflow-pr-routing` and visible in PR33's commit list.
+S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. S3: `f5f2597af1ff729f83f05bef053227970f8b0bfb`. S5: a local commit on top of S4, NOT PUSHED (its SHA is recorded by the next session and the PR). S4: `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa`, the commit that adds this text, pushed to `origin/plan/agent-workflow-pr-routing` and visible in PR33's commit list.
 
 ## Handoff / Next Action
 
 1. Independent reviewer: review AGENTS.md §2.1/§8.1 and DW §3.6/§4.3–§4.7/§5.6/§5.7/§6.2.1 for clarity and contradiction.
 2. Owner: review PR33, including the Hybrid policy wording in §5.6, and configure "Restrict updates" before granting any write-capable agent identity and before the final merge.
-3. Next session (class A): apply any review corrections on this same branch and PR33. Future publication uses a dedicated agent identity, or a new explicit Owner exception.
+3. S5 (2026-11-22): publish the local S5 checkpoint to PR33 with an authorized identity; then the Owner reviews and merges. Closeout Stage 2 (PR32) waits for the verified merge.
+4. Next session (class A): apply any review corrections on this same branch and PR33. Future publication uses a dedicated agent identity, or a new explicit Owner exception.

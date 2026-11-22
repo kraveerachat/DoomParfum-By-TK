@@ -414,3 +414,15 @@ Owner decisions given in the agent chat on 2026-11-21 (the channel is not indepe
 - **Proceed despite the missing "Restrict updates" rule** (explicit Owner confirmation). It is an **OPEN configuration item**: resolve it before granting any write-capable agent identity and before the final merge.
 - **Residual risk:** an administrative Owner credential was used, with its limits enforced by agent procedure rather than technically. Owner-account authorship is not security attestation.
 - **Effect on this PR:** DW §5.6 already treats Owner-run publication as an exception. Explicit Hybrid wording is an Owner review point; it is not changed here.
+
+## DPT-GOV-WORKFLOW-001 — Owner reporting model — 2026-11-22 S5
+
+**Owner instruction received in the agent chat (not independently authenticated; provisional until this PR is merged):**
+
+- Every meaningful writable agent session keeps one full execution report, one short session summary and one update of the living canonical task overview, all in `Structure DB Obsidian/`, public-safe or sanitized.
+- Sensitive full reports and private security artifacts go only to a separately Owner-approved private vault outside every Git repository, never to public GitHub, and no longer to persistent `Downloads` mirrors. The S3 dual-report rule is withdrawn.
+- The private vault's existence, custody and backup status are recorded in the Owner's private OCD record, without publishing its path; until verified they are PENDING.
+- The final immutable receipt remains one per completed reviewable task.
+- Prefer Claude Code for high-complexity architecture, security and history work and Codex for bounded implementation, tests and fixes, without waiving approval gates or reviewer independence.
+
+Proposed governance text: DW §4.7 and AGENTS §8.1 (S5). In effect only after the Owner merges PR33. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S5.

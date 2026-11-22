@@ -83,7 +83,8 @@ Structure DB Obsidian/
 │   ├── Agent_Run_Log.md                     # บันทึกประวัติการทำงานของ Agent แต่ละรอบ
 │   ├── Pending_Questions.md                 # บันทึกคำถามที่ยังค้างอยู่
 │   ├── Receipts/                            # ใบเสร็จสรุปงานและผลทดสอบ (Immutable Receipts)
-│   ├── Reports/<TOPIC_ID>/                  # per-session execution reports, public-safe or sanitized (DEVELOPMENT_WORKFLOW.md §4.7)
+│   ├── Reports/<TOPIC_ID>/                  # per-session full execution reports, public-safe or sanitized (DEVELOPMENT_WORKFLOW.md §4.7)
+│   ├── Summaries/<TOPIC_ID>/                # per-session short summaries, public-safe or sanitized (DEVELOPMENT_WORKFLOW.md §4.7)
 │   └── Handoffs/                            # ชุดส่งต่องานระหว่าง Agent (Continuity Packs)
 ├── 09_References/                           # ดัชนีแหล่งอ้างอิง
 │   └── Reference_Index.md                   # ดัชนีลิงก์ เอกสารเทคนิค และสถานะสิทธิ์

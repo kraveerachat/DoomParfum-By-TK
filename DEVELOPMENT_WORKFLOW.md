@@ -144,6 +144,8 @@ DoomParfum By TK/
 | **Gemini / Documentation Agent** | Obsidian status, ERD/Docs/Session Register/PR description reconciliation, research summary ที่มี source | โหมด Docs-only ห้ามแก้ app code หรืออ้างผลทดสอบที่ไม่ได้ตรวจ |
 | **ETL / Research Agent** | ตรวจ schema แหล่งข้อมูล, import licensed datasets, validate provenance, deduplicate | ห้าม ingest เนื้อหาที่ไม่มีสิทธิ์, เก็บ session token, bypass anti-bot, ตีค่าข้อมูลที่หายเอง |
 
+**Routing by complexity (S5 of DPT-GOV-WORKFLOW-001):** prefer Claude Code for high-complexity architecture, security and cross-document history work, and Codex for bounded implementation, tests and fixes. The choice never waives an approval gate, the Owner-only merge, or reviewer independence.
+
 > Agent แต่ละตัวทำหลายบทบาทได้เมื่อผู้ใช้มอบหมาย แต่ **บทบาทและ permissions ต้องระบุใน Task Map ทุกครั้ง**. งานเล็กใช้ Agent เดียวสำหรับ code+docs ได้; งานเสี่ยงสูงให้แยก Coding/Review/Docs.
 
 ### 2.1 Tool recommendation block (ต้องมีใน handoff ที่สั่ง Agent ทำงาน)
@@ -365,7 +367,7 @@ Starting SHA:
 #### Known limitations / Remaining work
 #### Current task status / Next recommended action
 #### Git checkpoint SHA / Next session / Handoff
-#### Execution report (file, SHA-256, public-safe or sanitized; §4.7)
+#### Execution report and session summary (files, SHA-256, PUBLIC_SAFE or SANITIZED; a private report by SHA-256 only; §4.7)
 ```
 
 End-of-session note ต้องสอดคล้องกับ evidence จริง; failure ต้องระบุ `introduced / pre-existing / environmental / blocked by dependency / not tested`.
@@ -400,7 +402,8 @@ POST-MERGE (if required)
 |---|---|
 | `07_Delivery/Tasks/<TASK_ID>_<slug>.md` | Always: the session record (§4.4), appended to the one canonical task note |
 | `08_Operations/Agent_Run_Log.md` and/or `Change_Log.md` | Always: one dated entry linking the task note (§7.2) |
-| `08_Operations/Reports/<TOPIC_ID>/` | Always: the session's execution report, public-safe or sanitized (§4.7) |
+| `08_Operations/Reports/<TOPIC_ID>/` | Always: the session's full execution report, public-safe or sanitized (§4.7) |
+| `08_Operations/Summaries/<TOPIC_ID>/` | Always: the session's short summary, public-safe or sanitized (§4.7) |
 | `08_Operations/Decision_Log.md` | A decision was proposed, changed, or verified as an Owner decision |
 | `08_Operations/Handoffs/` | The work is handed to another agent or chat, or a major topic ends (§10) |
 | `00_Home/Project_Status.md` | The task's state, PR state, or the project's current truth changed |
@@ -436,26 +439,31 @@ OBSIDIAN_FILES_UPDATED
 REVIEW_READINESS / NEXT_OWNER_ACTION
 ```
 
-### 4.7 Dual execution reports (one per meaningful session)
+### 4.7 Session records: execution report, session summary and task overview (one set per meaningful session)
 
-Every meaningful session (§4.3) produces one Markdown **execution report**: the agent's complete end-of-session report to the Owner. It contains the TOOL DECISION and TOOL EXECUTION REPORT, the work performed, the exact checks and their results, failures, limitations, Git SHAs and the verified PR state. It is a separate record from the others:
+Every meaningful writable session (§4.3) leaves three records in the canonical vault `Structure DB Obsidian/`. **Replaced in S5 of DPT-GOV-WORKFLOW-001 (2026-11-22):** the earlier "dual report" rule, which also kept a private copy in the Owner's `Downloads` folder, is withdrawn by Owner decision; no new persistent `Downloads` copy or ad-hoc handoff folder is created.
 
 | Record | Holds | Location |
 |---|---|---|
-| Execution report | One session, complete | Private copy: `Downloads\<TOPIC_ID>\Responses\` on the Owner's machine, outside the repository. Vault copy: `Structure DB Obsidian/08_Operations/Reports/<TOPIC_ID>/` |
-| Canonical task note | The task summary, its session register, and an index of its reports | `07_Delivery/Tasks/` (§4.2, §4.4) |
+| Full execution report | One session, complete: TOOL DECISION and TOOL EXECUTION REPORT, the work performed, exact paths, the tools actually used, the files changed, the checks run with their results and the checks NOT RUN, hash and evidence identity, task, session, branch, PR and commit, failures, limitations, and the verified current state | `08_Operations/Reports/<TOPIC_ID>/` (public-safe or sanitized) |
+| Session summary | The same session in a few lines: what, where, checks, status, Git state, next action | `08_Operations/Summaries/<TOPIC_ID>/` (public-safe or sanitized) |
+| Canonical task overview | The living task summary, its session register (§4.4) and an index of its reports and summaries | `07_Delivery/Tasks/` (§4.2, §4.4); one note per task |
+| Private full report and private artifacts | Only when content is sensitive (§5.7): the complete report, raw security contracts, raw reviews | A separately Owner-approved private vault, outside every Git repository; never in GitHub; its path is never published |
 | Project status | Project-wide current truth | `00_Home/Project_Status.md` |
-| Immutable receipt | One per reviewable task, at acceptance | `08_Operations/Receipts/` (§4.6) |
+| Immutable receipt | One per completed reviewable task, at acceptance; never one per session | `08_Operations/Receipts/` (§4.6) |
 
 1. `<TOPIC_ID>` names the major workstream, for example `DPT-GATE-012-U01` or `DPT-GOV-WORKFLOW-001`. Reuse an existing topic folder; do not create a parallel one.
-2. File name: `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Report.md`, for example `2026-11-20_DPT-GOV-WORKFLOW-001_S3_Report.md`. Once committed, a report is never overwritten or edited. A correction goes in a later report that names the report it corrects.
-3. **Public-safe report:** both copies have identical bytes, including the vault frontmatter. Record the SHA-256 in the task note only after verifying that both copies produce it.
-4. **Report with sensitive content** (secrets, credential or host facts, exploit detail, a raw security review): the raw report stays only in approved private storage. The vault receives a separately written sanitized report that gives the raw report's SHA-256 and says it is sanitized. Never describe the two as identical.
-5. Commit the vault copy on the task's own branch and PR, in the same checkpoint as the session record. A report cannot contain the SHA of the commit that adds it, so the next session or the PR records that SHA.
-6. List every report in a **Reports** index in the canonical task note, giving the file, session, SHA-256, and whether it is public-safe or sanitized.
-7. Claim that the copies are synchronized only after checking both files, their hashes, and the Git state.
-8. A read-only reviewer (§6.2.1) writes only the private copy. An authorized documentation session adds the vault copy later.
-9. The rule applies from its adoption onward. Do not publish earlier raw reports to satisfy it.
+2. File names: `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Report.md` and `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Summary.md`. Once committed, a report or summary is never overwritten or edited. A correction goes in a later record that names the one it corrects.
+3. **Public-safe session:** the vault report is the complete report; no second copy is kept anywhere.
+4. **Sensitive session** (secrets, credential or host facts, exploit detail, raw security contracts or reviews): the complete report and the raw artifacts stay only in the approved private vault. The canonical vault receives a separately written report marked **SANITIZED**, which gives the private report's SHA-256 and states `PRIVATE_EVIDENCE_NOT_PUBLISHED`. Never describe the two as identical.
+5. **No approved private vault:** report `PRIVATE_RETENTION_NOT_CONFIGURED`, write no sensitive material anywhere (not to the repository, not to `Downloads`), stop that part of the work, and ask the Owner for a decision. Sanitized public records may still be written.
+6. **Private-vault custody:** the vault's existence, custody and backup status are recorded in the Owner's private OCD record, not in the repository. Public notes say only that an Owner-approved private vault holds the original, never where. Until the Owner has verified custody and backup, record them as **PENDING**, never as complete.
+7. Existing files in `Downloads` (earlier reports and revisions) are historical inputs: read them by exact bytes and hash, never move, edit or delete them, and never use `Downloads` as a new destination.
+8. Commit the report, the summary and the task-note update on the task's own branch and PR, in the same checkpoint as the session record. A record cannot contain the SHA of the commit that adds it, so the next session or the PR records that SHA.
+9. List every report and summary in the **Reports** index of the canonical task note: file, session, SHA-256, and `PUBLIC_SAFE` or `SANITIZED`. A private report is listed by its SHA-256 only.
+10. Claim that a record is published only after checking the remote branch and the PR; until then report `LOCAL_ONLY` / `NOT_PUSHED`.
+11. A read-only reviewer (§6.2.1) writes nothing to the repository or the vault; it delivers its own report outside the repository with its SHA-256. An authorized documentation session reconciles it later without modifying it.
+12. The rule applies from its adoption onward. Earlier reports, including the `Downloads` private copies of S3–S7, stay as they are; they are not republished, rewritten or deleted.
 
 ---
 
@@ -590,7 +598,8 @@ The vault is part of this repository, so a meaningful documentation checkpoint b
 Check the repository's visibility before committing evidence. While the repository is public:
 
 - Never commit secrets, private keys, tokens, credentials, sensitive system paths, or exploit details that should remain confidential.
-- For sensitive reports, commit only a sanitized summary with the original's hash and provenance, and record whether the original is retained privately. Keep raw sensitive evidence outside the repository.
+- For sensitive reports, commit only a sanitized summary with the original's hash and provenance, and record whether the original is retained privately. Keep raw sensitive evidence outside the repository, in the Owner-approved private vault (§4.7); without one, report `PRIVATE_RETENTION_NOT_CONFIGURED`.
+- Never publish the private vault's path, custody details or backup details; they belong in the Owner's private OCD record.
 - Matching hashes show that two copies are identical. They do not prove independent custody.
 - Do not silently delete or rewrite existing records.
 
