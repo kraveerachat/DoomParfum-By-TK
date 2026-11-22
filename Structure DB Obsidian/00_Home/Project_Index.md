@@ -236,3 +236,11 @@ Historical runtime tests remain historical; current planning static/review/publi
 ## Governance — task intake and PR routing
 
 - [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]]: proposed task-intake classification, PR routing, mandatory session recording, read-only review exception and publication rules. ACCEPTANCE PENDING; not merged.
+  - 2026-11-22: merged by the Owner in [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) at `0daafbb`; the governance is in effect on `main` (see [[Project_Status]]).
+
+## DPT-GATE-012 / U01 security gate navigation
+
+- [[DPT-GATE-012_U01_Security_Gate]] — canonical status, r1–r12 history and registers for the proposed P30-U01 field-review security contract; nothing approved or implemented.
+- [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] — artifact inventory, evidence classes, publication omissions and continuation rules.
+- [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: sanitized r12 authoring brief (inputs, R11-IR-01/02 remediation, LOW dispositions, invariants, review conditions). r12 was authored from it on 2026-11-20 (S4); its independent review is PENDING.
+- [[DPT-GATE-012_U01_Security_Resumption_Handoff]]: freeze of 2026-11-22 (S9): frozen r12–r14 artifact hashes, open findings, gates, Owner decisions and the next authorized step (independent r14 review). SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED.

@@ -435,3 +435,54 @@ Proposed governance text: DW §4.7 and AGENTS §8.1 (S5). In effect only after t
 - **Prohibited:** additional commits or branches, merge, auto-merge, force-push, changes to `main`, repository settings or branch protection, PR32, PR8, the r14 worktree, private security artifacts, and runtime, Docker, database or security tests.
 - **Expiry:** immediately after that publication. It was used once (Session S6 records the outcome) and does not cover the S6 checkpoint.
 - **Not decided here:** how the one approving review required by the `main` rules is obtained, and whether "Restrict updates" is configured before the merge. Both remain Owner decisions.
+
+## DPT-GATE-012 / U01 decision state, recovered — 2026-11-20
+
+Recorded by `DPT-DOC-RECOVERY-001`. No decision ID is allocated, and nothing here is an Owner decision.
+
+**VERIFIED OWNER EVENTS relevant to U01:** none. The only verified event in this history is the GitHub merge of PR31 (2026-11-17T14:02:10Z at `183f1d857d83b64819762a2237c908fb95e36cb4`), which approved the POST30-ODP-1 planning packet for review only and decided nothing about U01.
+
+**Owner directions reported by agents, not independently verified:** "Owner items 1–5" applied in r3 (reported by the r3 author); the r10 output folder and the instruction to proceed without the frozen r8/r7 copies (reported by the r10 author); the review and recovery assignments for r7–r11. Under r11 PG-1, a chat or GitHub action is not proof of an Owner decision.
+
+**PROPOSED / PENDING (unchanged):** approval of any revision r1–r11; Q-F; BatchA with acknowledgements of the R7-IR-08 availability, SHA-1 object-identity and pre-OP-1 governance-channel residuals; Q-H rows; Planning PR for U01 (W-01); BatchB; OP-1 (E1–E10), OP-2 (F1–F12), OP-2-TOOL; Q-A1…Q-A7, Q-B…Q-G; DATA-01, DATA-04, D3/SEQ-01, CONTRACT, TASK-ID. Contract recommendations (OP1-A/OP2-A dedicated machine, `sk-ssh-ed25519`, validity windows, MANUAL preparation) and the r11 review's recommendations (narrow r12; different-model or human reviewer; OPR-1/OPR-2/OPR-3) are proposals only.
+
+**Gate state:** latest candidate r11; latest review CONDITIONAL, advisory; G-IND NOT SATISFIED; R11-IR-01 and R11-IR-02 OPEN; r12 NOT STARTED; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]].
+
+## DPT-GATE-012 / U01 decision state — 2026-11-20 S4
+
+No decision ID is allocated, and nothing here is an Owner decision.
+
+- **Owner directions reported through the agent chat channel, not independently verified:** commission r12 and prepare it in a new session; keep one main Draft PR for the U01 documentation workstream; Option A, a dedicated GitHub App or agent identity for publication; keep DPT-GOV-WORKFLOW-001 as a separate PR.
+- **PROPOSED / PENDING (unchanged):** approval of any revision r1–r12; the r12 reviewer; Q-F; BatchA and its acknowledgements; Q-H; BatchB; OP-1 (E1–E12 in r12); OP-2; Q-A1…Q-A8; CONTRACT.
+- **Gate state:** latest candidate r12 (PROPOSED, not reviewed); latest completed review r11, CONDITIONAL and advisory; G-IND NOT SATISFIED; R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only; implementation NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §7.1.
+
+## DPT-GATE-012 / U01 — Owner publication decision — 2026-11-21 S7
+
+Owner decisions given in the agent chat on 2026-11-21 (the channel is not independently authenticated):
+
+- **Hybrid GitHub workflow.** Agents use a dedicated, restricted GitHub identity when one is available. The Owner's own login may be used only through explicit, case-by-case exceptions limited by repository, branches, operations, duration and prohibitions. An exception is never permanent.
+- **One-time publication exception (used in S7).** Owner login, repository `kraveerachat/DoomParfum-By-TK`, branches `docs/dpt-gate-012-security-history` and `plan/agent-workflow-pr-routing` only. Allowed: push both branches; one Draft PR each to `main` (results: [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), [#33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)); documentation checkpoints to the same branches; verification. Prohibited: direct push to `main`, merge, auto-merge, force-push, branch deletion, settings, ruleset or credential changes, production or security-gate operations, unrelated writes. It expires when both PRs and checkpoints are complete, and it does not authorize future sessions or identities.
+- **Proceed despite the missing "Restrict updates" rule** (explicit Owner confirmation). The rule is recorded as an **OPEN governance/security configuration item**, to be resolved before granting any write-capable agent identity and before the final merge. Owner-only merge enforcement is not complete.
+- **Residual risk accepted by the Owner:** an administrative Owner credential was used, with its limits enforced by agent procedure rather than technically. The PRs are Owner-authored, which is not security attestation (PG-1). No independent trust root is established.
+
+Unchanged: r12 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §16.
+
+## DPT-GATE-012 / U01 — Owner private-storage decision — 2026-11-22 S8
+
+Owner decision given in the agent chat on 2026-11-22 (the channel is not independently authenticated; provisional under PG-2):
+
+- **Private vault.** Full private U01 contracts, author tooling and complete author reports go to a new, dedicated private Obsidian vault outside every Git repository (path deliberately not published). The public project vault receives only separately written, sanitized summaries that cite hashes.
+- **No new Downloads copies.** From r14 onward, no new persistent copy or handoff folder is created in the download folder; existing Downloads files are read only as historical inputs.
+- **Open governance item:** the unmerged DPT-GOV-WORKFLOW-001 amendment (Draft PR #33) still names `Downloads\<TOPIC_ID>\Responses\` for private reports; the Owner decides how to align it.
+
+Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA, BatchB and Q-H NOT AUTHORIZED. See [[DPT-GATE-012_U01_Security_Gate]] §17.
+
+## DPT-GATE-012 / U01 — documentation closeout scope — 2026-11-22 S9
+
+**Owner instruction given in the agent chat on 2026-11-22 (the channel is not independently authenticated; provisional under PG-2):**
+
+- [PR #32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) is completed as a **SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED**: its criterion is an accurate, public-safe record of the U01 history and continuation plan, not security approval. Merging it confirms only the documentation snapshot.
+- Status to record: latest candidate PROPOSED r14, NOT APPROVED; R13-IR-01/02/03 addressed in proposed text, independent disposition pending; R14-AR-01 author-identified LOW, proposed correction, independent disposition pending; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 acceptance specifications executed; no security implementation authorization.
+- Integrate the merged `main` by a non-destructive merge that keeps both histories; no rebase, reset or force-push; no r15, runtime test, Docker or database operation for the closeout.
+
+**Not decided here:** the r14 reviewer, Q-F, every later gate, the PR8 disposition and the overall handoff PR. See [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §5.

@@ -788,3 +788,37 @@ Same branch and PR scope. `DEVELOPMENT_WORKFLOW.md` §4.7 is rewritten as "Sessi
 ## 2026-11-22 — DPT-GOV-WORKFLOW-001 / S6 — S5 publication and pre-merge state recorded (local)
 
 The S5 commit `8902bb7` was pushed to [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) after S5 authoring under a one-time Owner-login exception, and the PR description was updated. S6 records that event and the pre-merge state (Draft; 1 approving review required; no "Restrict updates" rule in `main-owner-only-updates`) in [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]], Project_Status, the Agent Run Log, the Decision Log and [[2026-11-22_DPT-GOV-WORKFLOW-001_S6_Report]]. No governance text changed; the S5 records are unchanged. Local commit only, not pushed.
+
+## DPT-DOC-RECOVERY-001 — DPT-GATE-012 security history recovered — 2026-11-20
+
+Documentation only, branch `docs/dpt-gate-012-security-history` from `183f1d857d83b64819762a2237c908fb95e36cb4`.
+
+| Change | Path |
+|---|---|
+| New canonical task record for the U01 security gate: identity, status, r1–r11 timeline (12 items per revision), session, review and finding registers, test/evidence ledger, Owner decisions, blockers | `07_Delivery/Tasks/DPT-GATE-012_U01_Security_Gate.md` |
+| New recovery index and continuity handoff: evidence classes, 34-row artifact inventory with sizes and SHA-256, reviewer limitations, coverage, publication omissions, continuation rules | `08_Operations/Handoffs/DPT-GATE-012_U01_Security_History_and_Recovery_Index.md` |
+| Appended dated sections | `08_Operations/Agent_Run_Log.md`, `08_Operations/Change_Log.md`, `08_Operations/Decision_Log.md` |
+| Inserted current-status section at top; `updated` field | `00_Home/Project_Status.md` |
+| Navigation link | `00_Home/Project_Index.md` |
+
+No code, test, migration, database, evidence JSON, receipt, contract or review file changed. The contracts and reviews themselves stay outside the repository (index §7).
+
+## 2026-11-20 — DPT-GATE-012 / S2 — r12 authoring handoff prepared
+
+Added [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: a sanitized brief for a future r12 that targets R11-IR-01/02 (mandatory) and R11-IR-03…09 (fix or accept with reasons), keeps r11 frozen, and requires a different-model or human reviewer on a non-agent machine and account. Appended an S2 session to [[DPT-GATE-012_U01_Security_Gate]] and an input re-verification (8/8 hashes match) to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. r12 NOT STARTED; no Owner decision; no security status changed. LOCAL_COMMITTED / NOT_PUSHED / PR_NOT_CREATED.
+
+## 2026-11-20 — DPT-GATE-012 / U01 / S4 — r12 recorded
+
+Recorded the r12 revision (authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §3 timeline, §4 r12 record, §5–§9 registers, §7.1 finding-status matrix, §10 blockers, §13 report index, §14 S4 session), appended §10 to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] and a status appendix to [[DPT-GATE-012_U01_r12_Authoring_Handoff]], added the S4 execution report under `08_Operations/Reports/DPT-GATE-012-U01/`, and updated `00_Home/Project_Status.md` and `00_Home/Project_Index.md`. No code, test, database, evidence JSON, receipt, contract or review file is committed.
+
+## 2026-11-21 — DPT-GATE-012 / U01 / S7 — Draft PR #32 published
+
+Pushed `docs/dpt-gate-012-security-history` (head `3c50d0e`) and opened the single U01 documentation Draft PR [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) to `main`, under a one-time Owner-login publication exception. Recorded the publication in [[DPT-GATE-012_U01_Security_Gate]] §2, §13 and §16, the Decision Log, Project_Status, and [[2026-11-21_DPT-GATE-012-U01_S7_Publication_Report]] (with an identical private copy). r12 and all security statuses are unchanged. Open configuration item: "Restrict updates" is not configured.
+
+## 2026-11-22 — DPT-GATE-012 / U01 / S8 — proposed r14 recorded (local only)
+
+Recorded the r13 review result and the PROPOSED r14 candidate (contract `9a97aa61…62e3`, authored outside the repository; not reviewed) in [[DPT-GATE-012_U01_Security_Gate]] (§2 status, §13 report index, §17 session), with the sanitized [[2026-11-22_DPT-GATE-012-U01_S8_r14_Report]] and the session summary [[2026-11-22_DPT-GATE-012-U01_S8_r14_Summary]] (new folder `08_Operations/Summaries/DPT-GATE-012-U01/`). Not committed or pushed; Draft PR #32 unchanged. Security status unchanged: CONDITIONAL — NOT READY; G-IND NOT SATISFIED.
+
+## 2026-11-22 — DPT-GATE-012 / U01 / S9 — documentation snapshot and reconciliation (local)
+
+Committed the S8 r14 records unchanged (`8c62403`) and merged `main` (`0daafbb`, the PR33 merge) into the U01 documentation branch additively (`6a8d72c`; five append-only conflicts resolved with both histories kept). Reconciled [[DPT-GATE-012_U01_Security_Gate]] (§2–§10, §13, new §7.2 and §18) and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (§11) for the r12 review, r13 and PROPOSED r14, correcting by an additive record the earlier statement that no r12 review existed. Added [[DPT-GATE-012_U01_Security_Resumption_Handoff]] and [[2026-11-22_DPT-GATE-012-U01_S9_Report]]. Nothing approved; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 run. Local commits only, not pushed.

@@ -1,0 +1,636 @@
+---
+id: DPT-GATE-012
+project: DoomParfum By TK
+type: task
+status: blocked
+owner: human-owner
+updated: 2026-11-22
+tags: [doomparfum, security-gate, p30-u01, field-review, documentation-recovery]
+source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
+planning_pr: null
+implementation_pr: null
+---
+
+# DPT-GATE-012 / P30-U01 — Field-Review Contract Security Gate
+
+> [!WARNING]
+> **Documentation recovery record only.** This note records the history of a *proposed* security contract. It is not security-design approval, Q-F acceptance, BatchA, Q-H, BatchB, implementation authorization, a runtime test result or a receipt. No U01 code exists. Every authority path is fail-closed **UNAVAILABLE**.
+
+## 1. Identity and scope
+
+| Field | Value |
+|---|---|
+| Task ID | `DPT-GATE-012` (security gate for packet unit `P30-U01`; `P30-U01` is a packet alias, not an allocated implementation task) |
+| Parent planning | [[DPT-PLAN-011_Post_PR30_Data_App_Media_Readiness]] (PR31, Owner-merged at `183f1d857d83b64819762a2237c908fb95e36cb4`) |
+| Packet dependencies | [Post_PR30_Dependency_Model.json](../../08_Operations/Test_Evidence/Post_PR30_Dependency_Model.json): U01 gates `DATA-01` and `DATA-04` of [[Post_PR30_Owner_Decision_Packet]]; data scope is [[Post_PR30_Canonical_Field_Review_Packet]] (46 claims: 43 DEFER / 3 UNKNOWN / 0 ACCEPT) |
+| Subject | `PROPOSED-U01_Field_Review_Contract_Task_r<N>.md`: a contract for an offline validator that derives per-claim human field-review state from an Owner-signed ledger in Git, without touching the database (`review_state`, `canonical_selections`, `selection_guard` stay untouched) |
+| Out of scope (all revisions) | DB writes, migrations, API/UI, real ranking, source acquisition, normalization, hold changes, Production, agent merge, agent signing, key handling, OP-1/OP-2 preparation |
+| Contract artifacts location | Outside the repository, in Owner-workstation staging folders (absolute paths omitted for publication; see [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]) |
+| Recovery task that wrote this note | `DPT-DOC-RECOVERY-001`, branch `docs/dpt-gate-012-security-history`, base `183f1d857d83b64819762a2237c908fb95e36cb4` |
+
+## 2. Current status (verified 2026-11-22, Asia/Bangkok; S9)
+
+```text
+LATEST CANDIDATE:        PROPOSED r14 (418450 B, sha256 9a97aa61587d9ba419ad6a6c08bfbadb2607de3ab7621b911ac0714ea36262e3) — authored 2026-11-22 (S8)
+PREVIOUS CANDIDATES:     r13 (408158 B, 8a50135d…7ba77a; 2026-11-21, session 7dfbd396, no vault record) and r12 (f475d17c…cebc7; S4), both frozen
+LATEST COMPLETED REVIEW: r13 static review (15989 B, b170e32f…dcbc) — CONDITIONAL, NOT READY (0 HIGH / 2 MEDIUM / 1 LOW) — ADVISORY ONLY, NOT G-IND
+EARLIER REVIEW (S9 correction):       r12 static review (16972 B, 0a4f8784…3bc; 2026-11-21) — CONDITIONAL, NOT READY (0 HIGH / 3 MEDIUM / 2 LOW) — ADVISORY ONLY, NOT G-IND
+r14 INDEPENDENT REVIEW:               PENDING (INDEPENDENT_R14_REVIEW_PENDING; must be a different model family or a human, on a non-agent machine and account, hashes conveyed out of band)
+G-IND (independent READY):            NOT SATISFIED (never satisfied for any revision)
+Q-F (review provenance acceptance):   PENDING
+BatchA / Q-H / Planning PR for U01:   NOT GIVEN / NOT AUTHORIZED / NOT CREATED
+BatchB / implementation:              NOT GIVEN / NOT AUTHORIZED
+OP-1 / OP-2 / RE / consumer verifier: UNAVAILABLE (design only; nothing established)
+OPR-1 credential separation:          NOT IMPLEMENTED
+ACCEPTANCE SPECIFICATIONS RUN:        0 of 169 (r13/r14 inventory; all NOT RUN)
+PRIVATE CONTRACT STORAGE:             Owner-approved private vault outside the repository (2026-11-22, provisional; path not published)
+DOCUMENTATION DRAFT PR:               #32 OPEN, Draft, GitHub head 33d92b5; local S8 checkpoint, merge of main 0daafbb and S9 records NOT PUSHED (2026-11-22, S9); a documentation PR, not the U01 Planning PR
+OWNER-ONLY MERGE ENFORCEMENT:         OPEN ("Restrict updates" not configured; the main pull-request rule requires 0 approving reviews; read-only, S9)
+SECURITY IMPLEMENTATION AUTH.:        NONE
+GOVERNANCE:                           DPT-GOV-WORKFLOW-001 merged (PR #33, 0daafbb, 2026-11-22); session records follow DW §4.7
+CLOSEOUT CLASSIFICATION (S9):         SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED
+```
+
+No revision is READY. R13-IR-01 to R13-IR-03 and the author-identified R14-AR-01 are **ADDRESSED IN PROPOSED TEXT (r14)** only; none is independently reviewed, resolved in design or runtime verified (§17). The r12 status below (§7.1) is history.
+
+**S9 (2026-11-22):** R13-IR-01, R13-IR-02 (MEDIUM) and R13-IR-03 (LOW): addressed in r14 proposed text, independent disposition pending. R14-AR-01: author-identified LOW, proposed correction, independent disposition pending. R11-IR-01 remains OPEN (via R13-IR-01, advisory r13 review); R11-IR-02 is ADDRESSED IN DESIGN, NOT OPERATIONALLY CLOSED. Full matrix: §7.2. Resumption: [[DPT-GATE-012_U01_Security_Resumption_Handoff]].
+
+## 3. Historical timeline (summary)
+
+| Rev | Date | Author (session) | Review | Verdict | Spec IDs | Specs run |
+|---|---|---|---|---|---:|---:|
+| r1 | before 2026-11-18 | UNVERIFIED | none | — | — | — |
+| r2 | before 2026-11-18 | UNVERIFIED | separate security/data review (author UNVERIFIED) | not recorded | — | — |
+| r3 | 2026-11-18 | "same author as r1/r2" (UNVERIFIED) | requested, NOT RUN | — | T-* SPECIFIED | 0 |
+| r4 | 2026-11-18 | same author (UNVERIFIED) | requested, NOT RUN | — | T-* SPECIFIED | 0 |
+| r5 | 2026-11-18 | same author (UNVERIFIED) | attempted twice, NOT RUN | — | T-* SPECIFIED | 0 |
+| r6 | 2026-11-18 | same author (UNVERIFIED) | NOT RUN | — | T-* SPECIFIED | 0 (fixture probes only) |
+| r7 | 2026-11-18 | coordinator in session directory `b62e346b…` (agent identity disputed) | `6bfdc7e4-570c-4c0e-91ff-334dca7e3976` | **BLOCKED** 1 H / 2 M / 5 L | T-* SPECIFIED | 0 (probes only) |
+| r8 | 2026-11-18 | same as r7 (README: "Codex") | `f42e8e52-86fc-4ac0-a0c2-43796e4d448f` (file MISSING) | CONDITIONAL 0 / 2 / 5 | 75 | 0 |
+| r9 | 2026-11-19 | `f42e8e52-…` | `f4126736-b419-42ab-be4d-412cf2ae0ffa` | CONDITIONAL 0 / 3 / 3 | 115 | 0 |
+| r10 | 2026-11-19 | `f4126736-…` | `84b008e3-b4f4-4728-9b69-6de6b25b4767` | CONDITIONAL 0 / 4 / 6 | 147 | 0 |
+| r11 | 2026-11-20 | `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | `6d422490-cc14-4dba-84e9-361d29ffc278` (advisory) | CONDITIONAL 0 / 2 / 7 | 162 | 0 |
+| r12 | 2026-11-20 | `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` | PENDING (not commissioned) | — | 166 | 0 |
+| r13 | 2026-11-21 | `7dfbd396-9f81-4447-a042-1c2e64fa674c` | ChatGPT static review, 2026-11-21 (advisory) | CONDITIONAL 0 / 2 / 1 | 169 | 0 |
+| r14 | 2026-11-22 | `57690f5c-ef81-4fad-9ef8-281022bc87f4` (S8) | PENDING (not commissioned) | — | 169 | 0 |
+
+Every review from r7 onward was an AI agent under the same Windows account and harness as the authors, and r8 review → r11 review all used the same model (`claude-opus-5-5`). Reviews are therefore session-independent only. None satisfies G-IND.
+
+**S9 correction (2026-11-22):** the r12 row above shows the state recorded on 2026-11-20. r12 was reviewed on 2026-11-21 by a ChatGPT (OpenAI GPT-family) static review in a cloud environment: CONDITIONAL — NOT READY, 0 HIGH / 3 MEDIUM / 2 LOW, advisory (§6). The r12 and r13 reviews are by a different model family by their own statements, but host and account separation and Owner custody of the expected hashes are not attested; neither satisfies G-IND.
+
+## 4. Revision records (12 items each)
+
+Evidence class labels refer to [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] §2. "Author-reported" means received evidence that this recovery could not re-verify.
+
+### r1 — RECONSTRUCTED_REFERENCE_ONLY
+
+1. **Purpose:** first reconciliation of the U01 field-review contract (`DPT-GATE-012_Reconciliation_Report.md`).
+2. **Design changes / 3. Security architecture:** unknown; original MISSING.
+4. **Findings addressed / 5. independently reviewed / 6. open:** unknown.
+7. **Tests executed:** none recorded. **8. Not executed:** all.
+9. **Owner decisions:** none verified.
+10. **Files:** report 25470 B, `c9cd1d7ecd90883a6d70866913b7a2fb691178f41714433520a69fce213a9c4e`. MISSING; hash known from r3/r4 requests and r7. Not reconstructed.
+11. **Git/PR:** none. **12. Remaining:** original can only be restored from an Owner backup.
+
+### r2 — RECONSTRUCTED_REFERENCE_ONLY
+
+1. **Purpose:** second draft; a separate Security/Data Review (`DPT-GATE-012_Security_Data_Review.md`) raised H-01…H-03, M-01…M-06 and L-01…L-03 against it (per r3).
+2–3. **Design / security:** unknown beyond r3's statement that r3 corrects r2 per "Owner items 1–5" and those findings.
+4–6. **Findings:** H/M/L set raised; reviewer identity UNVERIFIED.
+7–8. **Tests:** none recorded.
+9. **Owner decisions:** "Owner items 1–5" are reported by the r3 author only; NOT VERIFIED as Owner events.
+10. **Files:** r2 20769 B `7ad15f2c40b52fbbc231f212dd7b2e31b9f0a401a9f7f40edbfa54d31e2b5cc5`; review 10947 B `855f66590ce2ed137e815f4545200ccba7b092f552b36c444f0fca5cfafa1d94`. Both MISSING.
+11. **Git/PR:** none. **12. Remaining:** restore from Owner backup if any.
+
+### r3 — 2026-11-18
+
+1. **Purpose:** correct r2 per Owner items 1–5 and H/M/L findings.
+2. **Design changes:** 46-claim scope, single facet `SOURCE_ASSERTION_FAITHFUL`; contract `dpt-field-review-1`; DB boundary; global `seq` / `prev_entry` chain with per-claim supersession.
+3. **Security architecture:** S1 = SSH-signed ledger revisions; trust anchor bootstrap T1–T5; fixed Git argv G1–G5 based on `%G?`/`%GF`/`%GS`; reviewer salt.
+4. **Findings addressed (author claim):** H-01 at contract level by S1; others re-rated. New author items N-01 (MEDIUM), N-02 independence (MEDIUM, open), N-03…N-05 (LOW).
+5. **Independently reviewed:** none. Review request (3392 B) issued; NOT RUN.
+6. **Open:** N-02 and all findings pending review.
+7. **Executed:** none. **8. Not executed:** all T-MAN/T-DEF/T-SIG 1–16/T-LED/T-HEAD/T-REC/T-SEC/T-PRES/T-PROP.
+9. **Owner decisions:** Q-A1…Q-A5, Q-B…Q-G posed; none answered.
+10. **Files:** 35510 B `3fc9b120472c331136135fd0e7e03244ae9488619da1fd8e9fa84b5809c75c7a`; request 3392 B `04f8f9191d66e8de40796912db40d7edd7c4fba867d17d9694821787f27c4f1d`.
+11. **Git/PR:** none. **12. Remaining:** independent review.
+
+### r4 — 2026-11-18
+
+1. **Purpose:** consolidated canonical draft.
+2. **Design changes:** trust schema `-1`, ledger `-3` with RECORD/VOID, output `state-2`; first gate order (review → Q-H Planning PR → Owner reply → Planning merge → implementation).
+3. **Security architecture:** Owner-only genesis Γ (G-01); full DAG walk with `GIT_NO_REPLACE_OBJECTS`, no shallow/grafts (G-02); run-time `--expected-owner-fingerprint` (G-03); immutable trust per version; salt removed.
+4. **Findings addressed:** author-found G-01…G-16 (G-01/G-02/G-03 HIGH) and W-01 HIGH (contract outside the repo; needs docs-only Planning PR and Human Merge).
+5. **Independently reviewed:** none; a 12-item consolidated request (6106 B) issued; NOT RUN.
+6. **Open (author):** W-01 HIGH; N-02 MEDIUM (review not run because a plugin hook rewrote the agent input); M-02; N-05; G-10.
+7. **Executed:** none. **8. Not executed:** all T-ANCHOR/T-GEN/T-DAG/T-SIG.
+9. **Owner decisions:** Q-H added; none answered.
+10. **Files:** 41630 B `aaf80a68244607ab2134f62ad767c14d56ee11b6daee268c6a10b95861e99dbd`; request 6106 B `cd76bd5a6915a95394df7ad5ac8645ad82b387be865c82173619923051861a80`.
+11. **Git/PR:** none. **12. Remaining:** review; W-01 Planning PR.
+
+### r5 — 2026-11-18
+
+1. **Purpose:** consolidated canonical candidate.
+2. **Design changes:** per-field manifest sources (R5-01); two-hash binding of the contract note (R5-02); diagnostics to stderr (R5-03); one `cat-file --batch-check` (R5-04); read-once TOCTOU rule (R5-05); VOID head (R5-06). Planning-PR file set defined.
+3. **Security architecture:** first appearance of **OP-1** (Owner signing readiness) as a prerequisite (R5-07, MEDIUM, open).
+4. **Findings addressed:** R5-01…R5-06 (author).
+5. **Independently reviewed:** none. Gate Package r5 records two agent-review attempts, both blocked by a context-injection hook → INDEPENDENT_REVIEW_NOT_RUN.
+6. **Open:** N-02, W-01, R5-07.
+7. **Executed:** read-only Git observations only (author-reported). **8. Not executed:** every test.
+9. **Owner decisions:** consolidated packet (DATA-01, DATA-04, D3, CONTRACT, TASK-ID, Q-A1…A5, Q-B…Q-H, OP-1, UNTRACKED, N-05); nothing selected.
+10. **Files:** 49272 B `e3f53a83a878bd6ca9953217dc9210b13ac24b20b0d305d05dd3443916370538`; Gate Package r5 19785 B `3cdc44031140ea88f1320c3318a861912d81b0d9980498493c73a82133af0e4f`.
+11. **Git/PR:** Planning PR manifest prepared, NOT created. **12. Remaining:** review, Owner packet.
+
+### r6 — 2026-11-18
+
+1. **Purpose:** apply verified fixture findings.
+2. **Design changes:** G5c mode audit via `log --raw -m --full-history --no-renames` (V-06); exact note byte construction (V-07a); four distinct hash fields (V-07b); `validate_docs.py` tracked-output restore and `--task IMP-P1-02` mode (V-08, V-08b); `git status -z` (V-09).
+3. **Security architecture:** unchanged trust model.
+4. **Findings addressed:** V-06…V-09 (author). PRE-01 (stale P1-01 evidence on main) recorded, not fixed.
+5. **Independently reviewed:** none.
+6. **Open:** N-02, W-01, OP-1; author states no design HIGH/MEDIUM remains (later superseded by r7).
+7. **Executed (author-reported, no surviving logs):** Git-primitive fixture checks in disposable repositories with ephemeral keys (T-MAN1 46/46, T-M, T-D, T-N, T-H, T-S, T-A1, T-P1). Not executions of a U01 validator.
+8. **Not executed:** validator, regression suites, review.
+9. **Owner decisions:** none.
+10. **Files:** 57901 B `f290b2f2ee35de4d5791a325333b3f3e81064554407bcc978a007c2a34f39ec0`; Gate r6 18710 B `3e1d9d8e5ef6628a2c86e36ed1c859b2e925e7964a391e41ebdaa04742f89d43`.
+11. **Git/PR:** none. **12. Remaining:** review (Q-F).
+
+### r7 — 2026-11-18
+
+1. **Purpose:** author-verified correction of r6 defects.
+2. **Design changes:** C7-01 G5c separator grammar; C7-02 `%GS` terminal LF; C7-03 genesis limited to agent-authored commits; C7-04 INVALID before EVIDENCE_MISSING; C7-05 manifest bound to trust digest (MANIFEST_BINDING); C7-06 finite allowlist; C7-07 S1/S2 wording.
+3. **Security architecture:** still Git-status-based S1 rule (`%G?`).
+4. **Findings addressed:** C7-01…C7-07 (author).
+5. **Independently reviewed:** **first independent review** (session `6bfdc7e4-…`), verdict **BLOCKED**: R7-IR-01 HIGH (signature-status rule bypassable through repository-controlled configuration), R7-IR-02 MEDIUM (acceleration data can hide history), R7-IR-03 MEDIUM (ledger structural precedence undefined), R7-IR-04…R7-IR-08 LOW.
+6. **Open after review:** all R7-IR findings.
+7. **Executed:** author-reported probe set 52 PASS / 2 EXECUTED FAIL / 3 HARNESS FAILURE (152 commands) plus 7 and 8 PASS docs checks; reviewer-run ephemeral harness reproductions of R7-IR-01/-02/-03/-04. Evidence JSONs and harness scripts MISSING.
+8. **Not executed:** full validator, ledger/genesis/VOID, Owner signing, SQL/RLS.
+9. **Owner decisions:** none.
+10. **Files:** 69456 B `f12fc56bd5b40aa769bc5f4987ebc3fb2beb168989c62a6c49ad9e0115cfec7c`; Gate r7 19178 B `119ec8ad486c3b05676ebcc641e331cb16ee130744983a5b0618866eedbe294c`; Consolidated Handoff 37208 B `57210a21bcd524465c49dc1125d567fc73a40498893e92f46aa630bc4da92be4`; r7 review 38514 B `5cba0946a05fc02759b3b75836cfeb587c0e378bf9a64b9e57a084bfae4fa0f8`.
+11. **Git/PR (verified then):** main `183f1d8`; PR31 MERGED 2026-11-17T14:02:10Z; PR8 OPEN/DRAFT/BLOCKED. **12. Remaining:** r8 for R7-IR-01…03.
+
+### r8 — 2026-11-18
+
+1. **Purpose:** address R7-IR-01…R7-IR-08.
+2. **Design changes:** contract `dpt-field-review-2`, output `state-3`; staged first-failure model; Q-H rows with change kinds; two Owner batches (BatchA / BatchB); §8 acceptance table.
+3. **Security architecture:** **S1-R8** direct `ssh-keygen -Y verify` over the raw commit payload (Git signature status retired); sealed bare verification repository with exact config; raw object closure; strict SSHSIG envelope; first **OP-2** trusted-runtime prerequisite.
+4. **Findings addressed:** R7-IR-01…08, each "ADDRESSED IN PROPOSED TEXT; INDEPENDENT CLOSURE PENDING; RUNTIME NOT RUN".
+5. **Independently reviewed:** session `f42e8e52-…`; CONDITIONAL 0 HIGH / 2 MEDIUM / 5 LOW (R8-IR-01 governed trust path, R8-IR-02 OP-2 objective, R8-IR-03…07). R7-IR-01 PARTIALLY RESOLVED; R7-IR-02…08 RESOLVED IN DESIGN. Review file MISSING (content known only as reproduced in r9).
+6. **Open:** R8-IR-01…07.
+7. **Executed:** author static assertions 21/21 and 25/25; input hashes 4/4. **8. Not executed:** 75 spec rows.
+9. **Owner decisions:** none.
+10. **Files:** 56187 B `8d2bf6a92116c179fe45aa3a15e37d665851f194322e40374c0adbc90eefd6de`; Gate r8 18652 B `faad28cb8f374a9df09c8ac685d578be22edc0b37705f73e78ba9d5eec6a8e53`; README r8 28581 B `799981715138ab0fe2be1c7f47ea9d68318a26be7ee3d1933c35e91e50641b34`; r8 review 42283 B `61cafef96c8eba372143bfd984225f75b36c76232f42ee9b9cdb585c7308881c` (MISSING).
+11. **Git/PR:** read-only GitHub check: PR31 MERGED, PR8 only open PR. **12. Remaining:** r9.
+
+### r9 — 2026-11-19
+
+1. **Purpose:** address R8-IR-01…07.
+2. **Design changes:** governed-path registry `GP_MANIFEST` / `GP_TRUST` / `GP_LEDGER`; exact schemas; historical vector HV; total execution order S0–S8; failure classes incl. `OPERATIONAL` exit 4; gate order A0–B6.
+3. **Security architecture:** OP-2 runtime trust boundary (principals P_OWNER/P_OP/P_V/P_ADMIN/P_AGENT, C1–C4, OP2-A/B/C, runtime profile); G5c multiset audit; SHA-1 residual added.
+4. **Findings addressed:** R8-IR-01…07 (proposed text).
+5. **Independently reviewed:** session `f4126736-…`; CONDITIONAL 0 / 3 / 3: R9-IR-01 OP-1 signing boundary, R9-IR-02 Owner channel, R9-IR-03 validator provenance (MEDIUM); R9-IR-04…06 (LOW). R8-IR-02 PARTIALLY RESOLVED, others RESOLVED IN DESIGN.
+6. **Open:** R9-IR-01…06.
+7. **Executed:** author static checks 100/100. **8. Not executed:** 115 specs.
+9. **Owner decisions:** none.
+10. **Files:** 142018 B `f2d72f6cee0e6e5c8d4c5d50d4359fe87e101d4769653c544087c8f58ef36179`; Gate r9 32089 B `e112decb22204a3807c140ec9100432404fabe0d85751e820b455b39063aa309`; README r9 27000 B `6a273bd7be1911af29938e926a5813f1436f67dfdfeae0904b7a3013422b563a`; r9 review 50649 B `f1e6fa2b424f7d35bd222b66831a67491f73c6e08eec0d0e5989168fc17d3326`.
+11. **Git/PR:** GitHub not queried. **12. Remaining:** r10.
+
+### r10 — 2026-11-19
+
+1. **Purpose:** address R9-IR-01…06.
+2. **Design changes:** new §4.9 OP-1, §4.10 Owner Authorization Protocol (OAP), §4.11 validator provenance, §4.12 authority table; 44 execution steps; SHA-256 head binding (S6.4); profile `-2`; Γ as separate Owner-only PR.
+3. **Security architecture:** Owner-signed hash-chained statements (namespace `dpt-u01-auth`, 8 kinds), out-of-band anchor ceremony, human-conveyed head; VSS in the root of trust with review manifest and Owner comparison at merge; SHA1DC pin; verified-bytes loader.
+4. **Findings addressed:** R9-IR-01…06 (proposed text).
+5. **Independently reviewed:** session `84b008e3-…`; CONDITIONAL 0 / 4 / 6: R10-IR-01 reviewer manifest authenticity, R10-IR-02 OP-1 execution boundary, R10-IR-03 signed-data authority, R10-IR-04 consumer verifier (MEDIUM); R10-IR-05…10 (LOW). R9-IR-01/02/03 PARTIALLY RESOLVED; R9-IR-04/05/06 RESOLVED IN DESIGN.
+6. **Open:** R10-IR-01…10.
+7. **Executed:** author static checks 109/109. **8. Not executed:** 147 specs.
+9. **Owner decisions:** output folder and "proceed without frozen r8/r7 copies" directions received through the agent chat channel (not independently verified).
+10. **Files:** 213977 B `53ebf7ed0d001f6308f90ef6826a3ef0546e5cba8a0e27ae1eec34abd38fb104`; Gate r10 20247 B `67df94f282f667a66663a12d3106730dd67f0042d504f9ae5f69d07b8b7c9469`; README r10 21390 B `25b76e047d8f3658508166bfe600e3e84bd5184924259e1179364beae936498a`; r10 review 74707 B `d2626bb50b56d4aa431a53041a8b08a853dc14dce69b87a6202a9acde3bbb546`.
+11. **Git/PR:** none; GitHub not queried. **12. Remaining:** r11.
+
+### r11 — 2026-11-20
+
+1. **Purpose:** address R10-IR-01…10.
+2. **Design changes:** reviewer environment (RE) with reviewer attestation RV-A (namespace `dpt-u01-review`) or human conveyance RV-B; trusted toolsets TP-COMMIT / TP-STATEMENT; `payload-check` demoted to pre-flight PF-1; signed-field provenance table (§4.13) with 14 Owner verification commands OVC-01…14; `LEDGER_STATE` anti-rollback; pre-OP-1 rules PG-1…PG-4 and `GOVERNANCE_RATIFICATION`; verifier bootstrap V-BOOT, pre-check VPC, `VERIFIER_READINESS`; binding table B01–B32; transitive revocation; writer allow-list; closed AST list CL-1…CL-12; feasibility checkpoint (§4.14).
+3. **Security architecture:** seven trust roots, all DEFINED IN DESIGN and UNAVAILABLE; credential separation recorded as operational prerequisite OPR-1.
+4. **Findings addressed:** R10-IR-01…10 (proposed text).
+5. **Independently reviewed (advisory):** session `6d422490-…`; CONDITIONAL 0 / 2 / 7. R10-IR-01/02/05/06/07/08/10 RESOLVED IN DESIGN, R10-IR-09 RESOLVED, R10-IR-03 and R10-IR-04 PARTIALLY RESOLVED.
+6. **Open:** R11-IR-01 MEDIUM (verifier revocation/supersession enforced only by the verifier being revoked); R11-IR-02 MEDIUM (statement bytes originate in agent drafts; no pre-signing grammar gate; `issued_at` unbounded); R11-IR-03…R11-IR-09 LOW (TT-1 closure depth; OVC forms that can return True without comparing; binding-table precision; V-BOOT/PF-1/`OP2_READINESS` order contradiction; Owner options removing custody/independence; reviewer tooling precision; evidence nits).
+7. **Executed:** author static checks 85/85; reviewer read-only behaviour probes of standard OS/Git tools (not U01 tests, not attack tests). **8. Not executed:** 162 specs.
+9. **Owner decisions:** none.
+10. **Files:** 325441 B `1fdc33f97737a2c2066f88fc07422d2ed60e68ed9c0621b778e365bd1ce0d9c3`; Gate r11 21550 B `fdd037f7b50f075c74452dfb67be0671004f615a765075d4aff20082363093c3`; README r11 22437 B `2354036b13222647e730eff8f7482a0c14083d64589e214390b26fa58a62734e`; r11 review 76768 B `6bdef91eb4f0d3a1b3eeeb6bf292065079d6c230ab5273bff017bdbf2af7cf80`.
+11. **Git/PR:** none for r11; this recovery PR is documentation only. **12. Remaining:** r12 (§10).
+
+### r12 — 2026-11-20
+
+1. **Purpose:** address R11-IR-01…09 as directed by the r11 review §8 and [[DPT-GATE-012_U01_r12_Authoring_Handoff]]; r11 bytes frozen; no unrelated edits.
+2. **Design changes:** readiness currency value (RCV), conveyed with every fresh head from an Owner-held register (RCR), checked by OS tools before any U01 code runs (VPC-0); mandatory notice of revocations and new acceptances; VPC also hashes the interpreter and `ssh-keygen`. Statement byte domain (SB) and exact per-kind byte grammars (SG-<KIND>), matched before signing with trusted tools only (OVC-15); an OP-1 writer for `issued_at` and `statement_id` (OVC-19); pre-signing CJ gate PF-2 on a READY host after bootstrap; verifier rule B33 (`issued_at` bound); envelope provenance rows; fact E12 (OP-1 clock). TT-1 closure (program pin, `ssh-sk-helper`, no system Git config, no network Git in a key-capable principal, session preamble P0, environment baseline, signer subject compared); OVC guard G and strict mode; B31/B32 "unrevoked", B34, B35, complete field classification, V8 before V7; `OP2_READINESS` moved before Γ (single gate order); OPR-2 mandatory for ratification; `REVIEWER_ANCHOR.independence` (`OWNER_SELF`); reviewer toolset TT-R and exact HV derivation HVD; named CL-5/CL-6 negatives; complete change register; source normalisation stated.
+3. **Security architecture:** unchanged trust roots, all DEFINED IN DESIGN and UNAVAILABLE. Two new invariants stated: no revocation path relies only on the revoked code; no signed value (envelope included) comes from an agent record without byte-level validation before signing.
+4. **Findings addressed:** R11-IR-01…09, all as FIX in proposed text (no LOW accepted with reasons). Optional Q-R12 simplifications not adopted (reasons in contract §0.5).
+5. **Independently reviewed:** **NO.** r12 review PENDING.
+6. **Open:** every R11 finding remains open until an independent review disposes of it (§7.1). New residuals disclosed by the author: bootstrap statements have one byte gate; procedural complexity; OP-1 clock dependence; PowerShell 5.1 behaviour of the new OVC forms NEEDS VALIDATION.
+7. **Executed:** author static checks (12 groups, all as stated in README r12 §8: 120 asserted edits; 166 IDs / 34 groups, all r10 and r11 IDs retained, 4 new, 11 changed; 0 undefined references; complete change register; stale-text scan clean; grammar self-test 14/14 positives, 16/16 negatives in a non-.NET engine; removed-line audit). **8. Not executed:** all 166 specs; any OVC, preamble or grammar on Windows PowerShell 5.1.
+9. **Owner decisions:** r12 commissioned by the Owner's assignment of 2026-11-20 through the agent chat channel (reported, provisional; not independently verified). No other decision.
+10. **Files** (outside the repository): contract r12 383873 B `f475d17c5acdc75949550fc7a48cb4bfa5317c9212ce5d5d190b9e8df00cebc7`; Gate r12 21236 B `6f1e639a7ba13939d8ae98218d4defb1fb97fac98958e6ff60a4faf1fa6ce679`; README r12 16067 B `573ac58c670358e40a4ef1959a25ddf47f7c0f35f5fa1824e3995be3ef2d5f97`. Author build and check scripts are preserved privately with their hashes (README r12 §6).
+11. **Git/PR:** r12 bytes are not committed. This sanitized record is on branch `docs/dpt-gate-012-security-history`, for the single U01 documentation Draft PR. **12. Remaining:** independent r12 review; Owner Q-F (§10).
+
+### r13 — 2026-11-21
+
+1. **Purpose:** address R12-IR-01…05 of the r12 independent static review (2026-11-21); r12 bytes frozen. Recorded here first in S9; S8 §17 gave the context.
+2. **Design changes:** one `op2_option` wire domain (`OP2-A` / `OP2-B`); the 64-zero `GENESIS` predecessor defined as a sentinel excluded from every reference enumeration; OVC-22 parses revocation lists and tests whole-element membership instead of scanning whole files; three real guard functions in P0 with a result rule (RR) and literal OVC forms; an Owner-assigned host registry with signed host labels. Author-identified R13-AR-01 (a `GENESIS` revoked in error can be replaced) and R13-AR-02 (descendant ledger states are revoked together). New IDs OAP19, OAP20, SGN08.
+3. **Security architecture:** trust roots unchanged, all DEFINED IN DESIGN and UNAVAILABLE.
+4. **Findings addressed:** R12-IR-01…05 (proposed text); R13-AR-01, R13-AR-02 (author-identified).
+5. **Independently reviewed (advisory):** ChatGPT (OpenAI GPT-family) static review in a cloud environment, 2026-11-21: CONDITIONAL — NOT READY, 0 HIGH / 2 MEDIUM / 1 LOW. R12-IR-01, R12-IR-02 and R12-IR-05 ADDRESSED IN DESIGN (not runtime or operationally closed); R12-IR-03 PARTIALLY ADDRESSED / OPEN; R12-IR-04 PARTIALLY ADDRESSED / NOT EXECUTED; R13-AR-01/02 PLAUSIBLE DESIGN FIX. Advisory only, not G-IND, by its own statement.
+6. **Open:** R13-IR-01 MEDIUM (OVC-22(e) supersession check not an exact executable oracle); R13-IR-02 MEDIUM (circular gate ordering in the Gate Package); R13-IR-03 LOW (SGN08 step-specific negatives unreachable). R11-IR-01 still OPEN via R13-IR-01; R11-IR-02 ADDRESSED IN DESIGN, NOT OPERATIONALLY CLOSED.
+7. **Executed:** author static checks as stated in README r13 §8 (author-reported: 92 asserted edits; 169 IDs / 34 groups, all earlier IDs retained, 3 new, 7 changed; reference, change-register and stale-text checks; a Python author model, not PowerShell). **8. Not executed:** all 169 specs; any PowerShell 5.1, .NET, key or signature operation.
+9. **Owner decisions:** the r13 commissioning is not recorded in this vault (no session record exists here).
+10. **Files** (outside the repository): contract r13 408158 B `8a50135d1653ab115047ba1fc2fc21bbc94a290d03235db922435874097ba77a`; Gate r13 22740 B `176fcafc5605091b2ab3bf9d9bc8b0a97e6366ac9d801f18ac4709f44d45c0c8`; README r13 23245 B `614b1069a51bd9b7e2befa49cc4b940548d3db186330159249fe234e1b9b6436`; Verification Handoff r13 8403 B `012782a2b8769fb23f56c0cc9bdd4e112721a176ce1ec68b158d59c79248d065`; r13 review 15989 B `b170e32f076d75afe36ed029dd000e469c197616483affb0facae2c51114dcbc`; r12 review 16972 B `0a4f87847b018f93ba1e9f9c82281b44db0ba1d5cac5b7993c81f421327ee3bc`.
+11. **Git/PR:** r13 bytes are not committed. **12. Remaining:** superseded by PROPOSED r14; frozen.
+
+### r14 — 2026-11-22
+
+1. **Purpose:** address R13-IR-01…03 of the r13 review; r13 bytes frozen (S8, §17).
+2. **Design changes:** a literal OVC-22 readiness-currency check that binds the custody set to the Owner-recorded head, builds the closure inside the form and checks every later validator acceptance with an explicit all-quantifier (signature checking stays at append time as a named prerequisite); an operation-by-operation permission table keyed to the contract's gate order, replacing the circular blanket prohibition; SGN08 split into end-to-end fixtures and isolated UNIT-ONLY fixtures; the R14-AR-01 correction; `contract_revision` 14.
+3. **Security architecture:** unchanged; no gate status changed and nothing granted.
+4. **Findings addressed:** R13-IR-01…03 and the author-identified R14-AR-01 (LOW, proposed), in proposed text.
+5. **Independently reviewed:** **NO.** r14 review PENDING (not commissioned).
+6. **Open:** every finding in [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §3; none closed.
+7. **Executed:** author static checks (§17): 38 asserted edits with identical rebuilds; 48/48 document checks; 35/35 cross-document checks; removed-line audit 162 / 0 unmapped; Python model 43/43; grammar self-test 15/15 and 23/23. **8. Not executed:** all 169 specs; PowerShell 5.1, .NET, keys, signatures, fixtures.
+9. **Owner decisions:** r14 commissioned on 2026-11-22 through the agent chat; private storage chosen the same day (both provisional, PG-2; Decision Log S8).
+10. **Files** (Owner-approved private vault, path not published): contract r14 418450 B `9a97aa61587d9ba419ad6a6c08bfbadb2607de3ab7621b911ac0714ea36262e3`; Gate r14 27825 B `1f633dffa86693e229395782ab8b075543dc14552f0aa39cf0ecc62a9f3a6c92`; README r14 23034 B `a5a0d14b005e8cd1e4b99293acd97db0ef18734ba7483ce54c967b957ced9c7b`; Verification Handoff r14 11989 B `8f5b00d0fd5a82bdd11edef43dea19a7d8369820787f22ec622dd56ad2a9a888`.
+11. **Git/PR:** r14 bytes are never committed. The S8 records were committed unchanged in S9 (`8c62403802eae6619af1a79a83ff297bbaaf1e42`). **12. Remaining:** independent r14 review; Q-F; the later gates ([[DPT-GATE-012_U01_Security_Resumption_Handoff]] §4).
+
+## 5. Session register
+
+| Session | Role(s) | Model / agent | Date | Evidence |
+|---|---|---|---|---|
+| UNVERIFIED | r1–r6 author(s) | UNVERIFIED | ≤ 2026-11-18 | r3–r6 self-description "same author"; r3/r4 requests point to session directory `b62e346b…` |
+| `b62e346b-00fe-4520-a926-25107e5ef706` (directory) | r7 author, r8 author, consolidated handoff | README r8 says "Codex"; directory is a Claude Code harness path — **identity disputed** | 2026-11-18 | README r8; r7 review; r11 §0.1 |
+| `6bfdc7e4-570c-4c0e-91ff-334dca7e3976` | r7 reviewer | Claude Code, Opus 5.5 | 2026-11-18 | r7 review header |
+| `f42e8e52-86fc-4ac0-a0c2-43796e4d448f` | r8 reviewer; r9 author | Claude Code, `claude-opus-5-5` | 2026-11-18/19 | README r9; r9 §0.1 |
+| `f4126736-b419-42ab-be4d-412cf2ae0ffa` | r9 reviewer; r10 author | Claude Code, `claude-opus-5-5` | 2026-11-19 | r9 review §2; README r10 |
+| `84b008e3-b4f4-4728-9b69-6de6b25b4767` | r10 reviewer (created by `/clear` after r10 author) | Claude Code, `claude-opus-5-5` | 2026-11-20 (Bangkok) | r10 review §2 |
+| `cabbc3b4-01ac-4fce-a7e9-8ad4ba375500` | r11 author | Claude Code, `claude-opus-5-5` | 2026-11-20 (Bangkok) | README r11 |
+| `6d422490-cc14-4dba-84e9-361d29ffc278` | r11 reviewer (advisory); DPT-DOC-RECOVERY-001 recorder | Claude Code, `claude-opus-5-5` | 2026-11-20 | r11 review §2; this note |
+| `33a50b45-1ffc-4ed1-bd5e-ce239efff4c9` | DPT-DOC-RECOVERY-001 S2/S3 coordinator; r12 handoff preparer (excluded from r12 authoring and review) | Claude Code, `claude-opus-5-5` | 2026-11-20 | §11, §12 of this note |
+| `1a47f0e2-6a8c-4c87-806e-141bb1ba7523` | r12 author; S4 documentation coordinator (excluded from r12 review) | Claude Code, `claude-opus-5-5` | 2026-11-20 | README r12; §14 of this note |
+| `7dfbd396-9f81-4447-a042-1c2e64fa674c` | r13 author | Claude Code, `claude-opus-5-5` | 2026-11-21 | README r13 §3 (no vault session record) |
+| ChatGPT (OpenAI GPT-family), cloud environment | r12 reviewer; r13 reviewer (advisory; whether one or two conversations is not recorded) | ChatGPT | 2026-11-21 | r12 and r13 review headers |
+| `57690f5c-ef81-4fad-9ef8-281022bc87f4` | r14 author (S8); S9 documentation recorder; DPT-GOV-WORKFLOW-001 S5/S6 | Claude Code, `claude-opus-5-5` | 2026-11-22 | §17, §18 of this note |
+
+All sessions above ran on one host and one Windows account with shared harness plugins and hooks. No human or different-model review has occurred.
+
+**S9 note:** the ChatGPT row is the exception to the sentence above: by their own statements those reviews ran in a cloud environment outside the authoring account. That separation is not attested.
+
+## 6. Review register
+
+| Review | Reviewer | Verdict | HIGH / MED / LOW | IND-00 | Satisfies G-IND | File |
+|---|---|---|---|---|---|---|
+| r3 / r4 requests | — | NOT RUN | — | — | NO | requests present |
+| r5 attempts (×2) | agent | NOT RUN (hook rewrote input) | — | — | NO | Gate r5 |
+| r7 | `6bfdc7e4-…` | BLOCKED | 1 / 2 / 5 | session level | NO | present (copy) |
+| r8 | `f42e8e52-…` | CONDITIONAL | 0 / 2 / 5 | session level | NO | **MISSING** |
+| r9 | `f4126736-…` | CONDITIONAL | 0 / 3 / 3 | session level | NO | present |
+| r10 | `84b008e3-…` | CONDITIONAL | 0 / 4 / 6 | session level | NO | present |
+| r11 | `6d422490-…` | CONDITIONAL (advisory) | 0 / 2 / 7 | session level | NO | present |
+| r12 | not commissioned | **PENDING** | — | — | — | — |
+| r12 (S9 correction) | ChatGPT (OpenAI GPT-family), cloud environment | CONDITIONAL — NOT READY (advisory) | 0 / 3 / 2 | reviewer-stated; separation not attested | NO | private (16972 B, `0a4f8784…3bc`) |
+| r13 | ChatGPT (OpenAI GPT-family), cloud environment | CONDITIONAL — NOT READY (advisory) | 0 / 2 / 1 | reviewer-stated; separation not attested | NO | private (15989 B, `b170e32f…dcbc`) |
+| r14 | not commissioned | **PENDING** | — | — | — | — |
+
+The r12 PENDING row is the 2026-11-20 state; the S9 correction row records the r12 review found later.
+
+## 7. Findings register (latest state)
+
+| Set | Raised in | Latest disposition (by whom) | Runtime closure |
+|---|---|---|---|
+| H-01…H-03, M-01…M-06, L-01…L-03 | r2 security/data review (MISSING) | author claims only (r3–r6); never independently reviewed | NO |
+| N-01…N-05, G-01…G-16, W-01, R5-01…R5-07, V-06…V-09, C7-01…C7-07 | r3–r7 author | author claims; C7 set assessed by r7 review; W-01 (Planning PR) still open | NO |
+| R7-IR-01…08 | r7 review | R7-IR-01 PARTIALLY RESOLVED, others RESOLVED IN DESIGN (r8 review, MISSING; reproduced in r9) | NO |
+| R8-IR-01…07 | r8 review | R8-IR-02 PARTIALLY RESOLVED, others RESOLVED IN DESIGN (r9 review) | NO |
+| R9-IR-01…06 | r9 review | 01/02/03 PARTIALLY RESOLVED; 04/05/06 RESOLVED IN DESIGN (r10 review) | NO |
+| R10-IR-01…10 | r10 review | 03/04 PARTIALLY RESOLVED; others RESOLVED IN DESIGN or RESOLVED (r11 review, advisory) | NO |
+| **R11-IR-01, R11-IR-02 (MEDIUM)** | r11 review | **OPEN** — addressed in r12 proposed text (author), not independently reviewed | NO |
+| R11-IR-03…R11-IR-09 (LOW) | r11 review | OPEN — addressed (FIX) in r12 proposed text (author), not independently reviewed | NO |
+| Residuals needing Owner acknowledgement | r9–r11 | R7-IR-08 availability; SHA-1 object identity; pre-OP-1 governance channel — NOT ACKNOWLEDGED (r12 adds none) | — |
+| R12-IR-01, R12-IR-02 (MEDIUM), R12-IR-05 (LOW) | r12 review (advisory) | ADDRESSED IN DESIGN; not runtime or operationally closed (r13 review, advisory) | NO |
+| R12-IR-03 (MEDIUM) | r12 review | PARTIALLY ADDRESSED / OPEN; continued as R13-IR-01 (r13 review) | NO |
+| R12-IR-04 (LOW) | r12 review | PARTIALLY ADDRESSED / NOT EXECUTED (r13 review) | NO |
+| R13-AR-01, R13-AR-02 (LOW, author-identified) | r13 author | PLAUSIBLE DESIGN FIX; needs independent fixture evidence (r13 review) | NO |
+| **R13-IR-01, R13-IR-02 (MEDIUM)**, R13-IR-03 (LOW) | r13 review (advisory) | **OPEN** — addressed in r14 proposed text (author); independent disposition pending | NO |
+| R14-AR-01 (LOW, author-identified, proposed) | r14 author | **OPEN** — proposed correction in r14; independent disposition pending | NO |
+| R11-IR-01…R11-IR-09 (S9 update) | r11 review | r12 review (advisory): R11-IR-01 OPEN; R11-IR-02 ADDRESSED IN DESIGN, NOT OPERATIONALLY CLOSED; R11-IR-03 needs Windows validation; R11-IR-04 PARTIAL/AMBIGUOUS; R11-IR-05 and R11-IR-07 addressed in design; R11-IR-06 order consistent, readiness blocked by R12-IR-01; R11-IR-08 addressed in design, runtime unverified; R11-IR-09 corrected. r13 review: R11-IR-01 still OPEN via R13-IR-01; R11-IR-02 unchanged | NO |
+
+"RESOLVED IN DESIGN" is a reviewer's design judgement, never runtime evidence.
+
+### 7.1 R11 finding status by evidence class (2026-11-20, S4)
+
+| Finding | Sev. | ADDRESSED IN PROPOSED TEXT | INDEPENDENTLY REVIEWED | RESOLVED IN DESIGN | RUNTIME VERIFIED | OPEN |
+|---|---|---|---|---|---|---|
+| R11-IR-01 verifier revocation and supersession | MEDIUM | YES (r12) | NO | NO | NO | **YES** |
+| R11-IR-02 statement bytes, envelope provenance, `issued_at` | MEDIUM | YES (r12) | NO | NO | NO | **YES** |
+| R11-IR-03 TT-1 closure depth | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-04 OVC forms that can pass without comparing | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-05 binding precision | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-06 gate-order contradiction | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-07 Owner options removing custody and independence | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-08 reviewer tooling precision | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+| R11-IR-09 evidence-accuracy nits | LOW | YES (r12, FIX) | NO | NO | NO | YES |
+
+A finding leaves OPEN only through an independent review that states its disposition. RUNTIME VERIFIED needs executed acceptance evidence from an authorized implementation.
+
+### 7.2 R11–R14 finding status by evidence class (2026-11-22, S9)
+
+| Finding | Sev. | ADDRESSED IN PROPOSED TEXT | REVIEWED (advisory, not G-IND) | RESOLVED IN DESIGN (advisory judgement) | RUNTIME VERIFIED | OPEN |
+|---|---|---|---|---|---|---|
+| R13-IR-01 OVC-22(e) supersession oracle | MEDIUM | YES (r14) | NO | NO | NO | **YES** |
+| R13-IR-02 circular gate ordering | MEDIUM | YES (r14) | NO | NO | NO | **YES** |
+| R13-IR-03 SGN08 unreachable negatives | LOW | YES (r14) | NO | NO | NO | YES |
+| R14-AR-01 readiness-kind format (author, proposed) | LOW | YES (r14) | NO | NO | NO | YES |
+| R11-IR-01 revocation and supersession | MEDIUM | YES (r12–r14) | YES (r12, r13 reviews: OPEN) | NO | NO | **YES** |
+| R11-IR-02 statement bytes and provenance | MEDIUM | YES (r12) | YES (r12, r13 reviews) | YES (not operationally closed) | NO | YES (operational) |
+| R12-IR-01 `op2_option` domains | MEDIUM | YES (r13) | YES (r13 review) | YES | NO | YES (runtime) |
+| R12-IR-02 `GENESIS` sentinel | MEDIUM | YES (r13) | YES | YES | NO | YES (runtime) |
+| R12-IR-03 whole-file OVC-22 scan | MEDIUM | PARTIAL (r13) | YES | NO (continued as R13-IR-01) | NO | **YES** |
+| R12-IR-04 OVC exact forms versus guard | LOW | PARTIAL (r13) | YES | NO | NO | YES |
+| R12-IR-05 host label mapping | LOW | YES (r13) | YES | YES (not operationally closed) | NO | YES (operational) |
+| R13-AR-01, R13-AR-02 (author) | LOW | YES (r13) | YES (plausible design fix) | NO | NO | YES |
+
+"YES" under REVIEWED or RESOLVED IN DESIGN reports an advisory reviewer's judgement; with G-IND unsatisfied it closes nothing. The §7.1 table remains the 2026-11-20 record.
+
+## 8. Test and evidence ledger
+
+| Item | Executed by | Result | Evidence available |
+|---|---|---|---|
+| U01 acceptance specifications (r8 75 → r11 162 → r12 166) | nobody | NOT RUN | — |
+| r12 author static document checks (12 groups) and grammar self-test | r12 author `1a47f0e2` | as stated in README r12 §8 (all checks pass as stated; grammar test in Python `re`, not .NET) | README r12; private author tools |
+| U01 validator / verifier | — | DOES NOT EXIST | — |
+| r6 fixture probes (disposable repos, ephemeral keys) | r6 author | author-reported PASS | no logs (MISSING) |
+| r7 primitive probe set (152 commands) | r7 author | 52 PASS / 2 EXECUTED FAIL / 3 HARNESS FAILURE | JSONs MISSING |
+| r7 review harness reproductions | r7 reviewer | R7-IR-01 reproduced | harness MISSING |
+| Author static document checks | r8, r9, r10, r11 authors | 21/21 + 25/25; 100/100; 109/109; 85/85 | in READMEs only |
+| Reviewer static checks and source reading | r9, r10, r11 reviewers | recorded in reviews | reviews present |
+| Recovery documentation checks | DPT-DOC-RECOVERY-001 | see [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] §6 | this PR |
+| r13 author static checks (README r13 §8) | r13 author `7dfbd396` | as stated by the author (Python model, not PowerShell) | README r13 (private, hashed) |
+| r12 and r13 reviewer static checks | ChatGPT reviewers | recorded in the reviews (static only; 0 of 166 and 0 of 169 run) | reviews (private, hashed) |
+| r14 author static checks | r14 author `57690f5c` (S8) | 48/48, 35/35, 162 / 0 unmapped, 43/43, 15/15 and 23/23 (§17) | S8 report; private author tools |
+| Artifact re-hash and documentation checks (S9) | S9 recorder `57690f5c` | §18 | S9 report |
+| U01 acceptance specifications (r13 and r14: 169) | nobody | NOT RUN | — |
+
+## 9. Owner decisions
+
+| Decision | State |
+|---|---|
+| Any approval of any revision r1–r12 | **NONE VERIFIED** |
+| Commissioning of r12 and its author | Owner assignment of 2026-11-20, **reported** through the agent chat channel (provisional, PG-2); not independently verified |
+| r12 reviewer | NOT DESIGNATED |
+| Q-F (review provenance) | PENDING |
+| BatchA (incl. three acknowledgements) and Q-H rows | NOT GIVEN |
+| BatchB, OP-1 (E1–E10), OP-2 (F1–F12), OP-2-TOOL, Q-A1…Q-A7, Q-B…Q-G, DATA-01, DATA-04, D3/SEQ-01, CONTRACT, TASK-ID | PENDING |
+| r10 output folder; proceed without frozen r8/r7 copies | Owner directions **reported** by the r10 author through the agent chat channel; not independently verified |
+| PR31 merge (parent planning) | VERIFIED GitHub event: MERGED 2026-11-17T14:02:10Z at `183f1d8`. It is not a U01 decision. |
+| r13 commissioning | NOT RECORDED in this vault (no session record) |
+| r14 commissioning | Owner prompt of 2026-11-22 through the agent chat (provisional, PG-2; §17) |
+| Private contract storage | Owner choice of 2026-11-22: a dedicated private vault outside every Git repository (provisional; Decision Log S8); custody and backup PENDING (OCD) |
+| r14 reviewer | NOT DESIGNATED |
+| Documentation closeout scope | Owner instruction of 2026-11-22: PR #32 as SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED (provisional; Decision Log S9) |
+| PR33 merge (governance) | VERIFIED GitHub event: MERGED 2026-11-22T16:37:34Z at `0daafbb`. It is not a U01 decision. |
+| Security implementation authorization | **NONE** |
+
+Recommended defaults inside the contracts (for example OP1-A/OP2-A on a dedicated machine, `sk-ssh-ed25519`, MANUAL preparation) are proposals only.
+
+## 10. Blockers and next actions
+
+**Blockers:** G-IND never satisfied; R11-IR-01/02 open (addressed in r12 text only); r12 not reviewed; OPR-1 not implemented; OP-1, OP-2, RE and consumer verifier unavailable; no Owner-custody record of expected hashes (OPR-2); W-01 (no U01 Planning PR); `AGENT_CREDENTIAL_REQUIRED` for publication.
+
+**Next actions (Owner):**
+1. ~~Decide whether to commission r12.~~ Done on 2026-11-20 through the agent channel (reported); r12 authored (S4, §14).
+2. Commission the r12 review from a different model family or a human reviewer, on an account and machine agents do not use, giving the reviewer the r12 hashes (§4 r12 item 10) through a channel other than the agent chat.
+3. Consider OPR-1 (separate, restricted agent GitHub identity), OPR-2 (Owner-custody hash record) and OPR-3 (backups of r9–r11 and reviews outside the agent account).
+4. Review and, if appropriate, merge this documentation-only PR. Merging it approves nothing in §9.
+
+Future r12/r13 history continues on branch `docs/dpt-gate-012-security-history` and its single PR (see [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] §8). No final receipt exists or may be created while acceptance is pending.
+
+**S9 update (2026-11-22).** Blockers now: G-IND never satisfied; R13-IR-01 and R13-IR-02 (MEDIUM), R13-IR-03 and R14-AR-01 addressed in r14 text only; R11-IR-01 open; r14 not reviewed; OPR-1 not implemented; no OCD (OPR-2); W-01 (no U01 Planning PR); private-vault custody and backup PENDING; publication needs an authorized identity or a fresh Owner exception. Next actions: [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §5 and §7 (the independent r14 review comes first). The text above is the 2026-11-20 record.
+
+## 11. Session 2026-11-20 S2 — publication readiness and r12 handoff preparation
+
+- **Task / session:** DPT-GATE-012 (documentation workstream; recovery task DPT-DOC-RECOVERY-001) / S2, Claude Code session `33a50b45`, `claude-opus-5-5`. Role: documentation coordinator. This session is not a reviewer or author of any revision, and is not independent of the earlier sessions (same model, host and account).
+- **Intake class:** A (continuation; same branch, same future PR). Owner prompt: DPT-GATE-012-U01-CONTINUATION.
+- **Branch / PR:** `docs/dpt-gate-012-security-history`. PR: **PR_NOT_CREATED** (verified on GitHub: none for this head). Remote branch: **NOT_PUSHED**.
+- **Starting SHA:** `987279a98cf1a48ee657f0b9f4f78581063c9e01` (parent = current `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`).
+
+**Work performed**
+1. Re-verified Git and GitHub: `origin/main` unchanged; the branch is 1 ahead / 0 behind; the 987279a diff is exactly the 7 recorded vault paths and is docs-only; `git diff --check` is clean; the sensitive-data scan of added lines found 0 matches. The only open PR is PR8.
+2. **Credential boundary unchanged:** the only GitHub credential is the Owner's own broad-scope login (system credential manager). No push or PR creation was attempted, and remote write is OWNER_ACTION_REQUIRED.
+3. Re-hashed the r10/r11 inputs (8 files): all match the recorded sizes and SHA-256. No r12 folder exists.
+4. Ran an integration simulation against the DPT-GOV-WORKFLOW-001 branch (`git merge-tree`): one append-only conflict hunk in each of the 5 shared notes, resolvable by keeping both sections. No merge was committed.
+5. Prepared [[DPT-GATE-012_U01_r12_Authoring_Handoff]] (design-level, sanitized), with inputs, mandatory R11-IR-01/02 remediation, LOW dispositions, frozen requirements, invariants, expected specifications, static validation, the NOT RUN list, review conditions, pending Owner decisions and completion criteria.
+
+**Exact files changed:** this note; the new handoff note above; [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (re-verification appendix); `08_Operations/Agent_Run_Log.md`; `08_Operations/Change_Log.md`.
+
+**Security status (unchanged; nothing re-reviewed):** r11 CONDITIONAL — NOT READY; R11-IR-01 and R11-IR-02 MEDIUM OPEN; R11-IR-03…09 LOW OPEN; 0 of 162 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE; r12 NOT STARTED (handoff prepared, not commissioned).
+
+**Tests:** `validate_docs.py` and the static checks are recorded in the Agent_Run_Log S2 entry. No U01 or runtime test was run.
+
+**Blockers:** the credential boundary (publication); G-IND; the R11 MEDIUM findings; OPR-1/2/3 not implemented; no environment that meets OP-1/OP-2.
+
+**Next action:** the Owner publishes this branch as a Draft PR and decides whether to commission the r12 author and the r12 reviewer (handoff §10–§11).
+
+**Checkpoint SHA:** the S2 commit that adds this section (recorded by the next session).
+
+## 12. Session 2026-11-20 S3 — agent-managed publication attempt (blocked) and first execution report
+
+- **Task ID / Session ID:** DPT-DOC-RECOVERY-001 (DPT-GATE-012 documentation) / S3, Claude Code session `33a50b45`.
+- **Agent / Role:** documentation coordinator; same session as S2, so not independent.
+- **Intake class:** A (continuation; same branch and the same PR once it exists).
+- **Applicable plan:** recovery scope as recorded in §1; the Owner directive of 2026-11-20 on agent-managed publication.
+- **Branch / PR (verified state):** `docs/dpt-gate-012-security-history`, starting SHA `3c97dca83abe508dc070d64bf3e71d10847293d0`, 2 ahead / 0 behind `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4`; remote branch absent; no PR.
+
+**Work performed**
+1. Re-verified the branch, the worktree (clean) and the GitHub state. The only open PR is PR8, and no PR exists for this branch.
+2. **Publication not attempted.** The Owner directed that agents push and open Draft PRs with an appropriately authorized agent identity. The only GitHub credential available is still the Owner's own broad-scope login. The Owner's standing instruction for this workstream forbids using it from an agent session, and this directive does not revoke that. The status is therefore `AGENT_CREDENTIAL_REQUIRED`. The prerequisite (a dedicated, repository-scoped agent identity that cannot update `main`) is drafted in the DPT-GOV-WORKFLOW-001 Planning PR, `DEVELOPMENT_WORKFLOW.md` §5.6 on that branch. It is the same measure as OPR-1 in §10 of this note.
+3. Wrote this workstream's first execution report under the proposed dual-report rule (§13).
+
+**Exact files changed:** this note; `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` (new); `08_Operations/Agent_Run_Log.md`.
+
+**Decisions made:** none. **Findings:** none new.
+
+**Security status (unchanged; nothing re-reviewed):** r11 CONDITIONAL — NOT READY; R11-IR-01 and R11-IR-02 MEDIUM OPEN; R11-IR-03…09 LOW OPEN; 0 of 162 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE; r12 NOT STARTED. The handoff is not recreated.
+
+**Tests:** recorded in the S3 report. **Not executed:** independent review of this documentation; Markdown rendering; any U01 or runtime test.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED` (publication); G-IND; the R11 MEDIUM findings; OPR-1/2/3; OP-1/OP-2.
+
+**Next action:** once an agent publishing identity exists, a class-A session pushes this branch, opens its Draft PR, and records the PR number, URL and SHAs here. Alternatively, the Owner explicitly authorizes a one-time use of the Owner login.
+
+**Checkpoint SHA:** the S3 commit that adds this section (recorded by the next session).
+
+## 13. Reports
+
+Execution reports for this workstream (proposed dual-report rule, DPT-GOV-WORKFLOW-001 `DEVELOPMENT_WORKFLOW.md` §4.7). Applied from S3 onward. Earlier sessions and the raw contract and review files are not republished.
+
+| File | Session | SHA-256 | Kind |
+|---|---|---|---|
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-DOC-RECOVERY-001_S3_Report.md` | S3 | `e1c871388ce06ac0c9d1c26c86a836447ffa47dd38e73a235c40b162705e581e` | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` | S4 | `64fc19c2600c32c432a8dbb0a873d5dacfa9f59a7058d006072d8e80d361b449` (10371 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\`; a separate private-only supplement holds the GitHub security-posture observations and is not published |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S5_Verification_Report.md` | S5 | `979411390f5e3a7dec2242878491426a4a8d378a1fde50b93c3128a635b3116c` (7723 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` (parity verified); a separate private-only S5 supplement is not published |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-21_DPT-GATE-012-U01_S7_Publication_Report.md` | S7 | `71c6f64cccb5096ec82bceff622539ebdc9cb4aaeccc44b3a744465e9f2d166b` (6253 B) | public-safe; identical private copy in `Downloads\DPT-GATE-012-U01\Responses\` (parity verified) |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-22_DPT-GATE-012-U01_S8_r14_Report.md` | S8 | see §17 | **SANITIZED**, public-safe; the complete author record is a separate, non-identical private report in the Owner-approved private vault (no Downloads copy, per the Owner's 2026-11-22 instruction) |
+| `08_Operations/Summaries/DPT-GATE-012-U01/2026-11-22_DPT-GATE-012-U01_S8_r14_Summary.md` | S8 | see §17 | session summary; sanitized, public-safe |
+| `08_Operations/Reports/DPT-GATE-012-U01/2026-11-22_DPT-GATE-012-U01_S9_Report.md` | S9 | `0fddc9847a9b58437bba16b9647a2d8ba3a39f73572051814f86127c27c1fca9` (11777 B) | PUBLIC_SAFE full report; no private copy |
+| `08_Operations/Summaries/DPT-GATE-012-U01/2026-11-22_DPT-GATE-012-U01_S9_Summary.md` | S9 | `b9f3cff9c2a03840736e0cf905dc3ec2e965c0492f241d5002fda41dcb300eb5` (1614 B) | PUBLIC_SAFE session summary |
+| S8 private author report (Owner-approved private vault) | S8 | `21950b6f48ada6b45d8f0056aa405ed8685901627066331aca55488a8da9e705` (6343 B) | private; listed by SHA-256 only (DW §4.7 rule 9; added in S9) |
+
+**S9 note:** DW §4.7 as merged in PR #33 (`0daafbb`) governs these records from S9 on; the S3–S7 `Downloads` copies stay as historical records (rule 12). The S8 report and summary were committed unchanged in S9 (`8c62403802eae6619af1a79a83ff297bbaaf1e42`); their hashes are in §17.
+
+## 14. Session 2026-11-20 S4 — r12 authoring, main U01 Draft PR preparation, agent identity check
+
+- **Task / session:** DPT-GATE-012 / U01, S4, Claude Code session `1a47f0e2-6a8c-4c87-806e-141bb1ba7523`, `claude-opus-5-5`. Roles: r12 author and documentation coordinator. Not independent of earlier sessions (same model, host and account); must not review r12.
+- **Intake class:** A (continuation of the same U01 documentation workstream, same branch and same future Draft PR). Owner prompt: DPT-GATE-012 / U01 "main U01 security workstream Draft PR, dedicated agent GitHub publishing, r12 remediation".
+- **Branch / PR:** `docs/dpt-gate-012-security-history`, starting SHA `4e1885c20c5ce76f3583f9c56ba404f338868f81`, 3 ahead of `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (local ref; GitHub `main` read-only confirmed at the same SHA). Remote branch: NOT PUSHED. PR: **NOT CREATED** (no U01 or GOV-WORKFLOW PR exists on GitHub; the only open PR is PR8).
+
+**Work performed**
+1. Verified the repository identity, default branch, `main` SHA, open PRs, local worktrees and branches, read-only on GitHub. No duplicate PR exists.
+2. **Agent identity (Owner Option A):** no dedicated GitHub App or agent identity is provisioned; the only GitHub credential available to the agent account is the Owner's own. Publication status: `AGENT_CREDENTIAL_REQUIRED`. The Owner one-time setup checklist is in the S4 report §4. The repository-protection observations are recorded only in the private supplement.
+3. Re-hashed the r10/r11 inputs (8/8 match before and after authoring).
+4. **Authored r12** (contract, Gate Package, README) in a new folder outside the repository, from the exact r11 bytes, by 120 asserted scripted edits. See §4 r12 and §7.1.
+5. Re-fetched the five public sources S32–S36 (R11-IR-09): S33–S36 reproduce the r11 values after removing the final LF; S32 has changed.
+6. Prepared the main U01 Draft PR body (broader scope; Draft; not READY), stored locally for publication once an agent identity exists.
+
+**Exact files changed (vault):** this note; [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (§10 appended); [[DPT-GATE-012_U01_r12_Authoring_Handoff]] (status appendix only; handoff body unchanged); `08_Operations/Agent_Run_Log.md`; `08_Operations/Change_Log.md`; `08_Operations/Decision_Log.md`; `00_Home/Project_Status.md`; `00_Home/Project_Index.md`; `08_Operations/Reports/DPT-GATE-012-U01/2026-11-20_DPT-GATE-012-U01_S4_r12_Report.md` (new).
+
+**Security status:** r11 CONDITIONAL — NOT READY; r12 PROPOSED, review PENDING; R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only (§7.1); 0 of 166 specifications run; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE.
+
+**Tests:** listed in the S4 report. No U01, runtime or security test was run.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED`; G-IND; Owner setup of the agent identity and `main` protection; OPR-1/2/3.
+
+**Next action:** the Owner completes the S4 report §4 checklist; then a class-A session pushes this branch with the agent identity, opens the single Draft PR from the prepared body, and records its number and URL here. In parallel, the Owner commissions the independent r12 review.
+
+**Checkpoint SHA:** the S4 commit that adds this section (recorded in the S4 report's private copy and by the next session).
+
+## 15. Session 2026-11-20 S5 — state re-verification; publication still blocked
+
+- **Task / session:** DPT-GATE-012 / U01, S5, Claude Code session `8ee88547-2155-474e-a223-97e0c30994c5`, `claude-opus-5-5`. Role: documentation coordinator. Not independent of earlier sessions (same model, host and account); must not review r12.
+- **Intake class:** A. The Owner re-issued the S4 brief, which cited HEAD `4e1885c`; the verified HEAD was `fbf68d8`. r12 already existed (S4), so S5 did **not** re-author or alter it. A different second r12 would break the revision chain.
+- **Branch / PR:** `docs/dpt-gate-012-security-history`, starting SHA `fbf68d8c075a1e5c3bd611edf9288313487d79de`, 4 ahead / 0 behind `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (fetched). Remote branch: NOT PUSHED. PR: **NOT CREATED** (no DPT-GATE-012 or DPT-GOV-WORKFLOW-001 PR in any state; only PR8 is open).
+
+**Checkpoint SHA reconciliation** (resolved with `git log -S` on each section heading; the historical sections are not edited):
+
+| Session | Section | Commit |
+|---|---|---|
+| S2 | §11 | `3c97dca83abe508dc070d64bf3e71d10847293d0` |
+| S3 | §12 | `4e1885c20c5ce76f3583f9c56ba404f338868f81` |
+| S4 | §14 | `fbf68d8c075a1e5c3bd611edf9288313487d79de` |
+
+**Work performed**
+1. Re-verified the repository, `main`, open PRs, remote heads and worktrees, read-only. No duplicate PR.
+2. **Agent identity (Option A):** still not available to the agent. Publication remains `AGENT_CREDENTIAL_REQUIRED`. The setup checklist is unchanged (S4 report §4). The posture observations are in the private S5 supplement only.
+3. Re-hashed the r11 contract, Gate Package, README and independent review, and the r12 contract, Gate Package and README: **7/7 match** (sizes and SHA-256 as in §4).
+4. Re-ran the r12 author static checker: it reproduces S4 (166 IDs / 34 groups; r10 and r11 IDs retained; 4 new and 11 changed rows; 0 undefined references; grammar self-test 14/16 as expected). These are author self-checks, not an independent review.
+5. Did not arrange an independent review: every reviewer the agent can start runs on the same model family and account (fails G-IND). The Owner commissions it from Gate Package r12 §8–§9.
+6. Updated the prepared PR body (outside Git): file inventory, commit list and S5 checks.
+
+**Tests:** re-hash 7/7; author checker reproduced; report parity S3/S4/S5 verified; `git diff --check` clean on the S5 changes; sensitive-data scan of the added vault lines 0 matches (the repository name is public and was not counted); `database/validate_docs.py` exit 1 with 54 errors (52 with `--task IMP-P1-02`), the same error set as the unchanged HEAD in a throwaway worktree, 0 new and 0 fixed. **Not executed:** U01 acceptance specifications (0 of 166), runtime or security tests, independent review.
+
+**Status:** unchanged. R11-IR-01…09 ADDRESSED IN PROPOSED TEXT only; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE.
+
+**Blockers:** `AGENT_CREDENTIAL_REQUIRED`; G-IND; Owner setup of the agent identity and `main` protection; OPR-1/2/3.
+
+**Next action:** the Owner completes the S4 report §4 checklist (A–D); a class-A session then runs §4.E, pushes this branch, creates the single Draft PR from the prepared body, and records its actual number and URL here. In parallel, the Owner commissions the independent r12 review.
+
+**Report:** [[2026-11-20_DPT-GATE-012-U01_S5_Verification_Report]] (§13).
+
+**Checkpoint SHA:** the S5 commit that adds this section (recorded by the next session).
+
+## 16. Session 2026-11-21 S7 — Draft PR publication (PR #32)
+
+- **Task / session:** DPT-GATE-012 / U01, S7, Claude Code session `8ee88547-2155-474e-a223-97e0c30994c5`, `claude-opus-5-5`. Role: documentation coordinator and publisher. Not independent; must not review r12.
+- **Intake class:** A. Starting SHA `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9` (the S5 checkpoint, confirmed as §15's commit), 0 behind `main` `183f1d857d83b64819762a2237c908fb95e36cb4`. Between S5 and S7 there were two read-only pre-checks; publication was blocked by missing protection, and nothing was committed.
+- **Owner decision used:** a Hybrid GitHub workflow plus a **one-time publication exception** using the Owner's login, limited to this branch and `plan/agent-workflow-pr-routing` (push; one Draft PR each; documentation checkpoints; verification). The Owner explicitly confirmed proceeding although "Restrict updates" is missing. Scope, prohibitions and residual risk: S7 report §2 and the Decision Log. Not a standing authorization.
+
+**Publication (verified on GitHub)**
+
+| Field | Value |
+|---|---|
+| PR | [#32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32), "docs(security): DPT-GATE-012 U01 security history and r12 continuation" |
+| State | OPEN, **Draft**, base `main`, auto-merge none, merge BLOCKED (review required) |
+| Head at creation | `3c50d0e900bdc6198ddde8f3d1c687a08aa5b8f9` |
+| Created | 2026-11-20T18:15:40Z (2026-11-21 01:15:40 Asia/Bangkok) |
+| Author | the Owner account (one-time exception; not Owner security attestation, PG-1) |
+| Companion | governance Draft PR [#33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (DPT-GOV-WORKFLOW-001), separate |
+
+**Protection on `main`:** PR with 1 approval, stale-approval dismissal, force-push block and deletion restriction are in effect; no agent bypass of the PR rule; auto-merge disabled. **OPEN configuration item:** "Restrict updates" (Owner-only merge enforcement) is not configured. Resolve it before granting any write-capable agent identity and before the final merge. Owner-only merge enforcement is NOT complete.
+
+**Tests:** see the S7 report §5. `database/validate_docs.py` on this checkpoint: 54 errors (52 with `--task IMP-P1-02`), the same error set as the starting HEAD, 0 new. **Not executed:** U01 acceptance specifications (0 of 166), runtime or security tests, independent review.
+
+**Status:** unchanged. r12 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PENDING; BatchA and Q-H NOT AUTHORIZED.
+
+**Next action:** the Owner commissions the independent r12 review (S7 report §7). Its result, and any r13, are recorded on this branch and PR #32.
+
+**Report:** [[2026-11-21_DPT-GATE-012-U01_S7_Publication_Report]] (§13).
+
+**Checkpoint SHA:** the S7 commit that adds this section. It is pushed to `origin/docs/dpt-gate-012-security-history` and appears in PR #32's commit list.
+
+## 17. Session 2026-11-22 S8 — proposed r14 targeted repair (static authoring only)
+
+- **Task / session:** DPT-GATE-012 / U01, S8, Claude Code session `57690f5c-ef81-4fad-9ef8-281022bc87f4`, `claude-opus-5-5`. Role: r14 author. Not independent of earlier sessions (same model, host and account); must not review r14.
+- **Intake class:** A (continuation; same workstream, branch and Draft PR #32). Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5` (clean worktree). Owner prompt: "DPT-GATE-012 / P30-U01 — Proposed r14 Targeted Security-Contract Repair", with the r13 independent static review attached.
+- **Context not previously recorded here:** r13 was authored on 2026-11-21 by session `7dfbd396-…` outside the repository (408158 B, `8a50135d…7ba77a`; 169 IDs; new OAP19, OAP20, SGN08), and reviewed the same day by a ChatGPT (OpenAI GPT-family) static review in a cloud environment: CONDITIONAL — NOT READY, 0 HIGH / 2 MEDIUM (R13-IR-01, R13-IR-02) / 1 LOW (R13-IR-03), 0 of 169 run, **advisory only, not G-IND** (no authenticated out-of-band custody; host and account separation not attested).
+
+**Work performed**
+1. Verified the four frozen r13 inputs and the r13 review (`b170e32f…dcbc`, 15989 B) byte-exact, before and after authoring (8/8 with the second review copy and two r12 comparison files).
+2. **Storage:** no Owner-approved private location existed (`PRIVATE_RETENTION_NOT_CONFIGURED`). The session asked; the Owner chose a new dedicated private vault outside every Git repository (provisional; path not published). No new Downloads copy was made.
+3. **Authored r14** (contract, Gate Package, README, verification handoff) in that vault, from the exact r13 bytes, by 38 asserted scripted edits; rebuilt with identical bytes.
+4. Findings (all **ADDRESSED IN PROPOSED TEXT; INDEPENDENT CLOSURE PENDING; RUNTIME NOT RUN**): R13-IR-01 literal readiness-currency check (OVC-22); R13-IR-02 non-circular operation-permission table (no gate status changed, nothing granted); R13-IR-03 SGN08 split into end-to-end and UNIT-ONLY tiers; R14-AR-01 (author-identified, LOW, proposed) a kind format in the r13 check that could never match one readiness kind, corrected inside the same check and flagged for the reviewer.
+5. `contract_revision` bumped to 14; acceptance inventory 169 IDs / 34 groups, none added or removed; four rows changed (SGN08 in substance; AUTH06, NOTE01, SGN07 revision only).
+
+**r14 outputs (private; hashes only)**
+
+| File | Bytes | SHA-256 |
+|---|---:|---|
+| Contract r14 | 418450 | `9a97aa61587d9ba419ad6a6c08bfbadb2607de3ab7621b911ac0714ea36262e3` |
+| Gate Package r14 | 27825 | `1f633dffa86693e229395782ab8b075543dc14552f0aa39cf0ecc62a9f3a6c92` |
+| README r14 | 23034 | `a5a0d14b005e8cd1e4b99293acd97db0ef18734ba7483ce54c967b957ced9c7b` |
+| Verification Handoff r14 | 11989 | `8f5b00d0fd5a82bdd11edef43dea19a7d8369820787f22ec622dd56ad2a9a888` |
+
+**Vault records (this session; local only):** [[2026-11-22_DPT-GATE-012-U01_S8_r14_Report]] (6081 B, `67cd37efe2f957ccb78aa4dc6b9a317620951d6689fd35f6880853de1fc9aa72`, sanitized) and [[2026-11-22_DPT-GATE-012-U01_S8_r14_Summary]] (1497 B, `3c45415f926c907b4340c891d98d106edecb824d6e362c6c8cf0dccd4a73fbad`); this note (§2, §13, §17); `08_Operations/Agent_Run_Log.md`; `08_Operations/Change_Log.md`; `08_Operations/Decision_Log.md`; `00_Home/Project_Status.md`.
+
+**Tests:** author static checks only: 48/48 document checks, 35/35 cross-document checks, removed-line audit 162 lines / 0 unmapped, Python model 43/43, grammar self-test 15/15 and 23/23. **Not executed:** U01 acceptance specifications (0 of 169), Windows PowerShell 5.1, .NET, Git/SSH security operations, keys, signatures, fixtures, `database/validate_docs.py`, independent review.
+
+**Status:** CONDITIONAL — NOT READY. G-IND NOT SATISFIED; Q-F PENDING; BatchA, BatchB and Q-H NOT AUTHORIZED; OP-1/OP-2 UNAVAILABLE.
+
+**Git:** no branch change, commit, push, PR update or review. These vault edits are LOCAL_ONLY and NOT_PUSHED; PR #32 is unchanged (OPEN, Draft, head `33d92b5`). Publishing them needs a separate authorization and a valid publishing identity.
+
+**Open items:** the unmerged governance amendment (Draft PR #33) still names a download-folder location for private reports; the Owner's private-vault choice should be recorded on the OCD and included in backups (OPR-3).
+
+**Next action:** `INDEPENDENT_R14_REVIEW_PENDING`. The Owner commissions a genuinely qualified r14 independent review (different model family or a human, on a machine and account that agents do not use), with hashes conveyed through an Owner-controlled, out-of-band channel.
+
+**Checkpoint SHA:** NOT CREATED (no commit authorized in S8).
+
+## 18. Session 2026-11-22 S9 — closeout Stage 2: documentation snapshot and reconciliation
+
+- **Task / session:** DPT-GATE-012 / U01, S9, Claude Code session `57690f5c-ef81-4fad-9ef8-281022bc87f4`, `claude-opus-5-5`. Role: documentation recorder. It is the r14 author, so it is not independent and reviews nothing.
+- **Intake class:** A (continuation; same workstream, branch and Draft PR #32). Owner prompt: "DoomParfum By TK — Closeout Stage 2: PR #32" (2026-11-22).
+- **Classification:** **SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED.** The completion criterion is an accurate, public-safe record of the history and the continuation plan, not security approval.
+- **Verified start:** [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) MERGED 2026-11-22T16:37:34Z at `0daafbb863b63e0d36cfccd0903d070ecdc63340` (GitHub shows no reviews on it); `origin/main` = `0daafbb863b63e0d36cfccd0903d070ecdc63340`; PR #32 OPEN, Draft, CONFLICTING, head `33d92b5f6a81f745854d67a15545b2ec8d6700f5` = local branch; seven uncommitted S8 entries present. Read-only GET: the `main` pull-request rule now requires 0 approving reviews; the `main-owner-only-updates` ruleset still has no "Restrict updates" rule.
+- **Do-not-touch:** private artifact bytes, r11–r13 candidate and review bytes, historical receipts and reports, PR #8, application code, runtime, Docker, database.
+
+**Work performed**
+1. Backed up the seven S8 entries outside the repository with a SHA-256 manifest; the S8 report (`67cd37ef…aa72`) and summary (`3c45415f…fbad`) matched §17.
+2. Re-verified the private artifacts (§2 of [[DPT-GATE-012_U01_Security_Resumption_Handoff]]): r14 4/4, and r13, both copies of the r13 review, r12 and the r12 review 8/8, by SHA-256 and byte count. Hashed the S8 private author report for the first time (6343 B, `21950b6f…e705`).
+3. **S8 checkpoint:** committed the seven S8 entries unchanged as `8c62403802eae6619af1a79a83ff297bbaaf1e42` (each committed blob equals the backup). Their "local only" wording is the state at S8 authoring.
+4. **Merge of `main`:** `git merge --no-ff origin/main` (no rebase, reset, stash or force-push) as `6a8d72c82195d0dc8d2936f38c842a0256743a06`. Five shared notes (Project_Index, Project_Status, Agent_Run_Log, Change_Log, Decision_Log) had one append-vs-append conflict each, with an empty merge-base section. Each was resolved additively: `main`'s block first, in its existing position, then this branch's block, separated by one blank line. Audit: every result equals `git merge-file --union` of the three blobs plus that one blank separator; 0 lines lost from either side; no new duplicate headings. Every file changed on one side only equals that side.
+5. **Reconciliation (this session):** §2 status; §3 rows r13 and r14 plus an r12 correction; §4 revision records r13 and r14; §5 session rows; §6 review rows (r12 correction, r13, r14); §7 rows and the new §7.2; §8, §9 rows; the §10 S9 update; §13 rows; this section; the new [[DPT-GATE-012_U01_Security_Resumption_Handoff]]; the Recovery Index §11; Project_Status, Project_Index and the three logs.
+6. **Discrepancy found and corrected by an additive record:** the vault said no r12 review existed (Recovery Index §10; §4 r12 item 5; §6). An r12 independent static review dated 2026-11-21 exists (16972 B, `0a4f8784…3bc`): ChatGPT, cloud environment, CONDITIONAL — NOT READY, 0 HIGH / 3 MEDIUM / 2 LOW, advisory, 0 of 166 run. It is the review r13 answers. The earlier statements stay as dated history.
+
+**Status (unchanged by this session):** latest candidate PROPOSED r14, NOT APPROVED. R13-IR-01/02/03 addressed in proposed text, independent disposition pending. R14-AR-01 author-identified LOW, proposed correction, independent disposition pending. G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 acceptance specifications executed; no security implementation authorization.
+
+**Tests & evidence:** private artifacts re-hashed (r14 4/4; r12–r13 8/8; S8 private report unchanged at the end); S8 checkpoint 7/7 equal to the backup; conflict-retention audit 5/5; `database/validate_docs.py --task IMP-P1-02` on the merge tree and the S9 tree: 52 and 52 errors, identical sets (0 new; all pre-existing `.json` wiki links); without `--task`: 54 and 54; secret candidates 0; 17/17 frontmatter parsed; the pre-merge S8 tree cannot be checked against the new `main` (tool limitation). Wiki links in S9 additions all resolve; `git diff --check` clean; sensitive scan 0; preservation audit: only the three §2 status lines replaced. Details: S9 report §7.
+
+**Not executed:** independent review; Markdown rendering; any acceptance specification, PowerShell, .NET, Git/SSH security operation, key, signature, fixture, Docker or database operation; r15 authoring.
+
+**Vault records:** S9 report and summary (§13). **Git:** local commits only (`AGENT_CREDENTIAL_REQUIRED` / `LOCAL_ONLY` / `NOT_PUSHED`); PR #32 on GitHub stays at `33d92b5` until an authorized publication. The S9 records commit's own SHA is recorded by the next session and the PR.
+
+**Next action:** the Owner authorizes publication of this checkpoint (a dedicated agent identity, or a fresh one-time exception scoped to PR #32), reviews PR #32 and merges it as documentation only. Security work resumes only through [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §7.
