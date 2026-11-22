@@ -979,6 +979,47 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
 
+## 2026-11-20 — DPT-GOV-WORKFLOW-001 / S1 — task-to-PR routing governance
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-20 | DPT-GOV-WORKFLOW-001/S1 | Claude Code (docs/governance) | PR_NOT_CREATED | NA | `AGENTS.md`, `DEVELOPMENT_WORKFLOW.md`, task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, Project_Index | `validate_docs.py`, `git diff --check`, scope and secret scans: see task note | PARTIAL: local checkpoint, publication BLOCKED | S1 checkpoint (reported in session report) |
+
+TOOL DECISION/EXECUTION: native file tools, Git, read-only `gh` queries (visibility, PR list), and the repository's `database/validate_docs.py`. No tool installed or configured. The Owner's `gh` login was not used for any remote write (credential boundary). The run also verified, read-only, that DPT-DOC-RECOVERY-001 commit `987279a98cf1a48ee657f0b9f4f78581063c9e01` is local only, with no remote branch and no PR. Details: [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+### 2026-11-20 — DPT-GOV-WORKFLOW-001 / S2 — publication readiness re-check
+
+Claude Code (docs/governance; same session as S1, so this is a self-check). Starting SHA `2903c96537c5eca2c68568b3911a899235b38aea`; still LOCAL_COMMITTED / NOT_PUSHED / PR_NOT_CREATED / OWNER_ACTION_REQUIRED because of the unchanged credential boundary. A `git merge-tree` simulation against the recovery commit `987279a` shows one insertion-vs-insertion conflict hunk in each of the 5 shared notes, resolvable by keeping both sections. Self-found LOW finding S2-F1 (credential-scope detail in the S1 security line) was corrected in a new commit. Independent review is still pending. Details: [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]].
+
+### 2026-11-20 — DPT-GOV-WORKFLOW-001 / S3 — dual execution reports; publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+Claude Code `33a50b45` (docs/governance; same session as S1/S2, not independent). Intake class A for both DPT-GOV-WORKFLOW-001 and DPT-DOC-RECOVERY-001. Starting SHA `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. The Owner directed agent-managed publication. The only GitHub credential is still the Owner's own broad-scope login, and both the Owner's standing instruction and this PR's credential boundary forbid using it, so no push or PR was attempted. The governance amendment was extended (DW §4.7 and §5.6; AGENTS §8.1), and the first dual execution report was written. Checks: see [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] (S3 ledger rows).
+
+### 2026-11-21 — DPT-GOV-WORKFLOW-001 / S4 — Draft Planning PR33 published (one-time Owner-login exception)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-21 | DPT-GOV-WORKFLOW-001 / S4 | Claude Code `8ee88547` (publisher; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft) | NA | task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S4 report | PR33 OPEN/Draft verified on GitHub; diff and sensitive checks clean; validate_docs baseline unchanged | Published; governance text unchanged | the S4 commit (pushed to the PR branch) |
+
+Class A. Starting SHA `f5f2597af1ff729f83f05bef053227970f8b0bfb`. Pushed without force; no push to `main`, merge, auto-merge, settings or ruleset change. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S4.
+
+### 2026-11-22 — DPT-GOV-WORKFLOW-001 / S5 — Owner reporting model; publication blocked (`AGENT_CREDENTIAL_REQUIRED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | DPT-GOV-WORKFLOW-001 / S5 | Claude Code `57690f5c` (governance author; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft; GitHub head unchanged at `582d1e6`) | NA | AGENTS.md, DEVELOPMENT_WORKFLOW.md, vault README, task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S5 report, S5 summary | validate_docs baseline remeasured (52/54) and compared on the S5 tree; `git diff --check`; sensitive scan | PARTIAL: local checkpoint, NOT PUSHED | local S5 commit (recorded by the next session) |
+
+Class A, closeout Stage 1. Starting SHA `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa`. No push, merge, auto-merge, settings or ruleset change; no runtime test. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S5.
+
+### 2026-11-22 — DPT-GOV-WORKFLOW-001 / S5 publication and S6 — pre-merge record (S6 `NOT_PUSHED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | DPT-GOV-WORKFLOW-001 / S5 publication | Claude Code `57690f5c` (publisher; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft) | NA | none (push of the existing S5 commit; PR description updated) | remote at `582d1e6` before the push; diff and sensitive checks clean; PR33 head `8902bb7` and description verified on GitHub | Published (one-time Owner-login exception, expired) | `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21` |
+| 2026-11-22 | DPT-GOV-WORKFLOW-001 / S6 | Claude Code `57690f5c` (governance author; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft; GitHub head `8902bb7`) | NA | task note, Project_Status, Agent_Run_Log, Change_Log, Decision_Log, S6 report, S6 summary | read-only GET of PR33 and the `main` rules; validate_docs compared with HEAD; `git diff --check`; sensitive scan | PARTIAL: local checkpoint, NOT PUSHED | local S6 commit (recorded by the next session) |
+
+Class A. Starting SHA `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21`. No merge, auto-merge, force-push, settings or ruleset change; no runtime test. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S6.
+
 ## DPT-GATE-012 / U01 security-contract sessions, recovered — 2026-11-20
 
 Recovered by `DPT-DOC-RECOVERY-001` from the contract, README and review headers; details in [[DPT-GATE-012_U01_Security_Gate]] §5 and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]]. These sessions wrote only to Owner-workstation staging folders outside the repository; none created a branch, commit, PR, key, signature or Obsidian entry. All ran on one host and Windows account with shared harness plugins and hooks.

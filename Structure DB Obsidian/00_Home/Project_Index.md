@@ -233,6 +233,10 @@ Owner-merged PR30/main `4f23cbc858dd818b149674342bfa504e78930088`; [[DPT-PLAN-01
 
 Historical runtime tests remain historical; current planning static/review/publication evidence follows actual checkpoints. No source/asset/DB/Production change or agent merge.
 
+## Governance — task intake and PR routing
+
+- [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]]: proposed task-intake classification, PR routing, mandatory session recording, read-only review exception and publication rules. ACCEPTANCE PENDING; not merged.
+
 ## DPT-GATE-012 / U01 security gate navigation
 
 - [[DPT-GATE-012_U01_Security_Gate]] — canonical status, r1–r12 history and registers for the proposed P30-U01 field-review security contract; nothing approved or implemented.

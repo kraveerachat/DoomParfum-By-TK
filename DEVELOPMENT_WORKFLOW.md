@@ -7,8 +7,8 @@ aliases:
 project: DoomParfum By TK
 type: governance
 status: accepted
-version: 1.0.0
-updated: 2026-11-10
+version: 1.1.0
+updated: 2026-11-20
 timezone: Asia/Bangkok
 owner: human-owner
 source_documents:
@@ -108,6 +108,7 @@ DoomParfum By TK/
 │   ├── 08_Operations/Change_Log.md
 │   ├── 08_Operations/Agent_Run_Log.md
 │   ├── 08_Operations/Receipts/                # NEW WHEN BOOTSTRAPPED: immutable final receipts
+│   ├── 08_Operations/Reports/<TOPIC_ID>/      # per-session execution reports (§4.7)
 │   ├── 08_Operations/Handoffs/                # NEW WHEN BOOTSTRAPPED: continuity packs
 │   ├── 09_References/...
 │   └── 90_Templates/...
@@ -142,6 +143,8 @@ DoomParfum By TK/
 | **Claude Code** | Alternative Implementation/Debug Agent สำหรับอ่านหลายไฟล์, trace bug, targeted fix | ห้ามแก้ worktree/ไฟล์เดียวกันพร้อมกับ Codex โดยไม่แบ่ง scope |
 | **Gemini / Documentation Agent** | Obsidian status, ERD/Docs/Session Register/PR description reconciliation, research summary ที่มี source | โหมด Docs-only ห้ามแก้ app code หรืออ้างผลทดสอบที่ไม่ได้ตรวจ |
 | **ETL / Research Agent** | ตรวจ schema แหล่งข้อมูล, import licensed datasets, validate provenance, deduplicate | ห้าม ingest เนื้อหาที่ไม่มีสิทธิ์, เก็บ session token, bypass anti-bot, ตีค่าข้อมูลที่หายเอง |
+
+**Routing by complexity (S5 of DPT-GOV-WORKFLOW-001):** prefer Claude Code for high-complexity architecture, security and cross-document history work, and Codex for bounded implementation, tests and fixes. The choice never waives an approval gate, the Owner-only merge, or reviewer independence.
 
 > Agent แต่ละตัวทำหลายบทบาทได้เมื่อผู้ใช้มอบหมาย แต่ **บทบาทและ permissions ต้องระบุใน Task Map ทุกครั้ง**. งานเล็กใช้ Agent เดียวสำหรับ code+docs ได้; งานเสี่ยงสูงให้แยก Coding/Review/Docs.
 
@@ -230,6 +233,33 @@ DPT-PLAN-001 → plan/p0-domain-model → Planning PR #P
 - ทุก implementation PR ต้องอ้าง `approved_plan_pr`/`approved_plan_sha` และ `requirements` ที่ตนรับผิดชอบ.
 - อย่าให้สอง Agent commit concurrent บน branch เดียวกันโดยไม่มี explicit handoff และการแบ่ง ownership ของไฟล์.
 
+### 3.6 New Task Intake and PR Routing
+
+Run this intake for every new meaningful prompt **before** creating a branch, commit, or PR. `AGENTS.md` §2.1 summarizes it; this section is the full procedure.
+
+**Step 1 — Identify.** Record the project, task ID (or `UNALLOCATED`), objective, scope, and major workstream.
+
+**Step 2 — Inspect actual state.** Check the current repository, the approved/merged plans, the canonical Obsidian task note and status, the relevant branches and worktrees, and the GitHub PRs (open, Draft, and relevant merged ones). Verify a PR on GitHub. A local branch, a local commit, or a `Draft_PR_Body.md` file does not prove that a PR exists.
+
+**Step 3 — Classify** the request as exactly one of these classes:
+
+| Class | When | Route |
+|---|---|---|
+| **A. Continuation of an existing reviewable task** | The same reviewable scope and acceptance as an existing task | Reuse the task ID, branch, and open/Draft PR. Append a session to the existing canonical note, update the applicable logs, then checkpoint and update the same PR. |
+| **B. New reviewable task** | A distinct, independently reviewable unit | Allocate or verify the task ID, responsible agent, approved plan, and dependencies. Create the canonical task note with scope and acceptance, create a new branch from verified latest `main` (§5.1 naming), open a new Draft PR, and link related tasks and PRs. |
+| **C. Scope change requiring a planning amendment** | The work exceeds the approved plan's intent or acceptance (§3.4) | Stop the out-of-scope work, open a docs-only Planning Amendment PR, and wait for Human Merge before implementing the change. |
+| **D. Read-only review or audit** | The assignment is review/audit only | No branch or PR. Follow §6.2.1 if the reviewer is forbidden to write. |
+
+**Step 4 — Route** as in the table, and record the class in the session record (§4.4).
+
+**Do not create a new PR** merely because a new agent session started, the context was cleared, the task has a new review revision number, new review findings arrived, an in-scope bug was fixed, or another test was run.
+
+**Do not reuse an existing PR** when the new work needs a separate governance gate, a separate implementation phase, or an independently reviewable scope. Belonging to the same initiative is not enough. Planning work stays docs-only (§3.1). Implementation still requires a merged Planning PR (Gate P), and a new implementation task cannot bypass Gate P by attaching itself to an existing PR of the same initiative.
+
+*Example:* DPT-GATE-012 / U01 revisions r11 → r12 → r13 can stay in one documentation/review workstream while the reviewable task and scope are unchanged (class A). U01 implementation is a separate task that needs its own approved Planning PR first (class B or C).
+
+Never create a duplicate PR for the same reviewable task, and never combine unrelated tasks in one PR for convenience.
+
 ---
 
 ## 4. Session & Task Governance
@@ -298,6 +328,8 @@ implementation_pr: null
 
 นับเป็น meaningful session เมื่อมี source code/migration/test change, schema/architecture decision, data import/source license decision, UI flow/semantics change, security/deployment/config change, integration testing, หรือ defect fix ที่กระทบ accepted behavior.
 
+These also count as meaningful sessions: requirements and planning work, architecture and design documents, unit/integration/security testing, independent (security) reviews, review findings and their remediation, documentation changes, data and database changes, configuration and infrastructure operations, bug fixes, agent handoffs, and final task reports. An independent reviewer under a read-only restriction is covered by §6.2.1 instead.
+
 **ไม่ต้องเปิด session ใหม่ทุกข้อความหรือทุก commit**. เปิด session เมื่อ scope/results เป็นหน่วยงานที่ตรวจสอบได้. Sub-session อยู่บน task branch เดิมและ PR เดิม.
 
 ### 4.4 Session Register และ Start/End Update
@@ -311,8 +343,12 @@ implementation_pr: null
 
 ### Session S<n> — <purpose>
 State: IN PROGRESS
-Started:
-Branch:
+Task ID / Session ID:
+Agent / Role:
+Started (date):
+Intake class (§3.6): A / B / C / D
+Applicable plan:
+Branch / PR (verified state):
 Starting SHA:
 
 #### Plan / Why / Scope
@@ -322,14 +358,21 @@ Starting SHA:
 <!-- On end of session -->
 #### Work performed / Implementation details
 #### Exact files/systems changed
-#### Defects discovered / Fixes applied
+#### Decisions made (proposed vs Owner-verified)
+#### Findings / Defects discovered / Fixes applied
 #### Tests & Evidence (commands, counts, exit, logs)
+#### Tests not executed (and why)
 #### Result (PASS / PARTIAL / BLOCKED)
+#### Security / privacy implications
 #### Known limitations / Remaining work
+#### Current task status / Next recommended action
 #### Git checkpoint SHA / Next session / Handoff
+#### Execution report and session summary (files, SHA-256, PUBLIC_SAFE or SANITIZED; a private report by SHA-256 only; §4.7)
 ```
 
 End-of-session note ต้องสอดคล้องกับ evidence จริง; failure ต้องระบุ `introduced / pre-existing / environmental / blocked by dependency / not tested`.
+
+Every meaningful session must fill all of these fields; write `NONE`, `NOT RUN`, or `NOT AVAILABLE` rather than leaving one out. The session record is appended to the task's **existing** canonical note, so the task does not get a new canonical note or a new receipt per session (§4.6 stays one receipt per reviewable task).
 
 ### 4.5 ความถี่ของการอัปเดต Obsidian
 
@@ -352,6 +395,19 @@ FINAL ACCEPTANCE
 POST-MERGE (if required)
   → merged SHA / deployment distinction / next task updated
 ```
+
+**Where each meaningful session is recorded** (canonical root `Structure DB Obsidian/`):
+
+| Location | Update when |
+|---|---|
+| `07_Delivery/Tasks/<TASK_ID>_<slug>.md` | Always: the session record (§4.4), appended to the one canonical task note |
+| `08_Operations/Agent_Run_Log.md` and/or `Change_Log.md` | Always: one dated entry linking the task note (§7.2) |
+| `08_Operations/Reports/<TOPIC_ID>/` | Always: the session's full execution report, public-safe or sanitized (§4.7) |
+| `08_Operations/Summaries/<TOPIC_ID>/` | Always: the session's short summary, public-safe or sanitized (§4.7) |
+| `08_Operations/Decision_Log.md` | A decision was proposed, changed, or verified as an Owner decision |
+| `08_Operations/Handoffs/` | The work is handed to another agent or chat, or a major topic ends (§10) |
+| `00_Home/Project_Status.md` | The task's state, PR state, or the project's current truth changed |
+| `00_Home/Project_Index.md` | A new canonical note was created and needs navigation |
 
 - **Agent ผู้ทำงานรับผิดชอบให้ Obsidian current แม้จะแบ่ง Gemini เป็น Docs Agent**; ห้ามโยนภาระจนเอกสารล้าหลังหลาย session.
 - การเปลี่ยน requirement → `01_Product/Requirements_Register.md`, relevant domain/data/UX, `08_Operations/Decision_Log.md`, `Change_Log.md`, root `README.md` ถ้ากระทบ baseline.
@@ -382,6 +438,32 @@ KNOWN_LIMITATIONS / DEFERRED_WORK
 OBSIDIAN_FILES_UPDATED
 REVIEW_READINESS / NEXT_OWNER_ACTION
 ```
+
+### 4.7 Session records: execution report, session summary and task overview (one set per meaningful session)
+
+Every meaningful writable session (§4.3) leaves three records in the canonical vault `Structure DB Obsidian/`. **Replaced in S5 of DPT-GOV-WORKFLOW-001 (2026-11-22):** the earlier "dual report" rule, which also kept a private copy in the Owner's `Downloads` folder, is withdrawn by Owner decision; no new persistent `Downloads` copy or ad-hoc handoff folder is created.
+
+| Record | Holds | Location |
+|---|---|---|
+| Full execution report | One session, complete: TOOL DECISION and TOOL EXECUTION REPORT, the work performed, exact paths, the tools actually used, the files changed, the checks run with their results and the checks NOT RUN, hash and evidence identity, task, session, branch, PR and commit, failures, limitations, and the verified current state | `08_Operations/Reports/<TOPIC_ID>/` (public-safe or sanitized) |
+| Session summary | The same session in a few lines: what, where, checks, status, Git state, next action | `08_Operations/Summaries/<TOPIC_ID>/` (public-safe or sanitized) |
+| Canonical task overview | The living task summary, its session register (§4.4) and an index of its reports and summaries | `07_Delivery/Tasks/` (§4.2, §4.4); one note per task |
+| Private full report and private artifacts | Only when content is sensitive (§5.7): the complete report, raw security contracts, raw reviews | A separately Owner-approved private vault, outside every Git repository; never in GitHub; its path is never published |
+| Project status | Project-wide current truth | `00_Home/Project_Status.md` |
+| Immutable receipt | One per completed reviewable task, at acceptance; never one per session | `08_Operations/Receipts/` (§4.6) |
+
+1. `<TOPIC_ID>` names the major workstream, for example `DPT-GATE-012-U01` or `DPT-GOV-WORKFLOW-001`. Reuse an existing topic folder; do not create a parallel one.
+2. File names: `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Report.md` and `YYYY-MM-DD_<TASK_ID>_S<n>[_r<rev>]_Summary.md`. Once committed, a report or summary is never overwritten or edited. A correction goes in a later record that names the one it corrects.
+3. **Public-safe session:** the vault report is the complete report; no second copy is kept anywhere.
+4. **Sensitive session** (secrets, credential or host facts, exploit detail, raw security contracts or reviews): the complete report and the raw artifacts stay only in the approved private vault. The canonical vault receives a separately written report marked **SANITIZED**, which gives the private report's SHA-256 and states `PRIVATE_EVIDENCE_NOT_PUBLISHED`. Never describe the two as identical.
+5. **No approved private vault:** report `PRIVATE_RETENTION_NOT_CONFIGURED`, write no sensitive material anywhere (not to the repository, not to `Downloads`), stop that part of the work, and ask the Owner for a decision. Sanitized public records may still be written.
+6. **Private-vault custody:** the vault's existence, custody and backup status are recorded in the Owner's private OCD record, not in the repository. Public notes say only that an Owner-approved private vault holds the original, never where. Until the Owner has verified custody and backup, record them as **PENDING**, never as complete.
+7. Existing files in `Downloads` (earlier reports and revisions) are historical inputs: read them by exact bytes and hash, never move, edit or delete them, and never use `Downloads` as a new destination.
+8. Commit the report, the summary and the task-note update on the task's own branch and PR, in the same checkpoint as the session record. A record cannot contain the SHA of the commit that adds it, so the next session or the PR records that SHA.
+9. List every report and summary in the **Reports** index of the canonical task note: file, session, SHA-256, and `PUBLIC_SAFE` or `SANITIZED`. A private report is listed by its SHA-256 only.
+10. Claim that a record is published only after checking the remote branch and the PR; until then report `LOCAL_ONLY` / `NOT_PUSHED`.
+11. A read-only reviewer (§6.2.1) writes nothing to the repository or the vault; it delivers its own report outside the repository with its SHA-256. An authorized documentation session reconciles it later without modifying it.
+12. The rule applies from its adoption onward. Earlier reports, including the `Downloads` private copies of S3–S7, stay as they are; they are not republished, rewritten or deleted.
 
 ---
 
@@ -482,6 +564,45 @@ PRODUCTION_MUTATION_PERFORMED=NO (unless explicitly authorized)
 | DPT-IMP-001 | IMPLEMENT | #... | feat/... | approved #... / SHA | IN PROGRESS | ... | test |
 ```
 
+### 5.6 Checkpoint publication and blocked remote writes
+
+The vault is part of this repository, so a meaningful documentation checkpoint belongs on the task's own branch and PR. When a checkpoint is ready:
+
+1. Verify the branch and worktree.
+2. Inspect the exact changed files.
+3. Validate documentation consistency (§6.1 docs checks).
+4. Run `git diff --check`.
+5. Check for secrets and private information (§5.7).
+6. Stage only the intended paths.
+7. Commit one coherent checkpoint.
+8. Push with an authorized credential (below).
+9. Create or update the task's Draft PR (§3.6 decides which PR).
+10. Record the actual commit SHA and the verified PR state.
+
+**Responsibilities:** the agent carries out steps 1–10, including the branch, commit, push, Draft PR and report, so the Owner does not create branches, commit, push or open Draft PRs in the normal workflow. The Owner reviews, requests corrections, makes the decisions that need Owner authority, and merges. The agent never merges, approves its own work, or enables auto-merge.
+
+**Credential boundary:** push and create or update PRs only with a credential the Owner has authorized for agent use and that is appropriately scoped. Having a credential in the environment, including the Owner's own broad-scope login, is not authorization. Permission to publish a branch or open a Draft PR is never permission to approve a gate, sign an Owner statement, merge, or bypass repository protection.
+
+**Agent publishing identity** (the prerequisite for agent-managed PRs):
+
+- **Identity:** a dedicated identity distinct from the Owner. Preferred: a GitHub App installed only on this repository. Alternative: a dedicated machine-user account that is a collaborator only on this repository, with the Write role and a token limited to this repository.
+- **Permissions:** Contents read and write, Pull requests read and write, Metadata read. No Administration, Actions, Workflows, Secrets, Environments, Pages or account-level permission.
+- **Secret handling:** the token or key has an expiry and is stored outside the repository. It is never printed or committed. The agent session is configured to use it instead of the Owner's login. On the same operating-system account the Owner's stored login stays technically reachable; the rule above still forbids using it, and full separation needs a separate OS account or machine.
+- **Repository rules on `main`:** a pull request is required; force pushes and deletion are blocked; updating `main`, including merging, is restricted to the Owner; the agent identity is never a bypass actor; auto-merge stays disabled.
+- **Verification:** push a test branch and open and close a Draft PR with the agent identity. Confirm from the ruleset settings that the agent identity cannot update `main`; do not test this by attempting a merge. Record the identity, permissions, expiry and result in `08_Operations/Agent_Tool_Registry.md`, without the token.
+
+**If remote publication is blocked:** keep the local commit, record the exact blocker in the task note, and report `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`. Also report `AGENT_CREDENTIAL_REQUIRED` when the blocker is the missing agent publishing identity. The Owner may publish that checkpoint or explicitly authorize a one-time use, but that is an exception, not the standard workflow. Never present a local commit as a PR.
+
+### 5.7 Public repository evidence handling
+
+Check the repository's visibility before committing evidence. While the repository is public:
+
+- Never commit secrets, private keys, tokens, credentials, sensitive system paths, or exploit details that should remain confidential.
+- For sensitive reports, commit only a sanitized summary with the original's hash and provenance, and record whether the original is retained privately. Keep raw sensitive evidence outside the repository, in the Owner-approved private vault (§4.7); without one, report `PRIVATE_RETENTION_NOT_CONFIGURED`.
+- Never publish the private vault's path, custody details or backup details; they belong in the Owner's private OCD record.
+- Matching hashes show that two copies are identical. They do not prove independent custody.
+- Do not silently delete or rewrite existing records.
+
 ---
 
 ## 6. Testing, Independent Review & Production Gates
@@ -507,6 +628,16 @@ LIMITATIONS=<what was not proven>
 ### 6.2 Independent review
 
 Review exact Git SHA ไม่ใช่เชื่อ agent summary. ตรวจ **source semantics**, changed paths, test behavior, bypass/fail-open paths, permissions/authentication, data provenance, migrations/rollback และ Obsidian claims. Findings: `BLOCKER / HIGH / MEDIUM / LOW / NO ISSUE`; หากมี blocker ให้แก้แบบ targeted ใน PR เดิมและ retest.
+
+#### 6.2.1 Read-only independent reviews (exception to session recording)
+
+Independent reviews, security reviews in particular, keep the reviewer's independence and any declared read-only restriction. If the reviewer is explicitly forbidden to modify the project:
+
+- The reviewer does not modify the repository or the Obsidian vault.
+- The reviewer produces the authorized report separately, with the report's hash, the reviewed revision, the findings, the verification status, and the provenance limitations, and marks Obsidian synchronization as **pending**.
+- A separately authorized documentation session later reconciles the report into the canonical task note (public-repository rules, §5.7, apply). That session never modifies or overwrites the review report.
+
+The reconciled record keeps these states separate: *review completed*, *findings open*, *findings resolved in proposed design*, *independent closure pending*, *runtime tests not run*, and *gate approved by Owner*. A review report is never automatic security approval. Only a verified Owner decision approves a gate.
 
 ### 6.3 Data Source / Scraping gates เฉพาะ DoomParfum
 
