@@ -14,6 +14,8 @@ source_of_truth: "../../README.md"
 
 ## DPT-GOV-WORKFLOW-001 governance amendment — current truth, 2026-11-20
 
+**2026-11-22 (S6):** the S5 checkpoint `8902bb7` was published to [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) after S5 authoring, under a one-time Owner-login exception limited to PR33, now expired. PR33 is OPEN and **Draft**; the `main` rules require 1 approving review (the author's own approval does not count) and dismiss stale approvals on push; the active ruleset `main-owner-only-updates` contains no "Restrict updates" rule. The S6 record is a local commit only (`NOT_PUSHED`). Next: Owner authorizes publication of S6, decides the approval path, marks PR33 ready, reviews and merges; PR32 work waits for it.
+
 **2026-11-22 (S5):** the Owner reporting model (full report, summary and task-overview update per meaningful session in the vault; sensitive originals only in a separately approved private vault; no new Downloads copies) replaces the S3 dual-report rule in DW §4.7 and AGENTS §8.1. The S5 checkpoint is local only (`AGENT_CREDENTIAL_REQUIRED`, `NOT_PUSHED`); [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) on GitHub stays at `582d1e6`, OPEN and Draft. "Restrict updates" on `main` is still not configured. Next: Owner publication, review and merge of PR33; PR32 work waits for it.
 
 Verified `origin/main` is `183f1d857d83b64819762a2237c908fb95e36cb4`: the Owner merged [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) on 2026-11-17, so the PR31 "OPEN/DRAFT" statements below are dated history. The only open PR is PR8 (OPEN/DRAFT/BLOCKED). The repository is PUBLIC.

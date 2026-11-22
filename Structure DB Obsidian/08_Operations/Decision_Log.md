@@ -426,3 +426,12 @@ Owner decisions given in the agent chat on 2026-11-21 (the channel is not indepe
 - Prefer Claude Code for high-complexity architecture, security and history work and Codex for bounded implementation, tests and fixes, without waiving approval gates or reviewer independence.
 
 Proposed governance text: DW §4.7 and AGENTS §8.1 (S5). In effect only after the Owner merges PR33. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S5.
+
+## DPT-GOV-WORKFLOW-001 — one-time publication of the S5 checkpoint — 2026-11-22 S6
+
+**Owner decision given in the agent chat on 2026-11-22 (the channel is not independently authenticated):** a second one-time, narrowly scoped exception under the Hybrid policy (2026-11-21 S4 entry above).
+
+- **Allowed:** with the Owner's GitHub login, push the existing S5 commit `8902bb7` to `plan/agent-workflow-pr-routing` and update the [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) description from the prepared public-safe body; verify the result.
+- **Prohibited:** additional commits or branches, merge, auto-merge, force-push, changes to `main`, repository settings or branch protection, PR32, PR8, the r14 worktree, private security artifacts, and runtime, Docker, database or security tests.
+- **Expiry:** immediately after that publication. It was used once (Session S6 records the outcome) and does not cover the S6 checkpoint.
+- **Not decided here:** how the one approving review required by the `main` rules is obtained, and whether "Restrict updates" is configured before the merge. Both remain Owner decisions.

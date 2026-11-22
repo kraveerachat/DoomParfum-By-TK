@@ -18,8 +18,9 @@ source_of_truth: "../../../README.md"
 - Branch: `plan/agent-workflow-pr-routing`, isolated worktree `.local/worktrees/agent-workflow-pr-routing`
 - Base: verified `origin/main` `183f1d857d83b64819762a2237c908fb95e36cb4` (PR31 merge)
 - PR / Target branch: **Draft [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33)** → `main` (OPEN, Draft, created 2026-11-21 S4 under a one-time Owner-login exception; see Session S4). Before S4: PR_NOT_CREATED / NOT_PUSHED.
-- Current state: ACCEPTANCE PENDING. The branch is published as a Draft Planning PR. Independent review and Owner merge are pending. Open configuration item: "Restrict updates" is not configured (re-verified 2026-11-22, S5).
+- Current state: ACCEPTANCE PENDING. The branch is published as a Draft Planning PR. Independent review, the one approving review required by the `main` rules, and Owner merge are pending. Open configuration item: "Restrict updates" is not configured (re-verified 2026-11-22, S6).
 - S5 (2026-11-22): the Owner reporting model replaces the Downloads dual-report rule. The S5 checkpoint is a **local commit only** (`AGENT_CREDENTIAL_REQUIRED`, `NOT_PUSHED`); PR33 on GitHub stays at `582d1e6` until it is published.
+- S6 (2026-11-22): the S5 checkpoint `8902bb7` was published to PR33 after S5 authoring, under a one-time Owner-login exception that has since expired (Session S6). The S6 checkpoint is a **local commit only** (`NOT_PUSHED`); PR33 on GitHub stays at `8902bb7` until it is published.
 - Production mutation allowed: NO. Application code change: NO.
 
 ## Goal / Why
@@ -108,7 +109,9 @@ No existing accepted sentence was deleted or reworded. S3 rewords only two sente
 - [x] S3: dual execution-report rule and agent publishing identity are defined, additively, without duplicating existing rules.
 - [x] Draft Planning PR published (S4: PR33, under a one-time Owner-login exception).
 - [x] S5: the Owner reporting model replaces the Downloads dual-report rule, without changing accepted text on `main`.
-- [ ] S5 checkpoint published to PR33 (blocked: `AGENT_CREDENTIAL_REQUIRED`).
+- [x] S5 checkpoint published to PR33: blocked at S5 authoring (`AGENT_CREDENTIAL_REQUIRED`); published afterwards on 2026-11-22 as `8902bb7` under a one-time Owner exception (recorded in S6).
+- [ ] S6 checkpoint published to PR33 (no authorization yet).
+- [ ] The one approving review required by the `main` rules, from an account other than the PR author.
 - [ ] Independent review of the amendment.
 - [ ] Human Owner review and merge.
 
@@ -135,6 +138,7 @@ This task did not modify the recovery branch. The two branches append to the sam
 | S3 | Owner directive: dual execution reports, agent-managed publication, agent identity | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | `f5f2597af1ff729f83f05bef053227970f8b0bfb` | Session S3 below; Reports index |
 | S4 | Publication under a one-time Owner-login exception; Draft PR33 | CLOSED | PUBLISHED (Draft) | `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa` (verified 2026-11-22 as PR33 head) | Session S4 below; Reports index |
 | S5 | Owner reporting model replaces the Downloads dual-report rule (closeout Stage 1) | CLOSED | PARTIAL (publication BLOCKED: `AGENT_CREDENTIAL_REQUIRED`) | local S5 commit, NOT PUSHED (recorded by the next session) | Session S5 below; Reports index |
+| S6 | Record the S5 publication and the pre-merge state (review requirement, rulesets) | CLOSED | PARTIAL (local checkpoint; NOT_PUSHED) | local S6 commit, NOT PUSHED (recorded by the next session); S5 published as `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21` | Session S6 below; Reports index |
 
 ## Reports
 
@@ -146,6 +150,8 @@ Execution reports and summaries for this task (DW §4.7). S1 and S2 predate the 
 | `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-21_DPT-GOV-WORKFLOW-001_S4_Publication_Report.md` | S4 | `bc5ccf02033169a158675e39e12f4a8487e19601096b597a72e28f83d0979cb6` (4224 B) | public-safe; identical private copy in `Downloads\DPT-GOV-WORKFLOW-001\Responses\` (parity verified) |
 | `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S5_Report.md` | S5 | `bee3b8134bae8e88b67a06342f946cd8ac4e5b0a2ed4db16ea756c14316e80b0` (6645 B) | PUBLIC_SAFE full report; no private copy (DW §4.7 as amended) |
 | `08_Operations/Summaries/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S5_Summary.md` | S5 | `ee373a0dceca0f3f435af78b2d968880b672adf42742e871805e75373c54e025` (1367 B) | PUBLIC_SAFE session summary |
+| `08_Operations/Reports/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S6_Report.md` | S6 | `842ba1d02b10554da6b94374b9d9e15e053deab56e9a8f538040bb2874ec3821` (7461 B) | PUBLIC_SAFE full report; no private copy |
+| `08_Operations/Summaries/DPT-GOV-WORKFLOW-001/2026-11-22_DPT-GOV-WORKFLOW-001_S6_Summary.md` | S6 | `6f959cf7a50a48b8f333fa462d6f6726de30454863a4769129b08bd700fe16b2` (1329 B) | PUBLIC_SAFE session summary |
 
 ### Session S1 — governance amendment and recovery status check
 
@@ -314,9 +320,40 @@ No push or `gh pr create` was attempted. The least-privilege prerequisite is now
 
 **Execution report and summary:** see Reports above (S5 rows; both PUBLIC_SAFE).
 
+### Session S6 — S5 publication record and pre-merge state
+
+- State: CLOSED (local checkpoint; NOT_PUSHED)
+- Task ID / Session ID: DPT-GOV-WORKFLOW-001 / S6, Claude Code session `57690f5c-ef81-4fad-9ef8-281022bc87f4`
+- Agent / Role: Claude Code, author of the change under review; not an independent reviewer
+- Date: 2026-11-22. Intake class: A (same task, branch and Draft PR33; pre-merge reconciliation)
+- Applicable plan: this task's scope; records only, no governance text change
+- Branch / PR (verified): `plan/agent-workflow-pr-routing` = `origin/plan/agent-workflow-pr-routing` = PR33 head `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21`; `main` `183f1d857d83b64819762a2237c908fb95e36cb4`
+- Starting SHA: `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21` (clean worktree)
+- Do-not-touch: PR32, PR8, the U01 worktree and its uncommitted notes, private security artifacts, repository settings and rulesets, application code, runtime, Docker, database
+
+**S5 publication event (after S5 authoring, 2026-11-22):** under a second one-time, narrowly scoped Owner authorization limited to PR33 (Decision Log 2026-11-22), the agent verified local `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21` on parent `582d1e6` and the remote still at `582d1e6`, inspected the 10-file S5 diff (sensitive scan 0, `git diff --check` clean), pushed without force (fast-forward `582d1e6..8902bb7`), updated the PR33 description from the prepared body after three accuracy fixes, and verified PR33 OPEN, Draft, head `8902bb7`, auto-merge off, and `main`, PR32 and PR8 unchanged. The exception then expired. The Session S5 section, the S5 register row, the S5 report and the S5 summary are left as written: they describe the state at S5 authoring.
+
+**Pre-merge state (read-only GET):** PR33 OPEN, **Draft**, mergeable, merge state BLOCKED, review decision REVIEW_REQUIRED, no reviews. Active ruleset `main-pr-review-and-integrity` requires a pull request with **1 approving review**, dismisses stale approvals on push and requires resolved review threads. Active ruleset `main-owner-only-updates` contains only deletion and non-fast-forward protection: **no "Restrict updates" rule**. Settings and rulesets unchanged. Because PR33 was opened from the Owner's own account and GitHub does not count an author's approval, the required approval needs a different account with write access, unless the Owner changes the rule (Owner decision, not taken).
+
+**Work performed / exact files:** this note (current state, S6 bullet, acceptance items, S6 register row, S6 Reports rows, this section, checkpoint addendum, handoff item 5); `00_Home/Project_Status.md`; `08_Operations/Agent_Run_Log.md`; `Change_Log.md`; `Decision_Log.md`; the S6 report and summary (new).
+
+**Tests & evidence:** `database/validate_docs.py --task IMP-P1-02` in throwaway detached worktrees: HEAD `8902bb7` 52 errors; S6 tree 52 errors. Without `--task`: 54 and 54. The error sets are identical (0 new, 0 fixed; all pre-existing); secret-pattern candidates 0. `git diff --check` clean. Sensitive scan of the 184 added lines (private paths, tokens, keys, account e-mail, ruleset identifiers, bypass configuration): 0 matches. The S5 report and summary are not in the S6 diff.
+
+**Tests not executed:** independent documentation review; Markdown rendering; any runtime, database, Docker, PowerShell or security test.
+
+**Result:** PARTIAL — local checkpoint; `AGENT_CREDENTIAL_REQUIRED` / `LOCAL_ONLY` / `NOT_PUSHED`.
+
+**Security / privacy:** no private path, credential, host detail, ruleset identifier or bypass configuration is published.
+
+**Next action:** the Owner authorizes publication of S6 before any approval (stale approvals are dismissed on push), decides the approval path, optionally configures "Restrict updates" and commissions an independent docs review, marks PR33 ready for review, reviews and merges. Closeout Stage 2 (PR32) starts only after that merge is verified.
+
+**Execution report and summary:** see Reports above (S6 rows; both PUBLIC_SAFE).
+
 ## Latest Git Checkpoint / SHA
 
 S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8fae3efafe4d46`. S3: `f5f2597af1ff729f83f05bef053227970f8b0bfb`. S5: a local commit on top of S4, NOT PUSHED (its SHA is recorded by the next session and the PR). S4: `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa`, the commit that adds this text, pushed to `origin/plan/agent-workflow-pr-routing` and visible in PR33's commit list.
+
+S6 addendum (2026-11-22): S5 is `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21`, published to PR33 after S5 authoring (Session S6). S6: a local commit on top of S5, NOT PUSHED (its SHA is recorded by the next session and the PR).
 
 ## Handoff / Next Action
 
@@ -324,3 +361,4 @@ S1: `2903c96537c5eca2c68568b3911a899235b38aea`. S2: `cdb6ff8031b0e7fabfb6ba5c6c8
 2. Owner: review PR33, including the Hybrid policy wording in §5.6, and configure "Restrict updates" before granting any write-capable agent identity and before the final merge.
 3. S5 (2026-11-22): publish the local S5 checkpoint to PR33 with an authorized identity; then the Owner reviews and merges. Closeout Stage 2 (PR32) waits for the verified merge.
 4. Next session (class A): apply any review corrections on this same branch and PR33. Future publication uses a dedicated agent identity, or a new explicit Owner exception.
+5. S6 (2026-11-22): item 3's publication step is done (`8902bb7`). Remaining: publish S6 (authorized identity or new one-time exception) before any approval; obtain the one required approval from an account other than the PR author, or the Owner changes the rule; mark PR33 ready for review; Owner merge. Closeout Stage 2 (PR32) waits for the verified merge.

@@ -1010,3 +1010,12 @@ Class A. Starting SHA `f5f2597af1ff729f83f05bef053227970f8b0bfb`. Pushed without
 | 2026-11-22 | DPT-GOV-WORKFLOW-001 / S5 | Claude Code `57690f5c` (governance author; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft; GitHub head unchanged at `582d1e6`) | NA | AGENTS.md, DEVELOPMENT_WORKFLOW.md, vault README, task note, Agent_Run_Log, Change_Log, Decision_Log, Project_Status, S5 report, S5 summary | validate_docs baseline remeasured (52/54) and compared on the S5 tree; `git diff --check`; sensitive scan | PARTIAL: local checkpoint, NOT PUSHED | local S5 commit (recorded by the next session) |
 
 Class A, closeout Stage 1. Starting SHA `582d1e67c83d6d9bb692f7f5097f0ed8ab03d3fa`. No push, merge, auto-merge, settings or ruleset change; no runtime test. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S5.
+
+### 2026-11-22 — DPT-GOV-WORKFLOW-001 / S5 publication and S6 — pre-merge record (S6 `NOT_PUSHED`)
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-22 | DPT-GOV-WORKFLOW-001 / S5 publication | Claude Code `57690f5c` (publisher; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft) | NA | none (push of the existing S5 commit; PR description updated) | remote at `582d1e6` before the push; diff and sensitive checks clean; PR33 head `8902bb7` and description verified on GitHub | Published (one-time Owner-login exception, expired) | `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21` |
+| 2026-11-22 | DPT-GOV-WORKFLOW-001 / S6 | Claude Code `57690f5c` (governance author; not independent) | [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (Draft; GitHub head `8902bb7`) | NA | task note, Project_Status, Agent_Run_Log, Change_Log, Decision_Log, S6 report, S6 summary | read-only GET of PR33 and the `main` rules; validate_docs compared with HEAD; `git diff --check`; sensitive scan | PARTIAL: local checkpoint, NOT PUSHED | local S6 commit (recorded by the next session) |
+
+Class A. Starting SHA `8902bb79b9cbb91dc70527318d4cf6a5d34f6c21`. No merge, auto-merge, force-push, settings or ruleset change; no runtime test. See [[DPT-GOV-WORKFLOW-001_Task_PR_Routing_and_Obsidian_Reporting]] Session S6.
