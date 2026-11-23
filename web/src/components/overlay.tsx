@@ -9,7 +9,7 @@ import { ProfileDialog } from "./profile-dialog";
 import { SearchDialog } from "./search-dialog";
 
 export type OverlayName = "menu" | "search" | "profile";
-type OverlayContext = { readonly active: OverlayName | null; readonly open: (name: OverlayName) => void };
+type OverlayContext = { readonly active: OverlayName | null; readonly open: (name: OverlayName, trigger: HTMLElement) => void };
 
 const Context = createContext<OverlayContext>({ active: null, open: () => undefined });
 export const useOverlay = () => useContext(Context);
@@ -45,9 +45,10 @@ export function OverlayProvider({ entries, children }: { entries: readonly Entry
   const restoreFocus = useRef(true);
   const pathname = usePathname();
 
-  const open = useCallback((name: OverlayName) => {
+  const open = useCallback((name: OverlayName, opener: HTMLElement) => {
     dropCopies();
-    trigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    // Named explicitly: some browsers do not focus a button that is clicked.
+    trigger.current = opener;
     restoreFocus.current = true;
     setActive(name);
   }, []);

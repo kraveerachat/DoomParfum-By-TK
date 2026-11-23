@@ -5,6 +5,7 @@ import { OverlayProvider } from "@/components/overlay";
 import { RouteMemory } from "@/components/route-memory";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { SkipLink } from "@/components/skip-link";
 import { catalogue } from "@/server/catalogue";
 import "./globals.css";
 
@@ -24,12 +25,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
     <html lang="en">
       <body>
         <OverlayProvider entries={catalogue.entries}>
-          <a
-            href="#main-content"
-            className="bg-ink text-on-dark focus-visible:z-[100] fixed start-4 top-4 -translate-y-24 px-4 py-3 font-medium focus-visible:translate-y-0"
-          >
-            Skip to content
-          </a>
+          <SkipLink />
           <SiteHeader />
           <main id="main-content" tabIndex={-1} data-route-target className="page-container">
             {children}

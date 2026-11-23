@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { SyntheticNotice } from "@/components/mock-label";
 import { fixtureSet } from "@/server/catalogue";
 
@@ -12,7 +13,7 @@ const anchors = [
   { id: "credits", label: "Local credits" },
 ] as const;
 
-const section = "border-divider border-t pt-8 mt-12 w1024:mt-20";
+const section = "border-divider border-t pt-8 mt-12 w768:mt-16 w1024:mt-24";
 
 export default function AboutPage() {
   return (
@@ -22,7 +23,7 @@ export default function AboutPage() {
         <div className="w1024:grid w1024:grid-cols-12 w1024:gap-x-6">
           <div className="w1024:col-span-8 w1024:col-start-3 w1280:col-start-3">
             <h1 className="type-page max-w-[16ch]">A notebook that says what it does not know.</h1>
-            <p className="mt-6 max-w-[60ch] text-[1.125rem] leading-[1.65]">
+            <p className="mt-6 max-w-[60ch]">
               DoomParfum By TK is planned as a private place to read about fragrance, follow notes and keep track of a
               collection. This is a mock of how that place could look and behave. Every record in it was invented.
             </p>
@@ -35,9 +36,14 @@ export default function AboutPage() {
             <ul className="border-divider flex flex-col border-y py-2 w1280:border-b-0 w1280:border-t-ink">
               {anchors.map(({ id, label }) => (
                 <li key={id}>
-                  <a href={`#${id}`} className="link-inline text-meta flex min-h-11 items-center py-1">
+                  <Link
+                    href={`#${id}`}
+                    prefetch={false}
+                    data-focus-key={`anchor-${id}`}
+                    className="link-inline text-meta flex min-h-11 items-center py-1"
+                  >
                     {label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -101,7 +107,7 @@ export default function AboutPage() {
                   <h3 id={`${article.id}-h`} className="type-entry">
                     {article.title}
                   </h3>
-                  <p className="display-figure mt-3 text-[2rem] leading-[1.25] text-balance [&]:max-w-[24ch]">{article.excerpt}</p>
+                  <p className="mt-3 font-medium">{article.excerpt}</p>
                   {article.body.map((paragraph) => (
                     <p key={paragraph.slice(0, 24)} className="mt-5">
                       {paragraph}

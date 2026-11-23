@@ -39,7 +39,7 @@ export function SiteHeader() {
               aria-haspopup="dialog"
               aria-expanded={active === "menu"}
               data-focus-key="menu-trigger"
-              onClick={() => open("menu")}
+              onClick={(event) => open("menu", event.currentTarget)}
             >
               <Menu {...icon} />
             </button>
@@ -78,7 +78,7 @@ export function SiteHeader() {
                 aria-haspopup="dialog"
                 aria-expanded={active === "search"}
                 data-focus-key="search-trigger"
-                onClick={() => open("search")}
+                onClick={(event) => open("search", event.currentTarget)}
               >
                 <Search {...icon} />
               </button>
@@ -89,7 +89,7 @@ export function SiteHeader() {
                 aria-haspopup="dialog"
                 aria-expanded={active === "profile"}
                 data-focus-key="profile-trigger"
-                onClick={() => open("profile")}
+                onClick={(event) => open("profile", event.currentTarget)}
               >
                 <UserRound {...icon} />
               </button>

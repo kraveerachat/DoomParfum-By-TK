@@ -18,7 +18,7 @@ export function SelectField({ label, value, options, onChange, ref, id }: Props)
   const controlId = id ?? auto;
   return (
     <div className="min-w-0">
-      <label htmlFor={controlId} className="text-meta block font-medium">
+      <label htmlFor={controlId} className="type-control block font-medium">
         {label}
       </label>
       <div className="relative mt-1.5">

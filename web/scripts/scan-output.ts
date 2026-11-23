@@ -39,7 +39,10 @@ for (const file of all) {
   if (path.startsWith(".next/static/") && /fonts\.(googleapis|gstatic)\.com/.test(text)) problems.push(`remote font: ${path}`);
 }
 
-console.log(`Scanned ${scanned} of ${all.length} files outside node_modules.`);
+const immutable = all.filter((f) => /^\.next\/static\/.*\.js$/.test(name(f))).length;
+if (immutable === 0) problems.push("no .next/static JavaScript found: wrong directory?");
+
+console.log(`Scanned ${scanned} of ${all.length} files outside node_modules, ${immutable} immutable scripts.`);
 if (problems.length) {
   console.error(problems.join("\n"));
   process.exit(1);

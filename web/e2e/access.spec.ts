@@ -119,6 +119,7 @@ test.describe("A05 keyboard and focus", () => {
     await expect(page.getByRole("dialog")).toHaveCount(1);
     await page.keyboard.press("Escape");
     await expect(page.getByRole("dialog")).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Profile unavailable in this mock" })).toBeFocused();
     await expect(page.locator("[data-panel-copy]")).toHaveCount(0);
     await page.mouse.wheel(0, 500);
     await expect.poll(() => page.evaluate(() => scrollY)).toBeGreaterThan(100);
@@ -148,6 +149,7 @@ test.describe("A07 automatable accessibility and contrast", () => {
       await expect(page.locator("h1")).toBeVisible();
       expect(await noOverflow(page)).toEqual({ scroll: 0, bad: [] });
     }
+    expect(problems.filter((p) => !/Failed to load resource: net::ERR_FAILED/.test(p))).toEqual([]);
     problems.length = 0;
   });
 });

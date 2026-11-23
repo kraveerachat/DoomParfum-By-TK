@@ -50,6 +50,14 @@ rejects("null in place of unknown", (s) => (s.perfumes[0].heart = null), /field 
 rejects("an unknown field that carries a value", (s) => (s.perfumes[0].heart = { state: "unknown", value: [] }), /"value" is not allowed/);
 rejects("a house that is not visibly mock", (s) => (s.perfumes[0].houseLabel = "Maison"), /visibly mock/);
 rejects("too many studies", (s) => s.perfumes.push({ ...s.perfumes[0], id: "mock-perfume-013", slug: "paper-study-m" }), /more than 12/);
+rejects("a duplicate article id", (s) => (s.articles[1].id = s.articles[0].id), /articles\.id: duplicate/);
+rejects("an article anchor owned by the page", (s) => (s.articles[0].anchor = "journal"), /anchor: is invalid/);
+rejects("a product-like slug", (s) => (s.perfumes[0].slug = "eau-no-five"), /slug: is invalid/);
+rejects("a product-like name", (s) => (s.perfumes[0].name = "Eau No Five"), /visibly a study/);
+rejects("a bare domain", (s) => (s.notes[0].descriptor = "see example.com"), /markup or a URL/);
+rejects("a mail link", (s) => (s.notes[0].descriptor = "mailto:a"), /markup or a URL/);
+rejects("a bidirectional override", (s) => (s.notes[0].descriptor = "a‮b"), /markup or a URL/);
+rejects("a hole in a list", (s) => delete s.notes[8], /must be an object/);
 rejects("an unknown featured slug", (s) => s.featured.push("nope"), /unknown reference/);
 
 test("a failing set throws instead of dropping records", () => {

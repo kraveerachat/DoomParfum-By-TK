@@ -8,7 +8,7 @@ import { catalogue, fixtureSet } from "@/server/catalogue";
 
 export const metadata: Metadata = { title: { absolute: "Home · DoomParfum By TK" } };
 
-const FEATURED_STAGGER = ["", "w1024:mt-16", "w1024:mt-32"];
+const FEATURED_STAGGER = ["", "w1024:mt-16", ""];
 
 export default function HomePage() {
   const featured = fixtureSet.featured.flatMap((slug) => catalogue.entries.filter((e) => e.slug === slug));
@@ -19,7 +19,7 @@ export default function HomePage() {
       <section className="wrap pt-10 pb-10 w1024:pt-12 w1024:pb-6">
         <div className="grid-12 items-end gap-y-10 w768:grid-cols-2 w768:gap-x-6 w1024:grid-cols-12">
           <div className="w1024:col-span-5 w1024:pb-8">
-            <h1 className="type-hero max-w-[10ch] w1024:max-w-[8ch]">A personal atlas of scent.</h1>
+            <h1 className="type-hero max-w-[10ch]">A personal atlas of scent.</h1>
             <p className="mt-6 max-w-[38ch] w1024:mt-8">
               A mock study of how a private perfume notebook could read: fictional fragrances, plainly layered.
             </p>
@@ -59,7 +59,7 @@ export default function HomePage() {
         </ul>
       </section>
 
-      <section className="wrap pt-16 pb-16 w1024:pt-32 w1024:pb-32" aria-labelledby="families-heading">
+      <section className="wrap py-12 w768:py-16 w1024:py-24" aria-labelledby="families-heading">
         <h2 id="families-heading" className="type-section">
           Explore by scent
         </h2>
@@ -84,7 +84,7 @@ export default function HomePage() {
                   className="size-16 flex-none w1024:size-24"
                 />
                 <span className="min-w-0 w640:pt-8">
-                  <span className="type-section block underline decoration-transparent decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
+                  <span className="type-section block underline decoration-control-border decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
                     {family.label}
                   </span>
                   <span className="mt-2 block">{family.descriptor}</span>
@@ -100,7 +100,7 @@ export default function HomePage() {
 
       <ScentFolio />
 
-      <section className="wrap pt-16 w1024:pt-32" aria-labelledby="journal-heading">
+      <section className="wrap pt-12 w768:pt-16 w1024:pt-24" aria-labelledby="journal-heading">
         <div className="grid-12 gap-y-8">
           <div className="w1024:col-span-4">
             <h2 id="journal-heading" className="type-section">
@@ -121,7 +121,7 @@ export default function HomePage() {
                   className="group block"
                 >
                   <h3 className="type-section">
-                    <span className="underline decoration-transparent decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
+                    <span className="underline decoration-control-border decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
                       {article.title}
                     </span>
                   </h3>

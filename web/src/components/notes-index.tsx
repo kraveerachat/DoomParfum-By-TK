@@ -2,19 +2,22 @@
 
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { countLabel, exploreHref, filterNotes } from "@/catalogue/search";
 import type { CatalogueView, NoteView } from "@/fixtures/view-model";
 import { CountStatus } from "./count-status";
 import { QueryInput } from "./query-input";
 import { ScriptText } from "./script-text";
 import { SelectField } from "./select-field";
+import { usePageState } from "./use-page-state";
+
+const FRESH = { query: "", family: "" };
 
 function NoteRow({ note }: { note: NoteView }) {
   return (
     <li className="border-divider border-t pt-4 pb-3 first:border-t-0" data-note={note.id}>
       <div className="grid gap-x-6 gap-y-1 w1024:grid-cols-[minmax(0,2fr)_minmax(0,4fr)_12rem] w1024:items-baseline">
-        <h3 className="type-entry">{note.label}</h3>
+        <h4 className="type-entry">{note.label}</h4>
         <p className="min-w-0">
           {note.descriptor}{" "}
           <span className="text-meta text-text-secondary block">
@@ -68,15 +71,13 @@ function NoteRow({ note }: { note: NoteView }) {
 }
 
 export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
-  const [query, setQuery] = useState("");
-  const [family, setFamily] = useState("");
+  const [{ query, family }, setState] = usePageState(FRESH);
   const input = useRef<HTMLInputElement>(null);
   const notes = filterNotes(catalogue.notes, query, family || null);
   const groups = Map.groupBy(notes, (n) => Array.from(n.label)[0]?.toUpperCase() ?? "");
   const count = `${notes.length} mock ${notes.length === 1 ? "note" : "notes"}`;
   const reset = () => {
-    setQuery("");
-    setFamily("");
+    setState(FRESH);
     input.current?.focus();
   };
 
@@ -88,7 +89,7 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
           label="Search mock notes"
           help="Searches labels and descriptions."
           value={query}
-          onChange={setQuery}
+          onChange={(value) => setState((s) => ({ ...s, query: value }))}
         />
         <SelectField
           label="Family"
@@ -97,7 +98,7 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
             { value: "", label: "All families" },
             ...catalogue.families.map((f) => ({ value: f.id, label: f.label })),
           ]}
-          onChange={setFamily}
+          onChange={(value) => setState((s) => ({ ...s, family: value }))}
         />
       </div>
       <div className="mt-8 w1024:col-span-9 w1024:mt-0">
@@ -120,22 +121,19 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
             </button>
           </div>
         ) : (
-          <div className="w768:columns-2 w768:gap-6 w1024:columns-1">
+          <div className="grid items-start gap-x-6 w768:grid-cols-2 w1024:grid-cols-1">
             {[...groups].map(([initial, group]) => (
-              <section
+              <div
                 key={initial}
-                aria-label={`Notes starting with ${initial}`}
-                className="border-control-border first:border-ink break-inside-avoid border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)]"
+                className="border-control-border first:border-ink border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)]"
               >
-                <p aria-hidden="true" className="display-figure pt-4 text-[2.25rem] leading-none">
-                  {initial}
-                </p>
+                <h3 className="type-section pt-4 leading-none">{initial}</h3>
                 <ul>
                   {group.map((note) => (
                     <NoteRow key={note.id} note={note} />
                   ))}
                 </ul>
-              </section>
+              </div>
             ))}
           </div>
         )}

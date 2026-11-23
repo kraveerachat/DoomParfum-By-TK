@@ -18,10 +18,10 @@ export function QueryInput({ label, help, value, onChange, ref }: Props) {
   const composing = useRef(false);
   return (
     <div role="search" aria-label={label}>
-      <label htmlFor={id} className="text-control block font-medium">
+      <label htmlFor={id} className="type-control block font-medium">
         {label}
       </label>
-      <div className="relative mt-2">
+      <div className="relative mt-1.5">
         <Search
           aria-hidden="true"
           size={20}

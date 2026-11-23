@@ -95,23 +95,24 @@ export default async function PerfumePage({ params }: Props) {
 
         <div className="mt-4 grid grid-cols-1 gap-y-8 w1024:mt-6 w1024:grid-cols-12 w1024:gap-x-6">
           <div className="w1024:col-span-5 w1024:col-start-8 w1024:self-end w1024:ps-6">
-            <MockMarker />
+            <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
+              <MockMarker /> <span className="text-text-secondary">{perfume.houseLabel}</span>
+            </p>
             <h1 lang={scriptLang(perfume.name)} className="type-page mt-4">
               {perfume.name}
             </h1>
-            <p className="text-text-secondary mt-3">{perfume.houseLabel}</p>
           </div>
 
-          <figure className="min-w-0 w1024:col-span-7 w1024:col-start-1 w1024:row-span-2 w1024:row-start-1">
+          <div className="min-w-0 w1024:col-span-7 w1024:col-start-1 w1024:row-span-2 w1024:row-start-1">
             <StudyVisual
               study={visual}
               name={perfume.name}
               alt="Abstract study drawn for this fictional record"
               eager
               className="aspect-[4/3] w768:aspect-[4/5]"
+              caption="Synthetic visual study"
             />
-            <figcaption className="text-meta text-text-secondary mt-3">Synthetic visual study</figcaption>
-          </figure>
+          </div>
 
           <div className="w1024:col-span-5 w1024:col-start-8 w1024:ps-6">
             <dl className="border-divider border-t">
@@ -148,7 +149,7 @@ export default async function PerfumePage({ params }: Props) {
           </div>
         </div>
 
-        <section className="mt-16 w1024:mt-24" aria-labelledby="layers-heading">
+        <section className="mt-12 w768:mt-16 w1024:mt-24" aria-labelledby="layers-heading">
           <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
             <h2 id="layers-heading" className="type-section">
               Three layers
@@ -157,22 +158,21 @@ export default async function PerfumePage({ params }: Props) {
           </div>
           <div className="border-ink mt-8 border-t">
             {LAYERS.map(([key, label]) => (
-              <section
+              <div
                 key={key}
                 data-layer={key}
-                aria-labelledby={`layer-${key}`}
                 className="border-divider grid grid-cols-1 gap-y-2 border-b py-6 w768:grid-cols-[minmax(0,1fr)_minmax(0,3fr)] w768:gap-x-6 w1024:py-10"
               >
-                <h3 id={`layer-${key}`} className="type-section">
+                <h3 className="type-section">
                   {label}
                 </h3>
                 <NoteList field={perfume[key]} empty="No entries in this mock layer" />
-              </section>
+              </div>
             ))}
           </div>
         </section>
 
-        <section className="mt-16 grid grid-cols-1 gap-x-6 gap-y-12 w768:grid-cols-2" aria-label="General notes and accords">
+        <div className="mt-12 grid grid-cols-1 gap-x-6 gap-y-12 w768:mt-16 w768:grid-cols-2 w1024:mt-24">
           <div data-layer="generalNotes">
             <h2 className="type-entry">General notes</h2>
             <p className="text-meta text-text-secondary mt-1">Listed for the whole record, outside the layers.</p>
@@ -203,9 +203,9 @@ export default async function PerfumePage({ params }: Props) {
               )}
             </div>
           </div>
-        </section>
+        </div>
 
-        <details className="group border-divider mt-16 border-y">
+        <details className="group border-divider mt-12 border-y w768:mt-16">
           <summary className="flex min-h-14 cursor-pointer items-center justify-between gap-4 font-medium">
             About this mock record
             <ChevronDown

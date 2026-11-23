@@ -3,15 +3,18 @@
 import { ChevronDown, X } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { countLabel, exploreHref, filterEntries, parseQuery, type Filters, type SortKey } from "@/catalogue/search";
 import type { CatalogueView } from "@/fixtures/view-model";
 import { CountStatus } from "./count-status";
-import { locationKey, navigation } from "./navigation-memory";
+import { navigation } from "./navigation-memory";
 import { PerfumeEntry } from "./perfume-entry";
 import { QueryInput } from "./query-input";
 import { SelectField } from "./select-field";
+import { usePageState } from "./use-page-state";
 
+type ExploreState = { readonly query: string; readonly sort: SortKey; readonly filtersOpen: boolean };
+const FRESH: ExploreState = { query: "", sort: "name-asc", filtersOpen: false };
 const NONE: Filters = { family: null, note: null };
 const SORTS = [
   { value: "name-asc", label: "Name A–Z" },
@@ -39,19 +42,11 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
     [search, allowed],
   );
 
-  const [{ query, sort }, setState] = useState(() => {
-    const saved = typeof window === "undefined" ? null : navigation.restoreExplore(locationKey());
-    return saved ?? { query: "", sort: "name-asc" as SortKey };
-  });
-  const [filtersOpen, setFiltersOpen] = useState(false);
+  const [{ query, sort, filtersOpen }, setState] = usePageState(FRESH);
   const input = useRef<HTMLInputElement>(null);
   const disclosure = useRef<HTMLButtonElement>(null);
   const familySelect = useRef<HTMLSelectElement>(null);
   const noteSelect = useRef<HTMLSelectElement>(null);
-
-  useEffect(() => {
-    navigation.saveExplore(locationKey(), { query, sort });
-  }, [query, sort, search]);
 
   // Unsupported keys are dropped. Recognised keys stay, including an unavailable value that
   // the page still has to explain.
@@ -61,19 +56,23 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
     for (const [key, value] of new URLSearchParams(search)) {
       if (key === "family" || key === "note") kept.append(key, value);
     }
-    const query = kept.toString();
-    replaceUrl(query ? `/explore?${query}` : "/explore");
+    const rest = kept.toString();
+    // Deferred so that the router's own history patch is already installed.
+    const timer = setTimeout(() => replaceUrl(rest ? `/explore?${rest}` : "/explore"), 0);
+    return () => clearTimeout(timer);
   }, [unsupported, search]);
 
   const results = invalid ? [] : filterEntries(catalogue.entries, query, filters, sort);
   const family = catalogue.families.find((f) => f.id === filters.family);
   const note = catalogue.notes.find((n) => n.id === filters.note);
-  const narrowed = query.trim() !== "" || filters.family !== null || filters.note !== null || invalid;
+  const narrowed = query.trim() !== "" || filters.family !== null || filters.note !== null || sort !== FRESH.sort || invalid;
+  // A note whose relationships were never supplied is not a note with zero studies.
+  const unsupplied = !invalid && note !== undefined && note.membership === null;
 
   const setFilters = (next: Filters) => replaceUrl(exploreHref(next));
   const visible = (el: HTMLElement | null) => (el && el.getClientRects().length > 0 ? el : null);
   const clearAll = () => {
-    setState((s) => ({ ...s, query: "" }));
+    setState((s) => ({ ...s, query: FRESH.query, sort: FRESH.sort }));
     setFilters(NONE);
     input.current?.focus();
   };
@@ -110,7 +109,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
         className="button-quiet mt-5 w640:hidden"
         aria-expanded={filtersOpen}
         aria-controls="explore-filters"
-        onClick={() => setFiltersOpen((v) => !v)}
+        onClick={() => setState((s) => ({ ...s, filtersOpen: !s.filtersOpen }))}
       >
         Filter and sort
         <ChevronDown
@@ -158,7 +157,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
         <h2 tabIndex={-1} data-list-heading className="sr-only">
           Mock studies
         </h2>
-        <CountStatus text={countLabel(results.length)} />
+        <CountStatus text={unsupplied ? "Relationship not supplied" : countLabel(results.length)} />
         {(family || note) && (
           <ul className="flex flex-wrap gap-2" aria-label="Active filters">
             {family && (
@@ -196,6 +195,16 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
           </p>
           <button type="button" className="button-quiet mt-5" onClick={clearAll}>
             Reset filters
+          </button>
+        </div>
+      ) : unsupplied ? (
+        <div className="py-12" data-state="unsupplied">
+          <p className="type-entry">Relationship not supplied for {note.label} in this mock</p>
+          <p className="text-text-secondary mt-2 max-w-[52ch]">
+            No study lists it, and some studies have layers that were never supplied.
+          </p>
+          <button type="button" className="button-quiet mt-5" onClick={clearAll}>
+            Clear filters
           </button>
         </div>
       ) : results.length === 0 ? (

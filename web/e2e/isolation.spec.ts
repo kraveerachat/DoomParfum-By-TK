@@ -27,6 +27,7 @@ test.describe("A06 isolation, cache and network", () => {
 
     test(`${path} RSC response is no-store`, async ({ request }) => {
       const response = await request.get(`${path}?_rsc=probe`, { headers: { RSC: "1" } });
+      expect(response.headers()["content-type"]).toContain("text/x-component");
       expect(response.headers()["cache-control"]).toContain("no-store");
       expect(response.headers()["x-robots-tag"]).toContain("noindex");
     });
@@ -68,23 +69,34 @@ test.describe("A06 isolation, cache and network", () => {
     expect(await context.cookies()).toEqual([]);
   });
 
-  test("immutable assets carry no fixture payload", async ({ page }) => {
+  test("immutable assets carry no fixture payload", async ({ page, request }) => {
     const assets = new Map<string, string>();
-    page.on("response", async (r) => {
-      if (r.url().includes("/_next/static/") && /\.(js|css)/.test(r.url())) assets.set(r.url(), await r.text().catch(() => ""));
-    });
-    for (const { path } of ROUTES) await ready(page, path);
+    for (const { path } of ROUTES) {
+      const urls: string[] = [];
+      const collect = (r: { url: () => string }) => {
+        if (r.url().includes("/_next/static/") && /\.(js|css)(\?|$)/.test(r.url())) urls.push(r.url());
+      };
+      page.on("request", collect);
+      await ready(page, path);
+      page.off("request", collect);
+      for (const url of urls) {
+        if (!assets.has(url)) assets.set(url, await (await request.get(url)).text());
+      }
+    }
     expect(assets.size).toBeGreaterThan(3);
-    for (const [url, text] of assets) expect(FORBIDDEN.test(text), url).toBe(false);
+    for (const [url, text] of assets) {
+      expect(text.length, url).toBeGreaterThan(100);
+      expect(FORBIDDEN.test(text), url).toBe(false);
+    }
   });
 
   test("the app exposes no extra endpoint and ignores writes", async ({ request }) => {
     for (const path of ["/api", "/api/health", "/robots.txt", "/sitemap.xml", "/sw.js", "/manifest.json", "/_next/image?url=%2Fstudies%2Fhero.svg&w=640&q=75"]) {
       expect((await request.get(path)).status(), path).toBe(404);
     }
-    const post = await request.post("/explore", { form: { q: "x" } });
-    expect(post.status()).toBeGreaterThanOrEqual(200);
-    expect(await post.text()).not.toContain("<script>x");
+    const post = await request.post("/explore", { form: { q: "probe-value" } });
+    expect(post.headers()["cache-control"]).toContain("no-store");
+    expect(await post.text()).not.toContain("probe-value");
   });
 });
 

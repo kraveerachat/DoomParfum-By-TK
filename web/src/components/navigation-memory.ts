@@ -2,17 +2,25 @@
  * Same-tab navigation memory. Values live in module memory only: nothing is written to
  * browser storage, and a hard reload clears everything. Mutated from events and effects only.
  */
-import type { SortKey } from "@/catalogue/search";
-
 type NavigationKind = "push" | "pop" | null;
-export type ExploreState = { readonly query: string; readonly sort: SortKey };
 type Departure = { readonly focusKey: string | null; readonly scrollY: number };
 
 let kind: NavigationKind = null;
-const exploreStates = new Map<string, ExploreState>();
+const pageStates = new Map<string, unknown>();
 const departures = new Map<string, Departure>();
 
 export const locationKey = () => window.location.pathname + window.location.search;
+
+/** Identifies the history entry, so two visits to one URL stay separate. Falls back to the URL. */
+export function entryKey(): string {
+  const api = (window as { navigation?: { currentEntry?: { key?: string } | null } }).navigation;
+  return api?.currentEntry?.key ?? locationKey();
+}
+
+/** What has focus now, named so that it can be found again. */
+export function currentFocusKey(): string | null {
+  return document.activeElement?.closest<HTMLElement>("[data-focus-key]")?.dataset.focusKey ?? null;
+}
 
 export const navigation = {
   kind: () => kind,
@@ -23,9 +31,12 @@ export const navigation = {
     departures.set(key, departure);
   },
   departure: (key: string) => departures.get(key) ?? null,
-  saveExplore: (key: string, state: ExploreState) => {
-    exploreStates.set(key, state);
+  savePage: (key: string, state: unknown) => {
+    pageStates.set(key, state);
   },
-  /** Typed search returns only through Back or Forward, never on a fresh visit. */
-  restoreExplore: (key: string): ExploreState | null => (kind === "pop" ? (exploreStates.get(key) ?? null) : null),
+  /** Typed text and open filters return only through Back or Forward, never on a fresh visit. */
+  restorePage: <T>(initial: T): T => {
+    if (typeof window === "undefined" || kind !== "pop") return initial;
+    return (pageStates.get(entryKey()) as T | undefined) ?? initial;
+  },
 };

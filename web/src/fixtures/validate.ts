@@ -25,7 +25,12 @@ const KEYS = {
 } as const;
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const UNSAFE = /[<>]|https?:|data:|javascript:|\/\//i;
+// Markup, URLs, mail links, bare domains, and control or bidirectional override characters.
+const UNSAFE =
+  /[<>]|\b[a-z][a-z0-9+.-]*:\S|\/\/|\bwww\.|\b[a-z0-9-]+\.(?:com|net|org|io|co|test|example|shop|store|th)\b|[\u0000-\u0009\u000b-\u001f\u007f-\u009f‎‏‪-‮⁦-⁩]/i;
+const STUDY_SLUG = /^[a-z]+-study-[a-z]$/;
+const STUDY_NAME = /\bstudy\b|แบบศึกษา/i;
+const PAGE_IDS = ["main-content", "purpose", "demonstrates", "scope", "journal", "credits", "explore-filters"];
 
 type Obj = Record<string, unknown>;
 const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
@@ -69,7 +74,7 @@ export function validateFixtures(input: unknown): string[] {
       return [];
     }
     if (value.length > LIMITS[name]) fail(name, `has more than ${LIMITS[name]} records`);
-    return value.filter((v, i): v is Obj => {
+    return Array.from(value as unknown[]).filter((v, i): v is Obj => {
       if (!isObj(v)) fail(`${name}[${i}]`, "must be an object");
       return isObj(v);
     });
@@ -107,6 +112,7 @@ export function validateFixtures(input: unknown): string[] {
   const noteIds = unique("notes.id", notes.map((n) => n.id));
   unique("perfumes.id", perfumes.map((p) => p.id));
   const slugs = unique("perfumes.slug", perfumes.map((p) => p.slug));
+  unique("articles.id", articles.map((a) => a.id));
   unique("articles.anchor", articles.map((a) => a.anchor));
 
   families.forEach((f, i) => {
@@ -138,8 +144,9 @@ export function validateFixtures(input: unknown): string[] {
     exactKeys(p, f, KEYS.perfume);
     marked(p, f);
     idPattern(p, f.id, /^mock-perfume-\d{3}$/);
-    if (typeof f.slug !== "string" || f.slug.length > 80 || !SLUG.test(f.slug)) fail(`${p}.slug`, "is invalid");
+    if (typeof f.slug !== "string" || f.slug.length > 80 || !STUDY_SLUG.test(f.slug)) fail(`${p}.slug`, "is invalid");
     text(`${p}.name`, f.name, 120);
+    if (typeof f.name === "string" && !STUDY_NAME.test(f.name)) fail(`${p}.name`, "must be visibly a study");
     text(`${p}.houseLabel`, f.houseLabel, 120);
     if (typeof f.houseLabel === "string" && !/\bmock\b/i.test(f.houseLabel)) {
       fail(`${p}.houseLabel`, "must be visibly mock");
@@ -163,7 +170,9 @@ export function validateFixtures(input: unknown): string[] {
     exactKeys(p, a, KEYS.article);
     marked(p, a);
     idPattern(p, a.id, /^mock-article-\d{3}$/);
-    if (typeof a.anchor !== "string" || !SLUG.test(a.anchor)) fail(`${p}.anchor`, "is invalid");
+    if (typeof a.anchor !== "string" || !SLUG.test(a.anchor) || PAGE_IDS.includes(a.anchor)) {
+      fail(`${p}.anchor`, "is invalid");
+    }
     text(`${p}.title`, a.title, 120);
     text(`${p}.excerpt`, a.excerpt, 240);
     if (!Array.isArray(a.body) || a.body.length === 0) fail(`${p}.body`, "must be a non-empty list");
