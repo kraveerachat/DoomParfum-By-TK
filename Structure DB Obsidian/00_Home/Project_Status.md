@@ -4,13 +4,23 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-20
+updated: 2026-11-23
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## Overall project state after closeout Stages 1–4 — current truth, 2026-11-23
+
+Verified `origin/main` is `3d953f7f442f1280475f2e24ac3e5eb539be67fd`: the Owner merged [PR32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32) on 2026-11-22T17:39:20Z, after [PR33](https://github.com/kraveerachat/DoomParfum-By-TK/pull/33) (2026-11-22T16:37:34Z). Earlier "PR32/PR33 OPEN/Draft" statements below are dated history. PR32's merge confirms a documentation snapshot only: U01 remains PROPOSED r14, NOT APPROVED; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 specifications run.
+
+**PR8 / IMP-P1-04 (Owner decision 2026-11-23):** OPEN / DRAFT / BLOCKED / DEFERRED, NOT MERGED, NOT ACCEPTED, head `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`. The Owner accepted the Stage 3 recommendation to defer without merging, but keeps PR8 open as a Draft instead of closing it. Its historical benchmark, recovery and regression evidence is preserved. The timestamp (`23514`) root cause is unresolved; current-`main` regression and fresh restore acceptance are pending; there is no receipt. Its canonical task note exists only on PR8's branch; the `main`-side deferred-work record is [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] §3. Stage 3 assessment: [[2026-11-23_IMP-P1-04_S6_Report]].
+
+**Implemented (local, merged; not deployed):** PostgreSQL schema (8 migrations), licensed local Scento intake, PNG/rights validation, offline audits and preview, synthetic matching primitives and M1/B1. **Not implemented:** application authentication, API, frontend, application catalogue, real-image media, real-data matching, deployment. All 15 POST30-ODP-1 decisions remain PROPOSED / UNANSWERED; UI framework, backend framework and ORM are UNSELECTED. Backlog TSK-101 (Next.js/Drizzle) is a historical row, not an approved stack (reconciled 2026-11-23).
+
+**Next proposed web task:** a mock-only catalogue/detail shell (unallocated; needs an Owner UI-realization choice and a docs-only Planning PR first). See the handoff §6–§7. The DPT-DOC-004 checkpoint is `LOCAL_ONLY` / `NOT_PUSHED`: [[DPT-DOC-004_Overall_Project_Handoff]].
 
 ## DPT-GOV-WORKFLOW-001 governance amendment — current truth, 2026-11-20
 

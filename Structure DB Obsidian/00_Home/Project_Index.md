@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: index
 status: draft
 owner: project
-updated: 2026-11-20
+updated: 2026-11-23
 tags:
   - doomparfum
   - moc
@@ -244,3 +244,8 @@ Historical runtime tests remain historical; current planning static/review/publi
 - [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] — artifact inventory, evidence classes, publication omissions and continuation rules.
 - [[DPT-GATE-012_U01_r12_Authoring_Handoff]]: sanitized r12 authoring brief (inputs, R11-IR-01/02 remediation, LOW dispositions, invariants, review conditions). r12 was authored from it on 2026-11-20 (S4); its independent review is PENDING.
 - [[DPT-GATE-012_U01_Security_Resumption_Handoff]]: freeze of 2026-11-22 (S9): frozen r12–r14 artifact hashes, open findings, gates, Owner decisions and the next authorized step (independent r14 review). SECURITY_DOCUMENTATION_SNAPSHOT / PROPOSED DESIGN / NOT APPROVED.
+
+## Overall project handoff navigation
+
+- [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]]: overall handoff after closeout Stages 1–4 (2026-11-23): verified baseline, implementation status by area, PR8 / IMP-P1-04 deferred-work record, web dependency assessment, proposed mock-only shell task and Owner actions. Task: [[DPT-DOC-004_Overall_Project_Handoff]].
+- [[2026-11-23_IMP-P1-04_S6_Report]]: Stage 3 PR8 disposition assessment (its closing recommendation is superseded by the Owner's keep-open decision).

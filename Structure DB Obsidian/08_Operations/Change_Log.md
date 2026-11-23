@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-20
+updated: 2026-11-23
 tags:
   - doomparfum
   - operations
@@ -822,3 +822,7 @@ Recorded the r13 review result and the PROPOSED r14 candidate (contract `9a97aa6
 ## 2026-11-22 — DPT-GATE-012 / U01 / S9 — documentation snapshot and reconciliation (local)
 
 Committed the S8 r14 records unchanged (`8c62403`) and merged `main` (`0daafbb`, the PR33 merge) into the U01 documentation branch additively (`6a8d72c`; five append-only conflicts resolved with both histories kept). Reconciled [[DPT-GATE-012_U01_Security_Gate]] (§2–§10, §13, new §7.2 and §18) and [[DPT-GATE-012_U01_Security_History_and_Recovery_Index]] (§11) for the r12 review, r13 and PROPOSED r14, correcting by an additive record the earlier statement that no r12 review existed. Added [[DPT-GATE-012_U01_Security_Resumption_Handoff]] and [[2026-11-22_DPT-GATE-012-U01_S9_Report]]. Nothing approved; G-IND NOT SATISFIED; Q-F PENDING; 0 of 169 run. Local commits only, not pushed.
+
+## 2026-11-23 — DPT-DOC-004 / S1 — overall project handoff (local)
+
+Added [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] (new `DPT-HANDOFF-003`), the canonical note [[DPT-DOC-004_Overall_Project_Handoff]], and the S1 report and summary. Incorporated the Stage 3 records [[2026-11-23_IMP-P1-04_S6_Report]] and [[2026-11-23_IMP-P1-04_S6_Summary]] byte-identical (new folders `Reports/IMP-P1-04/`, `Summaries/IMP-P1-04/`). Recorded the Owner's PR8 keep-open deferral in the Decision Log, a current-truth section in Project_Status, the TSK-101 reconciliation in the Backlog and handoff navigation in Project_Index. PR8, migrations, receipts and U01 artifacts are unchanged. Local checkpoint only; not pushed.

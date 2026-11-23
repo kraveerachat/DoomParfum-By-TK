@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-20
+updated: 2026-11-23
 tags:
   - doomparfum
   - operations
@@ -486,3 +486,12 @@ Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PE
 - Integrate the merged `main` by a non-destructive merge that keeps both histories; no rebase, reset or force-push; no r15, runtime test, Docker or database operation for the closeout.
 
 **Not decided here:** the r14 reviewer, Q-F, every later gate, the PR8 disposition and the overall handoff PR. See [[DPT-GATE-012_U01_Security_Resumption_Handoff]] §5.
+
+## PR8 / IMP-P1-04 disposition — 2026-11-23 (closeout Stage 4)
+
+**Owner decision given in the agent chat on 2026-11-23 (the channel is not independently authenticated; provisional under PG-2):**
+
+- Accept the Stage 3 recommendation ([[2026-11-23_IMP-P1-04_S6_Report]]) to **defer [PR #8](https://github.com/kraveerachat/DoomParfum-By-TK/pull/8) without merging**, but **keep PR #8 OPEN / Draft** instead of closing it. This overrides the closing step of Stage 3 disposition A; the proposed closing comment is not posted.
+- Record PR #8 as BLOCKED / DEFERRED / NOT MERGED / NOT ACCEPTED. Its branch, source code and historical evidence stay preserved for future reassessment. No timestamp fix, database experiment, rebase, merge or push.
+
+**Not decided here:** PR #8 reassessment; TSK-101 retirement or re-scoping; any UI, backend or ORM selection (POST30-ODP-1 stays unanswered); the first web task's scope. See [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] §7.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-23
 tags:
   - doomparfum
   - delivery
@@ -125,7 +125,7 @@ older P1 status rows below are historical, not a claim the merged importer is st
 ### Epic 1: Database & Catalogue Core (Phase P1)
 | Task ID | งานที่ต้องทำ | Requirement ID | สถานะ | ข้อมูลเชื่อมโยง | ขึ้นต่อกัน |
 |---|---|---|---|---|---|
-| **TSK-101** | สร้าง Next.js + PostgreSQL + Drizzle ORM Setup | - | PLANNED | [[Proposed_System_Architecture]] | DPT-PLAN-001 owner merge + IMP-P1-04 evidence |
+| **TSK-101** | สร้าง Next.js + PostgreSQL + Drizzle ORM Setup | - | PLANNED — historical row; stack NOT APPROVED (see reconciliation 2026-11-23) | [[Proposed_System_Architecture]] | DPT-PLAN-001 owner merge + IMP-P1-04 evidence |
 | **TSK-102** | สร้าง Database Schema และ Drizzle Migrations | R01, R03 | PLANNED | [[Data_Dictionary_Draft]] | TSK-101 |
 | **TSK-103** | นำเข้า Master Data แบรนด์ไทย 4 แบรนด์หลัก | R22 | PLANNED | [[Brand_Taxonomy]] | TSK-102 |
 | **TSK-104** | พัฒนาระบบค้นหาและกรอง (Explore Screen) | R01, R04, R08 | PLANNED | [[Site_Map_and_Screens]] | TSK-102 |
@@ -376,3 +376,16 @@ Dedicated Task_Register/Task_Index files NOT FOUND; existing Tasks directory, th
 ## Planning-readiness receipt and Draft delivery checkpoint — 2026-11-17
 
 Actual [PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) remains OPEN/DRAFT; source review `53555db12f179c490ef5d4adfb7eadde62af0a58`, pre-receipt publication `5c576366ecf3041570d765934ee401d76c0bcece`. P30-INT-001 resolved by81/0focused independent checks; original416review and failures retained. POST30-ODP-1 revision1 SHA256`e828e0942037793b6d86c73de95b3c3511cba96b25eb267e13fb4f64ae1ed27c` frozen for review only, all15decisions PROPOSED/UNANSWERED. Sole new receipt [[2026-11-17_191342_DPT-PLAN-011_Post_PR30_Readiness_Planning]], SHA256`ff729f01e7403e4cdfa57566b7b3d0be9b839f4b181bcf5c1563a0e75bc83e21`;26oldreceipts unchanged. [[Post_PR30_File_Manifest.json]] records all33paths. Current planning task is READY FOR REVIEW after agent-side source/docs gates; final metadata parity and exact ZIP verification follow outside frozen artifacts. No future archive PASS or Owner acceptance is inferred. Historical249NOTRERUN, currentDBNOTREVALIDATED, no acquisition/implementation/Production/merge.
+
+## Overall handoff reconciliation — 2026-11-23 (DPT-DOC-004)
+
+Verified `main` `3d953f7f442f1280475f2e24ac3e5eb539be67fd` (PR32 merge). Record: [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]].
+
+| Item | Reconciled state | Next gate |
+|---|---|---|
+| IMP-P1-04 / PR8 | OPEN / DRAFT / BLOCKED / DEFERRED, NOT MERGED, NOT ACCEPTED (Owner decision 2026-11-23: defer, keep open); evidence preserved; `23514` root cause unresolved; no receipt | New Owner decision to reassess; no experiment or fix meanwhile |
+| TSK-101 | Historical 2026-11-10 row. Its Next.js + PostgreSQL + Drizzle stack is **not approved**: later merged planning is framework-neutral (DPT-PLAN-005) and keeps the framework, ORM and driver UNSELECTED (DPT-PLAN-010, DPT-PLAN-011, POST30-ODP-1 unanswered). Its "IMP-P1-04 evidence" dependency is not a prerequisite for a mock-only shell or for the POST30 units before P30-U13 | Owner: retire, re-scope or keep as history; stack choice stays with POST30-ODP-1 |
+| TSK-102…TSK-107 | Historical rows that depend on TSK-101; unchanged | Superseded in practice by the POST30 dependency map until the Owner rules |
+| Mock-only web shell | PROPOSED, unallocated (see the handoff §6) | Owner UI-realization choice, then a docs-only Planning PR |
+
+The 2026-11-10 P1 workstream table above that lists IMP-P1-04 as NOT STARTED is dated history. No security requirement, rights status, hold or eligibility changes here.
