@@ -1,0 +1,130 @@
+{
+  "task": "DPT-PLAN-012",
+  "base_sha": "03e2ab6080373033c02afc7ada7be2ceab5f24e2",
+  "reviewed_specification_sha": "4105a702a273d77a80c538856034c76c56153264",
+  "classification": "PUBLIC_SAFE",
+  "path_count": 24,
+  "hash_basis": "Working bytes; manifest excludes its own size/hash to avoid recursion; Git containing commit binds final tree",
+  "files": [
+    {
+      "path": "PRODUCT.md",
+      "bytes": 3864,
+      "sha256_working_bytes": "a7ba79f7df61279b6c87a60ef696b72e1c1dbf44e88b237cd984945d2a4b28d1"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Index.md",
+      "bytes": 21866,
+      "sha256_working_bytes": "d5f4f4a70debdb0712f77591c5e260f4d54368d277aff595420591ba364416dc"
+    },
+    {
+      "path": "Structure DB Obsidian/00_Home/Project_Status.md",
+      "bytes": 66284,
+      "sha256_working_bytes": "557140242244f5c12eb7cb325dc21f9bbc0fc2e1044dbc324f28e39564aede79"
+    },
+    {
+      "path": "Structure DB Obsidian/01_Product/Requirements_Register.md",
+      "bytes": 14136,
+      "sha256_working_bytes": "85c8735e10b2b0e58113f9967120d11dff5c38eb4b8951f7f5ce70bbe92346b3"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Luxury_Design_Critique_and_Audit.md",
+      "bytes": 10686,
+      "sha256_working_bytes": "9a454d07de7b99e5f422e509f2865d7e6610a3f4f4bff4a143c44df75a2b02a6"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Luxury_Design_Tokens_and_Components.md",
+      "bytes": 9791,
+      "sha256_working_bytes": "683dd12b8ffdd91a58332da1203cee012e28692b6a03d22bfd111d154c4d8a3d"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Luxury_Reference_Research_Matrix.md",
+      "bytes": 15697,
+      "sha256_working_bytes": "af443e4a37b4fa8f37e7f7caed756d9b26aaa799b92ebea06bb544e0baec9a90"
+    },
+    {
+      "path": "Structure DB Obsidian/05_UX/Luxury_Routes_and_Wireframes.md",
+      "bytes": 20191,
+      "sha256_working_bytes": "cb19a17316baca32e9dc13cb15704c2d8cecef14e66fb006bcb88cf26f37802a"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Luxury_Docker_Runtime_Proposal.md",
+      "bytes": 9415,
+      "sha256_working_bytes": "b0d9f7581be41161f81f039d9371e700f7df5e63841ddd8668721990d74b8cf2"
+    },
+    {
+      "path": "Structure DB Obsidian/06_Engineering/Luxury_Mock_Fixture_Contract.md",
+      "bytes": 7227,
+      "sha256_working_bytes": "af2e53a2d53b12c34a4e12a6965b7fc661bab7201343efcaf2723ec8e9302884"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "bytes": 38345,
+      "sha256_working_bytes": "dce04fb1d62df7db53ae8a9a05ccdc441718d410017b5c63c249abf5b7151854"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Luxury_Frontend_Acceptance_and_Task_Map.md",
+      "bytes": 11080,
+      "sha256_working_bytes": "3c760cdded4c26921607d9d13e144cea16b2ba6e420bef576a81897b97d11b9e"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Planning_PRs/Luxury_Frontend_Draft_PR_Description.md",
+      "bytes": 5237,
+      "sha256_working_bytes": "971c0ae35a6a1998dd9f2ae1a25cb0844d5a996c60855c03e00f9f78388672a8"
+    },
+    {
+      "path": "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-012_Luxury_Frontend_Editorial.md",
+      "bytes": 7241,
+      "sha256_working_bytes": "6f575d9d8c472d23b8b33c467f0ec7c6115fa173f44d9e19ed31a545fec1ad59"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "bytes": 107517,
+      "sha256_working_bytes": "973707db361d72b318ef3bcfd012cc20759b216b98358f2b1bf803bd67caf043"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "bytes": 85492,
+      "sha256_working_bytes": "4967a3dd6597c7c52899994532658ac064e483dc9c85d3f1dbc3c5252291e473"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "bytes": 57448,
+      "sha256_working_bytes": "2602a4035d3dfcbd78f15916e41ccba9e62d66ab964d77ca5a6287e3d3f5af90"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Receipts/2026-11-23_231703_DPT-PLAN-012_Luxury_Frontend_Planning.md",
+      "bytes": 3646,
+      "sha256_working_bytes": "2357a62aff170a751fc5b2364f77e46d3c39800daf2bd4a10fa3c7c4722d8e31"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Reports/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Report.md",
+      "bytes": 14763,
+      "sha256_working_bytes": "bc314b0bcecd95f2209548c2103f995c439a8d552cb3d938e7ad0c53c58b2143"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Summaries/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Summary.md",
+      "bytes": 1821,
+      "sha256_working_bytes": "a32df070d88f0e6d68b0f2fabcf6811dfbde7a8e7ea64df215700a9498f0f86e"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_File_Manifest.json",
+      "bytes": null,
+      "sha256_working_bytes": null
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.json",
+      "bytes": 30914,
+      "sha256_working_bytes": "4cf9f390c35dc817c0c046c638b97fb15abd86fa2c85b9f1cab71d39b98cdae8"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.md",
+      "bytes": 10988,
+      "sha256_working_bytes": "c1e7cadcca54cd9437b7f281f399ed5ea42ea58068bc0297da4403d7d3a9d21b"
+    },
+    {
+      "path": "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md",
+      "bytes": 5657,
+      "sha256_working_bytes": "322a7261999f6bbd2dbaf236e71bd3322508011981c82bd1296789bd400ac46d"
+    }
+  ]
+}

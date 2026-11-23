@@ -46,3 +46,7 @@ Do not stop this active app or manufacture a PR12receipt. Owner may restart afte
 then obtain fresh host observation. Actual machine paths/process details remain private.
 [[DPT-DOC-001_Post_Merge_Tool_Observation]] records the sanitized evidence. No installation,
 global config, hook, model, cloud gateway, credential or paid-service change in these waves.
+
+## 2026-11-23 — DPT-PLAN-012 local design planning
+
+Primary Impeccable skill v4.5.2; existing engine pin 0.1.14; `impeccable context` ran once successfully. No PRODUCT.md/DESIGN.md/frontend existed initially. Existing ui-craft guided layout/state review; ui-ux-pro-max local Python searches supplemented style/accessibility/Next.js guidance. Initial Liquid Glass recommendation rejected as off-brief; one narrowed style query used. No installation, update, hooks, pin shortcuts, MCP configuration or external repository checkout. Context Mode executed/indexed long reads and search; one abbreviated source selector returned no hits, corrected by using the exact source label. Brave CUA inspected twenty official reference URLs and mobile attempts, then reset viewport and closed temporary research tabs. No account login, transaction, asset download or protected-source copy. Native web tools checked official framework/Docker/noindex/font-license texts. Tool rollback: no setup/config changes to roll back; documentation rollback only through reviewed Git change. Full outcomes/limits: [[DPT-PLAN-012_Luxury_Frontend_Editorial]].

@@ -93,3 +93,7 @@ is inferred. Non-AI matching does not implement or remove R12's separate researc
 ## 4. Change Notes
 
 - `2026-11-10`: เริ่มต้นจัดทำเอกสารและรวม R01–R31 จาก `../README.md`
+
+## DPT-PLAN-012 mock frontend traceability — 2026-11-23
+
+[[Luxury_Frontend_Acceptance_and_Task_Map]] proposes fictional demonstrations of R01/R03/R04/R13/R14 and synthetic provenance related to R21. It does not complete real-data acceptance or alter R01–R31 statuses. The five-route mock shell is a bounded presentation slice; remaining real-brand, budget, matching, private/cart/collection and source-rights requirements remain in their existing workstreams. No checkout, real scores, licensed imagery, authentication or private records. [[Luxury_Routes_and_Wireframes]] supplies exact proposed behavior.

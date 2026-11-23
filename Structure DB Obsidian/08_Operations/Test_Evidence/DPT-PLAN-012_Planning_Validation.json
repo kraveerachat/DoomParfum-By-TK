@@ -1,0 +1,590 @@
+{
+  "task": "DPT-PLAN-012",
+  "base_sha": "03e2ab6080373033c02afc7ada7be2ceab5f24e2",
+  "scope": "documentation-only",
+  "stock_validator_results": [
+    {
+      "mode": "IMP-P1-01",
+      "exit": 1,
+      "markdown_files": 22,
+      "frontmatters": 21,
+      "logical_table_parity": 47,
+      "errors": [
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Implementation_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki Post_PR30_Dependency_Model.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md: missing owner",
+        "Stale test source evidence: database/local.py",
+        "Stale test source evidence: database/validate_docs.py"
+      ]
+    },
+    {
+      "mode": "IMP-P1-02",
+      "exit": 1,
+      "markdown_files": 22,
+      "frontmatters": 21,
+      "logical_table_parity": 47,
+      "errors": [
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Implementation_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki Post_PR30_Dependency_Model.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_Independent_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+        "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+        "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md: missing owner"
+      ]
+    }
+  ],
+  "legacy_findings_accounted": [
+    {
+      "finding": "Stale test source evidence: database/local.py",
+      "classification": "pre-existing-source-evidence-mismatch",
+      "source_blob_unchanged": true
+    },
+    {
+      "finding": "Stale test source evidence: database/validate_docs.py",
+      "classification": "pre-existing-source-evidence-mismatch",
+      "source_blob_unchanged": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Implementation_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki Post_PR30_Dependency_Model.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Architecture_Independent_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/00_Home/Project_Status.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/07_Delivery/Backlog.md: unresolved wiki Post_PR30_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Architecture_Independent_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Agent_Run_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Architecture_Independent_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Focused_Tests.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Implementation_Initial_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Offline_Regression.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Private_Publication.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki IMP_ENR_01_Read_Bounds_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Change_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Architecture_Independent_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_File_Manifest.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki IMP_ENR_01_Preflight.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Independent_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Initial_Planning_Review.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Integrity_Correction.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Decision_Log.md: unresolved wiki Post_PR30_Packet_Freeze.json",
+      "classification": "legacy-md-only-link-resolver",
+      "target_exists": true
+    },
+    {
+      "finding": "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md: missing owner",
+      "classification": "pre-existing-frontmatter"
+    }
+  ],
+  "unexplained_stock_findings": [],
+  "scoped_failures": [],
+  "scoped_result": "PASS",
+  "changed_markdown": 22,
+  "changed_paths": [
+    "PRODUCT.md",
+    "Structure DB Obsidian/00_Home/Project_Index.md",
+    "Structure DB Obsidian/00_Home/Project_Status.md",
+    "Structure DB Obsidian/01_Product/Requirements_Register.md",
+    "Structure DB Obsidian/05_UX/Luxury_Design_Critique_and_Audit.md",
+    "Structure DB Obsidian/05_UX/Luxury_Design_Tokens_and_Components.md",
+    "Structure DB Obsidian/05_UX/Luxury_Reference_Research_Matrix.md",
+    "Structure DB Obsidian/05_UX/Luxury_Routes_and_Wireframes.md",
+    "Structure DB Obsidian/06_Engineering/Luxury_Docker_Runtime_Proposal.md",
+    "Structure DB Obsidian/06_Engineering/Luxury_Mock_Fixture_Contract.md",
+    "Structure DB Obsidian/07_Delivery/Backlog.md",
+    "Structure DB Obsidian/07_Delivery/Planning_PRs/Luxury_Frontend_Acceptance_and_Task_Map.md",
+    "Structure DB Obsidian/07_Delivery/Planning_PRs/Luxury_Frontend_Draft_PR_Description.md",
+    "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-012_Luxury_Frontend_Editorial.md",
+    "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+    "Structure DB Obsidian/08_Operations/Change_Log.md",
+    "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/Receipts/2026-11-23_231703_DPT-PLAN-012_Luxury_Frontend_Planning.md",
+    "Structure DB Obsidian/08_Operations/Reports/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Report.md",
+    "Structure DB Obsidian/08_Operations/Summaries/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Summary.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_File_Manifest.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.json",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.md",
+    "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md"
+  ],
+  "reference_ids": [
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P07",
+    "P08",
+    "P09",
+    "P10"
+  ],
+  "route_types": [
+    "/",
+    "/explore",
+    "/perfume/[slug]",
+    "/notes",
+    "/about"
+  ],
+  "contrast_pairs": [
+    {
+      "foreground": "ink",
+      "background": "paper",
+      "ratio": 16.463548,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "secondary",
+      "background": "paper",
+      "ratio": 6.322048,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "gold-readable",
+      "background": "paper",
+      "ratio": 5.464162,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "paper",
+      "background": "navy",
+      "ratio": 14.153819,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "paper",
+      "background": "ink",
+      "ratio": 16.463548,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "control-border",
+      "background": "paper",
+      "ratio": 3.854363,
+      "threshold": 3,
+      "role": "functional"
+    },
+    {
+      "foreground": "control-border",
+      "background": "white",
+      "ratio": 4.199513,
+      "threshold": 3,
+      "role": "functional"
+    },
+    {
+      "foreground": "error",
+      "background": "paper",
+      "ratio": 6.803032,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "success",
+      "background": "paper",
+      "ratio": 6.765383,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "gold-readable",
+      "background": "white",
+      "ratio": 5.953466,
+      "threshold": 4.5,
+      "role": "functional"
+    },
+    {
+      "foreground": "gold",
+      "background": "paper",
+      "ratio": 2.705909,
+      "threshold": null,
+      "role": "decorative-only"
+    },
+    {
+      "foreground": "gold",
+      "background": "white",
+      "ratio": 2.948217,
+      "threshold": null,
+      "role": "decorative-only"
+    },
+    {
+      "foreground": "divider",
+      "background": "paper",
+      "ratio": 1.292659,
+      "threshold": null,
+      "role": "decorative-only"
+    }
+  ],
+  "diff_check_exit": 0,
+  "existing_bodies_preserved": true,
+  "limits": [
+    "Stock validator retains legacy failures; no validator or historical evidence rewritten",
+    "Pattern scan only, not exhaustive secret/legal clearance",
+    "Reference captures are session evidence, not committed goldens",
+    "No app runtime, WCAG conformance, Docker, DB, matching, Mermaid or deployment tests"
+  ]
+}

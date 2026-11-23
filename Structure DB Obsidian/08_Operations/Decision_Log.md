@@ -495,3 +495,7 @@ Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PE
 - Record PR #8 as BLOCKED / DEFERRED / NOT MERGED / NOT ACCEPTED. Its branch, source code and historical evidence stay preserved for future reassessment. No timestamp fix, database experiment, rebase, merge or push.
 
 **Not decided here:** PR #8 reassessment; TSK-101 retirement or re-scoping; any UI, backend or ORM selection (POST30-ODP-1 stays unanswered); the first web task's scope. See [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] §7.
+
+## DPT-PLAN-012 design-planning decisions — 2026-11-23
+
+The Owner confirmed the attached luxury editorial direction in chat: ivory/ink, muted gold, deep navy, serif display, readable sans, generous spacing and restrained motion. This confirms the direction to propose, not rendered acceptance. [[Luxury_Frontend_Acceptance_and_Task_Map]] records LF-OD-01…05. Exact routes/tokens, isolated Next.js stack and loopback Docker runtime remain PROPOSED until Gate P. Public link access/noindex is a future preference; Cloudflare deployment remains separately gated. Gold `#AD9361` on ivory measures 2.706:1 and is restricted to decorative use; readable gold is separately proposed. No prior decision, U01 contract or data permission is changed.

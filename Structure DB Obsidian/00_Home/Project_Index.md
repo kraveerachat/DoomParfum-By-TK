@@ -249,3 +249,15 @@ Historical runtime tests remain historical; current planning static/review/publi
 
 - [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]]: overall handoff after closeout Stages 1–4 (2026-11-23): verified baseline, implementation status by area, PR8 / IMP-P1-04 deferred-work record, web dependency assessment, proposed mock-only shell task and Owner actions. Task: [[DPT-DOC-004_Overall_Project_Handoff]].
 - [[2026-11-23_IMP-P1-04_S6_Report]]: Stage 3 PR8 disposition assessment (its closing recommendation is superseded by the Owner's keep-open decision).
+
+## Luxury frontend planning — 2026-11-23
+
+- [[DPT-PLAN-012_Luxury_Frontend_Editorial]] — canonical task and S1 records
+- [[Luxury_Reference_Research_Matrix]] — twenty reference sites, observed versus proposed
+- [[Luxury_Routes_and_Wireframes]] — five-route mock shell and centered navigation
+- [[Luxury_Design_Tokens_and_Components]] — proposed tokens and motion
+- [[Luxury_Mock_Fixture_Contract]] — synthetic fixtures and isolation
+- [[Luxury_Docker_Runtime_Proposal]] — local preview/development specification
+- [[Luxury_Frontend_Acceptance_and_Task_Map]] — future tests and work units
+- [[Luxury_Design_Critique_and_Audit]] — requested planning passes
+- [[Luxury_Frontend_Draft_PR_Description]] — local proposed PR body, not published
