@@ -1,0 +1,32 @@
+# Development with hot reload. Loopback only. Run from web/:
+#   docker compose -f compose.dev.yaml up --build
+#   docker compose -f compose.dev.yaml down
+# Mutually exclusive with compose.yaml: both use the same container name and host port.
+# The two volumes hold dependencies and build cache only. After a lockfile change,
+# recreate dev-node-modules with `docker volume rm doomparfum-web-dev_dev-node-modules`.
+name: doomparfum-web-dev
+
+services:
+  web:
+    build:
+      context: .
+      target: dev
+    image: doomparfum-web:dev
+    container_name: doomparfum-web
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: "no"
+    environment:
+      WEB_DEV_POLL_MS: "800"
+    volumes:
+      - .:/app
+      - dev-node-modules:/app/node_modules
+      - dev-next:/app/.next
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+
+volumes:
+  dev-node-modules:
+  dev-next:
