@@ -115,7 +115,7 @@ export default async function PerfumePage({ params }: Props) {
 
           <div className="w1024:col-span-5 w1024:col-start-8 w1024:ps-6">
             <dl className="border-divider border-t">
-              <div className="border-divider grid grid-cols-[6rem_minmax(0,1fr)] items-center gap-x-4 border-b py-3">
+              <div className="border-divider flex flex-wrap items-center gap-x-8 border-b py-3">
                 <dt className="text-meta text-text-secondary">Family</dt>
                 <dd>
                   {family ? (
@@ -215,7 +215,7 @@ export default async function PerfumePage({ params }: Props) {
               className="transition-transform duration-(--motion-feedback) group-open:rotate-180"
             />
           </summary>
-          <dl className="text-meta grid grid-cols-[minmax(7rem,auto)_minmax(0,1fr)] gap-x-6 gap-y-2 pb-6 [&_dd]:min-w-0 [&_dd]:break-words [&_dt]:text-text-secondary">
+          <dl className="text-meta grid grid-cols-[minmax(0,1fr)_minmax(0,2fr)] w768:grid-cols-[minmax(0,1fr)_minmax(0,5fr)] gap-x-6 gap-y-2 pb-6 [&_dd]:min-w-0 [&_dd]:break-words [&_dt]:text-text-secondary">
             <dt>Record</dt>
             <dd>{perfume.id}</dd>
             <dt>Kind</dt>

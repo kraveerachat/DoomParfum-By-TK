@@ -29,7 +29,10 @@ export function proxy(request: NextRequest) {
   headers.set("x-nonce", nonce);
   headers.set("Content-Security-Policy", policy);
 
-  const response = NextResponse.next({ request: { headers } });
+  // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
+  const response = request.nextUrl.pathname.startsWith("/_next/image")
+    ? new NextResponse(null, { status: 404 })
+    : NextResponse.next({ request: { headers } });
   response.headers.set("Content-Security-Policy", policy);
   response.headers.set("Cache-Control", "private, no-store, max-age=0");
   return response;

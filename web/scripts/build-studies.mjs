@@ -49,10 +49,10 @@ studies["glass-g"] = plate([
 }
 
 studies["glass-i"] = plate([
-  rect(0, 0, W, H, C.paper),
+  rect(0, 0, W, H, C.muted),
   ...range(3, (i) => {
     const cy = 330 + i * 260;
-    const fill = [C.sand, C.stone, C.ink][i];
+    const fill = [C.paper, C.stone, C.ink][i];
     const cx = 400 + [-60, 40, -20][i];
     const arcs = range(13, (j) => `M${r(cx - 210 + j * 16)} ${cy}a${r(210 - j * 16)} ${r(210 - j * 16)} 0 0 1 ${r(2 * (210 - j * 16))} 0`);
     return `<path d="M${cx - 210} ${cy}a210 210 0 0 1 420 0z" fill="${fill}"/>${strokes(arcs, i === 2 ? C.paper : C.grey, 1)}`;
@@ -81,13 +81,13 @@ studies["linen-d"] = plate([
     rect(0, 0, W, H, C.muted),
     strokes(range(38, (i) => trace(range(51, (j) => [warpX(-60 + i * 25, -20 + j * 21), warpY(-60 + i * 25, -20 + j * 21)]))), C.grey, 1),
     strokes(range(46, (i) => trace(range(45, (j) => [warpX(-60 + j * 21, -40 + i * 24), warpY(-60 + j * 21, -40 + i * 24)]))), C.stone, 1),
-    poly([[0, 742], [W, 596], [W, H], [0, H]], C.paper),
+    poly([[0, 742], [W, 596], [W, H], [0, H]], C.stone),
     strokes([line(0, 742, W, 596)], C.ink, 1.5),
   ]);
 }
 
 studies["linen-f"] = plate([
-  rect(0, 0, W, H, C.paper),
+  rect(0, 0, W, H, C.sand),
   strokes(range(64, (i, t) => trace(range(60, (j, s) => [
     -60 + 940 * s + 80 * Math.sin(s * 2.4 + t * 2.1),
     60 + 760 * t + 190 * Math.sin(s * 3.1 - t * 2.6) * (1 - 0.35 * t),
@@ -181,7 +181,7 @@ studies["paper-c"] = plate([
   const N = 24;
   const top = range(N, (i, t) => `M${r(400 - 390 + t * 380)} ${leaf}a${r(390 - t * 380)} ${r(390 - t * 380)} 0 0 1 ${r(2 * (390 - t * 380))} 0`);
   const heart = range(N, (i, t) => trace(range(61, (j, s) => [10 + 780 * s, leaf + (t * leaf) + Math.sin(s * Math.PI) * 130 * (0.5 - t) * 1.4])));
-  const base = range(N, (i, t) => trace(range(61, (j, s) => [10 + 780 * s, leaf * 2 + t * leaf + 16 * Math.sin(s * 5 + t * 5) * Math.sin(Math.PI * s)])));
+  const base = range(N, (i, t) => trace(range(61, (j, s) => [10 + 780 * s, leaf * 2 + 22 + t * (leaf - 44) + 16 * Math.sin(s * 5 + t * 5) * Math.sin(Math.PI * s)])));
   const body = [strokes(top, C.paper, 1), strokes(heart, C.paper, 1), strokes(base, C.paper, 1)];
   ["top", "heart", "base"].forEach((name, i) => {
     studies[`folio-${name}`] = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 ${i * leaf} ${w} ${leaf}" width="${w}" height="${leaf}" fill="none">\n${body[i]}\n</svg>\n`;

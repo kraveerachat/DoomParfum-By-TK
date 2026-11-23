@@ -17,11 +17,12 @@ CMD ["npm", "run", "dev"]
 FROM deps AS builder
 COPY . .
 RUN npm run typecheck:gen && npm run lint && npm test && npm run build
+RUN find .next/standalone .next/static -name "*.map" -not -path "*/node_modules/*" -delete
 
 FROM base AS runner
 ENV NODE_ENV=production PORT=3000 HOSTNAME=0.0.0.0
 # The runtime needs only node; remove package managers from the image.
-RUN rm -rf /usr/local/lib/node_modules /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack /opt/yarn*
+RUN rm -rf /usr/local/lib/node_modules /usr/local/bin/npm /usr/local/bin/npx /usr/local/bin/corepack /usr/local/bin/yarn* /opt/yarn*
 COPY --from=builder --chown=root:root /app/.next/standalone ./
 COPY --from=builder --chown=root:root /app/.next/static ./.next/static
 COPY --from=builder --chown=root:root /app/public ./public

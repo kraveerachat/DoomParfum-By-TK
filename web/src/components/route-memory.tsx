@@ -4,6 +4,9 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { locationKey, navigation } from "./navigation-memory";
 
+/** Shorter transitions show no pending state at all. */
+const PENDING_AFTER_MS = 400;
+
 const nextFrames = (run: () => void) => requestAnimationFrame(() => requestAnimationFrame(run));
 
 function focusForward() {
@@ -42,7 +45,10 @@ export function RouteMemory() {
   const pathname = usePathname();
   const search = useSearchParams().toString();
   const first = useRef(true);
+  const pendingTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const [message, setMessage] = useState("");
+  const [pendingFrom, setPendingFrom] = useState<string | null>(null);
+  const current = search ? `${pathname}?${search}` : pathname;
 
   useEffect(() => {
     const onPop = () => navigation.set("pop");
@@ -55,16 +61,25 @@ export function RouteMemory() {
       const focusKey = link.closest<HTMLElement>("[data-focus-key]")?.dataset.focusKey ?? null;
       navigation.depart(key, { focusKey, scrollY: window.scrollY });
       navigation.set("push");
+      clearTimeout(pendingTimer.current);
+      pendingTimer.current = setTimeout(() => {
+        document.getElementById("main-content")?.setAttribute("aria-busy", "true");
+        setPendingFrom(key);
+      }, PENDING_AFTER_MS);
     };
     window.addEventListener("popstate", onPop, true);
     document.addEventListener("click", onClick, true);
     return () => {
       window.removeEventListener("popstate", onPop, true);
       document.removeEventListener("click", onClick, true);
+      clearTimeout(pendingTimer.current);
     };
   }, []);
 
   useEffect(() => {
+    clearTimeout(pendingTimer.current);
+    document.getElementById("main-content")?.removeAttribute("aria-busy");
+
     // The framework announcer would repeat the heading that receives focus below.
     document.querySelector("next-route-announcer")?.setAttribute("aria-hidden", "true");
 
@@ -85,8 +100,13 @@ export function RouteMemory() {
   }, [pathname, search]);
 
   return (
-    <p className="sr-only" role="status">
-      {message}
-    </p>
+    <>
+      <p className="sr-only" role="status">
+        {message}
+      </p>
+      <p className="route-pending" role="status" data-route-pending>
+        {pendingFrom === current ? "Opening the next page" : ""}
+      </p>
+    </>
   );
 }

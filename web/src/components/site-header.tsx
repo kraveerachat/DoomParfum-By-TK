@@ -17,7 +17,7 @@ function Wordmark() {
       data-focus-key="brand"
       className="inline-flex min-h-11 flex-col justify-center whitespace-nowrap"
     >
-      <span className="wordmark-name leading-[1.15] font-medium tracking-[0.06em]">DOOMPARFUM</span>
+      <span className="wordmark-name leading-[1.15] font-medium tracking-[0.06em]">DOOMPARFUM</span>{" "}
       <span className="text-signature text-gold-readable font-medium tracking-[0.1em]">BY TK</span>
     </Link>
   );
@@ -34,7 +34,7 @@ export function SiteHeader() {
           <div className="header-grid" data-header-grid>
             <button
               type="button"
-              className="header-menu icon-button -ms-3"
+              className="header-menu icon-button -ms-[12px]"
               aria-label="Menu"
               aria-haspopup="dialog"
               aria-expanded={active === "menu"}
@@ -57,7 +57,7 @@ export function SiteHeader() {
                         prefetch={false}
                         aria-current={current ? "page" : undefined}
                         data-focus-key={`nav-${href}`}
-                        className={`inline-flex min-h-11 items-center text-[0.9375rem] leading-6 ${current ? "font-semibold" : "font-medium"}`}
+                        className={`inline-flex min-h-11 min-w-11 items-center justify-center text-[0.9375rem] leading-6 ${current ? "font-semibold" : "font-medium"}`}
                       >
                         <span
                           className={`border-b py-0.5 transition-colors duration-(--motion-feedback) ${current ? "border-ink" : "can-hover:border-control-border border-transparent"}`}
@@ -84,7 +84,7 @@ export function SiteHeader() {
               </button>
               <button
                 type="button"
-                className="icon-button -me-3"
+                className="icon-button -me-[12px]"
                 aria-label="Profile unavailable in this mock"
                 aria-haspopup="dialog"
                 aria-expanded={active === "profile"}

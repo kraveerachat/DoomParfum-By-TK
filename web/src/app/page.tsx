@@ -16,10 +16,10 @@ export default function HomePage() {
   return (
     <>
       <SyntheticNotice />
-      <section className="wrap py-10 w1024:py-20">
+      <section className="wrap pt-10 pb-10 w1024:pt-12 w1024:pb-6">
         <div className="grid-12 items-end gap-y-10 w768:grid-cols-2 w768:gap-x-6 w1024:grid-cols-12">
           <div className="w1024:col-span-5 w1024:pb-8">
-            <h1 className="type-hero max-w-[10ch]">A personal atlas of scent.</h1>
+            <h1 className="type-hero max-w-[10ch] w1024:max-w-[8ch]">A personal atlas of scent.</h1>
             <p className="mt-6 max-w-[38ch] w1024:mt-8">
               A mock study of how a private perfume notebook could read: fictional fragrances, plainly layered.
             </p>
@@ -42,7 +42,7 @@ export default function HomePage() {
       </section>
 
       <section className="wrap" aria-labelledby="featured-heading">
-        <div className="border-divider flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t pt-8">
+        <div className="border-ink flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2 border-t pt-6">
           <h2 id="featured-heading" className="type-section">
             Featured discoveries
           </h2>
@@ -67,13 +67,13 @@ export default function HomePage() {
           {catalogue.families.map((family) => (
             <li
               key={family.id}
-              className="border-divider border-b w640:border-s w640:first:border-s-0 w640:border-b-0"
+              className="group/family border-divider border-b w640:border-s w640:first:border-s-0 w640:border-b-0"
             >
               <Link
                 href={exploreHref({ family: family.id, note: null })}
                 prefetch={false}
                 data-focus-key={`family-${family.id}`}
-                className="group can-hover:bg-surface-muted flex h-full items-center gap-6 py-6 transition-colors duration-(--motion-feedback) w640:flex-col w640:items-start w640:px-6 w640:py-8 w1024:px-8 w1024:py-12"
+                className="group can-hover:bg-surface-muted flex h-full items-center gap-6 py-6 transition-colors duration-(--motion-feedback) w640:flex-col w640:items-start w640:px-6 w640:py-8 w640:group-first/family:ps-0 w1024:px-8 w1024:py-12"
               >
                 <img
                   src={`/studies/${family.id.replace("mock-family-", "mark-")}.svg`}
@@ -83,7 +83,7 @@ export default function HomePage() {
                   loading="lazy"
                   className="size-16 flex-none w1024:size-24"
                 />
-                <span className="min-w-0 w640:mt-auto w640:pt-8">
+                <span className="min-w-0 w640:pt-8">
                   <span className="type-section block underline decoration-transparent decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
                     {family.label}
                   </span>

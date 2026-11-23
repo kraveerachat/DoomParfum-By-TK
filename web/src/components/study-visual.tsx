@@ -19,7 +19,7 @@ export function StudyVisual({ study, name, alt = "", className = "aspect-[4/5]",
         className={`bg-surface-muted relative flex w-full items-center justify-center overflow-hidden ${className}`}
         data-visual-fallback
       >
-        <span aria-hidden="true" className="font-display text-text-secondary text-[7rem] leading-none select-none">
+        <span aria-hidden="true" className="display-figure text-text-secondary text-[7rem] leading-none select-none">
           {Array.from(name.trim()).at(-1)}
         </span>
         <span className="text-meta text-text-secondary absolute inset-x-4 bottom-3">

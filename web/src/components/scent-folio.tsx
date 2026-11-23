@@ -67,7 +67,7 @@ export function ScentFolio() {
               className="folio-layer border-control-border grid grid-cols-1 items-stretch gap-y-6 border-t py-8 w1024:grid-cols-12 w1024:gap-x-6 w1024:py-0"
             >
               <div className="w1024:border-gold grid content-center gap-4 w1024:col-span-6 w1024:grid-cols-6 w1024:items-baseline w1024:gap-x-6 w1024:border-e-2 w1024:py-12">
-                <h3 className="font-display w1024:col-span-2 text-[2.75rem] leading-[1.1] w1024:text-[4rem]">{title}</h3>
+                <h3 className="display-figure w1024:col-span-2 text-[2.75rem] leading-[1.1] w1024:text-[4rem]">{title}</h3>
                 <p className="max-w-[38ch] w1024:col-span-4 w1024:pe-6">{text}</p>
               </div>
               <img

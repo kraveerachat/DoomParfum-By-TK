@@ -186,6 +186,7 @@
   font-weight: 400;
   font-size: 2.5rem;
   line-height: 1.1;
+  font-variation-settings: "opsz" 40;
   letter-spacing: -0.02em;
   text-wrap: balance;
   overflow-wrap: anywhere;
@@ -201,6 +202,7 @@
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 2.25rem;
+  font-variation-settings: "opsz" 34;
   line-height: 1.18;
   letter-spacing: -0.015em;
   text-wrap: balance;
@@ -214,6 +216,7 @@
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 1.875rem;
+  font-variation-settings: "opsz" 28;
   line-height: 1.25;
   letter-spacing: -0.01em;
   text-wrap: balance;
@@ -227,6 +230,7 @@
   font-weight: 500;
   font-size: 1.375rem;
   line-height: 1.35;
+  text-wrap: balance;
   overflow-wrap: anywhere;
   @variant w1024 {
     font-size: 1.5rem;
@@ -242,6 +246,12 @@
   font-weight: 500;
   letter-spacing: normal;
   line-height: 1.4;
+}
+
+/* Display sizes outside the heading roles. Optical size is lowered so hairlines stay visible. */
+@utility display-figure {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 28;
 }
 
 @utility measure {
@@ -457,6 +467,24 @@ html[data-overlay] .scrim {
   from { transform: translateY(8px); opacity: 0; }
 }
 
+/* A slow route transition keeps the current page in place and says so. No progress is simulated. */
+.route-pending {
+  position: fixed;
+  inset-block-end: 16px;
+  inset-inline: 16px;
+  z-index: 10;
+  width: fit-content;
+  max-width: calc(100vw - 32px);
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-button);
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+.route-pending:empty {
+  display: none;
+}
+
 /* Scent folio: a layer is always legible. Only layers that start below the fold are armed,
    and each settles once when it first enters the viewport. */
 .folio-layer {
@@ -465,7 +493,7 @@ html[data-overlay] .scrim {
     transform var(--motion-enter) var(--ease-enter);
 }
 .folio-layer[data-armed] {
-  opacity: 0.35;
+  opacity: 0.7;
   transform: translateY(8px);
 }
 

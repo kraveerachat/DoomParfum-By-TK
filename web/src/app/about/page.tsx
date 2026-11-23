@@ -59,7 +59,7 @@ export default function AboutPage() {
               <h2 id="demo-h" className="type-section">
                 What this mock demonstrates
               </h2>
-              <ul className="mt-5 max-w-[60ch] space-y-3">
+              <ul className="mt-5 max-w-[60ch] [&>li]:border-divider [&>li]:border-b [&>li]:py-3">
                 <li>Browsing and filtering a small set of fictional studies.</li>
                 <li>Reading top, heart and base layers as labels, with general notes and accords kept apart.</li>
                 <li>Following a note to every study that lists it.</li>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                   <h3 id={`${article.id}-h`} className="type-entry">
                     {article.title}
                   </h3>
-                  <p className="font-display text-gold-readable mt-3 text-[2rem] leading-[1.25]">{article.excerpt}</p>
+                  <p className="display-figure mt-3 text-[2rem] leading-[1.25] text-balance [&]:max-w-[24ch]">{article.excerpt}</p>
                   {article.body.map((paragraph) => (
                     <p key={paragraph.slice(0, 24)} className="mt-5">
                       {paragraph}

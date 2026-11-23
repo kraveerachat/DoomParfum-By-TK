@@ -13,11 +13,10 @@ export function PerfumeEntry({ entry, eager = false, as: Heading = "h3" }: Props
         href={`/perfume/${entry.slug}`}
         prefetch={false}
         data-focus-key={`entry-${entry.slug}`}
-        aria-labelledby={`title-${entry.slug}`}
         className="group block"
       >
         <StudyVisual study={entry.visual} name={entry.name} eager={eager} />
-        <Heading id={`title-${entry.slug}`} lang={scriptLang(entry.name)} className="type-entry mt-4">
+        <Heading lang={scriptLang(entry.name)} className="type-entry mt-4">
           <span className="underline decoration-transparent decoration-1 underline-offset-[0.25em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
             {entry.name}
           </span>

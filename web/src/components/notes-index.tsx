@@ -12,8 +12,8 @@ import { SelectField } from "./select-field";
 
 function NoteRow({ note }: { note: NoteView }) {
   return (
-    <li className="border-divider border-t py-5 first:border-t-0" data-note={note.id}>
-      <div className="grid gap-x-6 gap-y-1 w1024:grid-cols-[minmax(0,2fr)_minmax(0,4fr)_auto] w1024:items-baseline">
+    <li className="border-divider border-t pt-4 pb-3 first:border-t-0" data-note={note.id}>
+      <div className="grid gap-x-6 gap-y-1 w1024:grid-cols-[minmax(0,2fr)_minmax(0,4fr)_12rem] w1024:items-baseline">
         <h3 className="type-entry">{note.label}</h3>
         <p className="min-w-0">
           {note.descriptor}{" "}
@@ -26,13 +26,13 @@ function NoteRow({ note }: { note: NoteView }) {
             href={exploreHref({ family: null, note: note.id })}
             prefetch={false}
             data-focus-key={`browse-${note.id}`}
-            className="link-action tabular-nums"
+            className="link-action tabular-nums w1024:justify-self-end"
           >
             Browse {countLabel(note.membership.length)}
             <span className="sr-only"> with {note.label}</span>
           </Link>
         ) : (
-          <p className="text-text-secondary flex min-h-11 items-center">Relationship not supplied</p>
+          <p className="text-text-secondary flex min-h-11 items-center w1024:justify-self-end">Relationship not supplied</p>
         )}
       </div>
       {note.membership && (
@@ -125,9 +125,9 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
               <section
                 key={initial}
                 aria-label={`Notes starting with ${initial}`}
-                className="border-ink break-inside-avoid border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)]"
+                className="border-control-border first:border-ink break-inside-avoid border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)]"
               >
-                <p aria-hidden="true" className="font-display text-gold-readable pt-4 text-[2.5rem] leading-none">
+                <p aria-hidden="true" className="display-figure pt-4 text-[2.25rem] leading-none">
                   {initial}
                 </p>
                 <ul>
