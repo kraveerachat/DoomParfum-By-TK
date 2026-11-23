@@ -826,3 +826,7 @@ Committed the S8 r14 records unchanged (`8c62403`) and merged `main` (`0daafbb`,
 ## 2026-11-23 — DPT-DOC-004 / S1 — overall project handoff (local)
 
 Added [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] (new `DPT-HANDOFF-003`), the canonical note [[DPT-DOC-004_Overall_Project_Handoff]], and the S1 report and summary. Incorporated the Stage 3 records [[2026-11-23_IMP-P1-04_S6_Report]] and [[2026-11-23_IMP-P1-04_S6_Summary]] byte-identical (new folders `Reports/IMP-P1-04/`, `Summaries/IMP-P1-04/`). Recorded the Owner's PR8 keep-open deferral in the Decision Log, a current-truth section in Project_Status, the TSK-101 reconciliation in the Backlog and handoff navigation in Project_Index. PR8, migrations, receipts and U01 artifacts are unchanged. Local checkpoint only; not pushed.
+
+## 2026-11-23 — DPT-PLAN-012 luxury frontend planning
+
+Added an original five-route mock frontend planning packet: twenty-site reference matrix with coverage limits, responsive wireframes/header, token/component proposal, synthetic fixture contract, Docker runtime proposal, future acceptance/task map and proposed Draft PR body. PRODUCT.md records explicit product truth. Requested Impeccable lenses are recorded separately in [[Luxury_Design_Critique_and_Audit]]. Canonical S1 report/summary and validation identify actual results. No application/runtime, private data, existing implementation or historical receipt changes. Local-only; no push/PR.
