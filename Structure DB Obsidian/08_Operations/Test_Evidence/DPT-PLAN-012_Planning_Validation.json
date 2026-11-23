@@ -6,8 +6,8 @@
     {
       "mode": "IMP-P1-01",
       "exit": 1,
-      "markdown_files": 19,
-      "frontmatters": 18,
+      "markdown_files": 22,
+      "frontmatters": 21,
       "logical_table_parity": 47,
       "errors": [
         "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Preflight.json",
@@ -73,8 +73,8 @@
     {
       "mode": "IMP-P1-02",
       "exit": 1,
-      "markdown_files": 19,
-      "frontmatters": 18,
+      "markdown_files": 22,
+      "frontmatters": 21,
       "logical_table_parity": 47,
       "errors": [
         "Structure DB Obsidian/00_Home/Project_Index.md: unresolved wiki IMP_ENR_01_Preflight.json",
@@ -430,7 +430,7 @@
   "unexplained_stock_findings": [],
   "scoped_failures": [],
   "scoped_result": "PASS",
-  "changed_markdown": 19,
+  "changed_markdown": 22,
   "changed_paths": [
     "PRODUCT.md",
     "Structure DB Obsidian/00_Home/Project_Index.md",
@@ -449,6 +449,10 @@
     "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
     "Structure DB Obsidian/08_Operations/Change_Log.md",
     "Structure DB Obsidian/08_Operations/Decision_Log.md",
+    "Structure DB Obsidian/08_Operations/Receipts/2026-11-23_231703_DPT-PLAN-012_Luxury_Frontend_Planning.md",
+    "Structure DB Obsidian/08_Operations/Reports/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Report.md",
+    "Structure DB Obsidian/08_Operations/Summaries/DPT-PLAN-012/2026-11-23_DPT-PLAN-012_S1_Summary.md",
+    "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_File_Manifest.json",
     "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.json",
     "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-012_Planning_Validation.md",
     "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md"
