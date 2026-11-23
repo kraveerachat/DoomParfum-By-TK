@@ -499,3 +499,7 @@ Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PE
 ## DPT-PLAN-012 design-planning decisions — 2026-11-23
 
 The Owner confirmed the attached luxury editorial direction in chat: ivory/ink, muted gold, deep navy, serif display, readable sans, generous spacing and restrained motion. This confirms the direction to propose, not rendered acceptance. [[Luxury_Frontend_Acceptance_and_Task_Map]] records LF-OD-01…05. Exact routes/tokens, isolated Next.js stack and loopback Docker runtime remain PROPOSED until Gate P. Public link access/noindex is a future preference; Cloudflare deployment remains separately gated. Gold `#AD9361` on ivory measures 2.706:1 and is restricted to decorative use; readable gold is separately proposed. No prior decision, U01 contract or data permission is changed.
+
+## IMP-WEB-01 decisions — 2026-11-24
+
+Owner-verified (chat, 2026-11-24): consolidate LF-01 to LF-04 into one implementation task with LF-05 as a separate gate; one Docker Desktop launch. PROPOSED, awaiting the Owner: the deviations numbered 1 to 7 in [[2026-11-24_IMP-WEB-01_S1_Report]] (route-loading behavior, hero padding, fixed optical size, dialog exit, accord descriptors and sort options, link size, house-label position).

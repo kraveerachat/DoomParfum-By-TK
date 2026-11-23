@@ -615,3 +615,7 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ### DPT-PLAN-012 S1 planning handoff
 
 Source checkpoint `4105a702a273d77a80c538856034c76c56153264`; canonical task now READY FOR REVIEW (planning only), with all five independent planning findings resolved and bounded reference coverage explicit. Scoped document/contrast/history/diff checks pass; stock validators retain 58/56 inherited failures. Report/summary/evidence and single readiness receipt are indexed in [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. Local-only, NOT_PUSHED, PR NOT CREATED; implementation/runtime NOT STARTED. Owner publication authorization and Human Gate P merge remain next.
+
+## 2026-11-24 — Luxury mock frontend implementation (IMP-WEB-01)
+
+Planning PR #35 (DPT-PLAN-012) is MERGED at `61932bef147816272a06cbe6eba9363940fa4baf`. [[IMP-WEB-01_Luxury_Frontend_Docker]] implements LF-01 to LF-04 locally on `feat/imp-web-01-luxury-frontend`, code checkpoint `a5ddd6fe421870d2adeeac70f3e7150eee798890`: ACCEPTANCE PENDING, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. 81 unit and 117 browser tests pass; A05 is PARTIAL and independent closure (LF-05) is PENDING. Mock-only, loopback Docker at `http://localhost:3000`, not deployed. PR8, U01/r14, database, matching and POST30 decisions are unchanged.

@@ -1106,3 +1106,11 @@ Class B. Starting SHA `3d953f7f442f1280475f2e24ac3e5eb539be67fd`. No PR8 change,
 ## 2026-11-23 — DPT-PLAN-012 / S1
 
 Codex planning/documentation session on `plan/luxury-frontend-editorial`, starting main `03e2ab6080373033c02afc7ada7be2ceab5f24e2`. Tools: Git/PowerShell/Python, Context Mode, Brave CUA read-only research, web primary-source documentation, Impeccable v4.5.2 context/reference guidance, ui-craft, ui-ux-pro-max local searches and Caveman reporting. Independent planning design/evidence reviewers inspect the new documents read-only. No tool install/configuration, publication, application code, Docker start or Production mutation. Exact execution, failures, checks and review reconciliation: canonical task S1 report/summary, indexed in [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
+
+## 2026-11-24 — IMP-WEB-01 / S1
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-24 | IMP-WEB-01 / S1 | Claude Code | #35 | NOT CREATED | `web/` + vault records | 81 unit, 117 browser, image scan; [[2026-11-24_IMP-WEB-01_S1_Report]] | PARTIAL (A05 manual checks, LF-05 open) | `a5ddd6f` (code) |
+
+Docker Desktop was started once with the Owner's chat authorization. Two read-only subagent reviews; no push, PR, merge or deployment.

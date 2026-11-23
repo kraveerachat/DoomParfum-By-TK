@@ -261,3 +261,8 @@ Historical runtime tests remain historical; current planning static/review/publi
 - [[Luxury_Frontend_Acceptance_and_Task_Map]] — future tests and work units
 - [[Luxury_Design_Critique_and_Audit]] — requested planning passes
 - [[Luxury_Frontend_Draft_PR_Description]] — local proposed PR body, not published
+
+### IMP-WEB-01 — luxury mock frontend implementation (2026-11-24)
+
+- [[IMP-WEB-01_Luxury_Frontend_Docker]] — canonical implementation task
+- [[2026-11-24_IMP-WEB-01_S1_Report]], [[2026-11-24_IMP-WEB-01_S1_Summary]]

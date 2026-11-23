@@ -393,3 +393,9 @@ The 2026-11-10 P1 workstream table above that lists IMP-P1-04 as NOT STARTED is 
 ## DPT-PLAN-012 — luxury editorial mock frontend proposal (2026-11-23)
 
 New documentation-only Gate P task: [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. [[Luxury_Frontend_Acceptance_and_Task_Map]] proposes LF-01…LF-05 work units without allocating global implementation task IDs. Next.js/TypeScript/Tailwind/selective primitives and Docker-first runtime are proposed for an isolated mock-only `web/` directory. This does not select the real-data application stack, retire TSK-101 or answer POST30-ODP-1. Implementation waits for Owner merge and bounded execution authority. PR #8 remains deferred; U01 remains independent and gated.
+
+## IMP-WEB-01 — luxury mock frontend implementation (2026-11-24)
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | HEAD | Next action |
+|---|---|---|---|---|---|---|---|
+| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | NOT CREATED | `feat/imp-web-01-luxury-frontend` | PR #35 / `61932be` | ACCEPTANCE PENDING | `a5ddd6f` (code) | Owner review, LF-05, publication decision |
