@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: agent_run_log
 status: draft
 owner: agent
-updated: 2026-11-20
+updated: 2026-11-23
 tags:
   - doomparfum
   - operations
@@ -1094,3 +1094,11 @@ Class A. Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5`. r14 bytes are 
 | 2026-11-22 | DPT-GATE-012 / U01 / S9 | Claude Code `57690f5c` (documentation recorder; r14 author, not independent) | NA (documentation Draft [PR #32](https://github.com/kraveerachat/DoomParfum-By-TK/pull/32); GitHub head `33d92b5`) | NA | S8 checkpoint (7 files, unchanged); merge of `main`; U01 task note, Recovery Index, new Security Resumption Handoff, Project_Status, Project_Index, Agent_Run_Log, Change_Log, Decision_Log, S9 report, S9 summary | artifact re-hash (r14 4/4, r12–r13 8/8); conflict-retention audit; validate_docs compared with the parents; `git diff --check`; sensitive scan | Local checkpoint, NOT PUSHED | `8c62403802eae6619af1a79a83ff297bbaaf1e42` (S8), `6a8d72c82195d0dc8d2936f38c842a0256743a06` (merge), S9 records (recorded by the next session) |
 
 Class A. Starting SHA `33d92b5f6a81f745854d67a15545b2ec8d6700f5`; `main` `0daafbb863b63e0d36cfccd0903d070ecdc63340` (PR33 merge, verified). No push, PR update, review, merge, ruleset change, runtime test, r15 or U01 code. See [[DPT-GATE-012_U01_Security_Gate]] §18.
+
+### 2026-11-23 — DPT-DOC-004 / S1 — closeout Stage 4: overall project handoff
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-23 | DPT-DOC-004 / S1 | Claude Code `f4522f33` (also the Stage 3 assessor; not independent) | NA (documentation; PR NOT CREATED) | NA | Overall Handoff, DPT-DOC-004 task note, S1 report and summary, IMP-P1-04 S6 report and summary (byte-identical), Project_Status, Project_Index, Backlog, Decision_Log, Change_Log, Agent_Run_Log | validate_docs.py both modes vs clean-`main` baseline, `git diff --check`, link and public-sensitive scans (see the S1 report §6) | PARTIAL — local checkpoint, `NOT_PUSHED` | recorded by the next session |
+
+Class B. Starting SHA `3d953f7f442f1280475f2e24ac3e5eb539be67fd`. No PR8 change, Docker, database, runtime test, r15 or stack approval. See [[DPT-DOC-004_Overall_Project_Handoff]].
