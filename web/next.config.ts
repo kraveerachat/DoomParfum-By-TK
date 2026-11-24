@@ -8,6 +8,8 @@ const config: NextConfig = {
   output: "standalone",
   outputFileTracingRoot: import.meta.dirname,
   turbopack: { root: import.meta.dirname },
+  // `next dev` must not write its own AGENTS.md beside the repository's.
+  agentRules: false,
   poweredByHeader: false,
   reactStrictMode: true,
   // src/proxy.ts redirects trailing slashes with the no-store and noindex headers.

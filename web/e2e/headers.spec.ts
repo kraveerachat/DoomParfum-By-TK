@@ -2,6 +2,7 @@
  * Response classes, sent as exact request targets. Two groups stay separate on purpose: responses that
  * pass through src/proxy.ts, and known exceptions that the framework or Node answers before it runs.
  */
+import { connect } from "node:net";
 import { expect, ORIGIN, raw, test } from "./helpers";
 
 type Headers = Awaited<ReturnType<typeof raw>>["headers"];
@@ -81,7 +82,7 @@ test.describe("responses produced through the proxy", () => {
   });
 
   for (const method of ["POST", "PUT", "PATCH", "DELETE", "OPTIONS"]) {
-    test(`${method} is refused without a body and changes nothing`, async () => {
+    test(`${method} is refused without a body, and the pages read the same afterwards`, async () => {
       // Scripts carry the nonce and per-render framework values, which differ between any two reads.
       const text = async (path: string) =>
         (await raw("GET", path)).body.replace(/<script\b[\s\S]*?<\/script>/g, "").replace(/nonce="[^"]*"/g, "");
@@ -150,6 +151,22 @@ test.describe("known exceptions answered before the proxy", () => {
     expect(response.status).toBe(431);
     expect(response.body).toBe("");
     expect(policy(response.headers)).toEqual(NONE);
+  });
+
+  test("a request Node cannot parse is a 400 without headers or page content", async () => {
+    // A method outside Node's list cannot be sent by its own client, so it is written to the socket.
+    const { hostname, port, host } = new URL(ORIGIN);
+    const reply = await new Promise<string>((resolve, reject) => {
+      const socket = connect({ host: hostname, port: Number(port), family: 4 }, () =>
+        socket.write(`BREW /explore HTTP/1.1\r\nHost: ${host}\r\n\r\n`),
+      );
+      let text = "";
+      socket.on("data", (part) => (text += part));
+      socket.on("end", () => resolve(text));
+      socket.on("error", reject);
+    });
+    expect(reply).toMatch(/^HTTP\/1\.1 400 /);
+    expect(reply).not.toMatch(/content-security-policy|x-robots-tag|<html/i);
   });
 
   test("TRACE and the asterisk target are a framework 500 without page content", async () => {

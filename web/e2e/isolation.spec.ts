@@ -173,7 +173,8 @@ test.describe("A12 performance and motion", () => {
     for (const li of await page.locator(".folio-layer").all()) await expect(li).toHaveCSS("opacity", "1");
   });
 
-  for (const width of [375, 320]) {
+  // 280px also covers the narrowest header (brand, utilities and links each on a row of their own) and wrapping.
+  for (const width of [375, 320, 280]) {
     test(`without scripting the four routes stay reachable from the header at ${width}`, async ({ browser }) => {
       const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 800 }, baseURL: ORIGIN });
       const page = await context.newPage();
@@ -189,7 +190,9 @@ test.describe("A12 performance and motion", () => {
         expect(size.x + size.width).toBeLessThanOrEqual(width);
       }
       const brand = (await page.locator("[data-header-brand]").boundingBox())!;
-      expect((await nav.boundingBox())!.y).toBeGreaterThanOrEqual(brand.y + brand.height);
+      const utils = (await page.locator("[data-header-utils]").boundingBox())!;
+      if (width === 280) expect(utils.y).toBeGreaterThanOrEqual(brand.y + brand.height);
+      expect((await nav.boundingBox())!.y).toBeGreaterThanOrEqual(Math.max(brand.y + brand.height, utils.y + utils.height));
       for (const [name, path] of [["Notes", "/notes"], ["About", "/about"], ["Home", "/"], ["Explore", "/explore"]] as const) {
         await nav.getByRole("link", { name }).focus();
         await page.keyboard.press("Enter");

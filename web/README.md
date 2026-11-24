@@ -33,15 +33,21 @@ To test a candidate build without stopping the preview, serve it on another loop
 
 ## Response headers and their limits
 
-`src/proxy.ts` sets the nonce CSP, `X-Robots-Tag` and no-store on every page, error page, RSC response and redirect it produces, and answers any method other than GET and HEAD with 405. Coverage is not universal. These responses are produced before the proxy runs, and `e2e/headers.spec.ts` asserts them as known exceptions:
+`src/proxy.ts` sets the nonce CSP, `X-Robots-Tag` and no-store on every page, error page, RSC response and redirect it produces, and answers any method other than GET and HEAD with 405. Coverage is not universal. These responses are produced before the proxy runs. `e2e/headers.spec.ts` asserts them as known exceptions, except the closed connections:
 
 | Response | Produced by | Missing |
 |---|---|---|
 | 308 for repeated slashes or backslashes (`//explore`, `/about//`) | Next.js router | All four headers; the target stays on this origin and the page that follows has them |
 | 308 for an absolute-form request line | Next.js router | All four headers; it repeats the sender's own target. Browsers do not send this form to an origin server |
 | 431 for a request above the Node header limit (16 KiB) | Node HTTP parser | All headers; no body |
+| 400 for a request Node cannot parse (unknown method, missing Host, malformed line or header) | Node HTTP parser | All headers; no page content |
+| Connection closed for `CONNECT` and for a WebSocket upgrade | Node and Next.js server | No response at all |
 | 500 for `TRACE` or the `*` target | Next.js server | CSP, noindex, nosniff; no page content |
 | Hashed files in `/_next/static/` | Next.js static handler | CSP and no-store, on purpose |
+
+## Without scripting
+
+Pages and their links work, and the four routes stay in the header. Search, Profile and the Explore and Notes filters need scripting. Where scripting is enabled but the scripts fail to load, a narrow header keeps its Menu button, which then does nothing; the in-page and footer links still work.
 
 ## Layout
 

@@ -19,4 +19,4 @@ Full license texts: `src/fonts/OFL-BodoniModa.txt`, `src/fonts/OFL-NotoSansThai.
 
 Next.js, React, Radix Dialog and Tailwind CSS are MIT licensed. Lucide icons are ISC licensed. Exact versions are in `package-lock.json`.
 
-The locally built runtime image also contains `sharp` (Apache-2.0) and its `libvips` libraries (LGPL-3.0-or-later), optional Next.js dependencies that this app does not use, and `caniuse-lite` data (CC-BY-4.0) is a build dependency. The image is not distributed; check these terms before that changes.
+The locally built runtime image also contains `sharp` (Apache-2.0) and its `libvips` libraries (LGPL-3.0-or-later), optional Next.js dependencies that this app does not use. `caniuse-lite` data (CC-BY-4.0) is used only while building. The image is not distributed; check these terms before that changes.
