@@ -3,6 +3,9 @@ import { NextResponse, type NextRequest } from "next/server";
 /** Owned static files. A missing one still falls through to the HTML 404, so it keeps the policy. */
 const OWNED_ASSET = /^\/(?:studies\/[a-z-]+\.svg|icon\.svg)$/;
 
+/** Nothing in this mock accepts a write, so only reads are answered with a page. */
+const READS = ["GET", "HEAD"];
+
 const decodes = (pathname: string) => {
   try {
     decodeURIComponent(pathname);
@@ -43,6 +46,7 @@ export function proxy(request: NextRequest) {
   headers.set("Content-Security-Policy", policy);
 
   const answer = () => {
+    if (!READS.includes(request.method)) return new NextResponse(null, { status: 405, headers: { Allow: READS.join(", ") } });
     // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
     if (pathname.startsWith("/_next/image")) return new NextResponse(null, { status: 404 });
     // An address that cannot be decoded is served the unavailable view by a path no route uses.

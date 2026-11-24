@@ -15,7 +15,8 @@ const find = (slug: string) => fixtureSet.perfumes.find((p) => p.slug === slug);
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const perfume = find((await params).slug);
-  if (!perfume) return { title: "Mock study unavailable" };
+  // The unavailable view supplies its own title.
+  if (!perfume) return {};
   return { title: `${perfume.name} · Mock study` };
 }
 

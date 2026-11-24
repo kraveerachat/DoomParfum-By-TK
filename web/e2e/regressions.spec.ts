@@ -1,7 +1,7 @@
 /** Regressions for the independent review findings on f04d912 (CR = code review, DR = design review). */
 import AxeBuilder from "@axe-core/playwright";
 import type { Page } from "@playwright/test";
-import { expect, focused, ready, test } from "./helpers";
+import { expect, focused, ORIGIN, ready, test } from "./helpers";
 
 const primary = (page: Page, name: string) =>
   page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name });
@@ -46,7 +46,7 @@ for (const [start, heading] of [["/explore?utm=1", "Explore mock fragrances"], [
 }
 
 test("CR3 a malformed slug is a 404 with the response headers", async ({ request }) => {
-  const response = await request.get("http://localhost:3000/perfume/%E0%A4%A");
+  const response = await request.get(`${ORIGIN}/perfume/%E0%A4%A`);
   expect(response.status()).toBe(404);
   expect(response.headers()["x-robots-tag"]).toContain("noindex");
 });
@@ -234,4 +234,22 @@ test("DR11 paired controls align at tablet width", async ({ page }) => {
   await ready(page, "/notes");
   const tops = await page.locator("main input, main select").evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().top)));
   expect(new Set(tops).size).toBe(1);
+});
+
+test("F-09 without the Navigation API, Back still restores query, position and focus", async ({ page }) => {
+  // The fallback keys history by URL, so two visits to one URL share one state. That limit is recorded.
+  await page.addInitScript(() => Object.defineProperty(window, "navigation", { value: undefined, configurable: true }));
+  await ready(page, "/explore");
+  expect(await page.evaluate(() => "navigation" in window && window.navigation)).toBeFalsy();
+  await page.locator("main input").fill("study");
+  const link = page.locator("[data-entry] a").last();
+  await link.scrollIntoViewIfNeeded();
+  const y = await page.evaluate(() => scrollY);
+  const key = await link.getAttribute("data-focus-key");
+  await link.click();
+  await expect(page.locator("h1")).toBeFocused();
+  await page.goBack();
+  await expect(page.locator("main input")).toHaveValue("study");
+  await expect(page.locator(`[data-focus-key="${key}"]`)).toBeFocused();
+  await expect.poll(() => page.evaluate(() => scrollY)).toBe(y);
 });

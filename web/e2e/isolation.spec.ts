@@ -1,4 +1,4 @@
-import { expect, ready, ROUTES, test } from "./helpers";
+import { expect, ORIGIN, ready, ROUTES, test } from "./helpers";
 
 const FORBIDDEN = /paper-study|mock-perfume-0|mock-note-0|Ivrel|Luthmere|mock atelier/;
 
@@ -53,7 +53,7 @@ test.describe("A06 isolation, cache and network", () => {
     await expect(page.locator("h1")).toHaveText("Linen study E");
 
     for (const r of requests) {
-      expect(new URL(r.url).origin).toBe("http://localhost:3000");
+      expect(new URL(r.url).origin).toBe(ORIGIN);
       expect(r.method).toBe("GET");
       expect(decodeURIComponent(r.url)).not.toMatch(/glass(?!-)|q=|query/);
     }
@@ -173,14 +173,40 @@ test.describe("A12 performance and motion", () => {
     for (const li of await page.locator(".folio-layer").all()) await expect(li).toHaveCSS("opacity", "1");
   });
 
+  for (const width of [375, 320]) {
+    test(`without scripting the four routes stay reachable from the header at ${width}`, async ({ browser }) => {
+      const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 800 }, baseURL: ORIGIN });
+      const page = await context.newPage();
+      await page.goto("/explore");
+      const nav = page.getByRole("navigation", { name: "Primary" });
+      await expect(nav.getByRole("link")).toHaveText(["Home", "Explore", "Notes", "About"]);
+      await expect(nav.getByRole("link", { name: "Explore" })).toHaveAttribute("aria-current", "page");
+      // The drawer cannot open without scripting, so its trigger is not offered.
+      await expect(page.getByRole("button", { name: "Menu" })).toHaveCount(0);
+      for (const link of await nav.getByRole("link").all()) {
+        const size = (await link.boundingBox())!;
+        expect(Math.min(size.width, size.height)).toBeGreaterThanOrEqual(43.5);
+        expect(size.x + size.width).toBeLessThanOrEqual(width);
+      }
+      const brand = (await page.locator("[data-header-brand]").boundingBox())!;
+      expect((await nav.boundingBox())!.y).toBeGreaterThanOrEqual(brand.y + brand.height);
+      for (const [name, path] of [["Notes", "/notes"], ["About", "/about"], ["Home", "/"], ["Explore", "/explore"]] as const) {
+        await nav.getByRole("link", { name }).focus();
+        await page.keyboard.press("Enter");
+        await expect(page).toHaveURL(`${ORIGIN}${path}`);
+      }
+      await context.close();
+    });
+  }
+
   test("without scripting the content is still complete", async ({ browser }) => {
     const context = await browser.newContext({ javaScriptEnabled: false });
     const page = await context.newPage();
     for (const { path } of ROUTES) {
-      await page.goto(`http://localhost:3000${path}`);
+      await page.goto(`${ORIGIN}${path}`);
       await expect(page.locator("h1")).toBeVisible();
     }
-    await page.goto("http://localhost:3000/explore");
+    await page.goto(`${ORIGIN}/explore`);
     await expect(page.locator("[data-entry]").first()).toBeVisible();
     await context.close();
   });

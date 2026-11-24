@@ -1,4 +1,7 @@
+import { request as httpRequest, type IncomingHttpHeaders } from "node:http";
 import { test as base, expect, type Page } from "@playwright/test";
+
+export const ORIGIN = process.env.E2E_ORIGIN ?? "http://localhost:3000";
 
 export const ROUTES = [
   { path: "/", title: "Home · DoomParfum By TK" },
@@ -18,7 +21,7 @@ export const test = base.extend<{ problems: string[] }>({
       });
       page.on("pageerror", (e) => problems.push(`pageerror: ${e.message}`));
       page.on("request", (r) => {
-        if (new URL(r.url()).origin !== "http://localhost:3000") problems.push(`cross-origin: ${r.url()}`);
+        if (new URL(r.url()).origin !== ORIGIN) problems.push(`cross-origin: ${r.url()}`);
       });
       await use(problems);
       expect(problems).toEqual([]);
@@ -36,6 +39,20 @@ export async function ready(page: Page, path: string) {
   });
   await page.evaluate(() => document.fonts.ready);
 }
+
+/** Sends the exact request target. Browsers and HTTP clients rewrite slashes and escapes first. */
+export const raw = (method: string, target: string) =>
+  new Promise<{ status: number; headers: IncomingHttpHeaders; body: string }>((resolve, reject) => {
+    const { hostname, port, host } = new URL(ORIGIN);
+    const call = httpRequest({ hostname, port, family: 4, agent: false, method, path: target, headers: { host } }, (response) => {
+      let body = "";
+      response.setEncoding("utf8");
+      response.on("data", (part: string) => (body += part));
+      response.on("end", () => resolve({ status: response.statusCode ?? 0, headers: response.headers, body }));
+    });
+    call.on("error", reject);
+    call.end();
+  });
 
 export const focused = (page: Page) =>
   page.evaluate(() => {

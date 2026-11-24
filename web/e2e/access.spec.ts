@@ -84,14 +84,16 @@ test.describe("A05 keyboard and focus", () => {
     await expect(page.getByRole("dialog")).toBeVisible();
     await page.goBack();
     await expect(page.getByRole("dialog")).toHaveCount(0);
-    await expect(page.locator("html")).not.toHaveAttribute("data-overlay", "");
+    // Any value is a lock, so the attribute itself must be gone.
+    await expect(page.locator("html")).not.toHaveAttribute("data-overlay");
+    await expect(page.locator("html")).not.toHaveCSS("overflow-y", "hidden");
   });
 
   test("fragment links focus their section", async ({ page }) => {
     await ready(page, "/");
     await page.locator("[data-focus-key='article-mock-article-002']").click();
     await expect(page).toHaveURL(/#journal-empty-is-not-unknown$/);
-    expect(await focused(page)).toBe("journal-empty-is-not-unknown");
+    await expect.poll(() => focused(page)).toBe("journal-empty-is-not-unknown");
     await expect(page.locator("#journal-empty-is-not-unknown")).toBeInViewport();
   });
 

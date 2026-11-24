@@ -1,7 +1,8 @@
 /** Regressions for the S2 refinement pass. Each one failed on 94820c2 before its correction, except the
- * two guards (UX5 origin and UX12), which passed before and after. */
+ * UX12 guard, which S3 made sensitive to its own removal. The redirect origin test is in headers.spec.ts
+ * and the visible-scrollbar half of UX2 is in scrollbar.spec.ts. */
 import type { Page } from "@playwright/test";
-import { expect, ready, test } from "./helpers";
+import { expect, ORIGIN, ready, test } from "./helpers";
 
 const box = (page: Page, selector: string) =>
   page.locator(selector).first().evaluate((el) => {
@@ -55,7 +56,7 @@ test("UX3 the current-page weight does not move the navigation labels", async ({
 });
 
 test("UX4 a malformed address shows the unavailable view", async ({ request, page, problems }) => {
-  const path = "http://localhost:3000/perfume/%E0%A4%A";
+  const path = `${ORIGIN}/perfume/%E0%A4%A`;
   const response = await request.get(path);
   expect(response.status()).toBe(404);
   expect(response.headers()["cache-control"]).toContain("no-store");
@@ -76,20 +77,12 @@ for (const [path, target] of [["/explore/", "/explore"], ["/about/?x=1", "/about
     const response = await request.get(path, { maxRedirects: 0 });
     expect(response.status()).toBe(308);
     const location = response.headers()["location"]!;
-    expect(new URL(location, "http://localhost:3000").href).toBe(`http://localhost:3000${target}`);
+    expect(new URL(location, ORIGIN).href).toBe(`${ORIGIN}${target}`);
     expect(response.headers()["x-robots-tag"]).toContain("noindex");
     expect(response.headers()["cache-control"]).toContain("no-store");
     expect(response.headers()["content-security-policy"]).toContain("default-src 'self'");
   });
 }
-
-test("UX5 a redirect never leaves this origin", async ({ request }) => {
-  for (const path of ["//example.test/", "/%5Cexample.test/", "/\\example.test/", "///example.test//", "/%2F%2Fexample.test/"]) {
-    const response = await request.get(`http://localhost:3000${path}`, { maxRedirects: 0 });
-    const location = response.headers()["location"];
-    if (location) expect(new URL(location, "http://localhost:3000").origin, path).toBe("http://localhost:3000");
-  }
-});
 
 test("UX6 an unavailable filter is not counted as zero studies", async ({ page }) => {
   await ready(page, "/explore?family=x");
@@ -191,6 +184,14 @@ test("UX13 forced colors still mark only the current page in the navigation", as
 
 test("UX12 a malformed fragment does not break navigation", async ({ page }) => {
   await ready(page, "/about#%E0%A4%A");
+  // A same-page link is decoded in the click handler; an unguarded decode is a page error here.
+  await page.evaluate(() => {
+    const link = document.createElement("a");
+    link.href = "#%E0%A4%A";
+    link.textContent = "Malformed fragment";
+    document.querySelector("main h1")!.after(link);
+  });
+  await page.getByRole("link", { name: "Malformed fragment" }).click();
   await page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "Notes" }).click();
   await expect(page.locator("h1")).toBeFocused();
   await page.goBack();

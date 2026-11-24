@@ -27,7 +27,21 @@ npm test
 npm run test:e2e
 ```
 
+To test a candidate build without stopping the preview, serve it on another loopback port and set `E2E_ORIGIN`, for example `E2E_ORIGIN=http://localhost:3100 npm run test:e2e`.
+
 `npm run scan:output -- <directory>` scans a copied-out `/app` directory for forbidden files, secret-like content, host paths and fixture data in immutable assets.
+
+## Response headers and their limits
+
+`src/proxy.ts` sets the nonce CSP, `X-Robots-Tag` and no-store on every page, error page, RSC response and redirect it produces, and answers any method other than GET and HEAD with 405. Coverage is not universal. These responses are produced before the proxy runs, and `e2e/headers.spec.ts` asserts them as known exceptions:
+
+| Response | Produced by | Missing |
+|---|---|---|
+| 308 for repeated slashes or backslashes (`//explore`, `/about//`) | Next.js router | All four headers; the target stays on this origin and the page that follows has them |
+| 308 for an absolute-form request line | Next.js router | All four headers; it repeats the sender's own target. Browsers do not send this form to an origin server |
+| 431 for a request above the Node header limit (16 KiB) | Node HTTP parser | All headers; no body |
+| 500 for `TRACE` or the `*` target | Next.js server | CSP, noindex, nosniff; no page content |
+| Hashed files in `/_next/static/` | Next.js static handler | CSP and no-store, on purpose |
 
 ## Layout
 
@@ -36,7 +50,7 @@ npm run test:e2e
 | `src/fixtures/` | Synthetic records, strict validator, view model |
 | `src/catalogue/search.ts` | Shared search, filter and URL rules |
 | `src/server/catalogue.ts` | The only module that loads fixtures (server-only) |
-| `src/proxy.ts` | Nonce CSP, no-store delivery, image-optimizer refusal |
+| `src/proxy.ts` | Nonce CSP, no-store delivery, reads only, trailing-slash redirects, image-optimizer refusal |
 | `src/components/`, `src/app/` | Interface and the five route types |
 | `scripts/build-studies.mjs` | Draws the original SVG studies in `public/studies/` |
 | `tests/`, `e2e/` | Unit, boundary, contrast and browser acceptance tests |

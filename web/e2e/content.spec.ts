@@ -1,4 +1,4 @@
-import { expect, ready, ROUTES, test } from "./helpers";
+import { expect, ORIGIN, ready, ROUTES, test } from "./helpers";
 
 test.describe("A01 routes and navigation", () => {
   for (const { path, title } of ROUTES) {
@@ -57,7 +57,7 @@ test.describe("A01 routes and navigation", () => {
     const pages = new Map<string, string>();
     for (const href of seen) {
       const url = new URL(href);
-      expect(url.origin).toBe("http://localhost:3000");
+      expect(url.origin).toBe(ORIGIN);
       const key = url.pathname + url.search;
       if (!pages.has(key)) {
         const response = await request.get(key);

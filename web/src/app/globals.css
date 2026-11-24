@@ -514,6 +514,22 @@
 @container header (min-width: 24rem) {
   .wordmark-name { font-size: 1.125rem; }
 }
+/* Without scripting the drawer cannot open, so the one primary navigation takes a row of its own. */
+@media (scripting: none) {
+  .header-grid {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "brand utils" "nav nav";
+  }
+  .header-menu { display: none; }
+  .header-nav { display: block; grid-area: nav; }
+  .header-nav ul { flex-wrap: wrap; row-gap: 0; }
+  @container header (max-width: 18.99rem) {
+    .header-grid {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas: "brand" "utils" "nav";
+    }
+  }
+}
 @media (min-width: 1024px) {
   @container header (min-width: 62.5rem) {
     .header-grid {
