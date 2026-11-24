@@ -8,6 +8,16 @@ import { useOverlay } from "./overlay";
 
 const icon = { "aria-hidden": true, size: 20, strokeWidth: 1.5 } as const;
 
+/** The text identity. The footer repeats it without a link. */
+export function Lockup() {
+  return (
+    <>
+      <span className="wordmark-name leading-[1.15] font-medium tracking-[0.06em]">DOOMPARFUM</span>{" "}
+      <span className="text-signature text-gold-readable font-medium tracking-[0.1em]">BY TK</span>
+    </>
+  );
+}
+
 function Wordmark() {
   return (
     <Link
@@ -17,8 +27,7 @@ function Wordmark() {
       data-focus-key="brand"
       className="inline-flex min-h-11 flex-col justify-center whitespace-nowrap"
     >
-      <span className="wordmark-name leading-[1.15] font-medium tracking-[0.06em]">DOOMPARFUM</span>{" "}
-      <span className="text-signature text-gold-readable font-medium tracking-[0.1em]">BY TK</span>
+      <Lockup />
     </Link>
   );
 }
@@ -60,7 +69,8 @@ export function SiteHeader() {
                         className={`inline-flex min-h-11 min-w-11 items-center justify-center text-[0.9375rem] leading-6 ${current ? "font-semibold" : "font-medium"}`}
                       >
                         <span
-                          className={`border-b py-0.5 transition-colors duration-(--motion-feedback) ${current ? "border-ink" : "can-hover:border-control-border border-transparent"}`}
+                          data-label={label}
+                          className={`nav-label inline-block border-b py-0.5 transition-colors duration-(--motion-feedback) ${current ? "border-ink" : "can-hover:border-control-border border-transparent"}`}
                         >
                           {label}
                         </span>

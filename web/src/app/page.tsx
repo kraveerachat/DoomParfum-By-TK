@@ -8,15 +8,13 @@ import { catalogue, fixtureSet } from "@/server/catalogue";
 
 export const metadata: Metadata = { title: { absolute: "Home · DoomParfum By TK" } };
 
-const FEATURED_STAGGER = ["", "w1024:mt-16", ""];
-
 export default function HomePage() {
   const featured = fixtureSet.featured.flatMap((slug) => catalogue.entries.filter((e) => e.slug === slug));
 
   return (
     <>
       <SyntheticNotice />
-      <section className="wrap pt-10 pb-10 w1024:pt-12 w1024:pb-6">
+      <section className="wrap hero-spread" data-hero>
         <div className="grid-12 items-end gap-y-10 w768:grid-cols-2 w768:gap-x-6 w1024:grid-cols-12">
           <div className="w1024:col-span-5 w1024:pb-8">
             <h1 className="type-hero max-w-[10ch]">A personal atlas of scent.</h1>
@@ -27,7 +25,7 @@ export default function HomePage() {
               Explore mock catalogue
             </Link>
           </div>
-          <figure className="min-w-0 w1024:col-span-7 w1600:-me-[min(12rem,calc((100cqi-1440px)/2))]">
+          <figure className="hero-art min-w-0 w1024:col-span-7 w1600:-me-[min(12rem,calc((100cqi-1440px)/2))]">
             <img
               src="/studies/hero.svg"
               alt="Abstract study: a folded paper sheet and a dark slab crossed by contour lines."
@@ -46,13 +44,16 @@ export default function HomePage() {
           <h2 id="featured-heading" className="type-section">
             Featured discoveries
           </h2>
-          <Link href="/explore" prefetch={false} data-focus-key="featured-all" className="link-action">
+          <Link href="/explore" prefetch={false} data-focus-key="featured-all" className="link-action type-control">
             View all mock fragrances
           </Link>
         </div>
         <ul className="mt-8 grid grid-cols-1 gap-x-4 gap-y-12 w480:grid-cols-2 w640:gap-x-5 w768:gap-x-6 w1024:mt-12 w1024:grid-cols-3">
           {featured.map((entry, i) => (
-            <li key={entry.id} className={FEATURED_STAGGER[i]}>
+            <li
+              key={entry.id}
+              className={i === 2 ? "entry-spread w480:col-span-2 w1024:col-span-1" : undefined}
+            >
               <PerfumeEntry entry={entry} />
             </li>
           ))}
@@ -81,7 +82,7 @@ export default function HomePage() {
                   width={120}
                   height={120}
                   loading="lazy"
-                  className="size-16 flex-none w1024:size-24"
+                  className="size-14 flex-none w1024:size-24"
                 />
                 <span className="min-w-0 w640:pt-8">
                   <span className="type-section block underline decoration-control-border decoration-1 underline-offset-[0.2em] transition-[text-decoration-color] duration-(--motion-feedback) group-hover:decoration-current">
@@ -107,7 +108,7 @@ export default function HomePage() {
               From the scent notebook
             </h2>
             <p className="text-text-secondary mt-4 max-w-[34ch]">Sample articles, written for this mock.</p>
-            <Link href="/about#journal" prefetch={false} data-focus-key="journal-all" className="link-action mt-2">
+            <Link href="/about#journal" prefetch={false} data-focus-key="journal-all" className="link-action type-control mt-2">
               Read the scent notebook
             </Link>
           </div>

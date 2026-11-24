@@ -29,7 +29,7 @@ function NoteRow({ note }: { note: NoteView }) {
             href={exploreHref({ family: null, note: note.id })}
             prefetch={false}
             data-focus-key={`browse-${note.id}`}
-            className="link-action tabular-nums w1024:justify-self-end"
+            className="link-action type-control tabular-nums w1024:justify-self-end"
           >
             Browse {countLabel(note.membership.length)}
             <span className="sr-only"> with {note.label}</span>
@@ -108,7 +108,7 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
         <div className="flex min-h-11 flex-wrap items-center justify-between gap-x-6">
           <CountStatus text={count} />
           {(query.trim() !== "" || family !== "") && notes.length > 0 && (
-            <button type="button" className="link-action" onClick={reset}>
+            <button type="button" className="link-action type-control" onClick={reset}>
               Show all
             </button>
           )}
@@ -125,7 +125,7 @@ export function NotesIndex({ catalogue }: { catalogue: CatalogueView }) {
             {[...groups].map(([initial, group]) => (
               <div
                 key={initial}
-                className="border-control-border first:border-ink border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)]"
+                className="border-control-border first:border-ink border-t w1024:grid w1024:grid-cols-[6rem_minmax(0,1fr)] w1024:items-baseline"
               >
                 <h3 className="type-section pt-4 leading-none">{initial}</h3>
                 <ul>

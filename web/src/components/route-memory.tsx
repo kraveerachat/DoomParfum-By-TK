@@ -7,7 +7,9 @@ import { currentFocusKey, entryKey, locationKey, navigation } from "./navigation
 /** Shorter transitions show no pending state at all. */
 const PENDING_AFTER_MS = 400;
 
-const nextFrames = (run: () => void) => requestAnimationFrame(() => requestAnimationFrame(run));
+const nextFrames = (run: () => void) => {
+  requestAnimationFrame(() => requestAnimationFrame(run));
+};
 
 function focusTarget(target: HTMLElement | null) {
   if (!target) return;
@@ -15,8 +17,17 @@ function focusTarget(target: HTMLElement | null) {
   target.focus({ preventScroll: true });
 }
 
+/** A malformed fragment names no element. */
+function fragment(hash: string) {
+  try {
+    return decodeURIComponent(hash.slice(1));
+  } catch {
+    return "";
+  }
+}
+
 function focusForward() {
-  const id = decodeURIComponent(window.location.hash.slice(1));
+  const id = fragment(window.location.hash);
   focusTarget((id && document.getElementById(id)) || document.querySelector<HTMLElement>("main h1"));
 }
 
@@ -56,6 +67,9 @@ export function RouteMemory() {
   const [pendingFrom, setPendingFrom] = useState<string | null>(null);
   const current = search ? `${pathname}?${search}` : pathname;
 
+  // Transitions stay off until the styled page has been painted once (globals.css).
+  useEffect(() => nextFrames(() => document.documentElement.setAttribute("data-ready", "")), []);
+
   useEffect(() => {
     const clearPending = () => {
       clearTimeout(pendingTimer.current);
@@ -82,7 +96,7 @@ export function RouteMemory() {
       const key = locationKey();
       if (link.pathname + link.search === key) {
         navigation.set(null);
-        const id = decodeURIComponent(link.hash.slice(1));
+        const id = fragment(link.hash);
         if (id) nextFrames(() => focusTarget(document.getElementById(id)));
         return;
       }

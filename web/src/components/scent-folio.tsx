@@ -60,15 +60,15 @@ export function ScentFolio() {
             amounts.
           </p>
         </div>
-        <ol ref={root} className="mt-12 w1024:mt-20">
+        <ol ref={root} className="border-control-border mt-12 border-b w1024:mt-20">
           {LAYERS.map(({ key, title, text }) => (
             <li
               key={key}
               className="folio-layer border-control-border grid grid-cols-1 items-stretch gap-y-6 border-t py-8 w1024:grid-cols-12 w1024:gap-x-6 w1024:py-0"
             >
-              <div className="w1024:border-gold grid content-center gap-4 w1024:col-span-6 w1024:grid-cols-6 w1024:items-baseline w1024:gap-x-6 w1024:border-e w1024:py-12">
+              <div className="w1024:border-gold grid gap-4 w1024:col-span-6 w1024:grid-cols-6 w1024:gap-x-6 w1024:border-e w1024:py-8">
                 <h3 className="type-page w1024:col-span-2">{title}</h3>
-                <div className="max-w-[38ch] w1024:col-span-4 w1024:pe-6">
+                <div className="max-w-[38ch] w1024:col-span-4 w1024:self-end w1024:pe-6">
                   <p>{text}</p>
                   <p className="text-meta mt-3">{title}, illustrative drawing</p>
                 </div>

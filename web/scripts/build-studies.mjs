@@ -189,10 +189,11 @@ studies["paper-c"] = plate([
 }
 
 /* Family marks for the Home index --------------------------------------------------- */
-const mark = (body) => svg(120, 120, body);
-studies["mark-bright"] = mark([strokes(range(14, (i) => line(100 - 84 * (i / 13) ** 1.8, 10, 100 - 84 * (i / 13) ** 1.8, 110)), C.ink, 1)]);
+// Trimmed to the drawing, so a mark aligns with the text it introduces.
+const mark = (body) => svg(120, 120, body).replace('viewBox="0 0 120 120"', 'viewBox="9.5 9.5 101 101"');
+studies["mark-bright"] = mark([strokes(range(14, (i) => line(110 - 100 * (i / 13) ** 1.8, 10, 110 - 100 * (i / 13) ** 1.8, 110)), C.ink, 1)]);
 studies["mark-soft"] = mark([strokes(range(14, (i, t) => trace(range(40, (j, s) => [10 + 100 * s, 28 + 64 * t + 18 * Math.sin(s * 3.4 - t * 2)]))), C.ink, 1)]);
-studies["mark-deep"] = mark([strokes(range(14, (i) => line(10, 100 - 84 * (i / 13) ** 1.8, 110, 100 - 84 * (i / 13) ** 1.8)), C.ink, 1)]);
+studies["mark-deep"] = mark([strokes(range(14, (i) => line(10, 110 - 100 * (i / 13) ** 1.8, 110, 110 - 100 * (i / 13) ** 1.8)), C.ink, 1)]);
 
 mkdirSync(OUT, { recursive: true });
 for (const [name, content] of Object.entries(studies)) writeFileSync(join(OUT, `${name}.svg`), content.replace(/ +\/>/g, "/>"));

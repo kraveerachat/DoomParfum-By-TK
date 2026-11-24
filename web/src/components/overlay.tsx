@@ -60,8 +60,14 @@ export function OverlayProvider({ entries, children }: { entries: readonly Entry
   }, []);
 
   useEffect(() => {
-    document.documentElement.toggleAttribute("data-overlay", active !== null);
-    if (active !== null) return;
+    const root = document.documentElement;
+    if (active !== null) {
+      if (!root.hasAttribute("data-overlay")) {
+        root.setAttribute("data-overlay", window.innerWidth > root.clientWidth ? "gutter" : "");
+      }
+      return;
+    }
+    root.removeAttribute("data-overlay");
     // The frame is interactive again before focus returns; no animation is awaited.
     if (trigger.current && restoreFocus.current) {
       const fallback = document.querySelector<HTMLElement>("header [data-focus-key='brand']");
@@ -95,7 +101,9 @@ export function OverlayProvider({ entries, children }: { entries: readonly Entry
 
   return (
     <Context value={value}>
-      <div inert={active !== null}>{children}</div>
+      <div inert={active !== null} className="flex min-h-dvh flex-col">
+        {children}
+      </div>
       <div className="scrim" aria-hidden="true" />
       <MenuDialog {...dialog("menu")} />
       <SearchDialog {...dialog("search")} entries={entries} />

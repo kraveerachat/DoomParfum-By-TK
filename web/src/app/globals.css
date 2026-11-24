@@ -101,9 +101,20 @@
   }
   html[data-overlay] {
     overflow: hidden;
-    scrollbar-gutter: stable;
-    /* The reserved scrollbar gutter matches the scrimmed page. */
     background: color-mix(in srgb, var(--color-ink) 50%, var(--color-paper));
+  }
+  /* Only a page that showed a scrollbar keeps its gutter, so locking never moves the page. */
+  html[data-overlay="gutter"] {
+    scrollbar-gutter: stable;
+  }
+  /* A stylesheet that arrives after the first style pass must not animate from browser defaults. */
+  html:not([data-ready]) *,
+  html:not([data-ready]) *::before,
+  html:not([data-ready]) *::after {
+    transition: none !important;
+  }
+  p {
+    text-wrap: pretty;
   }
   body {
     min-width: 0;
@@ -190,7 +201,6 @@
   line-height: 1.1;
   font-variation-settings: "opsz" 9;
   letter-spacing: -0.02em;
-  text-wrap: balance;
   overflow-wrap: anywhere;
   @media (min-width: 360px) {
     font-size: 2.75rem;
@@ -259,6 +269,80 @@
   line-height: 1.5;
   @variant w1024 {
     font-size: 0.9375rem;
+  }
+}
+
+/* Hero padding is 80px wherever the start of Featured still fits under it. On shorter screens it
+   tightens to an even 32 / 40px, which with the notice and caption rows reads as about 70px each. */
+.hero-spread {
+  padding-block: 40px;
+  @variant w1024 {
+    padding-block: 32px 40px;
+    @media (min-height: 1020px) {
+      padding-block: 80px;
+    }
+  }
+  /* The bleeding art is taller from here, so the full padding needs a taller screen. */
+  @variant w1600 {
+    @media (max-height: 1179px) {
+      padding-block: 32px 40px;
+    }
+  }
+}
+
+/* On a short desktop screen the 5:4 art gives up a little width, so the Featured heading is whole
+   in the first view instead of cut by the fold. */
+.hero-art {
+  @variant w1024 {
+    width: 100%;
+    max-width: max(35rem, calc((100svh - 308px) * 1.25));
+    justify-self: end;
+  }
+  @variant w1600 {
+    width: auto;
+    max-width: none;
+    justify-self: stretch;
+  }
+}
+
+/* A third Featured entry beside two columns becomes one horizontal spread instead of an orphan. */
+@media (min-width: 480px) {
+  @container page (min-width: 28.5rem) and (max-width: 62.499rem) {
+    .entry-spread {
+      container-type: inline-size;
+      --spread-gap: 1rem;
+      @variant w640 {
+        --spread-gap: 1.25rem;
+      }
+      @variant w768 {
+        --spread-gap: 1.5rem;
+      }
+    }
+    /* The height is the 4:5 visual in one column; a row that spans it would count the text twice. */
+    .entry-spread article {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: minmax(0, 1fr) auto auto;
+      column-gap: var(--spread-gap);
+      height: calc((100cqi - var(--spread-gap)) / 2 * 1.25);
+    }
+    .entry-spread article > a {
+      grid-area: 1 / 1 / -1 / -1;
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-template-rows: subgrid;
+    }
+    .entry-spread article > a > :first-child {
+      grid-area: 1 / 1 / -1 / 2;
+      min-height: 0;
+    }
+    .entry-spread article > a > :last-child {
+      grid-area: 1 / 2;
+      align-self: end;
+    }
+    .entry-spread article > p {
+      grid-column: 2;
+    }
   }
 }
 
@@ -354,6 +438,10 @@
     border-color: var(--color-ink);
     background: var(--color-surface-muted);
   }
+  &:active {
+    border-color: var(--color-ink);
+    background: var(--color-surface-muted);
+  }
 }
 
 @utility icon-button {
@@ -366,6 +454,9 @@
   border-radius: var(--radius-button);
   transition: background-color var(--motion-feedback) ease-out;
   @variant can-hover {
+    background: var(--color-surface-muted);
+  }
+  &:active {
     background: var(--color-surface-muted);
   }
 }
@@ -402,6 +493,15 @@
 .header-brand { grid-area: brand; }
 .header-nav { display: none; }
 .header-utils { grid-area: utils; }
+/* Reserves the current-page weight, so labels stay put from route to route. */
+.nav-label::after {
+  content: attr(data-label);
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  font-weight: 600;
+}
 .wordmark-name { font-size: 0.875rem; }
 @container header (max-width: 18.99rem) {
   .header-grid {
@@ -548,5 +648,9 @@ html[data-overlay] .scrim {
   .button-primary,
   .panel {
     border: 1px solid;
+  }
+  /* Transparent borders are repainted here, which would underline every label as current. */
+  a:not([aria-current]) > .nav-label {
+    border-color: Canvas;
   }
 }

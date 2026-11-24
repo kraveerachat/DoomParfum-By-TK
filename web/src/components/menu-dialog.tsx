@@ -29,9 +29,9 @@ export function MenuDialog({ open, onClose, onNavigate }: OverlayDialogProps) {
         }}
       >
         <DialogHeader>
-          <DialogTitle className="text-control font-medium">Navigation</DialogTitle>
+          <DialogTitle className="text-entry font-medium">Navigation</DialogTitle>
         </DialogHeader>
-        <nav aria-label="Menu" className="px-4 pt-6 pb-8">
+        <nav aria-label="Menu" className="px-4 pt-4 pb-8 md:px-6">
           <ul className="border-divider border-t">
             {NAV_LINKS.map(({ href, label }) => {
               const current = isCurrent(pathname, href);

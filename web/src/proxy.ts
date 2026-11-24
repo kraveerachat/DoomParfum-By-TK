@@ -42,9 +42,21 @@ export function proxy(request: NextRequest) {
   headers.set("x-nonce", nonce);
   headers.set("Content-Security-Policy", policy);
 
-  // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
-  const refused = pathname.startsWith("/_next/image") || !decodes(pathname);
-  const response = refused ? new NextResponse(null, { status: 404 }) : NextResponse.next({ request: { headers } });
+  const answer = () => {
+    // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
+    if (pathname.startsWith("/_next/image")) return new NextResponse(null, { status: 404 });
+    // An address that cannot be decoded is served the unavailable view by a path no route uses.
+    if (!decodes(pathname)) return NextResponse.rewrite(new URL("/unavailable", request.url), { request: { headers } });
+    // Redirected here, not by the framework, so that the response carries the headers below.
+    if (pathname !== "/" && pathname.endsWith("/")) {
+      const url = new URL(request.url);
+      // One leading slash only: "//host" would name another origin.
+      url.pathname = `/${pathname.replace(/^[/\\]+|\/+$/g, "")}`;
+      return NextResponse.redirect(url, 308);
+    }
+    return NextResponse.next({ request: { headers } });
+  };
+  const response = answer();
   response.headers.set("Content-Security-Policy", policy);
   response.headers.set("X-Robots-Tag", "noindex, nofollow");
   if (!OWNED_ASSET.test(pathname)) response.headers.set("Cache-Control", "private, no-store, max-age=0");

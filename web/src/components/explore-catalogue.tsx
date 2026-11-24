@@ -157,7 +157,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
         <h2 tabIndex={-1} data-list-heading className="sr-only">
           Mock studies
         </h2>
-        <CountStatus text={unsupplied ? "Relationship not supplied" : countLabel(results.length)} />
+        <CountStatus text={invalid ? "Filter unavailable" : unsupplied ? "Relationship not supplied" : countLabel(results.length)} />
         {(family || note) && (
           <ul className="flex flex-wrap gap-2" aria-label="Active filters">
             {family && (
@@ -181,7 +181,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
           </ul>
         )}
         {narrowed && !invalid && results.length > 0 && (
-          <button type="button" className="link-action ms-auto" onClick={clearAll}>
+          <button type="button" className="link-action type-control ms-auto" onClick={clearAll}>
             Clear all
           </button>
         )}

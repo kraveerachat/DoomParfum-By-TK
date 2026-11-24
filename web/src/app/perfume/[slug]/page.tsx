@@ -41,7 +41,10 @@ function NoteList({ field, empty }: { field: Field<readonly string[]>; empty: st
         const note = catalogue.notes.find((n) => n.id === id);
         if (!note) return null;
         return (
-          <li key={id} className="flex flex-wrap items-center gap-x-5">
+          <li
+            key={id}
+            className="flex flex-wrap items-center gap-x-5 w1024:grid w1024:grid-cols-[minmax(0,12rem)_minmax(0,1fr)] w1024:justify-items-start"
+          >
             <Link
               href={exploreHref({ family: null, note: id })}
               prefetch={false}
@@ -93,8 +96,8 @@ export default async function PerfumePage({ params }: Props) {
           </ol>
         </nav>
 
-        <div className="mt-4 grid grid-cols-1 gap-y-8 w1024:mt-6 w1024:grid-cols-12 w1024:gap-x-6">
-          <div className="w1024:col-span-5 w1024:col-start-8 w1024:self-end w1024:ps-6">
+        <div className="mt-4 grid grid-cols-1 gap-y-8 w1024:mt-6 w1024:grid-cols-12 w1024:grid-rows-[auto_1fr] w1024:gap-x-6">
+          <div className="w1024:col-span-5 w1024:col-start-8 w1024:ps-6">
             <p className="flex flex-wrap items-center gap-x-4 gap-y-2">
               <MockMarker /> <span className="text-text-secondary">{perfume.houseLabel}</span>
             </p>
@@ -109,7 +112,7 @@ export default async function PerfumePage({ params }: Props) {
               name={perfume.name}
               alt="Abstract study drawn for this fictional record"
               eager
-              className="aspect-[4/3] w768:aspect-[4/5]"
+              className="aspect-[4/3] w1024:aspect-[4/5]"
               caption="Synthetic visual study"
             />
           </div>
@@ -143,7 +146,7 @@ export default async function PerfumePage({ params }: Props) {
                 </span>
               )}
             </p>
-            <Link href="/notes" prefetch={false} data-focus-key="all-notes" className="link-action mt-4">
+            <Link href="/notes" prefetch={false} data-focus-key="all-notes" className="link-action type-control mt-4">
               Read about the notes
             </Link>
           </div>
@@ -229,7 +232,7 @@ export default async function PerfumePage({ params }: Props) {
           </dl>
         </details>
 
-        <Link href="/explore" prefetch={false} data-focus-key="back" className="link-action mt-8">
+        <Link href="/explore" prefetch={false} data-focus-key="back" className="link-action type-control mt-8">
           Back to the mock catalogue
         </Link>
       </div>

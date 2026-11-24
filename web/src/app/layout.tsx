@@ -27,7 +27,7 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
         <OverlayProvider entries={catalogue.entries}>
           <SkipLink />
           <SiteHeader />
-          <main id="main-content" tabIndex={-1} data-route-target className="page-container">
+          <main id="main-content" tabIndex={-1} data-route-target className="page-container grow">
             {children}
           </main>
           <SiteFooter />

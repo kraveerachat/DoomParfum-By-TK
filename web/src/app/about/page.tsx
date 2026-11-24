@@ -13,7 +13,10 @@ const anchors = [
   { id: "credits", label: "Local credits" },
 ] as const;
 
-const section = "border-divider border-t pt-8 mt-12 w768:mt-16 w1024:mt-24";
+const rule = "border-divider border-t pt-8 mt-12";
+// The short explanations sit closer together than the notebook and the credits.
+const brief = `${rule} w1024:mt-16`;
+const major = `${rule} w768:mt-16 w1024:mt-24`;
 
 export default function AboutPage() {
   return (
@@ -50,7 +53,7 @@ export default function AboutPage() {
           </nav>
 
           <div className="w1024:col-span-8 w1024:col-start-3 [&_p]:max-w-[60ch]">
-            <section id="purpose" tabIndex={-1} data-route-target className={section} aria-labelledby="purpose-h">
+            <section id="purpose" tabIndex={-1} data-route-target className="border-divider mt-2 pt-8 w1280:mt-16 w1280:border-t" aria-labelledby="purpose-h">
               <h2 id="purpose-h" className="type-section">
                 Purpose
               </h2>
@@ -61,11 +64,11 @@ export default function AboutPage() {
               </p>
             </section>
 
-            <section id="demonstrates" tabIndex={-1} data-route-target className={section} aria-labelledby="demo-h">
+            <section id="demonstrates" tabIndex={-1} data-route-target className={brief} aria-labelledby="demo-h">
               <h2 id="demo-h" className="type-section">
                 What this mock demonstrates
               </h2>
-              <ul className="mt-5 max-w-[60ch] [&>li]:border-divider [&>li]:border-b [&>li]:py-3">
+              <ul className="mt-5 max-w-[60ch] [&>li]:border-divider [&>li]:border-b [&>li]:py-3 [&>li:last-child]:border-b-0 [&>li:last-child]:pb-0">
                 <li>Browsing and filtering a small set of fictional studies.</li>
                 <li>Reading top, heart and base layers as labels, with general notes and accords kept apart.</li>
                 <li>Following a note to every study that lists it.</li>
@@ -73,7 +76,7 @@ export default function AboutPage() {
               </ul>
             </section>
 
-            <section id="scope" tabIndex={-1} data-route-target className={section} aria-labelledby="scope-h">
+            <section id="scope" tabIndex={-1} data-route-target className={brief} aria-labelledby="scope-h">
               <h2 id="scope-h" className="type-section">
                 What remains future
               </h2>
@@ -88,7 +91,7 @@ export default function AboutPage() {
               </p>
             </section>
 
-            <section id="journal" tabIndex={-1} data-route-target className={section} aria-labelledby="journal-h">
+            <section id="journal" tabIndex={-1} data-route-target className={major} aria-labelledby="journal-h">
               <h2 id="journal-h" className="type-section">
                 The scent notebook
               </h2>
@@ -102,7 +105,7 @@ export default function AboutPage() {
                   tabIndex={-1}
                   data-route-target
                   aria-labelledby={`${article.id}-h`}
-                  className="mt-12 scroll-mt-8"
+                  className="border-divider mt-10 max-w-[60ch] scroll-mt-8 border-t pt-8"
                 >
                   <h3 id={`${article.id}-h`} className="type-entry">
                     {article.title}
@@ -117,7 +120,7 @@ export default function AboutPage() {
               ))}
             </section>
 
-            <section id="credits" tabIndex={-1} data-route-target className={section} aria-labelledby="credits-h">
+            <section id="credits" tabIndex={-1} data-route-target className={major} aria-labelledby="credits-h">
               <h2 id="credits-h" className="type-section">
                 Local credits
               </h2>

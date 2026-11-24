@@ -10,6 +10,8 @@ const config: NextConfig = {
   turbopack: { root: import.meta.dirname },
   poweredByHeader: false,
   reactStrictMode: true,
+  // src/proxy.ts redirects trailing slashes with the no-store and noindex headers.
+  skipTrailingSlashRedirect: true,
   productionBrowserSourceMaps: false,
   images: { unoptimized: true },
   // Keep title and robots metadata in the initial <head> for every client.
