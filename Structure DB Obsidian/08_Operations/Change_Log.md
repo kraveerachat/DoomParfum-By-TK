@@ -836,3 +836,7 @@ DPT-PLAN-012 S1 closeout: exact reviewed planning source `4105a702a273d77a80c538
 ## 2026-11-24 — IMP-WEB-01 mock frontend and local Docker runtime
 
 Added the isolated `web/` application, tests and Docker files under merged DPT-PLAN-012, with records in [[IMP-WEB-01_Luxury_Frontend_Docker]]. No existing source, migration, receipt or plan was changed. Code `a5ddd6fe421870d2adeeac70f3e7150eee798890`; local only.
+
+## 2026-11-25 — IMP-WEB-01 S3 corrections
+
+`web/` only: write methods refused, no-script mobile navigation, stronger regression tests, header exceptions documented, NOTICE completed. No dependency, route, token, fixture or Docker file changed. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e`; local only. S2 (`9918a38`) is described in [[2026-11-24_IMP-WEB-01_S2_Report]].

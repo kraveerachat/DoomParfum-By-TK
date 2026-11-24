@@ -619,3 +619,7 @@ Source checkpoint `4105a702a273d77a80c538856034c76c56153264`; canonical task now
 ## 2026-11-24 — Luxury mock frontend implementation (IMP-WEB-01)
 
 Planning PR #35 (DPT-PLAN-012) is MERGED at `61932bef147816272a06cbe6eba9363940fa4baf`. [[IMP-WEB-01_Luxury_Frontend_Docker]] implements LF-01 to LF-04 locally on `feat/imp-web-01-luxury-frontend`, code checkpoint `a5ddd6fe421870d2adeeac70f3e7150eee798890`: ACCEPTANCE PENDING, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. 81 unit and 117 browser tests pass; A05 is PARTIAL and independent closure (LF-05) is PENDING. Mock-only, loopback Docker at `http://localhost:3000`, not deployed. PR8, U01/r14, database, matching and POST30 decisions are unchanged.
+
+## 2026-11-25 — IMP-WEB-01 S3 (LF-05 reconciliation)
+
+Supersedes the 2026-11-24 entry for current state: code `449178093ed7616570cf651f8b5e4f3cc2d3001e`, ACCEPTANCE PENDING, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. 85 unit and 189 browser tests pass; a fresh clone and an uncached image build pass. The LF-05 sub-agent review was CONDITIONAL on S2 and is reconciled; A05 manual checks and Owner decisions are open. PR8, U01/r14, database, matching and POST30 decisions are unchanged. [[2026-11-25_IMP-WEB-01_S3_Report]]

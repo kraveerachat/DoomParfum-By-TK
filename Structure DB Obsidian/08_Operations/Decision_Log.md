@@ -503,3 +503,7 @@ The Owner confirmed the attached luxury editorial direction in chat: ivory/ink, 
 ## IMP-WEB-01 decisions — 2026-11-24
 
 Owner-verified (chat, 2026-11-24): consolidate LF-01 to LF-04 into one implementation task with LF-05 as a separate gate; one Docker Desktop launch. PROPOSED, awaiting the Owner: the deviations numbered 1 to 7 in [[2026-11-24_IMP-WEB-01_S1_Report]] (route-loading behavior, hero padding, fixed optical size, dialog exit, accord descriptors and sort options, link size, house-label position).
+
+## IMP-WEB-01 S3 decisions — 2026-11-25
+
+Owner-verified (chat, 2026-11-25): one bounded stop and replacement of the `doomparfum-web` preview for A11, ending on the S3 image. PROPOSED and PENDING: deviations 1 to 7, the S2 interpretations, the S3 no-script row and method refusal, the response-header exceptions and A05 deferral, as listed in [[2026-11-25_IMP-WEB-01_S3_Report]].

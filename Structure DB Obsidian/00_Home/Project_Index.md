@@ -266,3 +266,5 @@ Historical runtime tests remain historical; current planning static/review/publi
 
 - [[IMP-WEB-01_Luxury_Frontend_Docker]] — canonical implementation task
 - [[2026-11-24_IMP-WEB-01_S1_Report]], [[2026-11-24_IMP-WEB-01_S1_Summary]]
+- [[2026-11-24_IMP-WEB-01_S2_Report]], [[2026-11-24_IMP-WEB-01_S2_Summary]]
+- [[2026-11-25_IMP-WEB-01_S3_Report]], [[2026-11-25_IMP-WEB-01_S3_Summary]]

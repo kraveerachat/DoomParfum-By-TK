@@ -54,3 +54,7 @@ Primary Impeccable skill v4.5.2; existing engine pin 0.1.14; `impeccable context
 ## 2026-11-24 — IMP-WEB-01 implementation tools
 
 Impeccable primary (context, detector, finish reviewer); `ui-craft-editorial` consulted; `ui-ux-pro-max:brand` requested but not used (out of scope by project rule); Taste Skill not used. No hook, MCP, global install or client setting was changed. New project-local dependencies are pinned in `web/package-lock.json`, installed with lifecycle scripts disabled. Task-created Docker resources: images `doomparfum-web:preview` and `doomparfum-web:dev`, container `doomparfum-web`, volumes `doomparfum-web-dev_dev-node-modules` and `doomparfum-web-dev_dev-next`. Rollback: `docker compose down` in `web/`, then remove those named images and volumes. Details: [[2026-11-24_IMP-WEB-01_S1_Report]].
+
+## 2026-11-25 — IMP-WEB-01 S3 tools
+
+Impeccable primary (hardening reference and detector); other requested design commands not used because the same instruction forbids a broad polish round; `ui-ux-pro-max:brand` out of scope. No hook, MCP, global install, client setting or dependency changed. Docker image tag `doomparfum-web:s2-rollback` (the previous preview) was added; temporary S3 resources were removed by name. Rollback of the preview: tag `s2-rollback` as `preview`, then `docker compose up --force-recreate --detach` without `--build` in `web/`.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_task
 status: acceptance-pending
 owner: human-owner
-updated: 2026-11-24
+updated: 2026-11-25
 requirements: [R01, R03, R04, R13, R14, R21]
 planning_pr: 35
 implementation_pr: null
@@ -17,7 +17,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION (mock-only UI + local Docker). Agent: Claude Code.
-- State: ACCEPTANCE PENDING (agent-side implementation and checks done; LF-05 and Owner review open). Sessions S1 and S2, 2026-11-24 Asia/Bangkok.
+- State: ACCEPTANCE PENDING (agent-side implementation, checks and LF-05 reconciliation done; A05 manual checks and Owner decisions open). Sessions S1 and S2, 2026-11-24; S3, 2026-11-25 Asia/Bangkok.
 - Branch: `feat/imp-web-01-luxury-frontend`; base/target `main`.
 - Starting/base SHA: `61932bef147816272a06cbe6eba9363940fa4baf` (PR #35 merge, freshly fetched, equals `origin/main`).
 - Approved plan: [[DPT-PLAN-012_Luxury_Frontend_Editorial]], Planning PR #35 MERGED 2026-11-23.
@@ -59,6 +59,7 @@ A01–A12 in [[Luxury_Frontend_Acceptance_and_Task_Map]]. Every result is record
 |---|---|---|---|---|---|
 | S1 | Implement CP1–CP4 | CLOSED | PARTIAL (A05 manual checks and independent closure open) | `a5ddd6fe421870d2adeeac70f3e7150eee798890` | [[2026-11-24_IMP-WEB-01_S1_Report]] |
 | S2 | Bounded UI/UX refinement and verification pass (Owner instruction 2026-11-24) | CLOSED | PARTIAL (A05, A11 in part, LF-05 open) | `9918a387b24b89905b0da82f10894d85051e58cd` | [[2026-11-24_IMP-WEB-01_S2_Report]] |
+| S3 | LF-05 corrections, reproducibility, publication readiness (Owner instruction 2026-11-25) | CLOSED | PARTIAL (A05 and Owner decisions open) | `449178093ed7616570cf651f8b5e4f3cc2d3001e` | [[2026-11-25_IMP-WEB-01_S3_Report]] |
 
 ### Session S1 — implement DPT-PLAN-012
 
@@ -100,15 +101,35 @@ State: CLOSED. Agent/role: Claude Code, implementation. Start `94820c289fe4d484b
 - Deviation 2 reduced, the stagger of 5 removed, 6 corrected for action links. 1, 3, 4, the rest of 5 and 7 stay open for the Owner.
 - Before/after sheets: `08_Operations/Test_Evidence/IMP-WEB-01/S2/`.
 
+### Session S3 — LF-05 reconciliation
+
+State: CLOSED. Agent/role: Claude Code, implementation. Start `b8383ecb76c4cd72e16129ea319f1f22938be550`, code checkpoint `449178093ed7616570cf651f8b5e4f3cc2d3001e`.
+
+- LF-05 on S2 (same-vendor sub-agent, read-only): CONDITIONAL, no P0 to P2. Review completed, findings reconciled in S3; no human or cross-vendor review. Report hash and limits are in the S3 report.
+- S3 review by a fresh sub-agent: CONDITIONAL at `32574e8`, PASS for the code at `4491780`. Not Owner acceptance.
+- The Owner approved one bounded stop and replacement of the preview for A11 in chat.
+- Deviations 1 to 7, the S2 interpretations, the S3 additions and the header exceptions stay PENDING for the Owner.
+
 ## Planned / Completed / Remaining
 
-Completed: CP1–CP4 and the S2 refinement. Remaining: LF-05 independent review of the final commit, A05 manual checks, Owner review, publication decision, Implementation PR, then the single final receipt.
+Completed: CP1–CP4, the S2 refinement, the LF-05 review and the S3 corrections. Remaining: A05 manual checks or explicit deferral, Owner decisions, publication authority, Implementation PR, then the single final receipt.
 
 ## Test / Evidence Ledger
 
-S2 results supersede S1 for the current code: 81 unit and 135 browser tests PASS; A11 re-run in part. The table below is the S1 record.
+Current code (S3, `4491780`):
 
 | Scope | Result |
+|---|---|
+| Unit, boundary, contrast, proxy (`npm test`) | PASS 85 / FAIL 0 |
+| Browser suite on the preview | Chrome PASS 189 / FAIL 0; Edge PASS 189 / FAIL 0 |
+| Fresh clone, empty npm cache, uncached image build | PASS |
+| A01–A04, A07–A12 | PASS within the limits in the S3 report |
+| A05 | PARTIAL: screen reader, real phone, Safari, Firefox NOT RUN |
+| A06 | PASS with recorded pre-proxy header exceptions |
+
+Evidence: [IMP-WEB-01_S3_Acceptance.json](../../08_Operations/Test_Evidence/IMP-WEB-01/S3/IMP-WEB-01_S3_Acceptance.json). S2 (`9918a38`): 81 unit, 135 browser. The table below is the historical S1 record.
+
+| S1 scope | S1 result |
 |---|---|
 | Unit, negative-control, boundary, contrast (`npm test`) | PASS 81 / FAIL 0 |
 | Browser acceptance against the Docker preview | PASS 117 / FAIL 0 / SKIPPED 0 |
@@ -128,6 +149,10 @@ Machine-readable evidence and screenshots: [IMP-WEB-01_Acceptance.json](../../08
 | [[2026-11-24_IMP-WEB-01_S1_Summary]] | S1 | `489d3e79b5574adf3518512fd1bb9355d1efe4bfc18096d63e7b725cf251b92f` | PUBLIC_SAFE |
 | [[2026-11-24_IMP-WEB-01_S2_Report]] | S2 | `4ca748a9750ddfd810a5241d26c75cbd1c1028cab203c4ef49792eee8a64663a` | PUBLIC_SAFE |
 | [[2026-11-24_IMP-WEB-01_S2_Summary]] | S2 | `48c5b6f524d5960eade3113c956b83979c50432dd042e8bcd425f97ea11664ce` | PUBLIC_SAFE |
+| [[2026-11-25_IMP-WEB-01_S3_Report]] | S3 | `0c5ca9764f659aa0a4b4f295c679153cea0fcf95945e68fabff3e4609f4e6315` | PUBLIC_SAFE |
+| [[2026-11-25_IMP-WEB-01_S3_Summary]] | S3 | `a453a4b89be70f1b1728ac0a01197d5bfaadcf46a6d39b2a06d4f800d3e5ee1b` | PUBLIC_SAFE |
+
+LF-05 and S3 review reports: SHA-256 `37852101f9ed8a0b9b4defab2c6d7fd6df0fd4aadc113e1282278a9fc6ade290` and `91c59dcc1e786d13977e00b913bcc54b6d2c1d99f8851497fee9a9eb06667f9c`; PRIVATE_EVIDENCE_NOT_PUBLISHED.
 
 Final receipt: NOT CREATED (acceptance pending).
 
@@ -137,8 +162,8 @@ Twelve recorded deviations and limitations are in the report, including the rout
 
 ## Latest Git Checkpoint / SHA
 
-Code: `9918a387b24b89905b0da82f10894d85051e58cd` (S2; S1 was `a5ddd6fe421870d2adeeac70f3e7150eee798890`). The documentation commit that contains this note follows it on the same branch. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. `AGENT_CREDENTIAL_REQUIRED`: no approved agent publishing identity was found, and the Owner's login was not used to publish.
+Code: `449178093ed7616570cf651f8b5e4f3cc2d3001e` (S3; S2 was `9918a387b24b89905b0da82f10894d85051e58cd`, S1 was `a5ddd6fe421870d2adeeac70f3e7150eee798890`). The documentation commit that contains this note follows it on the same branch. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. `AGENT_CREDENTIAL_REQUIRED`: no approved agent publishing identity was found, and the Owner's login was not used to publish.
 
 ## Handoff / Next Action
 
-Owner reviews `http://localhost:3000` (preview left running; stop with `docker compose down` in `web/`), decides the recorded deviations, commissions LF-05 on the final commit, and authorizes publication separately.
+Owner reviews `http://localhost:3000` (preview left running; stop with `docker compose down` in `web/`), decides the items in the S3 report, runs or defers the A05 manual checks, and authorizes publication separately.

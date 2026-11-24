@@ -398,4 +398,4 @@ New documentation-only Gate P task: [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. 
 
 | Task | Type | PR | Branch | Base / Plan dependency | State | HEAD | Next action |
 |---|---|---|---|---|---|---|---|
-| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | NOT CREATED | `feat/imp-web-01-luxury-frontend` | PR #35 / `61932be` | ACCEPTANCE PENDING | `a5ddd6f` (code) | Owner review, LF-05, publication decision |
+| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | NOT CREATED | `feat/imp-web-01-luxury-frontend` | PR #35 / `61932be` | ACCEPTANCE PENDING | `4491780` (code, S3) | Owner decisions, A05 manual checks or deferral, publication decision |
