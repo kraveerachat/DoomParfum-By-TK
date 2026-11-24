@@ -1,0 +1,967 @@
+{
+ "task": "IMP-WEB-01",
+ "session": "S2",
+ "start": "94820c289fe4d484b5b2209dbcc19fbb10f6ba4d",
+ "code_checkpoint": "9918a387b24b89905b0da82f10894d85051e58cd",
+ "browser_suite": {
+  "passed": 135,
+  "failed": 0,
+  "skipped": 0,
+  "browser": "Google Chrome stable channel via Playwright 1.65.1, headless, Windows host",
+  "tests": [
+   {
+    "file": "access.spec.ts",
+    "title": "skip link is first, visible when focused, and moves into main",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Search: opens by keyboard, traps focus, closes with Escape, restores focus",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Profile: opens by keyboard, traps focus, closes with Escape, restores focus",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Profile explains itself and contains no form",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Menu drawer: Close focused first, scrim closes, links navigate to the h1",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Back closes an open overlay",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "fragment links focus their section",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "every focusable control shows a visible focus indicator",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "rapid toggling leaves one correct final state",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /explore",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /perfume/paper-study-a",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /notes",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /about",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /perfume/stone-study-k",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /perfume/paper-study-l",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /explore?note=mock-note-009",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe /explore?family=x",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe dialog Search mock catalogue",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "axe dialog Profile unavailable in this mock",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "content survives blocked fonts",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "320x640 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "375x812 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "640x900 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "768x1024 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "1024x768 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "1280x900 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "1440x900 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "812x375 and 44px targets",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "200% text at 1280",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "200% text at 375",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "200% text at 320",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "400% zoom of 1280 (320 CSS px)",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "text spacing at 320",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "text spacing at 1280",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "drawer and search stay operable in a short landscape viewport",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "Thai headings use Thai metrics",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "navigation is centred at 1024",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "navigation is centred at 1280",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "navigation is centred at 1440",
+    "status": "passed"
+   },
+   {
+    "file": "access.spec.ts",
+    "title": "the narrow header replaces the primary row below 1024",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/ has one h1, its title and noindex",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/explore has one h1, its title and noindex",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/perfume/paper-study-a has one h1, its title and noindex",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/notes has one h1, its title and noindex",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/about has one h1, its title and noindex",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/perfume/nope is a real 404 with the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/perfume/Paper-Study-A is a real 404 with the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/perfume/paper-study-a/x is a real 404 with the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/login is a real 404 with the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "/journal is a real 404 with the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "invalid URL filters are explained, never reinterpreted",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "unsupported query keys are removed",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "every internal link resolves and no dead fragment exists",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "one activation reaches Explore, one more a fixture, one more a note's studies",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "every entry and every detail is visibly mock",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "Paper study A shows known, unknown, empty and unavailable as four different things",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "an unknown family and description are stated",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "a broken visual falls back without losing its title",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "Explore search and filters give exact ids and counts and keep focus",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "the query stops at 120 code points",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "the count is announced once after typing settles",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "Search dialog uses the same semantics",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "Back restores query, filters, scroll and the opened entry; reload resets the query",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "a fresh visit to Explore does not inherit an old query",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "layers, general notes and accords stay separate",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "note links reach exactly the stated number of studies",
+    "status": "passed"
+   },
+   {
+    "file": "content.spec.ts",
+    "title": "note search, family and empty reset",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/ headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/ RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/explore headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/explore RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/perfume/paper-study-a headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/perfume/paper-study-a RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/notes headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/notes RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/about headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/about RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/perfume/nope headers: nonce CSP, no-store, noindex",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/perfume/nope RSC response is no-store",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "a full session stays same-origin, writes no storage and registers no worker",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "immutable assets carry no fixture payload",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "the app exposes no extra endpoint and ignores writes",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/ initial JS and layout shift within budget",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/explore initial JS and layout shift within budget",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/perfume/paper-study-a initial JS and layout shift within budget",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/notes initial JS and layout shift within budget",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "/about initial JS and layout shift within budget",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "a slow transition states that it is opening and then clears",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "reduced motion removes panel and folio movement",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "with motion, folio layers settle once and end fully visible",
+    "status": "passed"
+   },
+   {
+    "file": "isolation.spec.ts",
+    "title": "without scripting the content is still complete",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX1 a late stylesheet does not animate the page in from browser defaults",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX2 opening a dialog does not move the page (/)",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX2 opening a dialog does not move the page (/perfume/nope)",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX3 the current-page weight does not move the navigation labels",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX4 a malformed address shows the unavailable view",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX5 /explore/ redirects locally with noindex and no-store",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX5 /about/?x=1 redirects locally with noindex and no-store",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX5 /perfume/paper-study-b/ redirects locally with noindex and no-store",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX5 a redirect never leaves this origin",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX6 an unavailable filter is not counted as zero studies",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX7 the footer closes a short page at 1440",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX7 the footer closes a short page at 375",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX8 the hero keeps Featured in the first view and takes its full padding when there is room",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX9 Featured is a level grid on desktop and leaves no orphan on two columns",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX10 note descriptions share one column on Detail",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX11 the Detail name starts level with its visual on desktop",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX13 forced colors still mark only the current page in the navigation",
+    "status": "passed"
+   },
+   {
+    "file": "refinement.spec.ts",
+    "title": "UX12 a malformed fragment does not break navigation",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR1 Back works after the skip link",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR1 Back works after an on-page About link, and same-page fragments take focus",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR2 Back works after query keys were stripped from /explore?utm=1",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR2 Back works after query keys were stripped from /about?x=1",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR3 a malformed slug is a 404 with the response headers",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR4 /studies/nope 404 carries the nonce policy",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR4 /studies/nope.svg 404 carries the nonce policy",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR4 /icon.svgx 404 carries the nonce policy",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR5/DR2 focus returns to \"Search mock catalogue\" when the click did not focus it",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR5/DR2 focus returns to \"Profile unavailable in this mock\" when the click did not focus it",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR6 Notes filters survive Back",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR6 an entry inside a disclosure regains focus without a false message",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR7 two Explore visits keep separate state",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR11 the pending state clears when a slow transition is abandoned",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR12 Clear all resets sort, and a fresh same-path visit resets the query",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "CR10 a render failure offers a Retry that recovers",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR1 dialogs stay inside the visible area at 375",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR1 dialogs stay inside the visible area at 320",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR1 dialogs stay inside the visible area at 1024",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "Menu traps Tab in both directions",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR4 an unsupplied note relationship is not reported as zero",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR5 an unavailable visual is not captioned as a visual study",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR7 every folio layer says it belongs to the mock and labels its drawing",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR8 Notes group letters are headings and groups are not landmarks",
+    "status": "passed"
+   },
+   {
+    "file": "regressions.spec.ts",
+    "title": "DR11 paired controls align at tablet width",
+    "status": "passed"
+   }
+  ]
+ },
+ "unit_suite": {
+  "passed": 81,
+  "failed": 0
+ },
+ "refinement_red": {
+  "commit": "94820c2 image for UX1-UX12; intermediate S2 image for UX13",
+  "failed_before": 16,
+  "guards_passing_before_and_after": 2
+ },
+ "route_metrics_js_and_cls": {
+  "/": "js=162.2KiB cls=0.0127",
+  "/explore": "js=163.9KiB cls=0.0008",
+  "/perfume/paper-study-a": "js=161.3KiB cls=0.0107",
+  "/notes": "js=162.7KiB cls=0.0047",
+  "/about": "js=160.0KiB cls=0.0235"
+ },
+ "geometry_before": {
+  "home_1440": {
+   "height": 4378,
+   "overflow": 0
+  },
+  "explore_1440": {
+   "height": 2516,
+   "overflow": 0
+  },
+  "detail_1440": {
+   "height": 2398,
+   "overflow": 0
+  },
+  "notes_1440": {
+   "height": 1795,
+   "overflow": 0
+  },
+  "about_1440": {
+   "height": 3068,
+   "overflow": 0
+  },
+  "notfound_1440": {
+   "height": 900,
+   "overflow": 0
+  },
+  "home_1024": {
+   "height": 3783,
+   "overflow": 0
+  },
+  "explore_1024": {
+   "height": 2950,
+   "overflow": 0
+  },
+  "detail_1024": {
+   "height": 2094,
+   "overflow": 0
+  },
+  "notes_1024": {
+   "height": 1821,
+   "overflow": 0
+  },
+  "about_1024": {
+   "height": 3338,
+   "overflow": 0
+  },
+  "notfound_1024": {
+   "height": 768,
+   "overflow": 0
+  },
+  "home_768": {
+   "height": 5131,
+   "overflow": 0
+  },
+  "explore_768": {
+   "height": 4277,
+   "overflow": 0
+  },
+  "detail_768": {
+   "height": 2462,
+   "overflow": 0
+  },
+  "notes_768": {
+   "height": 1872,
+   "overflow": 0
+  },
+  "about_768": {
+   "height": 3049,
+   "overflow": 0
+  },
+  "notfound_768": {
+   "height": 1024,
+   "overflow": 0
+  },
+  "home_375": {
+   "height": 5655,
+   "overflow": 0
+  },
+  "explore_375": {
+   "height": 7694,
+   "overflow": 0
+  },
+  "detail_375": {
+   "height": 2205,
+   "overflow": 0
+  },
+  "notes_375": {
+   "height": 3024,
+   "overflow": 0
+  },
+  "about_375": {
+   "height": 3717,
+   "overflow": 0
+  },
+  "notfound_375": {
+   "height": 812,
+   "overflow": 0
+  },
+  "home_320": {
+   "height": 5545,
+   "overflow": 0
+  },
+  "explore_320": {
+   "height": 6947,
+   "overflow": 0
+  },
+  "detail_320": {
+   "height": 2253,
+   "overflow": 0
+  },
+  "notes_320": {
+   "height": 3045,
+   "overflow": 0
+  },
+  "about_320": {
+   "height": 4071,
+   "overflow": 0
+  },
+  "notfound_320": {
+   "height": 663,
+   "overflow": 0
+  }
+ },
+ "geometry_after": {
+  "home_1440": {
+   "height": 4333,
+   "overflow": 0
+  },
+  "explore_1440": {
+   "height": 2560,
+   "overflow": 0
+  },
+  "detail_1440": {
+   "height": 2442,
+   "overflow": 0
+  },
+  "notes_1440": {
+   "height": 1901,
+   "overflow": 0
+  },
+  "about_1440": {
+   "height": 3053,
+   "overflow": 0
+  },
+  "notfound_1440": {
+   "height": 900,
+   "overflow": 0
+  },
+  "home_1024": {
+   "height": 3706,
+   "overflow": 0
+  },
+  "explore_1024": {
+   "height": 2994,
+   "overflow": 0
+  },
+  "detail_1024": {
+   "height": 2138,
+   "overflow": 0
+  },
+  "notes_1024": {
+   "height": 1927,
+   "overflow": 0
+  },
+  "about_1024": {
+   "height": 3266,
+   "overflow": 0
+  },
+  "notfound_1024": {
+   "height": 768,
+   "overflow": 0
+  },
+  "home_768": {
+   "height": 5074,
+   "overflow": 0
+  },
+  "explore_768": {
+   "height": 4321,
+   "overflow": 0
+  },
+  "detail_768": {
+   "height": 2147,
+   "overflow": 0
+  },
+  "notes_768": {
+   "height": 1916,
+   "overflow": 0
+  },
+  "about_768": {
+   "height": 3041,
+   "overflow": 0
+  },
+  "notfound_768": {
+   "height": 1024,
+   "overflow": 0
+  },
+  "home_375": {
+   "height": 5698,
+   "overflow": 0
+  },
+  "explore_375": {
+   "height": 7737,
+   "overflow": 0
+  },
+  "detail_375": {
+   "height": 2248,
+   "overflow": 0
+  },
+  "notes_375": {
+   "height": 3066,
+   "overflow": 0
+  },
+  "about_375": {
+   "height": 3755,
+   "overflow": 0
+  },
+  "notfound_375": {
+   "height": 812,
+   "overflow": 0
+  },
+  "home_320": {
+   "height": 5542,
+   "overflow": 0
+  },
+  "explore_320": {
+   "height": 6968,
+   "overflow": 0
+  },
+  "detail_320": {
+   "height": 2274,
+   "overflow": 0
+  },
+  "notes_320": {
+   "height": 3066,
+   "overflow": 0
+  },
+  "about_320": {
+   "height": 4088,
+   "overflow": 0
+  },
+  "notfound_320": {
+   "height": 684,
+   "overflow": 0
+  }
+ },
+ "console_errors_excluding_expected_404": {
+  "console_1440": [],
+  "console_1024": [],
+  "console_768": [],
+  "console_375": [],
+  "console_320": []
+ },
+ "display_hairlines_1x": "measure over h1 ink runs at 1440, 1024, 768, 375, 320: 5th percentile 3.01:1 or more; 1 to 5 percent of runs below 3:1",
+ "preview_image": "sha256:1c60def43c74af4657d419f6c927653fca9e7b56e2f7ba44485b3cc293309c50",
+ "screenshots_sha256": {
+  "S2_home_full_1440_before_left_after_right.jpg": "3cea055cf9dd3e951f4a3a0c5e7d682e214a3d382c19ceb72b6cd0112fc6c1f3",
+  "S2_routes_1024_before_over_after.jpg": "8361a2b74358986b5b3d7e87e3da1a72dfa4d791f581cc75d25b13a7a95a5d3d",
+  "S2_routes_1440_before_over_after.jpg": "bf30adadc9f64267d684ee12add968b6c6f48b447edfce12a1888882e370d708",
+  "S2_routes_320_before_over_after.jpg": "7efb54799e194700e07ba9d5ab65b8849573b663bb3f5eae9267aacd73a88a29",
+  "S2_routes_375_before_over_after.jpg": "3d1b055d7cd83b9dfb91b738a57ee784084221717f745d0475efdfcb1a8c4960",
+  "S2_routes_768_before_over_after.jpg": "6edbc8ac1989fb035b970f2aad7e1ff1a5f4edec537086b1551d7945ef28c86f",
+  "S2_states_before_over_after.jpg": "d8afe0264eb75d70d22a148b9d03186731ce4cd49b9631cd40cfef453d71c945"
+ }
+}

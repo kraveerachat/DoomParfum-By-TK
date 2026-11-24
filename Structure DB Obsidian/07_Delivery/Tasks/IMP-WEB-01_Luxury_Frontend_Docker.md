@@ -17,7 +17,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION (mock-only UI + local Docker). Agent: Claude Code.
-- State: ACCEPTANCE PENDING (agent-side implementation and checks done; LF-05 and Owner review open). Session S1, 2026-11-24 Asia/Bangkok.
+- State: ACCEPTANCE PENDING (agent-side implementation and checks done; LF-05 and Owner review open). Sessions S1 and S2, 2026-11-24 Asia/Bangkok.
 - Branch: `feat/imp-web-01-luxury-frontend`; base/target `main`.
 - Starting/base SHA: `61932bef147816272a06cbe6eba9363940fa4baf` (PR #35 merge, freshly fetched, equals `origin/main`).
 - Approved plan: [[DPT-PLAN-012_Luxury_Frontend_Editorial]], Planning PR #35 MERGED 2026-11-23.
@@ -58,6 +58,7 @@ A01–A12 in [[Luxury_Frontend_Acceptance_and_Task_Map]]. Every result is record
 | Session | Purpose | State | Result | Checkpoint SHA | Evidence |
 |---|---|---|---|---|---|
 | S1 | Implement CP1–CP4 | CLOSED | PARTIAL (A05 manual checks and independent closure open) | `a5ddd6fe421870d2adeeac70f3e7150eee798890` | [[2026-11-24_IMP-WEB-01_S1_Report]] |
+| S2 | Bounded UI/UX refinement and verification pass (Owner instruction 2026-11-24) | CLOSED | PARTIAL (A05, A11 in part, LF-05 open) | `9918a387b24b89905b0da82f10894d85051e58cd` | [[2026-11-24_IMP-WEB-01_S2_Report]] |
 
 ### Session S1 — implement DPT-PLAN-012
 
@@ -90,11 +91,22 @@ OSV batch query 2026-11-24 returned no advisories for the queried direct version
 - Runtime findings fixed: image optimizer endpoint refused in the proxy, server source maps and package managers removed from the image.
 - Two read-only reviews of `f04d912` (no BLOCKER). Findings were turned into 25 browser regressions: 22 RED before, all GREEN after.
 
+### Session S2 — bounded UI/UX refinement
+
+State: CLOSED. Agent/role: Claude Code, implementation. Start `94820c289fe4d484b5b2209dbcc19fbb10f6ba4d`, code checkpoint `9918a387b24b89905b0da82f10894d85051e58cd`. Only `web/` and this task's records changed; do-not-touch surfaces as in S1.
+
+- Docker Desktop was stopped; the Owner authorized one launch in chat. The four protected containers were Exited before and after.
+- Ten groups of rendered problems corrected; 18 browser regressions added, 16 of them RED first.
+- Deviation 2 reduced, the stagger of 5 removed, 6 corrected for action links. 1, 3, 4, the rest of 5 and 7 stay open for the Owner.
+- Before/after sheets: `08_Operations/Test_Evidence/IMP-WEB-01/S2/`.
+
 ## Planned / Completed / Remaining
 
-Completed: CP1–CP4. Remaining: LF-05 independent review of the final commit, A05 manual checks, Owner review, publication decision, Implementation PR, then the single final receipt.
+Completed: CP1–CP4 and the S2 refinement. Remaining: LF-05 independent review of the final commit, A05 manual checks, Owner review, publication decision, Implementation PR, then the single final receipt.
 
 ## Test / Evidence Ledger
+
+S2 results supersede S1 for the current code: 81 unit and 135 browser tests PASS; A11 re-run in part. The table below is the S1 record.
 
 | Scope | Result |
 |---|---|
@@ -114,6 +126,8 @@ Machine-readable evidence and screenshots: [IMP-WEB-01_Acceptance.json](../../08
 |---|---|---|---|
 | [[2026-11-24_IMP-WEB-01_S1_Report]] | S1 | `a93e579f8057f696763eee7f30159b9217855f2bf1ff52460141e7ce3eaafaeb` | PUBLIC_SAFE |
 | [[2026-11-24_IMP-WEB-01_S1_Summary]] | S1 | `489d3e79b5574adf3518512fd1bb9355d1efe4bfc18096d63e7b725cf251b92f` | PUBLIC_SAFE |
+| [[2026-11-24_IMP-WEB-01_S2_Report]] | S2 | `4ca748a9750ddfd810a5241d26c75cbd1c1028cab203c4ef49792eee8a64663a` | PUBLIC_SAFE |
+| [[2026-11-24_IMP-WEB-01_S2_Summary]] | S2 | `48c5b6f524d5960eade3113c956b83979c50432dd042e8bcd425f97ea11664ce` | PUBLIC_SAFE |
 
 Final receipt: NOT CREATED (acceptance pending).
 
@@ -123,7 +137,7 @@ Twelve recorded deviations and limitations are in the report, including the rout
 
 ## Latest Git Checkpoint / SHA
 
-Code: `a5ddd6fe421870d2adeeac70f3e7150eee798890`. The documentation commit that contains this note follows it on the same branch. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. `AGENT_CREDENTIAL_REQUIRED`: no approved agent publishing identity was found, and the Owner's login was not used to publish.
+Code: `9918a387b24b89905b0da82f10894d85051e58cd` (S2; S1 was `a5ddd6fe421870d2adeeac70f3e7150eee798890`). The documentation commit that contains this note follows it on the same branch. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. `AGENT_CREDENTIAL_REQUIRED`: no approved agent publishing identity was found, and the Owner's login was not used to publish.
 
 ## Handoff / Next Action
 
