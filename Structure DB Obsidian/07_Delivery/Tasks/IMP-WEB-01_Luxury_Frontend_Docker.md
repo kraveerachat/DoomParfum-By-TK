@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_task
 status: acceptance-pending
 owner: human-owner
-updated: 2026-11-25
+updated: 2026-11-26
 requirements: [R01, R03, R04, R13, R14, R21]
 planning_pr: 35
 implementation_pr: 36
@@ -17,7 +17,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock-only. Current recovery/records coordinator: Codex (S4); implementer: Claude Code (S1–S3).
-- State: ACCEPTANCE PENDING for Human visual/final local-mock review. Decisions1–10 accepted in PR36 scope;11 explicitly defers unavailable A05manual checks. A05 PARTIAL; A10 second-machine LAN NOT RUN.
+- State: AGENT-SIDE COMPLETE, HUMAN REVIEW AND MERGE PENDING (S5, 2026-11-26). V1 visual baseline accepted by the Owner as the foundation for later work. Decisions 1–10 accepted in PR36 scope; 11 explicitly defers unavailable A05 manual checks. A05 PARTIAL; A10 second-machine LAN NOT RUN.
 - Branch: `feat/imp-web-01-luxury-frontend`; base/target `main`.
 - Starting/base SHA: `61932bef147816272a06cbe6eba9363940fa4baf` (PR #35 merge, freshly fetched, equals `origin/main`).
 - Approved plan: [[DPT-PLAN-012_Luxury_Frontend_Editorial]], Planning PR #35 MERGED 2026-11-23.
@@ -61,6 +61,7 @@ A01–A12 in [[Luxury_Frontend_Acceptance_and_Task_Map]]. Every result is record
 | S2 | Bounded UI/UX refinement and verification pass (Owner instruction 2026-11-24) | CLOSED | PARTIAL (A05, A11 in part, LF-05 open) | `9918a387b24b89905b0da82f10894d85051e58cd` | [[2026-11-24_IMP-WEB-01_S2_Report]] |
 | S3 | LF-05 corrections, reproducibility, publication readiness (Owner instruction 2026-11-25) | CLOSED | PARTIAL (A05 and Owner decisions open) | `449178093ed7616570cf651f8b5e4f3cc2d3001e` | [[2026-11-25_IMP-WEB-01_S3_Report]] |
 | S4 | Existing preview recovery and PR36 records reconciliation | CHECKPOINT | ACCEPTANCE PENDING; A05 PARTIAL | containing records-only commit; exact SHA in PR/final delivery | [[2026-11-25_IMP-WEB-01_S4_Report]] |
+| S5 | Gate A closeout of Frontend V1 and final receipt (Owner instruction 2026-11-26) | CLOSED | PASS, agent side; A05 PARTIAL (deferred) | code unchanged `449178093ed7616570cf651f8b5e4f3cc2d3001e`; records commit follows `f17040a` | [[2026-11-26_IMP-WEB-01_S5_Report]] |
 
 ### Session S1 — implement DPT-PLAN-012
 
@@ -154,10 +155,12 @@ Machine-readable evidence and screenshots: [IMP-WEB-01_Acceptance.json](../../08
 | [[2026-11-25_IMP-WEB-01_S3_Summary]] | S3 | `a453a4b89be70f1b1728ac0a01197d5bfaadcf46a6d39b2a06d4f800d3e5ee1b` | PUBLIC_SAFE |
 | [[2026-11-25_IMP-WEB-01_S4_Report]] | S4 | `5bfbc6fa5244b3904670ad54c088e99d2f97c5c7ff3773877130e14b04688256` | PUBLIC_SAFE |
 | [[2026-11-25_IMP-WEB-01_S4_Summary]] | S4 | `088edeeca13df3e0ae3e12601490be739a7c214269919a2eff8b8bdb55cb789c` | PUBLIC_SAFE |
+| [[2026-11-26_IMP-WEB-01_S5_Report]] | S5 | `eeb2fb1dcc21b01b8f4d8cadc3c742e34f8b62633810baf21c77c91dc84b94c3` | PUBLIC_SAFE |
+| [[2026-11-26_IMP-WEB-01_S5_Summary]] | S5 | `98d4144d7698052cbfc5e5965b6023fb3f2b8a6d6ec5224e9903aaf496daae8a` | PUBLIC_SAFE |
 
 LF-05 and S3 review reports: SHA-256 `37852101f9ed8a0b9b4defab2c6d7fd6df0fd4aadc113e1282278a9fc6ade290` and `91c59dcc1e786d13977e00b913bcc54b6d2c1d99f8851497fee9a9eb06667f9c`; PRIVATE_EVIDENCE_NOT_PUBLISHED.
 
-Final receipt: NOT CREATED (acceptance pending).
+Final receipt: [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]] (S5; supersedes the earlier "not created" statements).
 
 ## Issues / Risks / Known Limitations
 
@@ -208,3 +211,16 @@ Environmental failures retained: sandbox pipe denial/timeouts/start-status incon
 ### Final S4 verification ledger
 
 PASS:97tracked web files byte-equal to reviewed4491780,0mismatches; tree2cf8c4f5 unchanged. Scoped records checks:11allowlisted paths,10Markdown,4relative links,684wikilinks,0errors/0sensitive candidates; pre-existing Tool_Usage_Log missing-owner warning retained. Git diff --check PASS after correcting4new trailing spaces. JSON-wikilink checker inventory corrected, no historical-link edits.146old protected paths unchanged. Full historical suites and A05manual/A10remoteLAN NOT RUN. Actual new records SHA/publication exhaustion verified in PR/final delivery; no final receipt.
+
+## Session S5 — Gate A closeout (2026-11-26)
+
+State: CLOSED. Agent/role: Claude Code, verification and records. Intake class A. Start `f17040a81e00c2f97cd8616c0fc84a0e5aa85952` (equal to the remote), main `61932bef147816272a06cbe6eba9363940fa4baf`. Production mutation: NO.
+
+- Scope: verify the unchanged V1 candidate, rerun the regression suites, reconcile records, create the one final receipt. Do not touch `web/`, database, matching, PR #8, U01/r14, other worktrees or unrelated Docker resources.
+- Results: web tree `2cf8c4f5b384605d0239301e5888318923f6d627` identical to the reviewed code; 85 unit, 189 Chrome and 189 Edge tests pass; six smoke responses as expected. Checks not rerun or not run are listed in the report.
+- Process deviation: a stray `busybox` image pull, cleaned up; recorded in the report.
+- Decisions: Owner-verified, V1 visual baseline accepted as the foundation for later work, and the Gate A, B, C order. Final acceptance is the Owner's merge, PENDING.
+- V1.1 is out of scope here (class C: a docs-only Planning Amendment after the V1 merge). Its named proposal file was NOT FOUND.
+- Publication: `LOCAL_ONLY` / `NOT_PUSHED` at commit time; no authority for a push or PR change in this session. `AGENT_CREDENTIAL_REQUIRED` stays open.
+
+Next: Owner authorizes one push, the PR description update and Ready for Review; Owner reviews and merges.

@@ -276,3 +276,7 @@ Historical runtime tests remain historical; current planning static/review/publi
 [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
 
 New S4 records supersede historical publication/decision status without changing old reports/evidence. No new task or final receipt.
+
+## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout
+
+[[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Summary]].

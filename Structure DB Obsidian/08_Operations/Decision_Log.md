@@ -527,3 +527,7 @@ Verified Owner decisions from the actual PR36 body at published cda91ff, plus cu
 | 11 | Unavailable A05 manual checks | EXPLICITLY DEFERRED for this stage; A05 stays PARTIAL |
 
 Scope: current loopback synthetic mock only. No full WCAG/final acceptance/Production/public exposure/real-data rights. The initial publication exception was used/exhausted. Current new exception authorizes one records-only commit/normal push plus corresponding PR36 description update, using existing Owner authentication only because no approved agent identity is available; no continuing authority after completion. No final receipt; no agent merge. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 and Frontend V1.1 gates
+
+Owner-verified (chat, 2026-11-26): the V1 visual baseline is accepted as the foundation for future improvements; V1 is closed on PR #36 (Gate A) before a docs-only Planning Amendment (Gate B) and the V1.1 implementation (Gate C); only the Owner merges. PENDING: Owner final acceptance by merge, publication of the S5 checkpoint, and every V1.1 choice, including the Thai display font. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

@@ -4,13 +4,17 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-25
+updated: 2026-11-26
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout (Gate A)
+
+Supersedes the S4 entry below for current state. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e` is unchanged; 85 unit, 189 Chrome and 189 Edge tests pass on the running preview. The Owner accepts the V1 visual baseline as the foundation for later work. A05 stays PARTIAL with the Owner's deferral. The final receipt exists; [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) was OPEN/DRAFT at `f17040a81e00c2f97cd8616c0fc84a0e5aa85952` and the Owner's review and merge are PENDING. Frontend V1.1 (bilingual UI, sticky navigation, typography) is NOT STARTED: it needs the V1 merge and then a merged Planning Amendment. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
 
 ## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
 

@@ -62,3 +62,7 @@ Impeccable primary (hardening reference and detector); other requested design co
 ## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
 
 Used installed Caveman/ContextMode, Git/gh/Python/PowerShell, Docker Desktop supported start/restart and inspect/start frontend, CUA in-app browser availability. No setup/install/global configuration change. Sandbox pipe denial and engine probe timeouts led to supported bounded Desktop restart; no reset/network change/unrelated resource action. Existing image verified; no rebuild. A header-case checker error was corrected, not an application change. CLI/metadata/source checks and publication are bounded to current Owner instruction. Native Windows UI unnecessary. Existing Tool_Usage_Log frontmatter missing-owner finding is preserved as pre-existing. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 tools
+
+Git, gh (read-only), Docker CLI, Node, Playwright with installed Chrome and Edge, curl. Design tools available and not used. No install, hook, MCP, client setting or dependency changed. An unintended `busybox:latest` pull was removed by name; container, volume and `doomparfum-web` image inventories are unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

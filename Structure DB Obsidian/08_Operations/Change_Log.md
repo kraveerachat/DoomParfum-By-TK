@@ -844,3 +844,7 @@ Added the isolated `web/` application, tests and Docker files under merged DPT-P
 ## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
 
 Records-only: canonical task, Project_Status/Index, Backlog, Decision/Change/Agent_Run/Tool_Usage logs; additive S4 public-safe report/summary/recovery JSON. Reconciles actual PR36 and decisions1–11; preserves committed S1–S3 reports/evidence/hashes and complete web tree. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. No application/DB/migration/receipt/Production changes. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 closeout records
+
+Records only: task note, status, index, backlog and logs updated; S5 report, summary, evidence and the final receipt added. Earlier reports, evidence and receipts unchanged; web tree `2cf8c4f5b384605d0239301e5888318923f6d627` unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
