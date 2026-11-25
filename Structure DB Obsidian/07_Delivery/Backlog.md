@@ -393,3 +393,17 @@ The 2026-11-10 P1 workstream table above that lists IMP-P1-04 as NOT STARTED is 
 ## DPT-PLAN-012 — luxury editorial mock frontend proposal (2026-11-23)
 
 New documentation-only Gate P task: [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. [[Luxury_Frontend_Acceptance_and_Task_Map]] proposes LF-01…LF-05 work units without allocating global implementation task IDs. Next.js/TypeScript/Tailwind/selective primitives and Docker-first runtime are proposed for an isolated mock-only `web/` directory. This does not select the real-data application stack, retire TSK-101 or answer POST30-ODP-1. Implementation waits for Owner merge and bounded execution authority. PR #8 remains deferred; U01 remains independent and gated.
+
+## IMP-WEB-01 — luxury mock frontend implementation (2026-11-24)
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | HEAD | Next action |
+|---|---|---|---|---|---|---|---|
+| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | [#36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36), OPEN/DRAFT | feat/imp-web-01-luxury-frontend | PR35 /61932be | AGENT-SIDE COMPLETE, HUMAN REVIEW PENDING | `4491780` (code); S5 records and receipt | Owner publication authorization, review and merge; A05 PARTIAL (deferred); A10 LAN NOT RUN |
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Existing S3 image43be51f1/container69d92c01 restored healthy on127.0.0.1:3000 by supported Desktop restart then docker start; no rebuild/source change. Five route types200, unknown404, browser Home rendered. Four protected containers remain stopped;32volume metadata/S2rollback unchanged across frontend startup. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. No new implementation scope, task/PR, merge or final receipt. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — Frontend V1.1 (unallocated)
+
+Proposed by the Owner after V1: design upgrade, English and Thai UI, sticky header. NOT STARTED. Needs the V1 merge, then a docs-only Planning Amendment (DEVELOPMENT_WORKFLOW §3.4) merged by the Owner. The design proposal v2 file must be supplied first. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

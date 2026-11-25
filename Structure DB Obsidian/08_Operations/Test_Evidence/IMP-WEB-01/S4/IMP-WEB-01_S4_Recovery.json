@@ -1,0 +1,159 @@
+{
+  "task": "IMP-WEB-01",
+  "session": "S4",
+  "classification": "PUBLIC_SAFE",
+  "date": "2026-11-25",
+  "published_start": "cda91ff7ba00a44d5b8be53a2dbff68553c6736c",
+  "main": "61932bef147816272a06cbe6eba9363940fa4baf",
+  "reviewed_code": "449178093ed7616570cf651f8b5e4f3cc2d3001e",
+  "web_tree": "2cf8c4f5b384605d0239301e5888318923f6d627",
+  "docker": {
+    "engine_version": "28.3.2",
+    "recovery": "start --detach reported already running while status stopped/engine probes timed out; supported desktop restart --timeout60 succeeded",
+    "container": {
+      "id": "69d92c019079784d63dd2fd72535a49b19b8d5deeac80766b146ff527a81cd6b",
+      "image": "sha256:43be51f1cf209ac0a9c4f25960b91e153826d0b4db1c00f688466a6bf30598a6",
+      "health": "healthy",
+      "running": true,
+      "binding": {
+        "3000/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "3000"
+          }
+        ]
+      },
+      "read_only": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges:true"
+      ],
+      "user": "node",
+      "mounts": []
+    },
+    "rebuilt": false,
+    "recreated": false,
+    "protected_resources": {
+      "stopped_count": 4,
+      "metadata_sha256": "22b04869163a45f975ab022d80e8083c64b7089d80818d98e7e41ebb0e846b7d",
+      "before_after_equal": true,
+      "volume_count": 32,
+      "volume_metadata_sha256": "66684538904bc5917c2b8fac7f1561fbb7aa8450c6900b67ae8fb81c6422741f",
+      "volumes_before_after_equal": true,
+      "s2_rollback_image": "sha256:1c60def43c74af4657d419f6c927653fca9e7b56e2f7ba44485b3cc293309c50",
+      "rollback_unchanged": true,
+      "baseline_limit": "First engine-readable baseline was after Desktop recovery and before frontend start. Protected start/finish timestamps remained historical; no database contents read."
+    }
+  },
+  "routes": [
+    {
+      "path": "/",
+      "status": 200,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    },
+    {
+      "path": "/explore",
+      "status": 200,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    },
+    {
+      "path": "/perfume/paper-study-b",
+      "status": 200,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    },
+    {
+      "path": "/notes",
+      "status": 200,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    },
+    {
+      "path": "/about",
+      "status": 200,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    },
+    {
+      "path": "/perfume/imp-web-01-unknown-recovery",
+      "status": 404,
+      "html": true,
+      "headers": {
+        "no_store": true,
+        "noindex": true,
+        "nosniff": true,
+        "csp_present": true
+      }
+    }
+  ],
+  "browser": {
+    "surface": "ChatGPT in-app browser",
+    "url": "http://127.0.0.1:3000/",
+    "observed": "Home title, synthetic disclaimer, catalogue link and rendered content; screenshot observed; tab retained",
+    "scope": "availability only; not manual accessibility or final acceptance"
+  },
+  "acceptance": {
+    "A05": "PARTIAL; decision11 expressly defers unavailable manual checks",
+    "A10_second_machine_LAN": "NOT RUN",
+    "final_owner_acceptance": "PENDING",
+    "receipt": "NOT CREATED"
+  },
+  "historical_suites": "NOT RERUN; unit85/browser189 each are S3 historical evidence, not recovery results",
+  "publication": "One records-only normal push plus corresponding PR36 description update authorized; no continuing authority after completion",
+  "verification": {
+    "web_tracked_files_byte_compared": 97,
+    "web_mismatches": 0,
+    "reviewed_published_working_tree_equal": true,
+    "records_only_paths": [
+      "Structure DB Obsidian/00_Home/Project_Index.md",
+      "Structure DB Obsidian/00_Home/Project_Status.md",
+      "Structure DB Obsidian/07_Delivery/Backlog.md",
+      "Structure DB Obsidian/07_Delivery/Tasks/IMP-WEB-01_Luxury_Frontend_Docker.md",
+      "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+      "Structure DB Obsidian/08_Operations/Change_Log.md",
+      "Structure DB Obsidian/08_Operations/Decision_Log.md",
+      "Structure DB Obsidian/08_Operations/Reports/IMP-WEB-01/2026-11-25_IMP-WEB-01_S4_Report.md",
+      "Structure DB Obsidian/08_Operations/Summaries/IMP-WEB-01/2026-11-25_IMP-WEB-01_S4_Summary.md",
+      "Structure DB Obsidian/08_Operations/Test_Evidence/IMP-WEB-01/S4/IMP-WEB-01_S4_Recovery.json",
+      "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md"
+    ],
+    "markdown_files": 10,
+    "local_links": 4,
+    "wiki_links": 684,
+    "errors": [],
+    "preexisting_warning": "Tool_Usage_Log.md missing owner; not introduced or repaired",
+    "sensitive_candidates": 0,
+    "diff_check_exit": 0,
+    "old_protected_paths_unchanged": 146,
+    "limits": "Scoped checks, not stock validator or full security/runtime suite"
+  }
+}

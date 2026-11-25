@@ -1,0 +1,18 @@
+# Allowlist: nothing enters the build context unless named here.
+*
+!package.json
+!package-lock.json
+!.npmrc
+!tsconfig.json
+!next.config.ts
+!postcss.config.mjs
+!eslint.config.mjs
+!NOTICE.md
+!src
+!public
+!scripts
+!tests
+**/.env*
+**/node_modules
+**/.next
+**/*.log

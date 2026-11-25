@@ -1,0 +1,26 @@
+# Production-style local preview. Loopback only. Run from web/:
+#   docker compose up --build --force-recreate --detach
+#   docker compose down
+# Mutually exclusive with compose.dev.yaml: both use the same container name and host port.
+name: doomparfum-web-preview
+
+services:
+  web:
+    build:
+      context: .
+      target: runner
+    image: doomparfum-web:preview
+    container_name: doomparfum-web
+    ports:
+      - "127.0.0.1:3000:3000"
+    restart: "no"
+    user: node
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    pids_limit: 128
+    mem_limit: 512m

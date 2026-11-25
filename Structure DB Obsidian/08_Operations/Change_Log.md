@@ -832,3 +832,19 @@ Added [[2026-11-23_DPT-DOC-004_Overall_Project_Handoff]] (new `DPT-HANDOFF-003`)
 Added an original five-route mock frontend planning packet: twenty-site reference matrix with coverage limits, responsive wireframes/header, token/component proposal, synthetic fixture contract, Docker runtime proposal, future acceptance/task map and proposed Draft PR body. PRODUCT.md records explicit product truth. Requested Impeccable lenses are recorded separately in [[Luxury_Design_Critique_and_Audit]]. Canonical S1 report/summary and validation identify actual results. No application/runtime, private data, existing implementation or historical receipt changes. Local-only; no push/PR.
 
 DPT-PLAN-012 S1 closeout: exact reviewed planning source `4105a702a273d77a80c538856034c76c56153264`; report/summary and one planning-readiness receipt added. Stock-validator historical failures preserved; scoped checks and independent correction review recorded without runtime claims. Publication remains unauthorized/not performed.
+
+## 2026-11-24 — IMP-WEB-01 mock frontend and local Docker runtime
+
+Added the isolated `web/` application, tests and Docker files under merged DPT-PLAN-012, with records in [[IMP-WEB-01_Luxury_Frontend_Docker]]. No existing source, migration, receipt or plan was changed. Code `a5ddd6fe421870d2adeeac70f3e7150eee798890`; local only.
+
+## 2026-11-25 — IMP-WEB-01 S3 corrections
+
+`web/` only: write methods refused, no-script mobile navigation, stronger regression tests, header exceptions documented, NOTICE completed. No dependency, route, token, fixture or Docker file changed. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e`; local only. S2 (`9918a38`) is described in [[2026-11-24_IMP-WEB-01_S2_Report]].
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Records-only: canonical task, Project_Status/Index, Backlog, Decision/Change/Agent_Run/Tool_Usage logs; additive S4 public-safe report/summary/recovery JSON. Reconciles actual PR36 and decisions1–11; preserves committed S1–S3 reports/evidence/hashes and complete web tree. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. No application/DB/migration/receipt/Production changes. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 closeout records
+
+Records only: task note, status, index, backlog and logs updated; S5 report, summary, evidence and the final receipt added. Earlier reports, evidence and receipts unchanged; web tree `2cf8c4f5b384605d0239301e5888318923f6d627` unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

@@ -1,0 +1,9 @@
+# The root .gitignore excludes lockfiles; this app requires a committed one.
+!package-lock.json
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+test-results/
+playwright-report/
+.artifacts/

@@ -261,3 +261,22 @@ Historical runtime tests remain historical; current planning static/review/publi
 - [[Luxury_Frontend_Acceptance_and_Task_Map]] — future tests and work units
 - [[Luxury_Design_Critique_and_Audit]] — requested planning passes
 - [[Luxury_Frontend_Draft_PR_Description]] — local proposed PR body, not published
+
+### IMP-WEB-01 — luxury mock frontend implementation (2026-11-24)
+
+- [[IMP-WEB-01_Luxury_Frontend_Docker]] — canonical implementation task
+- [[2026-11-24_IMP-WEB-01_S1_Report]], [[2026-11-24_IMP-WEB-01_S1_Summary]]
+- [[2026-11-24_IMP-WEB-01_S2_Report]], [[2026-11-24_IMP-WEB-01_S2_Summary]]
+- [[2026-11-25_IMP-WEB-01_S3_Report]], [[2026-11-25_IMP-WEB-01_S3_Summary]]
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+[PR36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) OPEN/DRAFT, feat/imp-web-01-luxury-frontend; published starting cda91ff7ba00a44d5b8be53a2dbff68553c6736c, reviewed code449178093ed7616570cf651f8b5e4f3cc2d3001e, fetched main61932bef147816272a06cbe6eba9363940fa4baf. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending.
+
+[[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+New S4 records supersede historical publication/decision status without changing old reports/evidence. No new task or final receipt.
+
+## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout
+
+[[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Summary]].

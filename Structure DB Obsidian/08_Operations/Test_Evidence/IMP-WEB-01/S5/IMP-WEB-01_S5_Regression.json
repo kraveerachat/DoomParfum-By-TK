@@ -1,0 +1,107 @@
+{
+  "task": "IMP-WEB-01",
+  "session": "S5",
+  "classification": "PUBLIC_SAFE",
+  "date": "2026-11-26",
+  "head": "f17040a81e00c2f97cd8616c0fc84a0e5aa85952",
+  "main": "61932bef147816272a06cbe6eba9363940fa4baf",
+  "reviewed_code": "449178093ed7616570cf651f8b5e4f3cc2d3001e",
+  "web_tree": "2cf8c4f5b384605d0239301e5888318923f6d627",
+  "environment": {
+    "node": "24.22.3",
+    "npm": "11.19.1",
+    "docker_engine": "28.3.2",
+    "chrome": "158.0.8127.38",
+    "edge": "158.0.4370.33",
+    "mode": "headless, one Windows host"
+  },
+  "preview": {
+    "image": "sha256:43be51f1cf209ac0a9c4f25960b91e153826d0b4db1c00f688466a6bf30598a6",
+    "health": "healthy",
+    "binding": "127.0.0.1:3000",
+    "restart_policy": "no",
+    "rebuilt": false,
+    "recreated": false
+  },
+  "commands": [
+    {
+      "command": "npm run typecheck:gen",
+      "exit": 0
+    },
+    {
+      "command": "npm run lint",
+      "exit": 0
+    },
+    {
+      "command": "npm run validate:fixtures",
+      "exit": 0
+    },
+    {
+      "command": "npm test",
+      "passed": 85,
+      "failed": 0,
+      "skipped": 0,
+      "exit": 0
+    },
+    {
+      "command": "playwright test (Chrome, preview)",
+      "passed": 189,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "exit": 0
+    },
+    {
+      "command": "playwright test (Edge, preview; temporary ignored config that only sets channel msedge)",
+      "passed": 189,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "exit": 0
+    }
+  ],
+  "smoke": {
+    "200": [
+      "/",
+      "/explore",
+      "/perfume/paper-study-b",
+      "/notes",
+      "/about"
+    ],
+    "404": [
+      "/perfume/imp-web-01-none"
+    ],
+    "headers_on_all_six": [
+      "content-security-policy",
+      "x-robots-tag noindex, nofollow",
+      "x-content-type-options nosniff",
+      "cache-control no-store"
+    ]
+  },
+  "not_rerun": [
+    "npm ci from an empty cache",
+    "next build",
+    "uncached Docker image build",
+    "image scan",
+    "A11 development-mode and recovery drills",
+    "npm audit"
+  ],
+  "not_run": [
+    "screen reader",
+    "physical phone",
+    "Safari",
+    "Firefox",
+    "second-machine LAN probe",
+    "Ubuntu host",
+    "human or cross-vendor review"
+  ],
+  "docker_resources_after": {
+    "volumes": 32,
+    "protected_containers_stopped": 4,
+    "web_image_tags": [
+      "preview",
+      "s2-rollback",
+      "dev"
+    ]
+  }
+}

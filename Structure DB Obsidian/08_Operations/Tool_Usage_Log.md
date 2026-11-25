@@ -50,3 +50,19 @@ global config, hook, model, cloud gateway, credential or paid-service change in 
 ## 2026-11-23 — DPT-PLAN-012 local design planning
 
 Primary Impeccable skill v4.5.2; existing engine pin 0.1.14; `impeccable context` ran once successfully. No PRODUCT.md/DESIGN.md/frontend existed initially. Existing ui-craft guided layout/state review; ui-ux-pro-max local Python searches supplemented style/accessibility/Next.js guidance. Initial Liquid Glass recommendation rejected as off-brief; one narrowed style query used. No installation, update, hooks, pin shortcuts, MCP configuration or external repository checkout. Context Mode executed/indexed long reads and search; one abbreviated source selector returned no hits, corrected by using the exact source label. Brave CUA inspected twenty official reference URLs and mobile attempts, then reset viewport and closed temporary research tabs. No account login, transaction, asset download or protected-source copy. Native web tools checked official framework/Docker/noindex/font-license texts. Tool rollback: no setup/config changes to roll back; documentation rollback only through reviewed Git change. Full outcomes/limits: [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
+
+## 2026-11-24 — IMP-WEB-01 implementation tools
+
+Impeccable primary (context, detector, finish reviewer); `ui-craft-editorial` consulted; `ui-ux-pro-max:brand` requested but not used (out of scope by project rule); Taste Skill not used. No hook, MCP, global install or client setting was changed. New project-local dependencies are pinned in `web/package-lock.json`, installed with lifecycle scripts disabled. Task-created Docker resources: images `doomparfum-web:preview` and `doomparfum-web:dev`, container `doomparfum-web`, volumes `doomparfum-web-dev_dev-node-modules` and `doomparfum-web-dev_dev-next`. Rollback: `docker compose down` in `web/`, then remove those named images and volumes. Details: [[2026-11-24_IMP-WEB-01_S1_Report]].
+
+## 2026-11-25 — IMP-WEB-01 S3 tools
+
+Impeccable primary (hardening reference and detector); other requested design commands not used because the same instruction forbids a broad polish round; `ui-ux-pro-max:brand` out of scope. No hook, MCP, global install, client setting or dependency changed. Docker image tag `doomparfum-web:s2-rollback` (the previous preview) was added; temporary S3 resources were removed by name. Rollback of the preview: tag `s2-rollback` as `preview`, then `docker compose up --force-recreate --detach` without `--build` in `web/`.
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Used installed Caveman/ContextMode, Git/gh/Python/PowerShell, Docker Desktop supported start/restart and inspect/start frontend, CUA in-app browser availability. No setup/install/global configuration change. Sandbox pipe denial and engine probe timeouts led to supported bounded Desktop restart; no reset/network change/unrelated resource action. Existing image verified; no rebuild. A header-case checker error was corrected, not an application change. CLI/metadata/source checks and publication are bounded to current Owner instruction. Native Windows UI unnecessary. Existing Tool_Usage_Log frontmatter missing-owner finding is preserved as pre-existing. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 tools
+
+Git, gh (read-only), Docker CLI, Node, Playwright with installed Chrome and Edge, curl. Design tools available and not used. No install, hook, MCP, client setting or dependency changed. An unintended `busybox:latest` pull was removed by name; container, volume and `doomparfum-web` image inventories are unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

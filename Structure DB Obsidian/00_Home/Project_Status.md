@@ -4,13 +4,24 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-23
+updated: 2026-11-26
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout (Gate A)
+
+Supersedes the S4 entry below for current state. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e` is unchanged; 85 unit, 189 Chrome and 189 Edge tests pass on the running preview. The Owner accepts the V1 visual baseline as the foundation for later work. A05 stays PARTIAL with the Owner's deferral. The final receipt exists; [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) was OPEN/DRAFT at `f17040a81e00c2f97cd8616c0fc84a0e5aa85952` and the Owner's review and merge are PENDING. Frontend V1.1 (bilingual UI, sticky navigation, typography) is NOT STARTED: it needs the V1 merge and then a merged Planning Amendment. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+[PR36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) OPEN/DRAFT, feat/imp-web-01-luxury-frontend; published starting cda91ff7ba00a44d5b8be53a2dbff68553c6736c, reviewed code449178093ed7616570cf651f8b5e4f3cc2d3001e, fetched main61932bef147816272a06cbe6eba9363940fa4baf. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. Existing S3 image43be51f1/container69d92c01 restored healthy on127.0.0.1:3000 by supported Desktop restart then docker start; no rebuild/source change. Five route types200, unknown404, browser Home rendered. Four protected containers remain stopped;32volume metadata/S2rollback unchanged across frontend startup.
+
+Current truth supersedes dated local-only/frontend-not-implemented/PR-not-created statements below: the mock frontend exists on unmerged PR36; real-data application/authentication/backend/ORM/rights remain separately gated. Historical S1–S3 results are NOT RERUN. LF-05/S3 review independence and limited delta coverage remain explicit. No deployed/merged/finally accepted/fully accessible claim. One records-only normal push and PR-description update authorized for S4; permission expires on completion. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
 
 ## Overall project state after closeout Stages 1–4 — current truth, 2026-11-23
 
@@ -615,3 +626,11 @@ Actual [Draft PR31](https://github.com/kraveerachat/DoomParfum-By-TK/pull/31) is
 ### DPT-PLAN-012 S1 planning handoff
 
 Source checkpoint `4105a702a273d77a80c538856034c76c56153264`; canonical task now READY FOR REVIEW (planning only), with all five independent planning findings resolved and bounded reference coverage explicit. Scoped document/contrast/history/diff checks pass; stock validators retain 58/56 inherited failures. Report/summary/evidence and single readiness receipt are indexed in [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. Local-only, NOT_PUSHED, PR NOT CREATED; implementation/runtime NOT STARTED. Owner publication authorization and Human Gate P merge remain next.
+
+## 2026-11-24 — Luxury mock frontend implementation (IMP-WEB-01)
+
+Planning PR #35 (DPT-PLAN-012) is MERGED at `61932bef147816272a06cbe6eba9363940fa4baf`. [[IMP-WEB-01_Luxury_Frontend_Docker]] implements LF-01 to LF-04 locally on `feat/imp-web-01-luxury-frontend`, code checkpoint `a5ddd6fe421870d2adeeac70f3e7150eee798890`: ACCEPTANCE PENDING, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. 81 unit and 117 browser tests pass; A05 is PARTIAL and independent closure (LF-05) is PENDING. Mock-only, loopback Docker at `http://localhost:3000`, not deployed. PR8, U01/r14, database, matching and POST30 decisions are unchanged.
+
+## 2026-11-25 — IMP-WEB-01 S3 (LF-05 reconciliation)
+
+Supersedes the 2026-11-24 entry for current state: code `449178093ed7616570cf651f8b5e4f3cc2d3001e`, ACCEPTANCE PENDING, LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. 85 unit and 189 browser tests pass; a fresh clone and an uncached image build pass. The LF-05 sub-agent review was CONDITIONAL on S2 and is reconciled; A05 manual checks and Owner decisions are open. PR8, U01/r14, database, matching and POST30 decisions are unchanged. [[2026-11-25_IMP-WEB-01_S3_Report]]

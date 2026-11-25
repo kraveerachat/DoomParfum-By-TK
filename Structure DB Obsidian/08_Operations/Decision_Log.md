@@ -499,3 +499,35 @@ Unchanged: r14 PROPOSED; independent review PENDING; G-IND NOT SATISFIED; Q-F PE
 ## DPT-PLAN-012 design-planning decisions — 2026-11-23
 
 The Owner confirmed the attached luxury editorial direction in chat: ivory/ink, muted gold, deep navy, serif display, readable sans, generous spacing and restrained motion. This confirms the direction to propose, not rendered acceptance. [[Luxury_Frontend_Acceptance_and_Task_Map]] records LF-OD-01…05. Exact routes/tokens, isolated Next.js stack and loopback Docker runtime remain PROPOSED until Gate P. Public link access/noindex is a future preference; Cloudflare deployment remains separately gated. Gold `#AD9361` on ivory measures 2.706:1 and is restricted to decorative use; readable gold is separately proposed. No prior decision, U01 contract or data permission is changed.
+
+## IMP-WEB-01 decisions — 2026-11-24
+
+Owner-verified (chat, 2026-11-24): consolidate LF-01 to LF-04 into one implementation task with LF-05 as a separate gate; one Docker Desktop launch. PROPOSED, awaiting the Owner: the deviations numbered 1 to 7 in [[2026-11-24_IMP-WEB-01_S1_Report]] (route-loading behavior, hero padding, fixed optical size, dialog exit, accord descriptors and sort options, link size, house-label position).
+
+## IMP-WEB-01 S3 decisions — 2026-11-25
+
+Owner-verified (chat, 2026-11-25): one bounded stop and replacement of the `doomparfum-web` preview for A11, ending on the S3 image. PROPOSED and PENDING: deviations 1 to 7, the S2 interpretations, the S3 no-script row and method refusal, the response-header exceptions and A05 deferral, as listed in [[2026-11-25_IMP-WEB-01_S3_Report]].
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Verified Owner decisions from the actual PR36 body at published cda91ff, plus current explicit recovery/records instruction. Earlier PENDING rows are dated history, not current decisions.
+
+| # | Item | Decision |
+|---|---|---|
+| 1 | Route loading retains the current page | ACCEPTED |
+| 2 | Responsive hero padding takes precedence over the conflicting fixed padding and viewport requirements | ACCEPTED |
+| 3 | Fixed optical font size | ACCEPTED |
+| 4 | No Radix overlay part | ACCEPTED |
+| 5 | Accord descriptors and sorting behavior | ACCEPTED |
+| 6 | 16px text links | ACCEPTED |
+| 7 | House-label position | ACCEPTED |
+| 8 | Tablet 4:3 imagery, horizontal third Featured entry, `proxy.ts` redirect architecture | ACCEPTED |
+| 9 | No-JavaScript navigation fallback, HTTP 405 for unsupported write methods | ACCEPTED |
+| 10 | Documented framework/HTTP-layer header and redirect exceptions | ACCEPTED, loopback-only synthetic preview |
+| 11 | Unavailable A05 manual checks | EXPLICITLY DEFERRED for this stage; A05 stays PARTIAL |
+
+Scope: current loopback synthetic mock only. No full WCAG/final acceptance/Production/public exposure/real-data rights. The initial publication exception was used/exhausted. Current new exception authorizes one records-only commit/normal push plus corresponding PR36 description update, using existing Owner authentication only because no approved agent identity is available; no continuing authority after completion. No final receipt; no agent merge. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
+## 2026-11-26 — IMP-WEB-01 S5 and Frontend V1.1 gates
+
+Owner-verified (chat, 2026-11-26): the V1 visual baseline is accepted as the foundation for future improvements; V1 is closed on PR #36 (Gate A) before a docs-only Planning Amendment (Gate B) and the V1.1 implementation (Gate C); only the Owner merges. PENDING: Owner final acceptance by merge, publication of the S5 checkpoint, and every V1.1 choice, including the Thai display font. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
