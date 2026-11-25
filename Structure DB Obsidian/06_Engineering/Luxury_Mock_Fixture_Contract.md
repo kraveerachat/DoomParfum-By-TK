@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: fixture_contract
 status: proposed
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, synthetic, fixtures, boundaries]
 source_of_truth: "../../README.md"
 ---
@@ -57,3 +57,13 @@ No form posts, route handlers, API server, auth provider or account session. The
 ## Negative controls required later
 
 Reject a fixture with synthetic false, a real-looking external source field, a price/score/review field, duplicate slug/ID, unknown note reference, unsafe HTML, oversized text, remote visual URL or a missing provenance tag. Test known-empty versus unknown and an unavailable visual independently. Verify no imports traverse into existing database/matching sources. Scan source and built output; network inspection must show no cross-origin request from any route or interactive action. Test search input resembling HTML as literal text. No new production security acceptance is implied by these mock-specific controls.
+
+## Amendment DPT-PLAN-013 — Thai overlay (PROPOSED until merged)
+
+Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], 4.3 and 4.5. Nothing above is removed and English fixture records stay byte-identical.
+
+- A separate server-only overlay, keyed by existing IDs, may hold Thai text for descriptions, descriptors, article text and captions. Each text is `draft` or `reviewed`; only the Owner marks text reviewed. The overlay carries the same synthetic, provenance and rights marks.
+- It adds no record, name, note, relationship or state, and gives no text to an unknown field. Length and plain-text limits are those above.
+- Negative controls to add: unknown ID, new name, text on an unknown field, over-long text, markup, URL, a `reviewed` mark without an Owner review record, overlay text in a client chunk.
+- Search on English pages uses overlay text only when it is reviewed and the query has a Thai character.
+- No language preference is stored anywhere.

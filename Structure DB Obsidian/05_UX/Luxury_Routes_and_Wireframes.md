@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: ux_specification
 status: proposed
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, routes, wireframes, responsive]
 source_of_truth: "../../README.md"
 ---
@@ -140,3 +140,19 @@ Tablet/mobile: single reading column, title 36px, local anchor list immediately 
 All routes support default, zero-data, missing-field, visual-unavailable, generic failure and unknown-route states. Loading is reserved only for an actual route transition/dynamic delivery; static local operations must not simulate a slow network for appearance. Route loading reserves final geometry with a non-animated placeholder; set busy state on the relevant region without hiding its accessible name. Error recovery offers Retry for the local render and return to Explore. No silent retries or fake success.
 
 Native links/buttons/selects are preferred. Custom shadcn primitives are restricted to modal dialogs/drawer and only after keyboard and focus behavior is verified. Tooltip content cannot be the sole place containing a label or essential fact. Keyboard order follows DOM reading order. For forward navigation, focus h1 and announce title without duplicating announcements. History Back/Forward is the explicit exception: restore the previous list's filter/query/scroll and originating entry focus after layout settles, without an unconditional h1 focus that scrolls it to the top. If the original entry is unavailable, focus the list heading with a concise explanation. Browser-native restoration may be used only after verifying this behavior. No forced cursor, drag-only control, magnetic CTA, autoplay sound, scroll lock outside overlays or animated page transition.
+
+## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+
+Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]]. The five logical route types and every English URL above stay. Superseded on merge:
+
+| V1 clause above | V1.1 |
+|---|---|
+| One language | Thai mirror of the five routes under `/th`; same slugs, IDs, query keys and fragments; no cookie or redirect by header (4.1–4.4) |
+| Titles and copy in English | Typed English and Thai dictionaries; Thai overlay for fixture prose (4.3) |
+| Header in normal document flow, 1px divider | Sticky, stable height, R1 rule, with non-sticky fallbacks (5.1) |
+| Utilities: Search, Profile | Search, Profile, language selector; compact control on narrow screens (5.2) |
+| No alphabet strip in Notes | Jump index of live letters only; no dead letters (6) |
+| Search matches declared fields | Same, plus the locale rule that leaves English results unchanged (4.5) |
+| Forward navigation focuses the h1 | Same; the outline follows the navigation modality (6.1) |
+
+Home hero, Detail spread, Explore controls and Featured keep the V1 layouts unless the Owner selects a TEST variant (section 8).
