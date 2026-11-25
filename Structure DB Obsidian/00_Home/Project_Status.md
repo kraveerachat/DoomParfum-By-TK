@@ -4,13 +4,20 @@ project: DoomParfum By TK
 type: status
 status: active
 owner: project
-updated: 2026-11-23
+updated: 2026-11-25
 tags:
   - doomparfum
   - status
   - planning
 source_of_truth: "../../README.md"
 ---
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+[PR36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) OPEN/DRAFT, feat/imp-web-01-luxury-frontend; published starting cda91ff7ba00a44d5b8be53a2dbff68553c6736c, reviewed code449178093ed7616570cf651f8b5e4f3cc2d3001e, fetched main61932bef147816272a06cbe6eba9363940fa4baf. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. Existing S3 image43be51f1/container69d92c01 restored healthy on127.0.0.1:3000 by supported Desktop restart then docker start; no rebuild/source change. Five route types200, unknown404, browser Home rendered. Four protected containers remain stopped;32volume metadata/S2rollback unchanged across frontend startup.
+
+Current truth supersedes dated local-only/frontend-not-implemented/PR-not-created statements below: the mock frontend exists on unmerged PR36; real-data application/authentication/backend/ORM/rights remain separately gated. Historical S1–S3 results are NOT RERUN. LF-05/S3 review independence and limited delta coverage remain explicit. No deployed/merged/finally accepted/fully accessible claim. One records-only normal push and PR-description update authorized for S4; permission expires on completion. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
+
 
 ## Overall project state after closeout Stages 1–4 — current truth, 2026-11-23
 

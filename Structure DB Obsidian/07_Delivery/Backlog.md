@@ -398,4 +398,8 @@ New documentation-only Gate P task: [[DPT-PLAN-012_Luxury_Frontend_Editorial]]. 
 
 | Task | Type | PR | Branch | Base / Plan dependency | State | HEAD | Next action |
 |---|---|---|---|---|---|---|---|
-| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | NOT CREATED | `feat/imp-web-01-luxury-frontend` | PR #35 / `61932be` | ACCEPTANCE PENDING | `4491780` (code, S3) | Owner decisions, A05 manual checks or deferral, publication decision |
+| [[IMP-WEB-01_Luxury_Frontend_Docker]] (LF-01 to LF-04) | IMPLEMENT | [#36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36), OPEN/DRAFT | feat/imp-web-01-luxury-frontend | PR35 /61932be | ACCEPTANCE PENDING |4491780reviewed code;S4records-only | Owner visual/final local-mock acceptance;A05PARTIAL/11deferral;A10remoteLAN NOT RUN |
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Existing S3 image43be51f1/container69d92c01 restored healthy on127.0.0.1:3000 by supported Desktop restart then docker start; no rebuild/source change. Five route types200, unknown404, browser Home rendered. Four protected containers remain stopped;32volume metadata/S2rollback unchanged across frontend startup. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. No new implementation scope, task/PR, merge or final receipt. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].

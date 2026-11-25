@@ -840,3 +840,7 @@ Added the isolated `web/` application, tests and Docker files under merged DPT-P
 ## 2026-11-25 — IMP-WEB-01 S3 corrections
 
 `web/` only: write methods refused, no-script mobile navigation, stronger regression tests, header exceptions documented, NOTICE completed. No dependency, route, token, fixture or Docker file changed. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e`; local only. S2 (`9918a38`) is described in [[2026-11-24_IMP-WEB-01_S2_Report]].
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Records-only: canonical task, Project_Status/Index, Backlog, Decision/Change/Agent_Run/Tool_Usage logs; additive S4 public-safe report/summary/recovery JSON. Reconciles actual PR36 and decisions1–11; preserves committed S1–S3 reports/evidence/hashes and complete web tree. Owner decisions1–10 accepted only for current local mock;11 explicitly defers unavailable A05manual checks. A05 remains PARTIAL; A10second-machineLAN NOT RUN. Final Human visual/local-mock acceptance and receipt still pending. No application/DB/migration/receipt/Production changes. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].

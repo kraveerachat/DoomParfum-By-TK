@@ -7,7 +7,7 @@ owner: human-owner
 updated: 2026-11-25
 requirements: [R01, R03, R04, R13, R14, R21]
 planning_pr: 35
-implementation_pr: null
+implementation_pr: 36
 tags: [doomparfum, implementation, frontend, docker, mock-only]
 source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ---
@@ -16,12 +16,12 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 
 ## Current Task
 
-- Type: IMPLEMENTATION (mock-only UI + local Docker). Agent: Claude Code.
-- State: ACCEPTANCE PENDING (agent-side implementation, checks and LF-05 reconciliation done; A05 manual checks and Owner decisions open). Sessions S1 and S2, 2026-11-24; S3, 2026-11-25 Asia/Bangkok.
+- Type: IMPLEMENTATION, mock-only. Current recovery/records coordinator: Codex (S4); implementer: Claude Code (S1–S3).
+- State: ACCEPTANCE PENDING for Human visual/final local-mock review. Decisions1–10 accepted in PR36 scope;11 explicitly defers unavailable A05manual checks. A05 PARTIAL; A10 second-machine LAN NOT RUN.
 - Branch: `feat/imp-web-01-luxury-frontend`; base/target `main`.
 - Starting/base SHA: `61932bef147816272a06cbe6eba9363940fa4baf` (PR #35 merge, freshly fetched, equals `origin/main`).
 - Approved plan: [[DPT-PLAN-012_Luxury_Frontend_Editorial]], Planning PR #35 MERGED 2026-11-23.
-- Implementation PR: NOT CREATED. No publication authority in this task (`LOCAL_ONLY` / `NOT_PUSHED`).
+- Implementation PR: [#36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36), verified OPEN / DRAFT at published `cda91ff7ba00a44d5b8be53a2dbff68553c6736c`. Earlier LOCAL_ONLY / PR_NOT_CREATED statements below are historical snapshots, superseded for current publication state by S4.
 - Intake class (DEVELOPMENT_WORKFLOW §3.6): B. LF-01 to LF-04 are consolidated into this one task by the Owner's 2026-11-24 instruction, as the [[Luxury_Frontend_Acceptance_and_Task_Map]] allows. LF-05 (independent review) stays a separate gate.
 - ID check: no `IMP-WEB-*` ID, branch or PR existed on any fetched ref or in the PR list before allocation.
 - Production mutation allowed: NO.
@@ -36,7 +36,7 @@ Build the functional, mock-only five-route DoomParfum frontend from the merged p
 
 ## Out of Scope / Do-not-touch
 
-Database, matching, ETL, Security U01/r14, PR #8, existing migrations and receipts, other worktrees, unrelated untracked files, unrelated containers and volumes. No API, authentication, real data, scores, prices, service worker, push, PR, merge or deployment.
+Database, matching, ETL, U01/r14, PR8, existing migrations/receipts, other worktrees, unrelated files/containers/volumes. No API/authentication/real data/scores/prices/service worker/merge/deployment. Only S4 records-only normal push and PR36 description update have the explicit one-time Owner exception below.
 
 ## Dependencies
 
@@ -60,6 +60,7 @@ A01–A12 in [[Luxury_Frontend_Acceptance_and_Task_Map]]. Every result is record
 | S1 | Implement CP1–CP4 | CLOSED | PARTIAL (A05 manual checks and independent closure open) | `a5ddd6fe421870d2adeeac70f3e7150eee798890` | [[2026-11-24_IMP-WEB-01_S1_Report]] |
 | S2 | Bounded UI/UX refinement and verification pass (Owner instruction 2026-11-24) | CLOSED | PARTIAL (A05, A11 in part, LF-05 open) | `9918a387b24b89905b0da82f10894d85051e58cd` | [[2026-11-24_IMP-WEB-01_S2_Report]] |
 | S3 | LF-05 corrections, reproducibility, publication readiness (Owner instruction 2026-11-25) | CLOSED | PARTIAL (A05 and Owner decisions open) | `449178093ed7616570cf651f8b5e4f3cc2d3001e` | [[2026-11-25_IMP-WEB-01_S3_Report]] |
+| S4 | Existing preview recovery and PR36 records reconciliation | CHECKPOINT | ACCEPTANCE PENDING; A05 PARTIAL | containing records-only commit; exact SHA in PR/final delivery | [[2026-11-25_IMP-WEB-01_S4_Report]] |
 
 ### Session S1 — implement DPT-PLAN-012
 
@@ -112,7 +113,7 @@ State: CLOSED. Agent/role: Claude Code, implementation. Start `b8383ecb76c4cd72e
 
 ## Planned / Completed / Remaining
 
-Completed: CP1–CP4, the S2 refinement, the LF-05 review and the S3 corrections. Remaining: A05 manual checks or explicit deferral, Owner decisions, publication authority, Implementation PR, then the single final receipt.
+Completed: CP1–CP4/S2/LF-05/S3, publication as Draft PR36, Owner decisions1–10/11deferral, S4 preview recovery/records reconciliation. Remaining: Human visual/final local-mock acceptance; A05 PARTIAL, A10remoteLAN NOT RUN; one final receipt only after acceptance.
 
 ## Test / Evidence Ledger
 
@@ -151,6 +152,8 @@ Machine-readable evidence and screenshots: [IMP-WEB-01_Acceptance.json](../../08
 | [[2026-11-24_IMP-WEB-01_S2_Summary]] | S2 | `48c5b6f524d5960eade3113c956b83979c50432dd042e8bcd425f97ea11664ce` | PUBLIC_SAFE |
 | [[2026-11-25_IMP-WEB-01_S3_Report]] | S3 | `0c5ca9764f659aa0a4b4f295c679153cea0fcf95945e68fabff3e4609f4e6315` | PUBLIC_SAFE |
 | [[2026-11-25_IMP-WEB-01_S3_Summary]] | S3 | `a453a4b89be70f1b1728ac0a01197d5bfaadcf46a6d39b2a06d4f800d3e5ee1b` | PUBLIC_SAFE |
+| [[2026-11-25_IMP-WEB-01_S4_Report]] | S4 | `5bfbc6fa5244b3904670ad54c088e99d2f97c5c7ff3773877130e14b04688256` | PUBLIC_SAFE |
+| [[2026-11-25_IMP-WEB-01_S4_Summary]] | S4 | `088edeeca13df3e0ae3e12601490be739a7c214269919a2eff8b8bdb55cb789c` | PUBLIC_SAFE |
 
 LF-05 and S3 review reports: SHA-256 `37852101f9ed8a0b9b4defab2c6d7fd6df0fd4aadc113e1282278a9fc6ade290` and `91c59dcc1e786d13977e00b913bcc54b6d2c1d99f8851497fee9a9eb06667f9c`; PRIVATE_EVIDENCE_NOT_PUBLISHED.
 
@@ -162,8 +165,46 @@ Twelve recorded deviations and limitations are in the report, including the rout
 
 ## Latest Git Checkpoint / SHA
 
-Code: `449178093ed7616570cf651f8b5e4f3cc2d3001e` (S3; S2 was `9918a387b24b89905b0da82f10894d85051e58cd`, S1 was `a5ddd6fe421870d2adeeac70f3e7150eee798890`). The documentation commit that contains this note follows it on the same branch. LOCAL_ONLY / NOT_PUSHED / PR_NOT_CREATED. `AGENT_CREDENTIAL_REQUIRED`: no approved agent publishing identity was found, and the Owner's login was not used to publish.
+Code remains `449178093ed7616570cf651f8b5e4f3cc2d3001e`; web tree `2cf8c4f5b384605d0239301e5888318923f6d627`. Published starting HEAD `cda91ff7ba00a44d5b8be53a2dbff68553c6736c` is PR36 OPEN/DRAFT. S4 is one records-only containing commit, exact new local/remote SHA in PR description/final delivery. No approved agent identity is configured; existing Owner authentication is explicitly authorized only for this update. Older LOCAL_ONLY statements are historical.
 
 ## Handoff / Next Action
 
-Owner reviews `http://localhost:3000` (preview left running; stop with `docker compose down` in `web/`), decides the items in the S3 report, runs or defers the A05 manual checks, and authorizes publication separately.
+Owner inspects restored healthy http://127.0.0.1:3000/ and explicitly confirms final local-mock acceptance with remaining limitations. Decisions1–10/11deferral are already recorded; A05 is not PASS. No final receipt until acceptance. One-time records publication authority expires on completion.
+
+## Session S4 — runtime recovery and published-record reconciliation (2026-11-25)
+
+Recovery/records work completed; ACCEPTANCE PENDING. Agent: Codex coordinator. Intake A: continuation of this task/branch/PR36, not a new task or Planning PR. Starting/published SHA `cda91ff7ba00a44d5b8be53a2dbff68553c6736c`; fetched main `61932bef147816272a06cbe6eba9363940fa4baf`; reviewed application `449178093ed7616570cf651f8b5e4f3cc2d3001e`. Both application trees equal `2cf8c4f5b384605d0239301e5888318923f6d627` before work.
+
+Owner scope: bounded Docker Desktop/local frontend recovery; verify the recorded S3 image and loopback3000, smoke five route types/unknown404/browser; reconcile current task/status/index/logs and Owner decisions recorded in the actual PR; one records-only commit and one normal branch push plus one PR-description update. Existing Owner authentication is permitted solely if no approved agent identity is available. This permission does not approve final acceptance, source changes, Production, merge or a final receipt.
+
+Do not touch: complete `web/` tree, S1/S2/S3 committed reports/evidence, migrations/receipts, PR8/U01/DB/matching/ETL, protected PostgreSQL containers/volumes, unrelated `eleuthex-hermes` and S2 rollback image. No prune/reset/reinstall/network change/unrelated process termination. A05 remains PARTIAL with explicit manual-test deferral; A10 second-machine LAN check remains NOT RUN. New evidence will describe only checks actually rerun during recovery.
+
+### Verified S4 execution and Owner decisions
+
+Source: actual PR36 description at published cda91ff, read2026-11-25. Later Owner decisions supersede historical PENDING recommendations, not their dated evidence.
+
+| # | Item | Decision |
+|---|---|---|
+| 1 | Route loading retains the current page | ACCEPTED |
+| 2 | Responsive hero padding takes precedence over the conflicting fixed padding and viewport requirements | ACCEPTED |
+| 3 | Fixed optical font size | ACCEPTED |
+| 4 | No Radix overlay part | ACCEPTED |
+| 5 | Accord descriptors and sorting behavior | ACCEPTED |
+| 6 | 16px text links | ACCEPTED |
+| 7 | House-label position | ACCEPTED |
+| 8 | Tablet 4:3 imagery, horizontal third Featured entry, `proxy.ts` redirect architecture | ACCEPTED |
+| 9 | No-JavaScript navigation fallback, HTTP 405 for unsupported write methods | ACCEPTED |
+| 10 | Documented framework/HTTP-layer header and redirect exceptions | ACCEPTED, loopback-only synthetic preview |
+| 11 | Unavailable A05 manual checks | EXPLICITLY DEFERRED for this stage; A05 stays PARTIAL |
+
+Header exceptions accepted only for loopback synthetic preview; reassess before public exposure. No real-data/Production acceptance.
+
+Supported Desktop restart recovered engine28.3.2; existing doomparfum-web/container69d92c01 with recorded S3 image43be51f1 started without rebuild/recreate, fixed127.0.0.1:3000. Running/healthy; five route types200, unknown404, browser Home rendered. Four protected containers stay stopped;32volume metadata and S2rollback fingerprints match across frontend startup. First readable baseline was after Desktop recovery; DB-content integrity NOT RETESTED.
+
+97tracked web files compare byte-for-byte with reviewed4491780, tree2cf8c4f5 unchanged. Full historical suites NOT RERUN. LF-05/S3 were same-vendor implementer-commissioned subagents, not human/cross-vendor/authenticated independent acceptance; S3 final PASS was delta-only and excluded visuals/axe/npmci/Dockerbuild/A10/A11. Review report hashes above stay unchanged.
+
+Environmental failures retained: sandbox pipe denial/timeouts/start-status inconsistency resolved by supported recovery; initial header-case checker corrected, no source fix. New scoped documentation/sensitive-content/diff checks and one records-only publication checkpoint required before handoff; exact outcomes in S4 ledger/PR delivery. No source/DB/Production change or final receipt. Full report [[2026-11-25_IMP-WEB-01_S4_Report]], summary [[2026-11-25_IMP-WEB-01_S4_Summary]], [S4 evidence](../../08_Operations/Test_Evidence/IMP-WEB-01/S4/IMP-WEB-01_S4_Recovery.json).
+
+### Final S4 verification ledger
+
+PASS:97tracked web files byte-equal to reviewed4491780,0mismatches; tree2cf8c4f5 unchanged. Scoped records checks:11allowlisted paths,10Markdown,4relative links,684wikilinks,0errors/0sensitive candidates; pre-existing Tool_Usage_Log missing-owner warning retained. Git diff --check PASS after correcting4new trailing spaces. JSON-wikilink checker inventory corrected, no historical-link edits.146old protected paths unchanged. Full historical suites and A05manual/A10remoteLAN NOT RUN. Actual new records SHA/publication exhaustion verified in PR/final delivery; no final receipt.

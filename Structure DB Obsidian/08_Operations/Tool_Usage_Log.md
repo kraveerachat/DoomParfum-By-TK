@@ -58,3 +58,7 @@ Impeccable primary (context, detector, finish reviewer); `ui-craft-editorial` co
 ## 2026-11-25 — IMP-WEB-01 S3 tools
 
 Impeccable primary (hardening reference and detector); other requested design commands not used because the same instruction forbids a broad polish round; `ui-ux-pro-max:brand` out of scope. No hook, MCP, global install, client setting or dependency changed. Docker image tag `doomparfum-web:s2-rollback` (the previous preview) was added; temporary S3 resources were removed by name. Rollback of the preview: tag `s2-rollback` as `preview`, then `docker compose up --force-recreate --detach` without `--build` in `web/`.
+
+## 2026-11-25 — IMP-WEB-01 S4 recovery/publication reconciliation
+
+Used installed Caveman/ContextMode, Git/gh/Python/PowerShell, Docker Desktop supported start/restart and inspect/start frontend, CUA in-app browser availability. No setup/install/global configuration change. Sandbox pipe denial and engine probe timeouts led to supported bounded Desktop restart; no reset/network change/unrelated resource action. Existing image verified; no rebuild. A header-case checker error was corrected, not an application change. CLI/metadata/source checks and publication are bounded to current Owner instruction. Native Windows UI unnecessary. Existing Tool_Usage_Log frontmatter missing-owner finding is preserved as pre-existing. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-25_IMP-WEB-01_S4_Report]], [[2026-11-25_IMP-WEB-01_S4_Summary]].
