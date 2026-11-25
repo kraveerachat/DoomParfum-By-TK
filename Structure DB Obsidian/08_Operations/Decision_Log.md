@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: decision_log
 status: draft
 owner: project
-updated: 2026-11-23
+updated: 2026-11-26
 tags:
   - doomparfum
   - operations
@@ -531,3 +531,13 @@ Scope: current loopback synthetic mock only. No full WCAG/final acceptance/Produ
 ## 2026-11-26 — IMP-WEB-01 S5 and Frontend V1.1 gates
 
 Owner-verified (chat, 2026-11-26): the V1 visual baseline is accepted as the foundation for future improvements; V1 is closed on PR #36 (Gate A) before a docs-only Planning Amendment (Gate B) and the V1.1 implementation (Gate C); only the Owner merges. PENDING: Owner final acceptance by merge, publication of the S5 checkpoint, and every V1.1 choice, including the Thai display font. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
+
+## 2026-11-26 — DPT-PLAN-013 Frontend V1.1 amendment
+
+Verified event: the Owner merged PR #36 as `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`, which accepts V1 as the baseline; A05 stays PARTIAL.
+
+Owner-directed in the V1.1 instructions (effective when the amendment is merged): upgrade, not redesign; V11-OD-02 English paths kept and Thai under `/th`, no cookie or storage; sticky header with stable height as the default; language control after Profile; V11-OD-07 wordmark kept; fictional proper names unchanged; Trirong not approved; no Thai display font before rendered comparison; one amendment and one implementation task.
+
+Agent proposals for Owner review, with reasons in [[DPT-PLAN-013_Frontend_V1_1_Amendment]]: measured color roles (3.1); specimen outside the application (3.4); two root layouts proven by a spike (4.2); server-only Thai overlay instead of changed fixture fields (4.3); language switch as a document navigation that resets typed text (4.4); English results unchanged by Thai text (4.5); header layer 20 instead of the proposal's 40, which equals the scrim (5.1); label in name for TH and EN (5.2); H1 outline contract from a reproduced case (6.1).
+
+Rejected from the proposal: `dp_locale` cookie, `/dev/type-specimen` route, underline-only selects and hidden help as defaults, per-section uppercase eyebrows, recommendation list, filter bottom sheet, one PR per item. OPEN: V11-OD-01, 03 to 06, 08 to 12. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]

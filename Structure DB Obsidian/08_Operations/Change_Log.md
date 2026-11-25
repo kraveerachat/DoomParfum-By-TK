@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: change_log
 status: draft
 owner: project
-updated: 2026-11-23
+updated: 2026-11-26
 tags:
   - doomparfum
   - operations
@@ -848,3 +848,7 @@ Records-only: canonical task, Project_Status/Index, Backlog, Decision/Change/Age
 ## 2026-11-26 — IMP-WEB-01 S5 closeout records
 
 Records only: task note, status, index, backlog and logs updated; S5 report, summary, evidence and the final receipt added. Earlier reports, evidence and receipts unchanged; web tree `2cf8c4f5b384605d0239301e5888318923f6d627` unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
+
+## 2026-11-26 — DPT-PLAN-013 documents
+
+Added: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Draft_PR_Description]], S1 report and summary, receipt, evidence folder. Amended by added sections only: tokens, routes, fixture contract, acceptance map, Docker proposal, PRODUCT.md, DPT-PLAN-012 and IMP-WEB-01 task notes (the latter also moves its status to merged), status, index, backlog, roadmap, acceptance criteria, pending questions and logs. No file in `web/` and no earlier report, evidence or receipt changed.

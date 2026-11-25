@@ -12,6 +12,10 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-26 — Frontend V1 merged; V1.1 planning amendment prepared (Gate B)
+
+[PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) is MERGED as `ab3351a8432d1d6664a6b4281784cfea56b0b9fa` (2026-11-25T18:40:31Z, verified equal to remote `main`), so Gate A is closed and the "merge PENDING" text in the S5 entry below is historical. Gate B: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]] proposes the V1.1 contract, [[DPT-PLAN-013_Frontend_V1_1_Amendment]], on `plan/frontend-v1-1-design-upgrade`; documentation only, `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED` when written. Gate C (code) is NOT STARTED and needs the Owner's merge of that amendment. No Thai display font is selected. A05 stays PARTIAL. PR #8 stays OPEN / DRAFT at `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`; U01/r14 is unchanged. The V1 preview on `127.0.0.1:3000` was left running.
+
 ## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout (Gate A)
 
 Supersedes the S4 entry below for current state. Code `449178093ed7616570cf651f8b5e4f3cc2d3001e` is unchanged; 85 unit, 189 Chrome and 189 Edge tests pass on the running preview. The Owner accepts the V1 visual baseline as the foundation for later work. A05 stays PARTIAL with the Owner's deferral. The final receipt exists; [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) was OPEN/DRAFT at `f17040a81e00c2f97cd8616c0fc84a0e5aa85952` and the Owner's review and merge are PENDING. Frontend V1.1 (bilingual UI, sticky navigation, typography) is NOT STARTED: it needs the V1 merge and then a merged Planning Amendment. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]

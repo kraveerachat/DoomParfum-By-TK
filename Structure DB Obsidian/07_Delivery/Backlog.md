@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: product_backlog
 status: draft
 owner: project
-updated: 2026-11-23
+updated: 2026-11-26
 tags:
   - doomparfum
   - delivery
@@ -407,3 +407,15 @@ Existing S3 image43be51f1/container69d92c01 restored healthy on127.0.0.1:3000 by
 ## 2026-11-26 — Frontend V1.1 (unallocated)
 
 Proposed by the Owner after V1: design upgrade, English and Thai UI, sticky header. NOT STARTED. Needs the V1 merge, then a docs-only Planning Amendment (DEVELOPMENT_WORKFLOW §3.4) merged by the Owner. The design proposal v2 file must be supplied first. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
+
+## 2026-11-26 — Frontend V1.1 allocated
+
+Replaces the unallocated entry above.
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-01 | IMPLEMENT | #36 | `feat/imp-web-01-luxury-frontend` | #35 | MERGED `ab3351a8432d1d6664a6b4281784cfea56b0b9fa` | None; A05 manual checks deferred |
+| DPT-PLAN-013 | PLAN (amendment) | NOT CREATED | `plan/frontend-v1-1-design-upgrade` | `ab3351a8432d1d6664a6b4281784cfea56b0b9fa` | Agent side ready, local only | Owner: publication, review, merge |
+| IMP-WEB-02 (proposed ID) | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` (proposed) | merged DPT-PLAN-013 | NOT STARTED | Gate C intake after that merge |
+
+[[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]

@@ -2,7 +2,7 @@
 id: IMP-WEB-01
 project: DoomParfum By TK
 type: implementation_task
-status: acceptance-pending
+status: merged
 owner: human-owner
 updated: 2026-11-26
 requirements: [R01, R03, R04, R13, R14, R21]
@@ -224,3 +224,7 @@ State: CLOSED. Agent/role: Claude Code, verification and records. Intake class A
 - Publication: `LOCAL_ONLY` / `NOT_PUSHED` at commit time; no authority for a push or PR change in this session. `AGENT_CREDENTIAL_REQUIRED` stays open.
 
 Next: Owner authorizes one push, the PR description update and Ready for Review; Owner reviews and merges.
+
+## Post-merge record — 2026-11-26 (written by DPT-PLAN-013 S1)
+
+The Owner merged [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) at 2026-11-25T18:40:31Z. Merge commit `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`, parents `61932bef147816272a06cbe6eba9363940fa4baf` and `83234ddf30050db0b68a382221896847bbb30dc6`; verified equal to remote `main`. Task state: MERGED. Gate A is closed. A05 stays PARTIAL with the Owner's deferral and the A10 LAN probe stays NOT RUN. The receipt is unchanged; "merge pending" statements above are historical. No deployment. V1.1: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]].
