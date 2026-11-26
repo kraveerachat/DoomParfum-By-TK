@@ -230,7 +230,8 @@ test.describe("A08 reflow", () => {
     expect(h1.lang).toBe("th");
     expect(h1.spacing).toBe("normal");
     expect(h1.ratio).toBeGreaterThanOrEqual(1.35);
-    expect(h1.face).toMatch(/^"?Noto Sans Thai/);
+    // T1 (Owner, CP4): Thai display is Fahkwang 300 after Bodoni Moda (Latin only), Noto as fallback.
+    expect(h1.face).toMatch(/^"?Bodoni Moda"?, "?Fahkwang"?, "?Noto Sans Thai/);
   });
 });
 

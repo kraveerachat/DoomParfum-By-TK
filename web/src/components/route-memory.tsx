@@ -21,8 +21,15 @@ function focusTarget(target: HTMLElement | null) {
   if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
   if (startedBy === "pointer") {
     // DPT-PLAN-013 6.1: a later key press must not draw a ring on a heading focused after a click.
+    // A window losing focus (a screenshot tool, another app) also fires blur while the heading stays
+    // the active element; only a real move of focus ends the pointer state (IMP-WEB-02 CP5 fix).
     target.setAttribute("data-pointer-focus", "");
-    target.addEventListener("blur", () => target.removeAttribute("data-pointer-focus"), { once: true });
+    const onBlur = () => {
+      if (document.activeElement === target) return;
+      target.removeAttribute("data-pointer-focus");
+      target.removeEventListener("blur", onBlur);
+    };
+    target.addEventListener("blur", onBlur);
   }
   target.focus({ preventScroll: true });
 }

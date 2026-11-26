@@ -7,7 +7,7 @@ const PAIRS = [
   ["/explore", "/th/explore", "Explore mock fragrances · DoomParfum By TK", "สำรวจน้ำหอมจำลอง · DoomParfum By TK"],
   ["/perfume/paper-study-a", "/th/perfume/paper-study-a", "Paper study A · Mock study · DoomParfum By TK", "Paper study A · แบบศึกษาจำลอง · DoomParfum By TK"],
   ["/notes", "/th/notes", "Notes · DoomParfum By TK", "โน้ตกลิ่น · DoomParfum By TK"],
-  ["/about", "/th/about", "About · DoomParfum By TK", "เกี่ยวกับ · DoomParfum By TK"],
+  ["/about", "/th/about", "About · DoomParfum By TK", "เกี่ยวกับเรา · DoomParfum By TK"],
 ] as const;
 
 test.describe("V01 ten routes and their 404s", () => {
@@ -84,7 +84,7 @@ test.describe("V02 translation coverage", () => {
   test("dialogs and the drawer are Thai on Thai pages", async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await ready(page, "/th/explore");
-    for (const name of ["เมนู", "ค้นหาแคตตาล็อกจำลอง", "โปรไฟล์ยังไม่เปิดใช้ในการจำลองนี้"]) {
+    for (const name of ["เมนู", "ค้นหาในแคตตาล็อกจำลอง", "โปรไฟล์ยังไม่เปิดใช้ในฉบับจำลองนี้"]) {
       await page.getByRole("button", { name, exact: true }).click();
       await expect(page.getByRole("dialog")).toBeVisible();
       expect(await strayLatin(page)).toEqual([]);
@@ -144,13 +144,13 @@ test.describe("V05 language switch", () => {
 test.describe("V06 search in Thai", () => {
   test("Thai pages find studies by Thai text and by the English source", async ({ page }) => {
     await ready(page, "/th/explore");
-    const input = page.getByRole("textbox", { name: "ค้นหาแคตตาล็อกจำลอง" });
+    const input = page.getByRole("textbox", { name: "ค้นหาในแคตตาล็อกจำลอง" });
     await input.fill("หมึกยามดึก");
     await expect(page.locator("[data-entry]")).toHaveCount(1);
     await input.fill("late ink");
     await expect(page.locator("[data-entry]")).toHaveCount(1);
     await input.fill("ไม่มีคำนี้เลย");
-    await expect(page.getByText("ไม่มีแบบศึกษาจำลองที่ตรงกับตัวกรองนี้")).toBeVisible();
+    await expect(page.getByText("ไม่พบแบบศึกษาที่ตรงกับตัวกรอง")).toBeVisible();
   });
 
   test("English pages are not widened by draft Thai text", async ({ page }) => {
@@ -245,6 +245,111 @@ test.describe("V09 language control at every width", () => {
   }
 });
 
+test.describe("CP4 selections (Owner, 2026-11-26)", () => {
+  test("T1: Thai headings render in Fahkwang 300, English headings in Bodoni Moda, body in Noto Sans Thai", async ({ page }) => {
+    const fonts: string[] = [];
+    page.on("response", (r) => { if (r.url().endsWith(".woff2")) fonts.push(r.url().split("/").pop()!); });
+    await ready(page, "/th/notes");
+    const h1 = await page.locator("main h1").evaluate((el) => {
+      const s = getComputedStyle(el);
+      return { family: s.fontFamily, weight: s.fontWeight, spacing: s.letterSpacing, settings: s.fontVariationSettings, ratio: parseFloat(s.lineHeight) / parseFloat(s.fontSize) };
+    });
+    expect(h1.family).toMatch(/^"?Bodoni Moda"?, "?Fahkwang/);
+    expect(h1.weight).toBe("300");
+    expect(h1.spacing).toBe("normal");
+    expect(h1.settings).toBe("normal");
+    expect(h1.ratio).toBeGreaterThanOrEqual(1.45);
+    expect(await page.evaluate(() => document.fonts.check('300 50px "Fahkwang"', "โน้ตกลิ่น"))).toBe(true);
+    expect(await page.locator("main p").first().evaluate((el) => getComputedStyle(el).fontFamily)).toMatch(/^"?Noto Sans Thai/);
+    expect(fonts.some((f) => f.startsWith("fahkwang-thai-300"))).toBe(true);
+    // A Latin name on a Thai page keeps Bodoni Moda 400.
+    await ready(page, "/th/perfume/paper-study-c");
+    const name = await page.locator("main h1").evaluate((el) => [el.getAttribute("lang"), getComputedStyle(el).fontFamily, getComputedStyle(el).fontWeight]);
+    expect(name).toEqual(["en", expect.stringMatching(/^"?Bodoni Moda/), "400"]);
+  });
+
+  test("T1: an English page without Thai text loads no Thai display font", async ({ page }) => {
+    const fonts: string[] = [];
+    page.on("response", (r) => { if (r.url().endsWith(".woff2")) fonts.push(r.url().split("/").pop()!); });
+    await ready(page, "/about");
+    expect(fonts.filter((f) => f.startsWith("fahkwang"))).toEqual([]);
+  });
+
+  test("T2: the hero text is centred on the art at 1440", async ({ page }) => {
+    await page.setViewportSize({ width: 1440, height: 1000 });
+    await ready(page, "/");
+    const [text, art] = await page.evaluate(() =>
+      ["[data-hero-text]", ".hero-art"].map((s) => {
+        const r = document.querySelector(s)!.getBoundingClientRect();
+        return r.top + r.height / 2;
+      }),
+    );
+    expect(Math.abs(text! - art!)).toBeLessThanOrEqual(24);
+    await expect(page.getByText("Vol. I")).toHaveCount(0);
+  });
+
+  test("T3: the record sheet shows the record's own fields with distinct unknown and empty states", async ({ page }) => {
+    await ready(page, "/perfume/paper-study-a");
+    const sheet = page.locator("[data-record-sheet]");
+    await expect(sheet.locator("dt")).toHaveText(["Family", "Top", "Heart", "Base", "General notes", "Accords"]);
+    await expect(sheet.locator("dd")).toHaveText(["Bright study", "Ivrel", "Not supplied in this mock", "No entries", "Not supplied in this mock", "Not supplied in this mock"]);
+    await expect(sheet.locator("dd[data-field='unknown']").first()).toHaveCSS("font-style", "italic");
+    // The same record in the layer section below says the same things.
+    await expect(page.locator("[data-layer='heart'] [data-field='unknown']")).toHaveCount(1);
+    await expect(page.locator("[data-layer='base'] [data-field='empty']")).toHaveCount(1);
+    await ready(page, "/th/perfume/stone-study-j");
+    await expect(page.locator("[data-record-sheet] dt")).toHaveText(["ตระกูลกลิ่น", "ท็อปโน้ต", "ฮาร์ตโน้ต", "เบสโน้ต", "โน้ตทั่วไป", "แอคคอร์ด"]);
+    await expect(page.locator("[data-record-sheet] dd").nth(3)).toHaveText("Ondrith, Marovane, Luthmere");
+  });
+
+  test("T4: the compact toolbar keeps visible labels, full borders and 44px controls on one row", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 900 });
+    await ready(page, "/explore");
+    const fields = await page.locator("#explore-filters .toolbar-field").evaluateAll((els) =>
+      els.map((el) => {
+        const label = el.querySelector("label")!.getBoundingClientRect();
+        const select = el.querySelector("select")!;
+        const box = select.getBoundingClientRect();
+        return { sameRow: Math.abs(label.top + label.height / 2 - (box.top + box.height / 2)) < 4, height: box.height, border: getComputedStyle(select).borderTopStyle, top: Math.round(box.top) };
+      }),
+    );
+    expect(fields).toHaveLength(3);
+    for (const f of fields) expect(f).toMatchObject({ sameRow: true, border: "solid" });
+    for (const f of fields) expect(f.height).toBeGreaterThanOrEqual(44);
+    expect(new Set(fields.map((f) => f.top)).size).toBe(1);
+    await expect(page.getByText("Searches the names, house and descriptions of fictional studies.")).toBeVisible();
+  });
+
+  for (const [path, width] of [["/explore", 1440], ["/th/explore", 1440], ["/explore", 1280], ["/th/explore", 1280]] as const) {
+    test(`T4: the first catalogue picture starts at or above 560px on ${path} at ${width}x900`, async ({ page }) => {
+      await page.setViewportSize({ width, height: 900 });
+      await ready(page, path);
+      const top = await page.locator("[data-entry] a > :first-child").first().evaluate((el) => el.getBoundingClientRect().top);
+      expect(top).toBeLessThanOrEqual(560);
+    });
+  }
+
+  test("T8: buttons, fields, chips and dialogs are square; icons keep their shapes", async ({ page }) => {
+    await ready(page, "/explore?family=mock-family-soft");
+    const radii = await page.evaluate(() =>
+      [".button-quiet", ".field-control", ".filter-chip", "[data-mock-marker]"].map((s) => {
+        const el = document.querySelector(s);
+        return el ? getComputedStyle(el).borderTopLeftRadius : "missing";
+      }),
+    );
+    expect(radii.filter((r) => r !== "missing")).toEqual(radii.filter((r) => r !== "missing").map(() => "0px"));
+    await page.getByRole("button", { name: "Profile unavailable in this mock" }).click();
+    expect(await page.locator("[data-panel]").evaluate((el) => getComputedStyle(el).borderTopLeftRadius)).toBe("0px");
+  });
+
+  test("BY TK signature is 11px and stays visible while scrolling", async ({ page }) => {
+    await ready(page, "/about");
+    await page.evaluate(() => scrollTo(0, 1200));
+    const sig = await page.locator("header .text-signature").evaluate((el) => [getComputedStyle(el).fontSize, getComputedStyle(el).opacity, el.getBoundingClientRect().height > 0]);
+    expect(sig).toEqual(["11px", "1", true]);
+  });
+});
+
 test.describe("V13 heading focus follows how the navigation started", () => {
   const ring = (page: Page) => page.locator("main h1").evaluate((el) => document.activeElement === el && getComputedStyle(el).outlineStyle !== "none");
 
@@ -257,6 +362,38 @@ test.describe("V13 heading focus follows how the navigation started", () => {
     expect(await ring(page)).toBe(false);
     await page.keyboard.press("Tab");
     expect(await page.evaluate(() => getComputedStyle(document.activeElement!).outlineStyle)).toBe("solid");
+  });
+
+  test("pointer navigation to Notes: no ring after the window loses and regains focus (screenshot tool)", async ({ page }) => {
+    await ready(page, "/");
+    await page.getByRole("navigation", { name: "Primary" }).getByRole("link", { name: "Notes" }).click();
+    await expect(page.locator("main h1")).toBeFocused();
+    // What a screenshot tool causes: blur on the heading while it stays the active element.
+    await page.locator("main h1").evaluate((el) => {
+      el.dispatchEvent(new FocusEvent("blur"));
+      window.dispatchEvent(new FocusEvent("blur"));
+      window.dispatchEvent(new FocusEvent("focus"));
+    });
+    await page.keyboard.press("PrintScreen");
+    await page.keyboard.press("Shift");
+    expect(await ring(page)).toBe(false);
+  });
+
+  test("an alphabet jump link by pointer focuses its group without a ring", async ({ page }) => {
+    await ready(page, "/notes");
+    await page.locator(".letter-link").nth(1).click();
+    const heading = page.locator("main h3[id^='notes-']").nth(1);
+    await expect(heading).toBeFocused();
+    await page.keyboard.press("Shift");
+    expect(await heading.evaluate((el) => getComputedStyle(el).outlineStyle)).toBe("none");
+  });
+
+  test("the skip link still shows focus on main for keyboard users", async ({ page }) => {
+    await ready(page, "/notes");
+    await page.keyboard.press("Tab");
+    await page.keyboard.press("Enter");
+    await expect(page.locator("main#main-content")).toBeFocused();
+    expect(await page.locator("main#main-content").evaluate((el) => getComputedStyle(el).outlineStyle)).toBe("solid");
   });
 
   test("keyboard navigation: the heading shows the ring", async ({ page }) => {

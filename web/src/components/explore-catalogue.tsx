@@ -124,9 +124,10 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
       </button>
       <div
         id="explore-filters"
-        className={`${filtersOpen ? "grid" : "hidden"} mt-4 grid-cols-1 gap-4 w640:mt-3 w640:grid w640:grid-cols-2 w1024:grid-cols-3 w1024:gap-6`}
+        className={`${filtersOpen ? "grid" : "hidden"} mt-4 grid-cols-1 gap-4 w640:mt-3 w640:grid w640:grid-cols-2 w640:gap-x-6 w640:gap-y-3 w1024:grid-cols-3`}
       >
         <SelectField
+          inline
           ref={familySelect}
           label={t.explore.family}
           value={invalid ? "" : (filters.family ?? "")}
@@ -137,6 +138,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
           onChange={(value) => setFilters({ ...filters, family: value || null })}
         />
         <SelectField
+          inline
           ref={noteSelect}
           label={t.explore.note}
           value={invalid ? "" : (filters.note ?? "")}
@@ -149,6 +151,7 @@ export function ExploreCatalogue({ catalogue }: { catalogue: CatalogueView }) {
           onChange={(value) => setFilters({ ...filters, note: value || null })}
         />
         <SelectField
+          inline
           label={t.explore.sort}
           value={sort}
           options={[

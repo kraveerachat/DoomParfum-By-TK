@@ -72,6 +72,27 @@ const LAYERS = [
   ["base", "III"],
 ] as const;
 
+/**
+ * One record-sheet value (T3). It reads the same field and the same note view as the layer section, so
+ * the summary cannot disagree with the detail: known names, "not supplied" (unknown, in italics) or
+ * "no entries" (authored empty). Names are text here; the links stay in the layer section below.
+ */
+function SheetValue({ field, names, locale, t }: { field: Field<readonly string[]>; names: (id: string) => string | undefined; locale: Locale; t: Dictionary }) {
+  if (field.state === "unknown") {
+    return (
+      <dd className="text-text-secondary italic" data-field="unknown">
+        {t.detail.notSupplied}
+      </dd>
+    );
+  }
+  if (field.value.length === 0) return <dd data-field="empty">{t.detail.emptyEntries}</dd>;
+  return (
+    <dd data-field="known" lang={locale === "th" ? "en" : undefined}>
+      {field.value.map(names).filter(Boolean).join(", ")}
+    </dd>
+  );
+}
+
 export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
   const perfume = find(slug);
   if (!perfume) notFound();
@@ -84,6 +105,8 @@ export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
   const accords = perfume.accords;
   const explore = localize(locale, "/explore");
   const latin = locale === "th" ? "en" : undefined;
+  const noteName = (id: string) => catalogue.notes.find((n) => n.id === id)?.label;
+  const accordName = (id: string) => fixtureSet.accords.find((a) => a.id === id)?.label;
 
   return (
     <>
@@ -127,7 +150,7 @@ export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
           </div>
 
           <div className="w1024:col-span-5 w1024:col-start-8 w1024:ps-6">
-            <dl className="rule-section">
+            <dl className="record-sheet rule-section" data-record-sheet>
               <div className="border-divider flex flex-wrap items-center gap-x-8 border-b py-3">
                 <dt className="text-meta text-text-secondary">{t.detail.family}</dt>
                 <dd>
@@ -148,6 +171,20 @@ export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
                   )}
                 </dd>
               </div>
+              {(
+                [
+                  [t.layers.top, perfume.top, noteName],
+                  [t.layers.heart, perfume.heart, noteName],
+                  [t.layers.base, perfume.base, noteName],
+                  [t.layers.generalNotes, perfume.generalNotes, noteName],
+                  [t.detail.accords, perfume.accords, accordName],
+                ] as const
+              ).map(([label, field, names]) => (
+                <div key={label} className="border-divider flex flex-wrap items-baseline gap-x-8 border-b py-3">
+                  <dt className="text-meta text-text-secondary">{label}</dt>
+                  <SheetValue field={field} names={names} locale={locale} t={t} />
+                </div>
+              ))}
             </dl>
             <p lang={description ? textLang(description, locale) : undefined} className="mt-6 max-w-[48ch]">
               {description ?? (

@@ -26,8 +26,8 @@ export function HomeView({ locale }: { locale: Locale }) {
     <>
       <SyntheticNotice />
       <section className="wrap hero-spread" data-hero>
-        <div className="grid-12 items-end gap-y-10 w768:grid-cols-2 w768:gap-x-6 w1024:grid-cols-12">
-          <div className="w1024:col-span-5 w1024:pb-8">
+        <div className="grid-12 items-end gap-y-10 w768:grid-cols-2 w768:items-center w768:gap-x-6 w1024:grid-cols-12">
+          <div className="w1024:col-span-5 w1024:pb-8" data-hero-text>
             <h1 className={`type-hero ${locale === "th" ? "max-w-[12ch]" : "max-w-[10ch]"}`}>{t.home.h1}</h1>
             <p className="mt-6 max-w-[38ch] w1024:mt-8">{t.home.lead}</p>
             <Link href={href("/explore")} prefetch={false} data-focus-key="hero-explore" className="button-primary mt-8">
