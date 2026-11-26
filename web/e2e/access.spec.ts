@@ -55,7 +55,8 @@ test.describe("A05 keyboard and focus", () => {
     await menu.click();
     const dialog = page.getByRole("dialog", { name: "Navigation" });
     await expect(dialog.getByRole("button", { name: "Close" })).toBeFocused();
-    await expect(dialog.getByRole("link")).toHaveText(["Home", "Explore", "Notes", "About"]);
+    // V1.1: the drawer also carries the language links above the navigation (DPT-PLAN-013 5.2).
+    await expect(dialog.getByRole("navigation", { name: "Menu" }).getByRole("link")).toHaveText(["Home", "Explore", "Notes", "About"]);
     await expect(dialog.getByRole("link", { name: "About" })).toHaveAttribute("aria-current", "page");
     await page.waitForTimeout(320);
     await page.mouse.click(370, 400);

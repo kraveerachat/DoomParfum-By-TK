@@ -79,7 +79,8 @@ test("membership is explicit and an unsupplied relationship is not zero", () => 
   const f = view.entries.find((e) => e.slug === "linen-study-f");
   assert.deepEqual(f?.noteIds, ["mock-note-006", "mock-note-008"], "general notes only; no inferred layers");
   const listed = view.notes.find((n) => n.id === "mock-note-006")?.membership?.find((m) => m.slug === "linen-study-f");
-  assert.deepEqual(listed?.places, ["General notes"]);
+  // V1.1: places are keys; each page labels them in its language (DPT-PLAN-013 4.3).
+  assert.deepEqual(listed?.places, ["generalNotes"]);
 });
 
 test("every referenced study exists as an owned local file", () => {

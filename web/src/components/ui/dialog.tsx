@@ -20,11 +20,11 @@ export function DialogPanel({ children, ...props }: ComponentProps<typeof Primit
   );
 }
 
-export function DialogHeader({ children }: { children: ReactNode }) {
+export function DialogHeader({ children, closeLabel }: { children: ReactNode; closeLabel: string }) {
   return (
     <div className="flex items-center justify-between gap-4 ps-4 pe-2 pt-3 pb-2 md:ps-6 md:pe-4 md:pt-4">
       {children}
-      <Primitive.Close className="icon-button" aria-label="Close" data-dialog-close>
+      <Primitive.Close className="icon-button" aria-label={closeLabel} data-dialog-close>
         <X aria-hidden="true" size={20} strokeWidth={1.5} />
       </Primitive.Close>
     </div>

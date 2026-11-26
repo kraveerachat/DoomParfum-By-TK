@@ -45,5 +45,6 @@ test("no score, price or rating vocabulary reaches the interface", () => {
 });
 
 test("colors come from tokens", () => {
-  assert.deepEqual(hits(/#[0-9a-f]{6}\b/i, ["app/globals.css", "app/layout.tsx"]), []);
+  // The theme colour in the document head moved from app/layout.tsx to the shared root shell (V1.1).
+  assert.deepEqual(hits(/#[0-9a-f]{6}\b/i, ["app/globals.css", "components/root-shell.tsx"]), []);
 });

@@ -50,7 +50,11 @@ export function proxy(request: NextRequest) {
     // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
     if (pathname.startsWith("/_next/image")) return new NextResponse(null, { status: 404 });
     // An address that cannot be decoded is served the unavailable view by a path no route uses.
-    if (!decodes(pathname)) return NextResponse.rewrite(new URL("/unavailable", request.url), { request: { headers } });
+    // A Thai address gets the Thai unavailable view (DPT-PLAN-013 4.2); the prefix is plain ASCII.
+    if (!decodes(pathname)) {
+      const target = pathname === "/th" || pathname.startsWith("/th/") ? "/th/unavailable" : "/unavailable";
+      return NextResponse.rewrite(new URL(target, request.url), { request: { headers } });
+    }
     // Redirected here, not by the framework, so that the response carries the headers below.
     if (pathname !== "/" && pathname.endsWith("/")) {
       const url = new URL(request.url);

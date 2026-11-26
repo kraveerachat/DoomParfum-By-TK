@@ -2,21 +2,25 @@
 
 import Link from "next/link";
 import { SyntheticNotice } from "@/components/mock-label";
+import { useLocale, useT } from "@/i18n/client";
+import { localize } from "@/i18n/locale";
 
 /** Recoverable render failure. Technical detail is never shown. */
-export default function RenderError({ retry }: { error: Error; retry: () => void }) {
+export function RenderErrorView({ retry }: { retry: () => void }) {
+  const t = useT();
+  const locale = useLocale();
   return (
     <>
       <SyntheticNotice />
       <div className="wrap pt-10 w1024:pt-20" role="alert">
-        <h1 className="type-page max-w-[18ch]">This page could not be shown</h1>
-        <p className="measure mt-4">The local page failed to render. Try again, or return to the mock catalogue.</p>
+        <h1 className="type-page max-w-[18ch]">{t.errors.renderTitle}</h1>
+        <p className="measure mt-4">{t.errors.renderText}</p>
         <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
           <button type="button" className="button-primary" onClick={retry}>
-            Retry
+            {t.errors.retry}
           </button>
-          <Link href="/explore" prefetch={false} className="link-action">
-            Return to Explore
+          <Link href={localize(locale, "/explore")} prefetch={false} className="link-action">
+            {t.errors.returnExplore}
           </Link>
         </div>
       </div>

@@ -26,14 +26,14 @@ const KEYS = {
 
 const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 // Markup, URLs, mail links, bare domains, and control or bidirectional override characters.
-const UNSAFE =
+export const UNSAFE =
   /[<>]|\b[a-z][a-z0-9+.-]*:\S|\/\/|\bwww\.|\b[a-z0-9-]+\.(?:com|net|org|io|co|test|example|shop|store|th)\b|[\u0000-\u0009\u000b-\u001f\u007f-\u009f‎‏‪-‮⁦-⁩]/i;
 const STUDY_SLUG = /^[a-z]+-study-[a-z]$/;
 const STUDY_NAME = /\bstudy\b|แบบศึกษา/i;
 const PAGE_IDS = ["main-content", "purpose", "demonstrates", "scope", "journal", "credits", "explore-filters"];
 
-type Obj = Record<string, unknown>;
-const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
+export type Obj = Record<string, unknown>;
+export const isObj = (v: unknown): v is Obj => typeof v === "object" && v !== null && !Array.isArray(v);
 
 export function validateFixtures(input: unknown): string[] {
   const errors: string[] = [];

@@ -3,7 +3,7 @@
 import { ChevronDown } from "lucide-react";
 import { useId, type Ref } from "react";
 
-type Option = { readonly value: string; readonly label: string };
+type Option = { readonly value: string; readonly label: string; readonly lang?: string | undefined };
 type Props = {
   readonly label: string;
   readonly value: string;
@@ -30,7 +30,7 @@ export function SelectField({ label, value, options, onChange, ref, id }: Props)
           className="field-control appearance-none pe-11 text-ellipsis"
         >
           {options.map((option) => (
-            <option key={option.value} value={option.value}>
+            <option key={option.value} value={option.value} lang={option.lang}>
               {option.label}
             </option>
           ))}

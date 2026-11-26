@@ -3,6 +3,7 @@
 import { usePathname } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import type { Entry } from "@/fixtures/view-model";
+import type { FilterIds } from "./language-links";
 import { navigation } from "./navigation-memory";
 import { MenuDialog } from "./menu-dialog";
 import { ProfileDialog } from "./profile-dialog";
@@ -39,7 +40,7 @@ function fadeOutCopy() {
 }
 const dropCopies = () => document.querySelectorAll("[data-panel-copy]").forEach((el) => el.remove());
 
-export function OverlayProvider({ entries, children }: { entries: readonly Entry[]; children: ReactNode }) {
+export function OverlayProvider({ entries, filterIds, children }: { entries: readonly Entry[]; filterIds: FilterIds; children: ReactNode }) {
   const [active, setActive] = useState<OverlayName | null>(null);
   const trigger = useRef<HTMLElement | null>(null);
   const restoreFocus = useRef(true);
@@ -105,7 +106,7 @@ export function OverlayProvider({ entries, children }: { entries: readonly Entry
         {children}
       </div>
       <div className="scrim" aria-hidden="true" />
-      <MenuDialog {...dialog("menu")} />
+      <MenuDialog {...dialog("menu")} filterIds={filterIds} />
       <SearchDialog {...dialog("search")} entries={entries} />
       <ProfileDialog {...dialog("profile")} />
     </Context>

@@ -13,7 +13,14 @@ export function matchesText(query: string, fields: readonly (string | null)[]): 
   return needle === "" || fields.some((f) => f !== null && fold(f).includes(needle));
 }
 
-export const matchesQuery = (e: Entry, query: string) => matchesText(query, [e.name, e.house, e.description]);
+const thaiQuery = (query: string) => /[฀-๿]/.test(query);
+
+/** Extra representations join only where DPT-PLAN-013 4.5 allows, so English results never change. */
+const withExtra = (query: string, x: { readonly extra: readonly string[]; readonly extraNeedsThai: boolean }) =>
+  x.extraNeedsThai && !thaiQuery(query) ? [] : x.extra;
+
+export const matchesQuery = (e: Entry, query: string) =>
+  matchesText(query, [e.name, e.house, e.description, ...withExtra(query, e)]);
 
 const collator = new Intl.Collator(["en", "th"], { sensitivity: "base", numeric: true });
 const byId = (a: { id: string }, b: { id: string }) => (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
@@ -40,7 +47,7 @@ export function filterEntries(
 
 export function filterNotes(notes: readonly NoteView[], query: string, family: string | null): NoteView[] {
   return notes
-    .filter((n) => matchesText(query, [n.label, n.descriptor]) && (family === null || n.family?.id === family))
+    .filter((n) => matchesText(query, [n.label, n.descriptor, ...withExtra(query, n)]) && (family === null || n.family?.id === family))
     .sort((a, b) => collator.compare(a.label, b.label) || byId(a, b));
 }
 
@@ -66,12 +73,12 @@ export function parseQuery(
   return { filters, invalid, unsupported };
 }
 
-export function exploreHref(filters: Filters): string {
+export function exploreHref(filters: Filters, base = "/explore"): string {
   const params = new URLSearchParams();
   if (filters.family) params.set("family", filters.family);
   if (filters.note) params.set("note", filters.note);
   const query = params.toString();
-  return query ? `/explore?${query}` : "/explore";
+  return query ? `${base}?${query}` : base;
 }
 
 export const countLabel = (count: number) => `${count} mock ${count === 1 ? "study" : "studies"}`;

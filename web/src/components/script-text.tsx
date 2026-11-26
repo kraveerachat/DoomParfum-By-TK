@@ -1,11 +1,13 @@
-import { isThai } from "@/catalogue/search";
+"use client";
 
-/** Marks Thai text so it is announced, shaped and spaced as Thai. */
-export const scriptLang = (text: string) => (isThai(text) ? "th" : undefined);
+import { useLocale } from "@/i18n/client";
+import { textLang } from "@/i18n/locale";
 
+/** Marks text in the other script, so it is announced, shaped and spaced in its own language. */
 export function ScriptText({ children, className }: { children: string; className?: string }) {
+  const locale = useLocale();
   return (
-    <span lang={scriptLang(children)} className={className}>
+    <span lang={textLang(children, locale)} className={className}>
       {children}
     </span>
   );

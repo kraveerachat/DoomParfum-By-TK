@@ -57,3 +57,17 @@ export type FixtureSet = {
   readonly articles: readonly ArticleFixture[];
   readonly featured: readonly string[];
 };
+
+/** Thai overlay text (DPT-PLAN-013 4.3). Only the Owner marks text reviewed, with a review record. */
+export type OverlayText<T = string> =
+  | { readonly th: T; readonly review: "draft" }
+  | { readonly th: T; readonly review: "reviewed"; readonly reviewRecord: string };
+
+export type ThaiOverlay = Marked & {
+  readonly families: Readonly<Record<string, { readonly descriptor: OverlayText }>>;
+  readonly notes: Readonly<Record<string, { readonly descriptor: OverlayText }>>;
+  readonly perfumes: Readonly<Record<string, { readonly description: OverlayText }>>;
+  readonly articles: Readonly<
+    Record<string, { readonly title: OverlayText; readonly excerpt: OverlayText; readonly body: OverlayText<readonly string[]> }>
+  >;
+};
