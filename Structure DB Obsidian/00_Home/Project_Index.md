@@ -288,3 +288,7 @@ New S4 records supersede historical publication/decision status without changing
 ## 2026-11-26 — IMP-WEB-02 Frontend V1.1
 
 [[IMP-WEB-02_Frontend_V1_1]], [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]], [[2026-11-26_IMP-WEB-02_S1_Report]], [[2026-11-26_IMP-WEB-02_S1_Summary]].
+
+## 2026-11-26 — IMP-WEB-02 S2
+
+[[2026-11-26_IMP-WEB-02_S2_Report]], [[2026-11-26_IMP-WEB-02_S2_Summary]], [[IMP-WEB-02_CP5_Translation_Review]]. [[IMP-WEB-02_Frontend_V1_1]]

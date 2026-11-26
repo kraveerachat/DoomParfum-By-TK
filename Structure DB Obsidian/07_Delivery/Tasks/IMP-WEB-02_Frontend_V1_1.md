@@ -2,7 +2,7 @@
 id: IMP-WEB-02
 project: DoomParfum By TK
 type: implementation_task
-status: owner-review
+status: acceptance-pending
 owner: human-owner
 updated: 2026-11-26
 requirements: [R01, R03, R04, R13, R14, R21]
@@ -16,7 +16,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: CP4 OWNER REVIEW PENDING. S1 completed CP0 to CP4 on the agent side; nothing is accepted. CP5 follows the Owner's answers.
+- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review. Waiting for the Owner's review, the A05 deferral for this stage and publication authority.
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
@@ -51,7 +51,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 
 | Session | Purpose | State | Result | Checkpoint SHA | Evidence |
 |---|---|---|---|---|---|
-| S1 | CP0–CP4 | CLOSED | CP4 REVIEW PENDING | code `733c59da80fb22f8164859d756f1f24c1bcd008f`; records commit follows | [[2026-11-26_IMP-WEB-02_S1_Report]] |
+| S1 | CP0–CP4 | CLOSED | CP4 answered by the Owner | code `733c59da80fb22f8164859d756f1f24c1bcd008f`; records `bd477f2` | [[2026-11-26_IMP-WEB-02_S1_Report]] |
+| S2 | CP4 selections, CP5, independent review | CLOSED | PASS agent side; ACCEPTANCE PENDING | code `5d63f8809523b5d31b7888852fd44b1f57956874`; records commit follows | [[2026-11-26_IMP-WEB-02_S2_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -70,6 +71,17 @@ CP0 (main `3e87027`, V1 image `sha256:43be51f1…` restarted without rebuild): `
 - Git: code `733c59da80fb22f8164859d756f1f24c1bcd008f`; records commit follows. `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`.
 - Next: Owner answers the CP4 form; then CP5.
 
+### Session S2 — CP4 selections and CP5
+
+State: CLOSED. Agent: Claude Code. Class A. Start `bd477f2`.
+
+- Owner decisions (chat, 2026-11-26): T1 Fahkwang 300; T2 C centred hero; T3 B record sheet; T4 B compact toolbar; T5 A stable header; T6 A compact link; T7 A equal columns; T8 B square corners; BY TK 11px; Thai terminology ท็อปโน้ต / ฮาร์ตโน้ต / เบสโน้ต, โน้ตทั่วไป, ตระกูลกลิ่น, แอคคอร์ด, โครงสร้างกลิ่น 3 ระดับ, สำรวจตามตระกูลกลิ่น, เกี่ยวกับเรา, ไม่ได้ระบุ, ไม่มีรายการ; fictional names, family and accord labels unchanged; Paper study L unchanged. The direction is approved; each Thai line stays draft.
+- Work, fixes, tools, tests and limits: [[2026-11-26_IMP-WEB-02_S2_Report]]. Final candidate `5d63f8809523b5d31b7888852fd44b1f57956874`; preview `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`.
+- Tests: unit 117/0; Chrome 259/0; Edge 259/0; clean clone and uncached image builds PASS; audit 0; scans clean.
+- Independent review: same-vendor fresh sub-agent, CONDITIONAL; blockers fixed and retested; report SHA-256 `c05a9682ad7793c27ebd94b7f0fcdb34b2c2f65b0ca50b2ea258b0ebcf9df3ef` kept outside Git.
+- Not run: screen reader, physical phone, Safari, Firefox, LAN probe, Docker dev and recovery drills. A05 PARTIAL.
+- Next: Owner review of the site and [[IMP-WEB-02_CP5_Translation_Review]]; Owner deferral of the A05 manual checks for this stage; publication authority. Then the receipt and Draft PR.
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -77,4 +89,8 @@ CP0 (main `3e87027`, V1 image `sha256:43be51f1…` restarted without rebuild): `
 | [[2026-11-26_IMP-WEB-02_S1_Report]] | S1 | `5c4e1d4d0c7fa6860da88b5e050a1ee183cd84cbcc3851072d6d9c9cd89826da` | PUBLIC_SAFE |
 | [[2026-11-26_IMP-WEB-02_S1_Summary]] | S1 | `775c73624eae13940c0361e4d723849311cdf172cf71f4bd356856f026fa38ea` | PUBLIC_SAFE |
 
-Owner packet: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]]. No receipt yet (after CP5).
+| [[2026-11-26_IMP-WEB-02_S2_Report]] | S2 | `38d75c19aa0c070dcb9177a4d0312228962c49ebb95da2679c8a620c473f4a69` | PUBLIC_SAFE |
+| [[2026-11-26_IMP-WEB-02_S2_Summary]] | S2 | `87bbc8c9a1642a01d05a7792238917cd53d7508ad754a9dee4a0a4000f104ca8` | PUBLIC_SAFE |
+| Independent review (outside Git; names local paths) | S2 | `c05a9682ad7793c27ebd94b7f0fcdb34b2c2f65b0ca50b2ea258b0ebcf9df3ef` | PRIVATE_EVIDENCE_NOT_PUBLISHED |
+
+Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending.

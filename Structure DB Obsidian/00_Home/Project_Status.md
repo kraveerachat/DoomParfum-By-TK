@@ -12,6 +12,10 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) selections built, CP5 verified
+
+Supersedes the CP4 entry below. The Owner chose T1 Fahkwang 300, T2 centred hero, T3 record sheet, T4 compact toolbar, T5 stable header, T6 compact language link, T7 equal columns, T8 square corners, BY TK 11px and refined Thai terminology. Built and verified at `5d63f8809523b5d31b7888852fd44b1f57956874`; preview http://127.0.0.1:3000/ runs `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`. Unit 117, Chrome 259 and Edge 259 pass; independent same-vendor review CONDITIONAL with both blockers fixed. ACCEPTANCE PENDING: Owner review, A05 deferral, Thai line review, publication authority. `LOCAL_ONLY`. [[IMP-WEB-02_Frontend_V1_1]]
+
 ## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) at the CP4 Owner review
 
 PR #37 (DPT-PLAN-013) is MERGED as `3e87027fbdbbb016c148a84ca33775e64cccf3e0`. [[IMP-WEB-02_Frontend_V1_1]] completed CP0–CP4 locally: English and Thai routes, sticky header with TH/EN, gold–bronze tokens, R1–R5 rules and page refinements, live at http://127.0.0.1:3000/ (image `sha256:177c02e5e5b9f82b7920a3adaddd51ba8bdd7fc2a83c8771c5db4fec91537eaf`; V1 kept as `doomparfum-web:v1-rollback`). Unit 116, Chrome 242 and Edge 242 tests pass. No Thai display font is selected. Waiting for the Owner's answers in [[IMP-WEB-02_CP4_Owner_Review]]; CP5, independent review and publication follow. `LOCAL_ONLY`, no PR. PR #8, U01/r14 and the database are untouched.

@@ -545,3 +545,7 @@ Rejected from the proposal: `dp_locale` cookie, `/dev/type-specimen` route, unde
 ## 2026-11-26 — IMP-WEB-02 CP4 (no new decision)
 
 Verified: PR #37 merged; Owner authorized Gate C, the V11-OD-11 font download, the local rule update and preview replacement. Agent-side technical choices inside the merged contract are recorded in [[2026-11-26_IMP-WEB-02_S1_Report]] (two root layouts, static `unavailable` route, `scroll-margin-top` instead of `scroll-padding-top`, U+2060 in one Thai heading). OPEN for the Owner: T1–T8, V11-OD-03, 04, 08, 10 ([[IMP-WEB-02_CP4_Owner_Review]]). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 CP4 answered by the Owner
+
+Owner-verified (chat, 2026-11-26): T1 Fahkwang 300; T2 C centred hero; T3 B record sheet; T4 B compact toolbar; T5 A stable header; T6 A compact language link; T7 A equal columns (the CP4 6/3/3 render was reported identical to the default; the Owner chose the default regardless); T8 B square corners; V11-OD-08 BY TK 11px; V11-OD-03 Thai terms ท็อปโน้ต / ฮาร์ตโน้ต / เบสโน้ต, โน้ตทั่วไป, ตระกูลกลิ่น, แอคคอร์ด, โครงสร้างกลิ่น 3 ระดับ, สำรวจตามตระกูลกลิ่น, เกี่ยวกับเรา, ไม่ได้ระบุ, ไม่มีรายการ; V11-OD-04 family and accord labels stay Latin; V11-OD-10 no English Paper study L this round. This supersedes "OPEN for the Owner" in the CP4 entry above. Not decided: line-by-line acceptance of the Thai drafts; A05 deferral for this stage; publication. [[IMP-WEB-02_Frontend_V1_1]]

@@ -74,3 +74,7 @@ Git and gh (read-only network), Python, Node with the V1 worktree's installed Pl
 ## 2026-11-26 — IMP-WEB-02 S1 tools
 
 Impeccable (context, detect, references), Taste Skill as composition reference only, npm with the lockfile, Node, Playwright with Chrome and Edge, Docker Compose build and recreate of `doomparfum-web` (rollback tag `doomparfum-web:v1-rollback`), ffmpeg. Bounded downloads under V11-OD-11: three `@fontsource` 5.3.0 tarballs (integrity checked) and three OFL texts from google/fonts, kept in Git-ignored `.local/specimen/`. Project-local untracked `.claude/rules/doomparfum-frontend-design-tools.md` updated (hashes in the S1 report). No global install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 S2 tools
+
+Impeccable doctor (one `hook-not-installed` finding, not acted on), context and detect; Taste Skill as composition reference; npm (lockfile, audit), Node, Playwright with Chrome and Edge, Docker Compose uncached builds and recreate of `doomparfum-web` (rollback tags `cp5-candidate1`, `cp4-rollback`, `v1-rollback`), ffmpeg; one fresh read-only Claude sub-agent for the independent review (report outside Git). Network: npm registry and GitHub API for re-verifying the Fahkwang package and license. No install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]

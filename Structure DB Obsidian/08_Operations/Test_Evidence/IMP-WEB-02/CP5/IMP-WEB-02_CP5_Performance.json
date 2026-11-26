@@ -1,0 +1,130 @@
+{
+ "rows": [
+  {
+   "path": "/",
+   "jsKiB": 172.6,
+   "fontKiB": 103,
+   "fonts": "bodoni-moda-latin-opsz-normal noto-sans-thai-latin-wght-normal noto-sans-thai-thai-wght-normal",
+   "cls": 0.005,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/explore",
+   "jsKiB": 175.1,
+   "fontKiB": 113.1,
+   "fonts": "noto-sans-thai-latin-wght-normal noto-sans-thai-thai-wght-normal bodoni-moda-latin-opsz-normal fahkwang-thai-300-normal",
+   "cls": 0.001,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/perfume/paper-study-c",
+   "jsKiB": 171.4,
+   "fontKiB": 103,
+   "fonts": "noto-sans-thai-latin-wght-normal noto-sans-thai-thai-wght-normal bodoni-moda-latin-opsz-normal",
+   "cls": 0,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/notes",
+   "jsKiB": 174.2,
+   "fontKiB": 103,
+   "fonts": "noto-sans-thai-latin-wght-normal bodoni-moda-latin-opsz-normal noto-sans-thai-thai-wght-normal",
+   "cls": 0.004,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/about",
+   "jsKiB": 172.8,
+   "fontKiB": 103,
+   "fonts": "noto-sans-thai-latin-wght-normal bodoni-moda-latin-opsz-normal noto-sans-thai-thai-wght-normal",
+   "cls": 0.02,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/th",
+   "jsKiB": 172.6,
+   "fontKiB": 113.1,
+   "fonts": "noto-sans-thai-thai-wght-normal noto-sans-thai-latin-wght-normal fahkwang-thai-300-normal bodoni-moda-latin-opsz-normal",
+   "cls": 0.001,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/th/explore",
+   "jsKiB": 175.1,
+   "fontKiB": 113.1,
+   "fonts": "noto-sans-thai-thai-wght-normal noto-sans-thai-latin-wght-normal bodoni-moda-latin-opsz-normal fahkwang-thai-300-normal",
+   "cls": 0.001,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/th/perfume/paper-study-c",
+   "jsKiB": 171.4,
+   "fontKiB": 113.1,
+   "fonts": "fahkwang-thai-300-normal noto-sans-thai-thai-wght-normal bodoni-moda-latin-opsz-normal noto-sans-thai-latin-wght-normal",
+   "cls": 0,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/th/notes",
+   "jsKiB": 174.2,
+   "fontKiB": 113.1,
+   "fonts": "noto-sans-thai-thai-wght-normal fahkwang-thai-300-normal noto-sans-thai-latin-wght-normal bodoni-moda-latin-opsz-normal",
+   "cls": 0.004,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  },
+  {
+   "path": "/th/about",
+   "jsKiB": 172.8,
+   "fontKiB": 113.1,
+   "fonts": "noto-sans-thai-thai-wght-normal noto-sans-thai-latin-wght-normal bodoni-moda-latin-opsz-normal fahkwang-thai-300-normal",
+   "cls": 0.023,
+   "external": 0,
+   "storage": 0,
+   "cookies": 0
+  }
+ ],
+ "extra": {
+  "forced-colors /th/perfume/paper-study-a": {
+   "overflow": 0,
+   "header": "sticky",
+   "h1": true,
+   "transition": "0.12s"
+  },
+  "forced-colors /explore": {
+   "overflow": 0,
+   "header": "sticky",
+   "h1": true,
+   "transition": "0.12s"
+  },
+  "reduced-motion /th/perfume/paper-study-a": {
+   "overflow": 0,
+   "header": "sticky",
+   "h1": true,
+   "transition": "1e-05s"
+  },
+  "reduced-motion /explore": {
+   "overflow": 0,
+   "header": "sticky",
+   "h1": true,
+   "transition": "1e-05s"
+  }
+ }
+}

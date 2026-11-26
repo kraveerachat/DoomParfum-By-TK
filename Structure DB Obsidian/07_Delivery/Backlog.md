@@ -428,3 +428,9 @@ Replaces the unallocated entry above.
 | IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | CP4 Owner review | Owner answers; CP5 |
 
 [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 after CP5
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `5d63f88` | Owner review, A05 deferral, publication authority |
