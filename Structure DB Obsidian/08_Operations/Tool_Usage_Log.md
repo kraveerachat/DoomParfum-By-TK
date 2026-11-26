@@ -66,3 +66,7 @@ Used installed Caveman/ContextMode, Git/gh/Python/PowerShell, Docker Desktop sup
 ## 2026-11-26 — IMP-WEB-01 S5 tools
 
 Git, gh (read-only), Docker CLI, Node, Playwright with installed Chrome and Edge, curl. Design tools available and not used. No install, hook, MCP, client setting or dependency changed. An unintended `busybox:latest` pull was removed by name; container, volume and `doomparfum-web` image inventories are unchanged. [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]]
+
+## 2026-11-26 — DPT-PLAN-013 S1 tools
+
+Git and gh (read-only network), Python, Node with the V1 worktree's installed Playwright and Chrome (read-only on the running preview), Impeccable `detect` (source and five routes) and its skill text. Taste Skill, UI Craft and UI UX Pro Max not run: documentation-only task. `ui-ux-pro-max:brand` requested, out of project scope, not used. Other requested Impeccable commands not executed; they are assigned to Gate C checkpoints. No install, hook, MCP, dependency or client setting changed. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]

@@ -1,0 +1,69 @@
+{
+ "base": "ab3351a8432d1d6664a6b4281784cfea56b0b9fa",
+ "changed_paths": 26,
+ "modified": 18,
+ "markdown": 24,
+ "wiki_links": 871,
+ "relative_links": 13,
+ "contrast_values_recomputed": 26,
+ "ids": {
+  "K": 14,
+  "V": 16,
+  "V11-OD": 12,
+  "T": 8
+ },
+ "git_diff_check_exit": 0,
+ "git_diff_check_output": "",
+ "web_tree": "2cf8c4f5b384605d0239301e5888318923f6d627",
+ "errors": [],
+ "pre_existing_warnings": [
+  "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md: missing owner"
+ ],
+ "paths": [
+  "PRODUCT.md",
+  "Structure DB Obsidian/00_Home/Project_Index.md",
+  "Structure DB Obsidian/00_Home/Project_Status.md",
+  "Structure DB Obsidian/05_UX/Luxury_Design_Tokens_and_Components.md",
+  "Structure DB Obsidian/05_UX/Luxury_Routes_and_Wireframes.md",
+  "Structure DB Obsidian/06_Engineering/Luxury_Docker_Runtime_Proposal.md",
+  "Structure DB Obsidian/06_Engineering/Luxury_Mock_Fixture_Contract.md",
+  "Structure DB Obsidian/07_Delivery/Acceptance_Criteria.md",
+  "Structure DB Obsidian/07_Delivery/Backlog.md",
+  "Structure DB Obsidian/07_Delivery/Planning_PRs/DPT-PLAN-013_Draft_PR_Description.md",
+  "Structure DB Obsidian/07_Delivery/Planning_PRs/DPT-PLAN-013_Frontend_V1_1_Amendment.md",
+  "Structure DB Obsidian/07_Delivery/Planning_PRs/Luxury_Frontend_Acceptance_and_Task_Map.md",
+  "Structure DB Obsidian/07_Delivery/Roadmap.md",
+  "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-012_Luxury_Frontend_Editorial.md",
+  "Structure DB Obsidian/07_Delivery/Tasks/DPT-PLAN-013_Frontend_V1_1_Design_Upgrade.md",
+  "Structure DB Obsidian/07_Delivery/Tasks/IMP-WEB-01_Luxury_Frontend_Docker.md",
+  "Structure DB Obsidian/08_Operations/Agent_Run_Log.md",
+  "Structure DB Obsidian/08_Operations/Change_Log.md",
+  "Structure DB Obsidian/08_Operations/Decision_Log.md",
+  "Structure DB Obsidian/08_Operations/Pending_Questions.md",
+  "Structure DB Obsidian/08_Operations/Receipts/2026-11-26_020413_DPT-PLAN-013_Frontend_V1_1_Planning.md",
+  "Structure DB Obsidian/08_Operations/Reports/DPT-PLAN-013/2026-11-26_DPT-PLAN-013_S1_Report.md",
+  "Structure DB Obsidian/08_Operations/Summaries/DPT-PLAN-013/2026-11-26_DPT-PLAN-013_S1_Summary.md",
+  "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-013/DPT-PLAN-013_Planning_Validation.json",
+  "Structure DB Obsidian/08_Operations/Test_Evidence/DPT-PLAN-013/DPT-PLAN-013_V1_Baseline.json",
+  "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md"
+ ],
+ "stock_validator": {
+  "exit": 1,
+  "findings": 60,
+  "json_wikilink_resolver_limitations": 57,
+  "other_findings": [
+   "Structure DB Obsidian/08_Operations/Tool_Usage_Log.md: missing owner",
+   "Stale test source evidence: database/local.py",
+   "Stale test source evidence: database/validate_docs.py"
+  ],
+  "naming_this_task": [],
+  "modified": false
+ },
+ "not_run": [
+  "unit and browser suites",
+  "font specimen",
+  "V01-V16",
+  "Mermaid rendering",
+  "independent review"
+ ]
+}

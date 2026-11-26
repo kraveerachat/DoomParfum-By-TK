@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: acceptance_criteria
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-26
 tags:
   - doomparfum
   - delivery
@@ -96,3 +96,7 @@ IMP-P1-01..04 must additionally satisfy OBS-01..04, ACL-01..07, IMG-01..06 and R
 [[P1_Pilot_Implementation_Plan]]. Documentation acceptance checks scope/locator/permission contracts
 and schema-name parity; only later runtime/SQL/RLS/object tests can prove enforcement. Owner decisions
 OD-01..06 require explicit accepted/deferred LOCAL/test/rights/CLOUD scope in [[P1_Data_Foundation_Plan]].
+
+## 2026-11-26 — Mock frontend V1.1
+
+V01 to V16 and the extended A01 to A12 are defined in [[DPT-PLAN-013_Frontend_V1_1_Amendment]], section 10. All NOT RUN. They accept the synthetic mock only and satisfy none of the real-data criteria above.

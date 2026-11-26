@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: task
 status: ready-for-review
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, planning, frontend, mock-only]
 source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ---
@@ -84,3 +84,7 @@ Owner reviews the concrete packet and reference-depth limits, then supplies new 
 ## Git / preservation / remaining work
 
 Base remains `03e2ab6080373033c02afc7ada7be2ceab5f24e2`. Root PR8 checkout preserved, no branch switch/reset. No tools installed/configured, no dependencies, runtime, private data, images, source access expansion, deployment, credentials, push, PR or merge. U01/POST30 decisions remain unchanged. Exact dependency/font/image pins and all A01-A12 implementation evidence remain future approved work. Final-containing local checkpoint is in Git log/chat handoff; it cannot be self-embedded in these same committed records.
+
+## Amendment pointer — 2026-11-26
+
+Planning PR #35 was merged as `61932bef147816272a06cbe6eba9363940fa4baf` and implemented by [[IMP-WEB-01_Luxury_Frontend_Docker]] (PR #36, merged `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`). Earlier LOCAL_ONLY and NOT STARTED statements above are historical. Frontend V1.1 is proposed separately in [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]; this note's reports and receipt are unchanged.

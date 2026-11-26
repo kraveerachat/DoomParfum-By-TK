@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: architecture_proposal
 status: proposed
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, docker, nextjs, runtime, mock-only]
 source_of_truth: "../../README.md"
 ---
@@ -73,3 +73,7 @@ Production proposal uses per-response nonces and dynamic rendering so framework 
 All five routes, error pages and response variants must send noindex metadata (and proposed `X-Robots-Tag: noindex` for responses). Future public link access is a preference only; this task remains loopback. Do not block crawling with robots.txt while relying on a crawler to discover noindex. noindex does not authenticate users or protect private information, and its effect depends on crawler support. [Google noindex guidance](https://developers.google.com/search/docs/crawling-indexing/block-indexing), inspected 2026-11-23. No canonical URL pointing to an invented domain, social product claim or fake review schema.
 
 Future Cloudflare exposure requires its own bounded deployment/security plan and explicit Owner approval. It may expose only the approved synthetic slice; connecting private records is a separate security/data task. A public mock cannot become a public private-data app by changing an environment variable.
+
+## Amendment DPT-PLAN-013 — no runtime change (PROPOSED until merged)
+
+Frontend V1.1 ([[DPT-PLAN-013_Frontend_V1_1_Amendment]]) keeps the loopback preview, container, port, CSP, no-store and no-egress rules above. The only request-handling change planned is that an undecodable address under `/th/` gets the Thai unavailable view. The Thai font specimen is Git-ignored local tooling and never enters an image. Any other proxy or Compose change needs its reason in the implementation PR.

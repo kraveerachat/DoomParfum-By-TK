@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: pending_questions
 status: draft
 owner: project
-updated: 2026-11-10
+updated: 2026-11-26
 tags:
   - doomparfum
   - operations
@@ -82,3 +82,7 @@ flowchart TD
 
 
 Post-review note: OD-01..06 LOCAL/test/rights/CLOUD recommendations are in [[P1_Data_Foundation_Plan]]. No PROPOSED decision is accepted by this update.
+
+## 2026-11-26 — Frontend V1.1 Owner questions
+
+V11-OD-01 to V11-OD-12 are kept in one place, section 11 of [[DPT-PLAN-013_Frontend_V1_1_Amendment]]. Open now, not blocking: V11-OD-12 (publish the proposal text in the public repository; default no). Open with the Gate C start: V11-OD-11. Open at the CP4 review: the rest, except those already marked Owner-directed there. None is answered by this note.

@@ -1,0 +1,206 @@
+{
+  "task": "DPT-PLAN-013",
+  "session": "S1",
+  "date": "2026-11-26",
+  "baseline_main": "ab3351a8432d1d6664a6b4281784cfea56b0b9fa",
+  "method": "Read-only. Playwright with Chrome on the running V1 preview at loopback port 3000; contrast computed from hex values with the WCAG formula. No source, container or image change.",
+  "contrast": {
+    "divider": {
+      "paper": 1.42,
+      "surface": 1.55,
+      "surface-muted": 1.29,
+      "gold-50": 1.32,
+      "navy": 9.96,
+      "ink": 11.59
+    },
+    "gold-300": {
+      "paper": 1.67,
+      "surface": 1.82,
+      "surface-muted": 1.51,
+      "gold-50": 1.55,
+      "navy": 8.49,
+      "ink": 9.87
+    },
+    "gold-500": {
+      "paper": 3.07,
+      "surface": 3.34,
+      "surface-muted": 2.79,
+      "gold-50": 2.85,
+      "navy": 4.61,
+      "ink": 5.36
+    },
+    "bronze-700": {
+      "paper": 5.66,
+      "surface": 6.17,
+      "surface-muted": 5.14,
+      "gold-50": 5.25,
+      "navy": 2.5,
+      "ink": 2.91
+    },
+    "tobacco-900": {
+      "paper": 12.32,
+      "surface": 13.42,
+      "surface-muted": 11.18,
+      "gold-50": 11.42,
+      "navy": 1.15,
+      "ink": 1.34
+    },
+    "gold-on-navy": {
+      "paper": 2.05,
+      "surface": 2.24,
+      "surface-muted": 1.87,
+      "gold-50": 1.9,
+      "navy": 6.89,
+      "ink": 8.02
+    },
+    "control-border": {
+      "paper": 3.85,
+      "surface": 4.2,
+      "surface-muted": 3.5,
+      "gold-50": 3.57,
+      "navy": 3.67,
+      "ink": 4.27
+    },
+    "text-secondary": {
+      "paper": 6.32,
+      "surface": 6.89,
+      "surface-muted": 5.74,
+      "gold-50": 5.86,
+      "navy": 2.24,
+      "ink": 2.6
+    },
+    "ink": {
+      "paper": 16.46,
+      "surface": 17.94,
+      "surface-muted": 14.95,
+      "gold-50": 15.27,
+      "navy": 1.16,
+      "ink": 1.0
+    },
+    "focus": {
+      "paper": 14.15,
+      "surface": 15.42,
+      "surface-muted": 12.85,
+      "gold-50": 13.13,
+      "navy": 1.0,
+      "ink": 1.16
+    },
+    "on-dark": {
+      "paper": 1.0,
+      "surface": 1.09,
+      "surface-muted": 1.1,
+      "gold-50": 1.08,
+      "navy": 14.15,
+      "ink": 16.46
+    }
+  },
+  "v1_geometry": {
+    "explore_first_visual_top_px": {
+      "1920x1080": 653,
+      "1440x900": 653,
+      "1280x900": 653,
+      "390x844": 657
+    },
+    "explore_first_visual_visible_percent": {
+      "1920x1080": 100,
+      "1440x900": 62,
+      "1280x900": 71,
+      "390x844": 42
+    },
+    "detail_1440x900": {
+      "art_top": 234,
+      "art_bottom": 1202,
+      "art_size": [
+        774,
+        968
+      ],
+      "information_text_ends_approx": 570
+    },
+    "home_1440x900": {
+      "h1": [
+        412,
+        562
+      ],
+      "primary_action": [
+        703,
+        751
+      ],
+      "art_and_caption": [
+        158,
+        783
+      ]
+    },
+    "header_height_px": {
+      "320": 73,
+      "375": 73,
+      "768": 73,
+      "1024": 89,
+      "1440": 89
+    }
+  },
+  "v1_h1_outline": [
+    {
+      "path": "mouse, header navigation to About",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "mouse, catalogue card to Detail",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "typing in Explore search, then mouse on card",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "search dialog: typing, then mouse on result",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "mouse, footer link",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "PageDown and PageUp, then mouse navigation",
+      "h1_focused": true,
+      "outline": false
+    },
+    {
+      "path": "hard load of About",
+      "h1_focused": false,
+      "outline": false
+    },
+    {
+      "path": "keyboard Enter on navigation",
+      "h1_focused": true,
+      "outline": true
+    },
+    {
+      "path": "mouse navigation, then PrintScreen and Shift",
+      "h1_focused": true,
+      "outline": true
+    }
+  ],
+  "v1_font_bytes": {
+    "bodoni-moda-latin-opsz-normal": 46260,
+    "noto-sans-thai-latin-ext-wght-normal": 15944,
+    "noto-sans-thai-latin-wght-normal": 30748,
+    "noto-sans-thai-thai-wght-normal": 26924,
+    "total_bundled": 119876
+  },
+  "impeccable_detect": {
+    "source_scan": "no findings; regex rules only, an undercount",
+    "rendered": "five routes, same two findings each: cream-palette (Owner-approved ivory), undersized-ui-text (10px BY TK)"
+  },
+  "framework_documentation": "Bundled Next.js 16.4.6 docs: multiple root layouts supported; full page load between them; global-not-found needed an experimental flag",
+  "limits": [
+    "One machine, Chrome only for the outline cases",
+    "No Thai display font fetched or rendered",
+    "The doubled rule reported at the end of Explore was not reproduced or ruled out",
+    "No screen reader, phone, Safari or Firefox"
+  ]
+}

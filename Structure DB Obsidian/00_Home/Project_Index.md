@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: index
 status: draft
 owner: project
-updated: 2026-11-23
+updated: 2026-11-26
 tags:
   - doomparfum
   - moc
@@ -280,3 +280,7 @@ New S4 records supersede historical publication/decision status without changing
 ## 2026-11-26 — IMP-WEB-01 S5 Frontend V1 closeout
 
 [[IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Report]], [[2026-11-26_010500_IMP-WEB-01_Luxury_Frontend_Docker]], [[2026-11-26_IMP-WEB-01_S5_Summary]].
+
+## 2026-11-26 — DPT-PLAN-013 Frontend V1.1 planning amendment
+
+[[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Draft_PR_Description]], [[2026-11-26_DPT-PLAN-013_S1_Report]], [[2026-11-26_DPT-PLAN-013_S1_Summary]], [[2026-11-26_020413_DPT-PLAN-013_Frontend_V1_1_Planning]]. V1 baseline: [[IMP-WEB-01_Luxury_Frontend_Docker]].

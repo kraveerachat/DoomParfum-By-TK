@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: acceptance_and_task_map
 status: proposed
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, acceptance, task-map, mock-frontend]
 source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ---
@@ -75,3 +75,17 @@ After a complete implementation, one batched inspection round covers desktop/tab
 | LF-OD-05 | Public link later with noindex, via separate Cloudflare plan | DEFERRED deployment; no privacy/auth boundary implied |
 
 No blocker in PR #8, U01 or real-source permissions prevents reviewing the mock plan. Those gates remain mandatory before their own future scopes. Publish requires new scoped publication identity/authorization; this task stops at a local checkpoint and proposed Draft PR body. Human Owner reviews and merges both planning and implementation PRs.
+
+## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+
+LF-01 to LF-05 were delivered by [[IMP-WEB-01_Luxury_Frontend_Docker]] (PR #36, merged `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`); A05 stays PARTIAL. Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], sections 9 to 11.
+
+| ID | Extension for V1.1 |
+|---|---|
+| A01 | Ten URLs, both languages, both 404 views |
+| A08 | Adds 390 and 1920px, Thai text at every width, two-row header reflow |
+| A09 | Adds 1920px and both languages; right-side stress 200 to 260px |
+| A02–A07, A10–A12 | Rerun unchanged, for both languages where text or routes are involved |
+| V01–V16 | New, defined in the amendment; all NOT RUN |
+
+Proposed unit: `IMP-WEB-02`, one branch and one PR, checkpoints CP0–CP5. Prerequisite: this amendment merged by the Owner and its SHA verified. Owner decisions: V11-OD-01 to V11-OD-12.

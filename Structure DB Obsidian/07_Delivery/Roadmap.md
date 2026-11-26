@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: delivery_roadmap
 status: draft
 owner: project
-updated: 2026-11-17
+updated: 2026-11-26
 tags:
   - doomparfum
   - delivery
@@ -354,3 +354,7 @@ Exact corrected source 4fdbd29b3f345fcbce3eb08862748672657ef22c: independent imp
 PR30 offline preview is Owner-merged at4f23cbc858dd818b149674342bfa504e78930088; do not repeat AM-01/IMP-ENR-01. [[Post_PR30_Dependency_and_Gate_Map]] refines prior AM-02..AM-11 into13packet-local proposedunits. Human field/identity review and genuine-principal/stack contract preparation may run in parallel; clean application scope must exist before separately authorized intake. Selected-field/use-rights repository and strict read-only service precede live catalogue/detail UI. Owned mock UI has a separate later approval path. Image placeholders and disabled real matching allow text-first progress; original-PNG intake/delivery and real-input/method work remain independent gated branches.
 
 All15POST30choices PROPOSED/UNANSWERED; no framework/provider/version selected or implementation started. Preserve Cart, buying sources, manual Ordered, purchase history, physical Collection, Dashboard, deferred spending analytics and future research-assistance roadmap. Source/asset/role/schema/Production permissions remain separate; PR8 stays blocked.
+
+## 2026-11-26 — Mock frontend V1.1 sequence
+
+V1 merged (PR #36). Next for the mock frontend: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]] merged by the Owner, then one implementation task with checkpoints CP0 to CP5. Independent of the matching, database, PR #8 and U01 sequences, and it unlocks none of them.

@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: design_system_proposal
 status: proposed
 owner: human-owner
-updated: 2026-11-23
+updated: 2026-11-26
 tags: [doomparfum, tokens, typography, components, motion]
 source_of_truth: "../../README.md"
 ---
@@ -94,3 +94,18 @@ Only transform/opacity/color transitions; no `transition:all`. Search results, t
 | Disclosure | Native details/summary for supporting explanations; essential layer text remains visible |
 
 Prefer native HTML plus Tailwind semantic-token utilities. Selective shadcn usage is limited to accessible dialog primitives; no wholesale dashboard theme or component generator run is authorized. Icons: one locally bundled family selected/pinned during implementation; existing project family takes precedence if one appears. No remote icon service. All component names above are proposals, not existing files or installed modules.
+
+## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+
+V1 above was implemented and merged with PR #36 (`ab3351a8432d1d6664a6b4281784cfea56b0b9fa`) and stays as history. The contract for V1.1 is [[DPT-PLAN-013_Frontend_V1_1_Amendment]]; values are kept there only, so that they cannot drift. Superseded on merge:
+
+| V1 clause above | V1.1 |
+|---|---|
+| `gold`, `gold-readable`, `divider` values | Gold–bronze scale with measured roles; the old names become aliases (3.1) |
+| Gold at most in one rule, one detail and one marker per viewport | Role-based use, about 3% of a viewport, rules R1–R5 (3.1, 3.2) |
+| Display face only at 32px and above; entry title in the body face | Display entry titles, subject to legibility (3.3) |
+| Thai headings always in the body face | Stays in force until the Owner selects a Thai display font from rendered specimens (3.4) |
+| "No sticky global navigation"; z-index list | Sticky header at 20; the other layers are unchanged (5.1) |
+| Corners 0/2/4/8px | Unchanged unless the Owner selects square (T8) |
+
+Unchanged: palette core, control border, focus ring, no gradients, spacing, targets, motion limits, component contracts.
