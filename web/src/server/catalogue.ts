@@ -9,7 +9,7 @@ import { buildArticles, buildCatalogue } from "../fixtures/view-model.ts";
 export const fixtureSet = assertFixtures(fixtures);
 /** Server-only: Thai prose never enters an immutable client chunk. */
 export const overlay = assertOverlay(thaiOverlay, fixtureSet);
-export const catalogue = buildCatalogue(fixtureSet);
+export const catalogue = buildCatalogue(fixtureSet, "en", overlay);
 
 const views = { en: catalogue, th: buildCatalogue(fixtureSet, "th", overlay) } as const;
 const articleViews = { en: buildArticles(fixtureSet), th: buildArticles(fixtureSet, "th", overlay) } as const;

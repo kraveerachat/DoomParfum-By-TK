@@ -136,7 +136,8 @@
   html:not([data-ready]) *::after {
     transition: none !important;
   }
-  p {
+  p,
+  li {
     text-wrap: pretty;
   }
   body {
@@ -733,7 +734,7 @@ html[data-ready] .about-contents:not([data-open]) .contents-list {
 .site-header-inner {
   container: header / inline-size;
 }
-@media (max-height: 31.25rem), (max-width: 20.99rem), print {
+@media (max-height: 31.25rem), print {
   .site-header {
     position: static;
   }
@@ -764,6 +765,11 @@ html[data-header-static] .site-header {
 }
 .lang-current {
   font-weight: 600;
+}
+/* A language name written in Thai is never tracked (DPT-PLAN-013 3.3); only the Latin codes are. */
+.lang-item[lang="th"],
+.lang-item [lang="th"] {
+  letter-spacing: normal;
 }
 .lang-current .lang-label {
   border-color: var(--color-gold-500);

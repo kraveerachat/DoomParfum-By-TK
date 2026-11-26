@@ -174,7 +174,7 @@ test.describe("V07 sticky header", () => {
     });
   }
 
-  test("a fragment target and the skip link target are not hidden under it", async ({ page }) => {
+  test("a fragment target is not hidden under it", async ({ page }) => {
     await page.goto("/about#credits");
     await page.waitForTimeout(300);
     const [bottom, top] = await page.evaluate(() => [
@@ -182,6 +182,34 @@ test.describe("V07 sticky header", () => {
       document.getElementById("credits")!.getBoundingClientRect().top,
     ]);
     expect(top).toBeGreaterThanOrEqual(bottom);
+  });
+
+  test("the skip link target starts below the header", async ({ page }) => {
+    await ready(page, "/about");
+    await page.evaluate(() => scrollTo(0, 1500));
+    await page.keyboard.press("Tab");
+    await page.keyboard.press("Enter");
+    await expect(page.locator("main#main-content")).toBeFocused();
+    const [bottom, top] = await page.evaluate(() => [
+      document.querySelector("header")!.getBoundingClientRect().bottom,
+      document.getElementById("main-content")!.getBoundingClientRect().top,
+    ]);
+    expect(top).toBeGreaterThanOrEqual(bottom - 1);
+  });
+
+  test("Thai language names are never tracked", async ({ page }) => {
+    for (const path of ["/notes", "/th/notes"]) {
+      await ready(page, path);
+      const spacing = await page.locator("footer [lang='th']").evaluateAll((els) => els.map((el) => getComputedStyle(el).letterSpacing));
+      expect(spacing.length).toBeGreaterThan(0);
+      for (const s of spacing) expect(s).toBe("normal");
+    }
+  });
+
+  test("a one-row header stays sticky at 320px", async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 640 });
+    await ready(page, "/about");
+    expect(await page.locator("header").evaluate((el) => getComputedStyle(el).position)).toBe("sticky");
   });
 
   test("focusing a header control never scrolls the page", async ({ page }) => {

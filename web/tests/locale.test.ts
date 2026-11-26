@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
 import { test } from "node:test";
 import { filterEntries, filterNotes } from "../src/catalogue/search.ts";
 import { fixtures } from "../src/fixtures/data.ts";
@@ -89,6 +91,11 @@ test("V06: English results do not change with the Thai overlay", () => {
     assert.deepEqual(filterEntries(v11.entries, q, NONE).map((e) => e.id), filterEntries(v1.entries, q, NONE).map((e) => e.id), q);
     assert.deepEqual(filterNotes(v11.notes, q, null).map((n) => n.id), filterNotes(v1.notes, q, null).map((n) => n.id), q);
   }
+});
+
+test("V06: production builds the English view with the overlay (reviewed text can become searchable)", () => {
+  const source = readFileSync(join(import.meta.dirname, "../src/server/catalogue.ts"), "utf8");
+  assert.match(source, /export const catalogue = buildCatalogue\(fixtureSet, "en", overlay\)/);
 });
 
 test("V06: a reviewed Thai text joins English search only for a Thai query", () => {
