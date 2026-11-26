@@ -1147,3 +1147,11 @@ No push, PR change, merge or deployment.
 | 2026-11-26 | DPT-PLAN-013 / S1 | Claude Code | NOT CREATED | NOT STARTED | Documentation only | Documentation checks; V1 baseline measurements; [[2026-11-26_DPT-PLAN-013_S1_Report]] | PASS, agent side | In the PR or the next record |
 
 No push, PR, merge, deployment or application change.
+
+## 2026-11-26 — IMP-WEB-02 / S1
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-26 | IMP-WEB-02 / S1 | Claude Code | #37 (merged) | NOT CREATED | `web/` and vault records | Unit 116, Chrome 242, Edge 242; [[2026-11-26_IMP-WEB-02_S1_Report]] | CP4 Owner review pending | `733c59da80fb22f8164859d756f1f24c1bcd008f` (code) |
+
+No push, PR, merge or deployment.

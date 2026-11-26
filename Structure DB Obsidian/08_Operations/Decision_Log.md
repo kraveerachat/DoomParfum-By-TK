@@ -541,3 +541,7 @@ Owner-directed in the V1.1 instructions (effective when the amendment is merged)
 Agent proposals for Owner review, with reasons in [[DPT-PLAN-013_Frontend_V1_1_Amendment]]: measured color roles (3.1); specimen outside the application (3.4); two root layouts proven by a spike (4.2); server-only Thai overlay instead of changed fixture fields (4.3); language switch as a document navigation that resets typed text (4.4); English results unchanged by Thai text (4.5); header layer 20 instead of the proposal's 40, which equals the scrim (5.1); label in name for TH and EN (5.2); H1 outline contract from a reproduced case (6.1).
 
 Rejected from the proposal: `dp_locale` cookie, `/dev/type-specimen` route, underline-only selects and hidden help as defaults, per-section uppercase eyebrows, recommendation list, filter bottom sheet, one PR per item. OPEN: V11-OD-01, 03 to 06, 08 to 12. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 CP4 (no new decision)
+
+Verified: PR #37 merged; Owner authorized Gate C, the V11-OD-11 font download, the local rule update and preview replacement. Agent-side technical choices inside the merged contract are recorded in [[2026-11-26_IMP-WEB-02_S1_Report]] (two root layouts, static `unavailable` route, `scroll-margin-top` instead of `scroll-padding-top`, U+2060 in one Thai heading). OPEN for the Owner: T1–T8, V11-OD-03, 04, 08, 10 ([[IMP-WEB-02_CP4_Owner_Review]]). [[IMP-WEB-02_Frontend_V1_1]]

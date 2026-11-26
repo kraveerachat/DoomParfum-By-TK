@@ -284,3 +284,7 @@ New S4 records supersede historical publication/decision status without changing
 ## 2026-11-26 — DPT-PLAN-013 Frontend V1.1 planning amendment
 
 [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Draft_PR_Description]], [[2026-11-26_DPT-PLAN-013_S1_Report]], [[2026-11-26_DPT-PLAN-013_S1_Summary]], [[2026-11-26_020413_DPT-PLAN-013_Frontend_V1_1_Planning]]. V1 baseline: [[IMP-WEB-01_Luxury_Frontend_Docker]].
+
+## 2026-11-26 — IMP-WEB-02 Frontend V1.1
+
+[[IMP-WEB-02_Frontend_V1_1]], [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]], [[2026-11-26_IMP-WEB-02_S1_Report]], [[2026-11-26_IMP-WEB-02_S1_Summary]].

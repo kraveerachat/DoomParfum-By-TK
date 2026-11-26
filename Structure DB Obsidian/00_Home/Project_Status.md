@@ -12,6 +12,10 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) at the CP4 Owner review
+
+PR #37 (DPT-PLAN-013) is MERGED as `3e87027fbdbbb016c148a84ca33775e64cccf3e0`. [[IMP-WEB-02_Frontend_V1_1]] completed CP0–CP4 locally: English and Thai routes, sticky header with TH/EN, gold–bronze tokens, R1–R5 rules and page refinements, live at http://127.0.0.1:3000/ (image `sha256:177c02e5e5b9f82b7920a3adaddd51ba8bdd7fc2a83c8771c5db4fec91537eaf`; V1 kept as `doomparfum-web:v1-rollback`). Unit 116, Chrome 242 and Edge 242 tests pass. No Thai display font is selected. Waiting for the Owner's answers in [[IMP-WEB-02_CP4_Owner_Review]]; CP5, independent review and publication follow. `LOCAL_ONLY`, no PR. PR #8, U01/r14 and the database are untouched.
+
 ## 2026-11-26 — Frontend V1 merged; V1.1 planning amendment prepared (Gate B)
 
 [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) is MERGED as `ab3351a8432d1d6664a6b4281784cfea56b0b9fa` (2026-11-25T18:40:31Z, verified equal to remote `main`), so Gate A is closed and the "merge PENDING" text in the S5 entry below is historical. Gate B: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]] proposes the V1.1 contract, [[DPT-PLAN-013_Frontend_V1_1_Amendment]], on `plan/frontend-v1-1-design-upgrade`; documentation only, `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED` when written. Gate C (code) is NOT STARTED and needs the Owner's merge of that amendment. No Thai display font is selected. A05 stays PARTIAL. PR #8 stays OPEN / DRAFT at `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`; U01/r14 is unchanged. The V1 preview on `127.0.0.1:3000` was left running.

@@ -70,3 +70,7 @@ Git, gh (read-only), Docker CLI, Node, Playwright with installed Chrome and Edge
 ## 2026-11-26 — DPT-PLAN-013 S1 tools
 
 Git and gh (read-only network), Python, Node with the V1 worktree's installed Playwright and Chrome (read-only on the running preview), Impeccable `detect` (source and five routes) and its skill text. Taste Skill, UI Craft and UI UX Pro Max not run: documentation-only task. `ui-ux-pro-max:brand` requested, out of project scope, not used. Other requested Impeccable commands not executed; they are assigned to Gate C checkpoints. No install, hook, MCP, dependency or client setting changed. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 S1 tools
+
+Impeccable (context, detect, references), Taste Skill as composition reference only, npm with the lockfile, Node, Playwright with Chrome and Edge, Docker Compose build and recreate of `doomparfum-web` (rollback tag `doomparfum-web:v1-rollback`), ffmpeg. Bounded downloads under V11-OD-11: three `@fontsource` 5.3.0 tarballs (integrity checked) and three OFL texts from google/fonts, kept in Git-ignored `.local/specimen/`. Project-local untracked `.claude/rules/doomparfum-frontend-design-tools.md` updated (hashes in the S1 report). No global install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]

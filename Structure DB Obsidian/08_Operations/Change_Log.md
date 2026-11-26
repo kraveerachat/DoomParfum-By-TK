@@ -852,3 +852,7 @@ Records only: task note, status, index, backlog and logs updated; S5 report, sum
 ## 2026-11-26 — DPT-PLAN-013 documents
 
 Added: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Draft_PR_Description]], S1 report and summary, receipt, evidence folder. Amended by added sections only: tokens, routes, fixture contract, acceptance map, Docker proposal, PRODUCT.md, DPT-PLAN-012 and IMP-WEB-01 task notes (the latter also moves its status to merged), status, index, backlog, roadmap, acceptance criteria, pending questions and logs. No file in `web/` and no earlier report, evidence or receipt changed.
+
+## 2026-11-26 — IMP-WEB-02 S1
+
+Code checkpoint `733c59da80fb22f8164859d756f1f24c1bcd008f`: `web/` only (two route trees, i18n, overlay, header, tokens, pages, tests). Records: task note, S1 report and summary, CP4 packet with T1–T8 renders and the translation sheet, status, index, backlog and logs. No earlier record changed. Preview replaced by image `sha256:177c02e5e5b9f82b7920a3adaddd51ba8bdd7fc2a83c8771c5db4fec91537eaf`. [[IMP-WEB-02_Frontend_V1_1]]

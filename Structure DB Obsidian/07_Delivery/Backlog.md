@@ -419,3 +419,12 @@ Replaces the unallocated entry above.
 | IMP-WEB-02 (proposed ID) | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` (proposed) | merged DPT-PLAN-013 | NOT STARTED | Gate C intake after that merge |
 
 [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 allocated
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| DPT-PLAN-013 | PLAN | #37 | `plan/frontend-v1-1-design-upgrade` | `ab3351a` | MERGED `3e87027` | None |
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | CP4 Owner review | Owner answers; CP5 |
+
+[[IMP-WEB-02_Frontend_V1_1]]
