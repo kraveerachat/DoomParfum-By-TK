@@ -151,7 +151,7 @@ export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
 
           <div className="w1024:col-span-5 w1024:col-start-8 w1024:ps-6">
             <dl className="record-sheet rule-section" data-record-sheet>
-              <div className="border-divider flex flex-wrap items-center gap-x-8 border-b py-3">
+              <div className="record-row border-divider border-b py-3">
                 <dt className="text-meta text-text-secondary">{t.detail.family}</dt>
                 <dd>
                   {family ? (
@@ -180,7 +180,7 @@ export function DetailView({ locale, slug }: { locale: Locale; slug: string }) {
                   [t.detail.accords, perfume.accords, accordName],
                 ] as const
               ).map(([label, field, names]) => (
-                <div key={label} className="border-divider flex flex-wrap items-baseline gap-x-8 border-b py-3">
+                <div key={label} className="record-row border-divider border-b py-3">
                   <dt className="text-meta text-text-secondary">{label}</dt>
                   <SheetValue field={field} names={names} locale={locale} t={t} />
                 </div>

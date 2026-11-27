@@ -794,9 +794,15 @@ html[data-header-static] .site-header {
 .lang-full {
   display: none;
 }
-.lang-footer {
-  margin-inline-start: -0.5rem;
+/* Record sheet (T3): every value starts on one column. The label column yields on narrow screens and
+   enlarged text, so a value never gets squeezed to a sliver. */
+.record-row {
+  display: grid;
+  grid-template-columns: min(7.5rem, 35%) minmax(0, 1fr);
+  column-gap: 1.5rem;
+  align-items: baseline;
 }
+/* The footer shows full language names, wider than the 44px box, so the row starts on the column edge. */
 .lang-footer ul {
   flex-wrap: wrap;
   gap: 0 0.5rem;
