@@ -794,13 +794,26 @@ html[data-header-static] .site-header {
 .lang-full {
   display: none;
 }
-/* Record sheet (T3): every value starts on one column. The label column yields on narrow screens and
-   enlarged text, so a value never gets squeezed to a sliver. */
+/* Record sheet (T3): every value starts on one column. Where the sheet is too narrow for two columns
+   (a small phone, or enlarged text, since rem follows the root size) each label sits above its value. */
+.record-sheet {
+  container-type: inline-size;
+}
 .record-row {
   display: grid;
-  grid-template-columns: min(7.5rem, 35%) minmax(0, 1fr);
-  column-gap: 1.5rem;
-  align-items: baseline;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0.25rem;
+}
+.record-row dd {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+@container (min-width: 21rem) {
+  .record-row {
+    grid-template-columns: min(7.5rem, 35%) minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: baseline;
+  }
 }
 /* The footer shows full language names, wider than the 44px box, so the row starts on the column edge. */
 .lang-footer ul {
