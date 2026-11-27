@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { test } from "node:test";
@@ -151,4 +152,33 @@ test("V06: Thai and combining-mark queries stay within the 120 code point limit 
   assert.deepEqual(filterEntries(view.entries, "ก".repeat(500), NONE), []);
   assert.deepEqual(filterEntries(view.entries, "(.*)", NONE), []);
   assert.ok(filterEntries(view.entries, "ที่สิบสอง", NONE).some((e) => e.slug === "paper-study-l"));
+});
+
+// The Owner approved exactly these Thai strings on 2026-11-28 (IMP-WEB-02 S6, 192 entries: 160 interface,
+// 32 fixture prose), and the prose carries the "reviewed" mark that lets it join English search (4.5).
+// Editing any Thai string changes this digest: get the Owner's review of the new wording, then update the
+// digest (and, for prose, return the text to draft until it is approved).
+const APPROVED_THAI_SHA256 = "5638f83b3069aa750d020f3c1ea9c46f505893cd8d16105c6a5786bd7757f61c";
+test("V02/4.3: the Thai text is exactly the Owner-approved wording, and the prose carries the Owner record", () => {
+  const strings: string[] = [];
+  const walk = (v: unknown): void => {
+    if (typeof v === "string") return void strings.push(v);
+    if (Array.isArray(v)) return void v.forEach(walk);
+    if (v && typeof v === "object") for (const k of Object.keys(v)) walk((v as Record<string, unknown>)[k]);
+  };
+  walk(th);
+  const prose: string[] = [];
+  const marks: string[] = [];
+  for (const group of [thaiOverlay.families, thaiOverlay.notes, thaiOverlay.perfumes, thaiOverlay.articles]) {
+    for (const id of Object.keys(group)) {
+      for (const field of Object.values((group as Loose)[id] as Record<string, Loose>)) {
+        prose.push(...([] as string[]).concat(field.th));
+        marks.push(field.review === "reviewed" ? field.reviewRecord : "draft");
+      }
+    }
+  }
+  assert.equal(strings.length, 160);
+  assert.equal(prose.length, 32);
+  assert.equal(createHash("sha256").update(JSON.stringify([strings, prose])).digest("hex"), APPROVED_THAI_SHA256);
+  assert.ok(marks.every((m) => m.startsWith("Owner approval 2026-11-28, IMP-WEB-02 S6")), "every approved prose text carries the Owner record");
 });
