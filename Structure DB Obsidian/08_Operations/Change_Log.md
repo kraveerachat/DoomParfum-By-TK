@@ -872,3 +872,6 @@ No code change (`web/` equal to `c3f9688`). Records: task note, S5 report and su
 
 ## 2026-11-28 — IMP-WEB-02 S6
 Code `c3f9688..253bf48` in `web/` only: 33 Owner-approved Thai strings, the 32 prose texts marked reviewed with the Owner record, tests for English search with reviewed Thai text and a pin of the approved wording. Records: task note, S6 report and summary, two review reports, Draft PR package, S6 evidence (translation reconciliation, approved review source copy, verification, Thai screens), status, index, backlog and logs. Preview replaced by `sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`; rollback tag `c3f9688-rollback`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S7
+No code change. Records: S7 report and summary, 404 investigation evidence, task note, Draft PR package (known open defect, not ready to publish), status, index, backlog and logs. Preview unchanged (`sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`). [[IMP-WEB-02_Frontend_V1_1]]
