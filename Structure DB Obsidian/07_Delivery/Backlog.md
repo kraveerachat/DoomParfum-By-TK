@@ -434,3 +434,8 @@ Replaces the unallocated entry above.
 | Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
 |---|---|---|---|---|---|---|
 | IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `5d63f88` | Owner review, A05 deferral, publication authority |
+
+## 2026-11-27 — IMP-WEB-02 after S3
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `689b177`; independent review BLOCKED | Independent review, Owner review, A05 deferral, publication authority |

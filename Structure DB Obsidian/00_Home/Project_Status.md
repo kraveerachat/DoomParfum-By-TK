@@ -12,6 +12,9 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S3: design passes and CP5 rerun
+Supersedes the S2 entry below. Impeccable and Taste checks run; record-sheet and footer alignment fixed; every Notes focus path tested. Candidate `689b177b4908cd84bec1ac2c81fc9a17963224d3`; preview http://127.0.0.1:3000/ runs `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. Unit 117, Chrome 279 and Edge 279 pass. Independent review of this candidate BLOCKED (sub-agents unavailable under auto mode). ACCEPTANCE PENDING. [[2026-11-27_IMP-WEB-02_S3_Report]]
+
 ## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) selections built, CP5 verified
 
 Supersedes the CP4 entry below. The Owner chose T1 Fahkwang 300, T2 centred hero, T3 record sheet, T4 compact toolbar, T5 stable header, T6 compact language link, T7 equal columns, T8 square corners, BY TK 11px and refined Thai terminology. Built and verified at `5d63f8809523b5d31b7888852fd44b1f57956874`; preview http://127.0.0.1:3000/ runs `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`. Unit 117, Chrome 259 and Edge 259 pass; independent same-vendor review CONDITIONAL with both blockers fixed. ACCEPTANCE PENDING: Owner review, A05 deferral, Thai line review, publication authority. `LOCAL_ONLY`. [[IMP-WEB-02_Frontend_V1_1]]

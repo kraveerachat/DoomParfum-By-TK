@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_task
 status: acceptance-pending
 owner: human-owner
-updated: 2026-11-26
+updated: 2026-11-27
 requirements: [R01, R03, R04, R13, R14, R21]
 planning_pr: 37
 tags: [doomparfum, implementation, frontend, localization, mock-only]
@@ -16,7 +16,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review. Waiting for the Owner's review, the A05 deferral for this stage and publication authority.
+- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5 on candidate `689b177`. Waiting for an independent review of that candidate (blocked in S3), the Owner's review, the A05 deferral for this stage and publication authority.
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
@@ -52,7 +52,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 | Session | Purpose | State | Result | Checkpoint SHA | Evidence |
 |---|---|---|---|---|---|
 | S1 | CP0–CP4 | CLOSED | CP4 answered by the Owner | code `733c59da80fb22f8164859d756f1f24c1bcd008f`; records `bd477f2` | [[2026-11-26_IMP-WEB-02_S1_Report]] |
-| S2 | CP4 selections, CP5, independent review | CLOSED | PASS agent side; ACCEPTANCE PENDING | code `5d63f8809523b5d31b7888852fd44b1f57956874`; records commit follows | [[2026-11-26_IMP-WEB-02_S2_Report]] |
+| S2 | CP4 selections, CP5, independent review | CLOSED | PASS agent side; ACCEPTANCE PENDING | code `5d63f8809523b5d31b7888852fd44b1f57956874`; records `3966115` | [[2026-11-26_IMP-WEB-02_S2_Report]] |
+| S3 | Design-tool passes, focus paths, CP5 rerun | CLOSED | PASS agent side; independent review BLOCKED; ACCEPTANCE PENDING | code `689b177b4908cd84bec1ac2c81fc9a17963224d3`; records commit follows | [[2026-11-27_IMP-WEB-02_S3_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -82,6 +83,17 @@ State: CLOSED. Agent: Claude Code. Class A. Start `bd477f2`.
 - Not run: screen reader, physical phone, Safari, Firefox, LAN probe, Docker dev and recovery drills. A05 PARTIAL.
 - Next: Owner review of the site and [[IMP-WEB-02_CP5_Translation_Review]]; Owner deferral of the A05 manual checks for this stage; publication authority. Then the receipt and Draft PR.
 
+### Session S3 — design-tool passes and CP5 rerun
+
+State: CLOSED. Agent: Claude Code. Class A. Start `3966115` (code `5d63f88`); the Owner's re-sent instruction named the older `733c59da` / `bd477f2`, so the discrepancy was flagged and S2's work was verified instead of redone.
+
+- Executed: Impeccable doctor (`hook-not-installed`, not acted on), context (PRODUCT.md drift: DPT-PLAN-013 still "proposed"), detect (source 0; rendered only the approved ivory), critique (DEGRADED single-context, 30/40), audit (18/20); Taste Skill `consistency.mjs` (read-only; nothing actionable beyond the critique). Sub-agents refused by the auto-mode classifier (a plugin hook rewrites Agent calls).
+- Fixed: T3 record-sheet values now share one column and stack on narrow or enlarged screens; footer language row on the column edge. Commits `ee34142`, `689b177`. 20 new tests, including every Notes focus path from the Owner's item 11 (no pointer ring, keyboard ring).
+- Tests on image `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`: unit 117/0; Chrome 279/0/0; Edge 279/0/0; clean clone and uncached builds PASS; audit 0; scan clean; JS ≤ 175.1 KiB; CLS ≤ 0.0234; Explore first picture 522 (EN) / 535 (TH) px.
+- Independent review: BLOCKED (no fresh-context reviewer available); `5d63f88..689b177` not independently reviewed.
+- Not run: screen reader, physical phone, Safari, Firefox, LAN probe, Docker dev and recovery drills, the Owner's physical Win+Shift+S path. A05 PARTIAL.
+- Next: independent review of `689b177`; Owner review of the site and [[IMP-WEB-02_CP5_Translation_Review]]; A05 deferral; publication authority ([[IMP-WEB-02_Draft_PR_Package]]). Then the receipt.
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -91,6 +103,9 @@ State: CLOSED. Agent: Claude Code. Class A. Start `bd477f2`.
 
 | [[2026-11-26_IMP-WEB-02_S2_Report]] | S2 | `38d75c19aa0c070dcb9177a4d0312228962c49ebb95da2679c8a620c473f4a69` | PUBLIC_SAFE |
 | [[2026-11-26_IMP-WEB-02_S2_Summary]] | S2 | `87bbc8c9a1642a01d05a7792238917cd53d7508ad754a9dee4a0a4000f104ca8` | PUBLIC_SAFE |
+| [[2026-11-27_IMP-WEB-02_S3_Report]] | S3 | `f506e31c1d54b1eb2a643162fd7daf2467638ef95d5c93b1cfbd02dd31d3061f` | PUBLIC_SAFE |
+| [[2026-11-27_IMP-WEB-02_S3_Summary]] | S3 | `48527c9383056844d7eeb1929f2540c881963d9f3f33f9d1b7be48fdbb0da277` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Draft_PR_Package]] | S3 | `642842597a334bb389969bdf7b4004bace50ee6f81feb91dfd7f4d9bdc592857` | PUBLIC_SAFE |
 | Independent review (outside Git; names local paths) | S2 | `c05a9682ad7793c27ebd94b7f0fcdb34b2c2f65b0ca50b2ea258b0ebcf9df3ef` | PRIVATE_EVIDENCE_NOT_PUBLISHED |
 
 Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending.

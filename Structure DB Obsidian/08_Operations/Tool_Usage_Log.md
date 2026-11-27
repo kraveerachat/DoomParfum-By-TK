@@ -78,3 +78,6 @@ Impeccable (context, detect, references), Taste Skill as composition reference o
 ## 2026-11-26 — IMP-WEB-02 S2 tools
 
 Impeccable doctor (one `hook-not-installed` finding, not acted on), context and detect; Taste Skill as composition reference; npm (lockfile, audit), Node, Playwright with Chrome and Edge, Docker Compose uncached builds and recreate of `doomparfum-web` (rollback tags `cp5-candidate1`, `cp4-rollback`, `v1-rollback`), ffmpeg; one fresh read-only Claude sub-agent for the independent review (report outside Git). Network: npm registry and GitHub API for re-verifying the Fahkwang package and license. No install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S3 tools
+Impeccable doctor (`hook-not-installed`, not acted on), context, detect (source and 20 rendered views), critique (degraded single-context) and audit; Taste Skill `consistency.mjs` read-only on three routes; Node, Playwright with Chrome and Edge, npm (clean `npm ci`, audit), Docker (Desktop started; uncached builds; `compose up --no-build --force-recreate` of `web`; temporary `--rm` probes on 127.0.0.1:3100; rollback tag `cp5-s2-rollback`), ffmpeg. Agent tool refused twice by the auto-mode classifier because the context-mode hook rewrites the call; not retried. No install, hook, MCP, login or client setting. [[IMP-WEB-02_Frontend_V1_1]]

@@ -860,3 +860,6 @@ Code checkpoint `733c59da80fb22f8164859d756f1f24c1bcd008f`: `web/` only (two rou
 ## 2026-11-26 — IMP-WEB-02 S2
 
 Code `733c59d..5d63f88` in `web/` only (CP4 selections, Fahkwang asset and license, focus fix, review fixes, tests). Records: task note, S2 report and summary, CP5 evidence (screens, comparison sheets, performance, translation review), status, index, backlog and logs. Earlier records unchanged. Preview replaced by `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S3
+Code `5d63f88..689b177` in `web/` only (record-sheet grid and stacking, footer language alignment, 20 tests). Records: task note, S3 report and summary, Draft PR package, S3 evidence (screens, comparison, performance), status, index, backlog and logs. Earlier records unchanged. Preview replaced by `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. [[IMP-WEB-02_Frontend_V1_1]]
