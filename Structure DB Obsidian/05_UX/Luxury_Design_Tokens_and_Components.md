@@ -95,7 +95,7 @@ Only transform/opacity/color transitions; no `transition:all`. Search results, t
 
 Prefer native HTML plus Tailwind semantic-token utilities. Selective shadcn usage is limited to accessible dialog primitives; no wholesale dashboard theme or component generator run is authorized. Icons: one locally bundled family selected/pinned during implementation; existing project family takes precedence if one appears. No remote icon service. All component names above are proposals, not existing files or installed modules.
 
-## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+## Amendment DPT-PLAN-013 — Frontend V1.1 (MERGED 2026-11-26, PR #37 `3e87027`)
 
 V1 above was implemented and merged with PR #36 (`ab3351a8432d1d6664a6b4281784cfea56b0b9fa`) and stays as history. The contract for V1.1 is [[DPT-PLAN-013_Frontend_V1_1_Amendment]]; values are kept there only, so that they cannot drift. Superseded on merge:
 

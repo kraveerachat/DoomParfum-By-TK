@@ -863,3 +863,6 @@ Code `733c59d..5d63f88` in `web/` only (CP4 selections, Fahkwang asset and licen
 
 ## 2026-11-27 — IMP-WEB-02 S3
 Code `5d63f88..689b177` in `web/` only (record-sheet grid and stacking, footer language alignment, 20 tests). Records: task note, S3 report and summary, Draft PR package, S3 evidence (screens, comparison, performance), status, index, backlog and logs. Earlier records unchanged. Preview replaced by `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S4
+Code `689b177..c3f9688` in `web/` only (header static when it reflows to two rows, with and without scripting; retired V1 gold replaced; 4 tests added, 3 strengthened). Records: task note, S4 report and summary, three review reports, Draft PR package, S4 evidence (verification, comparison sheet, Owner Thai review), status, index, backlog and logs; DPT-PLAN-013 post-merge status in `PRODUCT.md`, the amendment, its task note and five canonical notes. Receipts unchanged. Preview replaced by `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. [[IMP-WEB-02_Frontend_V1_1]]

@@ -76,7 +76,7 @@ After a complete implementation, one batched inspection round covers desktop/tab
 
 No blocker in PR #8, U01 or real-source permissions prevents reviewing the mock plan. Those gates remain mandatory before their own future scopes. Publish requires new scoped publication identity/authorization; this task stops at a local checkpoint and proposed Draft PR body. Human Owner reviews and merges both planning and implementation PRs.
 
-## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+## Amendment DPT-PLAN-013 — Frontend V1.1 (MERGED 2026-11-26, PR #37 `3e87027`)
 
 LF-01 to LF-05 were delivered by [[IMP-WEB-01_Luxury_Frontend_Docker]] (PR #36, merged `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`); A05 stays PARTIAL. Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], sections 9 to 11.
 

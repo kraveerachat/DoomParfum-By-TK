@@ -439,3 +439,8 @@ Replaces the unallocated entry above.
 | Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
 |---|---|---|---|---|---|---|
 | IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `689b177`; independent review BLOCKED | Independent review, Owner review, A05 deferral, publication authority |
+
+## 2026-11-27 — IMP-WEB-02 after S4
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `c3f9688`; independent review CONDITIONAL resolved, delta PASS | A11 drills or deferral, A05 deferral, Notes check, Thai line review, publication authority |

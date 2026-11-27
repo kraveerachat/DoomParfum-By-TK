@@ -2,9 +2,9 @@
 id: DPT-PLAN-013
 project: DoomParfum By TK
 type: task
-status: ready-for-review
+status: merged
 owner: human-owner
-updated: 2026-11-26
+updated: 2026-11-27
 requirements: [R01, R03, R04, R13, R14, R21]
 tags: [doomparfum, planning, planning-amendment, frontend, mock-only]
 source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
@@ -92,3 +92,5 @@ Local commits on the branch above; exact SHAs in Git, the receipt (source checkp
 ## Handoff / Next Action
 
 Owner: authorize one push and one Draft PR with [[DPT-PLAN-013_Draft_PR_Description]]; then review and merge. After a verified merge, Gate C intake allocates the implementation task.
+
+Post-merge (recorded 2026-11-27): PR #37 MERGED 2026-11-26 as `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (verified equal to remote `main`). Gate B is closed; Gate C was allocated as [[IMP-WEB-02_Frontend_V1_1]]. The receipt and reports above are unchanged; earlier pre-merge statements are historical.

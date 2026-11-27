@@ -141,7 +141,7 @@ All routes support default, zero-data, missing-field, visual-unavailable, generi
 
 Native links/buttons/selects are preferred. Custom shadcn primitives are restricted to modal dialogs/drawer and only after keyboard and focus behavior is verified. Tooltip content cannot be the sole place containing a label or essential fact. Keyboard order follows DOM reading order. For forward navigation, focus h1 and announce title without duplicating announcements. History Back/Forward is the explicit exception: restore the previous list's filter/query/scroll and originating entry focus after layout settles, without an unconditional h1 focus that scrolls it to the top. If the original entry is unavailable, focus the list heading with a concise explanation. Browser-native restoration may be used only after verifying this behavior. No forced cursor, drag-only control, magnetic CTA, autoplay sound, scroll lock outside overlays or animated page transition.
 
-## Amendment DPT-PLAN-013 — Frontend V1.1 (PROPOSED until merged)
+## Amendment DPT-PLAN-013 — Frontend V1.1 (MERGED 2026-11-26, PR #37 `3e87027`)
 
 Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]]. The five logical route types and every English URL above stay. Superseded on merge:
 

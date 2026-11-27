@@ -12,6 +12,9 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S4: independent review and reconciliation
+Supersedes the S3 entry below. Independent review (same-vendor, fresh context) CONDITIONAL on `689b177`: two-row sticky header and retired V1 gold; both fixed, delta reviews PASS. Candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; preview http://127.0.0.1:3000/ runs `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. Unit 117, Chrome 283 and Edge 283 pass. DPT-PLAN-013 merge now recorded in PRODUCT.md and canonical notes. ACCEPTANCE PENDING: A11 Docker drills (Owner approval or deferral), A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-27_IMP-WEB-02_S4_Report]]
+
 ## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S3: design passes and CP5 rerun
 Supersedes the S2 entry below. Impeccable and Taste checks run; record-sheet and footer alignment fixed; every Notes focus path tested. Candidate `689b177b4908cd84bec1ac2c81fc9a17963224d3`; preview http://127.0.0.1:3000/ runs `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. Unit 117, Chrome 279 and Edge 279 pass. Independent review of this candidate BLOCKED (sub-agents unavailable under auto mode). ACCEPTANCE PENDING. [[2026-11-27_IMP-WEB-02_S3_Report]]
 

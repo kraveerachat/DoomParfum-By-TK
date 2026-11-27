@@ -1169,3 +1169,9 @@ No push, PR, merge or deployment.
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-27 | IMP-WEB-02 / S3 | Claude Code (sub-agents refused by auto mode) | #37 (merged) | NOT CREATED | `web/src/views/detail.tsx`, `web/src/app/globals.css`, two e2e specs, vault records | Unit 117, Chrome 279, Edge 279; [[2026-11-27_IMP-WEB-02_S3_Report]] | PASS agent side; independent review blocked | `689b177b4908cd84bec1ac2c81fc9a17963224d3` (code) |
 No push, PR, merge or deployment.
+
+## 2026-11-27 — IMP-WEB-02 / S4
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-27 | IMP-WEB-02 / S4 | Claude Code; three same-vendor read-only review sub-agents | #37 (merged) | NOT CREATED | `web/src/components/header-offset.tsx`, `web/src/app/globals.css`, `web/src/app/icon.svg`, `web/public/studies/hero.svg`, `web/scripts/build-studies.mjs`, two e2e specs, `PRODUCT.md`, vault records | Unit 117, Chrome 283, Edge 283; [[2026-11-27_IMP-WEB-02_S4_Report]] | Review CONDITIONAL resolved, delta PASS; PASS agent side | `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (code) |
+No push, PR, merge or deployment.

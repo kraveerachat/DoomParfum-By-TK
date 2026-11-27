@@ -58,7 +58,7 @@ No form posts, route handlers, API server, auth provider or account session. The
 
 Reject a fixture with synthetic false, a real-looking external source field, a price/score/review field, duplicate slug/ID, unknown note reference, unsafe HTML, oversized text, remote visual URL or a missing provenance tag. Test known-empty versus unknown and an unavailable visual independently. Verify no imports traverse into existing database/matching sources. Scan source and built output; network inspection must show no cross-origin request from any route or interactive action. Test search input resembling HTML as literal text. No new production security acceptance is implied by these mock-specific controls.
 
-## Amendment DPT-PLAN-013 — Thai overlay (PROPOSED until merged)
+## Amendment DPT-PLAN-013 — Thai overlay (MERGED 2026-11-26, PR #37 `3e87027`)
 
 Contract: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], 4.3 and 4.5. Nothing above is removed and English fixture records stay byte-identical.
 
