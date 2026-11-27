@@ -111,6 +111,11 @@ test("V06: on English pages a Thai query adds exactly the records whose reviewed
     const expectedNotes = v11.notes.filter((n) => baseNotes.includes(n.id) || n.extra.some((t) => t.includes(q))).map((n) => n.id);
     assert.deepEqual(ids(filterNotes(v11.notes, q, null)), expectedNotes, q);
   }
+  // A text returned to draft stops taking part again.
+  const draftAgain = structuredClone(thaiOverlay) as Loose;
+  draftAgain.perfumes["mock-perfume-003"].description = { th: draftAgain.perfumes["mock-perfume-003"].description.th, review: "draft" };
+  const v11Draft = buildCatalogue(fixtures, "en", draftAgain);
+  assert.ok(!ids(filterEntries(v11Draft.entries, "หมึกยามดึก", NONE)).includes("mock-perfume-003"));
   // The reviewed path is live: Paper study C is found from an English page by its Thai description.
   assert.ok(ids(filterEntries(v11.entries, "หมึกยามดึก", NONE)).includes("mock-perfume-003"));
   assert.ok(!ids(filterEntries(v1.entries, "หมึกยามดึก", NONE)).includes("mock-perfume-003"));

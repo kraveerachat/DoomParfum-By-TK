@@ -163,9 +163,18 @@ test.describe("V06 search in Thai", () => {
     await expect(page.getByText("ไม่พบแบบศึกษาที่ตรงกับตัวกรอง")).toBeVisible();
   });
 
-  test("English pages are not widened by draft Thai text", async ({ page }) => {
+  // Every overlay text is Owner-reviewed since S6, so English pages find it for a Thai query and only
+  // then (4.5). The draft path, which must not widen English results, is covered in tests/locale.test.ts.
+  test("English pages find reviewed Thai text only for a Thai query", async ({ page }) => {
     await ready(page, "/explore");
-    await page.getByRole("textbox", { name: "Search mock catalogue" }).fill("หมึก");
+    const box = page.getByRole("textbox", { name: "Search mock catalogue" });
+    const slugs = () => page.locator("[data-entry]").evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.entry));
+    await box.fill("หมึก");
+    await expect(page.locator("[data-entry]")).toHaveCount(1);
+    expect(await slugs()).toEqual(["paper-study-c"]);
+    await box.fill("late ink");
+    expect(await slugs()).toEqual(["paper-study-c"]);
+    await box.fill("ไม่มีคำนี้เลย");
     await expect(page.locator("[data-entry]")).toHaveCount(0);
   });
 });
