@@ -1193,3 +1193,9 @@ No push, PR, merge or deployment.
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-28 | IMP-WEB-02 / S7 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | Raw 404 probes, V1/CP4 comparison, six scratch experiments; [[2026-11-28_IMP-WEB-02_S7_Report]] | BLOCKED on Owner decision | `253bf485d40a9e4367db8968cf0d0d59faf8f127` (code, unchanged) |
 No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S8
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S8 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | Preview smoke (10 routes, headers, 405); [[2026-11-28_IMP-WEB-02_S8_Report]] | Owner visual acceptance recorded; 404 open | `253bf485d40a9e4367db8968cf0d0d59faf8f127` (code, unchanged) |
+No push, PR, merge or deployment.

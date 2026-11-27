@@ -93,3 +93,6 @@ Node scripts outside the repository (review parsing, exact replacement with uniq
 
 ## 2026-11-28 — IMP-WEB-02 S7 tools
 Node (raw HTTP probes with node:http, Playwright Chrome with JavaScript disabled), Next.js `next build` and `next start` in a scratch clean clone outside the repository on 127.0.0.1:3300 for six experiments (servers stopped), Docker (temporary `--rm` loopback containers of the v1-rollback and cp4-rollback images on 3100 and 3200, removed), reading the bundled Next.js source and documentation. No project code, configuration, install, hook, MCP or client setting changed; no Agent call (no code delta to review). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S8 tools
+Node read-only HTTP smoke of the preview; git read-only history checks; reading merged planning notes. No design skill, Agent call, Docker change, install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]

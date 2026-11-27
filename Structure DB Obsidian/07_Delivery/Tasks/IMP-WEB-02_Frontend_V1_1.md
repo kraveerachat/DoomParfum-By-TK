@@ -16,7 +16,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. S6 (2026-11-28) applied the Owner-approved Thai review (159 kept, 33 replaced) on candidate `253bf48`; independent review PASS; A05 deferred by the Owner for this stage. S7 (2026-11-28) found that every 404 document is sent without server `lang` and is empty without scripting (DPT-PLAN-013 4.2/V01 not met); no correction fits the approved design, so it waits for an Owner decision. Waiting for that decision, the Owner's physical Notes check, the Owner's review and publication authority.
+- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. S6 (2026-11-28) applied the Owner-approved Thai review (159 kept, 33 replaced) on candidate `253bf48`; independent review PASS; A05 deferred by the Owner for this stage. S7 (2026-11-28) found that every 404 document is sent without server `lang` and is empty without scripting (DPT-PLAN-013 4.2/V01 not met); no correction fits the approved design, so it waits for an Owner decision. S8 (2026-11-28): the Owner accepted the visual design as the initial frontend baseline; the Owner's Notes screenshot shows no unwanted outline (observation; exact Win+Shift+S sequence not confirmed). Waiting for the Owner's 404 decision and publication authority.
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
@@ -57,7 +57,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 | S4 | Independent review, review fixes, acceptance reconciliation | CLOSED | Review CONDITIONAL then delta PASS; PASS agent side; ACCEPTANCE PENDING | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; records `9f78099` | [[2026-11-27_IMP-WEB-02_S4_Report]] |
 | S5 | A11 Docker drills, acceptance reconciliation | CLOSED | A11 PASS; ACCEPTANCE PENDING (Owner items) | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (unchanged); records `9088837` | [[2026-11-28_IMP-WEB-02_S5_Report]] |
 | S6 | Owner-approved Thai translations, regression, review, reconciliation | CLOSED | PASS agent side; review PASS; ACCEPTANCE PENDING (Notes check, publication) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127`; records `e755f07` | [[2026-11-28_IMP-WEB-02_S6_Report]] |
-| S7 | 404 language investigation | CLOSED | BLOCKED on an Owner decision (no code change) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127` (unchanged); records commit follows | [[2026-11-28_IMP-WEB-02_S7_Report]] |
+| S7 | 404 language investigation | CLOSED | BLOCKED on an Owner decision (no code change) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127` (unchanged); records `31d9e1d` | [[2026-11-28_IMP-WEB-02_S7_Report]] |
+| S8 | Owner visual acceptance, closeout preparation, next-development handoff | CLOSED | Visual ACCEPTED; 404 decision open; no code change | code `253bf485d40a9e4367db8968cf0d0d59faf8f127` (unchanged); records commit follows | [[2026-11-28_IMP-WEB-02_S8_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -142,6 +143,17 @@ State: CLOSED (blocked). Agent: Claude Code. Class A. Start `e755f07` (code `253
 - No application change (Owner-reserved changes needed). Candidate `253bf48` and preview `dedbba40…` unchanged; S6 verification stands. Evidence: `Test_Evidence/IMP-WEB-02/S7/IMP-WEB-02_S7_404_Investigation.json`.
 - Next: Owner decision (approve the tested correction, record a deviation for this stage, or the fallback architecture); Owner physical Notes check; publication authority.
 
+### Session S8 — Owner visual acceptance and closeout preparation
+
+State: CLOSED. Agent: Claude Code. Class A. Start `31d9e1d` (code `253bf48`), verified.
+
+- Owner (2026-11-28): accepts the Frontend V1.1 visual design as the initial baseline; no further UI/UX refinement; next priority real catalogue data and backend features.
+- Notes outline: the Owner's screenshot shows no unwanted heading outline. Recorded as an Owner observation; the exact physical Win+Shift+S sequence was not confirmed. Keyboard focus indicators unchanged.
+- 404 item: reconciled, still open. The instruction did not approve the experimental `globalNotFound` correction, so nothing was implemented ([[2026-11-28_IMP-WEB-02_S7_Report]]).
+- Verification: no code change; S6 results stand. Read-only smoke on the preview: ten routes 200 with server lang, nonce CSP, no-store, noindex; POST 405.
+- Handoff: [[IMP-WEB-02_Next_Development_Handoff]] (smallest real-data slice P30-U03 → U07 and its open Owner decisions). No task started.
+- Next: Owner 404 decision; publication authority ([[IMP-WEB-02_Draft_PR_Package]]); then the receipt.
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -171,5 +183,9 @@ State: CLOSED (blocked). Agent: Claude Code. Class A. Start `e755f07` (code `253
 | [[2026-11-28_IMP-WEB-02_S7_Report]] | S7 | `c7261a7f93bf6f8e2be837c32ab811735242a71db0dd2085eb8f447de205b6f5` | PUBLIC_SAFE |
 | [[2026-11-28_IMP-WEB-02_S7_Summary]] | S7 | `25d102b439d7884e6bb085e2ce05a0fe139fd5c44642770c82dc5f026d22f220` | PUBLIC_SAFE |
 | [[IMP-WEB-02_Draft_PR_Package]] (revised) | S7 | `5802d21b7da9f63323fee51ad31fc7d5a2e4ebd9a0c63001e337d0a520873c4d` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S8_Report]] | S8 | `d9cf26dc54d675ee938838c74081774c62596887ebbf6e71f905bf602f84dc58` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S8_Summary]] | S8 | `4080c176e141d01756aca4d6f9db9bde036cbeba7b0136f4eedcb5edaf5d1c0a` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Next_Development_Handoff]] | S8 | `7874cae96708d6051f02de5f52acbc5bbdcc85e7d59629fad1c20e90865a81b9` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Draft_PR_Package]] (revised) | S8 | `7f838598ebf1ac59c4c80b78bdbfa54a10744c035343f5dc9a9f1ad45d2876b9` | PUBLIC_SAFE |
 
 Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending.

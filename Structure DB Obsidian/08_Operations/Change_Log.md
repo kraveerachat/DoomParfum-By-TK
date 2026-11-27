@@ -875,3 +875,6 @@ Code `c3f9688..253bf48` in `web/` only: 33 Owner-approved Thai strings, the 32 p
 
 ## 2026-11-28 — IMP-WEB-02 S7
 No code change. Records: S7 report and summary, 404 investigation evidence, task note, Draft PR package (known open defect, not ready to publish), status, index, backlog and logs. Preview unchanged (`sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S8
+No code change. Records: Owner visual acceptance and Notes observation, S8 report and summary, next-development handoff, Draft PR package (ready as Draft once authorized, 404 disclosed), task note, status, index, backlog and logs. Preview unchanged. [[IMP-WEB-02_Frontend_V1_1]]

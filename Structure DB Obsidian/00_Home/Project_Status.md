@@ -12,6 +12,9 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S8: Owner visual acceptance
+Supersedes the S7 entry below. The Owner accepted the Frontend V1.1 visual design as the initial baseline (candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127`, preview `sha256:dedbba40…`); visual refinement is deferred and the next priority is real catalogue data and backend features (handoff: [[IMP-WEB-02_Next_Development_Handoff]]; no task started). Notes outline: no outline in the Owner's screenshot. Open: the 404 server-language decision (S7) and publication authority. Not pushed; no receipt. [[2026-11-28_IMP-WEB-02_S8_Report]]
+
 ## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S7: 404 documents blocked on an Owner decision
 Supersedes the S6 entry below. Every 404 of candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127` has the right status and headers, but the server sends an empty framework error document without `lang` (localized only after JavaScript; blank without it), which misses DPT-PLAN-013 4.2 and V01. No correction fits the approved design; a scratch-tested correction (experimental `globalNotFound` plus proxy rewrites) needs Owner approval. No code changed; preview `sha256:dedbba40…` unchanged. ACCEPTANCE BLOCKED: 404 decision, physical Notes check, publication authority. [[2026-11-28_IMP-WEB-02_S7_Report]]
 
