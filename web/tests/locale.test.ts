@@ -79,7 +79,11 @@ rejects("text for an unknown field", (o) => (o.perfumes["mock-perfume-006"] = { 
 rejects("over-long text", (o) => (o.notes["mock-note-001"].descriptor.th = "ก".repeat(201)), /exceeds 200/);
 rejects("markup", (o) => (o.notes["mock-note-001"].descriptor.th = "ขอบ <b>เย็น</b>"), /markup or a URL/);
 rejects("a URL", (o) => (o.notes["mock-note-001"].descriptor.th = "ดูที่ https://example.test"), /markup or a URL/);
-rejects("a reviewed mark without a review record", (o) => (o.notes["mock-note-001"].descriptor.review = "reviewed"), /review record/);
+// The shipped texts carry the Owner's review record (S6), so the control removes it as well.
+rejects("a reviewed mark without a review record", (o) => {
+  o.notes["mock-note-001"].descriptor.review = "reviewed";
+  delete o.notes["mock-note-001"].descriptor.reviewRecord;
+}, /review record/);
 rejects("non-Thai text", (o) => (o.notes["mock-note-001"].descriptor.th = "Cool edge"), /must be Thai/);
 rejects("a changed paragraph count", (o) => o.articles["mock-article-001"].body.th.pop(), /paragraphs/);
 rejects("a relationship field", (o) => (o.perfumes["mock-perfume-002"].top = ["mock-note-001"]), /"top" is not allowed/);
@@ -87,10 +91,29 @@ rejects("a relationship field", (o) => (o.perfumes["mock-perfume-002"].top = ["m
 test("V06: English results do not change with the Thai overlay", () => {
   const v1 = buildCatalogue(fixtures);
   const v11 = buildCatalogue(fixtures, "en", thaiOverlay);
-  for (const q of ["", "paper", "fictional", "ink", "study", "a", "late", "ไม่", "แบบ", "หมึก"]) {
+  for (const q of ["", "paper", "fictional", "ink", "study", "a", "late", "unknown", "empty"]) {
     assert.deepEqual(filterEntries(v11.entries, q, NONE).map((e) => e.id), filterEntries(v1.entries, q, NONE).map((e) => e.id), q);
     assert.deepEqual(filterNotes(v11.notes, q, null).map((n) => n.id), filterNotes(v1.notes, q, null).map((n) => n.id), q);
   }
+});
+
+test("V06: on English pages a Thai query adds exactly the records whose reviewed Thai text matches (4.5)", () => {
+  const v1 = buildCatalogue(fixtures);
+  const v11 = buildCatalogue(fixtures, "en", thaiOverlay);
+  const ids = (xs: readonly { id: string }[]) => xs.map((x) => x.id).sort();
+  // Every shipped overlay text is Owner-reviewed (S6), so each one takes part for a Thai query.
+  assert.ok(v11.entries.every((e) => e.extra.every((t) => /[฀-๿]/.test(t))));
+  for (const q of ["ไม่", "แบบ", "หมึก", "ฮาร์ตโน้ต", "ก้อนหิน"]) {
+    const base = ids(filterEntries(v1.entries, q, NONE));
+    const expected = v11.entries.filter((e) => base.includes(e.id) || e.extra.some((t) => t.includes(q))).map((e) => e.id);
+    assert.deepEqual(ids(filterEntries(v11.entries, q, NONE)), expected, q);
+    const baseNotes = ids(filterNotes(v1.notes, q, null));
+    const expectedNotes = v11.notes.filter((n) => baseNotes.includes(n.id) || n.extra.some((t) => t.includes(q))).map((n) => n.id);
+    assert.deepEqual(ids(filterNotes(v11.notes, q, null)), expectedNotes, q);
+  }
+  // The reviewed path is live: Paper study C is found from an English page by its Thai description.
+  assert.ok(ids(filterEntries(v11.entries, "หมึกยามดึก", NONE)).includes("mock-perfume-003"));
+  assert.ok(!ids(filterEntries(v1.entries, "หมึกยามดึก", NONE)).includes("mock-perfume-003"));
 });
 
 test("V06: production builds the English view with the overlay (reviewed text can become searchable)", () => {
