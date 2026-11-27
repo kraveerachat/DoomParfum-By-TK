@@ -12,6 +12,9 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S5: A11 Docker drills
+Supersedes the S4 entry below. With the Owner's authorization the A11 Docker development and recovery drills ran on candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`: PASS. Preview restored without rebuild at http://127.0.0.1:3000/ (`sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`); Chrome 283 pass on it. ACCEPTANCE PENDING on Owner items: A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-28_IMP-WEB-02_S5_Report]]
+
 ## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S4: independent review and reconciliation
 Supersedes the S3 entry below. Independent review (same-vendor, fresh context) CONDITIONAL on `689b177`: two-row sticky header and retired V1 gold; both fixed, delta reviews PASS. Candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; preview http://127.0.0.1:3000/ runs `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. Unit 117, Chrome 283 and Edge 283 pass. DPT-PLAN-013 merge now recorded in PRODUCT.md and canonical notes. ACCEPTANCE PENDING: A11 Docker drills (Owner approval or deferral), A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-27_IMP-WEB-02_S4_Report]]
 

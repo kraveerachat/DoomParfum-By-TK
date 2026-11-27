@@ -11,10 +11,10 @@ source_of_truth: "../../../../DEVELOPMENT_WORKFLOW.md"
 
 # IMP-WEB-02 — Draft Implementation PR package (not published)
 
-PUBLIC_SAFE. Prepared locally (S3, revised in S4). Nothing is pushed and no PR exists. Publishing needs fresh, scoped Owner authorization and the agent publishing identity (`DEVELOPMENT_WORKFLOW.md` §5.6).
+PUBLIC_SAFE. Prepared locally (S3, revised in S4 and S5). Nothing is pushed and no PR exists. Publishing needs fresh, scoped Owner authorization and the agent publishing identity (`DEVELOPMENT_WORKFLOW.md` §5.6).
 
 - Base: `main` at `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge)
-- Head: `feat/frontend-v1-1-design-upgrade`, code candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` plus the S4 records commit
+- Head: `feat/frontend-v1-1-design-upgrade`, code candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` plus the S4 and S5 records commits (no code after `c3f9688`)
 - State on creation: **Draft**. No auto-merge. The Owner merges.
 
 ## Title
@@ -38,8 +38,9 @@ Implements merged DPT-PLAN-013 (PR #37) on the mock-only Next.js frontend.
 - Unit 117/0; Playwright Chrome 283/0/0 and Edge 283/0/0 on the production-style image.
 - Clean clone `npm ci` + build; uncached image build; output isolation scan clean; `npm audit` 0.
 - Initial JS 171–175 KiB (budget 200); CLS ≤ 0.024; no external requests, cookies or storage.
+- A11 Docker drills on the final candidate: failed build keeps the preview serving; dev/preview and port conflicts refused safely; dev hot reload 0.8 s without reload at `http://localhost:3000`; dev syntax-error recovery without restart; stop/start/teardown clean; preview restored without rebuild (Chrome 283/0/0).
 
-**Not verified:** screen reader, physical phone, Safari, Firefox, LAN probe; A11 Docker development and recovery drills (not rerun for V1.1). A05 PARTIAL (Owner deferral required). No WCAG conformance claim.
+**Not verified:** screen reader, physical phone, Safari, Firefox, LAN probe. A05 PARTIAL (Owner deferral required). No WCAG conformance claim.
 
 **Review:** same-vendor fresh-context sub-agent reviews (not human or cross-vendor): S2 of `76dcb1c` (CONDITIONAL, fixed); S4 of `689b177` (CONDITIONAL: two-row header and retired gold, fixed); S4 deltas `bfb7210` and `c3f9688` (PASS).
 
@@ -53,4 +54,4 @@ Implements merged DPT-PLAN-013 (PR #37) on the mock-only Next.js frontend.
 2. Re-verify the head SHA, `git status`, and that `main` is still `3e87027` (otherwise rebase decision by the Owner).
 3. Exclude the untracked `Test_Evidence/IMP-WEB-02/CP4.zip` and any local-only file.
 4. Push the branch, open the PR as Draft with the body above, and record the PR number in the task note.
-5. Update the "Not verified" line if A11 has been run or deferred by then.
+5. Record the Owner's A05 deferral, Notes check and Thai review outcome in the body before marking anything beyond Draft.

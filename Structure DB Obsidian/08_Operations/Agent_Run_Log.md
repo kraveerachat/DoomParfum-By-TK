@@ -1175,3 +1175,9 @@ No push, PR, merge or deployment.
 |---|---|---|---|---|---|---|---|---|
 | 2026-11-27 | IMP-WEB-02 / S4 | Claude Code; three same-vendor read-only review sub-agents | #37 (merged) | NOT CREATED | `web/src/components/header-offset.tsx`, `web/src/app/globals.css`, `web/src/app/icon.svg`, `web/public/studies/hero.svg`, `web/scripts/build-studies.mjs`, two e2e specs, `PRODUCT.md`, vault records | Unit 117, Chrome 283, Edge 283; [[2026-11-27_IMP-WEB-02_S4_Report]] | Review CONDITIONAL resolved, delta PASS; PASS agent side | `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (code) |
 No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S5
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S5 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | A11 drills D1–D8; Chrome 283 on the restored preview; [[2026-11-28_IMP-WEB-02_S5_Report]] | A11 PASS; acceptance pending Owner items | `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (code, unchanged) |
+No push, PR, merge or deployment.

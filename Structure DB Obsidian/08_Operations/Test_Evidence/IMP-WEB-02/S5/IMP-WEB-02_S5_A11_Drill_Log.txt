@@ -1,0 +1,80 @@
+[18:09:15Z] D0 tagged dev b86fc521 as dev-pre-a11
+[18:09:15Z] D1 preview before: 7c891b579cdc45632cacbc8d7b34d7ba5ca71537e81e21a86efc96a50b67f98b 2026-11-27T15:44:55.279133895Z sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf
+[18:09:15Z] D1 added untracked src/a11-drill-broken.ts (type error)
+[18:09:25Z] D1 compose up --build exit=1
+#12 4.269 src/a11-drill-broken.ts(1,14): error TS2322: Type 'string' is not assignable to type 'number'.
+#12 ERROR: process "/bin/sh -c npm run typecheck:gen && npm run lint && npm test && npm run build" did not complete successfully: exit code: 2
+4.269 src/a11-drill-broken.ts(1,14): error TS2322: Type 'string' is not assignable to type 'number'.
+failed to solve: process "/bin/sh -c npm run typecheck:gen && npm run lint && npm test && npm run build" did not complete successfully: exit code: 2
+[18:09:26Z] D1 removed drill file
+[18:09:26Z] D1 preview after:  7c891b579cdc45632cacbc8d7b34d7ba5ca71537e81e21a86efc96a50b67f98b 2026-11-27T15:44:55.279133895Z sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf
+[18:09:26Z] D1 container unchanged: YES
+[18:09:26Z] D1 health healthy http 200
+[18:09:26Z] D1 preview tag sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf
+[18:09:38Z] D2 dev up while preview runs: exit=1
+ Container doomparfum-web  Error response from daemon: Conflict. The container name "/doomparfum-web" is already in use by container "7c891b579cdc45632cacbc8d7b34d7ba5ca71537e81e21a86efc96a50b67f98b". You have to remove (or rename) that container to be able to reuse that name.
+Error response from daemon: Conflict. The container name "/doomparfum-web" is already in use by container "7c891b579cdc45632cacbc8d7b34d7ba5ca71537e81e21a86efc96a50b67f98b". You have to remove (or rename) that container to be able to reuse that name.
+[18:09:38Z] D2 preview container unchanged: YES
+[18:09:39Z] D2 preview sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf healthy project=doomparfum-web-preview http 200
+[18:09:39Z] D2 containers of dev project: 
+[18:09:39Z] D2 dev image now sha256:30b694c6def104f277380401a600e52b0f48e39d31ed8300d0fdc031b459fd86
+[18:09:53Z] D3 preview compose down exit=0 ; containers named doomparfum-web: 0
+[18:09:55Z] D3 host process on 127.0.0.1:3000: listening body=squatter
+[18:09:55Z] D3 dev up with port taken: exit=1
+Error response from daemon: ports are not available: exposing port TCP 127.0.0.1:3000 -> 127.0.0.1:0: listen tcp4 127.0.0.1:3000: bind: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+[18:09:56Z] D3 running task containers: 
+[18:09:56Z] D3 dev project containers (any state): doomparfum-web:Created 
+[18:09:56Z] D3 squatter still answers: squatter
+[18:09:57Z] D3 cleanup dev down exit=0 ; doomparfum-web containers: 
+[18:09:59Z] D3 port 3000 now: 000
+[18:10:27Z] D4 dev up exit=0
+[18:10:32Z] D4 dev /about http=200 after 7s
+[18:10:33Z] D4 dev container: project=doomparfum-web-dev image=sha256:ff8d725a5a892732334031ef814bb8fa08b97ba8a877bb0e3e45c40a18f7b57e ports={"3000/tcp":[{"HostIp":"127.0.0.1","HostPort":"3000"}]} capdrop=[ALL] secopt=[no-new-privileges:true] restart=no
+[18:10:33Z] D4 mounts: bind:web/->/app volume:doomparfum-web-dev_dev-node-modules->/app/node_modules volume:doomparfum-web-dev_dev-next->/app/.next 
+[18:10:33Z] D4 running containers named doomparfum-web: 0
+[18:10:33Z] D4 next in dev volume: 16.4.6
+
+Node.js v24.22.3
+[18:14:31Z] D4 HMR attempt 1: edit detected, revert not observed within 60s (same-second mtime on the polled bind mount); script given a 2.5s pause before revert
+[18:16:15Z] D4 HMR attempt 2: page.waitForFunction: Timeout 60000ms exceeded.
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.22.3
+[18:16:15Z] D4 web/ identical to c3f9688: YES
+[18:17:27Z] D4 diagnosis: dev server logs 'Blocked cross-origin request to Next.js dev resource /_next/hmr from 127.0.0.1'; dev CSP allows ws://localhost:3000; README fixes dev at http://localhost:3000. Attempts 1-2 used 127.0.0.1 (wrong URL for dev).
+[18:17:35Z] D4 HMR at http://localhost:3000: {"before":true,"hmrMs":1441,"sameDocument":false,"revertMs":1811,"sameDocumentAfterRevert":false,"restoredByteIdentical":true}
+[18:17:35Z] D4 web/ identical to c3f9688: YES
+[18:18:03Z] D4 dictionary edit at localhost reloads the whole document (shared data module); component-level drill follows
+[18:18:10Z] D4 HMR component (about-contents.tsx) at http://localhost:3000: {"before":0,"hmrMs":817,"sameDocument":true,"revertMs":485,"sameDocumentAfterRevert":true,"documentNavigations":0,"restoredByteIdentical":true}
+[18:18:10Z] D4 web/ identical to c3f9688: YES
+[18:18:35Z] D5 dev syntax error and recovery: {"before":{"status":200,"mentionsSyntax":false,"lead":true},"broken":{"status":500,"mentionsSyntax":true,"lead":false},"recovered":{"status":200,"mentionsSyntax":false,"lead":true},"recoverMs":1317,"restoredByteIdentical":true}
+[18:18:35Z] D5 dev container not restarted: YES
+✓ Compiled in 437ms
+✓ Compiled in 468ms
+✓ Compiled in 525ms
+✓ Compiled in 480ms
+[18:18:35Z] D5 web/ identical to c3f9688: YES
+[18:18:48Z] D6 preview up while dev runs: exit=1 Conflict. The container name "/doomparfum-web" is already in use by container "f35d522be6a25265a13f8eb7101fd53c1d206756139bdc328505c9c30164ceec"
+[18:18:49Z] D6 dev container unchanged: YES
+[18:18:49Z] D6 preview project containers: 
+[18:18:49Z] D6 dev still serves: 200
+[18:18:52Z] D6 dev stop exit=0 state=exited port=000
+[18:18:53Z] D6 dev start (no rebuild) exit=0
+[18:18:57Z] D6 dev after restart http=200 image=sha256:ff8d725a5a892732334031ef814bb8fa08b97ba8a877bb0e3e45c40a18f7b57e
+[18:18:58Z] D6 dev down exit=0
+[18:18:58Z] D6 containers named doomparfum-web after teardown: 0
+[18:18:58Z] D6 dev volumes kept: 2
+[18:19:00Z] D6 port 3000 free: 000
+[18:19:20Z] D7 preview up --no-build exit=0 health=healthy
+[18:19:23Z] D7 preview stop exit=0 state=exited port=000
+[18:19:30Z] D7 preview start (cold, no rebuild) exit=0 health=healthy
+[18:19:30Z] D7 preview: image=sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf project=doomparfum-web-preview user=node ro=true capdrop=[ALL] secopt=[no-new-privileges:true] pids=128 mem=536870912 ports={"3000/tcp":[{"HostIp":"127.0.0.1","HostPort":"3000"}]} mounts=0 tmpfs={"/tmp":"size=16m,mode=1777"} restart=no
+/=200 /explore=200 /perfume/paper-study-a=200 /notes=200 /about=200 /th=200 /th/explore=200 /th/perfume/paper-study-c=200 /th/notes=200 /th/about=200 
+[18:20:44Z] D7 full Chrome suite on restored preview exit=0 expected 283 unexpected 0 skipped 0 flaky 0
+[18:20:44Z] D8 volumes: 32 before, 32 after, identical names
+[18:20:45Z] D8 image tag changes: < dev b86fc5219471 > dev ff8d725a5a89 > dev-pre-a11 b86fc5219471 
+[18:20:45Z] D8 dangling web images: 
+[18:20:45Z] D8 containers: doomparfum-web=Up About a minute (healthy) doomparfum-p104-temporal-1fae391f4b5ff06408316d54=Exited (0) 2 weeks ago doomparfum-p1-04-restore=Exited (0) 2 weeks ago doomparfum-p1-01=Exited (0) 13 days ago eleuthex-hermes=Exited (137) 2 weeks ago 
+[18:20:46Z] D8 web/ identical to c3f9688: YES; HEAD 9f78099

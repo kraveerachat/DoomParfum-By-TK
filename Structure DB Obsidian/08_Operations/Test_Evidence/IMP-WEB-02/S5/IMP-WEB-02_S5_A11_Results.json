@@ -1,0 +1,29 @@
+{
+  "task": "IMP-WEB-02",
+  "session": "S5",
+  "date": "2026-11-27 (UTC 18:09-18:21)",
+  "authority": "Owner instruction 'IMP-WEB-02 - Final Acceptance Closure': A11 drills including temporary stop and replacement of the preview",
+  "criterion": "A11 Docker dev / recovery (Luxury_Frontend_Acceptance_and_Task_Map; DPT-PLAN-013 section 10: rerun unchanged)",
+  "candidate": {
+    "code": "c3f968853b64b4ee65df2d9cf8c6b94e0b13014b",
+    "previewImage": "sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf",
+    "devImage": "sha256:ff8d725a5a892732334031ef814bb8fa08b97ba8a877bb0e3e45c40a18f7b57e",
+    "webIdenticalToCandidateAfterEveryDrill": true
+  },
+  "drills": [
+    { "id": "D1", "name": "failed preview build while the preview serves", "how": "untracked src/a11-drill-broken.ts with a type error; docker compose up --build --force-recreate --detach", "result": "PASS", "evidence": "build stopped at TS2322, exit 1; preview container id, start time and image unchanged, healthy, HTTP 200; preview tag still 48748b9c; file removed" },
+    { "id": "D2", "name": "mode conflict: dev while the preview runs", "how": "docker compose -f compose.dev.yaml up --build --force-recreate --detach", "result": "PASS", "evidence": "exit 1, container-name conflict; preview container unchanged and healthy; no dev container created" },
+    { "id": "D3", "name": "port conflict", "how": "preview down; host process listening on 127.0.0.1:3000; dev up", "result": "PASS", "evidence": "exit 1, 'ports are not available'; nothing running; host process unaffected; the one Created container removed by explicit down" },
+    { "id": "D4", "name": "dev mode and hot reload", "how": "dev up --build --force-recreate --detach; component edit in the bind-mounted worktree, observed in Chrome at http://localhost:3000", "result": "PASS", "evidence": "200 after 7 s on the fixed URL, loopback only, cap_drop ALL, no-new-privileges, volumes doomparfum-web-dev_dev-node-modules and _dev-next only; next 16.4.6; component change 817 ms and revert 485 ms in the same document, 0 navigations; file restored byte for byte" },
+    { "id": "D5", "name": "failed build recovery in dev", "how": "syntax error in about-contents.tsx, then restore", "result": "PASS", "evidence": "500 with the syntax error, 200 again 1.3 s after the fix; container not restarted; file restored byte for byte" },
+    { "id": "D6", "name": "second mode conflict, dev stop/start, teardown", "how": "preview up --no-build while dev runs; dev stop, start; dev down", "result": "PASS", "evidence": "preview refused (exit 1), dev container unchanged; stop freed the port, start served 200 on the same image without rebuild; down left no doomparfum-web container; dev volumes kept by design" },
+    { "id": "D7", "name": "restore and cold restart of the preview", "how": "docker compose up --no-build --force-recreate --detach; stop; start", "result": "PASS", "evidence": "image 48748b9c, healthy; user node, read-only root, cap_drop ALL, no-new-privileges, pids 128, memory 512 MiB, tmpfs /tmp 16m, 127.0.0.1:3000 only, no mounts; ten routes 200; full Chrome suite 283 passed, 0 failed, 0 skipped, 0 flaky" },
+    { "id": "D8", "name": "protected resources", "result": "PASS", "evidence": "32 volumes before and after, identical names; four unrelated containers stayed Exited; image tags unchanged except dev rebuilt (old dev kept as dev-pre-a11); no dangling image; no prune" }
+  ],
+  "observations": [
+    "Hot reload works only at the documented dev URL http://localhost:3000. At http://127.0.0.1:3000 Next.js blocks the dev HMR socket as cross-origin (allowedDevOrigins default) and the dev CSP allows ws://localhost:3000 only. The preview is unaffected. Not changed.",
+    "Editing src/i18n/messages.ts (a shared data module) makes Next.js reload the whole document (1.4 s, revert 1.8 s); component edits hot-swap in place.",
+    "The first two hot-reload attempts used http://127.0.0.1:3000 and timed out on the revert. The log's first explanation (same-second modification time) was wrong: a diagnostic showed the server recompiled every change (about 0.4 s) while the browser's HMR socket was refused. Recorded as a test-setup error, not product behaviour."
+  ],
+  "notRun": ["second-machine LAN probe (A10)"]
+}

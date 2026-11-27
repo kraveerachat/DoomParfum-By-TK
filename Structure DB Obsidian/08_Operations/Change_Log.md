@@ -866,3 +866,6 @@ Code `5d63f88..689b177` in `web/` only (record-sheet grid and stacking, footer l
 
 ## 2026-11-27 — IMP-WEB-02 S4
 Code `689b177..c3f9688` in `web/` only (header static when it reflows to two rows, with and without scripting; retired V1 gold replaced; 4 tests added, 3 strengthened). Records: task note, S4 report and summary, three review reports, Draft PR package, S4 evidence (verification, comparison sheet, Owner Thai review), status, index, backlog and logs; DPT-PLAN-013 post-merge status in `PRODUCT.md`, the amendment, its task note and five canonical notes. Receipts unchanged. Preview replaced by `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S5
+No code change (`web/` equal to `c3f9688`). Records: task note, S5 report and summary, A11 results and drill log, Draft PR package, status, index, backlog and logs. Docker: preview stopped and replaced for the A11 drills under Owner authorization and restored from tag `preview` (`sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`) without rebuild; `dev` image rebuilt by the documented dev command, previous kept as `dev-pre-a11`. [[IMP-WEB-02_Frontend_V1_1]]

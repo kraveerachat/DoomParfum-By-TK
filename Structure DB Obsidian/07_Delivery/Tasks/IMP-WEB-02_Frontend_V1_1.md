@@ -4,7 +4,7 @@ project: DoomParfum By TK
 type: implementation_task
 status: acceptance-pending
 owner: human-owner
-updated: 2026-11-27
+updated: 2026-11-28
 requirements: [R01, R03, R04, R13, R14, R21]
 planning_pr: 37
 tags: [doomparfum, implementation, frontend, localization, mock-only]
@@ -16,7 +16,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). Waiting for the A11 Docker drills (or deferral), the A05 deferral for this stage, the Owner's physical Notes check, Thai line review, the Owner's review and publication authority.
+- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. Waiting for the A05 deferral for this stage, the Owner's physical Notes check, Thai line review, the Owner's review and publication authority.
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
@@ -54,7 +54,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 | S1 | CP0–CP4 | CLOSED | CP4 answered by the Owner | code `733c59da80fb22f8164859d756f1f24c1bcd008f`; records `bd477f2` | [[2026-11-26_IMP-WEB-02_S1_Report]] |
 | S2 | CP4 selections, CP5, independent review | CLOSED | PASS agent side; ACCEPTANCE PENDING | code `5d63f8809523b5d31b7888852fd44b1f57956874`; records `3966115` | [[2026-11-26_IMP-WEB-02_S2_Report]] |
 | S3 | Design-tool passes, focus paths, CP5 rerun | CLOSED | PASS agent side; independent review BLOCKED; ACCEPTANCE PENDING | code `689b177b4908cd84bec1ac2c81fc9a17963224d3`; records `d7a9e7f` | [[2026-11-27_IMP-WEB-02_S3_Report]] |
-| S4 | Independent review, review fixes, acceptance reconciliation | CLOSED | Review CONDITIONAL then delta PASS; PASS agent side; ACCEPTANCE PENDING | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; records commit follows | [[2026-11-27_IMP-WEB-02_S4_Report]] |
+| S4 | Independent review, review fixes, acceptance reconciliation | CLOSED | Review CONDITIONAL then delta PASS; PASS agent side; ACCEPTANCE PENDING | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; records `9f78099` | [[2026-11-27_IMP-WEB-02_S4_Report]] |
+| S5 | A11 Docker drills, acceptance reconciliation | CLOSED | A11 PASS; ACCEPTANCE PENDING (Owner items) | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (unchanged); records commit follows | [[2026-11-28_IMP-WEB-02_S5_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -107,6 +108,16 @@ State: CLOSED. Agent: Claude Code. Class A. Start `d7a9e7f` (code `689b177`), ve
 - Not run: screen reader, physical phone, Safari, Firefox, LAN probe, A11 drills, the Owner's physical Win+Shift+S path. A05 PARTIAL.
 - Next: Owner decisions in [[2026-11-27_IMP-WEB-02_S4_Report]] section 7; then publication ([[IMP-WEB-02_Draft_PR_Package]]) and the receipt.
 
+### Session S5 — A11 Docker drills
+
+State: CLOSED. Agent: Claude Code. Class A. Start `9f78099` (code `c3f9688`), verified. Owner authorization (2026-11-28): A11 drills including temporary stop and replacement of the preview.
+
+- A11 PASS: failed preview build kept the preview serving; dev-while-preview and preview-while-dev refused; host port conflict stopped dev safely; dev on the fixed URL with isolated dependency volumes; component hot reload 817 ms without reload at `http://localhost:3000`; dev syntax error recovered in 1.3 s without restart; stop/start without rebuild; teardown left no task container. Hot reload is blocked at `127.0.0.1` by the Next.js dev origin rule (documented dev URL is localhost); recorded, not changed.
+- Preview restored without rebuild: `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`, healthy, same hardening; Chrome 283/0/0/0 on it. Volumes (32), unrelated containers and rollback tags unchanged; previous `dev` image kept as `dev-pre-a11`. `web/` identical to `c3f9688` after every drill.
+- Navy folio `color-mix` rules (R1-N3): decorative, approved tokens on navy, about 2.2:1 against navy; compliant under the Owner's condition; retained.
+- Not run: screen reader, physical phone, Safari, Firefox, LAN probe, the Owner's physical Win+Shift+S path. A05 PARTIAL.
+- Next: Owner A05 deferral, Notes check, Thai line review, site review, publication authority ([[IMP-WEB-02_Draft_PR_Package]]); then the receipt.
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -125,5 +136,8 @@ State: CLOSED. Agent: Claude Code. Class A. Start `d7a9e7f` (code `689b177`), ve
 | [[2026-11-27_IMP-WEB-02_S4_Delta_Review_c3f9688]] | S4 | `a9c28a47472656d3c587bfd87c47ee22e22abe586c26c8e44497a299795b9cb9` | PUBLIC_SAFE |
 | [[IMP-WEB-02_Draft_PR_Package]] (revised) | S4 | `5495dbfcc27ec376e0c3d73e8d1a39e93d45201f28e0ea87e8e86f0bdf8108a1` | PUBLIC_SAFE |
 | Independent review (outside Git; names local paths) | S2 | `c05a9682ad7793c27ebd94b7f0fcdb34b2c2f65b0ca50b2ea258b0ebcf9df3ef` | PRIVATE_EVIDENCE_NOT_PUBLISHED |
+| [[2026-11-28_IMP-WEB-02_S5_Report]] | S5 | `cd9f014c9a0a1f2a220e2bd53e27b5bd417de279f7f073216816d9ae2026b6d8` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S5_Summary]] | S5 | `643c7d987b01a4c63f93f3b135f3c0c376f7f71a60fc59fd3b8ea718fcb106e1` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Draft_PR_Package]] (revised) | S5 | `01535f8448802800b6710287d2326493013291220c78557e9aaf560a66f74c71` | PUBLIC_SAFE |
 
 Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending.
