@@ -742,6 +742,18 @@ html[data-ready] .about-contents:not([data-open]) .contents-list {
 html[data-header-static] .site-header {
   position: static;
 }
+/* Without scripting nothing measures the header: below 64em the navigation takes a second row, so the
+   header is static there; above it, it is one row of known height. */
+@media (scripting: none) {
+  html {
+    --header-h: 5.875rem;
+  }
+}
+@media (scripting: none) and (width < 64em) {
+  .site-header {
+    position: static;
+  }
+}
 .lang-divider {
   width: 1px;
   height: 1.25rem;

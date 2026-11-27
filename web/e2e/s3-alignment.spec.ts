@@ -35,6 +35,19 @@ test("T3 record sheet stacks under 200% text at 320 without sideways scroll", as
   expect(scroll).toBe(0);
 });
 
+test("T3 record sheet stacks from enlarged text alone at 390 (every row)", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await ready(page, "/perfume/paper-study-a");
+  const rows = () =>
+    page.locator("[data-record-sheet] > div").evaluateAll((divs) =>
+      divs.map((row) => row.querySelector("dd")!.getBoundingClientRect().top >= row.querySelector("dt")!.getBoundingClientRect().bottom - 1),
+    );
+  expect(await rows()).toEqual([false, false, false, false, false, false]);
+  await page.evaluate(() => document.documentElement.style.setProperty("font-size", "200%"));
+  await expect.poll(rows).toEqual([true, true, true, true, true, true]);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth)).toBe(0);
+});
+
 for (const path of ["/", "/th"]) {
   test(`footer language names start on the footer column (${path})`, async ({ page }) => {
     await ready(page, path);

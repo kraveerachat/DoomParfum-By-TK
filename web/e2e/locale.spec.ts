@@ -2,6 +2,16 @@
 import type { Page } from "@playwright/test";
 import { expect, noOverflow, ORIGIN, raw, ready, test } from "./helpers";
 
+/** Rows of the header grid, counted from the tops of its visible parts relative to the brand. */
+const headerRows = (page: Page) =>
+  page.evaluate(() => {
+    const brand = document.querySelector("[data-header-brand]")!.getBoundingClientRect();
+    const parts = Array.from(document.querySelector("[data-header-grid]")!.children)
+      .map((part) => part.getBoundingClientRect())
+      .filter((box) => box.height > 0);
+    return parts.some((box) => box.top >= brand.bottom - 1) ? 2 : 1;
+  });
+
 const PAIRS = [
   ["/", "/th", "Home · DoomParfum By TK", "หน้าแรก · DoomParfum By TK"],
   ["/explore", "/th/explore", "Explore mock fragrances · DoomParfum By TK", "สำรวจน้ำหอมจำลอง · DoomParfum By TK"],
@@ -209,8 +219,46 @@ test.describe("V07 sticky header", () => {
   test("a one-row header stays sticky at 320px", async ({ page }) => {
     await page.setViewportSize({ width: 320, height: 640 });
     await ready(page, "/about");
+    expect(await headerRows(page)).toBe(1);
     expect(await page.locator("header").evaluate((el) => getComputedStyle(el).position)).toBe("sticky");
   });
+
+  test("a two-row header is static even when it covers less than a fifth of the viewport (5.1)", async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 1000 });
+    await ready(page, "/about");
+    await page.evaluate(() => document.documentElement.style.setProperty("font-size", "125%"));
+    await expect.poll(() => headerRows(page)).toBe(2);
+    const [position, height, offset] = await page.evaluate(() => {
+      const header = document.querySelector("header")!;
+      return [
+        getComputedStyle(header).position,
+        header.getBoundingClientRect().height,
+        getComputedStyle(document.documentElement).getPropertyValue("--header-h").trim(),
+      ] as const;
+    });
+    expect(height).toBeLessThanOrEqual(200);
+    expect(position).toBe("static");
+    expect(offset).toBe("0px");
+  });
+
+  for (const [width, position] of [[768, "static"], [1280, "sticky"]] as const) {
+    test(`without scripting the header is ${position} at ${width}px and a fragment target clears it`, async ({ browser }) => {
+      const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 900 }, baseURL: ORIGIN });
+      const page = await context.newPage();
+      await page.goto("/about#credits");
+      expect(await headerRows(page)).toBe(position === "static" ? 2 : 1);
+      expect(await page.locator("header").evaluate((el) => getComputedStyle(el).position)).toBe(position);
+      await page.evaluate(() => document.getElementById("credits")!.scrollIntoView());
+      const [scrolled, bottom, top] = await page.evaluate(() => [
+        scrollY,
+        Math.max(0, document.querySelector("header")!.getBoundingClientRect().bottom),
+        document.getElementById("credits")!.getBoundingClientRect().top,
+      ]);
+      expect(scrolled).toBeGreaterThan(0);
+      expect(top).toBeGreaterThanOrEqual(bottom);
+      await context.close();
+    });
+  }
 
   test("focusing a header control never scrolls the page", async ({ page }) => {
     await ready(page, "/about");
@@ -404,6 +452,8 @@ test.describe("V13 heading focus follows how the navigation started", () => {
     });
     await page.keyboard.press("PrintScreen");
     await page.keyboard.press("Shift");
+    // A non-modifier key makes Chromium re-evaluate :focus-visible, so the check cannot pass vacuously.
+    await page.keyboard.press("a");
     expect(await ring(page)).toBe(false);
   });
 
