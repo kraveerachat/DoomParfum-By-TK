@@ -12,6 +12,9 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S6: Thai localization finalized
+Supersedes the S5 entry below. The Owner approved the full Thai review (192 entries: 159 kept, 33 replaced); applied exactly and reconciled on candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127`; independent review PASS. Preview http://127.0.0.1:3000/ runs `sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`; unit 119, Chrome 283 and Edge 283 pass. A05 PARTIAL with the Owner's stage deferral. ACCEPTANCE PENDING: the Owner's physical Notes check and publication authority. [[2026-11-28_IMP-WEB-02_S6_Report]]
+
 ## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S5: A11 Docker drills
 Supersedes the S4 entry below. With the Owner's authorization the A11 Docker development and recovery drills ran on candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`: PASS. Preview restored without rebuild at http://127.0.0.1:3000/ (`sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`); Chrome 283 pass on it. ACCEPTANCE PENDING on Owner items: A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-28_IMP-WEB-02_S5_Report]]
 

@@ -16,7 +16,7 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. Waiting for the A05 deferral for this stage, the Owner's physical Notes check, Thai line review, the Owner's review and publication authority.
+- State: ACCEPTANCE PENDING. The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. S6 (2026-11-28) applied the Owner-approved Thai review (159 kept, 33 replaced) on candidate `253bf48`; independent review PASS; A05 deferred by the Owner for this stage. Waiting for the Owner's physical Notes check, the Owner's review and publication authority.
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
@@ -55,7 +55,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 | S2 | CP4 selections, CP5, independent review | CLOSED | PASS agent side; ACCEPTANCE PENDING | code `5d63f8809523b5d31b7888852fd44b1f57956874`; records `3966115` | [[2026-11-26_IMP-WEB-02_S2_Report]] |
 | S3 | Design-tool passes, focus paths, CP5 rerun | CLOSED | PASS agent side; independent review BLOCKED; ACCEPTANCE PENDING | code `689b177b4908cd84bec1ac2c81fc9a17963224d3`; records `d7a9e7f` | [[2026-11-27_IMP-WEB-02_S3_Report]] |
 | S4 | Independent review, review fixes, acceptance reconciliation | CLOSED | Review CONDITIONAL then delta PASS; PASS agent side; ACCEPTANCE PENDING | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; records `9f78099` | [[2026-11-27_IMP-WEB-02_S4_Report]] |
-| S5 | A11 Docker drills, acceptance reconciliation | CLOSED | A11 PASS; ACCEPTANCE PENDING (Owner items) | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (unchanged); records commit follows | [[2026-11-28_IMP-WEB-02_S5_Report]] |
+| S5 | A11 Docker drills, acceptance reconciliation | CLOSED | A11 PASS; ACCEPTANCE PENDING (Owner items) | code `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (unchanged); records `9088837` | [[2026-11-28_IMP-WEB-02_S5_Report]] |
+| S6 | Owner-approved Thai translations, regression, review, reconciliation | CLOSED | PASS agent side; review PASS; ACCEPTANCE PENDING (Notes check, publication) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127`; records commit follows | [[2026-11-28_IMP-WEB-02_S6_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -118,6 +119,17 @@ State: CLOSED. Agent: Claude Code. Class A. Start `9f78099` (code `c3f9688`), ve
 - Not run: screen reader, physical phone, Safari, Firefox, LAN probe, the Owner's physical Win+Shift+S path. A05 PARTIAL.
 - Next: Owner A05 deferral, Notes check, Thai line review, site review, publication authority ([[IMP-WEB-02_Draft_PR_Package]]); then the receipt.
 
+### Session S6 — Thai localization finalized
+
+State: CLOSED. Agent: Claude Code. Class A. Start `9088837` (code `c3f9688`), verified. Owner decisions (2026-11-28): approve the full Thai review of 192 entries (keep 159, replace 33); defer A05's remaining manual checks for this stage; family and accord labels stay English; navy folio colour accepted; T1–T8 and A11 evidence retained; Notes physical check pending; publication not authorized.
+
+- Translations: 33 exact replacements (interface 26, prose 7) from `DoomParfum_IMP-WEB-02_Thai_Review_Recommendations.md` (SHA-256 `2e5abb68…`); reconciliation of the final code: 159 KEEP unchanged, 33 REPLACE exact, 192 English unchanged, 0 unapproved changes. The 32 prose texts carry the Owner's `reviewed` record (4.3), so English pages also find them for a Thai query (4.5). A unit test pins the approved wording (`5638f83b…`). Commits `2f8b78a`, `4633f21`, `253bf48`.
+- Tests on image `sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`: unit 119/0; Chrome 283/0/0/0; Edge 283/0/0/0; clean clone and uncached builds PASS; audit 0; scan clean; no Thai prose in immutable chunks; JS ≤ 175.2 KiB; CLS ≤ 0.0187; Explore first picture 522/535 px.
+- Independent review (same-vendor, read-only): `2f8b78a` CONDITIONAL (stale browser tests), fixed; `253bf48` PASS. Reports: [[2026-11-28_IMP-WEB-02_S6_Delta_Review_2f8b78a]], [[2026-11-28_IMP-WEB-02_S6_Delta_Review_253bf48]].
+- A05: PARTIAL, deferred by the Owner for this stage; screen reader, physical phone, Safari, Firefox NOT RUN (future validation). A11: S5 evidence inherited (no runtime configuration changed since `c3f9688`). A10 LAN probe NOT RUN.
+- Preview: `dedbba40…` at http://127.0.0.1:3000/; rollback tag `c3f9688-rollback` (`48748b9c…`). Protected resources unchanged.
+- Next: Owner physical Notes check; Owner review and publication authority ([[IMP-WEB-02_Draft_PR_Package]]); then the receipt.
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -139,5 +151,10 @@ State: CLOSED. Agent: Claude Code. Class A. Start `9f78099` (code `c3f9688`), ve
 | [[2026-11-28_IMP-WEB-02_S5_Report]] | S5 | `cd9f014c9a0a1f2a220e2bd53e27b5bd417de279f7f073216816d9ae2026b6d8` | PUBLIC_SAFE |
 | [[2026-11-28_IMP-WEB-02_S5_Summary]] | S5 | `643c7d987b01a4c63f93f3b135f3c0c376f7f71a60fc59fd3b8ea718fcb106e1` | PUBLIC_SAFE |
 | [[IMP-WEB-02_Draft_PR_Package]] (revised) | S5 | `01535f8448802800b6710287d2326493013291220c78557e9aaf560a66f74c71` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S6_Report]] | S6 | `c63a27532e0a2762da8253ffac13dd3d824b6744bc97c6d55c4a5a8b9f0e8d13` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S6_Summary]] | S6 | `d211663bb27dc75452f7ed5c31195680787f3746f27d549819d9e140e529fee9` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S6_Delta_Review_2f8b78a]] | S6 | `3d6db3e8dd0020332d691460c84dadb76c81c65be0801435baf4f227c6cd47b3` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S6_Delta_Review_253bf48]] | S6 | `1844d8102e13af15bea0614a276945b299988db0349357fade95947e6f921809` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Draft_PR_Package]] (revised) | S6 | `0d0af39da1a4a1fbb104575bc6ac1cd0f5824537a9e29914e0c5fd4ea9d14877` | PUBLIC_SAFE |
 
 Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending.

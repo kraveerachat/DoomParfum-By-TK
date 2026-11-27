@@ -449,3 +449,8 @@ Replaces the unallocated entry above.
 | Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
 |---|---|---|---|---|---|---|
 | IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `c3f9688`; A11 PASS | Owner: A05 deferral, Notes check, Thai line review, publication authority |
+
+## 2026-11-28 — IMP-WEB-02 after S6
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `253bf48`; Thai approved and applied; review PASS | Owner: physical Notes check, publication authority |
