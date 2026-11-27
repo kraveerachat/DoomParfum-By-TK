@@ -60,6 +60,108 @@ test.describe("V01 ten routes and their 404s", () => {
   }
 });
 
+/** Unknown addresses of every kind, with the language of their 404 (IMP-WEB-02 S9). */
+const MISSING = [
+  ["/does-not-exist", "en"],
+  ["/a/b/c", "en"],
+  ["/perfume/no-such-study", "en"],
+  ["/perfume/Paper-Study-A", "en"],
+  ["/perfume/paper-study-a/x", "en"],
+  ["/en", "en"],
+  ["/en/explore", "en"],
+  ["/TH", "en"],
+  ["/fr", "en"],
+  ["/%E0%B8", "en"],
+  ["/perfume/%E0%A4%A", "en"],
+  ["/_unavailable", "en"],
+  ["/th/does-not-exist", "th"],
+  ["/th/perfume/no-such-study", "th"],
+  ["/th/a/b", "th"],
+  ["/th/%E0%B8", "th"],
+] as const;
+
+const NOT_FOUND = {
+  en: { title: "Unavailable · DoomParfum By TK", h1: "This page is unavailable", notice: "Synthetic mock study." },
+  th: { title: "ไม่พบหน้านี้ · DoomParfum By TK", h1: "ไม่พบหน้านี้", notice: "แบบศึกษาจำลอง" },
+} as const;
+
+test.describe("V01/4.2 server-rendered 404 documents (S9 regression)", () => {
+  for (const [path, lang] of MISSING) {
+    test(`${path} is a 404 document in ${lang} from the first byte`, async () => {
+      const response = await raw("GET", path);
+      expect(response.status).toBe(404);
+      // The S7 defect: the framework error document, without lang, heading or notice.
+      expect(response.body).not.toContain("__next_error__");
+      expect(response.body).toContain(`<html lang="${lang}"`);
+      expect(response.body).toContain(`<title>${NOT_FOUND[lang].title}</title>`);
+      const html = response.body.replace(/<script\b[^>]*>[\s\S]*?<\/script>/g, "");
+      expect(html).toMatch(new RegExp(`<h1[^>]*>${NOT_FOUND[lang].h1}</h1>`));
+      expect(html).toContain(NOT_FOUND[lang].notice);
+      expect(html).toContain('name="robots" content="noindex, nofollow');
+      const nonce = /script-src 'self' 'nonce-([^']+)'/.exec(String(response.headers["content-security-policy"] ?? ""))?.[1];
+      expect(nonce).toBeTruthy();
+      for (const tag of response.body.match(/<script\b[^>]*>/g) ?? []) expect(tag).toContain(`nonce="${nonce}"`);
+      expect(response.headers["cache-control"]).toContain("no-store");
+      expect(response.headers["x-robots-tag"]).toContain("noindex");
+    });
+  }
+
+  test("the locale of a 404 ignores client headers", async () => {
+    for (const [path, lang, sent] of [
+      ["/nope", "en", "th"],
+      ["/th/nope", "th", "en"],
+      // Rewritten by the proxy (unknown slug, malformed address, the rewrite targets themselves).
+      ["/perfume/nope", "en", "th"],
+      ["/th/perfume/nope", "th", "en"],
+      ["/%E0%B8", "en", "th"],
+      ["/th/%E0%B8", "th", "en"],
+      ["/_unavailable", "en", "th"],
+      ["/th/_unavailable", "th", "en"],
+    ] as const) {
+      const response = await raw("GET", path, { "x-doomparfum-locale": sent, "accept-language": sent, cookie: `locale=${sent}` });
+      expect(response.status).toBe(404);
+      expect(response.body).toContain(`<html lang="${lang}"`);
+    }
+  });
+
+  test("a 404 refuses writes like every page", async () => {
+    for (const path of ["/nope", "/th/perfume/nope", "/%E0%B8"]) {
+      const response = await raw("POST", path);
+      expect(response.status).toBe(405);
+      expect(response.headers["allow"]).toBe("GET, HEAD");
+    }
+  });
+
+  test("a 404 reads and works without JavaScript, in both languages", async ({ browser }) => {
+    const context = await browser.newContext({ javaScriptEnabled: false });
+    const page = await context.newPage();
+    const outside: string[] = [];
+    page.on("request", (r) => {
+      if (new URL(r.url()).origin !== ORIGIN) outside.push(r.url());
+    });
+    for (const [path, lang] of [
+      ["/perfume/no-such-study", "en"],
+      ["/th/perfume/no-such-study", "th"],
+      ["/fr", "en"],
+      ["/th/%E0%B8", "th"],
+    ] as const) {
+      const response = await page.goto(path);
+      expect(response?.status()).toBe(404);
+      await expect(page.locator("html")).toHaveAttribute("lang", lang);
+      await expect(page).toHaveTitle(NOT_FOUND[lang].title);
+      await expect(page.locator("[data-state='unavailable'] h1")).toHaveText(NOT_FOUND[lang].h1);
+      await expect(page.locator("[data-synthetic-notice]")).toContainText(NOT_FOUND[lang].notice);
+      await expect(page.locator("header")).toBeVisible();
+    }
+    // The return link is a plain link: it works without scripting and keeps the language.
+    await page.locator("[data-state='unavailable'] a").click();
+    await expect(page).toHaveURL(`${ORIGIN}/th/explore`);
+    await expect(page.locator("html")).toHaveAttribute("lang", "th");
+    expect(outside).toEqual([]);
+    await context.close();
+  });
+});
+
 /** Every visible text node and accessible name on a Thai page is Thai, marked English, or a name or numeral. */
 const strayLatin = (page: Page) =>
   page.evaluate(() => {

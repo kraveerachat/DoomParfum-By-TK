@@ -4,8 +4,8 @@ import { localize, type Locale } from "@/i18n/locale";
 import { MESSAGES } from "@/i18n/messages";
 
 /**
- * Unknown address in either language, with a real 404 status. A server component, so its text is in
- * the server's response even where the framework delivers the page through its error document.
+ * Unknown address in either language, with a real 404 status. A server component rendered by
+ * app/global-not-found.tsx, so its text is in the server's response and reads without scripting.
  */
 export function UnavailableView({ locale }: { locale: Locale }) {
   const t = MESSAGES[locale];

@@ -28,12 +28,10 @@ export default function GlobalError({ retry }: { error: Error; retry: () => void
               <button type="button" className="button-primary" onClick={retry}>
                 Retry · <span lang="th">ลองอีกครั้ง</span>
               </button>
-              {/* A full load: the client router is part of what failed. */}
-              {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- see above */}
+              {/* Full loads, not <Link>: the client router is part of what failed. */}
               <a href="/explore" className="link-action">
                 Return to Explore
               </a>
-              {/* eslint-disable-next-line @next/next/no-html-link-for-pages -- see above */}
               <a href="/th/explore" className="link-action" lang="th">
                 กลับไปยังหน้าสำรวจ
               </a>

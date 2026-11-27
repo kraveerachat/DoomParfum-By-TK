@@ -1,7 +1,21 @@
 import { NextResponse, type NextRequest } from "next/server";
+import { fixtures } from "./fixtures/data.ts";
+import { LOCALE_HEADER, localeOf, localize } from "./i18n/locale.ts";
 
 /** Owned static files. A missing one still falls through to the HTML 404, so it keeps the policy. */
 const OWNED_ASSET = /^\/(?:studies\/[a-z-]+\.svg|icon\.svg)$/;
+
+/**
+ * A path no route uses, in each language. Rewriting here makes the framework answer with
+ * app/global-not-found.tsx, the only 404 it renders on the server with a `lang` (IMP-WEB-02 S9,
+ * Owner-authorized). The target keeps the language in its path: with one target for both, the
+ * 404 page of a rewritten Thai address was rendered in English (observed on 16.4.6).
+ */
+const UNMATCHED = "/_unavailable";
+
+/** A detail address and its slug; only slugs in the fixtures have a page. */
+const DETAIL = /^(?:\/th)?\/perfume\/([^/]+)$/;
+const SLUGS = new Set(fixtures.perfumes.map((p) => p.slug));
 
 /** Nothing in this mock accepts a write, so only reads are answered with a page. */
 const READS = ["GET", "HEAD"];
@@ -44,17 +58,19 @@ export function proxy(request: NextRequest) {
   const headers = new Headers(request.headers);
   headers.set("x-nonce", nonce);
   headers.set("Content-Security-Policy", policy);
+  // Derived from the path only; this replaces any value the client sent (DPT-PLAN-013 4.2).
+  headers.set(LOCALE_HEADER, localeOf(pathname));
+
+  const unavailable = () =>
+    NextResponse.rewrite(new URL(localize(localeOf(pathname), UNMATCHED), request.url), { request: { headers } });
 
   const answer = () => {
     if (!READS.includes(request.method)) return new NextResponse(null, { status: 405, headers: { Allow: READS.join(", ") } });
     // The optimizer is unused. Refusing it here keeps its handler, and its disk cache, unreachable.
     if (pathname.startsWith("/_next/image")) return new NextResponse(null, { status: 404 });
-    // An address that cannot be decoded is served the unavailable view by a path no route uses.
-    // A Thai address gets the Thai unavailable view (DPT-PLAN-013 4.2); the prefix is plain ASCII.
-    if (!decodes(pathname)) {
-      const target = pathname === "/th" || pathname.startsWith("/th/") ? "/th/unavailable" : "/unavailable";
-      return NextResponse.rewrite(new URL(target, request.url), { request: { headers } });
-    }
+    // An address that cannot be decoded gets the 404 page of its path's language, by a path no route
+    // uses, so no route parameter is decoded from it. The "/th" prefix is plain ASCII.
+    if (!decodes(pathname)) return unavailable();
     // Redirected here, not by the framework, so that the response carries the headers below.
     if (pathname !== "/" && pathname.endsWith("/")) {
       const url = new URL(request.url);
@@ -62,6 +78,10 @@ export function proxy(request: NextRequest) {
       url.pathname = `/${pathname.replace(/^[/\\]+|\/+$/g, "")}`;
       return NextResponse.redirect(url, 308);
     }
+    // An unknown slug would otherwise reach notFound() in the page, which the framework can only send
+    // as its error document, without `lang` and empty without scripting (IMP-WEB-02 S7).
+    const slug = DETAIL.exec(pathname)?.[1];
+    if (slug !== undefined && !SLUGS.has(decodeURIComponent(slug))) return unavailable();
     return NextResponse.next({ request: { headers } });
   };
   const response = answer();

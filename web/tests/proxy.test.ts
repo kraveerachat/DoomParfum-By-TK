@@ -52,6 +52,56 @@ test("every kind of answer carries the policy, and only owned files may be cache
   }
 });
 
+/** The request headers the proxy forwards, and where it rewrote the request (null when it did not). */
+const forwarded = (path: string, headers: Record<string, string> = {}) => {
+  const response = proxy(new NextRequest(`${ORIGIN}${path}`, { headers }));
+  const rewrite = response.headers.get("x-middleware-rewrite");
+  return {
+    status: response.status,
+    locale: response.headers.get("x-middleware-request-x-doomparfum-locale"),
+    rewrite: rewrite ? new URL(rewrite).pathname : null,
+  };
+};
+
+test("S9: the 404 locale comes from the path only, never from a client header", () => {
+  const spoof = { "x-doomparfum-locale": "th", "accept-language": "th-TH,th;q=0.9" };
+  for (const [path, locale] of [
+    ["/nope", "en"],
+    ["/en", "en"],
+    ["/TH", "en"],
+    ["/thx", "en"],
+    ["/perfume/nope", "en"],
+    ["/th", "th"],
+    ["/th/nope", "th"],
+    ["/th/perfume/nope", "th"],
+    ["/%E0%B8", "en"],
+    ["/th/%E0%B8", "th"],
+  ] as const) {
+    assert.equal(forwarded(path, spoof).locale, locale, path);
+    assert.equal(forwarded(path, { "x-doomparfum-locale": locale === "th" ? "en" : "th" }).locale, locale, path);
+  }
+});
+
+test("S9: malformed addresses and unknown slugs go to the global 404, known pages do not", () => {
+  // Before S9 these reached notFound() in a page: the framework error document, no lang, empty without scripting.
+  for (const [path, target] of [
+    ["/perfume/nope", "/_unavailable"],
+    ["/perfume/Paper-Study-A", "/_unavailable"],
+    ["/perfume/%E0%A4%A", "/_unavailable"],
+    ["/%E0%B8", "/_unavailable"],
+    ["/TH/%E0%B8", "/_unavailable"],
+    ["/th/perfume/nope", "/th/_unavailable"],
+    ["/th/%E0%B8", "/th/_unavailable"],
+  ] as const) {
+    assert.deepEqual([forwarded(path).status, forwarded(path).rewrite], [200, target], path);
+  }
+  for (const path of ["/", "/explore", "/notes", "/about", "/perfume/paper-study-a", "/perfume/paper%2Dstudy-a", "/th", "/th/perfume/glass-study-i", "/nope", "/perfume/nope/x"]) {
+    assert.equal(forwarded(path).rewrite, null, path);
+  }
+  // A trailing slash is still redirected first, so an unknown slug with one is redirected, then answered.
+  assert.equal(forwarded("/perfume/nope/").status, 308);
+});
+
 test("the production policy has no development exception", () => {
   const csp = call("/").headers.get("content-security-policy") ?? "";
   assert.doesNotMatch(csp, /unsafe-|strict-dynamic|https?:|wss?:|\*/);

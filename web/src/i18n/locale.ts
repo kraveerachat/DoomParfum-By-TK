@@ -4,6 +4,12 @@ export type Locale = (typeof LOCALES)[number];
 
 export const THAI_PREFIX = "/th";
 
+/**
+ * Request header that carries the locale of the requested path to the global 404 page, which has no
+ * route of its own. The proxy always overwrites it, so a value sent by the client is never read.
+ */
+export const LOCALE_HEADER = "x-doomparfum-locale";
+
 export const hasThai = (text: string) => /[฀-๿]/.test(text);
 
 /** The locale a pathname belongs to. Only the exact segment "th" is Thai; "/TH" or "/thx" are not. */
