@@ -742,14 +742,15 @@ html[data-ready] .about-contents:not([data-open]) .contents-list {
 html[data-header-static] .site-header {
   position: static;
 }
-/* Without scripting nothing measures the header: below 64em the navigation takes a second row, so the
-   header is static there; above it, it is one row of known height. */
+/* Without scripting nothing measures the header: below 1024px (or 64em, when the default text size is
+   larger) the navigation takes a second row, so the header is static there; above it, it is one row of
+   known height. The px bound covers a default text size below 16px, where 64em is narrower. */
 @media (scripting: none) {
   html {
     --header-h: 5.875rem;
   }
 }
-@media (scripting: none) and (width < 64em) {
+@media (scripting: none) and ((width < 1024px) or (width < 64em)) {
   .site-header {
     position: static;
   }

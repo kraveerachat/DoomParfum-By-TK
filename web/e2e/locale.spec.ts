@@ -228,6 +228,8 @@ test.describe("V07 sticky header", () => {
     await ready(page, "/about");
     await page.evaluate(() => document.documentElement.style.setProperty("font-size", "125%"));
     await expect.poll(() => headerRows(page)).toBe(2);
+    // The ResizeObserver runs after layout: wait for its result rather than the first two-row frame.
+    await expect(page.locator("html")).toHaveAttribute("data-header-static", "");
     const [position, height, offset] = await page.evaluate(() => {
       const header = document.querySelector("header")!;
       return [
@@ -242,12 +244,14 @@ test.describe("V07 sticky header", () => {
   });
 
   for (const [width, position] of [[768, "static"], [1280, "sticky"]] as const) {
-    test(`without scripting the header is ${position} at ${width}px and a fragment target clears it`, async ({ browser }) => {
+    test(`without scripting the header is ${position} at ${width}px`, async ({ browser }) => {
       const context = await browser.newContext({ javaScriptEnabled: false, viewport: { width, height: 900 }, baseURL: ORIGIN });
       const page = await context.newPage();
       await page.goto("/about#credits");
       expect(await headerRows(page)).toBe(position === "static" ? 2 : 1);
       expect(await page.locator("header").evaluate((el) => getComputedStyle(el).position)).toBe(position);
+      // A static header scrolls away, so clearance is only meaningful for the sticky one.
+      if (position === "static") return context.close();
       await page.evaluate(() => document.getElementById("credits")!.scrollIntoView());
       const [scrolled, bottom, top] = await page.evaluate(() => [
         scrollY,
@@ -452,8 +456,9 @@ test.describe("V13 heading focus follows how the navigation started", () => {
     });
     await page.keyboard.press("PrintScreen");
     await page.keyboard.press("Shift");
-    // A non-modifier key makes Chromium re-evaluate :focus-visible, so the check cannot pass vacuously.
+    // A non-modifier key as well, as after a real screenshot shortcut; the heading must still hold focus.
     await page.keyboard.press("a");
+    await expect(page.locator("main h1")).toBeFocused();
     expect(await ring(page)).toBe(false);
   });
 
