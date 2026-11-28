@@ -878,3 +878,6 @@ No code change. Records: S7 report and summary, 404 investigation evidence, task
 
 ## 2026-11-28 — IMP-WEB-02 S8
 No code change. Records: Owner visual acceptance and Notes observation, S8 report and summary, next-development handoff, Draft PR package (ready as Draft once authorized, 404 disclosed), task note, status, index, backlog and logs. Preview unchanged. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9
+Code `3b93945`, `53d0126`: `app/global-not-found.tsx`; proxy locale header from the path and per-locale rewrites for malformed addresses and unknown slugs; catch-all and `/unavailable` routes removed; `experimental.globalNotFound` (Owner-authorized, Next.js 16.4.6, local mock only); regression tests. Preview rebuilt and recreated (image `568cc3b3…`). Records: S9 report, summary, two review reports, verification evidence, decision packet, Draft PR package, task note, status, index, backlog and logs. [[IMP-WEB-02_Frontend_V1_1]]

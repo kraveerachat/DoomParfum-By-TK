@@ -1,0 +1,1211 @@
+{
+ "task": "IMP-WEB-02",
+ "session": "S9",
+ "date": "2026-11-28",
+ "classification": "PUBLIC_SAFE",
+ "authorization": "Owner instruction \"IMP-WEB-02 — Final 404 Resolution and Closeout\" (2026-11-28): experimental globalNotFound on the pinned Next.js 16.4.6, local mock frontend only",
+ "code": {
+  "before": "253bf485d40a9e4367db8968cf0d0d59faf8f127",
+  "after": "3b93945a7c03568315b81d128a5dd6706c221f3d"
+ },
+ "images": {
+  "before": "sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a (tags 253bf48-rollback, s6-final)",
+  "after": "sha256:10ded624db2ce702758cc7f9f4d8263430774a61a566508fabd3a84f02130b98 (tag preview)"
+ },
+ "method": "Raw HTTP with node:http (exact request targets), scripts stripped for server-text checks; Playwright Chrome and Edge. The candidate image ran first in a temporary hardened loopback container (127.0.0.1:3100), then as the Compose preview (127.0.0.1:3000).",
+ "tests": {
+  "unit": "121 pass / 0 fail (119 before + 2 new)",
+  "chromeCandidate3100": "302 passed (283 before + 19 new)",
+  "edgeCandidate3100": "302 passed",
+  "chromePreview3000": "302 passed",
+  "typecheck": "exit 0",
+  "lint": "exit 0",
+  "build": "next build exit 0; 'Experiments: globalNotFound' only",
+  "outputScan": "No boundary violation found (280 of 1403 files outside node_modules, 25 immutable scripts)",
+  "regressionDetection": {
+   "newE2eTestsOnOldPreview": "18 failed / 1 passed (the passing test is the 405 write refusal, already correct before)",
+   "newUnitTestsOnOldProxy": "2 failed / 4 passed"
+  }
+ },
+ "probe": {
+  "candidate": {
+   "label": "S9 candidate 3b93945 image 10ded624",
+   "origin": "http://127.0.0.1:3100/",
+   "date": "2026-11-27T20:36:37.604Z",
+   "valid": [
+    {
+     "path": "/",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Home · DoomParfum By TK",
+     "serverH1": "A personal atlas of scent.",
+     "serverText": 1711,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/explore",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Explore mock fragrances · DoomParfum By TK",
+     "serverH1": "Explore mock fragrances",
+     "serverText": 1459,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/paper-study-a",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Paper study A · Mock study · DoomParfum By TK",
+     "serverH1": "Paper study A",
+     "serverText": 1318,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/notes",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Notes · DoomParfum By TK",
+     "serverH1": "Notes",
+     "serverText": 2437,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/about",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "About · DoomParfum By TK",
+     "serverH1": "A notebook that says what it does not know.",
+     "serverText": 3239,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "หน้าแรก · DoomParfum By TK",
+     "serverH1": "แผนที่กลิ่นส่วน⁠ตัว",
+     "serverText": 1706,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/explore",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "สำรวจน้ำหอมจำลอง · DoomParfum By TK",
+     "serverH1": "สำรวจน้ำหอมจำลอง",
+     "serverText": 1497,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/perfume/paper-study-a",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "Paper study A · แบบศึกษาจำลอง · DoomParfum By TK",
+     "serverH1": "Paper study A",
+     "serverText": 1310,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/notes",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "โน้ตกลิ่น · DoomParfum By TK",
+     "serverH1": "โน้ตกลิ่น",
+     "serverText": 2690,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/about",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "เกี่ยวกับเรา · DoomParfum By TK",
+     "serverH1": "สมุดบันทึกที่บอกตรงไปตรงมาว่าข้อมูลใดยังไม่ทราบ",
+     "serverText": 3095,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    }
+   ],
+   "missing": [
+    {
+     "path": "/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/a/b/c",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/Paper-Study-A",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/paper-study-a/x",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/a/b",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/en",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/en/explore",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/TH",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/fr",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/%E0%A4%A",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/_unavailable",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/_unavailable",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    }
+   ],
+   "spoof": [
+    {
+     "path": "/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">"
+    },
+    {
+     "path": "/th/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">"
+    },
+    {
+     "path": "/perfume/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">"
+    },
+    {
+     "path": "/th/perfume/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">"
+    }
+   ],
+   "methods": [
+    {
+     "method": "POST",
+     "path": "/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "PUT",
+     "path": "/th/perfume/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "DELETE",
+     "path": "/%E0%B8",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "POST",
+     "path": "/explore",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "HEAD",
+     "path": "/th/nope",
+     "status": 404,
+     "allow": null
+    }
+   ],
+   "summary": {
+    "validOk": 10,
+    "missing404": 17,
+    "missingErrorDocument": 0,
+    "missingWithLang": 17,
+    "thaiMissing": [
+     "/th/does-not-exist",
+     "/th/perfume/no-such-study",
+     "/th/a/b",
+     "/th/%E0%B8",
+     "/th/_unavailable"
+    ],
+    "allChecksPass": true
+   }
+  },
+  "oldCandidate": {
+   "summary": {
+    "validOk": 10,
+    "missing404": 17,
+    "missingErrorDocument": 17,
+    "missingWithLang": 0,
+    "thaiMissing": [],
+    "allChecksPass": false
+   },
+   "spoof": [
+    {
+     "path": "/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">"
+    },
+    {
+     "path": "/th/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">"
+    },
+    {
+     "path": "/perfume/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">"
+    },
+    {
+     "path": "/th/perfume/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">"
+    }
+   ],
+   "methods": [
+    {
+     "method": "POST",
+     "path": "/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "PUT",
+     "path": "/th/perfume/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "DELETE",
+     "path": "/%E0%B8",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "POST",
+     "path": "/explore",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "HEAD",
+     "path": "/th/nope",
+     "status": 404,
+     "allow": null
+    }
+   ]
+  },
+  "preview": {
+   "summary": {
+    "validOk": 10,
+    "missing404": 17,
+    "missingErrorDocument": 0,
+    "missingWithLang": 17,
+    "thaiMissing": [
+     "/th/does-not-exist",
+     "/th/perfume/no-such-study",
+     "/th/a/b",
+     "/th/%E0%B8",
+     "/th/_unavailable"
+    ],
+    "allChecksPass": true
+   }
+  }
+ },
+ "validRouteComparison": {
+  "method": "Ten valid routes on the old image (3000) and the candidate (3100) at 1440 and 390 px: document lang, title and body innerText, and full-page screenshot SHA-256 after scrolling (reduced motion)",
+  "textIdentical": "20/20",
+  "screenshotIdentical": "16/20",
+  "screenshotDifferOldVsNew": [
+   "1440 /explore",
+   "390 /explore",
+   "390 /perfume/paper-study-a",
+   "390 /th/explore"
+  ],
+  "screenshotDifferOldVsOld": [
+   "1440 /explore",
+   "1440 /th/explore",
+   "390 /explore",
+   "390 /perfume/paper-study-a",
+   "390 /th/explore"
+  ],
+  "rows": [
+   {
+    "width": 1440,
+    "path": "/",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/explore",
+    "sameText": true,
+    "sameScreenshot": false
+   },
+   {
+    "width": 1440,
+    "path": "/perfume/paper-study-a",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/notes",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/about",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/th",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/th/explore",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/th/perfume/paper-study-a",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/th/notes",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 1440,
+    "path": "/th/about",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/explore",
+    "sameText": true,
+    "sameScreenshot": false
+   },
+   {
+    "width": 390,
+    "path": "/perfume/paper-study-a",
+    "sameText": true,
+    "sameScreenshot": false
+   },
+   {
+    "width": 390,
+    "path": "/notes",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/about",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/th",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/th/explore",
+    "sameText": true,
+    "sameScreenshot": false
+   },
+   {
+    "width": 390,
+    "path": "/th/perfume/paper-study-a",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/th/notes",
+    "sameText": true,
+    "sameScreenshot": true
+   },
+   {
+    "width": 390,
+    "path": "/th/about",
+    "sameText": true,
+    "sameScreenshot": true
+   }
+  ],
+  "conclusion": "Text identical on all 20. Every page with a deterministic screenshot on the old image is pixel-identical on the candidate; each differing page also differs between two captures of the old image (capture nondeterminism), not a change."
+ },
+ "reviewFollowUp": {
+  "code": "53d01265962059655764f8d65be5b71329e600c4",
+  "image": "sha256:568cc3b30f8fef993d5db66e2e6f2bbfd5c6536c874b7786d3385d53c66f701e (tag preview; previous candidate 10ded624 kept as s9-candidate1)",
+  "rootCause": {
+   "question": "Why did a single rewrite target render rewritten Thai addresses in English? (independent review finding 1)",
+   "method": "Instrumented scratch copy of 3b93945 outside the repository (single target /_unavailable, console logging in the proxy and in global-not-found), webpack build, next start on 127.0.0.1:3301, stopped afterwards",
+   "log": [
+    "proxy GET /th/perfume/nope incoming-locale=null",
+    "proxy GET /_unavailable incoming-locale=th",
+    "gnf header=en",
+    "proxy GET /th/nope incoming-locale=null",
+    "gnf header=th"
+   ],
+   "finding": "Next.js 16.4.6 runs the proxy a second time on a rewrite target that matches no route, with the first pass's request headers; the second pass derived the locale again from /_unavailable and overwrote th with en. Per-locale targets (/th/_unavailable) keep the locale derived from a proxy-controlled path. Both passes overwrite any client value; nonces matched the CSP in both cases."
+  },
+  "added": [
+   "e2e: repeated and interleaved 404s keep their language and get a fresh nonce matching every script",
+   "e2e: HEAD on a 404 is a 404 with CSP, no-store and noindex and an empty body",
+   "e2e: valid escaped slugs (/perfume/paper%2Dstudy-a, /th/perfume/%70aper-study-a) are 200 pages",
+   "unit: every validated fixture slug passes the proxy in both languages"
+  ],
+  "tests": {
+   "unit": "122 pass / 0 fail",
+   "chromeScratch3300": "305 passed",
+   "edgeScratch3300": "305 passed",
+   "chromePreview3000": "305 passed",
+   "edgePreview3000": "305 passed",
+   "typecheck": "exit 0",
+   "lint": "exit 0",
+   "outputScan": "No boundary violation found (280 of 1403 files outside node_modules, 25 immutable scripts)"
+  },
+  "probe": {
+   "label": "S9 final 53d0126 image 568cc3b3",
+   "origin": "http://127.0.0.1:3000/",
+   "date": "2026-11-28T08:46:22.866Z",
+   "valid": [
+    {
+     "path": "/",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Home · DoomParfum By TK",
+     "serverH1": "A personal atlas of scent.",
+     "serverText": 1711,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/explore",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Explore mock fragrances · DoomParfum By TK",
+     "serverH1": "Explore mock fragrances",
+     "serverText": 1459,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/paper-study-a",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Paper study A · Mock study · DoomParfum By TK",
+     "serverH1": "Paper study A",
+     "serverText": 1318,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/notes",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Notes · DoomParfum By TK",
+     "serverH1": "Notes",
+     "serverText": 2437,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/about",
+     "status": 200,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "About · DoomParfum By TK",
+     "serverH1": "A notebook that says what it does not know.",
+     "serverText": 3239,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "หน้าแรก · DoomParfum By TK",
+     "serverH1": "แผนที่กลิ่นส่วน⁠ตัว",
+     "serverText": 1706,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/explore",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "สำรวจน้ำหอมจำลอง · DoomParfum By TK",
+     "serverH1": "สำรวจน้ำหอมจำลอง",
+     "serverText": 1497,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/perfume/paper-study-a",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "Paper study A · แบบศึกษาจำลอง · DoomParfum By TK",
+     "serverH1": "Paper study A",
+     "serverText": 1310,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/notes",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "โน้ตกลิ่น · DoomParfum By TK",
+     "serverH1": "โน้ตกลิ่น",
+     "serverText": 2690,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/about",
+     "status": 200,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "เกี่ยวกับเรา · DoomParfum By TK",
+     "serverH1": "สมุดบันทึกที่บอกตรงไปตรงมาว่าข้อมูลใดยังไม่ทราบ",
+     "serverText": 3095,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    }
+   ],
+   "missing": [
+    {
+     "path": "/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/a/b/c",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/Paper-Study-A",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/paper-study-a/x",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/a/b",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/en",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/en/explore",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/TH",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/fr",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/perfume/%E0%A4%A",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/_unavailable",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "errorDocument": false,
+     "title": "Unavailable · DoomParfum By TK",
+     "serverH1": "This page is unavailable",
+     "serverText": 444,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    },
+    {
+     "path": "/th/_unavailable",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "errorDocument": false,
+     "title": "ไม่พบหน้านี้ · DoomParfum By TK",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverText": 448,
+     "cspNonce": true,
+     "allScriptsNonced": true,
+     "noStore": true,
+     "noindex": true,
+     "externalUrlsInHtml": 0
+    }
+   ],
+   "spoof": [
+    {
+     "path": "/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">"
+    },
+    {
+     "path": "/th/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">"
+    },
+    {
+     "path": "/perfume/nope",
+     "sent": "th",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">"
+    },
+    {
+     "path": "/th/perfume/nope",
+     "sent": "en",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">"
+    }
+   ],
+   "methods": [
+    {
+     "method": "POST",
+     "path": "/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "PUT",
+     "path": "/th/perfume/nope",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "DELETE",
+     "path": "/%E0%B8",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "POST",
+     "path": "/explore",
+     "status": 405,
+     "allow": "GET, HEAD"
+    },
+    {
+     "method": "HEAD",
+     "path": "/th/nope",
+     "status": 404,
+     "allow": null
+    }
+   ],
+   "summary": {
+    "validOk": 10,
+    "missing404": 17,
+    "missingErrorDocument": 0,
+    "missingWithLang": 17,
+    "thaiMissing": [
+     "/th/does-not-exist",
+     "/th/perfume/no-such-study",
+     "/th/a/b",
+     "/th/%E0%B8",
+     "/th/_unavailable"
+    ],
+    "allChecksPass": true
+   }
+  },
+  "acceptedNits": [
+   "proxy imports the fixture module (server-only bundle; scan-output confirms no fixture text in .next/static)",
+   "encoded slash /th%2F... is English by the contract rule (only /th and /th/... are Thai); existed before"
+  ]
+ }
+}

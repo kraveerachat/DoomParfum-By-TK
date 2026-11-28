@@ -466,3 +466,10 @@ Replaces the unallocated entry above.
 | IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | Visual ACCEPTED by the Owner at `253bf48`; 404 decision open | Owner: 404 decision, publication authority |
 
 Next development (not allocated): smallest real-data read-only slice P30-U03 → U05 → U06 → U07 per [[Post_PR30_Dependency_and_Gate_Map]]; gated by POST30-ODP-1 decisions and U01. See [[IMP-WEB-02_Next_Development_Handoff]].
+
+## 2026-11-28 — IMP-WEB-02 after S9
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | 404 fixed; review PASS on `53d0126`; visual ACCEPTED | Owner: Notes physical test (confirm or defer), publication authority |
+
+Next development (not allocated): smallest real-data read-only slice P30-U03 → U05 → U06 → U07; ordered Owner decisions in [[IMP-WEB-02_Next_Slice_Decision_Packet]] (security review G-IND for U01 r14 first).

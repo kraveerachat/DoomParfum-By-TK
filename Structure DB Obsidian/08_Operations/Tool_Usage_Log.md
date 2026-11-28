@@ -96,3 +96,6 @@ Node (raw HTTP probes with node:http, Playwright Chrome with JavaScript disabled
 
 ## 2026-11-28 — IMP-WEB-02 S8 tools
 Node read-only HTTP smoke of the preview; git read-only history checks; reading merged planning notes. No design skill, Agent call, Docker change, install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9 tools
+Node/npm (type check, lint, unit tests, `next build`, `next start` on loopback scratch ports, all stopped); Playwright Chrome and Edge; node raw-HTTP probes; Docker (Desktop restarted with the Owner's approval; Compose build and recreate of the preview only; one temporary hardened loopback container on 3100, removed; image tags added); one read-only same-vendor review sub-agent (two passes). No design skill, install, dependency change, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]

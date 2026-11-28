@@ -12,6 +12,10 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S9: 404 documents fixed, closeout
+
+Supersedes the S8 entry below. With the Owner's bounded authorization, every 404 is now server-rendered in its language and readable without JavaScript. This uses experimental `globalNotFound`, authorized only on the pinned Next.js 16.4.6 for the local mock; it must be reassessed before any upgrade, live data or deployment. Final candidate `53d01265962059655764f8d65be5b71329e600c4`: unit 122/0, Chrome and Edge 305/305, independent review PASS. Preview `127.0.0.1:3000` = image `sha256:568cc3b3…`. Open: the physical Notes shortcut test (not performed; Owner to confirm or defer) and publication authority. Not pushed; no receipt. Next slice decisions: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (no task started). [[2026-11-28_IMP-WEB-02_S9_Report]]
+
 ## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S8: Owner visual acceptance
 Supersedes the S7 entry below. The Owner accepted the Frontend V1.1 visual design as the initial baseline (candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127`, preview `sha256:dedbba40…`); visual refinement is deferred and the next priority is real catalogue data and backend features (handoff: [[IMP-WEB-02_Next_Development_Handoff]]; no task started). Notes outline: no outline in the Owner's screenshot. Open: the 404 server-language decision (S7) and publication authority. Not pushed; no receipt. [[2026-11-28_IMP-WEB-02_S8_Report]]
 
