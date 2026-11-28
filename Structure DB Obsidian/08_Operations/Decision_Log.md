@@ -553,3 +553,16 @@ Owner-verified (chat, 2026-11-26): T1 Fahkwang 300; T2 C centred hero; T3 B reco
 ## 2026-11-28 — IMP-WEB-02 S9: experimental globalNotFound (Owner-authorized, bounded)
 
 Owner instruction "IMP-WEB-02 — Final 404 Resolution and Closeout" (2026-11-28): authorizes the S7-tested correction (experimental `globalNotFound` + proxy rewrites) for the pinned Next.js 16.4.6 and the local mock frontend only. No dependency upgrade, other experimental feature or routing restructure. **Condition: reassess compatibility before any future framework upgrade, live data or production deployment.** This is a deviation from the 404 mechanism stated in DPT-PLAN-013 4.2: two root layouts stay, and the 404 path changes. It is recorded here as the Owner's decision; no planning amendment was requested. The Owner also accepted the V1.1 visual design as the initial baseline (S8). [[2026-11-28_IMP-WEB-02_S9_Report]]
+
+## 2026-11-28 — IMP-WEB-02 S10: final Owner acceptance and one-time publication
+
+Owner instruction "IMP-WEB-02 Final Closeout and One-Time Publication Authorization" (2026-11-28):
+
+- Frontend V1.1 is accepted as the initial visual and functional mock baseline. T1–T8 are final for this stage. The 192 Thai decisions are approved. Fictional proper names and family/accord labels stay as approved. The reviewed Thai search behavior is accepted. The 404 correction is accepted for the current pinned local mock scope. A05 stays PARTIAL with the stage deferral. A11 evidence is accepted where applicable.
+- The physical Notes Win+Shift+S check is **explicitly deferred** for this stage: NOT RUN / OWNER-DEFERRED, not PASS. The earlier screenshot stays a separate observation.
+- Future UI/UX refinement is deferred until representative real data and working features exist. No WCAG or production-readiness claim.
+- **One-time publication authority:** local closeout commits, one normal push of `feat/frontend-v1-1-design-upgrade`, and exactly one Draft PR to `main`.
+  - Prohibited: merge, force push, push to `main`, Ready for Review, other PRs, settings/rulesets/permissions, unrelated work, deployment and later cycles.
+  - It expires once the push and the PR are done.
+- **Owner-login exception (Hybrid GitHub workflow, 2026-11-21):** no agent publishing identity exists. The instruction said not to assume a credential exception, so the agent asked; the Owner confirmed in the session "Yes, my login, this push only". The exception is limited to this repository, branch, push and Draft PR. `AGENT_CREDENTIAL_REQUIRED` stays open for later publications.
+- The `globalNotFound` conditions of the S9 entry stand; the mock-slug handling is not the live-data route-resolution contract. [[IMP-WEB-02_Frontend_V1_1]], [[2026-11-28_IMP-WEB-02_S10_Report]]

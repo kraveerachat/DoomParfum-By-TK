@@ -99,3 +99,6 @@ Node read-only HTTP smoke of the preview; git read-only history checks; reading 
 
 ## 2026-11-28 — IMP-WEB-02 S9 tools
 Node/npm (type check, lint, unit tests, `next build`, `next start` on loopback scratch ports, all stopped); Playwright Chrome and Edge; node raw-HTTP probes; Docker (Desktop restarted with the Owner's approval; Compose build and recreate of the preview only; one temporary hardened loopback container on 3100, removed; image tags added); one read-only same-vendor review sub-agent (two passes). No design skill, install, dependency change, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S10 tools
+git (state, tree identity, outgoing-range safety scan, `diff --check`, one normal push); gh CLI with the Owner's login under a one-time exception the Owner confirmed in the session (read-only checks, one Draft PR create, read-only verification); docker read-only inspect; PowerShell HTTP GET of the preview; one Node script that appends these log entries. No design skill, Agent call, install, hook, MCP, Docker change or client setting. [[IMP-WEB-02_Frontend_V1_1]]

@@ -2,7 +2,7 @@
 id: IMP-WEB-02
 project: DoomParfum By TK
 type: implementation_task
-status: acceptance-pending
+status: agent-verified-human-review-pending
 owner: human-owner
 updated: 2026-11-28
 requirements: [R01, R03, R04, R13, R14, R21]
@@ -16,12 +16,12 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ## Current Task
 
 - Type: IMPLEMENTATION, mock only. Agent: Claude Code. Gate C of the Owner's A, B, C order.
-- State: ACCEPTANCE PENDING (Owner items only: Notes physical test, publication). The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. S6 (2026-11-28) applied the Owner-approved Thai review (159 kept, 33 replaced) on candidate `253bf48`; independent review PASS; A05 deferred by the Owner for this stage. S7 (2026-11-28) found that every 404 document is sent without server `lang` and is empty without scripting (DPT-PLAN-013 4.2/V01 not met); no correction fits the approved design, so it waits for an Owner decision. S8 (2026-11-28): the Owner accepted the visual design as the initial frontend baseline; the Owner's Notes screenshot shows no unwanted outline (observation; exact Win+Shift+S sequence not confirmed). S9 (2026-11-28): with the Owner's bounded authorization, the 404 documents were fixed with experimental `globalNotFound` (Next.js 16.4.6, local mock only); final candidate `53d0126`, independent review PASS, preview restored on image `568cc3b3…`. Open: the physical Notes shortcut test (not performed; Owner to confirm or defer) and publication authority.
+- State: AGENT VERIFIED / HUMAN REVIEW PENDING (S10: Owner final acceptance recorded, single receipt written, one Draft PR authorized; the Owner reviews and merges). The Owner answered CP4 (2026-11-26); S2 built the selections and ran CP5 and an independent review; S3 (2026-11-27) ran the design commands, fixed two alignment defects and reran CP5; S4 (2026-11-27) obtained the independent review, fixed its two contract deviations and verified final candidate `c3f9688` (delta reviews PASS). S5 (2026-11-28) ran the A11 Docker drills with the Owner's authorization: PASS. S6 (2026-11-28) applied the Owner-approved Thai review (159 kept, 33 replaced) on candidate `253bf48`; independent review PASS; A05 deferred by the Owner for this stage. S7 (2026-11-28) found that every 404 document is sent without server `lang` and is empty without scripting (DPT-PLAN-013 4.2/V01 not met); no correction fits the approved design, so it waits for an Owner decision. S8 (2026-11-28): the Owner accepted the visual design as the initial frontend baseline; the Owner's Notes screenshot shows no unwanted outline (observation; exact Win+Shift+S sequence not confirmed). S9 (2026-11-28): with the Owner's bounded authorization, the 404 documents were fixed with experimental `globalNotFound` (Next.js 16.4.6, local mock only); final candidate `53d0126`, independent review PASS, preview restored on image `568cc3b3…`. S10 (2026-11-28): the Owner accepted Frontend V1.1 as the initial mock baseline and explicitly deferred the physical Notes shortcut check (NOT RUN / OWNER-DEFERRED, not PASS); final receipt [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]]; one-time publication (one push, one Draft PR, Owner-login exception).
 - Experimental dependency: `experimental.globalNotFound` (Owner-authorized S9 for the pinned Next.js 16.4.6 and the local mock only). **Reassess compatibility before any framework upgrade, live data or production deployment.**
 - Branch `feat/frontend-v1-1-design-upgrade`, worktree `.local/worktrees/imp-web-02-frontend-v1-1`, starting SHA `3e87027fbdbbb016c148a84ca33775e64cccf3e0` (PR #37 merge, equal to remote `main`, verified 2026-11-26).
 - Approved plan: [[DPT-PLAN-013_Frontend_V1_1_Amendment]] (PR #37, merged 2026-11-26T13:30:40Z), amending [[DPT-PLAN-012_Luxury_Frontend_Editorial]].
 - Intake class B. ID check: no IMP-WEB-02 branch, PR or task note existed; the ID appeared only as the proposed name in the merged plan.
-- Implementation PR: NOT CREATED. Publication needs fresh scoped Owner authorization.
+- Implementation PR: NOT CREATED at the S10 receipt commit. The Owner authorized one push and exactly one Draft PR (S10); it is created after that commit, and its number and verified state are in the S10 publication result below (LOCAL_ONLY until a later authorized push).
 - Production mutation allowed: NO.
 
 ## Goal / Why
@@ -60,7 +60,8 @@ CP0 baseline · CP1 foundation and specimen · CP2 routing spike, localization, 
 | S6 | Owner-approved Thai translations, regression, review, reconciliation | CLOSED | PASS agent side; review PASS; ACCEPTANCE PENDING (Notes check, publication) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127`; records `e755f07` | [[2026-11-28_IMP-WEB-02_S6_Report]] |
 | S7 | 404 language investigation | CLOSED | BLOCKED on an Owner decision (no code change) | code `253bf485d40a9e4367db8968cf0d0d59faf8f127` (unchanged); records `31d9e1d` | [[2026-11-28_IMP-WEB-02_S7_Report]] |
 | S8 | Owner visual acceptance, closeout preparation, next-development handoff | CLOSED | Visual ACCEPTED; 404 decision open; no code change | code `253bf485d40a9e4367db8968cf0d0d59faf8f127` (unchanged); records `763b678` | [[2026-11-28_IMP-WEB-02_S8_Report]] |
-| S9 | Authorized 404 correction, regression, review, preview restore, closeout, next-slice packet | CLOSED | 404 fixed; PASS agent side; review CONDITIONAL then PASS; ACCEPTANCE PENDING (Notes test, publication) | code `53d01265962059655764f8d65be5b71329e600c4`; records commit follows | [[2026-11-28_IMP-WEB-02_S9_Report]] |
+| S9 | Authorized 404 correction, regression, review, preview restore, closeout, next-slice packet | CLOSED | 404 fixed; PASS agent side; review CONDITIONAL then PASS; ACCEPTANCE PENDING (Notes test, publication) | code `53d01265962059655764f8d65be5b71329e600c4`; records `519ee3f` | [[2026-11-28_IMP-WEB-02_S9_Report]] |
+| S10 | Owner final acceptance, receipt, public-safety review, one-time publication | CLOSED | Accepted by the Owner; receipt written; Draft PR authorized; human review and merge PENDING | code `53d01265962059655764f8d65be5b71329e600c4` (unchanged); records commit follows | [[2026-11-28_IMP-WEB-02_S10_Report]] |
 
 ### Session S1 — CP0 to CP4
 
@@ -170,6 +171,33 @@ State: CLOSED. Agent: Claude Code. Class A. Start records `763b678` (code `253bf
 - Git: code `53d01265962059655764f8d65be5b71329e600c4`; records commit follows. `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED`.
 - Next: Owner confirms or defers the Notes test; publication authority ([[IMP-WEB-02_Draft_PR_Package]]); then the single final receipt.
 
+### Session S10 — final acceptance, receipt and publication
+
+State: CLOSED. Agent: Claude Code. Class A. Start records `519ee3f` (code `53d0126`, base `3e87027`), verified 2026-11-28.
+
+- Owner instruction "IMP-WEB-02 Final Closeout and One-Time Publication Authorization" (2026-11-28):
+  - Frontend V1.1 is accepted as the initial visual and functional mock baseline.
+  - T1–T8 are final for this stage; all 192 Thai decisions are approved; proper names and family/accord labels stay as approved; the reviewed Thai search behavior is accepted.
+  - The 404 correction is accepted for the pinned local mock scope. A05 stays PARTIAL (deferred); A11 evidence is accepted where applicable.
+  - **The physical Notes Win+Shift+S check is explicitly deferred: NOT RUN / OWNER-DEFERRED, not PASS.** The S8 screenshot stays a separate observation.
+  - No further visual refinement; no WCAG or production-readiness claim.
+- Publication authority:
+  - Granted once: local closeout commits, one normal push of this branch, and exactly one Draft PR to `main`.
+  - Not covered: merge, force push, push to `main`, Ready for Review, other PRs, settings, deployment and later cycles.
+  - Credential: no agent identity exists. The Owner confirmed in the session that their own login may be used once for this push and PR ([[Decision_Log]]).
+- Verified before publication:
+  - PR #37 merged; remote `main` `3e87027`.
+  - No remote branch or PR of any state for this branch; repository PUBLIC.
+  - `web/` tree `be5cea26…` identical at `53d0126` and `519ee3f`.
+  - Preview image `568cc3b3…` healthy; four other containers, 32 volumes and rollback tags unchanged.
+- Public-safety review of `3e87027..HEAD`: clean (details in [[2026-11-28_IMP-WEB-02_S10_Report]]). `CP4.zip` stays untracked.
+- Evidence reused, no suites re-run: S9 (unit 122, Chrome/Edge 305, review PASS, 404 raw and no-JS checks, scan), S6 (clean clone, uncached build, audit, performance; same lockfile), S5 (A11; since then only the experimental flag in `next.config.ts`).
+- Receipt: [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]], the only one for this task.
+- Experimental `globalNotFound`: unchanged limits; reassess before any Next.js upgrade, live data or production deployment; the mock-slug handling is not the live-data contract.
+- Not done: merge, Ready for Review, Docker rebuild, installs, design tools, U01 review, new task.
+- Git: records commit follows; push and Draft PR after it.
+- Next: Owner reviews the Draft PR on GitHub, marks it Ready and merges, or requests corrections. Next development: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (separate authorization).
+
 ## Reports
 
 | File | Session | SHA-256 (LF bytes) | Classification |
@@ -210,5 +238,9 @@ State: CLOSED. Agent: Claude Code. Class A. Start records `763b678` (code `253bf
 | [[IMP-WEB-02_Next_Slice_Decision_Packet]] | S9 | `d81fca9526a1745d6dd1d1e60235f5742f3f366de62b66b21dff662c7e1b2835` | PUBLIC_SAFE |
 | [[IMP-WEB-02_Draft_PR_Package]] (revised) | S9 | `7d78a6548e54c70a8781a5655d8a9842d5e48e0c9853fbb7d885bfa96a24a3b0` | PUBLIC_SAFE |
 | `Test_Evidence/IMP-WEB-02/S9/IMP-WEB-02_S9_404_Verification.json` | S9 | `d1408b964c5e05c5fe117a49fee5008000f359ec59bbc38825f2776af4a17bdf` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S10_Report]] | S10 | `2821127e56019e50f2bebd70b17b80d71c5a183b5e8708a0d18e2336898a3854` | PUBLIC_SAFE |
+| [[2026-11-28_IMP-WEB-02_S10_Summary]] | S10 | `6ecfc96d7055122e3da28e84abfe0916d64267664ab1f44e29cd69c8a1ac5c0f` | PUBLIC_SAFE |
+| [[IMP-WEB-02_Draft_PR_Package]] (final) | S10 | `f4224b18fefd4c066b1f3b68a3224ffe41e0011aa9e991daba6061b1ee4fd34b` | PUBLIC_SAFE |
+| [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]] (final receipt) | S10 | `60870cf31d0f98409d9165103410db6aabfe0a4381cfbc3754d9cc9356489a99` | PUBLIC_SAFE |
 
-Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). No receipt yet: acceptance pending (Notes physical test, publication).
+Owner packets: [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]] (CP4); [[IMP-WEB-02_CP5_Translation_Review]] (CP5). Final receipt (S10): [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]].

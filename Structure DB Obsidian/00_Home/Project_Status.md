@@ -12,6 +12,10 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S10: Owner final acceptance, receipt, Draft PR
+
+Supersedes the S9 entry below. The Owner accepted Frontend V1.1 as the initial visual and functional mock baseline: T1–T8, the 192 Thai decisions, the reviewed Thai search behavior, and the 404 correction for the pinned local mock. The physical Notes shortcut check is NOT RUN / OWNER-DEFERRED (not PASS). A05 stays PARTIAL (deferred). Application candidate `53d01265962059655764f8d65be5b71329e600c4` is unchanged (`web/` tree `be5cea26…`). Single receipt: [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]]. One-time publication: one push and one Draft PR to `main` with the Owner's login as a one-time exception; the PR number is recorded in [[IMP-WEB-02_Frontend_V1_1]]. Owner review and merge PENDING. Preview `127.0.0.1:3000` = image `sha256:568cc3b3…`. Experimental `globalNotFound`: reassess before any Next.js upgrade, live data or deployment. Next development: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (separate authorization). [[2026-11-28_IMP-WEB-02_S10_Report]]
+
 ## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S9: 404 documents fixed, closeout
 
 Supersedes the S8 entry below. With the Owner's bounded authorization, every 404 is now server-rendered in its language and readable without JavaScript. This uses experimental `globalNotFound`, authorized only on the pinned Next.js 16.4.6 for the local mock; it must be reassessed before any upgrade, live data or deployment. Final candidate `53d01265962059655764f8d65be5b71329e600c4`: unit 122/0, Chrome and Edge 305/305, independent review PASS. Preview `127.0.0.1:3000` = image `sha256:568cc3b3…`. Open: the physical Notes shortcut test (not performed; Owner to confirm or defer) and publication authority. Not pushed; no receipt. Next slice decisions: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (no task started). [[2026-11-28_IMP-WEB-02_S9_Report]]

@@ -313,3 +313,6 @@ New S4 records supersede historical publication/decision status without changing
 
 ## 2026-11-28 — IMP-WEB-02 S9
 [[2026-11-28_IMP-WEB-02_S9_Report]], [[2026-11-28_IMP-WEB-02_S9_Summary]], [[2026-11-28_IMP-WEB-02_S9_Delta_Review_3b93945]], [[2026-11-28_IMP-WEB-02_S9_Delta_Review_53d0126]], [[IMP-WEB-02_Next_Slice_Decision_Packet]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S10
+[[2026-11-28_IMP-WEB-02_S10_Report]], [[2026-11-28_IMP-WEB-02_S10_Summary]], [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
