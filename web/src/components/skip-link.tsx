@@ -1,7 +1,10 @@
 "use client";
 
+import { useT } from "@/i18n/client";
+
 /** Moves focus without adding a history entry that the router could not restore. */
 export function SkipLink() {
+  const t = useT();
   return (
     <a
       href="#main-content"
@@ -14,7 +17,7 @@ export function SkipLink() {
       }}
       className="bg-ink text-on-dark focus-visible:z-[100] fixed start-4 top-4 -translate-y-24 px-4 py-3 font-medium focus-visible:translate-y-0"
     >
-      Skip to content
+      {t.skip}
     </a>
   );
 }

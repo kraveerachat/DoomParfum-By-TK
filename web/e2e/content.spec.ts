@@ -134,8 +134,10 @@ test.describe("A03 search and filters", () => {
     expect(await slugs()).toEqual(["stone-study-j", "stone-study-k"]);
     await expect(page.locator("main [data-count]")).toHaveText("2 mock studies");
     await expect(box).toBeFocused();
+    // Paper study L is authored in Thai; B and C match through their Owner-reviewed Thai descriptions
+    // (DPT-PLAN-013 4.5: reviewed overlay text joins English search for a Thai query).
     await box.fill("กระดาษ");
-    expect(await slugs()).toEqual(["paper-study-l"]);
+    expect(await slugs()).toEqual(["paper-study-b", "paper-study-c", "paper-study-l"]);
     await box.fill("<img src=x onerror=alert(1)>");
     await expect(page.locator("[data-state='no-results']")).toBeVisible();
     await page.getByRole("button", { name: "Clear filters" }).click();

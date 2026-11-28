@@ -1,0 +1,32 @@
+{
+ "chonburi-400": {
+  "file": "chonburi-thai-400-normal.woff2",
+  "bytes": 10560,
+  "sha256": "d184bf9acd0bd40bd994f69d34b2816407a0ef6baa2ba4de299a6ff5efcfe8af",
+  "package": "@fontsource/chonburi@5.3.0"
+ },
+ "fahkwang-300": {
+  "file": "fahkwang-thai-300-normal.woff2",
+  "bytes": 9816,
+  "sha256": "86cb1a4944422c53e628d8174253d483f8226481d8dcd4de24a16adfef5fccda",
+  "package": "@fontsource/fahkwang@5.3.0"
+ },
+ "fahkwang-400": {
+  "file": "fahkwang-thai-400-normal.woff2",
+  "bytes": 9888,
+  "sha256": "ec9a8200a194d6bde79627fab45106a549db402bc0010b41369893ed89955f77",
+  "package": "@fontsource/fahkwang@5.3.0"
+ },
+ "taviraj-300": {
+  "file": "taviraj-thai-300-normal.woff2",
+  "bytes": 15892,
+  "sha256": "ad1802a99c41b0af7b843c1420e2dcca0e706c07153bb90a0a9bae44f703f78c",
+  "package": "@fontsource/taviraj@5.3.0"
+ },
+ "taviraj-400": {
+  "file": "taviraj-thai-400-normal.woff2",
+  "bytes": 16040,
+  "sha256": "23e22539110540604407161445b74f3791872b074c59559f94a92f1fdfa6ebd1",
+  "package": "@fontsource/taviraj@5.3.0"
+ }
+}

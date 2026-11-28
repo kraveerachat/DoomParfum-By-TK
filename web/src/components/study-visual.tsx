@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useLocale, useT } from "@/i18n/client";
+import { textLang } from "@/i18n/locale";
 
 type Props = {
   readonly study: string | null;
@@ -14,6 +16,8 @@ type Props = {
 
 /** Owned local study, or a typographic study when none exists or the file cannot load. */
 export function StudyVisual({ study, name, alt = "", className = "aspect-[4/5]", eager = false, caption }: Props) {
+  const t = useT();
+  const locale = useLocale();
   const [broken, setBroken] = useState(false);
   if (study === null || broken) {
     return (
@@ -21,11 +25,11 @@ export function StudyVisual({ study, name, alt = "", className = "aspect-[4/5]",
         className={`bg-surface-muted visual-fallback relative w-full overflow-hidden ${className}`}
         data-visual-fallback
       >
-        <span aria-hidden="true" className="visual-fallback-letter">
+        <span aria-hidden="true" lang={textLang(name, locale)} className="visual-fallback-letter">
           {Array.from(name.trim()).at(-1)}
         </span>
         <span className="text-meta text-text-secondary absolute inset-x-4 bottom-3">
-          Visual unavailable in this mock
+          {t.visual.unavailable}
         </span>
       </div>
     );

@@ -53,6 +53,8 @@ Merged requirements and architecture histories exist in the vault. There is no f
 
 WCAG 2.1 AA is the requested target. Require keyboard interaction, visible focus, readable contrast, reduced motion and responsive reflow. Thai-script stress cases belong in verification; a full locale switch is not requested.
 
-## Amendment DPT-PLAN-013 (proposed until merged by the Owner)
+## Amendment DPT-PLAN-013 (merged 2026-11-26, PR #37 `3e87027`)
 
 The V1 mock frontend exists on `main` (PR #36, `ab3351a8432d1d6664a6b4281784cfea56b0b9fa`); "No application exists" and "There is no frontend" above describe the planning baseline. For V1.1 the Owner asks for an English and Thai interface, which replaces "a full locale switch is not requested", and for a sticky header, a gold and bronze detail palette and page refinements. Positioning, mock-only limits, brand name and the five route types are unchanged. Contract: [Frontend V1.1 amendment](Structure%20DB%20Obsidian/07_Delivery/Planning_PRs/DPT-PLAN-013_Frontend_V1_1_Amendment.md).
+
+The Owner merged this amendment on 2026-11-26 (PR #37, `3e87027fbdbbb016c148a84ca33775e64cccf3e0`); it is the design authority for V1.1. Its implementation is task IMP-WEB-02; until that task is merged, `main` still serves the V1 frontend.

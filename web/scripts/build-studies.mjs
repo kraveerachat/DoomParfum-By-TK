@@ -8,7 +8,7 @@ import { join } from "node:path";
 const OUT = join(import.meta.dirname, "..", "public", "studies");
 const C = {
   paper: "#F7F5F0", muted: "#EEEAE2", sand: "#E4DED2", divider: "#DDD9D0", stone: "#C8C1B3",
-  taupe: "#817B70", grey: "#5C5A55", ink: "#161719", gold: "#AD9361", navy: "#14253D", white: "#FFFFFF",
+  taupe: "#817B70", grey: "#5C5A55", ink: "#161719", gold: "#A8875A", navy: "#14253D", white: "#FFFFFF",
 };
 
 const r = (v) => Number(v.toFixed(1));

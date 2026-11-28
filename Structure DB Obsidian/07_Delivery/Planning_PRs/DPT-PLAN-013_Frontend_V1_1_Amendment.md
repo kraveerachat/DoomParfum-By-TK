@@ -2,9 +2,9 @@
 id: DPT-PLAN-013-AMENDMENT
 project: DoomParfum By TK
 type: planning_amendment
-status: proposed
+status: merged
 owner: human-owner
-updated: 2026-11-26
+updated: 2026-11-27
 tags: [doomparfum, planning-amendment, frontend, localization, typography, mock-only]
 source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 ---
@@ -12,6 +12,8 @@ source_of_truth: "../../../DEVELOPMENT_WORKFLOW.md"
 # Frontend V1.1 planning amendment
 
 Amends the merged [[DPT-PLAN-012_Luxury_Frontend_Editorial]] plan under DEVELOPMENT_WORKFLOW §3.4 and §3.6 class C. Documentation only. `IMPLEMENTATION_NOT_STARTED=YES`. Task note: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]].
+
+> Post-merge status (recorded 2026-11-27): merged by the Owner on 2026-11-26, PR #37, merge `3e87027fbdbbb016c148a84ca33775e64cccf3e0`. "Proposed", "until merge" and `IMPLEMENTATION_NOT_STARTED` statements below are historical. Implementation: [[IMP-WEB-02_Frontend_V1_1]]. The contract text is unchanged.
 
 This note is the single V1.1 contract. Where it conflicts with a V1 contract, this note wins **after the Owner merges it**, and only for the clauses listed in section 12. Everything else in V1 stays in force. V1 text is kept as history.
 

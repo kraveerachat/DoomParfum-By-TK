@@ -284,3 +284,35 @@ New S4 records supersede historical publication/decision status without changing
 ## 2026-11-26 — DPT-PLAN-013 Frontend V1.1 planning amendment
 
 [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Draft_PR_Description]], [[2026-11-26_DPT-PLAN-013_S1_Report]], [[2026-11-26_DPT-PLAN-013_S1_Summary]], [[2026-11-26_020413_DPT-PLAN-013_Frontend_V1_1_Planning]]. V1 baseline: [[IMP-WEB-01_Luxury_Frontend_Docker]].
+
+## 2026-11-26 — IMP-WEB-02 Frontend V1.1
+
+[[IMP-WEB-02_Frontend_V1_1]], [[IMP-WEB-02_CP4_Owner_Review]], [[IMP-WEB-02_Translation_Review]], [[2026-11-26_IMP-WEB-02_S1_Report]], [[2026-11-26_IMP-WEB-02_S1_Summary]].
+
+## 2026-11-26 — IMP-WEB-02 S2
+
+[[2026-11-26_IMP-WEB-02_S2_Report]], [[2026-11-26_IMP-WEB-02_S2_Summary]], [[IMP-WEB-02_CP5_Translation_Review]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S3
+[[2026-11-27_IMP-WEB-02_S3_Report]], [[2026-11-27_IMP-WEB-02_S3_Summary]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S4
+[[2026-11-27_IMP-WEB-02_S4_Report]], [[2026-11-27_IMP-WEB-02_S4_Summary]], [[2026-11-27_IMP-WEB-02_S4_Independent_Review_689b177]], [[2026-11-27_IMP-WEB-02_S4_Delta_Review_bfb7210]], [[2026-11-27_IMP-WEB-02_S4_Delta_Review_c3f9688]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S5
+[[2026-11-28_IMP-WEB-02_S5_Report]], [[2026-11-28_IMP-WEB-02_S5_Summary]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S6
+[[2026-11-28_IMP-WEB-02_S6_Report]], [[2026-11-28_IMP-WEB-02_S6_Summary]], [[2026-11-28_IMP-WEB-02_S6_Delta_Review_2f8b78a]], [[2026-11-28_IMP-WEB-02_S6_Delta_Review_253bf48]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S7
+[[2026-11-28_IMP-WEB-02_S7_Report]], [[2026-11-28_IMP-WEB-02_S7_Summary]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S8
+[[2026-11-28_IMP-WEB-02_S8_Report]], [[2026-11-28_IMP-WEB-02_S8_Summary]], [[IMP-WEB-02_Next_Development_Handoff]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9
+[[2026-11-28_IMP-WEB-02_S9_Report]], [[2026-11-28_IMP-WEB-02_S9_Summary]], [[2026-11-28_IMP-WEB-02_S9_Delta_Review_3b93945]], [[2026-11-28_IMP-WEB-02_S9_Delta_Review_53d0126]], [[IMP-WEB-02_Next_Slice_Decision_Packet]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S10
+[[2026-11-28_IMP-WEB-02_S10_Report]], [[2026-11-28_IMP-WEB-02_S10_Summary]], [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]], [[IMP-WEB-02_Draft_PR_Package]]. [[IMP-WEB-02_Frontend_V1_1]]

@@ -541,3 +541,28 @@ Owner-directed in the V1.1 instructions (effective when the amendment is merged)
 Agent proposals for Owner review, with reasons in [[DPT-PLAN-013_Frontend_V1_1_Amendment]]: measured color roles (3.1); specimen outside the application (3.4); two root layouts proven by a spike (4.2); server-only Thai overlay instead of changed fixture fields (4.3); language switch as a document navigation that resets typed text (4.4); English results unchanged by Thai text (4.5); header layer 20 instead of the proposal's 40, which equals the scrim (5.1); label in name for TH and EN (5.2); H1 outline contract from a reproduced case (6.1).
 
 Rejected from the proposal: `dp_locale` cookie, `/dev/type-specimen` route, underline-only selects and hidden help as defaults, per-section uppercase eyebrows, recommendation list, filter bottom sheet, one PR per item. OPEN: V11-OD-01, 03 to 06, 08 to 12. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 CP4 (no new decision)
+
+Verified: PR #37 merged; Owner authorized Gate C, the V11-OD-11 font download, the local rule update and preview replacement. Agent-side technical choices inside the merged contract are recorded in [[2026-11-26_IMP-WEB-02_S1_Report]] (two root layouts, static `unavailable` route, `scroll-margin-top` instead of `scroll-padding-top`, U+2060 in one Thai heading). OPEN for the Owner: T1–T8, V11-OD-03, 04, 08, 10 ([[IMP-WEB-02_CP4_Owner_Review]]). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 CP4 answered by the Owner
+
+Owner-verified (chat, 2026-11-26): T1 Fahkwang 300; T2 C centred hero; T3 B record sheet; T4 B compact toolbar; T5 A stable header; T6 A compact language link; T7 A equal columns (the CP4 6/3/3 render was reported identical to the default; the Owner chose the default regardless); T8 B square corners; V11-OD-08 BY TK 11px; V11-OD-03 Thai terms ท็อปโน้ต / ฮาร์ตโน้ต / เบสโน้ต, โน้ตทั่วไป, ตระกูลกลิ่น, แอคคอร์ด, โครงสร้างกลิ่น 3 ระดับ, สำรวจตามตระกูลกลิ่น, เกี่ยวกับเรา, ไม่ได้ระบุ, ไม่มีรายการ; V11-OD-04 family and accord labels stay Latin; V11-OD-10 no English Paper study L this round. This supersedes "OPEN for the Owner" in the CP4 entry above. Not decided: line-by-line acceptance of the Thai drafts; A05 deferral for this stage; publication. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9: experimental globalNotFound (Owner-authorized, bounded)
+
+Owner instruction "IMP-WEB-02 — Final 404 Resolution and Closeout" (2026-11-28): authorizes the S7-tested correction (experimental `globalNotFound` + proxy rewrites) for the pinned Next.js 16.4.6 and the local mock frontend only. No dependency upgrade, other experimental feature or routing restructure. **Condition: reassess compatibility before any future framework upgrade, live data or production deployment.** This is a deviation from the 404 mechanism stated in DPT-PLAN-013 4.2: two root layouts stay, and the 404 path changes. It is recorded here as the Owner's decision; no planning amendment was requested. The Owner also accepted the V1.1 visual design as the initial baseline (S8). [[2026-11-28_IMP-WEB-02_S9_Report]]
+
+## 2026-11-28 — IMP-WEB-02 S10: final Owner acceptance and one-time publication
+
+Owner instruction "IMP-WEB-02 Final Closeout and One-Time Publication Authorization" (2026-11-28):
+
+- Frontend V1.1 is accepted as the initial visual and functional mock baseline. T1–T8 are final for this stage. The 192 Thai decisions are approved. Fictional proper names and family/accord labels stay as approved. The reviewed Thai search behavior is accepted. The 404 correction is accepted for the current pinned local mock scope. A05 stays PARTIAL with the stage deferral. A11 evidence is accepted where applicable.
+- The physical Notes Win+Shift+S check is **explicitly deferred** for this stage: NOT RUN / OWNER-DEFERRED, not PASS. The earlier screenshot stays a separate observation.
+- Future UI/UX refinement is deferred until representative real data and working features exist. No WCAG or production-readiness claim.
+- **One-time publication authority:** local closeout commits, one normal push of `feat/frontend-v1-1-design-upgrade`, and exactly one Draft PR to `main`.
+  - Prohibited: merge, force push, push to `main`, Ready for Review, other PRs, settings/rulesets/permissions, unrelated work, deployment and later cycles.
+  - It expires once the push and the PR are done.
+- **Owner-login exception (Hybrid GitHub workflow, 2026-11-21):** no agent publishing identity exists. The instruction said not to assume a credential exception, so the agent asked; the Owner confirmed in the session "Yes, my login, this push only". The exception is limited to this repository, branch, push and Draft PR. `AGENT_CREDENTIAL_REQUIRED` stays open for later publications.
+- The `globalNotFound` conditions of the S9 entry stand; the mock-slug handling is not the live-data route-resolution contract. [[IMP-WEB-02_Frontend_V1_1]], [[2026-11-28_IMP-WEB-02_S10_Report]]

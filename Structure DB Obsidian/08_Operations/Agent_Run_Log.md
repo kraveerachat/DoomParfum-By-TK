@@ -1147,3 +1147,67 @@ No push, PR change, merge or deployment.
 | 2026-11-26 | DPT-PLAN-013 / S1 | Claude Code | NOT CREATED | NOT STARTED | Documentation only | Documentation checks; V1 baseline measurements; [[2026-11-26_DPT-PLAN-013_S1_Report]] | PASS, agent side | In the PR or the next record |
 
 No push, PR, merge, deployment or application change.
+
+## 2026-11-26 — IMP-WEB-02 / S1
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-26 | IMP-WEB-02 / S1 | Claude Code | #37 (merged) | NOT CREATED | `web/` and vault records | Unit 116, Chrome 242, Edge 242; [[2026-11-26_IMP-WEB-02_S1_Report]] | CP4 Owner review pending | `733c59da80fb22f8164859d756f1f24c1bcd008f` (code) |
+
+No push, PR, merge or deployment.
+
+## 2026-11-26 — IMP-WEB-02 / S2
+
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-26 | IMP-WEB-02 / S2 | Claude Code, plus a fresh read-only Claude sub-agent reviewer | #37 (merged) | NOT CREATED | `web/` and vault records | Unit 117, Chrome 259, Edge 259; [[2026-11-26_IMP-WEB-02_S2_Report]] | PASS agent side; acceptance pending | `5d63f8809523b5d31b7888852fd44b1f57956874` (code) |
+
+No push, PR, merge or deployment.
+
+## 2026-11-27 — IMP-WEB-02 / S3
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-27 | IMP-WEB-02 / S3 | Claude Code (sub-agents refused by auto mode) | #37 (merged) | NOT CREATED | `web/src/views/detail.tsx`, `web/src/app/globals.css`, two e2e specs, vault records | Unit 117, Chrome 279, Edge 279; [[2026-11-27_IMP-WEB-02_S3_Report]] | PASS agent side; independent review blocked | `689b177b4908cd84bec1ac2c81fc9a17963224d3` (code) |
+No push, PR, merge or deployment.
+
+## 2026-11-27 — IMP-WEB-02 / S4
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-27 | IMP-WEB-02 / S4 | Claude Code; three same-vendor read-only review sub-agents | #37 (merged) | NOT CREATED | `web/src/components/header-offset.tsx`, `web/src/app/globals.css`, `web/src/app/icon.svg`, `web/public/studies/hero.svg`, `web/scripts/build-studies.mjs`, two e2e specs, `PRODUCT.md`, vault records | Unit 117, Chrome 283, Edge 283; [[2026-11-27_IMP-WEB-02_S4_Report]] | Review CONDITIONAL resolved, delta PASS; PASS agent side | `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (code) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S5
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S5 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | A11 drills D1–D8; Chrome 283 on the restored preview; [[2026-11-28_IMP-WEB-02_S5_Report]] | A11 PASS; acceptance pending Owner items | `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b` (code, unchanged) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S6
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S6 | Claude Code; one same-vendor read-only review sub-agent | #37 (merged) | NOT CREATED | `web/src/i18n/messages.ts`, `web/src/fixtures/th.ts`, `web/tests/locale.test.ts`, `web/e2e/content.spec.ts`, `web/e2e/locale.spec.ts`, vault records | Unit 119, Chrome 283, Edge 283; [[2026-11-28_IMP-WEB-02_S6_Report]] | Review CONDITIONAL then PASS; PASS agent side | `253bf485d40a9e4367db8968cf0d0d59faf8f127` (code) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S7
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S7 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | Raw 404 probes, V1/CP4 comparison, six scratch experiments; [[2026-11-28_IMP-WEB-02_S7_Report]] | BLOCKED on Owner decision | `253bf485d40a9e4367db8968cf0d0d59faf8f127` (code, unchanged) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S8
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S8 | Claude Code | #37 (merged) | NOT CREATED | vault records only (no code) | Preview smoke (10 routes, headers, 405); [[2026-11-28_IMP-WEB-02_S8_Report]] | Owner visual acceptance recorded; 404 open | `253bf485d40a9e4367db8968cf0d0d59faf8f127` (code, unchanged) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S9
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S9 | Claude Code (+ read-only review sub-agent) | #37 (merged) | NOT CREATED | `web/` 14 files (404 correction, tests); vault records | Unit 122/0; Chrome and Edge 305/305; scan clean; [[2026-11-28_IMP-WEB-02_S9_Report]] | 404 fixed; review CONDITIONAL then PASS | `53d01265962059655764f8d65be5b71329e600c4` (code) |
+No push, PR, merge or deployment.
+
+## 2026-11-28 — IMP-WEB-02 / S10
+| Date | Task/Session | Agent | Planning PR | Implementation PR | Changed files | Tests / Evidence | Result | Commit SHA |
+|---|---|---|---|---|---|---|---|---|
+| 2026-11-28 | IMP-WEB-02 / S10 | Claude Code | #37 (merged) | Draft, created after this records commit (see task note) | vault records only (receipt, S10 report and summary, PR package, task note, status, logs) | State and tree identity verified; public-safety scan clean; suites reused from S9/S6/S5; [[2026-11-28_IMP-WEB-02_S10_Report]] | Owner acceptance recorded; receipt; one push and one Draft PR | `53d01265962059655764f8d65be5b71329e600c4` (code, unchanged) |
+One normal push and one Draft PR under the one-time Owner-login exception. No merge, Ready for Review or deployment.

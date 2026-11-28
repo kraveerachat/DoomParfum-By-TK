@@ -2,6 +2,8 @@
 
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { useT } from "@/i18n/client";
+import { logicalPath } from "@/i18n/locale";
 import { currentFocusKey, entryKey, locationKey, navigation } from "./navigation-memory";
 
 /** Shorter transitions show no pending state at all. */
@@ -11,9 +13,24 @@ const nextFrames = (run: () => void) => {
   requestAnimationFrame(() => requestAnimationFrame(run));
 };
 
+/** How the last navigation was started. A pointer start never draws a ring on the heading it focuses. */
+let startedBy: "pointer" | "keyboard" = "keyboard";
+
 function focusTarget(target: HTMLElement | null) {
   if (!target) return;
   if (!target.hasAttribute("tabindex")) target.setAttribute("tabindex", "-1");
+  if (startedBy === "pointer") {
+    // DPT-PLAN-013 6.1: a later key press must not draw a ring on a heading focused after a click.
+    // A window losing focus (a screenshot tool, another app) also fires blur while the heading stays
+    // the active element; only a real move of focus ends the pointer state (IMP-WEB-02 CP5 fix).
+    target.setAttribute("data-pointer-focus", "");
+    const onBlur = () => {
+      if (document.activeElement === target) return;
+      target.removeAttribute("data-pointer-focus");
+      target.removeEventListener("blur", onBlur);
+    };
+    target.addEventListener("blur", onBlur);
+  }
   target.focus({ preventScroll: true });
 }
 
@@ -32,7 +49,7 @@ function focusForward() {
 }
 
 /** Returns a message when the original entry is gone, otherwise an empty string. */
-function restore(key: string): string {
+function restore(key: string, missing: string): string {
   const departure = navigation.departure(key);
   if (!departure) return "";
   let message = "";
@@ -46,7 +63,7 @@ function restore(key: string): string {
     if (origin) origin.focus({ preventScroll: true });
     else if (heading) {
       heading.focus({ preventScroll: true });
-      message = "The entry you opened is no longer in this list.";
+      message = missing;
     }
   }
   window.scrollTo(0, departure.scrollY);
@@ -58,6 +75,8 @@ function restore(key: string): string {
  * restore the originating entry and scroll position instead.
  */
 export function RouteMemory() {
+  const t = useT();
+  const missing = useRef(t.route.missing);
   const pathname = usePathname();
   const search = useSearchParams().toString();
   const first = useRef(true);
@@ -92,7 +111,10 @@ export function RouteMemory() {
       if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
       const link = event.target instanceof Element ? event.target.closest("a") : null;
       if (!link || link.origin !== window.location.origin || link.target) return;
+      // A language switch loads another document; nothing here survives it.
+      if (link.hasAttribute("data-document-nav")) return;
       clearPending();
+      startedBy = event.detail > 0 ? "pointer" : "keyboard";
       const key = locationKey();
       if (link.pathname + link.search === key) {
         navigation.set(null);
@@ -128,7 +150,7 @@ export function RouteMemory() {
     // Only /explore reads query parameters; elsewhere they are dropped without a request.
     // Deferred so that the router's own history patch is already installed.
     const strip = setTimeout(() => {
-      if (pathname !== "/explore" && window.location.search) {
+      if (logicalPath(pathname) !== "/explore" && window.location.search) {
         window.history.replaceState(null, "", window.location.pathname + window.location.hash);
       }
     }, 0);
@@ -137,7 +159,7 @@ export function RouteMemory() {
     first.current = false;
     navigation.set(null);
     if (kind === "push") nextFrames(focusForward);
-    if (kind === "pop") nextFrames(() => setMessage(restore(entry.current)));
+    if (kind === "pop") nextFrames(() => setMessage(restore(entry.current, missing.current)));
     return () => clearTimeout(strip);
   }, [pathname, search]);
 
@@ -147,7 +169,7 @@ export function RouteMemory() {
         {message}
       </p>
       <p className="route-pending" role="status" data-route-pending>
-        {pendingFrom === current ? "Opening the next page" : ""}
+        {pendingFrom === current ? t.route.pending : ""}
       </p>
     </>
   );

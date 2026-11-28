@@ -29,7 +29,9 @@ test("no external URL in application code", () => {
 });
 
 test("fixture data is imported by the server module only", () => {
-  assert.deepEqual(hits(/fixtures\/data/), ["server/catalogue.ts"]);
+  // The proxy runs on the server only and reads the slugs to send unknown ones to the global 404
+  // (IMP-WEB-02 S9); scripts/scan-output.ts still fails if a slug reaches an immutable client asset.
+  assert.deepEqual(hits(/fixtures\/data/), ["proxy.ts", "server/catalogue.ts"]);
   const clientFiles = sources.filter((s) => /^["']use client["']/.test(s.text));
   assert.ok(clientFiles.length > 5);
   for (const s of clientFiles) assert.doesNotMatch(s.text, /server\/catalogue/, s.name);
@@ -45,5 +47,6 @@ test("no score, price or rating vocabulary reaches the interface", () => {
 });
 
 test("colors come from tokens", () => {
-  assert.deepEqual(hits(/#[0-9a-f]{6}\b/i, ["app/globals.css", "app/layout.tsx"]), []);
+  // The theme colour in the document head moved from app/layout.tsx to the shared root shell (V1.1).
+  assert.deepEqual(hits(/#[0-9a-f]{6}\b/i, ["app/globals.css", "components/root-shell.tsx"]), []);
 });

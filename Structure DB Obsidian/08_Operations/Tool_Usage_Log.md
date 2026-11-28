@@ -70,3 +70,35 @@ Git, gh (read-only), Docker CLI, Node, Playwright with installed Chrome and Edge
 ## 2026-11-26 — DPT-PLAN-013 S1 tools
 
 Git and gh (read-only network), Python, Node with the V1 worktree's installed Playwright and Chrome (read-only on the running preview), Impeccable `detect` (source and five routes) and its skill text. Taste Skill, UI Craft and UI UX Pro Max not run: documentation-only task. `ui-ux-pro-max:brand` requested, out of project scope, not used. Other requested Impeccable commands not executed; they are assigned to Gate C checkpoints. No install, hook, MCP, dependency or client setting changed. [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 S1 tools
+
+Impeccable (context, detect, references), Taste Skill as composition reference only, npm with the lockfile, Node, Playwright with Chrome and Edge, Docker Compose build and recreate of `doomparfum-web` (rollback tag `doomparfum-web:v1-rollback`), ffmpeg. Bounded downloads under V11-OD-11: three `@fontsource` 5.3.0 tarballs (integrity checked) and three OFL texts from google/fonts, kept in Git-ignored `.local/specimen/`. Project-local untracked `.claude/rules/doomparfum-frontend-design-tools.md` updated (hashes in the S1 report). No global install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 S2 tools
+
+Impeccable doctor (one `hook-not-installed` finding, not acted on), context and detect; Taste Skill as composition reference; npm (lockfile, audit), Node, Playwright with Chrome and Edge, Docker Compose uncached builds and recreate of `doomparfum-web` (rollback tags `cp5-candidate1`, `cp4-rollback`, `v1-rollback`), ffmpeg; one fresh read-only Claude sub-agent for the independent review (report outside Git). Network: npm registry and GitHub API for re-verifying the Fahkwang package and license. No install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S3 tools
+Impeccable doctor (`hook-not-installed`, not acted on), context, detect (source and 20 rendered views), critique (degraded single-context) and audit; Taste Skill `consistency.mjs` read-only on three routes; Node, Playwright with Chrome and Edge, npm (clean `npm ci`, audit), Docker (Desktop started; uncached builds; `compose up --no-build --force-recreate` of `web`; temporary `--rm` probes on 127.0.0.1:3100; rollback tag `cp5-s2-rollback`), ffmpeg. Agent tool refused twice by the auto-mode classifier because the context-mode hook rewrites the call; not retried. No install, hook, MCP, login or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S4 tools
+Agent tool: three general-purpose read-only review sub-agents. Each first call was not judged by the auto-mode classifier because the context-mode hook appends to sub-agent prompts; each was re-issued once with exactly the hook-modified input, as the harness instructs, and approved. No hook, plugin or permission changed. Node, Playwright with Chrome and Edge, npm (clean `npm ci` twice, audit), Docker (uncached builds `s4-candidate`, `s4-candidate2`; temporary `--rm` containers on 127.0.0.1:3100 and 3200; `compose up --no-build --force-recreate` of `web`). No design command, install, MCP, login or client setting. Rollback of the preview: tag `s3-candidate2` as `preview`, then the same compose command. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S5 tools
+Docker Compose (preview and dev projects: up, stop, start, down; one intentionally failing `--build`), Docker CLI (inspect, tag `dev-pre-a11`, volume and image listings), Node (temporary host listener on 127.0.0.1:3000; drill scripts outside the repository), Playwright with Chrome. No prune, volume removal, install, hook, MCP, login or client setting. Rollback of the preview unchanged: tag `s3-candidate2` as `preview`, then `docker compose up --no-build --force-recreate --detach` in `web/`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S6 tools
+Node scripts outside the repository (review parsing, exact replacement with uniqueness checks, 192-row reconciliation, render checks, screenshots); npm (tsc, eslint, node --test, clean `npm ci` twice, audit); Playwright with Chrome and Edge; Docker (uncached builds, temporary `--rm` loopback containers on 3100 and 3200, tag `c3f9688-rollback`, `compose up --no-build --force-recreate` of `web`); Agent tool: one read-only review sub-agent (re-issued once with the hook-modified input, then resumed for the follow-up). Requested but not used: every Impeccable command, `/ui-craft`, `/ui-ux-pro-max:brand` (the instruction forbids another design-tool cycle). No install, hook, MCP, login or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S7 tools
+Node (raw HTTP probes with node:http, Playwright Chrome with JavaScript disabled), Next.js `next build` and `next start` in a scratch clean clone outside the repository on 127.0.0.1:3300 for six experiments (servers stopped), Docker (temporary `--rm` loopback containers of the v1-rollback and cp4-rollback images on 3100 and 3200, removed), reading the bundled Next.js source and documentation. No project code, configuration, install, hook, MCP or client setting changed; no Agent call (no code delta to review). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S8 tools
+Node read-only HTTP smoke of the preview; git read-only history checks; reading merged planning notes. No design skill, Agent call, Docker change, install, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9 tools
+Node/npm (type check, lint, unit tests, `next build`, `next start` on loopback scratch ports, all stopped); Playwright Chrome and Edge; node raw-HTTP probes; Docker (Desktop restarted with the Owner's approval; Compose build and recreate of the preview only; one temporary hardened loopback container on 3100, removed; image tags added); one read-only same-vendor review sub-agent (two passes). No design skill, install, dependency change, hook, MCP or client setting. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S10 tools
+git (state, tree identity, outgoing-range safety scan, `diff --check`, one normal push); gh CLI with the Owner's login under a one-time exception the Owner confirmed in the session (read-only checks, one Draft PR create, read-only verification); docker read-only inspect; PowerShell HTTP GET of the preview; one Node script that appends these log entries. No design skill, Agent call, install, hook, MCP, Docker change or client setting. [[IMP-WEB-02_Frontend_V1_1]]

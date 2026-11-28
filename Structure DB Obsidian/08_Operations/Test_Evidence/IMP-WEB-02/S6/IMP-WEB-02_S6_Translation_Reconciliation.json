@@ -1,0 +1,1408 @@
+{
+ "task": "IMP-WEB-02",
+ "session": "S6",
+ "date": "2026-11-28",
+ "ownerApproval": "Human Owner instruction of 2026-11-28 (IMP-WEB-02: Final Thai Localization and Acceptance Reconciliation): approves the complete review of 192 entries; keep 159, replace 33 (interface keep 134 / replace 26; fixture prose keep 25 / replace 7). It supersedes the ADVISORY / OWNER APPROVAL PENDING label of the review file.",
+ "reviewFile": {
+  "name": "DoomParfum_IMP-WEB-02_Thai_Review_Recommendations.md",
+  "sha256": "2e5abb6883d4c878511b6ae374deabde2f794c84b05869ded207aaa003fd5c11",
+  "vaultCopy": "IMP-WEB-02_S6_Thai_Review_Owner_Approved_Source.md",
+  "reviewedSource": {
+   "name": "DoomParfum_IMP-WEB-02_Thai_Translation_Review_2026-11-27.md",
+   "sha256": "e1b55370459214d236cf40631d9ec2c716c7a92a36196551140d836b62906f16",
+   "code": "c3f968853b64b4ee65df2d9cf8c6b94e0b13014b"
+  }
+ },
+ "finalCode": "253bf485d40a9e4367db8968cf0d0d59faf8f127",
+ "translationCommit": "2f8b78a52ac69bae8c3d544f21fc62cf92eff019",
+ "approvedThaiDigestSha256": "5638f83b3069aa750d020f3c1ea9c46f505893cd8d16105c6a5786bd7757f61c",
+ "reconciliation": {
+  "rows": 192,
+  "keepUnchanged": 159,
+  "replacedExactly": 33,
+  "englishUnchanged": 192,
+  "proseMarkedReviewed": 32,
+  "unapprovedChanges": 0,
+  "method": "web/scripts/translation-sheet.ts output of the final code compared row by row (IDs U1-U160, F1-F32 in sheet order) with the review file; exact string swaps with uniqueness checks"
+ },
+ "proseReviewRecord": "Owner approval 2026-11-28, IMP-WEB-02 S6 Thai translation review (192 entries)",
+ "entries": [
+  {
+   "id": "U1",
+   "key": "site.name",
+   "decision": "KEEP",
+   "english": "DoomParfum By TK",
+   "approvedThai": "DoomParfum By TK"
+  },
+  {
+   "id": "U2",
+   "key": "site.description",
+   "decision": "KEEP",
+   "english": "A mock-only fragrance notebook. Every record is fictional.",
+   "approvedThai": "สมุดบันทึกน้ำหอมฉบับจำลอง ทุกรายการเป็นเรื่องสมมติ"
+  },
+  {
+   "id": "U3",
+   "key": "site.homeLink",
+   "decision": "KEEP",
+   "english": "DoomParfum By TK home",
+   "approvedThai": "หน้าแรก DoomParfum By TK"
+  },
+  {
+   "id": "U4",
+   "key": "titles.home",
+   "decision": "KEEP",
+   "english": "Home",
+   "approvedThai": "หน้าแรก"
+  },
+  {
+   "id": "U5",
+   "key": "titles.explore",
+   "decision": "KEEP",
+   "english": "Explore mock fragrances",
+   "approvedThai": "สำรวจน้ำหอมจำลอง"
+  },
+  {
+   "id": "U6",
+   "key": "titles.detail",
+   "decision": "KEEP",
+   "english": "{name} · Mock study",
+   "approvedThai": "{name} · แบบศึกษาจำลอง"
+  },
+  {
+   "id": "U7",
+   "key": "titles.notes",
+   "decision": "KEEP",
+   "english": "Notes",
+   "approvedThai": "โน้ตกลิ่น"
+  },
+  {
+   "id": "U8",
+   "key": "titles.about",
+   "decision": "KEEP",
+   "english": "About",
+   "approvedThai": "เกี่ยวกับเรา"
+  },
+  {
+   "id": "U9",
+   "key": "titles.unavailable",
+   "decision": "KEEP",
+   "english": "Unavailable",
+   "approvedThai": "ไม่พบหน้านี้"
+  },
+  {
+   "id": "U10",
+   "key": "skip",
+   "decision": "KEEP",
+   "english": "Skip to content",
+   "approvedThai": "ข้ามไปยังเนื้อหาหลัก"
+  },
+  {
+   "id": "U11",
+   "key": "nav.primary",
+   "decision": "KEEP",
+   "english": "Primary",
+   "approvedThai": "เมนูหลัก"
+  },
+  {
+   "id": "U12",
+   "key": "nav.home",
+   "decision": "KEEP",
+   "english": "Home",
+   "approvedThai": "หน้าแรก"
+  },
+  {
+   "id": "U13",
+   "key": "nav.explore",
+   "decision": "KEEP",
+   "english": "Explore",
+   "approvedThai": "สำรวจ"
+  },
+  {
+   "id": "U14",
+   "key": "nav.notes",
+   "decision": "KEEP",
+   "english": "Notes",
+   "approvedThai": "โน้ตกลิ่น"
+  },
+  {
+   "id": "U15",
+   "key": "nav.about",
+   "decision": "KEEP",
+   "english": "About",
+   "approvedThai": "เกี่ยวกับเรา"
+  },
+  {
+   "id": "U16",
+   "key": "nav.menu",
+   "decision": "KEEP",
+   "english": "Menu",
+   "approvedThai": "เมนู"
+  },
+  {
+   "id": "U17",
+   "key": "nav.menuTitle",
+   "decision": "KEEP",
+   "english": "Navigation",
+   "approvedThai": "เมนู"
+  },
+  {
+   "id": "U18",
+   "key": "nav.menuList",
+   "decision": "KEEP",
+   "english": "Menu",
+   "approvedThai": "เมนูนำทาง"
+  },
+  {
+   "id": "U19",
+   "key": "nav.search",
+   "decision": "KEEP",
+   "english": "Search mock catalogue",
+   "approvedThai": "ค้นหาในแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U20",
+   "key": "nav.profile",
+   "decision": "KEEP",
+   "english": "Profile unavailable in this mock",
+   "approvedThai": "โปรไฟล์ยังไม่เปิดใช้ในฉบับจำลองนี้"
+  },
+  {
+   "id": "U21",
+   "key": "nav.close",
+   "decision": "KEEP",
+   "english": "Close",
+   "approvedThai": "ปิด"
+  },
+  {
+   "id": "U22",
+   "key": "language.group",
+   "decision": "KEEP",
+   "english": "Language",
+   "approvedThai": "ภาษา"
+  },
+  {
+   "id": "U23",
+   "key": "language.enShort",
+   "decision": "KEEP",
+   "english": "EN",
+   "approvedThai": "EN"
+  },
+  {
+   "id": "U24",
+   "key": "language.enName",
+   "decision": "KEEP",
+   "english": "English",
+   "approvedThai": "English"
+  },
+  {
+   "id": "U25",
+   "key": "language.thShort",
+   "decision": "KEEP",
+   "english": "TH",
+   "approvedThai": "TH"
+  },
+  {
+   "id": "U26",
+   "key": "language.thName",
+   "decision": "KEEP",
+   "english": "ภาษาไทย",
+   "approvedThai": "ภาษาไทย"
+  },
+  {
+   "id": "U27",
+   "key": "notice",
+   "decision": "KEEP",
+   "english": "Synthetic mock study. Nothing here describes a real fragrance.",
+   "approvedThai": "นี่คือแบบศึกษาจำลอง ไม่มีข้อมูลใดในหน้านี้อ้างถึงน้ำหอมจริง"
+  },
+  {
+   "id": "U28",
+   "key": "mock",
+   "decision": "KEEP",
+   "english": "Mock",
+   "approvedThai": "จำลอง"
+  },
+  {
+   "id": "U29",
+   "key": "familyUnknown",
+   "decision": "KEEP",
+   "english": "Family unknown",
+   "approvedThai": "ไม่ทราบตระกูลกลิ่น"
+  },
+  {
+   "id": "U30",
+   "key": "count.studyOne",
+   "decision": "KEEP",
+   "english": "{n} mock study",
+   "approvedThai": "แบบศึกษาจำลอง {n} รายการ"
+  },
+  {
+   "id": "U31",
+   "key": "count.studyOther",
+   "decision": "KEEP",
+   "english": "{n} mock studies",
+   "approvedThai": "แบบศึกษาจำลอง {n} รายการ"
+  },
+  {
+   "id": "U32",
+   "key": "count.noteOne",
+   "decision": "KEEP",
+   "english": "{n} mock note",
+   "approvedThai": "โน้ตจำลอง {n} รายการ"
+  },
+  {
+   "id": "U33",
+   "key": "count.noteOther",
+   "decision": "KEEP",
+   "english": "{n} mock notes",
+   "approvedThai": "โน้ตจำลอง {n} รายการ"
+  },
+  {
+   "id": "U34",
+   "key": "count.studiesWord",
+   "decision": "KEEP",
+   "english": "mock studies",
+   "approvedThai": "แบบศึกษาจำลอง"
+  },
+  {
+   "id": "U35",
+   "key": "count.studyWord",
+   "decision": "KEEP",
+   "english": "mock study",
+   "approvedThai": "แบบศึกษาจำลอง"
+  },
+  {
+   "id": "U36",
+   "key": "layers.top",
+   "decision": "KEEP",
+   "english": "Top",
+   "approvedThai": "ท็อปโน้ต"
+  },
+  {
+   "id": "U37",
+   "key": "layers.heart",
+   "decision": "KEEP",
+   "english": "Heart",
+   "approvedThai": "ฮาร์ตโน้ต"
+  },
+  {
+   "id": "U38",
+   "key": "layers.base",
+   "decision": "KEEP",
+   "english": "Base",
+   "approvedThai": "เบสโน้ต"
+  },
+  {
+   "id": "U39",
+   "key": "layers.generalNotes",
+   "decision": "KEEP",
+   "english": "General notes",
+   "approvedThai": "โน้ตทั่วไป"
+  },
+  {
+   "id": "U40",
+   "key": "visual.unavailable",
+   "decision": "KEEP",
+   "english": "Visual unavailable in this mock",
+   "approvedThai": "ฉบับจำลองนี้ยังไม่มีภาพประกอบ"
+  },
+  {
+   "id": "U41",
+   "key": "visual.caption",
+   "decision": "REPLACE",
+   "english": "Synthetic visual study",
+   "approvedThai": "ภาพประกอบจำลอง",
+   "previousThai": "ภาพศึกษาสังเคราะห์"
+  },
+  {
+   "id": "U42",
+   "key": "footer.about",
+   "decision": "KEEP",
+   "english": "About",
+   "approvedThai": "เกี่ยวกับเรา"
+  },
+  {
+   "id": "U43",
+   "key": "footer.scope",
+   "decision": "KEEP",
+   "english": "Mock scope",
+   "approvedThai": "ขอบเขตของฉบับจำลอง"
+  },
+  {
+   "id": "U44",
+   "key": "footer.credits",
+   "decision": "KEEP",
+   "english": "Local credits",
+   "approvedThai": "เครดิต"
+  },
+  {
+   "id": "U45",
+   "key": "footer.text",
+   "decision": "REPLACE",
+   "english": "A local mock. Every fragrance, house, note and article here is fictional.",
+   "approvedThai": "ฉบับจำลองที่ทำงานบนเครื่องนี้ น้ำหอม แบรนด์ โน้ต และบทความทั้งหมดเป็นข้อมูลสมมติ",
+   "previousThai": "ฉบับจำลองที่ทำงานภายในเครื่อง น้ำหอม แบรนด์ โน้ต และบทความทั้งหมดในที่นี้เป็นเรื่องสมมติ"
+  },
+  {
+   "id": "U46",
+   "key": "home.h1",
+   "decision": "KEEP",
+   "english": "A personal atlas of scent.",
+   "approvedThai": "แผนที่กลิ่นส่วน⁠ตัว"
+  },
+  {
+   "id": "U47",
+   "key": "home.lead",
+   "decision": "REPLACE",
+   "english": "A mock study of how a private perfume notebook could read: fictional fragrances, plainly layered.",
+   "approvedThai": "ตัวอย่างสมุดบันทึกน้ำหอมส่วนตัวที่นำเสนอข้อมูลน้ำหอมสมมติผ่านโครงสร้างกลิ่นอย่างเรียบง่าย",
+   "previousThai": "แบบศึกษาจำลองของสมุดบันทึกน้ำหอมส่วนตัว: น้ำหอมสมมติที่อ่านเป็นลำดับชั้นอย่างเรียบง่าย"
+  },
+  {
+   "id": "U48",
+   "key": "home.cta",
+   "decision": "KEEP",
+   "english": "Explore mock catalogue",
+   "approvedThai": "สำรวจแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U49",
+   "key": "home.heroAlt",
+   "decision": "KEEP",
+   "english": "Abstract study: a folded paper sheet and a dark slab crossed by contour lines.",
+   "approvedThai": "ภาพศึกษานามธรรม: แผ่นกระดาษพับและแท่งสีเข้มที่มีเส้นชั้นความสูงพาดผ่าน"
+  },
+  {
+   "id": "U50",
+   "key": "home.featured",
+   "decision": "KEEP",
+   "english": "Featured discoveries",
+   "approvedThai": "รายการคัดสรร"
+  },
+  {
+   "id": "U51",
+   "key": "home.viewAll",
+   "decision": "KEEP",
+   "english": "View all mock fragrances",
+   "approvedThai": "ดูน้ำหอมจำลองทั้งหมด"
+  },
+  {
+   "id": "U52",
+   "key": "home.families",
+   "decision": "KEEP",
+   "english": "Explore by scent",
+   "approvedThai": "สำรวจตามตระกูลกลิ่น"
+  },
+  {
+   "id": "U53",
+   "key": "home.folio",
+   "decision": "KEEP",
+   "english": "Read it in three layers",
+   "approvedThai": "อ่านโครงสร้างกลิ่น 3 ระดับ"
+  },
+  {
+   "id": "U54",
+   "key": "home.folioIntro",
+   "decision": "REPLACE",
+   "english": "Illustrative only. Each drawing carries the same number of lines, because a layer records labels and never amounts.",
+   "approvedThai": "ภาพเหล่านี้ใช้ประกอบคำอธิบายเท่านั้น ทุกภาพมีจำนวนเส้นเท่ากัน เพราะแต่ละระดับระบุเพียงชื่อโน้ต ไม่ใช่ปริมาณ",
+   "previousThai": "ภาพประกอบเพื่อการอธิบายเท่านั้น ทุกภาพมีจำนวนเส้นเท่ากัน เพราะแต่ละระดับบันทึกเพียงชื่อโน้ต ไม่ได้บันทึกปริมาณ"
+  },
+  {
+   "id": "U55",
+   "key": "home.folioTop",
+   "decision": "KEEP",
+   "english": "What a record lists first. In this mock it is only an order of reading, like the opening line of a page.",
+   "approvedThai": "โน้ตที่บันทึกไว้เป็นลำดับแรก ในฉบับจำลองนี้หมายถึงลำดับการอ่านเท่านั้น เหมือนบรรทัดแรกของหน้ากระดาษ"
+  },
+  {
+   "id": "U56",
+   "key": "home.folioHeart",
+   "decision": "REPLACE",
+   "english": "What a record keeps in the middle. Some studies in this mock list two labels here, and some never supplied any.",
+   "approvedThai": "โน้ตที่บันทึกไว้ในระดับกลาง บางแบบศึกษาระบุไว้สองชื่อ ขณะที่บางแบบศึกษาไม่ได้ระบุข้อมูลในระดับนี้",
+   "previousThai": "โน้ตที่บันทึกไว้ตรงกลาง บางแบบศึกษาระบุไว้สองชื่อ และบางแบบศึกษาไม่เคยระบุเลย"
+  },
+  {
+   "id": "U57",
+   "key": "home.folioBase",
+   "decision": "REPLACE",
+   "english": "What a record lists last. In this mock an empty base is an answer, and an unknown base is still a question.",
+   "approvedThai": "โน้ตที่บันทึกไว้เป็นลำดับสุดท้าย ในฉบับจำลองนี้ การระบุว่าไม่มีรายการเบสโน้ตคือคำตอบ ส่วนเบสโน้ตที่ไม่ได้ระบุยังคงเป็นคำถาม",
+   "previousThai": "โน้ตที่บันทึกไว้เป็นลำดับสุดท้าย ในฉบับจำลองนี้ เบสโน้ตที่บันทึกว่าว่างเปล่าคือคำตอบ ส่วนเบสโน้ตที่ไม่ได้ระบุยังคงเป็นคำถาม"
+  },
+  {
+   "id": "U58",
+   "key": "home.folioDrawing",
+   "decision": "KEEP",
+   "english": "{layer}, illustrative drawing",
+   "approvedThai": "ภาพประกอบ: {layer}"
+  },
+  {
+   "id": "U59",
+   "key": "home.journal",
+   "decision": "KEEP",
+   "english": "From the scent notebook",
+   "approvedThai": "จากสมุดบันทึกกลิ่น"
+  },
+  {
+   "id": "U60",
+   "key": "home.journalIntro",
+   "decision": "KEEP",
+   "english": "Sample articles, written for this mock.",
+   "approvedThai": "บทความตัวอย่างที่เขียนขึ้นสำหรับฉบับจำลองนี้"
+  },
+  {
+   "id": "U61",
+   "key": "home.journalAll",
+   "decision": "KEEP",
+   "english": "Read the scent notebook",
+   "approvedThai": "อ่านสมุดบันทึกกลิ่น"
+  },
+  {
+   "id": "U62",
+   "key": "explore.lead",
+   "decision": "KEEP",
+   "english": "Every study in this mock, listed by name. Narrow the list by family or note.",
+   "approvedThai": "แบบศึกษาทั้งหมดในฉบับจำลองนี้ เรียงตามชื่อ เลือกดูตามตระกูลกลิ่นหรือโน้ตได้"
+  },
+  {
+   "id": "U63",
+   "key": "explore.searchLabel",
+   "decision": "KEEP",
+   "english": "Search mock catalogue",
+   "approvedThai": "ค้นหาในแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U64",
+   "key": "explore.searchHelp",
+   "decision": "KEEP",
+   "english": "Searches the names, house and descriptions of fictional studies.",
+   "approvedThai": "ค้นหาจากชื่อ แบรนด์ หรือคำบรรยายของแบบศึกษาสมมติ"
+  },
+  {
+   "id": "U65",
+   "key": "explore.filterToggle",
+   "decision": "KEEP",
+   "english": "Filter and sort",
+   "approvedThai": "ตัวกรองและการเรียงลำดับ"
+  },
+  {
+   "id": "U66",
+   "key": "explore.family",
+   "decision": "KEEP",
+   "english": "Family",
+   "approvedThai": "ตระกูลกลิ่น"
+  },
+  {
+   "id": "U67",
+   "key": "explore.note",
+   "decision": "KEEP",
+   "english": "Note",
+   "approvedThai": "โน้ต"
+  },
+  {
+   "id": "U68",
+   "key": "explore.sort",
+   "decision": "KEEP",
+   "english": "Sort",
+   "approvedThai": "เรียงตาม"
+  },
+  {
+   "id": "U69",
+   "key": "explore.allFamilies",
+   "decision": "KEEP",
+   "english": "All families",
+   "approvedThai": "ทุกตระกูลกลิ่น"
+  },
+  {
+   "id": "U70",
+   "key": "explore.allNotes",
+   "decision": "KEEP",
+   "english": "All notes",
+   "approvedThai": "ทุกโน้ต"
+  },
+  {
+   "id": "U71",
+   "key": "explore.sortAsc",
+   "decision": "KEEP",
+   "english": "Name A–Z",
+   "approvedThai": "ชื่อ A–Z"
+  },
+  {
+   "id": "U72",
+   "key": "explore.sortDesc",
+   "decision": "KEEP",
+   "english": "Name Z–A",
+   "approvedThai": "ชื่อ Z–A"
+  },
+  {
+   "id": "U73",
+   "key": "explore.activeFilters",
+   "decision": "KEEP",
+   "english": "Active filters",
+   "approvedThai": "ตัวกรองที่เลือก"
+  },
+  {
+   "id": "U74",
+   "key": "explore.removeFamily",
+   "decision": "KEEP",
+   "english": ", remove family filter",
+   "approvedThai": " ล้างตัวกรองตระกูลกลิ่น"
+  },
+  {
+   "id": "U75",
+   "key": "explore.removeNote",
+   "decision": "KEEP",
+   "english": ", remove note filter",
+   "approvedThai": " ล้างตัวกรองโน้ต"
+  },
+  {
+   "id": "U76",
+   "key": "explore.clearAll",
+   "decision": "KEEP",
+   "english": "Clear all",
+   "approvedThai": "ล้างทั้งหมด"
+  },
+  {
+   "id": "U77",
+   "key": "explore.listHeading",
+   "decision": "KEEP",
+   "english": "Mock studies",
+   "approvedThai": "แบบศึกษาจำลอง"
+  },
+  {
+   "id": "U78",
+   "key": "explore.filterUnavailable",
+   "decision": "KEEP",
+   "english": "Filter unavailable",
+   "approvedThai": "ใช้ตัวกรองนี้ไม่ได้"
+  },
+  {
+   "id": "U79",
+   "key": "explore.invalidTitle",
+   "decision": "KEEP",
+   "english": "This filter is unavailable",
+   "approvedThai": "ใช้ตัวกรองนี้ไม่ได้"
+  },
+  {
+   "id": "U80",
+   "key": "explore.invalidText",
+   "decision": "KEEP",
+   "english": "The link asks for a family or note that does not exist in this mock.",
+   "approvedThai": "ลิงก์นี้ระบุตระกูลกลิ่นหรือโน้ตที่ไม่มีในฉบับจำลองนี้"
+  },
+  {
+   "id": "U81",
+   "key": "explore.resetFilters",
+   "decision": "KEEP",
+   "english": "Reset filters",
+   "approvedThai": "ล้างตัวกรอง"
+  },
+  {
+   "id": "U82",
+   "key": "explore.unsuppliedCount",
+   "decision": "KEEP",
+   "english": "Relationship not supplied",
+   "approvedThai": "ไม่ได้ระบุความเชื่อมโยง"
+  },
+  {
+   "id": "U83",
+   "key": "explore.unsuppliedTitle",
+   "decision": "KEEP",
+   "english": "Relationship not supplied for {note} in this mock",
+   "approvedThai": "ฉบับจำลองนี้ไม่ได้ระบุความเชื่อมโยงของ {note}"
+  },
+  {
+   "id": "U84",
+   "key": "explore.unsuppliedText",
+   "decision": "REPLACE",
+   "english": "No study lists it, and some studies have layers that were never supplied.",
+   "approvedThai": "ไม่มีแบบศึกษาใดระบุโน้ตนี้ และบางแบบศึกษายังไม่ได้ระบุข้อมูลกลิ่นในบางระดับ",
+   "previousThai": "ไม่มีแบบศึกษาใดระบุโน้ตนี้ และบางแบบศึกษายังมีระดับที่ไม่ได้ระบุ"
+  },
+  {
+   "id": "U85",
+   "key": "explore.clearFilters",
+   "decision": "KEEP",
+   "english": "Clear filters",
+   "approvedThai": "ล้างตัวกรอง"
+  },
+  {
+   "id": "U86",
+   "key": "explore.noResults",
+   "decision": "KEEP",
+   "english": "No mock studies fit these filters.",
+   "approvedThai": "ไม่พบแบบศึกษาที่ตรงกับตัวกรอง"
+  },
+  {
+   "id": "U87",
+   "key": "explore.noResultsText",
+   "decision": "REPLACE",
+   "english": "A study matches a note only when the note is written in one of its lists.",
+   "approvedThai": "แบบศึกษาจะตรงกับตัวกรองโน้ตก็ต่อเมื่อมีชื่อโน้ตนั้นอยู่ในรายการใดรายการหนึ่งของแบบศึกษา",
+   "previousThai": "แบบศึกษาจะตรงกับโน้ตก็ต่อเมื่อมีโน้ตนั้นอยู่ในรายการใดรายการหนึ่งของแบบศึกษา"
+  },
+  {
+   "id": "U88",
+   "key": "explore.noData",
+   "decision": "KEEP",
+   "english": "No mock studies are available",
+   "approvedThai": "ยังไม่มีแบบศึกษาจำลอง"
+  },
+  {
+   "id": "U89",
+   "key": "explore.noDataLink",
+   "decision": "KEEP",
+   "english": "About this mock",
+   "approvedThai": "เกี่ยวกับฉบับจำลองนี้"
+  },
+  {
+   "id": "U90",
+   "key": "detail.breadcrumb",
+   "decision": "KEEP",
+   "english": "Breadcrumb",
+   "approvedThai": "เส้นทางนำทาง"
+  },
+  {
+   "id": "U91",
+   "key": "detail.explore",
+   "decision": "KEEP",
+   "english": "Explore",
+   "approvedThai": "สำรวจ"
+  },
+  {
+   "id": "U92",
+   "key": "detail.visualAlt",
+   "decision": "KEEP",
+   "english": "Abstract study drawn for this fictional record",
+   "approvedThai": "ภาพศึกษานามธรรมที่วาดขึ้นสำหรับบันทึกสมมตินี้"
+  },
+  {
+   "id": "U93",
+   "key": "detail.family",
+   "decision": "KEEP",
+   "english": "Family",
+   "approvedThai": "ตระกูลกลิ่น"
+  },
+  {
+   "id": "U94",
+   "key": "detail.unknown",
+   "decision": "KEEP",
+   "english": "Unknown",
+   "approvedThai": "ไม่ทราบ"
+  },
+  {
+   "id": "U95",
+   "key": "detail.descriptionUnknown",
+   "decision": "KEEP",
+   "english": "Description not supplied in this mock",
+   "approvedThai": "ฉบับจำลองนี้ไม่ได้ระบุคำบรรยาย"
+  },
+  {
+   "id": "U96",
+   "key": "detail.allNotes",
+   "decision": "KEEP",
+   "english": "Read about the notes",
+   "approvedThai": "อ่านเกี่ยวกับโน้ตกลิ่น"
+  },
+  {
+   "id": "U97",
+   "key": "detail.layersHeading",
+   "decision": "KEEP",
+   "english": "Three layers",
+   "approvedThai": "โครงสร้างกลิ่น 3 ระดับ"
+  },
+  {
+   "id": "U98",
+   "key": "detail.layersNote",
+   "decision": "REPLACE",
+   "english": "Illustrative labels. No amounts are recorded.",
+   "approvedThai": "ชื่อโน้ตใช้ประกอบการอธิบายเท่านั้น ไม่มีการบันทึกปริมาณ",
+   "previousThai": "ชื่อโน้ตเพื่อการอ่านเท่านั้น ไม่มีการบันทึกปริมาณ"
+  },
+  {
+   "id": "U99",
+   "key": "detail.notSupplied",
+   "decision": "KEEP",
+   "english": "Not supplied in this mock",
+   "approvedThai": "ไม่ได้ระบุ"
+  },
+  {
+   "id": "U100",
+   "key": "detail.emptyLayer",
+   "decision": "KEEP",
+   "english": "No entries in this mock layer",
+   "approvedThai": "ไม่มีรายการในระดับนี้"
+  },
+  {
+   "id": "U101",
+   "key": "detail.emptyList",
+   "decision": "KEEP",
+   "english": "No entries in this mock list",
+   "approvedThai": "ไม่มีรายการ"
+  },
+  {
+   "id": "U102",
+   "key": "detail.emptyEntries",
+   "decision": "KEEP",
+   "english": "No entries",
+   "approvedThai": "ไม่มีรายการ"
+  },
+  {
+   "id": "U103",
+   "key": "detail.browseNote",
+   "decision": "KEEP",
+   "english": ", browse mock studies",
+   "approvedThai": " ดูแบบศึกษาที่มีโน้ตนี้"
+  },
+  {
+   "id": "U104",
+   "key": "detail.generalNotesNote",
+   "decision": "REPLACE",
+   "english": "Listed for the whole record, outside the layers.",
+   "approvedThai": "เป็นโน้ตที่ระบุสำหรับบันทึกทั้งรายการ โดยแยกจากโครงสร้างกลิ่น 3 ระดับ",
+   "previousThai": "ระบุไว้สำหรับทั้งบันทึก แยกจากโครงสร้าง 3 ระดับ"
+  },
+  {
+   "id": "U105",
+   "key": "detail.accords",
+   "decision": "KEEP",
+   "english": "Accords",
+   "approvedThai": "แอคคอร์ด"
+  },
+  {
+   "id": "U106",
+   "key": "detail.accordsNote",
+   "decision": "KEEP",
+   "english": "Fictional descriptors, without weights.",
+   "approvedThai": "คำบรรยายสมมติ ไม่มีการให้น้ำหนัก"
+  },
+  {
+   "id": "U107",
+   "key": "detail.record",
+   "decision": "REPLACE",
+   "english": "About this mock record",
+   "approvedThai": "เกี่ยวกับบันทึกจำลองนี้",
+   "previousThai": "ข้อมูลบันทึกจำลองนี้"
+  },
+  {
+   "id": "U108",
+   "key": "detail.recordId",
+   "decision": "KEEP",
+   "english": "Record",
+   "approvedThai": "รหัสบันทึก"
+  },
+  {
+   "id": "U109",
+   "key": "detail.recordKind",
+   "decision": "KEEP",
+   "english": "Kind",
+   "approvedThai": "ประเภท"
+  },
+  {
+   "id": "U110",
+   "key": "detail.recordKindValue",
+   "decision": "REPLACE",
+   "english": "Locally authored fixture, entirely synthetic",
+   "approvedThai": "ข้อมูลตัวอย่างสมมติทั้งหมดที่จัดทำขึ้นภายในโครงการ",
+   "previousThai": "ข้อมูลตัวอย่างที่จัดทำขึ้นภายในโครงการ เป็นข้อมูลสังเคราะห์ทั้งหมด"
+  },
+  {
+   "id": "U111",
+   "key": "detail.recordVersion",
+   "decision": "KEEP",
+   "english": "Version",
+   "approvedThai": "เวอร์ชัน"
+  },
+  {
+   "id": "U112",
+   "key": "detail.recordFor",
+   "decision": "KEEP",
+   "english": "Authored for",
+   "approvedThai": "จัดทำสำหรับ"
+  },
+  {
+   "id": "U113",
+   "key": "detail.recordRights",
+   "decision": "KEEP",
+   "english": "Rights",
+   "approvedThai": "สิทธิ์"
+  },
+  {
+   "id": "U114",
+   "key": "detail.recordRightsValue",
+   "decision": "KEEP",
+   "english": "Original project material",
+   "approvedThai": "ผลงานต้นฉบับของโครงการ"
+  },
+  {
+   "id": "U115",
+   "key": "detail.back",
+   "decision": "KEEP",
+   "english": "Back to the mock catalogue",
+   "approvedThai": "กลับไปยังแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U116",
+   "key": "notes.lead",
+   "decision": "REPLACE",
+   "english": "Nine invented labels. They name impressions for this mock and do not refer to any ingredient or material.",
+   "approvedThai": "ชื่อโน้ตสมมติ 9 ชื่อ ใช้สื่อถึงความรู้สึกในฉบับจำลองนี้ ไม่ได้หมายถึงส่วนผสมหรือวัตถุดิบจริง",
+   "previousThai": "ชื่อโน้ตที่ประดิษฐ์ขึ้นเก้าชื่อ ใช้เรียกความรู้สึกในฉบับจำลองนี้ และไม่ได้หมายถึงวัตถุดิบหรือสารใดจริง"
+  },
+  {
+   "id": "U117",
+   "key": "notes.searchLabel",
+   "decision": "KEEP",
+   "english": "Search mock notes",
+   "approvedThai": "ค้นหาโน้ตจำลอง"
+  },
+  {
+   "id": "U118",
+   "key": "notes.searchHelp",
+   "decision": "KEEP",
+   "english": "Searches labels and descriptions.",
+   "approvedThai": "ค้นหาจากชื่อและคำบรรยาย"
+  },
+  {
+   "id": "U119",
+   "key": "notes.listHeading",
+   "decision": "KEEP",
+   "english": "Mock notes",
+   "approvedThai": "โน้ตจำลอง"
+  },
+  {
+   "id": "U120",
+   "key": "notes.showAll",
+   "decision": "KEEP",
+   "english": "Show all",
+   "approvedThai": "แสดงทั้งหมด"
+  },
+  {
+   "id": "U121",
+   "key": "notes.none",
+   "decision": "KEEP",
+   "english": "No mock notes found",
+   "approvedThai": "ไม่พบโน้ตจำลอง"
+  },
+  {
+   "id": "U122",
+   "key": "notes.showAllNotes",
+   "decision": "KEEP",
+   "english": "Show all notes",
+   "approvedThai": "แสดงโน้ตทั้งหมด"
+  },
+  {
+   "id": "U123",
+   "key": "notes.browse",
+   "decision": "REPLACE",
+   "english": "Browse {count}",
+   "approvedThai": "ดู {count}",
+   "previousThai": "ดู{count}"
+  },
+  {
+   "id": "U124",
+   "key": "notes.browseWith",
+   "decision": "KEEP",
+   "english": " with {note}",
+   "approvedThai": " ที่มี {note}"
+  },
+  {
+   "id": "U125",
+   "key": "notes.unsupplied",
+   "decision": "KEEP",
+   "english": "Relationship not supplied",
+   "approvedThai": "ไม่ได้ระบุความเชื่อมโยง"
+  },
+  {
+   "id": "U126",
+   "key": "notes.listed",
+   "decision": "KEEP",
+   "english": "Where {note} is listed",
+   "approvedThai": "{note} อยู่ในแบบศึกษาใดบ้าง"
+  },
+  {
+   "id": "U127",
+   "key": "notes.jump",
+   "decision": "KEEP",
+   "english": "Jump to letter",
+   "approvedThai": "ไปยังตัวอักษร"
+  },
+  {
+   "id": "U128",
+   "key": "search.title",
+   "decision": "KEEP",
+   "english": "Search",
+   "approvedThai": "ค้นหา"
+  },
+  {
+   "id": "U129",
+   "key": "search.description",
+   "decision": "REPLACE",
+   "english": "Results update as you type and cover fictional studies only.",
+   "approvedThai": "ผลการค้นหาจะอัปเดตขณะพิมพ์ โดยแสดงเฉพาะแบบศึกษาสมมติ",
+   "previousThai": "ผลการค้นหาเปลี่ยนตามที่พิมพ์ และครอบคลุมเฉพาะแบบศึกษาสมมติ"
+  },
+  {
+   "id": "U130",
+   "key": "search.help",
+   "decision": "KEEP",
+   "english": "Fictional studies only",
+   "approvedThai": "เฉพาะแบบศึกษาสมมติ"
+  },
+  {
+   "id": "U131",
+   "key": "search.none",
+   "decision": "KEEP",
+   "english": "No mock fragrances found",
+   "approvedThai": "ไม่พบน้ำหอมจำลอง"
+  },
+  {
+   "id": "U132",
+   "key": "search.clear",
+   "decision": "KEEP",
+   "english": "Clear search",
+   "approvedThai": "ล้างคำค้นหา"
+  },
+  {
+   "id": "U133",
+   "key": "profile.title",
+   "decision": "KEEP",
+   "english": "Profile",
+   "approvedThai": "โปรไฟล์"
+  },
+  {
+   "id": "U134",
+   "key": "profile.text",
+   "decision": "REPLACE",
+   "english": "Profile is not available in this mock. No sign-in or account data is used.",
+   "approvedThai": "ฉบับจำลองนี้ยังไม่เปิดใช้โปรไฟล์ ไม่มีการลงชื่อเข้าใช้และไม่มีการใช้ข้อมูลบัญชี",
+   "previousThai": "ฉบับจำลองนี้ยังไม่มีโปรไฟล์ ไม่มีการลงชื่อเข้าใช้และไม่ใช้ข้อมูลบัญชีใด ๆ"
+  },
+  {
+   "id": "U135",
+   "key": "route.missing",
+   "decision": "KEEP",
+   "english": "The entry you opened is no longer in this list.",
+   "approvedThai": "รายการที่คุณเปิดไว้ไม่อยู่ในรายการนี้แล้ว"
+  },
+  {
+   "id": "U136",
+   "key": "route.pending",
+   "decision": "KEEP",
+   "english": "Opening the next page",
+   "approvedThai": "กำลังเปิดหน้าถัดไป"
+  },
+  {
+   "id": "U137",
+   "key": "errors.renderTitle",
+   "decision": "KEEP",
+   "english": "This page could not be shown",
+   "approvedThai": "ไม่สามารถแสดงหน้านี้ได้"
+  },
+  {
+   "id": "U138",
+   "key": "errors.renderText",
+   "decision": "KEEP",
+   "english": "The local page failed to render. Try again, or return to the mock catalogue.",
+   "approvedThai": "หน้านี้แสดงผลไม่สำเร็จ ลองอีกครั้ง หรือกลับไปยังแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U139",
+   "key": "errors.retry",
+   "decision": "KEEP",
+   "english": "Retry",
+   "approvedThai": "ลองอีกครั้ง"
+  },
+  {
+   "id": "U140",
+   "key": "errors.returnExplore",
+   "decision": "KEEP",
+   "english": "Return to Explore",
+   "approvedThai": "กลับไปยังหน้าสำรวจ"
+  },
+  {
+   "id": "U141",
+   "key": "errors.unavailableTitle",
+   "decision": "KEEP",
+   "english": "This page is unavailable",
+   "approvedThai": "ไม่พบหน้านี้"
+  },
+  {
+   "id": "U142",
+   "key": "errors.unavailableText",
+   "decision": "REPLACE",
+   "english": "Nothing in this mock uses that address. The link may be incomplete.",
+   "approvedThai": "ไม่พบหน้าที่ตรงกับที่อยู่นี้ในฉบับจำลอง ลิงก์อาจไม่ครบถ้วน",
+   "previousThai": "ฉบับจำลองนี้ไม่มีหน้าที่อยู่นี้ ลิงก์อาจไม่ครบถ้วน"
+  },
+  {
+   "id": "U143",
+   "key": "errors.unavailableAction",
+   "decision": "KEEP",
+   "english": "Return to the mock catalogue",
+   "approvedThai": "กลับไปยังแคตตาล็อกจำลอง"
+  },
+  {
+   "id": "U144",
+   "key": "about.h1",
+   "decision": "REPLACE",
+   "english": "A notebook that says what it does not know.",
+   "approvedThai": "สมุดบันทึกที่บอกตรงไปตรงมาว่าข้อมูลใดยังไม่ทราบ",
+   "previousThai": "สมุดบันทึกที่บอกตรง ๆ ว่ายังไม่รู้อะไรบ้าง"
+  },
+  {
+   "id": "U145",
+   "key": "about.lead",
+   "decision": "REPLACE",
+   "english": "DoomParfum By TK is planned as a private place to read about fragrance, follow notes and keep track of a collection. This is a mock of how that place could look and behave. Every record in it was invented.",
+   "approvedThai": "DoomParfum By TK วางแนวทางไว้ให้เป็นพื้นที่ส่วนตัวสำหรับอ่านเรื่องน้ำหอม ติดตามโน้ตกลิ่น และบันทึกคอลเลกชัน ฉบับจำลองนี้แสดงตัวอย่างหน้าตาและการใช้งานของพื้นที่ดังกล่าว โดยใช้ข้อมูลสมมติทุกรายการ",
+   "previousThai": "DoomParfum By TK ถูกวางแผนให้เป็นพื้นที่ส่วนตัวสำหรับอ่านเรื่องน้ำหอม ติดตามโน้ตกลิ่น และบันทึกคอลเลกชัน หน้านี้คือฉบับจำลองที่แสดงว่าพื้นที่นั้นอาจมีหน้าตาและการใช้งานอย่างไร ทุกบันทึกในที่นี้สร้างขึ้นเพื่อการสาธิต"
+  },
+  {
+   "id": "U146",
+   "key": "about.contents",
+   "decision": "KEEP",
+   "english": "On this page",
+   "approvedThai": "ในหน้านี้"
+  },
+  {
+   "id": "U147",
+   "key": "about.purpose",
+   "decision": "KEEP",
+   "english": "Purpose",
+   "approvedThai": "จุดประสงค์"
+  },
+  {
+   "id": "U148",
+   "key": "about.purposeText",
+   "decision": "REPLACE",
+   "english": "A fragrance record mixes several kinds of information: what a thing is called, which notes it declares, what people say about it, who sells it and whether you own it. Those belong in different places. This notebook is designed so that none of them can stand in for another.",
+   "approvedThai": "บันทึกน้ำหอมหนึ่งรายการประกอบด้วยข้อมูลหลายประเภท ทั้งชื่อ โน้ตที่ระบุ ความคิดเห็นของผู้คน ผู้จำหน่าย และสถานะการเป็นเจ้าของ ข้อมูลเหล่านี้ควรจัดเก็บแยกจากกัน สมุดบันทึกนี้จึงออกแบบให้ข้อมูลแต่ละประเภทไม่ถูกนำมาใช้แทนกัน",
+   "previousThai": "บันทึกน้ำหอมหนึ่งรายการมีข้อมูลหลายประเภทปะปนกัน ทั้งชื่อเรียก โน้ตที่ระบุไว้ ความเห็นของผู้คน ผู้จำหน่าย และสถานะว่าคุณเป็นเจ้าของหรือไม่ ข้อมูลเหล่านี้ควรแยกจากกัน สมุดบันทึกนี้จึงออกแบบให้ข้อมูลประเภทหนึ่งไม่อาจแทนที่อีกประเภทหนึ่งได้"
+  },
+  {
+   "id": "U149",
+   "key": "about.demonstrates",
+   "decision": "KEEP",
+   "english": "What this mock demonstrates",
+   "approvedThai": "สิ่งที่ฉบับจำลองนี้แสดง"
+  },
+  {
+   "id": "U150",
+   "key": "about.demo1",
+   "decision": "KEEP",
+   "english": "Browsing and filtering a small set of fictional studies.",
+   "approvedThai": "การเลือกดูและกรองแบบศึกษาสมมติชุดเล็ก ๆ"
+  },
+  {
+   "id": "U151",
+   "key": "about.demo2",
+   "decision": "REPLACE",
+   "english": "Reading top, heart and base layers as labels, with general notes and accords kept apart.",
+   "approvedThai": "การอ่านรายชื่อโน้ตตามโครงสร้างท็อปโน้ต ฮาร์ตโน้ต และเบสโน้ต โดยแยกโน้ตทั่วไปและแอคคอร์ดออกจากกัน",
+   "previousThai": "การอ่านท็อปโน้ต ฮาร์ตโน้ต และเบสโน้ตในฐานะชื่อเรียก โดยแยกโน้ตทั่วไปและแอคคอร์ดไว้ต่างหาก"
+  },
+  {
+   "id": "U152",
+   "key": "about.demo3",
+   "decision": "REPLACE",
+   "english": "Following a note to every study that lists it.",
+   "approvedThai": "การเลือกดูแบบศึกษาทุกรายการที่ระบุโน้ตนั้น",
+   "previousThai": "การติดตามโน้ตหนึ่งไปยังทุกแบบศึกษาที่ระบุโน้ตนั้น"
+  },
+  {
+   "id": "U153",
+   "key": "about.demo4",
+   "decision": "KEEP",
+   "english": "Telling an unknown field from one that was authored as empty.",
+   "approvedThai": "การแยกข้อมูลที่ไม่ได้ระบุ ออกจากข้อมูลที่บันทึกไว้ว่าว่างเปล่า"
+  },
+  {
+   "id": "U154",
+   "key": "about.scope",
+   "decision": "REPLACE",
+   "english": "What remains future",
+   "approvedThai": "สิ่งที่ยังต้องพัฒนาในอนาคต",
+   "previousThai": "สิ่งที่ยังเป็นงานในอนาคต"
+  },
+  {
+   "id": "U155",
+   "key": "about.scopeText1",
+   "decision": "REPLACE",
+   "english": "Nothing here connects to a real catalogue, an account or a store. Scent matching, the private catalogue, permission to use outside sources, account security, the cart and the collection are separate pieces of work. Each has its own approval, and this mock approves none of them.",
+   "approvedThai": "ฉบับจำลองนี้ไม่ได้เชื่อมต่อกับแคตตาล็อกจริง บัญชีผู้ใช้ หรือร้านค้า ระบบจับคู่กลิ่น แคตตาล็อกส่วนตัว สิทธิ์ในการใช้แหล่งข้อมูลภายนอก ความปลอดภัยของบัญชี ตะกร้า และคอลเลกชัน ล้วนเป็นงานแยกส่วนที่ต้องได้รับการอนุมัติแยกกัน ฉบับจำลองนี้ไม่ถือเป็นการอนุมัติงานใดในส่วนเหล่านั้น",
+   "previousThai": "ไม่มีส่วนใดในที่นี้เชื่อมต่อกับแคตตาล็อกจริง บัญชีผู้ใช้ หรือร้านค้า ทั้งการจับคู่กลิ่น แคตตาล็อกส่วนตัว สิทธิ์ในการใช้แหล่งข้อมูลภายนอก ความปลอดภัยของบัญชี ตะกร้า และคอลเลกชัน ล้วนเป็นงานแยกกันที่ต้องได้รับอนุมัติของตนเอง และฉบับจำลองนี้ไม่ได้อนุมัติงานใดเลย"
+  },
+  {
+   "id": "U156",
+   "key": "about.scopeText2",
+   "decision": "KEEP",
+   "english": "The mock runs on one computer. It asks search engines not to index it, and that request is not a security control.",
+   "approvedThai": "ฉบับจำลองนี้ทำงานบนคอมพิวเตอร์เครื่องเดียว มีการขอไม่ให้เครื่องมือค้นหาจัดทำดัชนี แต่คำขอนั้นไม่ใช่มาตรการด้านความปลอดภัย"
+  },
+  {
+   "id": "U157",
+   "key": "about.journal",
+   "decision": "KEEP",
+   "english": "The scent notebook",
+   "approvedThai": "สมุดบันทึกกลิ่น"
+  },
+  {
+   "id": "U158",
+   "key": "about.journalText",
+   "decision": "REPLACE",
+   "english": "Two sample articles about reading this mock. They make no claim about any real product.",
+   "approvedThai": "บทความตัวอย่างสองบทเกี่ยวกับการอ่านข้อมูลในฉบับจำลองนี้ โดยไม่มีการกล่าวอ้างถึงผลิตภัณฑ์จริง",
+   "previousThai": "บทความตัวอย่างสองบทว่าด้วยการอ่านฉบับจำลองนี้ ไม่ได้กล่าวอ้างถึงผลิตภัณฑ์จริงใด"
+  },
+  {
+   "id": "U159",
+   "key": "about.credits",
+   "decision": "KEEP",
+   "english": "Local credits",
+   "approvedThai": "เครดิต"
+  },
+  {
+   "id": "U160",
+   "key": "about.creditsText",
+   "decision": "REPLACE",
+   "english": "The drawings, records and articles were made for this project. Type is set in Bodoni Moda, Fahkwang and Noto Sans Thai under the SIL Open Font License 1.1, and icons come from Lucide under the ISC license. All of it is served from this computer.",
+   "approvedThai": "ภาพวาด บันทึก และบทความทั้งหมดจัดทำขึ้นสำหรับโครงการนี้ ใช้แบบอักษร Bodoni Moda, Fahkwang และ Noto Sans Thai ภายใต้สัญญาอนุญาต SIL Open Font License 1.1 และไอคอนจาก Lucide ภายใต้สัญญาอนุญาต ISC ทั้งหมดให้บริการจากคอมพิวเตอร์เครื่องนี้",
+   "previousThai": "ภาพวาด บันทึก และบทความทั้งหมดจัดทำขึ้นสำหรับโครงการนี้ ตัวอักษรใช้ Bodoni Moda, Fahkwang และ Noto Sans Thai ภายใต้ SIL Open Font License 1.1 ไอคอนมาจาก Lucide ภายใต้สัญญาอนุญาต ISC ทั้งหมดให้บริการจากคอมพิวเตอร์เครื่องนี้"
+  },
+  {
+   "id": "F1",
+   "key": "mock-family-bright descriptor",
+   "decision": "KEEP",
+   "english": "Edges, rims and thin light.",
+   "approvedThai": "ขอบ ริม และแสงบาง ๆ"
+  },
+  {
+   "id": "F2",
+   "key": "mock-family-soft descriptor",
+   "decision": "KEEP",
+   "english": "Folds, threads and slow curves.",
+   "approvedThai": "รอยพับ เส้นด้าย และส่วนโค้งที่ค่อย ๆ เปลี่ยน"
+  },
+  {
+   "id": "F3",
+   "key": "mock-family-deep descriptor",
+   "decision": "KEEP",
+   "english": "Strata, weight and late ink.",
+   "approvedThai": "ชั้นหิน น้ำหนัก และหมึกยามดึก"
+  },
+  {
+   "id": "F4",
+   "key": "mock-note-001 descriptor",
+   "decision": "KEEP",
+   "english": "The cool edge of a cut sheet.",
+   "approvedThai": "ขอบเย็นของแผ่นกระดาษที่เพิ่งตัด"
+  },
+  {
+   "id": "F5",
+   "key": "mock-note-002 descriptor",
+   "decision": "KEEP",
+   "english": "A dry thread pulled straight.",
+   "approvedThai": "เส้นด้ายแห้งที่ถูกดึงจนตึง"
+  },
+  {
+   "id": "F6",
+   "key": "mock-note-003 descriptor",
+   "decision": "KEEP",
+   "english": "A bright rim, seen edge-on.",
+   "approvedThai": "ริมที่สว่าง มองจากด้านข้าง"
+  },
+  {
+   "id": "F7",
+   "key": "mock-note-004 descriptor",
+   "decision": "KEEP",
+   "english": "Warm dust on a high shelf.",
+   "approvedThai": "ฝุ่นอุ่นบนชั้นวางสูง"
+  },
+  {
+   "id": "F8",
+   "key": "mock-note-005 descriptor",
+   "decision": "KEEP",
+   "english": "Wet slate before noon.",
+   "approvedThai": "หินชนวนเปียกก่อนเที่ยง"
+  },
+  {
+   "id": "F9",
+   "key": "mock-note-006 descriptor",
+   "decision": "KEEP",
+   "english": "Soft wax, barely marked.",
+   "approvedThai": "ขี้ผึ้งนุ่มที่แทบไม่มีรอย"
+  },
+  {
+   "id": "F10",
+   "key": "mock-note-007 descriptor",
+   "decision": "KEEP",
+   "english": "Late ink, not yet dry.",
+   "approvedThai": "หมึกยามดึกที่ยังไม่แห้ง"
+  },
+  {
+   "id": "F11",
+   "key": "mock-note-008 descriptor",
+   "decision": "KEEP",
+   "english": "A pale trace left in a room.",
+   "approvedThai": "ร่องรอยจาง ๆ ที่หลงเหลืออยู่ในห้อง"
+  },
+  {
+   "id": "F12",
+   "key": "mock-note-009 descriptor",
+   "decision": "KEEP",
+   "english": "A label with no supplied relationships.",
+   "approvedThai": "ชื่อที่ยังไม่มีการระบุความเชื่อมโยง"
+  },
+  {
+   "id": "F13",
+   "key": "mock-perfume-001 description",
+   "decision": "REPLACE",
+   "english": "A fictional record kept deliberately incomplete. Its heart was never supplied, and its base was authored as empty. The two read differently on purpose.",
+   "approvedThai": "บันทึกสมมติที่จงใจให้ข้อมูลไม่ครบ โดยไม่ได้ระบุฮาร์ตโน้ต แต่ระบุไว้อย่างชัดเจนว่าเบสโน้ตไม่มีรายการ ทั้งสองสถานะจึงมีความหมายต่างกันโดยเจตนา",
+   "previousThai": "บันทึกสมมติที่ตั้งใจเก็บไว้ไม่ครบ ฮาร์ตโน้ตไม่เคยได้รับการระบุ ส่วนเบสโน้ตถูกบันทึกไว้ว่าว่างเปล่า สองสิ่งนี้จึงมีความหมายต่างกันโดยเจตนา"
+  },
+  {
+   "id": "F14",
+   "key": "mock-perfume-002 description",
+   "decision": "KEEP",
+   "english": "A fictional sheet folded once, written as a quiet opening that settles without hurry.",
+   "approvedThai": "กระดาษสมมติที่พับเพียงครั้งเดียว เปิดอย่างแผ่วเบา แล้วค่อย ๆ สงบลงโดยไม่เร่งรีบ"
+  },
+  {
+   "id": "F15",
+   "key": "mock-perfume-003 description",
+   "decision": "REPLACE",
+   "english": "A fictional page of late ink. Most of its weight was authored into the last layer.",
+   "approvedThai": "หน้ากระดาษสมมติที่เขียนด้วยหมึกยามดึก โดยให้น้ำหนักเชิงการบรรยายกับระดับสุดท้ายเป็นหลัก",
+   "previousThai": "หน้ากระดาษสมมติที่เขียนด้วยหมึกยามดึก น้ำหนักส่วนใหญ่ถูกบันทึกไว้ในระดับสุดท้าย"
+  },
+  {
+   "id": "F16",
+   "key": "mock-perfume-004 description",
+   "decision": "KEEP",
+   "english": "Fictional cloth in morning light: one thread at the start, one at the end, and room between them.",
+   "approvedThai": "ผืนผ้าสมมติในแสงยามเช้า มีด้ายหนึ่งเส้นตอนเริ่ม อีกหนึ่งเส้นตอนจบ และมีที่ว่างอยู่ระหว่างกลาง"
+  },
+  {
+   "id": "F17",
+   "key": "mock-perfume-005 description",
+   "decision": "KEEP",
+   "english": "A fictional weave recorded at three distances. Every layer was supplied, so this is the plainest record to read first.",
+   "approvedThai": "ลายทอสมมติที่บันทึกไว้จากสามระยะ ทุกระดับได้รับการระบุครบ จึงเป็นบันทึกที่อ่านง่ายที่สุดสำหรับผู้เริ่มต้น"
+  },
+  {
+   "id": "F18",
+   "key": "mock-perfume-007 description",
+   "decision": "KEEP",
+   "english": "A fictional pane seen edge-on. Bright at the rim, then almost nothing.",
+   "approvedThai": "แผ่นกระจกสมมติที่มองจากด้านข้าง สว่างที่ขอบ แล้วแทบไม่มีอะไรเลย"
+  },
+  {
+   "id": "F19",
+   "key": "mock-perfume-008 description",
+   "decision": "KEEP",
+   "english": "Fictional light through two curved surfaces, arriving in order: rim, slate, wax.",
+   "approvedThai": "แสงสมมติที่ผ่านพื้นผิวโค้งสองชั้น มาถึงตามลำดับ: ริม หินชนวน ขี้ผึ้ง"
+  },
+  {
+   "id": "F20",
+   "key": "mock-perfume-009 description",
+   "decision": "KEEP",
+   "english": "A fictional study whose family was never assigned. It stays in the catalogue with its family shown as unknown.",
+   "approvedThai": "แบบศึกษาสมมติที่ไม่เคยได้รับการกำหนดตระกูลกลิ่น ยังคงอยู่ในแคตตาล็อกโดยแสดงตระกูลกลิ่นว่าไม่ทราบ"
+  },
+  {
+   "id": "F21",
+   "key": "mock-perfume-010 description",
+   "decision": "KEEP",
+   "english": "Fictional strata, read from the surface down. The base carries three labels and is the longest list in this mock.",
+   "approvedThai": "ชั้นหินสมมติที่อ่านจากผิวลงไป เบสโน้ตมีสามชื่อ และเป็นรายการที่ยาวที่สุดในฉบับจำลองนี้"
+  },
+  {
+   "id": "F22",
+   "key": "mock-perfume-011 description",
+   "decision": "REPLACE",
+   "english": "A fictional boulder with a long and slightly impractical description, kept here so that wrapping, zooming and larger text can be checked against something more demanding than a single tidy line. It names no real material and makes no claim about wear.",
+   "approvedThai": "ก้อนหินสมมติที่มีคำบรรยายยาวและไม่ค่อยเหมาะกับการใช้งานทั่วไปนัก เก็บไว้เพื่อทดสอบการตัดบรรทัด การซูม และการขยายขนาดตัวอักษรด้วยข้อความที่ท้าทายกว่าประโยคสั้น ๆ เพียงบรรทัดเดียว คำบรรยายนี้ไม่ได้ระบุวัสดุจริงหรือกล่าวอ้างถึงลักษณะของน้ำหอมขณะใช้",
+   "previousThai": "ก้อนหินสมมติที่มีคำบรรยายยาวและออกจะไม่ค่อยมีประโยชน์นัก เก็บไว้เพื่อใช้ตรวจการตัดบรรทัด การขยายหน้าจอ และข้อความขนาดใหญ่ กับสิ่งที่ยากกว่าบรรทัดสั้น ๆ ที่เรียบร้อยเพียงบรรทัดเดียว คำบรรยายนี้ไม่ได้ระบุวัสดุจริงใด และไม่ได้กล่าวอ้างเรื่องความคงทน"
+  },
+  {
+   "id": "F23",
+   "key": "mock-article-001 title",
+   "decision": "KEEP",
+   "english": "Reading a layer",
+   "approvedThai": "อ่านทีละระดับ"
+  },
+  {
+   "id": "F24",
+   "key": "mock-article-001 excerpt",
+   "decision": "KEEP",
+   "english": "Top, heart and base are an order of reading. They are not a recipe.",
+   "approvedThai": "ท็อปโน้ต ฮาร์ตโน้ต และเบสโน้ต คือลำดับของการอ่าน ไม่ใช่สูตรผสม"
+  },
+  {
+   "id": "F25",
+   "key": "mock-article-001 body ¶1",
+   "decision": "KEEP",
+   "english": "Every record in this mock can carry three layers. Top is what was written first, heart is what was written to stay, and base is what was written to remain. The order describes reading, in the way chapters do.",
+   "approvedThai": "ทุกบันทึกในฉบับจำลองนี้มีได้สามระดับ ท็อปโน้ตคือสิ่งที่บันทึกไว้ก่อน ฮาร์ตโน้ตคือสิ่งที่บันทึกไว้ให้คงอยู่ และเบสโน้ตคือสิ่งที่บันทึกไว้ให้หลงเหลือ ลำดับนี้บรรยายการอ่าน เช่นเดียวกับบทต่าง ๆ ในหนังสือ"
+  },
+  {
+   "id": "F26",
+   "key": "mock-article-001 body ¶2",
+   "decision": "REPLACE",
+   "english": "A layer holds labels, never amounts. Nothing here says how much of anything exists, how long it lasts or what it is made of. When a record lists one label and another lists three, the second list is longer and that is all it means.",
+   "approvedThai": "แต่ละระดับระบุเพียงชื่อโน้ต ไม่ใช่ปริมาณ ไม่มีข้อมูลใดบอกว่าสิ่งนั้นมีอยู่มากเพียงใด ติดทนนานเท่าใด หรือประกอบด้วยอะไร หากบันทึกหนึ่งระบุหนึ่งชื่อและอีกบันทึกระบุสามชื่อ ความแตกต่างมีเพียงความยาวของรายการเท่านั้น",
+   "previousThai": "แต่ละระดับเก็บเพียงชื่อโน้ต ไม่เคยเก็บปริมาณ ไม่มีสิ่งใดในที่นี้บอกว่ามีสิ่งใดอยู่มากเท่าใด ติดทนนานเท่าใด หรือทำจากอะไร เมื่อบันทึกหนึ่งมีหนึ่งชื่อและอีกบันทึกมีสามชื่อ รายการที่สองก็เพียงยาวกว่า และมีความหมายเพียงเท่านั้น"
+  },
+  {
+   "id": "F27",
+   "key": "mock-article-001 body ¶3",
+   "decision": "REPLACE",
+   "english": "General notes sit apart from the layers. They belong to the whole record and are never moved up or down to fill a gap.",
+   "approvedThai": "โน้ตทั่วไปแยกจากโครงสร้างกลิ่น 3 ระดับ เป็นข้อมูลของบันทึกทั้งรายการ และจะไม่ถูกย้ายไปอยู่ในระดับใดเพื่อเติมช่องว่าง",
+   "previousThai": "โน้ตทั่วไปอยู่แยกจากโครงสร้าง 3 ระดับ เป็นของทั้งบันทึก และไม่เคยถูกย้ายขึ้นหรือลงเพื่อเติมช่องว่าง"
+  },
+  {
+   "id": "F28",
+   "key": "mock-article-002 title",
+   "decision": "REPLACE",
+   "english": "Empty is not unknown",
+   "approvedThai": "ไม่มีรายการ ไม่ได้หมายความว่าไม่ทราบ",
+   "previousThai": "ว่างเปล่าไม่ใช่ไม่ทราบ"
+  },
+  {
+   "id": "F29",
+   "key": "mock-article-002 excerpt",
+   "decision": "KEEP",
+   "english": "Two records can look equally bare and mean opposite things.",
+   "approvedThai": "บันทึกสองรายการอาจดูว่างเหมือนกัน แต่มีความหมายตรงข้ามกัน"
+  },
+  {
+   "id": "F30",
+   "key": "mock-article-002 body ¶1",
+   "decision": "REPLACE",
+   "english": "Paper study A has a heart that was never supplied and a base that was authored as empty. The first is a question nobody has answered. The second is an answer.",
+   "approvedThai": "Paper study A ไม่ได้ระบุฮาร์ตโน้ต แต่ระบุไว้อย่างชัดเจนว่าเบสโน้ตไม่มีรายการ อย่างแรกคือคำถามที่ยังไม่มีใครตอบ ส่วนอย่างหลังคือคำตอบ",
+   "previousThai": "Paper study A มีฮาร์ตโน้ตที่ไม่เคยได้รับการระบุ และเบสโน้ตที่ถูกบันทึกไว้ว่าว่างเปล่า อย่างแรกคือคำถามที่ยังไม่มีใครตอบ อย่างหลังคือคำตอบ"
+  },
+  {
+   "id": "F31",
+   "key": "mock-article-002 body ¶2",
+   "decision": "KEEP",
+   "english": "Catalogues often flatten the two into one blank space, and a reader then fills that space with a guess. This notebook keeps them apart: one says it was not supplied, the other says it has no entries.",
+   "approvedThai": "แคตตาล็อกจำนวนมากมักรวมสองอย่างนี้ไว้เป็นช่องว่างเดียว แล้วผู้อ่านก็เติมช่องนั้นด้วยการคาดเดา สมุดบันทึกนี้แยกทั้งสองไว้ อย่างหนึ่งบอกว่าไม่ได้ระบุ อีกอย่างบอกว่าไม่มีรายการ"
+  },
+  {
+   "id": "F32",
+   "key": "mock-article-002 body ¶3",
+   "decision": "KEEP",
+   "english": "The same care applies to a family, a description or a picture. When something is missing, the page says what is missing and leaves it there.",
+   "approvedThai": "ความระมัดระวังเดียวกันใช้กับตระกูลกลิ่น คำบรรยาย หรือภาพ เมื่อมีสิ่งใดขาดไป หน้านั้นจะบอกว่าขาดอะไร และปล่อยไว้อย่างนั้น"
+  }
+ ]
+}

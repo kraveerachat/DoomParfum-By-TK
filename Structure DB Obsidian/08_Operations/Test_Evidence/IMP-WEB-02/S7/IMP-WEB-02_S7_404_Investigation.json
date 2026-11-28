@@ -1,0 +1,531 @@
+{
+ "task": "IMP-WEB-02",
+ "session": "S7",
+ "date": "2026-11-28",
+ "candidate": {
+  "code": "253bf485d40a9e4367db8968cf0d0d59faf8f127",
+  "image": "sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a",
+  "origin": "http://127.0.0.1:3000"
+ },
+ "method": "Raw HTTP GET with node:http (targets sent unencoded as written), HTML parsed with scripts removed; Chrome with JavaScript disabled for the no-script render. Headers: content-security-policy nonce, cache-control no-store, x-robots-tag noindex.",
+ "currentCandidate": [
+  {
+   "name": "en unknown path",
+   "target": "/does-not-exist",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "en unknown nested",
+   "target": "/a/b/c",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "en unknown slug",
+   "target": "/perfume/no-such-study",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "th unknown path",
+   "target": "/th/does-not-exist",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "th unknown slug",
+   "target": "/th/perfume/no-such-study",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "prefix /en",
+   "target": "/en",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "prefix /en/explore",
+   "target": "/en/explore",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "prefix /TH",
+   "target": "/TH",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "prefix /fr",
+   "target": "/fr",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "malformed en",
+   "target": "/%E0%B8",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "malformed th",
+   "target": "/th/%E0%B8",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "unavailable en",
+   "target": "/unavailable",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  },
+  {
+   "name": "unavailable th",
+   "target": "/th/unavailable",
+   "status": 404,
+   "htmlTag": "<html id=\"__next_error__\">",
+   "serverH1": null,
+   "serverHasThaiDisclosure": false,
+   "serverHasEnDisclosure": false,
+   "cspNonce": true,
+   "noStore": true,
+   "noindex": true,
+   "noScript": {
+    "lang": null,
+    "h1": null,
+    "bodyChars": 0,
+    "status": 404
+   }
+  }
+ ],
+ "v1Image": {
+  "image": "doomparfum-web:v1-rollback (43be51f1)",
+  "unknownPath": "404, <html lang=\"en\">, server h1 and English disclosure, readable without scripting",
+  "unknownSlug": "404, <html id=\"__next_error__\">, empty without scripting"
+ },
+ "cp4Image": {
+  "image": "doomparfum-web:cp4-rollback (177c02e5)",
+  "allProbed404": "404, <html id=\"__next_error__\">, empty without scripting"
+ },
+ "rootCause": "Every 404 is produced by notFound() thrown inside a page (the per-tree catch-all, the detail page, the /unavailable rewrite target). React server rendering does not run error boundaries, so the not-found boundary cannot render on the server; Next.js 16.4.6 then sends its fallback error document (<html id=\"__next_error__\">, no lang, empty body) with the 404 status and renders the not-found view in the browser after hydration. V1 served unmatched URLs through the root /_not-found route, which renders the view as a page; two root layouts have no such route.",
+ "scratchExperiments": [
+  {
+   "id": "E1",
+   "change": "htmlLimitedBots removed",
+   "result": "no change (error document)"
+  },
+  {
+   "id": "E2",
+   "change": "connection() replaced by dynamic = force-dynamic",
+   "result": "no change (error document)"
+  },
+  {
+   "id": "E3a",
+   "change": "<Suspense> around page content in the shell",
+   "result": "server lang and shell, but status 200 and no heading: rejected (loses real 404)"
+  },
+  {
+   "id": "E3b",
+   "change": "/unavailable renders the view; proxy rewrite with status 404",
+   "result": "full localized server HTML but status 200: Next.js ignores the rewrite status; rejected"
+  },
+  {
+   "id": "E4",
+   "change": "experimental.globalNotFound + app/global-not-found.tsx (shell + view, locale from a proxy path header); catch-alls removed",
+   "result": "unmatched URLs fixed; unknown slugs and malformed addresses still the error document"
+  },
+  {
+   "id": "E5",
+   "change": "E4 + dynamicParams=false on detail; malformed rewrite to an unmatched path",
+   "result": "malformed fixed; unknown slugs still the error document"
+  },
+  {
+   "id": "E6",
+   "change": "E4 + proxy rewrites malformed addresses and unknown detail slugs to an unmatched path",
+   "result": "all user-facing 404 cases: 404, server lang, localized h1 and disclosure, nonce CSP, no-store, noindex, readable without scripting; valid pages 200",
+   "probe": [
+    {
+     "name": "en unknown path",
+     "target": "/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "en unknown nested",
+     "target": "/a/b/c",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "en unknown slug",
+     "target": "/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "th unknown path",
+     "target": "/th/does-not-exist",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverHasThaiDisclosure": true,
+     "serverHasEnDisclosure": false,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "th",
+      "h1": "ไม่พบหน้านี้",
+      "bodyChars": 411,
+      "status": 404
+     }
+    },
+    {
+     "name": "th unknown slug",
+     "target": "/th/perfume/no-such-study",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverHasThaiDisclosure": true,
+     "serverHasEnDisclosure": false,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "th",
+      "h1": "ไม่พบหน้านี้",
+      "bodyChars": 411,
+      "status": 404
+     }
+    },
+    {
+     "name": "prefix /en",
+     "target": "/en",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "prefix /en/explore",
+     "target": "/en/explore",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "prefix /TH",
+     "target": "/TH",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "prefix /fr",
+     "target": "/fr",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "malformed en",
+     "target": "/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"en\">",
+     "serverH1": "This page is unavailable",
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": true,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "en",
+      "h1": "This page is unavailable",
+      "bodyChars": 408,
+      "status": 404
+     }
+    },
+    {
+     "name": "malformed th",
+     "target": "/th/%E0%B8",
+     "status": 404,
+     "htmlTag": "<html lang=\"th\">",
+     "serverH1": "ไม่พบหน้านี้",
+     "serverHasThaiDisclosure": true,
+     "serverHasEnDisclosure": false,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": "th",
+      "h1": "ไม่พบหน้านี้",
+      "bodyChars": 411,
+      "status": 404
+     }
+    },
+    {
+     "name": "unavailable en",
+     "target": "/unavailable",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">",
+     "serverH1": null,
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": false,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": null,
+      "h1": null,
+      "bodyChars": 0,
+      "status": 404
+     }
+    },
+    {
+     "name": "unavailable th",
+     "target": "/th/unavailable",
+     "status": 404,
+     "htmlTag": "<html id=\"__next_error__\">",
+     "serverH1": null,
+     "serverHasThaiDisclosure": false,
+     "serverHasEnDisclosure": false,
+     "cspNonce": true,
+     "noStore": true,
+     "noindex": true,
+     "noScript": {
+      "lang": null,
+      "h1": null,
+      "bodyChars": 0,
+      "status": 404
+     }
+    }
+   ]
+  }
+ ],
+ "experimentLocation": "Scratch clean clone of 253bf48 outside the repository (next build + next start on 127.0.0.1:3300, stopped afterwards). Nothing applied to the project."
+}

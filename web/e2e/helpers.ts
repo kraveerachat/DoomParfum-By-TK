@@ -41,10 +41,10 @@ export async function ready(page: Page, path: string) {
 }
 
 /** Sends the exact request target. Browsers and HTTP clients rewrite slashes and escapes first. */
-export const raw = (method: string, target: string) =>
+export const raw = (method: string, target: string, extra: Record<string, string> = {}) =>
   new Promise<{ status: number; headers: IncomingHttpHeaders; body: string }>((resolve, reject) => {
     const { hostname, port, host } = new URL(ORIGIN);
-    const call = httpRequest({ hostname, port, family: 4, agent: false, method, path: target, headers: { host } }, (response) => {
+    const call = httpRequest({ hostname, port, family: 4, agent: false, method, path: target, headers: { ...extra, host } }, (response) => {
       let body = "";
       response.setEncoding("utf8");
       response.on("data", (part: string) => (body += part));

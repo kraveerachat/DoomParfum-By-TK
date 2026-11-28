@@ -1,0 +1,64 @@
+{
+  "task": "IMP-WEB-02",
+  "session": "S4",
+  "date": "2026-11-27",
+  "candidate": {
+    "code": "c3f968853b64b4ee65df2d9cf8c6b94e0b13014b",
+    "image": "sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf",
+    "intermediate": {
+      "code": "bfb721093d91fcbfbdfa3744bb3388d9c1308b8b",
+      "image": "sha256:b776d5c15c3e992671132b4869b6f6a24bf5852d40341f805b7f96eb5f214d99"
+    }
+  },
+  "checks": {
+    "typecheck": "exit 0",
+    "eslint": "exit 0 (--max-warnings 0)",
+    "fixtures": "12 studies, 9 notes, 3 families, 4 accords, 2 articles",
+    "unit": "117 pass / 0 fail (worktree; clean clones of bfb7210 and c3f9688)",
+    "chrome": {
+      "startTime": "2026-11-27T15:40:05.146Z",
+      "duration": 75683.03700000001,
+      "expected": 283,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "playwright": "1.65.1"
+    },
+    "edge": {
+      "startTime": "2026-11-27T15:41:23.990Z",
+      "duration": 77099.70999999999,
+      "expected": 283,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0,
+      "playwright": "1.65.1"
+    },
+    "cleanClone": "npm ci (empty cache) + next build PASS at bfb7210 and c3f9688",
+    "imageBuild": "docker build --no-cache --target runner PASS for both candidates",
+    "scanOutput": "325 of 1448 files outside node_modules, 22 immutable scripts; no boundary violation (both images)",
+    "npmAudit": "0 vulnerabilities (all and --omit=dev), both clean clones",
+    "retiredGold": "no #AD9361 / #75613A in web/ source or the built app tree",
+    "metricsChrome": [
+      "/ js=172.7KiB cls=0.0067",
+      "/explore js=175.2KiB cls=0.0011",
+      "/perfume/paper-study-a js=171.5KiB cls=0.0104",
+      "/notes js=174.3KiB cls=0.0050",
+      "/about js=172.9KiB cls=0.0234"
+    ]
+  },
+  "sensitivity": {
+    "V07 two-row header static (<=20% viewport)": "fails on 689b177 image, passes on candidates",
+    "V07 no-script 768 static": "fails on 689b177 image, passes on candidates",
+    "V13 synthetic blur (+a, toBeFocused)": "fails on CP4 image 177c02e5 (ring drawn), passes on c3f9688"
+  },
+  "notRun": [
+    "screen reader",
+    "physical phone",
+    "Safari",
+    "Firefox",
+    "second-machine LAN probe",
+    "A11 Docker dev and recovery drills (required by the merged contract; need a bounded Owner approval to stop and replace the preview)",
+    "Owner physical Win+Shift+S path",
+    "no-script header with a browser default text size below 16px (fix reasoned, not tested)"
+  ]
+}

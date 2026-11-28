@@ -74,6 +74,6 @@ All five routes, error pages and response variants must send noindex metadata (a
 
 Future Cloudflare exposure requires its own bounded deployment/security plan and explicit Owner approval. It may expose only the approved synthetic slice; connecting private records is a separate security/data task. A public mock cannot become a public private-data app by changing an environment variable.
 
-## Amendment DPT-PLAN-013 — no runtime change (PROPOSED until merged)
+## Amendment DPT-PLAN-013 — no runtime change (MERGED 2026-11-26, PR #37 `3e87027`)
 
 Frontend V1.1 ([[DPT-PLAN-013_Frontend_V1_1_Amendment]]) keeps the loopback preview, container, port, CSP, no-store and no-egress rules above. The only request-handling change planned is that an undecodable address under `/th/` gets the Thai unavailable view. The Thai font specimen is Git-ignored local tooling and never enters an image. Any other proxy or Compose change needs its reason in the implementation PR.

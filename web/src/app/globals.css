@@ -30,7 +30,19 @@
   unicode-range: U+02D7, U+0303, U+0331, U+0E01-0E5B, U+200C-200D, U+25CC;
 }
 
-/* Approved DPT-PLAN-012 tokens. Framework palettes, radii and shadows are removed on purpose. */
+/* Thai display face selected by the Owner at CP4 (T1): Fahkwang 300, SIL OFL 1.1, @fontsource/fahkwang
+   5.3.0 Thai subset. Only Thai code points, so Latin in a mixed heading stays Bodoni Moda. */
+@font-face {
+  font-family: "Fahkwang";
+  src: url("../fonts/fahkwang-thai-300-normal.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0E01-0E5B, U+200C-200D, U+25CC;
+}
+
+/* DPT-PLAN-012 tokens as amended by DPT-PLAN-013 3.1. Framework palettes, radii and shadows are removed
+   on purpose. Gold below bronze-700 is decoration only; gold-on-navy belongs on navy only. */
 @theme {
   --color-*: initial;
   --color-paper: #f7f5f0;
@@ -38,11 +50,18 @@
   --color-surface-muted: #eeeae2;
   --color-ink: #161719;
   --color-text-secondary: #5c5a55;
-  --color-gold: #ad9361;
-  --color-gold-readable: #75613a;
+  /* Aliases kept for V1 components: gold = gold-500, gold-readable = bronze-700. */
+  --color-gold: #a8875a;
+  --color-gold-readable: #7a5c33;
+  --color-gold-50: #f3ecdf;
+  --color-gold-300: #d2be98;
+  --color-gold-500: #a8875a;
+  --color-bronze-700: #7a5c33;
+  --color-tobacco-900: #3b2c1e;
+  --color-gold-on-navy: #c9a96e;
   --color-navy: #14253d;
   --color-on-dark: #f7f5f0;
-  --color-divider: #ddd9d0;
+  --color-divider: #d6cfc2;
   --color-control-border: #817b70;
   --color-focus: #14253d;
   --color-error: #9a302c;
@@ -50,25 +69,28 @@
   --color-scrim: rgb(22 23 25 / 0.5);
 
   --font-display: "Bodoni Moda", "Noto Sans Thai", "Times New Roman", serif;
+  /* Thai headings: Bodoni Moda for Latin letters, Fahkwang for Thai, Noto Sans Thai as the fallback. */
+  --font-display-th: "Bodoni Moda", "Fahkwang", "Noto Sans Thai", serif;
   --font-sans: "Noto Sans Thai", "Leelawadee UI", system-ui, -apple-system, "Segoe UI", sans-serif;
   --default-font-family: var(--font-sans);
 
   --text-*: initial;
   --text-entry: 1.375rem;
-  --text-entry--line-height: 1.35;
+  --text-entry--line-height: 1.3;
   --text-body: 1rem;
   --text-body--line-height: 1.6;
   --text-control: 1rem;
   --text-control--line-height: 1.5;
   --text-meta: 0.875rem;
   --text-meta--line-height: 1.5;
-  --text-signature: 0.625rem;
+  --text-signature: 0.6875rem;
   --text-signature--line-height: 1.4;
 
   --radius-*: initial;
-  --radius-button: 2px;
-  --radius-input: 4px;
-  --radius-dialog: 8px;
+  /* T8 (Owner, CP4): square corners. Kept as tokens so components stay semantic. */
+  --radius-button: 0px;
+  --radius-input: 0px;
+  --radius-dialog: 0px;
   --shadow-*: initial;
   --shadow-dialog: 0 2px 8px rgb(22 23 25 / 0.08), 0 16px 48px rgb(22 23 25 / 0.12);
 
@@ -92,6 +114,7 @@
 
 @layer base {
   html {
+    --header-h: 4.875rem;
     background: var(--color-paper);
     color: var(--color-ink);
     font-family: var(--font-sans);
@@ -113,7 +136,8 @@
   html:not([data-ready]) *::after {
     transition: none !important;
   }
-  p {
+  p,
+  li {
     text-wrap: pretty;
   }
   body {
@@ -145,6 +169,16 @@
   [data-route-target]:focus-visible {
     outline: 2px solid var(--color-focus);
     outline-offset: 6px;
+  }
+  [data-pointer-focus]:focus-visible {
+    outline: none;
+  }
+  /* Anchors, the skip link target and focused content scroll clear of the sticky header. A margin on
+     content, not padding on the page: padding would make the header's own controls count as hidden
+     behind it, and focusing them would scroll the page. */
+  :where(main, footer),
+  :where(main, footer) * {
+    scroll-margin-top: calc(var(--header-h) + 24px);
   }
   input,
   select,
@@ -242,25 +276,115 @@
   }
 }
 @utility type-entry {
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-weight: 400;
   font-size: 1.375rem;
-  line-height: 1.35;
+  font-variation-settings: "opsz" 6;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
   text-wrap: balance;
   overflow-wrap: anywhere;
   @variant w1024 {
-    font-size: 1.5rem;
-    line-height: 1.3;
+    font-size: 1.625rem;
+    line-height: 1.2;
   }
 }
-/* Thai headings use the body face with room for marks and no Latin display tracking. */
+/* Thai display (T1): Fahkwang 300 beside Bodoni Moda 400. Room for stacked marks (measured in the T1
+   specimen: ink up to 1.07 of the line at 1.35), no Latin tracking, no uppercase. */
 .type-hero:lang(th),
 .type-page:lang(th),
 .type-section:lang(th),
 .type-entry:lang(th) {
-  font-family: var(--font-sans);
-  font-weight: 500;
+  font-family: var(--font-display-th);
+  font-weight: 300;
+  font-variation-settings: normal;
   letter-spacing: normal;
+  text-transform: none;
+}
+.type-hero:lang(th) {
+  font-size: 2.375rem;
   line-height: 1.4;
+  @variant w1024 { font-size: 4rem; line-height: 1.35; }
+}
+.type-page:lang(th) {
+  font-size: 2rem;
+  line-height: 1.45;
+  @variant w1024 { font-size: 3.125rem; line-height: 1.45; }
+}
+.type-section:lang(th) {
+  font-size: 1.75rem;
+  line-height: 1.5;
+  @variant w1024 { font-size: 2.25rem; line-height: 1.5; }
+}
+.type-entry:lang(th) {
+  font-size: 1.3125rem;
+  line-height: 1.55;
+  @variant w1024 { font-size: 1.5rem; line-height: 1.5; }
+}
+/* Latin inside a Thai page (fictional names) keeps the Latin display treatment. */
+:lang(th) :is(.type-hero, .type-page, .type-section, .type-entry):lang(en) {
+  font-family: var(--font-display);
+  font-weight: 400;
+}
+:root:lang(th) body {
+  line-height: 1.75;
+}
+
+/* Long-form reading size (About, journal): 18px. */
+@utility type-long {
+  font-size: 1.125rem;
+  line-height: 1.65;
+  &:lang(th) { line-height: 1.8; }
+}
+
+/* Decorative numerals (Roman layer marks, counts). Arabic digits in both languages. */
+@utility numeral {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 6;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* Rules R1–R5 (DPT-PLAN-013 3.2). Only 1px and 2px strokes; never a gradient; they carry no
+   information. One boundary carries one rule. */
+@utility rule-masthead {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block-end: 0;
+    height: 6px;
+    border-block-start: 2px solid var(--color-ink);
+    border-block-end: 1px solid var(--color-gold-500);
+    pointer-events: none;
+  }
+}
+@utility rule-masthead-top {
+  position: relative;
+  padding-block-start: 6px;
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block-start: 0;
+    height: 6px;
+    border-block-start: 2px solid var(--color-ink);
+    border-block-end: 1px solid var(--color-gold-500);
+    pointer-events: none;
+  }
+}
+@utility rule-section {
+  position: relative;
+  border-block-start: 1px solid var(--color-ink);
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: -1px;
+    width: 48px;
+    height: 2px;
+    background: var(--color-gold-500);
+  }
 }
 
 /* Control text: 15px on wide layouts, 16px elsewhere. Inputs always stay at 16px. */
@@ -295,7 +419,8 @@
 .hero-art {
   @variant w1024 {
     width: 100%;
-    max-width: max(35rem, calc((100svh - 308px) * 1.25));
+    /* 314px: V1's 308px plus the five extra pixels of the R1 masthead rule and one of rounding. */
+    max-width: max(35rem, calc((100svh - 314px) * 1.25));
     justify-self: end;
   }
   @variant w1600 {
@@ -346,6 +471,127 @@
   }
 }
 
+/* One section rhythm (DPT-PLAN-013 2.4): 96 / 64 / 64px. */
+@utility section-gap {
+  padding-block: 4rem;
+  @variant w1024 { padding-block: 6rem; }
+}
+@utility section-gap-top {
+  padding-block-start: 4rem;
+  @variant w1024 { padding-block-start: 6rem; }
+}
+
+/* Catalogue titles reserve two lines in multi-column grids, so house and family stay level across
+   titles of different length and script. */
+.entry-grid .entry-title {
+  @variant w480 {
+    min-block-size: 2lh;
+  }
+}
+
+/* Arrow links: the arrow moves 4px toward its destination on hover; still under reduced motion. */
+.arrow-nudge,
+.arrow-nudge-back {
+  transition: translate var(--motion-feedback) ease-out;
+}
+@media (hover: hover) {
+  .group:hover .arrow-nudge { translate: 4px 0; }
+  .group:hover .arrow-nudge-back { translate: -4px 0; }
+}
+
+/* T4 (Owner, CP4): compact Explore toolbar. Visible labels sit beside full-bordered native selects in one
+   row from 640px; the search field keeps its own label and help. Targets stay 44px. */
+.toolbar-field {
+  @variant w640 {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: 0.75rem;
+  }
+}
+.toolbar-field label {
+  @variant w640 {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+  }
+}
+.toolbar-field > div {
+  @variant w640 { margin-top: 0; }
+}
+.toolbar-field .field-control {
+  @variant w640 { min-height: 2.75rem; }
+}
+
+/* Active filter chips: a visible full border, a tint, a 44px target. */
+.filter-chip {
+  border-color: var(--color-ink);
+  background: var(--color-gold-50);
+}
+
+/* Notes: group letters in bronze, and a jump index of the letters actually shown. */
+.note-initial {
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 12;
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--color-bronze-700);
+  @variant w1024 { font-size: 3.5rem; }
+}
+.letter-link {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-variation-settings: "opsz" 6;
+  font-size: 1.125rem;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+  text-decoration-color: var(--color-divider);
+  transition: text-decoration-color var(--motion-feedback) ease-out;
+  @variant can-hover { text-decoration-color: var(--color-gold-500); }
+}
+
+/* Folio rules on navy: gold-on-navy, quieter between rows (decoration only). */
+.folio-list {
+  border-block-end: 1px solid color-mix(in srgb, var(--color-gold-on-navy) 40%, var(--color-navy));
+}
+.folio-list > li {
+  border-block-start: 1px solid color-mix(in srgb, var(--color-gold-on-navy) 40%, var(--color-navy));
+}
+
+/* About contents: a disclosure on narrow screens, a sticky list beside the text on wide, tall ones.
+   Without scripting the list stays visible. */
+.contents-toggle {
+  display: none;
+}
+html[data-ready] .about-contents .contents-toggle {
+  display: inline-flex;
+}
+html[data-ready] .about-contents:not([data-open]) .contents-list {
+  display: none;
+}
+.contents-link[aria-current="location"] {
+  font-weight: 600;
+  text-decoration-color: var(--color-gold-500);
+  text-decoration-thickness: 2px;
+}
+@media (min-width: 1280px) {
+  @container page (min-width: 78.5rem) {
+    html[data-ready] .about-contents .contents-toggle { display: none; }
+    html[data-ready] .about-contents:not([data-open]) .contents-list,
+    html[data-ready] .about-contents .contents-list { display: block; }
+    @media (min-height: 40rem) {
+      .about-contents {
+        position: sticky;
+        top: calc(var(--header-h) + 24px);
+      }
+    }
+  }
+}
+
 /* A typographic study fills the reserved field when no drawing exists. */
 .visual-fallback {
   container-type: inline-size;
@@ -373,7 +619,7 @@
   text-decoration-color: var(--color-control-border);
   transition: text-decoration-color var(--motion-feedback) ease-out;
   @variant can-hover {
-    text-decoration-color: currentcolor;
+    text-decoration-color: var(--color-gold-500);
   }
 }
 
@@ -390,7 +636,7 @@
   text-decoration-color: var(--color-control-border);
   transition: text-decoration-color var(--motion-feedback) ease-out;
   @variant can-hover {
-    text-decoration-color: currentcolor;
+    text-decoration-color: var(--color-gold-500);
   }
 }
 
@@ -413,7 +659,7 @@
     background: var(--color-navy);
   }
   &:active {
-    background: var(--color-navy);
+    background: var(--color-tobacco-900);
   }
 }
 
@@ -436,11 +682,11 @@
     background-color var(--motion-feedback) ease-out;
   @variant can-hover {
     border-color: var(--color-ink);
-    background: var(--color-surface-muted);
+    background: var(--color-gold-50);
   }
   &:active {
     border-color: var(--color-ink);
-    background: var(--color-surface-muted);
+    background: var(--color-gold-50);
   }
 }
 
@@ -476,11 +722,136 @@
   }
 }
 
-/* Header: equal outer tracks keep the navigation at the true centre on wide screens. */
+/* Header: equal outer tracks keep the navigation at the true centre on wide screens. Sticky with a
+   stable height; static on short viewports, in print, and wherever script measures that it would
+   cover more than a fifth of the viewport (data-header-static). */
 .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--color-paper);
+}
+.site-header-inner {
   container: header / inline-size;
 }
+@media (max-height: 31.25rem), print {
+  .site-header {
+    position: static;
+  }
+}
+html[data-header-static] .site-header {
+  position: static;
+}
+/* Without scripting nothing measures the header: below 1024px (or 64em, when the default text size is
+   larger) the navigation takes a second row, so the header is static there; above it, it is one row of
+   known height. The px bound covers a default text size below 16px, where 64em is narrower. */
+@media (scripting: none) {
+  html {
+    --header-h: 5.875rem;
+  }
+}
+@media (scripting: none) and ((width < 1024px) or (width < 64em)) {
+  .site-header {
+    position: static;
+  }
+}
+.lang-divider {
+  width: 1px;
+  height: 1.25rem;
+  margin-inline: 0.25rem;
+  background: var(--color-divider);
+}
+/* Language selector (5.2): current shown with weight and a gold underline, the other a 44px link. */
+.lang-item {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+}
+.lang-item .lang-label {
+  border-block-end: 2px solid transparent;
+  padding-block: 0.125rem;
+  transition: border-color var(--motion-feedback) ease-out;
+}
+.lang-current {
+  font-weight: 600;
+}
+/* A language name written in Thai is never tracked (DPT-PLAN-013 3.3); only the Latin codes are. */
+.lang-item[lang="th"],
+.lang-item [lang="th"] {
+  letter-spacing: normal;
+}
+.lang-current .lang-label {
+  border-color: var(--color-gold-500);
+}
+.lang-link {
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+@media (hover: hover) {
+  .lang-link:hover {
+    color: var(--color-ink);
+  }
+  .lang-link:hover .lang-label {
+    border-color: var(--color-control-border);
+  }
+}
+.lang-switch {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.lang-full {
+  display: none;
+}
+/* Record sheet (T3): every value starts on one column. Where the sheet is too narrow for two columns
+   (a small phone, or enlarged text, since rem follows the root size) each label sits above its value. */
+.record-sheet {
+  container-type: inline-size;
+}
+.record-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  row-gap: 0.25rem;
+}
+.record-row dd {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+@container (min-width: 21rem) {
+  .record-row {
+    grid-template-columns: min(7.5rem, 35%) minmax(0, 1fr);
+    column-gap: 1.5rem;
+    align-items: baseline;
+  }
+}
+/* The footer shows full language names, wider than the 44px box, so the row starts on the column edge. */
+.lang-footer ul {
+  flex-wrap: wrap;
+  gap: 0 0.5rem;
+}
+.lang-segment ul {
+  display: contents;
+}
+.lang-segment {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border: 1px solid var(--color-control-border);
+}
+.lang-segment .lang-item {
+  width: 100%;
+  min-height: 3rem;
+  font-size: 1rem;
+  letter-spacing: normal;
+}
+.lang-segment .lang-current {
+  background: var(--color-gold-50);
+}
 .header-grid {
+  position: relative;
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   grid-template-areas: "menu brand utils";
@@ -543,6 +914,8 @@
     .header-nav { display: block; grid-area: nav; }
     .header-utils { justify-self: end; }
     .wordmark-name { font-size: 1.25rem; }
+    .lang-full { display: flex; }
+    .lang-compact { display: none; }
   }
 }
 

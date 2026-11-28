@@ -1,0 +1,43 @@
+{
+  "task": "IMP-WEB-02",
+  "session": "S6",
+  "date": "2026-11-28",
+  "candidate": {
+    "code": "253bf485d40a9e4367db8968cf0d0d59faf8f127",
+    "commits": {
+      "2f8b78a52ac69bae8c3d544f21fc62cf92eff019": "33 approved Thai replacements; 32 prose texts marked reviewed with the Owner record; unit tests for 4.5",
+      "4633f213df1db2b7c2f2644649c13bd5bf995758": "two e2e tests updated to the reviewed-search results; draft-path unit assertion",
+      "253bf485d40a9e4367db8968cf0d0d59faf8f127": "unit test pinning a SHA-256 of the approved Thai wording"
+    },
+    "previousReviewedCandidate": "c3f968853b64b4ee65df2d9cf8c6b94e0b13014b",
+    "changedFilesSinceC3f9688": ["web/src/i18n/messages.ts", "web/src/fixtures/th.ts", "web/tests/locale.test.ts", "web/e2e/content.spec.ts", "web/e2e/locale.spec.ts"],
+    "previewImage": "sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a",
+    "rollbackImage": "sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf (tags c3f9688-rollback, s4-candidate2)"
+  },
+  "checks": {
+    "typecheck": "next typegen + tsc --noEmit exit 0",
+    "eslint": "exit 0 (--max-warnings 0)",
+    "validateFixtures": "12 studies, 9 notes, 3 families, 4 accords, 2 articles",
+    "unit": "119 pass / 0 fail (worktree; clean clone of 253bf48); 117 before S6 plus the 4.5 English-search test and the approved-wording pin",
+    "chromeFullSuite": "283 passed, 0 failed, 0 skipped, 0 flaky on image dedbba40 (Playwright 1.65.1)",
+    "edgeFullSuite": "283 passed, 0 failed, 0 skipped, 0 flaky on image dedbba40",
+    "cleanClone": "npm ci with an empty cache + next build PASS at 4633f21 and 253bf48",
+    "imageBuild": "docker build --no-cache --target runner PASS (dedbba40 from 253bf48)",
+    "scanOutput": "325 of 1448 files outside node_modules, 22 immutable scripts; no boundary violation",
+    "thaiProseInImmutableChunks": "0 of 32 (unchanged from c3f9688; 127 interface-string hits are the client dictionary, as before)",
+    "npmAudit": "0 vulnerabilities (all and --omit=dev)",
+    "initialJsKiB": { "/": 172.7, "/explore": 175.2, "/perfume/paper-study-a": 171.5, "/notes": 174.3, "/about": 172.9 },
+    "clsMax": 0.0187,
+    "exploreFirstPicturePx": { "/explore 1440x900": 522, "/th/explore 1440x900": 535, "/explore 1280x900": 522, "/th/explore 1280x900": 535, "limit": 560 },
+    "coveredBySuites": "widths 320-1920, 200% text, 400% zoom equivalent, WCAG 1.4.12 spacing, Thai mark rendering, dialogs, sticky header and anchors, CSP nonce, no-store, noindex, methods, no external requests, no cookies or storage, no-script, reduced motion, forced colours"
+  },
+  "sensitivity": {
+    "English Explore 'กระดาษ' gives B, C, L": "fails on the c3f9688 preview, passes on the candidate",
+    "English Explore 'หมึก' gives C only": "fails on the c3f9688 preview, passes on the candidate",
+    "approved-wording pin": "fails on a one-character prose edit, passes after restore"
+  },
+  "renderedChecks": "26 replaced interface strings and 7 replaced prose texts render where expected (U110 inside the closed record disclosure by design); U123+U124 compose as 'ดู แบบศึกษาจำลอง 5 รายการ ที่มี Ivrel'; old wording absent; English pages unchanged except Thai-query search",
+  "observationsPreExisting": [
+    "404 pages: the raw server HTML shell (<html id=\"__next_error__\">) has no lang attribute; the rendered document sets lang en/th correctly with scripting. Same on c3f9688. Not changed (outside this translation-only task)."
+  ]
+}

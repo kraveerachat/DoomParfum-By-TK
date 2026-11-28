@@ -12,6 +12,40 @@ tags:
 source_of_truth: "../../README.md"
 ---
 
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S10: Owner final acceptance, receipt, Draft PR
+
+Supersedes the S9 entry below. The Owner accepted Frontend V1.1 as the initial visual and functional mock baseline: T1–T8, the 192 Thai decisions, the reviewed Thai search behavior, and the 404 correction for the pinned local mock. The physical Notes shortcut check is NOT RUN / OWNER-DEFERRED (not PASS). A05 stays PARTIAL (deferred). Application candidate `53d01265962059655764f8d65be5b71329e600c4` is unchanged (`web/` tree `be5cea26…`). Single receipt: [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]]. One-time publication: one push and one Draft PR to `main` with the Owner's login as a one-time exception; the PR number is recorded in [[IMP-WEB-02_Frontend_V1_1]]. Owner review and merge PENDING. Preview `127.0.0.1:3000` = image `sha256:568cc3b3…`. Experimental `globalNotFound`: reassess before any Next.js upgrade, live data or deployment. Next development: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (separate authorization). [[2026-11-28_IMP-WEB-02_S10_Report]]
+
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S9: 404 documents fixed, closeout
+
+Supersedes the S8 entry below. With the Owner's bounded authorization, every 404 is now server-rendered in its language and readable without JavaScript. This uses experimental `globalNotFound`, authorized only on the pinned Next.js 16.4.6 for the local mock; it must be reassessed before any upgrade, live data or deployment. Final candidate `53d01265962059655764f8d65be5b71329e600c4`: unit 122/0, Chrome and Edge 305/305, independent review PASS. Preview `127.0.0.1:3000` = image `sha256:568cc3b3…`. Open: the physical Notes shortcut test (not performed; Owner to confirm or defer) and publication authority. Not pushed; no receipt. Next slice decisions: [[IMP-WEB-02_Next_Slice_Decision_Packet]] (no task started). [[2026-11-28_IMP-WEB-02_S9_Report]]
+
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S8: Owner visual acceptance
+Supersedes the S7 entry below. The Owner accepted the Frontend V1.1 visual design as the initial baseline (candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127`, preview `sha256:dedbba40…`); visual refinement is deferred and the next priority is real catalogue data and backend features (handoff: [[IMP-WEB-02_Next_Development_Handoff]]; no task started). Notes outline: no outline in the Owner's screenshot. Open: the 404 server-language decision (S7) and publication authority. Not pushed; no receipt. [[2026-11-28_IMP-WEB-02_S8_Report]]
+
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S7: 404 documents blocked on an Owner decision
+Supersedes the S6 entry below. Every 404 of candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127` has the right status and headers, but the server sends an empty framework error document without `lang` (localized only after JavaScript; blank without it), which misses DPT-PLAN-013 4.2 and V01. No correction fits the approved design; a scratch-tested correction (experimental `globalNotFound` plus proxy rewrites) needs Owner approval. No code changed; preview `sha256:dedbba40…` unchanged. ACCEPTANCE BLOCKED: 404 decision, physical Notes check, publication authority. [[2026-11-28_IMP-WEB-02_S7_Report]]
+
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S6: Thai localization finalized
+Supersedes the S5 entry below. The Owner approved the full Thai review (192 entries: 159 kept, 33 replaced); applied exactly and reconciled on candidate `253bf485d40a9e4367db8968cf0d0d59faf8f127`; independent review PASS. Preview http://127.0.0.1:3000/ runs `sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`; unit 119, Chrome 283 and Edge 283 pass. A05 PARTIAL with the Owner's stage deferral. ACCEPTANCE PENDING: the Owner's physical Notes check and publication authority. [[2026-11-28_IMP-WEB-02_S6_Report]]
+
+## 2026-11-28 — Frontend V1.1 (IMP-WEB-02) S5: A11 Docker drills
+Supersedes the S4 entry below. With the Owner's authorization the A11 Docker development and recovery drills ran on candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`: PASS. Preview restored without rebuild at http://127.0.0.1:3000/ (`sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`); Chrome 283 pass on it. ACCEPTANCE PENDING on Owner items: A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-28_IMP-WEB-02_S5_Report]]
+
+## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S4: independent review and reconciliation
+Supersedes the S3 entry below. Independent review (same-vendor, fresh context) CONDITIONAL on `689b177`: two-row sticky header and retired V1 gold; both fixed, delta reviews PASS. Candidate `c3f968853b64b4ee65df2d9cf8c6b94e0b13014b`; preview http://127.0.0.1:3000/ runs `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. Unit 117, Chrome 283 and Edge 283 pass. DPT-PLAN-013 merge now recorded in PRODUCT.md and canonical notes. ACCEPTANCE PENDING: A11 Docker drills (Owner approval or deferral), A05 deferral, physical Notes check, Thai line review, publication authority. [[2026-11-27_IMP-WEB-02_S4_Report]]
+
+## 2026-11-27 — Frontend V1.1 (IMP-WEB-02) S3: design passes and CP5 rerun
+Supersedes the S2 entry below. Impeccable and Taste checks run; record-sheet and footer alignment fixed; every Notes focus path tested. Candidate `689b177b4908cd84bec1ac2c81fc9a17963224d3`; preview http://127.0.0.1:3000/ runs `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. Unit 117, Chrome 279 and Edge 279 pass. Independent review of this candidate BLOCKED (sub-agents unavailable under auto mode). ACCEPTANCE PENDING. [[2026-11-27_IMP-WEB-02_S3_Report]]
+
+## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) selections built, CP5 verified
+
+Supersedes the CP4 entry below. The Owner chose T1 Fahkwang 300, T2 centred hero, T3 record sheet, T4 compact toolbar, T5 stable header, T6 compact language link, T7 equal columns, T8 square corners, BY TK 11px and refined Thai terminology. Built and verified at `5d63f8809523b5d31b7888852fd44b1f57956874`; preview http://127.0.0.1:3000/ runs `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`. Unit 117, Chrome 259 and Edge 259 pass; independent same-vendor review CONDITIONAL with both blockers fixed. ACCEPTANCE PENDING: Owner review, A05 deferral, Thai line review, publication authority. `LOCAL_ONLY`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — Frontend V1.1 (IMP-WEB-02) at the CP4 Owner review
+
+PR #37 (DPT-PLAN-013) is MERGED as `3e87027fbdbbb016c148a84ca33775e64cccf3e0`. [[IMP-WEB-02_Frontend_V1_1]] completed CP0–CP4 locally: English and Thai routes, sticky header with TH/EN, gold–bronze tokens, R1–R5 rules and page refinements, live at http://127.0.0.1:3000/ (image `sha256:177c02e5e5b9f82b7920a3adaddd51ba8bdd7fc2a83c8771c5db4fec91537eaf`; V1 kept as `doomparfum-web:v1-rollback`). Unit 116, Chrome 242 and Edge 242 tests pass. No Thai display font is selected. Waiting for the Owner's answers in [[IMP-WEB-02_CP4_Owner_Review]]; CP5, independent review and publication follow. `LOCAL_ONLY`, no PR. PR #8, U01/r14 and the database are untouched.
+
 ## 2026-11-26 — Frontend V1 merged; V1.1 planning amendment prepared (Gate B)
 
 [PR #36](https://github.com/kraveerachat/DoomParfum-By-TK/pull/36) is MERGED as `ab3351a8432d1d6664a6b4281784cfea56b0b9fa` (2026-11-25T18:40:31Z, verified equal to remote `main`), so Gate A is closed and the "merge PENDING" text in the S5 entry below is historical. Gate B: [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]] proposes the V1.1 contract, [[DPT-PLAN-013_Frontend_V1_1_Amendment]], on `plan/frontend-v1-1-design-upgrade`; documentation only, `LOCAL_ONLY` / `NOT_PUSHED` / `PR_NOT_CREATED` when written. Gate C (code) is NOT STARTED and needs the Owner's merge of that amendment. No Thai display font is selected. A05 stays PARTIAL. PR #8 stays OPEN / DRAFT at `84dccb117971ab65e0bf39fa3d1d84a12d344f8d`; U01/r14 is unchanged. The V1 preview on `127.0.0.1:3000` was left running.

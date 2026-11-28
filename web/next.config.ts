@@ -18,6 +18,10 @@ const config: NextConfig = {
   images: { unoptimized: true },
   // Keep title and robots metadata in the initial <head> for every client.
   htmlLimitedBots: /.*/,
+  // EXPERIMENTAL, Owner-authorized for IMP-WEB-02 on Next.js 16.4.6 and the local mock only (S9).
+  // With two root layouts, app/global-not-found.tsx is the only 404 the framework renders on the
+  // server with `lang` and content. Reassess before any Next.js upgrade or production deployment.
+  experimental: { globalNotFound: true },
   ...(poll > 0 ? { watchOptions: { pollIntervalMs: poll } } : {}),
   async headers() {
     return [

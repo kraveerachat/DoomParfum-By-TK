@@ -3,7 +3,7 @@
 import { ChevronDown } from "lucide-react";
 import { useId, type Ref } from "react";
 
-type Option = { readonly value: string; readonly label: string };
+type Option = { readonly value: string; readonly label: string; readonly lang?: string | undefined };
 type Props = {
   readonly label: string;
   readonly value: string;
@@ -11,13 +11,15 @@ type Props = {
   readonly onChange: (value: string) => void;
   readonly ref?: Ref<HTMLSelectElement>;
   readonly id?: string;
+  /** Label beside the control on wider screens (T4 compact toolbar). */
+  readonly inline?: boolean;
 };
 
-export function SelectField({ label, value, options, onChange, ref, id }: Props) {
+export function SelectField({ label, value, options, onChange, ref, id, inline = false }: Props) {
   const auto = useId();
   const controlId = id ?? auto;
   return (
-    <div className="min-w-0">
+    <div className={`min-w-0${inline ? " toolbar-field" : ""}`}>
       <label htmlFor={controlId} className="type-control block font-medium">
         {label}
       </label>
@@ -30,7 +32,7 @@ export function SelectField({ label, value, options, onChange, ref, id }: Props)
           className="field-control appearance-none pe-11 text-ellipsis"
         >
           {options.map((option) => (
-            <option key={option.value} value={option.value}>
+            <option key={option.value} value={option.value} lang={option.lang}>
               {option.label}
             </option>
           ))}

@@ -852,3 +852,35 @@ Records only: task note, status, index, backlog and logs updated; S5 report, sum
 ## 2026-11-26 — DPT-PLAN-013 documents
 
 Added: [[DPT-PLAN-013_Frontend_V1_1_Amendment]], [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]], [[DPT-PLAN-013_Draft_PR_Description]], S1 report and summary, receipt, evidence folder. Amended by added sections only: tokens, routes, fixture contract, acceptance map, Docker proposal, PRODUCT.md, DPT-PLAN-012 and IMP-WEB-01 task notes (the latter also moves its status to merged), status, index, backlog, roadmap, acceptance criteria, pending questions and logs. No file in `web/` and no earlier report, evidence or receipt changed.
+
+## 2026-11-26 — IMP-WEB-02 S1
+
+Code checkpoint `733c59da80fb22f8164859d756f1f24c1bcd008f`: `web/` only (two route trees, i18n, overlay, header, tokens, pages, tests). Records: task note, S1 report and summary, CP4 packet with T1–T8 renders and the translation sheet, status, index, backlog and logs. No earlier record changed. Preview replaced by image `sha256:177c02e5e5b9f82b7920a3adaddd51ba8bdd7fc2a83c8771c5db4fec91537eaf`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 S2
+
+Code `733c59d..5d63f88` in `web/` only (CP4 selections, Fahkwang asset and license, focus fix, review fixes, tests). Records: task note, S2 report and summary, CP5 evidence (screens, comparison sheets, performance, translation review), status, index, backlog and logs. Earlier records unchanged. Preview replaced by `sha256:3a155e442df0f172604a68a44ba55e81a61684e0ca032756f0f07e407a97ca90`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S3
+Code `5d63f88..689b177` in `web/` only (record-sheet grid and stacking, footer language alignment, 20 tests). Records: task note, S3 report and summary, Draft PR package, S3 evidence (screens, comparison, performance), status, index, backlog and logs. Earlier records unchanged. Preview replaced by `sha256:a324a06dffc304cc3b2eeb48748dc3dc2e083bcc02a7e526d98b7722e441f1d2`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-27 — IMP-WEB-02 S4
+Code `689b177..c3f9688` in `web/` only (header static when it reflows to two rows, with and without scripting; retired V1 gold replaced; 4 tests added, 3 strengthened). Records: task note, S4 report and summary, three review reports, Draft PR package, S4 evidence (verification, comparison sheet, Owner Thai review), status, index, backlog and logs; DPT-PLAN-013 post-merge status in `PRODUCT.md`, the amendment, its task note and five canonical notes. Receipts unchanged. Preview replaced by `sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S5
+No code change (`web/` equal to `c3f9688`). Records: task note, S5 report and summary, A11 results and drill log, Draft PR package, status, index, backlog and logs. Docker: preview stopped and replaced for the A11 drills under Owner authorization and restored from tag `preview` (`sha256:48748b9cc0ffb413d270a2cd75a5fcefac0a9b92796bafa67250c6d12f2e33cf`) without rebuild; `dev` image rebuilt by the documented dev command, previous kept as `dev-pre-a11`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S6
+Code `c3f9688..253bf48` in `web/` only: 33 Owner-approved Thai strings, the 32 prose texts marked reviewed with the Owner record, tests for English search with reviewed Thai text and a pin of the approved wording. Records: task note, S6 report and summary, two review reports, Draft PR package, S6 evidence (translation reconciliation, approved review source copy, verification, Thai screens), status, index, backlog and logs. Preview replaced by `sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`; rollback tag `c3f9688-rollback`. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S7
+No code change. Records: S7 report and summary, 404 investigation evidence, task note, Draft PR package (known open defect, not ready to publish), status, index, backlog and logs. Preview unchanged (`sha256:dedbba40f81fa0e089da3cf17978bd47c480957447269139390b27d75511257a`). [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S8
+No code change. Records: Owner visual acceptance and Notes observation, S8 report and summary, next-development handoff, Draft PR package (ready as Draft once authorized, 404 disclosed), task note, status, index, backlog and logs. Preview unchanged. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S9
+Code `3b93945`, `53d0126`: `app/global-not-found.tsx`; proxy locale header from the path and per-locale rewrites for malformed addresses and unknown slugs; catch-all and `/unavailable` routes removed; `experimental.globalNotFound` (Owner-authorized, Next.js 16.4.6, local mock only); regression tests. Preview rebuilt and recreated (image `568cc3b3…`). Records: S9 report, summary, two review reports, verification evidence, decision packet, Draft PR package, task note, status, index, backlog and logs. [[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-28 — IMP-WEB-02 S10
+No code change. Records: final receipt [[2026-11-28_180705_IMP-WEB-02_Frontend_V1_1]], S10 report and summary, final Draft PR package (Owner title), task note (Owner acceptance, Notes deferral, publication scope), status, index, backlog and logs. Branch pushed once and one Draft PR opened under the one-time authorization. [[IMP-WEB-02_Frontend_V1_1]]

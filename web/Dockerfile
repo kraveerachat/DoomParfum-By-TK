@@ -28,7 +28,7 @@ COPY --from=builder --chown=root:root /app/.next/static ./.next/static
 COPY --from=builder --chown=root:root /app/public ./public
 COPY --from=builder --chown=root:root /app/scripts/healthcheck.mjs ./healthcheck.mjs
 COPY --from=builder --chown=root:root /app/NOTICE.md ./NOTICE.md
-COPY --from=builder --chown=root:root /app/src/fonts/OFL-BodoniModa.txt /app/src/fonts/OFL-NotoSansThai.txt ./licenses/
+COPY --from=builder --chown=root:root /app/src/fonts/OFL-BodoniModa.txt /app/src/fonts/OFL-NotoSansThai.txt /app/src/fonts/OFL-Fahkwang.txt ./licenses/
 USER node
 EXPOSE 3000
 HEALTHCHECK --interval=15s --timeout=4s --start-period=10s --retries=3 CMD ["node", "healthcheck.mjs"]

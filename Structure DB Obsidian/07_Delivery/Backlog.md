@@ -419,3 +419,64 @@ Replaces the unallocated entry above.
 | IMP-WEB-02 (proposed ID) | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` (proposed) | merged DPT-PLAN-013 | NOT STARTED | Gate C intake after that merge |
 
 [[DPT-PLAN-013_Frontend_V1_1_Design_Upgrade]]
+
+## 2026-11-26 — IMP-WEB-02 allocated
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| DPT-PLAN-013 | PLAN | #37 | `plan/frontend-v1-1-design-upgrade` | `ab3351a` | MERGED `3e87027` | None |
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | CP4 Owner review | Owner answers; CP5 |
+
+[[IMP-WEB-02_Frontend_V1_1]]
+
+## 2026-11-26 — IMP-WEB-02 after CP5
+
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `5d63f88` | Owner review, A05 deferral, publication authority |
+
+## 2026-11-27 — IMP-WEB-02 after S3
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `689b177`; independent review BLOCKED | Independent review, Owner review, A05 deferral, publication authority |
+
+## 2026-11-27 — IMP-WEB-02 after S4
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `c3f9688`; independent review CONDITIONAL resolved, delta PASS | A11 drills or deferral, A05 deferral, Notes check, Thai line review, publication authority |
+
+## 2026-11-28 — IMP-WEB-02 after S5
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `c3f9688`; A11 PASS | Owner: A05 deferral, Notes check, Thai line review, publication authority |
+
+## 2026-11-28 — IMP-WEB-02 after S6
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE PENDING at `253bf48`; Thai approved and applied; review PASS | Owner: physical Notes check, publication authority |
+
+## 2026-11-28 — IMP-WEB-02 after S7
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | ACCEPTANCE BLOCKED at `253bf48`: 404 documents without server lang | Owner: 404 decision (tested globalNotFound correction or recorded deviation), Notes check, publication authority |
+
+## 2026-11-28 — IMP-WEB-02 after S8
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | Visual ACCEPTED by the Owner at `253bf48`; 404 decision open | Owner: 404 decision, publication authority |
+
+Next development (not allocated): smallest real-data read-only slice P30-U03 → U05 → U06 → U07 per [[Post_PR30_Dependency_and_Gate_Map]]; gated by POST30-ODP-1 decisions and U01. See [[IMP-WEB-02_Next_Development_Handoff]].
+
+## 2026-11-28 — IMP-WEB-02 after S9
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | NOT CREATED | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | 404 fixed; review PASS on `53d0126`; visual ACCEPTED | Owner: Notes physical test (confirm or defer), publication authority |
+
+Next development (not allocated): smallest real-data read-only slice P30-U03 → U05 → U06 → U07; ordered Owner decisions in [[IMP-WEB-02_Next_Slice_Decision_Packet]] (security review G-IND for U01 r14 first).
+
+## 2026-11-28 — IMP-WEB-02 after S10
+| Task | Type | PR | Branch | Base / Plan dependency | State | Next action |
+|---|---|---|---|---|---|---|
+| IMP-WEB-02 | IMPLEMENT | Draft, created after the S10 records commit (number in the task note) | `feat/frontend-v1-1-design-upgrade` | #37 / `3e87027` | Owner-accepted; receipt written; agent verified; human review PENDING | Owner: review on GitHub, Ready for Review, merge |
+
+Next development (not allocated): smallest real-data read-only slice P30-U03 → U05 → U06 → U07; ordered Owner decisions in [[IMP-WEB-02_Next_Slice_Decision_Packet]] (U01 r14 security review first). Needs separate Owner authorization.
