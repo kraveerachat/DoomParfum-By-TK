@@ -124,6 +124,55 @@ test.describe("V01/4.2 server-rendered 404 documents (S9 regression)", () => {
     }
   });
 
+  test("repeated and interleaved 404s each get their own language and a fresh matching nonce", async () => {
+    const nonces = new Set<string>();
+    for (const [path, lang] of [
+      ["/nope", "en"],
+      ["/th/nope", "th"],
+      ["/perfume/nope", "en"],
+      ["/th/perfume/nope", "th"],
+      ["/th/perfume/nope", "th"],
+      ["/perfume/nope", "en"],
+      ["/th/nope", "th"],
+      ["/nope", "en"],
+      ["/th/%E0%B8", "th"],
+      ["/%E0%B8", "en"],
+    ] as const) {
+      const response = await raw("GET", path);
+      expect(response.status).toBe(404);
+      expect(response.body).toContain(`<html lang="${lang}"`);
+      const nonce = /script-src 'self' 'nonce-([^']+)'/.exec(String(response.headers["content-security-policy"] ?? ""))?.[1] ?? "";
+      expect(nonces.has(nonce)).toBe(false);
+      nonces.add(nonce);
+      const tags = response.body.match(/<script\b[^>]*>/g) ?? [];
+      expect(tags.length).toBeGreaterThan(0);
+      for (const tag of tags) expect(tag).toContain(`nonce="${nonce}"`);
+    }
+  });
+
+  test("HEAD on a 404 is a 404 with the same headers", async () => {
+    for (const path of ["/nope", "/th/perfume/nope", "/th/%E0%B8"]) {
+      const response = await raw("HEAD", path);
+      expect(response.status).toBe(404);
+      expect(response.body).toBe("");
+      expect(String(response.headers["content-security-policy"])).toContain("nonce-");
+      expect(response.headers["cache-control"]).toContain("no-store");
+      expect(response.headers["x-robots-tag"]).toContain("noindex");
+    }
+  });
+
+  test("a valid slug written with an escape is still its page", async () => {
+    for (const [path, lang] of [
+      ["/perfume/paper%2Dstudy-a", "en"],
+      ["/th/perfume/%70aper-study-a", "th"],
+    ] as const) {
+      const response = await raw("GET", path);
+      expect(response.status).toBe(200);
+      expect(response.body).toContain(`<html lang="${lang}"`);
+      expect(response.body).toContain("Paper study A");
+    }
+  });
+
   test("a 404 refuses writes like every page", async () => {
     for (const path of ["/nope", "/th/perfume/nope", "/%E0%B8"]) {
       const response = await raw("POST", path);

@@ -102,6 +102,18 @@ test("S9: malformed addresses and unknown slugs go to the global 404, known page
   assert.equal(forwarded("/perfume/nope/").status, 308);
 });
 
+test("S9: every slug the detail view can show passes the proxy, in both languages", async () => {
+  // The detail view looks slugs up in the validated set; a slug the proxy refused would never render,
+  // and one it passed but the view lacked would reach notFound() and its error document.
+  const { fixtures } = await import("../src/fixtures/data.ts");
+  const { assertFixtures } = await import("../src/fixtures/validate.ts");
+  const slugs = assertFixtures(fixtures).perfumes.map((p) => p.slug);
+  assert.ok(slugs.length >= 12);
+  for (const slug of slugs) {
+    for (const prefix of ["", "/th"]) assert.equal(forwarded(`${prefix}/perfume/${slug}`).rewrite, null, `${prefix}/perfume/${slug}`);
+  }
+});
+
 test("the production policy has no development exception", () => {
   const csp = call("/").headers.get("content-security-policy") ?? "";
   assert.doesNotMatch(csp, /unsafe-|strict-dynamic|https?:|wss?:|\*/);

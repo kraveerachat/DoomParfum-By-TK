@@ -8,12 +8,17 @@ const OWNED_ASSET = /^\/(?:studies\/[a-z-]+\.svg|icon\.svg)$/;
 /**
  * A path no route uses, in each language. Rewriting here makes the framework answer with
  * app/global-not-found.tsx, the only 404 it renders on the server with a `lang` (IMP-WEB-02 S9,
- * Owner-authorized). The target keeps the language in its path: with one target for both, the
- * 404 page of a rewritten Thai address was rendered in English (observed on 16.4.6).
+ * Owner-authorized). The target keeps the language in its path because Next.js 16.4.6 runs this
+ * proxy a second time on a rewrite target that matches no route, and that pass derives the locale
+ * header again from the target (verified with an instrumented build, S9).
  */
 const UNMATCHED = "/_unavailable";
 
-/** A detail address and its slug; only slugs in the fixtures have a page. */
+/**
+ * A detail address and its slug; only slugs in the fixtures have a page. This must stay the same
+ * set the detail view looks up (`fixtureSet` in server/catalogue.ts, the validated `fixtures`):
+ * a slug accepted here but missing there would reach notFound() and its error document again.
+ */
 const DETAIL = /^(?:\/th)?\/perfume\/([^/]+)$/;
 const SLUGS = new Set(fixtures.perfumes.map((p) => p.slug));
 
